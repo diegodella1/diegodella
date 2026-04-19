@@ -1,0 +1,775 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-TJF4P0NYFT"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-TJF4P0NYFT');
+  </script>
+  <script>(function(){var t=localStorage.getItem("theme");if(!t)t=window.matchMedia("(prefers-color-scheme:dark)").matches?"dark":"light";document.documentElement.setAttribute("data-theme",t)})()</script>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <meta name="theme-color" content="#e6d5b8">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="Narrative Mechanics">
+  <link rel="apple-touch-icon" href="/og-default.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="After thirty years of forced expansion, the world is closing inward. A long-form essay on contraction, systems pressure, and what disappears when expansion stops.">
+  <meta name="author" content="Diego Dell'Agostino">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://diegodella.ar/the-great-contraction.html">
+  <meta property="og:title" content="The Great Contraction | Narrative Mechanics">
+  <meta property="og:description" content="After thirty years of forced expansion, the world is closing. Not backwards. Inwards. The materials are old. The architecture is new.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://diegodella.ar/the-great-contraction.html">
+  <meta property="og:site_name" content="Narrative Mechanics">
+  <meta property="og:image" content="https://diegodella.ar/og-default.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:locale" content="en_US">
+  <meta property="article:author" content="Diego Dell'Agostino">
+  <meta property="article:published_time" content="2026-03-01">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="The Great Contraction | Narrative Mechanics">
+  <meta name="twitter:description" content="After thirty years of forced expansion, the world is closing. Not backwards. Inwards. History doesn't repeat, but it rhymes.">
+  <meta name="twitter:image" content="https://diegodella.ar/og-default.png">
+  <title>The Great Contraction | Narrative Mechanics</title>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "The Great Contraction",
+    "author": {
+      "@type": "Person",
+      "name": "Diego Dell'Agostino",
+      "url": "https://diegodella.ar/about.html"
+    },
+    "datePublished": "2026-03-01",
+    "description": "After thirty years of forced expansion, the world is closing. Not backwards. Inwards. The materials are old. The architecture is new.",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Narrative Mechanics",
+      "url": "https://diegodella.ar"
+    },
+    "url": "https://diegodella.ar/the-great-contraction.html",
+    "mainEntityOfPage": "https://diegodella.ar/the-great-contraction.html"
+  }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;700&family=Epilogue:ital,wght@0,400;1,400;0,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="global.css?v=20260418f">
+  <link rel="stylesheet" href="components.css?v=20260418f">
+  <style>
+    /* Hero */
+    .hero {
+      max-width: 960px; margin: 0 auto;
+      padding: 6rem 4rem 4rem;
+      display: grid; grid-template-columns: 1fr 200px;
+      gap: 4rem; align-items: start;
+    }
+    .hero-title {
+      font-family: 'Space Grotesk', serif;
+      font-size: clamp(2.8rem, 6vw, 5rem);
+      font-weight: 900; line-height: 1.0;
+      letter-spacing: -0.025em; margin-bottom: 1.25rem;
+    }
+    .hero-title em { font-style: italic; color: var(--ink); display: block; text-decoration: none; background: linear-gradient(180deg, transparent 54%, color-mix(in srgb, var(--accent) 18%, transparent) 54%); padding: 0 0.08em 0.02em 0; box-decoration-break: clone; -webkit-box-decoration-break: clone; }
+    .hero-subtitle {
+      font-size: 1.05rem; color: var(--muted);
+      line-height: 1.7; max-width: 480px; margin-bottom: 1.5rem;
+    }
+    .hero-meta {
+      display: flex; flex-direction: column; gap: 0.6rem; margin-bottom: 1.75rem;
+    }
+    .hero-tag {
+      display: inline-flex; align-items: center; gap: 0.6rem;
+      border: 1px solid var(--rule); padding: 0.4em 0.85em;
+      background: var(--highlight); width: fit-content;
+    }
+    .hero-tag-label {
+      font-family: 'JetBrains Mono', monospace; font-size: 0.44rem;
+      letter-spacing: 0.18em; text-transform: uppercase; color: var(--muted);
+    }
+    .hero-tag-text {
+      font-family: 'JetBrains Mono', monospace; font-size: 0.44rem;
+      letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent);
+    }
+    .hero-illustration { display: flex; align-items: center; justify-content: center; padding-top: 4rem; }
+    .hero-illustration svg { width: 280px; height: 350px; }
+
+    /* Divider */
+    .chapter-divider {
+      max-width: 960px; margin: 0 auto; padding: 0 4rem;
+      display: flex; align-items: center; gap: 1.5rem;
+    }
+    .chapter-divider-line { flex: 1; height: 1px; background: var(--rule); }
+    .chapter-divider-ornament { color: var(--muted); font-size: 0.75rem; white-space: nowrap; }
+
+    /* Content */
+    .content { max-width: 720px; margin: 0 auto; padding: 3rem 2.5rem 2rem; }
+    .content:last-of-type { padding-bottom: 4rem; }
+
+    .essay-section { margin-bottom: 4rem; }
+    .essay-section:last-child { margin-bottom: 0; }
+    .essay-section p {
+      margin-bottom: 1.5rem;
+      font-size: 1.05rem;
+      line-height: 1.92;
+      text-align: justify;
+      hyphens: auto;
+    }
+    .essay-section p:last-child { margin-bottom: 0; }
+
+    /* Drop cap */
+    .essay-section.intro p:first-of-type::first-letter {
+      font-family: 'Space Grotesk', serif;
+      font-size: 4rem; font-weight: 900;
+      float: left; line-height: 0.72;
+      margin-right: 0.08em; margin-top: 0.1em;
+      color: var(--accent);
+    }
+
+    /* Section header */
+    .section-header {
+      display: flex; align-items: baseline; gap: 1rem;
+      margin-bottom: 1.75rem; padding-bottom: 1rem;
+      border-bottom: 1px solid var(--rule);
+    }
+    .section-header-num {
+      font-family: 'Space Grotesk', serif; font-size: 2.5rem;
+      font-weight: 900; font-style: italic; color: var(--rule);
+      line-height: 1; flex-shrink: 0; transition: color 0.2s;
+    }
+    .essay-section:hover .section-header-num { color: var(--accent); }
+    .section-header-body { display: flex; flex-direction: column; gap: 0.2rem; }
+    .section-header-label {
+      font-family: 'JetBrains Mono', monospace; font-size: 0.48rem;
+      letter-spacing: 0.2em; text-transform: uppercase; color: var(--accent);
+    }
+    .section-header-title {
+      font-family: 'Space Grotesk', serif; font-size: 1.35rem;
+      font-weight: 700; line-height: 1.15; letter-spacing: -0.01em;
+    }
+
+    /* Source reference */
+    .source-ref {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.55rem; line-height: 1.6;
+      color: var(--muted);
+      margin-top: -0.5rem; margin-bottom: 1.5rem;
+      padding-left: 1rem;
+      border-left: 2px solid var(--rule);
+    }
+
+    /* Interlude */
+    .interlude {
+      padding: 5rem 4rem;
+      display: flex; align-items: center; justify-content: center;
+      min-height: 35vh;
+      position: relative; overflow: hidden;
+      background: var(--highlight);
+      border-top: 1px solid var(--rule);
+      border-bottom: 1px solid var(--rule);
+    }
+    .interlude::before {
+      content: ''; position: absolute; inset: 0;
+      background: linear-gradient(135deg, var(--accent-light) 0%, transparent 50%);
+      pointer-events: none;
+    }
+    .interlude-text {
+      font-family: 'Space Grotesk', serif;
+      font-weight: 900; font-size: clamp(2rem, 6vw, 4.5rem);
+      line-height: 1.1; letter-spacing: -0.03em;
+      color: var(--ink); text-align: center; max-width: 18ch;
+      position: relative; z-index: 1;
+    }
+    .interlude-text .stroke {
+      -webkit-text-stroke: 1.5px var(--ink);
+      color: transparent;
+    }
+    .interlude-text .accent { color: var(--accent); }
+
+    /* Layers grid */
+    .layers-wrap {
+      max-width: 960px; margin: 2rem auto; padding: 0 4rem;
+    }
+    .layers-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1px; background: var(--rule);
+      border: 1px solid var(--rule);
+    }
+    .layer-card {
+      background: var(--paper); padding: 2rem 1.5rem;
+      position: relative; overflow: hidden;
+      transition: background 0.4s ease;
+    }
+    .layer-card:hover { background: var(--highlight); }
+    .layer-card::before {
+      content: ''; position: absolute; top: 0; left: 0;
+      width: 3px; height: 0; background: var(--accent);
+      transition: height 0.6s ease;
+    }
+    .layer-card:hover::before { height: 100%; }
+    .layer-label {
+      font-family: 'JetBrains Mono', monospace; font-size: 0.5rem;
+      letter-spacing: 0.25em; text-transform: uppercase;
+      color: var(--accent); margin-bottom: 0.75rem;
+    }
+    .layer-title {
+      font-family: 'Space Grotesk', serif; font-weight: 700;
+      font-size: 1.1rem; line-height: 1.2;
+      color: var(--ink); margin-bottom: 0.5rem;
+    }
+    .layer-desc {
+      font-size: 0.82rem; line-height: 1.65; color: var(--muted);
+    }
+
+    /* Stat strip */
+    .stat-strip-wrap {
+      max-width: 960px; margin: 0 auto 2rem; padding: 0 4rem;
+    }
+    .stat-strip {
+      display: grid; grid-template-columns: repeat(3, 1fr);
+      gap: 1px; background: var(--accent);
+    }
+    .stat-block {
+      background: var(--paper); padding: 2.5rem 1.5rem; text-align: center;
+    }
+    .stat-number {
+      font-family: 'Space Grotesk', serif; font-weight: 900;
+      font-size: clamp(2rem, 4vw, 3.5rem);
+      color: var(--accent); line-height: 1; margin-bottom: 0.5rem;
+    }
+    .stat-label {
+      font-family: 'JetBrains Mono', monospace; font-size: 0.5rem;
+      letter-spacing: 0.15em; text-transform: uppercase;
+      color: var(--muted); line-height: 1.5;
+    }
+    .stat-source {
+      font-family: 'JetBrains Mono', monospace; font-size: 0.42rem;
+      color: var(--muted); opacity: 0.6; margin-top: 0.5rem;
+    }
+
+    /* Share button */
+    .share-row {
+      display: flex; justify-content: center;
+      margin-top: 2rem; margin-bottom: 2rem;
+    }
+    .share-btn {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      font-family: 'JetBrains Mono', monospace; font-size: 0.55rem;
+      letter-spacing: 0.15em; text-transform: uppercase;
+      color: var(--muted); background: none;
+      border: 1px solid var(--rule);
+      padding: 0.6rem 1.2rem; cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    .share-btn:hover { color: var(--accent); border-color: var(--accent); }
+    .share-btn.copied { color: var(--accent); border-color: var(--accent); }
+
+    /* Paper nav */
+    .paper-nav { max-width: 680px; margin: 0 auto; padding: 0 2.5rem 5rem; display: flex; justify-content: flex-start; }
+    .paper-nav-back { display: flex; align-items: center; gap: 0.75rem; text-decoration: none; color: var(--ink); font-family: 'JetBrains Mono', monospace; font-size: 0.55rem; letter-spacing: 0.15em; text-transform: uppercase; transition: color 0.2s; }
+    .paper-nav-back:hover { color: var(--accent); }
+    .paper-nav-back svg { width: 16px; height: 16px; stroke: currentColor; fill: none; stroke-width: 1.5; }
+
+    /* Scroll reveal */
+    .reveal {
+      opacity: 0; transform: translateY(24px);
+      transition: opacity 0.8s cubic-bezier(0.22, 1, 0.36, 1), transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+    body.animations-done .reveal { opacity: 1; transform: translateY(0); transition: none; }
+    .reveal-stagger > .reveal:nth-child(2) { transition-delay: 0.08s; }
+    .reveal-stagger > .reveal:nth-child(3) { transition-delay: 0.14s; }
+    .reveal-stagger > .reveal:nth-child(4) { transition-delay: 0.18s; }
+    .reveal-stagger > .reveal:nth-child(5) { transition-delay: 0.22s; }
+    .reveal-stagger > .reveal:nth-child(6) { transition-delay: 0.26s; }
+    .reveal-stagger > .reveal:nth-child(7) { transition-delay: 0.30s; }
+    .reveal-stagger > .reveal:nth-child(8) { transition-delay: 0.34s; }
+    .reveal-stagger > .reveal:nth-child(9) { transition-delay: 0.38s; }
+    .reveal-stagger > .reveal:nth-child(10) { transition-delay: 0.42s; }
+
+    @media (prefers-reduced-motion: reduce) {
+      .reveal { opacity: 1; transform: none; transition: none; }
+    }
+
+    @media (hover: none) {
+      .layer-card::before { height: 100%; opacity: 0.4; }
+    }
+
+    @media (max-width: 768px) {
+      .hero { grid-template-columns: 1fr; gap: 2rem; padding: 3rem 1.5rem 2rem; }
+      .hero-illustration { display: none; }
+      .content { padding: 2rem 1.5rem; }
+      .content:last-of-type { padding-bottom: 3rem; }
+      .chapter-divider { padding: 0 1.5rem; }
+      .pull-quote { margin: 2rem 0; }
+      .layers-wrap { padding: 0 1.5rem; }
+      .layers-grid { grid-template-columns: 1fr; }
+      .layer-card::before { height: 100%; opacity: 0.4; }
+      .stat-strip-wrap { padding: 0 1.5rem; }
+      .stat-strip { grid-template-columns: 1fr; gap: 0; }
+      .stat-block { padding: 2rem 1.5rem; border-bottom: 1px solid var(--accent-light); }
+      .stat-block:last-child { border-bottom: none; }
+      .interlude { padding: 4rem 1.5rem; min-height: 25vh; }
+      .paper-nav { padding: 0 1.5rem 3rem; }
+    }
+
+    @media print {
+      body { background: #fff; color: #111; font-size: 11pt; }
+      body::before, body::after { display: none; }
+      .bg-pattern, .bg-grain, #pbar, .nav, .share-row { display: none; }
+      .hero { grid-template-columns: 1fr; padding: 2rem 0; }
+      .hero-illustration { display: none; }
+      .hero-kicker, .hero-title, .hero-subtitle, .hero-byline, .hero-tag { opacity: 1; transform: none; animation: none; }
+      .content { padding: 1rem 0; max-width: 100%; }
+      .essay-section p { text-align: left; hyphens: none; color: #222; }
+      .section-header-num { color: #c23a22; }
+      .section-header-label { color: #c23a22; }
+      .pull-quote { margin: 1.5rem 0; border-left-color: #c23a22; background: #f9f6f3; }
+      .pull-quote p { color: #111; }
+      .interlude { min-height: auto; padding: 2rem 0; background: #fff; border: none; }
+      .interlude::before { display: none; }
+      .interlude-text { color: #111; }
+      .interlude-text .stroke { -webkit-text-stroke-color: #111; }
+      .interlude-text .accent { color: #c23a22; }
+      .layers-wrap, .stat-strip-wrap { padding: 0; }
+      .layers-grid { background: #ddd; }
+      .layer-card { background: #fff; }
+      .layer-card::before { display: none; }
+      .layer-label { color: #c23a22; }
+      .layer-title { color: #111; }
+      .stat-strip { background: #ddd; }
+      .stat-block { background: #fff; }
+      .stat-number { color: #c23a22; }
+      .closing { background: #f9f6f3; border-color: #ddd; }
+      .closing::before { display: none; }
+      .closing p { color: #111; }
+      .source-ref { color: #666; border-color: #ccc; }
+      .paper-nav { display: none; }
+      .reveal { opacity: 1; transform: none; transition: none; }
+    }
+
+    /* Hero SVG */
+    .hero { display: grid; grid-template-columns: 1fr 280px; gap: 2rem; align-items: center; }
+    .hero-svg { width: 100%; height: auto; }
+    @media (max-width: 768px) {
+      .hero { grid-template-columns: 1fr; }
+      .hero-svg { max-width: 200px; margin: 0 auto; order: -1; }
+    }
+  </style>
+</head>
+<body>
+
+  <div id="pbar"></div>
+  <div class="bg-pattern"></div>
+  <div class="bg-grain"></div>
+
+  <div class="page-wrap">
+
+      <!-- Top Bar -->
+  <div class="top-bar">
+    <span>Buenos Aires &middot; Since 2008</span>
+    <span>18 Essays &middot; 3 Frameworks &middot; ~289 min of reading &middot; <a href="about.html">About the author</a></span>
+  </div>
+
+  <!-- Nav -->
+  <nav class="nav">
+      <div class="nav-inner">
+        <a href="index.html" class="nav-brand">Narrative<em>Mechanics</em></a>
+        <button class="nav-btn nav-toggle" aria-label="Menu" aria-expanded="false" aria-controls="navLinks" id="navToggle">
+          <svg viewBox="0 0 24 24"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg>
+        </button>
+        <div class="nav-links" id="navLinks">
+          <a href="index.html" class="nav-link">Home</a>
+          <div class="nav-sep"></div>
+          <a href="archive.html" class="nav-link">Start Here</a>
+          <a href="frameworks.html" class="nav-link">Frameworks</a>
+          <a href="series.html" class="nav-link">Series</a>
+          <a href="essays.html" class="nav-link">Essays</a>
+          <a href="notes.html" class="nav-link">Notes</a>
+          <div class="nav-sep"></div>
+          <a href="about.html" class="nav-link">About</a>
+        </div>
+        <div class="nav-right">
+          <button class="nav-btn" aria-label="Toggle theme" id="themeToggle">
+            <svg class="icon-moon" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+            <svg class="icon-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <section class="hero">
+      <div class="hero-left">
+        <div class="hero-kicker">Essay &middot; Culture & Geopolitics</div>
+        <h1 class="hero-title">The Great<em>Contraction</em></h1>
+        <p class="hero-subtitle">After thirty years of forced expansion, the world is closing. Not backwards. Inwards. The materials are old. The architecture is new. History doesn't repeat, but it rhymes.</p>
+        <div class="hero-meta">
+          <div class="hero-tag">
+            <span class="hero-tag-label">For</span>
+            <span class="hero-tag-text">Strategists &nbsp;&middot;&nbsp; Culture Observers &nbsp;&middot;&nbsp; Anyone Between Worlds</span>
+          </div>
+          <div class="hero-tag">
+            <span class="hero-tag-label">Read</span>
+            <span class="hero-tag-text">~12 min</span>
+          </div>
+        </div>
+        <div class="hero-byline">
+          <div class="hero-byline-dot"></div>
+          <div class="hero-byline-text">Diego Dell'Agostino</div>
+        </div>
+      </div>
+      <div class="hero-illustration">
+        <svg viewBox="0 0 160 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <style>
+            @keyframes gridFade{from{opacity:0}to{opacity:1}}
+            @keyframes contract{from{transform:scale(1.4);opacity:0}to{transform:scale(1);opacity:1}}
+            @keyframes centerPulse{0%,100%{r:4;opacity:1}50%{r:6;opacity:0.6}}
+            @keyframes arrowPulse{0%,100%{opacity:0.8}50%{opacity:0.3}}
+            @keyframes fadeLabel{from{opacity:0}to{opacity:1}}
+          </style>
+          <!-- Grid (subtle fade in) -->
+          <g style="animation:gridFade 1.2s ease-out both">
+            <line x1="0" y1="25" x2="160" y2="25" stroke="var(--dot-color)" stroke-width="0.5"/>
+            <line x1="0" y1="50" x2="160" y2="50" stroke="var(--dot-color)" stroke-width="0.5"/>
+            <line x1="0" y1="75" x2="160" y2="75" stroke="var(--dot-color)" stroke-width="0.5"/>
+            <line x1="0" y1="100" x2="160" y2="100" stroke="var(--dot-color)" stroke-width="0.5"/>
+            <line x1="0" y1="125" x2="160" y2="125" stroke="var(--dot-color)" stroke-width="0.5"/>
+            <line x1="0" y1="150" x2="160" y2="150" stroke="var(--dot-color)" stroke-width="0.5"/>
+            <line x1="0" y1="175" x2="160" y2="175" stroke="var(--dot-color)" stroke-width="0.5"/>
+            <line x1="25" y1="0" x2="25" y2="200" stroke="var(--dot-color)" stroke-width="0.5"/>
+            <line x1="50" y1="0" x2="50" y2="200" stroke="var(--dot-color)" stroke-width="0.5"/>
+            <line x1="75" y1="0" x2="75" y2="200" stroke="var(--dot-color)" stroke-width="0.5"/>
+            <line x1="100" y1="0" x2="100" y2="200" stroke="var(--dot-color)" stroke-width="0.5"/>
+            <line x1="125" y1="0" x2="125" y2="200" stroke="var(--dot-color)" stroke-width="0.5"/>
+          </g>
+          <!-- Concentric circles (contract inward, staggered) -->
+          <circle cx="80" cy="100" r="75" stroke="var(--accent)" stroke-width="0.7" opacity="0.15" style="transform-origin:80px 100px;animation:contract 1.2s ease-out 0.3s both"/>
+          <circle cx="80" cy="100" r="60" stroke="var(--accent)" stroke-width="0.8" opacity="0.25" style="transform-origin:80px 100px;animation:contract 1.2s ease-out 0.55s both"/>
+          <circle cx="80" cy="100" r="45" stroke="var(--accent)" stroke-width="1" opacity="0.4" style="transform-origin:80px 100px;animation:contract 1.2s ease-out 0.8s both"/>
+          <circle cx="80" cy="100" r="30" stroke="var(--accent)" stroke-width="1.2" opacity="0.6" style="transform-origin:80px 100px;animation:contract 1.2s ease-out 1.05s both"/>
+          <circle cx="80" cy="100" r="15" stroke="var(--accent)" stroke-width="1.5" opacity="0.85" style="transform-origin:80px 100px;animation:contract 1.2s ease-out 1.3s both"/>
+          <!-- Center dot (pulse) -->
+          <circle cx="80" cy="100" r="4" fill="var(--accent)" style="animation:centerPulse 2.5s ease-in-out 2s infinite"/>
+          <!-- Inward arrows (pulse) -->
+          <g style="animation:arrowPulse 2s ease-in-out 2s infinite">
+            <line x1="5" y1="100" x2="20" y2="100" stroke="var(--ink)" stroke-width="0.8"/>
+            <polygon points="20,98 20,102 25,100" fill="var(--ink)"/>
+            <line x1="155" y1="100" x2="140" y2="100" stroke="var(--ink)" stroke-width="0.8"/>
+            <polygon points="140,98 140,102 135,100" fill="var(--ink)"/>
+            <line x1="80" y1="5" x2="80" y2="20" stroke="var(--ink)" stroke-width="0.8"/>
+            <polygon points="78,20 82,20 80,25" fill="var(--ink)"/>
+            <line x1="80" y1="195" x2="80" y2="180" stroke="var(--ink)" stroke-width="0.8"/>
+            <polygon points="78,180 82,180 80,175" fill="var(--ink)"/>
+          </g>
+          <!-- Labels (fade in) -->
+          <text x="80" y="14" font-family="monospace" font-size="5.5" fill="var(--accent)" text-anchor="middle" letter-spacing="1" style="animation:fadeLabel 1s ease-out 1.5s both">CONTRACTION</text>
+          <text x="80" y="196" font-family="monospace" font-size="5.5" fill="var(--muted)" text-anchor="middle" letter-spacing="1" style="animation:fadeLabel 1s ease-out 1.8s both">LAYERS</text>
+        </svg>
+      </div>
+    </section>
+
+        <div class="chapter-divider">
+      <div class="chapter-divider-line"></div>
+    </div>
+
+    <div class="section-map-wrap">
+      <div class="section-map">
+        <div class="section-map-header"><span>Document Map</span><span>7 Sections</span></div>
+        <div class="section-map-grid">
+          <a href="#tgc-s1" class="section-map-item"><div class="section-map-num">I</div><div><div class="section-map-label">Premise</div><div class="section-map-title">Openness as dogma</div></div></a>
+          <a href="#tgc-s2" class="section-map-item"><div class="section-map-num">II</div><div><div class="section-map-label">Toll</div><div class="section-map-title">What exposure costs</div></div></a>
+          <a href="#tgc-s3" class="section-map-item"><div class="section-map-num">III</div><div><div class="section-map-label">Pattern</div><div class="section-map-title">The rhyme, not the repetition</div></div></a>
+          <a href="#tgc-s4" class="section-map-item"><div class="section-map-num">IV</div><div><div class="section-map-label">Shadow</div><div class="section-map-title">The density reflex (and its shadow)</div></div></a>
+          <a href="#tgc-s5" class="section-map-item"><div class="section-map-num">V</div><div><div class="section-map-label">Bifurcation</div><div class="section-map-title">FIFA or nobody</div></div></a>
+          <a href="#tgc-s6" class="section-map-item"><div class="section-map-num">VI</div><div><div class="section-map-label">Contradiction</div><div class="section-map-title">The disposable that wants to last</div></div></a>
+          <a href="#tgc-s7" class="section-map-item"><div class="section-map-num">VII</div><div><div class="section-map-label">Reckoning</div><div class="section-map-title">The part that costs me</div></div></a>
+        </div>
+      </div>
+    </div>
+
+    <!-- COLD OPEN + SECTIONS I–II -->
+    <div class="content">
+
+      <div class="essay-section intro reveal-stagger">
+        <p class="reveal">Last November, my son came home from school with a disposable camera. A friend had given it to him. Not a phone case, not a gift card. A yellow Kodak with 27 exposures and no screen.</p>
+        <p class="reveal">He'd seen them on TikTok. He'd never held one. He kept turning it around looking for the preview button. "Where's the photo?" he asked. You don't see it, I said. You take it and you wait. He stared at me like I'd just described a telegram.</p>
+        <p class="reveal">Then he shot 27 frames in an hour. He was more careful with each one than he'd ever been with anything on a screen. He aimed. He framed. He wasted three on the cat and felt the loss physically. When we got the prints back, he held them like artifacts from another civilization. A picture of a tree. A blurry shot of his own sneakers. The cat, mid-yawn, overexposed.</p>
+        <p class="reveal">He pinned them to his bedroom wall. They're still there.</p>
+        <p class="reveal">Something is happening. Not just to my son, and not just to cameras. Something is happening to the world at every scale simultaneously, from geopolitics to what a twelve-year-old pins to his wall, and nobody seems to have a name for it.</p>
+        <p class="reveal">I'm going to call it The Great Contraction.</p>
+      </div>
+
+      <!-- I -->
+      <div class="essay-section reveal-stagger" id="tgc-s1">
+        <div class="section-header reveal">
+          <div class="section-header-num">I</div>
+          <div class="section-header-body">
+            <div class="section-header-label">The Premise</div>
+            <div class="section-header-title">Openness as dogma</div>
+          </div>
+        </div>
+        <p class="reveal">The last thirty years had one commandment: open. Open your borders. Open your markets. Open your mind. Open your identity. Open your source code. Globalization was progress. Disruption was virtue. If you didn't want to open up, something was wrong with you. You were old. You were afraid. You deserved to be left behind.</p>
+        <p class="reveal">It wasn't all wrong. The internet did connect the world. A kid in Lagos could suddenly watch the same lecture as a kid in Boston. That part was real. But openness was never presented as one option among many. <strong>It was presented as the only option. A complete ideology disguised as weather.</strong> You don't argue with weather. You adapt or you're out.</p>
+        <p class="reveal">Meanwhile, that kid in Lagos. He's not drowning in algorithmic overload. He's trying to get online. And the developed world already tried to help him: remember Negroponte's One Laptop Per Child? A hundred-dollar green laptop was going to save the developing world through connectivity. It was the dogma of openness applied to development policy: connect everyone and everything improves. It didn't work. The laptops broke, the infrastructure didn't exist, and the assumption that access equals progress turned out to be the same fallacy dressed in humanitarian clothing. What I'm about to describe is mostly a story about what happens to people who got everything the expansion promised and still ended up empty. But don't mistake that for a complete picture. Half the planet got the dogma without the delivery.</p>
+        <p class="reveal">Beneath all that expansion, something was eroding. The ability of people, communities, and entire countries to decide their own shape. To say: this is what we are, this is what we're not, and here's where our edges are. Edges became a dirty word. Boundaries meant you had something to hide. So everything opened. Everything got exposed. And nobody asked what happens when you remove all the walls from a building.</p>
+      </div>
+
+      <!-- II -->
+      <div class="essay-section reveal-stagger" id="tgc-s2">
+        <div class="section-header reveal">
+          <div class="section-header-num">II</div>
+          <div class="section-header-body">
+            <div class="section-header-label">The Toll</div>
+            <div class="section-header-title">What exposure costs</div>
+          </div>
+        </div>
+        <p class="reveal">What happens when you remove all the walls? Everything falls down. That's not philosophy. That's physics.</p>
+        <p class="reveal">We built supply chains that cross twenty countries to manufacture a single chip, and then acted surprised when some of those countries turned out to be adversaries. We offshored entire industries because labor was cheaper somewhere else, and left behind communities with no Plan B and a lot of justified anger. We called it efficiency. It was fragility with good marketing.</p>
+        <p class="reveal">We made transgression mandatory. You had to push a boundary to be relevant. Break something. Challenge something. For a while, that produced genuinely interesting things. Then it ate itself. When everyone is breaking the rules, nobody is breaking anything. Transgression became the most efficient form of conformism. The most predictable thing you could do in 2015 was be edgy.</p>
+        <p class="reveal">And total exposure created its own enforcement mechanism. When everything about everyone is visible all the time, a new social discipline emerges. People get destroyed over a sentence from ten years ago. Careers collapse overnight because context doesn't survive screenshots. Some of those people did terrible things and faced overdue consequences. Many others just said something clumsy during a different cultural moment, and the machine made no distinction.</p>
+        <div class="pull-quote reveal">
+          <p>The problem with total accountability is that it applies infinite punishment to finite mistakes.</p>
+        </div>
+        <p class="reveal">The fear of that punishment didn't make people more honest. It made them more performative. Everyone learned the right words. Nobody learned the right reasons. Ideological extremes fed each other until they became mirror images screaming past each other. Openness was supposed to create pluralism. It created trenches.</p>
+        <p class="reveal">A 2024 Pew study found that 62% of adults feel overwhelmed by digital life. That's not a fringe complaint. That's the majority of the population saying: I can't take this anymore. The infinite scroll isn't just an interface. It's a life without edges. No beginning, no end, no shape. And without shape, there's no identity. And without identity, there's nothing to defend.</p>
+        <div class="source-ref reveal">Pew Research Center, "Americans' Relationship With Technology," 2024</div>
+      </div>
+
+    </div>
+
+    <!-- INTERLUDE -->
+    <div class="interlude">
+      <div class="interlude-text reveal">
+        History doesn't <span class="stroke">repeat.</span><br>But it <span class="accent">rhymes.</span>
+      </div>
+    </div>
+
+    <!-- SECTION III -->
+    <div class="content">
+
+      <div class="essay-section reveal-stagger" id="tgc-s3">
+        <div class="section-header reveal">
+          <div class="section-header-num">III</div>
+          <div class="section-header-body">
+            <div class="section-header-label">The Pattern</div>
+            <div class="section-header-title">The rhyme, not the repetition</div>
+          </div>
+        </div>
+        <p class="reveal">The easy version of what I'm about to describe: the world is going backwards. Conservatives were right. Let's all buy tweed and go to church. That's not what's happening. What's happening is stranger.</p>
+        <p class="reveal">Every era of expansion in history has been followed by a period that looks like retreat but is actually recombination. The Victorians didn't go back to feudalism. They built industrial-age structures using pre-industrial values: discipline, family, duty, faith. The factory was not the manor. But the values that made both of them run had a family resemblance. The materials were old. The architecture was new.</p>
+        <p class="reveal">That's The Great Contraction. Not a retreat. A recombination. We are building post-algorithmic lives using pre-algorithmic tools. The vinyl a 22-year-old buys today is not his grandfather's vinyl. His grandfather didn't choose it against a backdrop of infinite streaming. His grandfather played a record because there was no other option. The kid plays a record because it's a deliberate act of refusal.</p>
+        <div class="pull-quote reveal">
+          <p>Same object. Different architecture. That's the rhyme.</p>
+        </div>
+        <p class="reveal">Nobody coordinated this. There's no manifesto, no leader, no Slack group. And yet from unrelated corners of the world, everything is doing the same thing: closing, protecting, densifying. A country slapping tariffs on semiconductors and a 22-year-old buying a dumb phone are performing the same gesture. They'd hate each other at a dinner party. But both are shrinking the gap between what they control and what affects them. That's the Contraction. You're watching it happen in real time, across every layer simultaneously.</p>
+      </div>
+
+    </div>
+
+    <!-- LAYER CARDS -->
+    <div class="layers-wrap">
+      <div class="layers-grid">
+        <div class="layer-card reveal">
+          <div class="layer-label">Geopolitical</div>
+          <div class="layer-title">Borders closing</div>
+          <div class="layer-desc">Tariffs, nearshoring, energy sovereignty. Every country folding back onto itself. The end of "the world is flat."</div>
+        </div>
+        <div class="layer-card reveal">
+          <div class="layer-label">Cultural</div>
+          <div class="layer-title">The return of density</div>
+          <div class="layer-desc">Old money, quiet luxury, analog revival. Taste contracts toward whatever resists the scroll. What lasts defeats what shines.</div>
+        </div>
+        <div class="layer-card reveal">
+          <div class="layer-label">Social</div>
+          <div class="layer-title">Structures of shelter</div>
+          <div class="layer-desc">God, country, family. Not as ideology but as available density. People reach for what has roots because everything else floats.</div>
+        </div>
+        <div class="layer-card reveal">
+          <div class="layer-label">Individual</div>
+          <div class="layer-title">Deliberate disconnection</div>
+          <div class="layer-desc">Dumb phones, journaling, vinyl, manual hobbies. Reclaiming time from algorithmic capture. Except the numbers tell a different story.</div>
+        </div>
+        <div class="layer-card reveal">
+          <div class="layer-label">Generational</div>
+          <div class="layer-title">Performing permanence</div>
+          <div class="layer-desc">A youth that craves stability but has been structurally denied it. No house, no pension. Only the aesthetic of what they can't afford.</div>
+        </div>
+        <div class="layer-card reveal">
+          <div class="layer-label">Industrial</div>
+          <div class="layer-title">Media contracts too</div>
+          <div class="layer-desc">Streaming consolidating. Content spend shrinking. "Infinite money for infinite users" is over in culture just as it's over in trade.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- STAT STRIP -->
+    <div class="stat-strip-wrap">
+      <div class="stat-strip">
+        <div class="stat-block reveal">
+          <div class="stat-number" data-target="50" data-suffix="%">50%</div>
+          <div class="stat-label">of Americans deliberately<br>disconnect in 2026</div>
+          <div class="stat-source">Harris Poll / CreedTec, 2026</div>
+        </div>
+        <div class="stat-block reveal">
+          <div class="stat-number" data-target="14" data-prefix="+" data-suffix="%">+14%</div>
+          <div class="stat-label">increase in average daily<br>screen time since 2022</div>
+          <div class="stat-source">PCQuest / Exploding Topics, 2025</div>
+        </div>
+        <div class="stat-block reveal">
+          <div class="stat-number" data-target="29" data-prefix="+" data-suffix="%">+29%</div>
+          <div class="stat-label">vinyl sales growth<br>year over year</div>
+          <div class="stat-source">RIAA, 2024 Year-End Report</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SECTIONS IV–VII + CLOSING -->
+    <div class="content">
+
+      <!-- IV -->
+      <div class="essay-section reveal-stagger" id="tgc-s4">
+        <div class="section-header reveal">
+          <div class="section-header-num">IV</div>
+          <div class="section-header-body">
+            <div class="section-header-label">The Shadow</div>
+            <div class="section-header-title">The density reflex (and its shadow)</div>
+          </div>
+        </div>
+        <p class="reveal">The old money aesthetic is not aspirational wealth. It's aspirational permanence. A kid doesn't buy a cashmere sweater because he wants to look rich. He buys it because he wants one thing in his life that won't be irrelevant in three weeks. Vinyl records aren't nostalgia. They are objects that refuse to disappear. You can't delete a vinyl. You can't algorithmically deprecate it. It just sits there, being real, in a world where almost nothing else is.</p>
+        <p class="reveal">The return to God, country, family works the same way. These are not political positions. They are structures dense enough to resist the current. Faith, land, blood ties: you can disagree with all of them, but you can't deny they have weight. They are among the few things left that can't be erased by a software update.</p>
+        <p class="reveal">But here's where I have to stop being a tour guide and start being honest. Because density has a shadow, and the shadow has teeth.</p>
+        <p class="reveal">Those same structures of shelter have been, historically, structures of exclusion. The family that "closes ranks" can be a refuge, or it can be a cage for whoever doesn't fit the mold. The nation that "protects its own" can be sovereign, or it can be a machine for deciding who counts as "its own" and who doesn't.</p>
+        <div class="pull-quote reveal">
+          <p>Every dense structure has a door. And every door has someone on the wrong side of it.</p>
+        </div>
+        <p class="reveal">The same impulse that makes you put down your phone and read a book is, at a much larger scale, the same impulse that makes a country decide certain people don't belong. The contraction is real. Whether it's good depends entirely on who gets to decide what's inside and what's outside. I don't have an answer for that. I just know you can't talk about the beauty of density without talking about its violence.</p>
+      </div>
+
+      <!-- V -->
+      <div class="essay-section reveal-stagger" id="tgc-s5">
+        <div class="section-header reveal">
+          <div class="section-header-num">V</div>
+          <div class="section-header-body">
+            <div class="section-header-label">The Bifurcation</div>
+            <div class="section-header-title">FIFA or nobody</div>
+          </div>
+        </div>
+        <p class="reveal">For most of the 20th century, culture had a center. Everyone watched the same show. Heard the same song. Argued about it at the coffee machine. There was a commons. A shared arena where millions of strangers processed the same stories at the same time.</p>
+        <p class="reveal">That commons didn't fragment. It bifurcated. It split into two extremes with nothing in between. You're either a planetary mega-event or you're a niche that 400 people know about. The middle, the thing that used to be "a popular show" or "a hit song most people knew," that entire layer is gone.</p>
+        <div class="pull-quote reveal">
+          <p>You're either the World Cup or you're a Discord server.</p>
+        </div>
+        <p class="reveal">Look at sports. Formula 1 was a European niche that decided the only way to survive fragmentation was to go planetary. Netflix's Drive to Survive didn't make F1 slightly bigger. It turned it into a global cultural object. The NFL is running the same play: games in London, Munich, São Paulo. Not because the world was begging for American football. Because the middle ground disappeared and the only viable strategy became: go so big the algorithm can't ignore you, or stay so small you don't need it.</p>
+        <p class="reveal">And the rhyme: these manufactured mega-events look exactly like the old broadcast commons. Billions watching at the same time. Same shape. But the old commons was a byproduct of limited channels. Three networks, one radio dial. Everyone watched the same thing because there was nothing else on. The new mega-commons is engineered at enormous cost: Netflix documentaries, Instagram reels, Saudi money, streaming deals. Deliberately manufactured to punch through infinite noise. Same shape. Different physics.</p>
+        <p class="reveal">Music tells the same story. Streaming gave everyone access to everything, and the result is that the number of songs reaching mass audiences keeps declining even as total streams rise. YouTube generated over $60 billion in revenue in 2025. Meanwhile, underground producers on SoundCloud are building scenes around raw, imperfect, human taste. They'd rather have a small room that feels real than a giant feed that feels like nothing.</p>
+        <div class="source-ref reveal">BBC, "YouTube Revenues," 2025 &middot; MIDiA Research, "Anti-Algorithm Counter-Culture," 2024</div>
+        <p class="reveal">The business models that produce culture are contracting too. Netflix cut content spend. Streaming platforms are consolidating. The era of burning infinite cash to acquire infinite subscribers is over. Media companies are doing what countries are doing: reducing exposure, protecting margins, pulling back. The Great Contraction isn't just cultural. It's industrial.</p>
+        <p class="reveal">And when culture no longer gives you a shared language, you retreat to whatever does. Family references. Local slang. Religious texts. Vintage objects. The old money aesthetic works because it points to a code that predates algorithms. It says: this was here before the feed, and it'll be here after it collapses. The things that survive are the things that don't need the platform to exist.</p>
+      </div>
+
+      <!-- VI -->
+      <div class="essay-section reveal-stagger" id="tgc-s6">
+        <div class="section-header reveal">
+          <div class="section-header-num">VI</div>
+          <div class="section-header-body">
+            <div class="section-header-label">The Contradiction</div>
+            <div class="section-header-title">The disposable that wants to last</div>
+          </div>
+        </div>
+        <p class="reveal">Here's where this gets uncomfortable. For everyone. Including me.</p>
+        <p class="reveal">I told you 50% of Americans say they deliberately disconnect. That sounds like a movement. Now put this number next to it: average daily screen time in 2025 is 5.3 hours. Up 14% from just a few years ago. A 2025 study published in JAMA Network Open tracked young adults who did a one-week social media detox. They cut social media from two hours a day to thirty minutes. But their total screen time didn't go down. It went up. They just shifted to other apps.</p>
+        <div class="source-ref reveal">JAMA Network Open, "Social Media Detox and Youth Mental Health," 2025 &middot; PCQuest / Exploding Topics, 2025</div>
+        <p class="reveal">Half of us say we want out. And the machine is winning anyway. The contraction is real as desire. It's failing as behavior. We want to close. We can't stop opening. That's The Great Contraction in its purest form. Not a success story. A tension.</p>
+        <p class="reveal">And it gets sharper when you look at who's feeling it most. The 22-year-old browsing old money content on TikTok isn't just caught between authenticity and aesthetics. He's the first generation that has to <em>perform</em> permanence because he has no access to actual permanence. He doesn't have a house. He probably won't have a pension. He can't afford the cashmere at retail, so he buys it secondhand. A 2025 J.P. Morgan survey found that 60% of consumers in the U.S. and Europe now use resale platforms for luxury goods.</p>
+        <div class="source-ref reveal">J.P. Morgan, "Luxury Resale &amp; Consumer Behavior," September 2025</div>
+        <div class="pull-quote reveal">
+          <p>The old money aesthetic isn't just taste. It's a fantasy of stability consumed by a generation structurally denied stability.</p>
+        </div>
+        <p class="reveal">That's not cynicism. It's the most compassionate reading possible. The desire isn't fake. The conditions that would make it achievable are missing. He uses the machine of disposal to search for what can't be disposed. He discovers permanence through a medium that erases everything in 24 hours. Is this a deep philosophical shift or just the next TikTok rotation after cottagecore, dark academia, mob wife, tomato girl? Both. The longing is real. The tools are broken. That doesn't make the longing fake. It makes the situation tragic.</p>
+      </div>
+
+      <!-- VII -->
+      <div class="essay-section reveal-stagger" id="tgc-s7">
+        <div class="section-header reveal">
+          <div class="section-header-num">VII</div>
+          <div class="section-header-body">
+            <div class="section-header-label">The Reckoning</div>
+            <div class="section-header-title">The part that costs me</div>
+          </div>
+        </div>
+        <p class="reveal">I'm 43. I have a son. I grew up in Buenos Aires copying cassettes from the radio and I now make a living building broadcast tools that run on AI. I am part of the generation that walked across the bridge from analog to digital, and I can tell you: neither side was paradise.</p>
+        <p class="reveal">I should also tell you that I spent the last three years accelerating the exact thing I'm now writing against. I build tools that automate content. I ship products that compress human labor into algorithmic output. I am not writing this from outside the machine. I'm writing it from the cockpit. And that's the part that costs me: I can see the contraction clearly because I helped build what made it necessary.</p>
+        <p class="reveal">I catch myself romanticizing the contraction. Of course I do. I remember what it was like to have a phone that was just a phone. I remember what it was like to be bored. I remember what it was like to sit with a thought for more than twelve seconds before the next one was algorithmically injected into my skull. And I want that back. I want it for my kid.</p>
+        <p class="reveal">But I also remember what the closed world was. I remember Argentina in the 90s. I remember what protectionism looked like when it wasn't a think piece but an actual policy that made everything expensive and kept the wrong people in power. Contraction can be shelter. It can also be suffocation. Sovereignty can mean autonomy, or it can mean isolation. The same density that feels like roots can be the thing that strangles you.</p>
+        <p class="reveal">And here's the biggest risk. Not that the world contracts. Contracting might be exactly what's needed. The risk is that contraction becomes the next dogma. That "closing" becomes the only permitted gesture, just as "opening" was. That permanence gets fetishized the way disruption was. That someone builds a political movement, a brand, an identity around the idea that inwardness is always right.</p>
+        <p class="reveal">Because that's exactly what happened with openness. And it was wrong then, too.</p>
+        <div class="pull-quote reveal">
+          <p>The problem was never the direction. The problem was always the dogma.</p>
+        </div>
+        <p class="reveal">Opening everything was a dogma. Closing everything will be another. What we actually need isn't a direction. It's the capacity to choose one, and to change it when it stops working, and to not destroy anyone who disagrees. Structures that can be dense and open at the same time. Things with edges that aren't walls. Things with roots that aren't cages.</p>
+      </div>
+
+      <!-- CLOSING -->
+      <div class="essay-section reveal-stagger">
+        <p class="reveal">My son still has those photos on his wall. The blurry ones. The overexposed cat. He hasn't asked for another disposable camera. He went right back to the iPad.</p>
+        <p class="reveal">But he kept the photos. He chose what stays.</p>
+        <p class="reveal">That's The Great Contraction. Not a return. Not a movement. A tension that lives in the body. The desire for permanence fighting the machinery of disposal. Old materials, new architecture. History, doing what it always does: not repeating, but rhyming.</p>
+        <p class="reveal">You felt it this morning. Before you opened this essay, you opened something else. An app, a feed, a notification. You felt the pull and you followed it. Maybe you also felt the resistance. The small, almost silent voice that said: <strong>not this. Not again. Not today.</strong></p>
+      </div>
+
+      <div class="closing reveal">
+        <div class="closing-ornament-top">&#10022; &middot; &#10087; &middot; &#10022;</div>
+        <p>That voice is The Great Contraction. It doesn't have a manifesto. It doesn't have a leader. It just has you, alone with your screen, deciding whether to scroll or to stop.</p>
+        <p>You're still here. You read the whole thing. That's a choice. What you do next is another one.</p>
+        <div class="closing-ornament-bottom">diegodella.ar &middot; Buenos Aires, 2026</div>
+      </div>
+
+      <div class="share-row reveal">
+        <button class="share-btn" id="shareBtn">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/><polyline points="16 6 12 2 8 6"/><line x1="12" y1="2" x2="12" y2="15"/></svg>
+          Share
+        </button>
+      </div>
+
+    </div>
+
+    <div class="paper-nav">
+      <a href="index.html" class="paper-nav-back">
+        <svg viewBox="0 0 24 24"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+        Back to index
+      </a>
+    </div>
+
+  </div>
+<script src="global.js?v=20260419b"></script>
+<script>
+(function(){
+  var reveals = document.querySelectorAll('.reveal');
+  if (!reveals.length) return;
+  var obs = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); }
+    });
+  }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+  reveals.forEach(function(el){ obs.observe(el); });
+  // Share button
+  var sb = document.getElementById('shareBtn');
+  if (sb) sb.addEventListener('click', function(){
+    var url = window.location.href;
+    if (navigator.share) { navigator.share({ title: document.title, url: url }); }
+    else if (navigator.clipboard) {
+      navigator.clipboard.writeText(url).then(function(){ sb.classList.add('copied'); sb.textContent = 'Copied'; setTimeout(function(){ sb.classList.remove('copied'); sb.innerHTML = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/><polyline points="16 6 12 2 8 6"/><line x1="12" y1="2" x2="12" y2="15"/></svg> Share'; }, 2000); });
+    }
+  });
+})();
+</script>
+</body>
+</html>

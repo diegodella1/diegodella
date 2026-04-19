@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-TJF4P0NYFT"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-TJF4P0NYFT');
+  </script>
+  <script>(function(){var t=localStorage.getItem("theme");if(!t)t=window.matchMedia("(prefers-color-scheme:dark)").matches?"dark":"light";document.documentElement.setAttribute("data-theme",t)})()</script>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <meta name="theme-color" content="#e6d5b8">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="Narrative Mechanics">
+  <link rel="apple-touch-icon" href="/og-default.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Strategic Debt: clarity deferred at a product's start compounds into messaging problems no launch can fix. Narrative-First Paper 01.">
+  <meta name="author" content="Diego Dell'Agostino">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://diegodella.ar/paper-01.html">
+  <meta property="og:title" content="Before You Build: Strategic Debt - Narrative-First Paper 01">
+  <meta property="og:description" content="Strategic Debt: clarity deferred at a product's start compounds into messaging problems no launch can fix. Narrative-First Paper 01.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://diegodella.ar/paper-01.html">
+  <meta property="og:site_name" content="Narrative Mechanics">
+  <meta property="og:image" content="https://diegodella.ar/og-default.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Before You Build: Strategic Debt - Narrative-First Paper 01">
+  <meta name="twitter:description" content="Strategic Debt: clarity deferred at a product's start compounds into messaging problems no launch can fix. Narrative-First Paper 01.">
+  <meta name="twitter:image" content="https://diegodella.ar/og-default.png">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ScholarlyArticle",
+    "headline": "Before You Build: Strategic Debt",
+    "description": "The first paper in the Narrative-First series. Strategic Debt argues that clarity deferred at the start of a product compounds into messaging problems that can't be fixed at launch. By Diego Dell'Agostino.",
+    "author": {
+      "@type": "Person",
+      "name": "Diego Dell'Agostino",
+      "url": "https://diegodella.ar/about.html"
+    },
+    "isPartOf": {
+      "@type": "CreativeWorkSeries",
+      "name": "Narrative-First",
+      "url": "https://diegodella.ar/paper-01.html",
+      "position": 1
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Narrative Mechanics",
+      "url": "https://diegodella.ar"
+    },
+    "url": "https://diegodella.ar/paper-01.html",
+    "datePublished": "2026-02-20",
+    "inLanguage": "en"
+  }
+  </script>
+  <title>Before You Build: Strategic Debt - Narrative-First Paper 01</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;700&family=Epilogue:ital,wght@0,400;1,400;0,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="global.css?v=20260418f">
+  <link rel="stylesheet" href="components.css?v=20260418f">
+  <style>
+    /* Nav styles removed — using global.css v2 nav */
+
+    /* Hero */
+    .hero {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 6rem 4rem 5rem;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 3rem;
+      align-items: start;
+    }
+    .hero-title {
+      font-family: 'Space Grotesk', serif;
+      font-size: clamp(2.8rem, 6vw, 5rem);
+      font-weight: 900;
+      line-height: 1.0;
+      letter-spacing: -0.025em;
+      margin-bottom: 1rem;
+    }
+    .hero-title em { font-style: italic; color: var(--ink); display: block; text-decoration: none; background: linear-gradient(180deg, transparent 54%, color-mix(in srgb, var(--accent) 18%, transparent) 54%); padding: 0 0.08em 0.02em 0; box-decoration-break: clone; -webkit-box-decoration-break: clone; }
+    .hero-subtitle {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 1.15rem;
+      font-style: italic;
+      color: var(--muted);
+      margin-bottom: 2rem;
+      line-height: 1.5;
+      max-width: 440px;
+    }
+    .hero-illustration { width: 280px; flex-shrink: 0; padding-top: 1rem; opacity: 0.85; }
+
+    /* Content */
+    .content { max-width: 720px; margin: 0 auto; padding: 0 2.5rem 8rem; }
+
+    /* Section stagger animation */
+    .section { margin-bottom: 5.5rem; opacity: 0; transform: translateY(28px); animation: fadeUp 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards; }
+    .section:nth-child(1) { animation-delay: 0.1s; }
+    .section:nth-child(2) { animation-delay: 0.25s; }
+    .section:nth-child(3) { animation-delay: 0.4s; }
+    .section:nth-child(4) { animation-delay: 0.55s; }
+    @keyframes fadeUp { to { opacity: 1; transform: translateY(0); } }
+
+    /* Mobile */
+    @media (max-width: 768px) {
+      .hero { grid-template-columns: 1fr; padding: 3rem 1.5rem 2rem; }
+      .hero-illustration { display: none; }
+      .content { padding: 0 1.5rem 5rem; }
+    }
+    @media (max-width: 640px) {
+      .content { padding-left: 1.5rem; padding-right: 1.5rem; }
+      footer { padding: 1.25rem 1.5rem; }
+    }
+  </style>
+</head>
+<body class="series-nf">
+  <a href="#main-content" class="skip-link">Skip to content</a>
+  <div id="pbar"></div>
+  <div id="pbar-label"></div>
+  <div class="bg-pattern"></div>
+  <div class="bg-grain"></div>
+  <div class="page-wrap">
+
+      <!-- Top Bar -->
+  <div class="top-bar">
+    <span>Buenos Aires &middot; Since 2008</span>
+    <span>18 Essays &middot; 3 Frameworks &middot; ~289 min of reading &middot; <a href="about.html">About the author</a></span>
+  </div>
+
+  <!-- Nav -->
+  <nav class="nav">
+      <div class="nav-inner">
+        <a href="index.html" class="nav-brand">Narrative<em>Mechanics</em></a>
+        <button class="nav-btn nav-toggle" aria-label="Menu" aria-expanded="false" aria-controls="navLinks" id="navToggle">
+          <svg viewBox="0 0 24 24"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg>
+        </button>
+        <div class="nav-links" id="navLinks">
+          <a href="index.html" class="nav-link">Home</a>
+          <div class="nav-sep"></div>
+          <a href="archive.html" class="nav-link">Start Here</a>
+          <a href="frameworks.html" class="nav-link">Frameworks</a>
+          <a href="series.html" class="nav-link">Series</a>
+          <a href="essays.html" class="nav-link">Essays</a>
+          <a href="notes.html" class="nav-link">Notes</a>
+          <div class="nav-sep"></div>
+          <a href="about.html" class="nav-link">About</a>
+        </div>
+        <div class="nav-right">
+          <button class="nav-btn" aria-label="Toggle theme" id="themeToggle">
+            <svg class="icon-moon" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+            <svg class="icon-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <section class="hero">
+      <div class="hero-left">
+        <div class="hero-kicker">Paper One &nbsp;/&nbsp; Foundation</div>
+        <h1 class="hero-title">Before You<br><em>Build</em></h1>
+        <p class="hero-subtitle">The Case for Narrative as First Prototype</p>
+        <div class="hero-byline">
+          <div class="hero-byline-dot"></div>
+          <div class="hero-byline-text">Diego Dell'Agostino</div>
+        </div>
+      </div>
+      <div class="hero-illustration">
+        <svg class="hero-svg" viewBox="0 0 160 200" xmlns="http://www.w3.org/2000/svg">
+        <style>
+          @keyframes draw{from{stroke-dashoffset:200}to{stroke-dashoffset:0}}
+          @keyframes pulse-dot{0%,100%{r:3;opacity:1}50%{r:5;opacity:0.5}}
+          @keyframes fade-label{from{opacity:0}to{opacity:1}}
+        </style>
+        <!-- Grid -->
+        <line x1="15" y1="20" x2="15" y2="170" stroke="var(--rule)" stroke-width="0.7"/>
+        <line x1="15" y1="170" x2="150" y2="170" stroke="var(--rule)" stroke-width="0.7"/>
+        <!-- Narrative arc (animated draw) -->
+        <path d="M20 160 C40 100,80 55,140 35" stroke="var(--accent)" stroke-width="2" fill="none"
+              stroke-dasharray="200" style="animation:draw 2s ease-out forwards"/>
+        <!-- Build arc (dashed, delayed) -->
+        <path d="M20 160 C60 140,110 125,140 115" stroke="var(--muted)" stroke-width="1.5" stroke-dasharray="4 3" fill="none"
+              opacity="0" style="animation:fade-label 0.8s 1s forwards"/>
+        <!-- Origin dot -->
+        <circle cx="20" cy="160" r="3" fill="var(--accent)" style="animation:pulse-dot 2.5s ease-in-out infinite"/>
+        <!-- Labels -->
+        <text x="143" y="33" font-family="monospace" font-size="7" fill="var(--accent)" opacity="0" style="animation:fade-label 0.5s 1.5s forwards">N</text>
+        <text x="143" y="113" font-family="monospace" font-size="7" fill="var(--muted)" opacity="0" style="animation:fade-label 0.5s 1.8s forwards">B</text>
+        <text x="80" y="190" font-family="monospace" font-size="6" fill="var(--muted)" text-anchor="middle" letter-spacing="2" opacity="0" style="animation:fade-label 0.5s 2s forwards">NARRATIVE FIRST</text>
+      </svg>
+      </div>
+    </section>
+
+        <div class="chapter-divider">
+      <div class="chapter-divider-line"></div>
+    </div>
+
+    <main class="content" id="main-content">
+
+      <article class="section">
+        <div class="section-badge">
+          <div class="section-icon">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+          </div>
+          <div class="section-meta">
+            <div class="section-number">Section I &nbsp;/&nbsp; Four</div>
+            <h2 class="section-title">The Invisible Debt of Early Execution</h2>
+          </div>
+        </div>
+        <div class="section-rule"></div>
+        <div class="section-body">
+          <p>In the current landscape of product development, we have reached a point where the ability to build has outpaced the ability to reason. We have institutionalized "velocity" as the primary metric of success, often at the expense of clarity. We move fast, we ship frequently, and we iterate constantly; yet many of these efforts result in technically sound products that fail to find a foothold in the market.</p>
+          <div class="margin-note">Velocity without clarity is just expensive movement in the wrong direction.</div>
+          <p>The issue is rarely a lack of talent or effort. It is the accumulation of what I call Strategic Debt. This is the debt incurred when a team ships a product that works perfectly and means nothing; when the engineering is sound but no one can explain, in plain language, what problem it actually solves or who it is for. When we treat the "story" as a task for a marketing department to solve post-launch, we are building on a foundation of ambiguity. We are constructing solutions for problems we haven't yet learned how to describe, expecting the market to supply the meaning we never defined.</p>
+        </div>
+      </article>
+
+      <article class="section">
+        <div class="section-badge">
+          <div class="section-icon">
+            <svg viewBox="0 0 24 24"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+          </div>
+          <div class="section-meta">
+            <div class="section-number">Section II &nbsp;/&nbsp; Four</div>
+            <h2 class="section-title">Narrative as the First Prototype</h2>
+          </div>
+        </div>
+        <div class="section-rule"></div>
+        <div class="section-body">
+          <p>What I am proposing is a reordering of priorities, not a new methodology. The premise is simple: the story is not a byproduct of the product. It is the blueprint.</p>
+          <p>Before a single line of code is written, the narrative must exist as a stable, coherent, and resonant thesis. If a product's value cannot be communicated effectively in its most abstract form (as a narrative arc), it will likely struggle to find resonance in its most concrete form. The narrative, in this sense, becomes the ultimate constraint for engineering. It dictates what is essential and what is superfluous. If a feature does not serve the central story, it is a distraction. If a technical decision obscures the user's understanding of the value, it is a structural flaw.</p>
+          <p>When the narrative is clear before the build begins, the technical team is not just building software; they are manifesting a specific vision of the future. And that distinction matters, because teams that know what they are building also know what to refuse. This has organizational consequences. Someone in the room has to be responsible for maintaining the coherence between what is being built and what the product is claiming to be. Not as a brand exercise, but as an engineering constraint. When those two things drift apart, you don't get a messaging problem. You get a product that no one knows how to adopt.</p>
+        </div>
+      </article>
+
+      <article class="section">
+        <div class="section-badge">
+          <div class="section-icon">
+            <svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+          </div>
+          <div class="section-meta">
+            <div class="section-number">Section III &nbsp;/&nbsp; Four</div>
+            <h2 class="section-title">Communication as Long-Term Infrastructure</h2>
+          </div>
+        </div>
+        <div class="section-rule"></div>
+        <div class="section-body">
+          <p>One of the most important shifts this reordering demands is in how we categorize communication itself. Traditionally, it has been viewed as an operational expense (a recurring cost required to "buy" attention). I would argue the opposite: in a narrative-first model, communication is capital infrastructure.</p>
+          <div class="margin-note">A well-reasoned manifesto compounds in value over time. An ad disappears the moment the budget runs out.</div>
+          <p>A well-reasoned manifesto, a deep-dive analysis, a foundational piece of strategy; these are permanent assets. Intellectual property that compounds in value over time. Unlike traditional advertising, which disappears the moment the budget is exhausted, a strong narrative builds durable authority. It creates a common language between the product and the market, one that outlasts any single campaign, any single launch, any single hire.</p>
+          <div class="pull-quote">
+            <p>This is not a soft argument. It has hard structural implications.</p>
+          </div>
+          <p>Organizations that invest in narrative early spend less defending their positioning later. They attract the right users, the right hires, and the right partners, because the story does the filtering before the sales cycle even begins. We are not merely shipping features; we are staking a claim about how the world should work. The right user doesn't need to be convinced. They recognize it.</p>
+        </div>
+      </article>
+
+      <article class="section">
+        <div class="section-badge">
+          <div class="section-icon">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          </div>
+          <div class="section-meta">
+            <div class="section-number">Section IV &nbsp;/&nbsp; Four</div>
+            <h2 class="section-title">Toward a More Deliberate Execution</h2>
+          </div>
+        </div>
+        <div class="section-rule"></div>
+        <div class="section-body">
+          <p>Here is what I have learned from watching products fail: the problem is almost never the engineering. The team was talented. The execution was fast. The metrics were tracked. What was missing was simpler and harder to fix; nobody had taken the time to articulate what the product was actually <em>for</em>.</p>
+          <p>This is not a failure of intelligence. It is a failure of priority. We have built entire organizational systems that reward speed and punish pause. Shipping is celebrated. Thinking is invisible. And so the narrative (the <em>why</em> behind the product) gets deferred to a marketing brief that arrives after the architecture is already fixed.</p>
+          <p>I am not arguing for slowness. I am arguing for sequence. Before the first sprint, before the first commit, before the first hire; someone needs to own the story. Not as a pitch. As a constraint.</p>
+          <p>The most durable products I have seen were built by teams who knew exactly what they were <em>not</em> building. That clarity did not come from a framework. It came from a story they had agreed on before they started.</p>
+        </div>
+      </article>
+
+      <div class="closing">
+        <div class="closing-ornament-top">✦ &nbsp; ❧ &nbsp; ✦</div>
+        <p>That is the work. Everything else is execution.</p>
+        <div class="closing-ornament-bottom">End of Paper No. 1 &nbsp;·&nbsp; Narrative-First Series</div>
+      </div>
+      <div style="max-width:720px;margin:1.5rem auto 0;padding:0 2.5rem;font-family:'JetBrains Mono',monospace;font-size:0.5rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--muted);">February 2026</div>
+
+    </main>
+
+    <div style="max-width:680px;margin:0 auto;padding:0 4rem 2rem;">
+      <p style="font-family:'Inter',serif;font-size:1rem;line-height:1.75;color:var(--muted);font-style:italic;">If narrative comes before architecture, the next question is whether the market can even recognize what you've built. That's the subject of Essay 02.</p>
+    </div>
+
+    <div class="paper-nav" style="justify-content:space-between;">
+      <a href="before-you-delegate.html" class="paper-nav-next" style="flex-direction:row-reverse;">
+        Prev: Before You Delegate
+        <svg viewBox="0 0 24 24"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+      </a>
+      <a href="paper-02.html" class="paper-nav-next">
+        Next: Before You Fit
+        <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </a>
+    </div>
+
+    <footer>
+      <div class="footer-left">© 2026 Diego Dell'Agostino</div>
+      <div class="footer-center">❧</div>
+      <div class="footer-right">Paper 01 &nbsp;·&nbsp; Narrative-First</div>
+    </footer>
+
+  </div>
+<script src="global.js?v=20260419b"></script>
+</body>
+</html>

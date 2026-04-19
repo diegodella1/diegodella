@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-TJF4P0NYFT"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-TJF4P0NYFT');
+  </script>
+  <script>(function(){var t=localStorage.getItem("theme");if(!t)t=window.matchMedia("(prefers-color-scheme:dark)").matches?"dark":"light";document.documentElement.setAttribute("data-theme",t)})()</script>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <meta name="theme-color" content="#e6d5b8">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="Narrative Mechanics">
+  <link rel="apple-touch-icon" href="/og-default.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="On content that has to pass two algorithmic layers before reaching a human, and why that changes what good editorial strategy is.">
+  <meta name="author" content="Diego Dell'Agostino">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://diegodella.ar/writing-for-the-filter.html">
+  <meta property="og:title" content="Writing for the Filter — After You Post 03">
+  <meta property="og:description" content="On content that has to pass two algorithmic layers before reaching a human, and why that changes what good editorial strategy is.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://diegodella.ar/writing-for-the-filter.html">
+  <meta property="og:site_name" content="Narrative Mechanics">
+  <meta property="og:image" content="https://diegodella.ar/og-default.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:locale" content="en_US">
+  <meta property="article:author" content="Diego Dell'Agostino">
+  <meta property="article:published_time" content="2026-03-10">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Writing for the Filter — After You Post 03">
+  <meta name="twitter:description" content="On content that has to pass two algorithmic layers before reaching a human, and why that changes what good editorial strategy is.">
+  <meta name="twitter:image" content="https://diegodella.ar/og-default.png">
+  <title>Writing for the Filter — Diego Dell'Agostino</title>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Writing for the Filter",
+    "description": "On content that has to pass two algorithmic layers before reaching a human, and why that changes what good editorial strategy is.",
+    "author": {
+      "@type": "Person",
+      "name": "Diego Dell'Agostino",
+      "url": "https://diegodella.ar/about.html"
+    },
+    "datePublished": "2026-03-10",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Narrative Mechanics",
+      "url": "https://diegodella.ar"
+    },
+    "url": "https://diegodella.ar/writing-for-the-filter.html",
+    "mainEntityOfPage": "https://diegodella.ar/writing-for-the-filter.html"
+  }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;700&family=Epilogue:ital,wght@0,400;1,400;0,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="global.css?v=20260418f">
+  <link rel="stylesheet" href="components.css?v=20260418f">
+  <style>
+    ::selection { background: var(--accent); color: var(--paper); }
+    .hero { max-width: 900px; margin: 0 auto; padding: 5rem 4rem 4rem; display: grid; grid-template-columns: 1fr 280px; gap: 2rem; align-items: center; }
+    .hero-title { font-family: 'Space Grotesk', serif; font-size: clamp(2.4rem, 5vw, 4.2rem); font-weight: 900; line-height: 1.0; letter-spacing: -0.025em; margin-bottom: 1rem; }
+    .hero-title em { font-style: italic; color: var(--ink); display: block; text-decoration: none; background: linear-gradient(180deg, transparent 54%, color-mix(in srgb, var(--accent) 18%, transparent) 54%); padding: 0 0.08em 0.02em 0; box-decoration-break: clone; -webkit-box-decoration-break: clone; }
+    .hero-subtitle { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 1.1rem; font-style: italic; color: var(--muted); margin-bottom: 2rem; line-height: 1.5; max-width: 480px; }
+    .hero-svg { width: 100%; height: auto; }
+    .content { max-width: 720px; margin: 0 auto; padding: 0 2.5rem 4rem; }
+    .essay-section { margin-bottom: 4.5rem; opacity: 0; transform: translateY(24px); animation: fadeUp 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards; }
+    .essay-section:nth-child(1) { animation-delay: 0.05s; }
+    .essay-section:nth-child(2) { animation-delay: 0.12s; }
+    .essay-section:nth-child(3) { animation-delay: 0.19s; }
+    .essay-section:nth-child(4) { animation-delay: 0.26s; }
+    .essay-section:nth-child(5) { animation-delay: 0.33s; }
+    .essay-section:nth-child(6) { animation-delay: 0.40s; }
+    .essay-section:nth-child(7) { animation-delay: 0.47s; }
+    @keyframes fadeUp { to { opacity: 1; transform: translateY(0); } }
+    .essay-section p { margin-bottom: 1.5rem; font-size: 1.05rem; line-height: 1.92; text-align: justify; hyphens: auto; }
+    .essay-section p:last-child { margin-bottom: 0; }
+    .essay-section.intro p:first-of-type::first-letter {
+      font-family: 'Space Grotesk', serif; font-size: 4.2rem; font-weight: 900;
+      float: left; line-height: 0.72; margin-right: 0.07em; margin-top: 0.12em; color: var(--accent);
+    }
+    .series-nav { max-width: 680px; margin: 0 auto; padding: 2rem 2.5rem 0; border-top: 1px solid var(--rule); }
+    .series-nav-label { font-family: 'JetBrains Mono', monospace; font-size: 0.5rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--muted); margin-bottom: 1.25rem; }
+    .series-list { list-style: none; display: flex; flex-direction: column; gap: 0.5rem; }
+    .series-list li { display: flex; align-items: baseline; gap: 0.75rem; }
+    .series-list li a { text-decoration: none; color: var(--ink-2); transition: color 0.2s; }
+    .series-list li a:hover { color: var(--accent); }
+    .series-num { font-family: 'JetBrains Mono', monospace; font-size: 0.5rem; color: var(--muted); min-width: 1.5rem; }
+    .series-title { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 0.9rem; color: var(--ink-2); }
+    .series-title.current { color: var(--ink); font-weight: 600; }
+    .share-btn { display: inline-flex; align-items: center; gap: 0.5rem; font-family: 'JetBrains Mono', monospace; font-size: 0.5rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--muted); background: none; border: 1px solid var(--rule); padding: 0.5em 1em; cursor: pointer; transition: all 0.15s; margin-top: 1rem; position: relative; z-index: 1; }
+    .share-btn:hover { color: var(--accent); border-color: var(--accent); }
+    .share-btn.copied { color: var(--accent); border-color: var(--accent); }
+    .paper-nav { max-width: 680px; margin: 0 auto; padding: 0 2.5rem 5rem; display: flex; justify-content: space-between; }
+    .paper-nav a { display: flex; align-items: center; gap: 0.75rem; text-decoration: none; color: var(--ink); font-family: 'JetBrains Mono', monospace; font-size: 0.55rem; letter-spacing: 0.15em; text-transform: uppercase; transition: color 0.2s; }
+    .paper-nav a:hover { color: var(--accent); }
+    .paper-nav a svg { width: 16px; height: 16px; stroke: currentColor; fill: none; stroke-width: 1.5; }
+    .cite { font-family: 'JetBrains Mono', monospace; font-size: 0.6rem; color: var(--muted); display: block; margin-top: 2rem; padding-top: 1rem; border-top: 1px solid var(--rule); line-height: 1.7; max-width: 560px; }
+    @media (max-width: 768px) {
+      .hero { padding: 3rem 1.5rem 2rem; grid-template-columns: 1fr; }
+      .hero-svg { max-width: 200px; margin: 0 auto; order: -1; }
+      .content { padding: 0 1.5rem 4rem; }
+      .series-nav { padding: 2rem 1.5rem 0; }
+      .paper-nav { padding: 0 1.5rem 3rem; }
+    }
+  </style>
+</head>
+<body class="series-ayp">
+  <div id="pbar"></div>
+  <div id="pbar-label"></div>
+  <div class="bg-pattern"></div>
+  <div class="bg-grain"></div>
+
+  <div class="page-wrap">
+    <div class="top-bar">
+      <span>Buenos Aires &middot; Since 2008</span>
+      <span>18 Essays &middot; 3 Frameworks &middot; ~289 min of reading &middot; <a href="about.html">About the author</a></span>
+    </div>
+
+    <nav class="nav">
+      <div class="nav-inner">
+        <a href="index.html" class="nav-brand">Narrative<em>Mechanics</em></a>
+        <button class="nav-btn nav-toggle" aria-label="Menu" aria-expanded="false" aria-controls="navLinks" id="navToggle">
+          <svg viewBox="0 0 24 24"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg>
+        </button>
+        <div class="nav-links" id="navLinks">
+          <a href="index.html" class="nav-link">Home</a>
+          <div class="nav-sep"></div>
+          <a href="archive.html" class="nav-link">Start Here</a>
+          <a href="frameworks.html" class="nav-link">Frameworks</a>
+          <a href="series.html" class="nav-link">Series</a>
+          <a href="essays.html" class="nav-link">Essays</a>
+          <a href="notes.html" class="nav-link">Notes</a>
+          <div class="nav-sep"></div>
+          <a href="about.html" class="nav-link">About</a>
+        </div>
+        <div class="nav-right">
+          <button class="nav-btn" aria-label="Toggle theme" id="themeToggle">
+            <svg class="icon-moon" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+            <svg class="icon-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <header class="hero">
+      <div class="hero-main">
+        <div class="hero-kicker">After You Post · 03 &nbsp;&middot;&nbsp; March 2026</div>
+        <h1 class="hero-title">Writing for<em>the Filter</em></h1>
+        <p class="hero-subtitle">On content that has to pass two algorithmic layers before reaching a human, and why that changes what good editorial strategy is.</p>
+        <div class="hero-byline"><div class="hero-byline-dot"></div><span class="hero-byline-text">Diego Dell'Agostino &nbsp;&middot;&nbsp; Buenos Aires</span></div>
+      </div>
+      <!-- SVG: Two horizontal filter bars with content passing through, getting simplified -->
+      <svg class="hero-svg" viewBox="0 0 160 200" xmlns="http://www.w3.org/2000/svg">
+        <style>
+          @keyframes wfDrop{from{transform:translateY(-20px);opacity:0}to{transform:translateY(0);opacity:1}}
+          @keyframes wfShrink{from{transform:scaleX(1)}to{transform:scaleX(0.5)}}
+          @keyframes wfFade{from{opacity:0}to{opacity:1}}
+        </style>
+        <!-- Content lines entering from top -->
+        <g opacity="0" style="animation:wfDrop 0.6s 0.2s forwards">
+          <line x1="40" y1="25" x2="120" y2="25" stroke="var(--ink)" stroke-width="1.5"/>
+          <line x1="50" y1="33" x2="110" y2="33" stroke="var(--ink-2,var(--ink))" stroke-width="1" opacity="0.6"/>
+          <line x1="45" y1="41" x2="115" y2="41" stroke="var(--ink-2,var(--ink))" stroke-width="1" opacity="0.6"/>
+          <line x1="55" y1="49" x2="105" y2="49" stroke="var(--ink-2,var(--ink))" stroke-width="0.8" opacity="0.4"/>
+        </g>
+        <!-- Filter 1: Algorithm -->
+        <rect x="25" y="65" width="110" height="16" rx="2" fill="none" stroke="var(--accent)" stroke-width="1.2" opacity="0" style="animation:wfFade 0.4s 0.8s forwards"/>
+        <text x="80" y="76" font-family="monospace" font-size="6" fill="var(--accent)" text-anchor="middle" letter-spacing="2" opacity="0" style="animation:wfFade 0.4s 1s forwards">FILTER 01</text>
+        <!-- Fewer lines after filter 1 -->
+        <g opacity="0" style="animation:wfFade 0.5s 1.3s forwards">
+          <line x1="50" y1="95" x2="110" y2="95" stroke="var(--ink)" stroke-width="1.2"/>
+          <line x1="55" y1="103" x2="105" y2="103" stroke="var(--ink-2,var(--ink))" stroke-width="0.8" opacity="0.5"/>
+        </g>
+        <!-- Filter 2: Agent -->
+        <rect x="25" y="120" width="110" height="16" rx="2" fill="none" stroke="var(--muted)" stroke-width="1.2" opacity="0" style="animation:wfFade 0.4s 1.6s forwards"/>
+        <text x="80" y="131" font-family="monospace" font-size="6" fill="var(--muted)" text-anchor="middle" letter-spacing="2" opacity="0" style="animation:wfFade 0.4s 1.8s forwards">FILTER 02</text>
+        <!-- Single compressed line after filter 2 -->
+        <g opacity="0" style="animation:wfFade 0.5s 2.1s forwards">
+          <line x1="60" y1="150" x2="100" y2="150" stroke="var(--rule)" stroke-width="1"/>
+        </g>
+        <!-- Human eye at bottom -->
+        <g opacity="0" style="animation:wfFade 0.6s 2.5s forwards">
+          <ellipse cx="80" cy="170" rx="10" ry="6" fill="none" stroke="var(--ink)" stroke-width="1"/>
+          <circle cx="80" cy="170" r="3" fill="var(--ink)"/>
+        </g>
+        <!-- Labels -->
+        <text x="80" y="192" font-family="monospace" font-size="6" fill="var(--muted)" text-anchor="middle" letter-spacing="2" opacity="0" style="animation:wfFade 0.5s 3s forwards">TWO MACHINES</text>
+        <text x="80" y="200" font-family="monospace" font-size="5" fill="var(--rule)" text-anchor="middle" letter-spacing="1.5" opacity="0" style="animation:wfFade 0.5s 3.3s forwards">before the human</text>
+      </svg>
+    </header>
+
+    <div class="chapter-divider"><div class="chapter-divider-line"></div></div>
+
+    <div class="content">
+
+      <div class="essay-section intro">
+        <p>There used to be one machine between you and a human reader. You learned to write for it. That was the job.</p>
+        <p>Now there are two. The first decides whether to surface your content. The second, sitting between the first and the actual person, decides whether to read it. They have different criteria. Nobody updated the playbook.</p>
+      </div>
+
+      <div class="essay-section">
+        <div class="section-badge">
+          <div class="section-icon"><svg viewBox="0 0 24 24"><polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"/></svg></div>
+          <div class="section-meta">
+            <span class="section-number">Section 01</span>
+            <span class="section-title">The Second Filter</span>
+          </div>
+        </div>
+        <div class="section-rule"></div>
+        <div class="section-body">
+          <p>There used to be one filter between your content and a human reader: the algorithm that decided whether to surface it. SEO was the science of surviving that filter. Understand what the algorithm rewarded, produce that, get shown. The optimization loop was legible: write for the machine so the machine shows you to the person.</p>
+          <p>That loop still exists. But there's a second filter now sitting between the first one and the human, and it doesn't work the same way. The first filter decides what to surface. The second filter, the agent browsing on someone's behalf, decides what to read, what to summarize, what to pass along, and what to discard. Two machines in sequence before a person sees anything.</p>
+          <p>The problem is that the two filters have different criteria. The first rewards what gets clicked. The second rewards what survives compression. A piece optimized for the first filter, hooks, listicles, declarative headlines, frequently collapses under the second. The agent summarizing your content doesn't care about the hook. It's looking for the claim, the evidence, the conclusion. If those three things aren't there, or aren't findable quickly, the summary omits you.</p>
+          <div class="pull-quote">
+            <p>You spent years learning to write for a machine that showed you to people. Now there's another machine that reads you instead of them.</p>
+          </div>
+          <p>And the human using that agent doesn't know what was omitted. They got an answer. The gap between your piece and their understanding is invisible to everyone.</p>
+        </div>
+      </div>
+
+      <div class="essay-section">
+        <div class="section-badge">
+          <div class="section-icon"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+          <div class="section-meta">
+            <span class="section-number">Section 02</span>
+            <span class="section-title">The User Who Doesn't Know</span>
+          </div>
+        </div>
+        <div class="section-rule"></div>
+        <div class="section-body">
+          <p>The human who uses a search engine today is often running their query through an agent without knowing it. Google now answers many questions directly at the top of the page, before any links. Tools like Perplexity, which generates a synthesized response instead of a list of websites, return an answer before showing a single source. ChatGPT cites three articles the person will never open. These aren't power users with autonomous setups. They're ordinary people doing ordinary searches, and an intermediary is reading on their behalf before the results arrive.</p>
+          <p>The share of searches that end without anyone clicking through to a website has been climbing for two years. On some publisher sites, most of the traffic arriving is automated crawlers, not people.</p>
+          <p>The traffic still comes. The reader behind it arrives less often.</p>
+          <p>That's what makes the optimization instinct so counterproductive. The natural response to declining reach is to optimize harder for the first filter: more SEO, sharper hooks, better headlines. But if the bottleneck has shifted to the second filter, that optimization is solving for the wrong machine. You're getting better at being surfaced by something that routes you to something else that decides you're not worth reading directly.</p>
+        </div>
+      </div>
+
+      <div class="essay-section">
+        <div class="section-badge">
+          <div class="section-icon"><svg viewBox="0 0 24 24"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></div>
+          <div class="section-meta">
+            <span class="section-number">Section 03</span>
+            <span class="section-title">What the Second Filter Reads</span>
+          </div>
+        </div>
+        <div class="section-rule"></div>
+        <div class="section-body">
+          <p>The two filters have different criteria. The first rewards what gets clicked: hooks, declarative headlines, listicles. The second rewards what survives compression, and a piece optimized for the first frequently collapses under the second. The agent summarizing your content doesn't care about the hook. It's looking for the claim, the evidence, the conclusion. If those aren't findable quickly, the summary omits you.</p>
+          <p>What doesn't compress: vibe, accumulation, the texture of thinking rather than content. The movement from question to observation to something you didn't see coming. That movement is what produces curiosity in a reader, the sense that there's more to find, that the person writing knows something you haven't gotten to yet. The agent reads it, extracts the conclusion, passes along something technically accurate and entirely flat. The essay becomes a bullet point. The argument becomes a sentence. The curiosity doesn't make it through.</p>
+          <p>If you optimize for both filters at once, you end up writing something compressible and positionally consistent. That's a different kind of writing than the kind worth doing. The filter doesn't just change what gets read. It changes what gets built, if you let it.</p>
+        </div>
+      </div>
+
+      <div class="essay-section">
+        <div class="section-badge">
+          <div class="section-icon"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
+          <div class="section-meta">
+            <span class="section-number">Section 04</span>
+            <span class="section-title">Digging with the Wrong Tool</span>
+          </div>
+        </div>
+        <div class="section-rule"></div>
+        <div class="section-body">
+          <p>The optimization instinct is hard to kill because it used to work, and because the feedback loop that would tell you it stopped working is broken. Traffic metrics don't distinguish between a human who read your piece and an agent that scraped it. Impressions don't flag when the impression was a summary rather than a view. The numbers keep moving. The optimization keeps happening. The gap keeps opening.</p>
+          <p>Nobody sends you a warning.</p>
+          <p>The tools that tell you whether you're succeeding were built for the old model. So you keep doing what the tools reward, which is increasingly what the second filter discards.</p>
+          <p>The production side compounds this. The content being published is increasingly agentic itself, as argued in the previous essay in this series. An agent creates the piece. Another distributes it. A third, on the reader's side, summarizes it for a human who may or may not have asked for it. At some point in that chain, the question of what any of it means to a person becomes genuinely hard to locate.</p>
+          <p>The agentic creation chain optimizes for the first filter because that's what it was trained to optimize for: SEO best practices, engagement hooks, structural clarity for scanability. All of it aimed at surviving the surface algorithm. None of it aimed at what a second filter, one reading for compression rather than for clicks, actually weights.</p>
+        </div>
+      </div>
+
+      <div class="essay-section">
+        <div class="section-badge">
+          <div class="section-icon"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+          <div class="section-meta">
+            <span class="section-number">Section 05</span>
+            <span class="section-title">The Thing the Filter Can't Flatten</span>
+          </div>
+        </div>
+        <div class="section-rule"></div>
+        <div class="section-body">
+          <p>There's a version of this that ends in paralysis: if the filters flatten everything, why write anything? But that logic only holds if surviving the filters is the point.</p>
+          <p>The reach model made that feel obvious: you write to be found, being found means a human read you, optimize to be found. Distribution and readership were treated as the same thing. They weren't, even before agents. The second filter just made the gap between them impossible to ignore.</p>
+          <p>What the filter can't flatten is the reason someone seeks the original. A summary can carry a claim. It can't carry the judgment that the person who made the claim is worth trusting. That trust, the sense that a particular voice has a particular relationship to a domain over time, doesn't compress. It accumulates in the person, not in the agent.</p>
+          <p>The content that matters now is the content that makes someone want to find the source. Not because it's optimized to be found. Because the agent gave them the answer but didn't satisfy the curiosity.</p>
+          <span class="cite">On the structural shift from reach to indexing, and on the synthesis-without-citation problem: "The Last Human Impression" (diegodella.ar, 2026). "The agent may draw on your perspective to form its answer, and the human who receives that answer never knows you exist. There is no traffic. No referral. The economic model for being synthesized rather than cited is still genuinely unresolved."</span>
+        </div>
+      </div>
+
+      <div class="closing">
+        <div class="closing-ornament-top">&#10022; &nbsp; &#10087; &nbsp; &#10022;</div>
+        <p>The content that matters now is the content that makes someone want to find the source.</p>
+        <div class="closing-ornament-bottom"><a href="https://diegodella.ar" style="color:inherit;text-decoration:none;">diegodella.ar</a> &nbsp;&middot;&nbsp; Buenos Aires, 2026</div>
+        <button class="share-btn" id="shareBtn" onclick="handleShare()"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/><polyline points="16 6 12 2 8 6"/><line x1="12" y1="2" x2="12" y2="15"/></svg> Share</button>
+      </div>
+
+      <div class="series-nav">
+        <div class="series-nav-label">After You Post &middot; The Series</div>
+        <ul class="series-list">
+          <li><span class="series-num">01</span><a href="the-empty-room.html"><span class="series-title">The Empty Room</span></a></li>
+          <li><span class="series-num">02</span><a href="the-proxy-self.html"><span class="series-title">The Proxy Self</span></a></li>
+          <li><span class="series-num">03</span><span class="series-title current">Writing for the Filter</span></li>
+          <li><span class="series-num">04</span><a href="the-trust-collapse.html"><span class="series-title">The Trust Collapse</span></a></li>
+          <li><span class="series-num">05</span><a href="origin-gravity.html"><span class="series-title">Origin Gravity</span></a></li>
+        </ul>
+      </div>
+
+      <div class="paper-nav">
+        <a href="the-proxy-self.html"><svg viewBox="0 0 24 24"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg> The Proxy Self</a>
+        <a href="the-trust-collapse.html">The Trust Collapse &nbsp;<svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+      </div>
+    </div>
+
+    <footer>
+      <div class="footer-left">&copy; 2026 Diego Dell'Agostino</div>
+      <div class="footer-center">&#10087;</div>
+      <div class="footer-right">Media Strategy &amp; Product Thinking</div>
+    </footer>
+  </div>
+<script src="global.js?v=20260419b"></script>
+<script>
+  function handleShare() {
+    var u = window.location.href, t = 'Writing for the Filter', x = 'On content that has to pass two algorithmic layers before reaching a human, and why that changes what good editorial strategy is.';
+    if (navigator.share) { navigator.share({ title: t, text: x, url: u }).catch(function(){}); }
+    else if (navigator.clipboard) { navigator.clipboard.writeText(u).then(function() { var b = document.getElementById('shareBtn'); b.classList.add('copied'); b.innerHTML = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Copied'; setTimeout(function() { b.classList.remove('copied'); b.innerHTML = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/><polyline points="16 6 12 2 8 6"/><line x1="12" y1="2" x2="12" y2="15"/></svg> Share'; }, 2000); }); }
+  }
+</script>
+</body>
+</html>

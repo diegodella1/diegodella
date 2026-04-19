@@ -1,0 +1,24 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/mcp-server-card/v1.json",
+  "version": "1.0",
+  "protocolVersion": "2025-06-18",
+  "serverInfo": {
+    "name": "diegodella-webmcp",
+    "title": "Narrative Mechanics WebMCP",
+    "version": "1.0.0"
+  },
+  "description": "Browser-exposed tools for navigating Narrative Mechanics, opening contact flows, and changing the site theme on diegodella.ar.",
+  "documentationUrl": "https://diegodella.ar/docs/api.md",
+  "iconUrl": "https://diegodella.ar/favicon.svg",
+  "transport": {
+    "type": "webmcp",
+    "endpoint": "https://diegodella.ar/"
+  },
+  "capabilities": {
+    "tools": {
+      "listChanged": false
+    },
+    "prompts": {},
+    "resources": {}
+  }
+}

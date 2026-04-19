@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-TJF4P0NYFT"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-TJF4P0NYFT');
+  </script>
+  <script>(function(){var t=localStorage.getItem("theme");if(!t)t=window.matchMedia("(prefers-color-scheme:dark)").matches?"dark":"light";document.documentElement.setAttribute("data-theme",t)})()</script>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <meta name="theme-color" content="#e6d5b8">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="Narrative Mechanics">
+  <link rel="apple-touch-icon" href="/og-default.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Broken distribution, agent capture, the collapse of the ad substrate, and the return to origin. Why your content no longer reaches anyone.">
+  <meta name="author" content="Diego Dell'Agostino">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://diegodella.ar/occlusion-bias.html">
+  <link rel="alternate" type="text/markdown" href="/occlusion-bias.md">
+  <meta property="og:title" content="Occlusion Bias | Narrative Mechanics">
+  <meta property="og:description" content="Broken distribution, agent capture, the collapse of the ad substrate, and the return to origin. Why your content no longer reaches anyone.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://diegodella.ar/occlusion-bias.html">
+  <meta property="og:site_name" content="Narrative Mechanics">
+  <meta property="og:image" content="https://diegodella.ar/og-default.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Occlusion Bias | Narrative Mechanics">
+  <meta name="twitter:description" content="Broken distribution, agent capture, the collapse of the ad substrate, and the return to origin. Why your content no longer reaches anyone.">
+  <meta name="twitter:image" content="https://diegodella.ar/og-default.png">
+  <title>Occlusion Bias | Narrative Mechanics</title>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Occlusion Bias",
+    "author": {
+      "@type": "Person",
+      "name": "Diego Dell'Agostino",
+      "url": "https://diegodella.ar/about.html"
+    },
+    "datePublished": "2026-02-20",
+    "description": "Broken distribution, agent capture, the collapse of the ad substrate, and the return to origin.",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Narrative Mechanics",
+      "url": "https://diegodella.ar"
+    },
+    "url": "https://diegodella.ar/occlusion-bias.html",
+    "mainEntityOfPage": "https://diegodella.ar/occlusion-bias.html"
+  }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;700&family=Epilogue:ital,wght@0,400;1,400;0,600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="global.css?v=20260418f">
+  <link rel="stylesheet" href="components.css?v=20260418f">
+  <style>
+    html { font-size: 20px; scroll-behavior: smooth; scroll-padding-top: 60px; }
+    body { line-height: 1.8; }
+
+    /* ── Hero ── */
+    .hero { max-width: 960px; margin: 0 auto; padding: 6rem 4rem 4rem; }
+    .hero-title { font-family: 'Space Grotesk', serif; font-size: clamp(2.5rem, 6vw, 4.5rem); font-weight: 900; line-height: 0.95; letter-spacing: -0.03em; margin-bottom: 1rem; }
+    .hero-title em { font-style: italic; color: var(--ink); text-decoration: none; background: linear-gradient(180deg, transparent 54%, color-mix(in srgb, var(--accent) 18%, transparent) 54%); padding: 0 0.08em 0.02em 0; box-decoration-break: clone; -webkit-box-decoration-break: clone; }
+    .hero-subtitle { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 1.15rem; font-style: italic; color: var(--muted); margin-bottom: 2rem; max-width: 560px; line-height: 1.6; }
+    .hero-meta { display: flex; gap: 2rem; flex-wrap: wrap; margin-bottom: 2rem; }
+    .hero-meta-item { font-family: 'JetBrains Mono', monospace; font-size: 0.48rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); }
+    .hero-meta-item strong { color: var(--ink); font-weight: 700; }
+    .hero-tags { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+    .hero-tag { font-family: 'JetBrains Mono', monospace; font-size: 0.45rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); border: 1px solid var(--rule); padding: 0.25em 0.6em; }
+
+    /* ── Constructs Strip ── */
+    .constructs-strip { max-width: 960px; margin: 0 auto; padding: 0 4rem; }
+    .constructs-header { font-family: 'JetBrains Mono', monospace; font-size: 0.5rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--accent); margin-bottom: 1rem; text-align: center; }
+    .constructs-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 1px; background: var(--rule); border: 1px solid var(--rule); overflow: hidden; }
+    .construct-cell { background: var(--highlight); padding: 1.25rem 1rem; text-align: center; }
+    .construct-num { font-family: 'Space Grotesk', serif; font-size: 1.6rem; font-weight: 900; font-style: italic; color: var(--accent); line-height: 1; margin-bottom: 0.4rem; }
+    .construct-name { font-family: 'JetBrains Mono', monospace; font-size: 0.48rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink); margin-bottom: 0.5rem; font-weight: 700; }
+    .construct-desc { font-size: 0.78rem; line-height: 1.45; font-style: italic; color: var(--muted); }
+
+    /* ── Abstract ── */
+    .abstract-wrap { max-width: 960px; margin: 0 auto; padding: 2rem 4rem; }
+    .abstract-box { border: 1px solid var(--rule); overflow: hidden; }
+    .abstract-header { background: var(--ink); padding: 0.75rem 1.5rem; display: flex; justify-content: space-between; align-items: center; }
+    .abstract-header-text { font-family: 'JetBrains Mono', monospace; font-size: 0.48rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--paper); opacity: 0.7; }
+    .abstract-body { padding: 1.5rem 2rem; background: var(--highlight); }
+    .abstract-body p { font-size: 0.92rem; line-height: 1.8; margin-bottom: 1.25rem; text-align: justify; hyphens: auto; }
+    .abstract-body p:last-child { margin-bottom: 0; }
+    .abstract-body em { font-style: italic; color: var(--accent); font-weight: 500; }
+
+    /* ── TOC ── */
+    .toc-wrap { max-width: 960px; margin: 0 auto; padding: 0 4rem 3rem; }
+    .toc { border: 1px solid var(--rule); background: var(--highlight); overflow: hidden; }
+    .toc-header { background: var(--ink); padding: 0.75rem 1.5rem; }
+    .toc-header-text { font-family: 'JetBrains Mono', monospace; font-size: 0.5rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--paper); opacity: 0.7; }
+    .toc-body { padding: 1rem 1.5rem; display: flex; flex-direction: column; gap: 0; }
+    .toc-item { display: flex; gap: 0.75rem; align-items: baseline; padding: 0.6rem 0.5rem; text-decoration: none; border-bottom: 1px solid var(--rule); transition: background 0.2s; }
+    .toc-item:last-child { border-bottom: none; }
+    .toc-item:hover { background: var(--accent-light); }
+    .toc-num { font-family: 'JetBrains Mono', monospace; font-size: 0.48rem; color: var(--accent); letter-spacing: 0.1em; flex-shrink: 0; }
+    .toc-title { font-size: 0.92rem; color: var(--ink); }
+    .toc-sub { font-family: 'JetBrains Mono', monospace; font-size: 0.44rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); display: block; margin-top: 0.15rem; }
+
+    /* ── Genealogy ── */
+    .genealogy { border: 1px solid var(--rule); overflow: hidden; }
+    .genealogy-header { background: var(--framework); padding: 0.75rem 1.5rem; font-family: 'JetBrains Mono', monospace; font-size: 0.48rem; letter-spacing: 0.22em; text-transform: uppercase; color: #dce8f0; }
+    .genealogy-row { display: grid; grid-template-columns: 120px 1fr 120px; border-bottom: 1px solid var(--rule); }
+    .genealogy-row:last-child { border-bottom: none; }
+    .genealogy-cell { padding: 0.85rem 1rem; font-size: 0.88rem; line-height: 1.6; }
+    .genealogy-cell.label { font-family: 'JetBrains Mono', monospace; font-size: 0.52rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--framework); font-weight: 700; display: flex; align-items: center; background: var(--framework-light); }
+    .genealogy-cell.note { font-family: 'JetBrains Mono', monospace; font-size: 0.44rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); display: flex; align-items: center; justify-content: flex-end; }
+
+    /* ── Content ── */
+    .content { max-width: 720px; margin: 0 auto; padding: 0 4rem 6rem; }
+
+    /* ── Section overrides ── */
+    .section { margin-bottom: 4.5rem; scroll-margin-top: 60px; }
+    .section-end { text-align: center; color: var(--muted); font-size: 0.85rem; letter-spacing: 0.4em; margin-top: 2.5rem; user-select: none; }
+
+    /* ── Construct Definition ── */
+    .construct-def { border: 1px solid var(--rule); margin: 2rem 0; overflow: hidden; }
+    .construct-def-label { background: var(--framework); padding: 0.65rem 1.25rem; font-family: 'JetBrains Mono', monospace; font-size: 0.48rem; letter-spacing: 0.22em; text-transform: uppercase; color: #dce8f0; }
+    .construct-def-name { padding: 1rem 1.25rem 0; font-family: 'Space Grotesk', serif; font-size: 1.15rem; font-weight: 700; color: var(--framework); }
+    .construct-def-body { padding: 0.75rem 1.25rem 1.25rem; }
+    .construct-def-body p { font-size: 0.92rem; line-height: 1.75; margin-bottom: 1rem; }
+    .construct-def-body p:last-child { margin-bottom: 0; }
+    .construct-def-body p::first-letter { float: none !important; font-size: inherit !important; color: inherit !important; margin: 0 !important; }
+
+    /* ── Kill Criteria Box ── */
+    .kill-box { border: 1px solid var(--accent); margin: 2rem 0; overflow: hidden; }
+    .kill-box-label { background: var(--accent); padding: 0.65rem 1.25rem; font-family: 'JetBrains Mono', monospace; font-size: 0.48rem; letter-spacing: 0.22em; text-transform: uppercase; color: white; }
+    .kill-item { padding: 1.25rem 1.5rem; border-bottom: 1px solid var(--rule); }
+    .kill-item:last-child { border-bottom: none; }
+    .kill-label { font-family: 'JetBrains Mono', monospace; font-size: 0.5rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--accent); margin-bottom: 0.5rem; font-weight: 700; }
+    .kill-text { font-size: 0.9rem; line-height: 1.75; }
+
+    /* ── Animations (page-specific keyframe fade-in) ── */
+    .fade-in { opacity: 0; transform: translateY(20px); animation: fadeUp 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards; }
+    @keyframes fadeUp { to { opacity: 1; transform: translateY(0); } }
+
+    /* ── Responsive ── */
+    @media (max-width: 768px) {
+      .hero { padding: 3rem 1.5rem 2rem; }
+      .constructs-strip { padding: 0 1.5rem; }
+      .constructs-grid { grid-template-columns: 1fr 1fr; }
+      .constructs-grid .construct-cell:last-child { grid-column: 1 / -1; }
+      .abstract-wrap { padding: 1.5rem; }
+      .abstract-header { flex-direction: column; gap: 0.3rem; }
+      .abstract-body { padding: 1.25rem; }
+      .toc-wrap { padding: 0 1.5rem 2rem; }
+      .genealogy-row { grid-template-columns: 1fr; }
+      .genealogy-cell.label { padding: 0.6rem 1rem 0.2rem; font-size: 0.48rem; }
+      .genealogy-cell { padding: 0.4rem 1rem; }
+      .genealogy-cell.note { justify-content: flex-start; padding-top: 0; padding-bottom: 0.6rem; }
+      .content { padding: 0 1.5rem 4rem; }
+      .pull-quote { margin: 2rem 0; }
+      .kill-item { padding: 1rem 1.25rem; }
+    }
+
+    /* Hero SVG */
+    .hero { display: grid; grid-template-columns: 1fr 280px; gap: 2rem; align-items: center; }
+    .hero-svg { width: 100%; height: auto; }
+    @media (max-width: 768px) {
+      .hero { grid-template-columns: 1fr; }
+      .hero-svg { max-width: 200px; margin: 0 auto; order: -1; }
+    }
+  </style>
+</head>
+<body>
+<div id="pbar"></div>
+<div id="pbar-label"></div>
+<div class="bg-pattern"></div>
+<div class="bg-grain"></div>
+<div class="page-wrap">
+
+  <!-- Nav -->
+      <!-- Top Bar -->
+  <div class="top-bar">
+    <span>Buenos Aires &middot; Since 2008</span>
+    <span>18 Essays &middot; 3 Frameworks &middot; ~289 min of reading &middot; <a href="about.html">About the author</a></span>
+  </div>
+
+  <!-- Nav -->
+  <nav class="nav">
+      <div class="nav-inner">
+        <a href="index.html" class="nav-brand">Narrative<em>Mechanics</em></a>
+        <button class="nav-btn nav-toggle" aria-label="Menu" aria-expanded="false" aria-controls="navLinks" id="navToggle">
+          <svg viewBox="0 0 24 24"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg>
+        </button>
+        <div class="nav-links" id="navLinks">
+          <a href="index.html" class="nav-link">Home</a>
+          <div class="nav-sep"></div>
+          <a href="archive.html" class="nav-link">Start Here</a>
+          <a href="frameworks.html" class="nav-link">Frameworks</a>
+          <a href="series.html" class="nav-link">Series</a>
+          <a href="essays.html" class="nav-link">Essays</a>
+          <a href="notes.html" class="nav-link">Notes</a>
+          <div class="nav-sep"></div>
+          <a href="about.html" class="nav-link">About</a>
+        </div>
+        <div class="nav-right">
+          <button class="nav-btn" aria-label="Toggle theme" id="themeToggle">
+            <svg class="icon-moon" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+            <svg class="icon-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+          </button>
+        </div>
+      </div>
+    </nav>
+
+  <!-- Hero -->
+  <header class="hero">
+    <div class="hero-main">
+    <div class="hero-kicker">Framework Paper &nbsp;/&nbsp; Media Strategy &amp; Future Architecture</div>
+    <h1 class="hero-title">Occlusion<em>Bias</em></h1>
+    <p class="hero-subtitle">On broken distribution, agent capture, the collapse of the ad substrate, and the return to origin</p>
+    <div class="hero-meta">
+      <div class="hero-meta-item">By <strong>Diego Dell'Agostino</strong></div>
+      <div class="hero-meta-item">Version <strong>1.0</strong></div>
+      <div class="hero-meta-item">~8,000 words</div>
+    </div>
+    <div class="hero-tags">
+      <span class="hero-tag">Distribution Theory</span>
+      <span class="hero-tag">Survivorship Bias</span>
+      <span class="hero-tag">Curation Economics</span>
+      <span class="hero-tag">Agent Mediation</span>
+      <span class="hero-tag">Ad Substrate</span>
+      <span class="hero-tag">Origin Gravity</span>
+      <span class="hero-tag">Kill Criteria</span>
+    </div>
+    </div>
+    <svg class="hero-svg" viewBox="0 0 160 200" xmlns="http://www.w3.org/2000/svg">
+      <style>
+        @keyframes obBarSlide{from{transform:translateY(-20px);opacity:0}to{transform:translateY(0);opacity:1}}
+        @keyframes obSignal{from{stroke-dashoffset:140}to{stroke-dashoffset:0}}
+        @keyframes obFade{from{opacity:0}to{opacity:1}}
+        @keyframes obGlow{0%,100%{opacity:0.4}50%{opacity:1}}
+      </style>
+      <!-- Signal lines trying to reach the right side -->
+      <line x1="10" y1="45" x2="150" y2="45" stroke="var(--rule)" stroke-width="0.5" stroke-dasharray="2 3" opacity="0.3"/>
+      <line x1="10" y1="80" x2="150" y2="80" stroke="var(--rule)" stroke-width="0.5" stroke-dasharray="2 3" opacity="0.3"/>
+      <line x1="10" y1="115" x2="150" y2="115" stroke="var(--rule)" stroke-width="0.5" stroke-dasharray="2 3" opacity="0.3"/>
+      <line x1="10" y1="150" x2="150" y2="150" stroke="var(--rule)" stroke-width="0.5" stroke-dasharray="2 3" opacity="0.3"/>
+      <!-- Occluding vertical bars -->
+      <rect x="45" y="25" width="6" height="160" rx="1" fill="var(--ink)" opacity="0" style="animation:obBarSlide 0.6s 0.3s ease-out forwards"/>
+      <rect x="72" y="25" width="8" height="160" rx="1" fill="var(--ink)" opacity="0" style="animation:obBarSlide 0.6s 0.6s ease-out forwards"/>
+      <rect x="100" y="25" width="10" height="160" rx="1" fill="var(--ink)" opacity="0" style="animation:obBarSlide 0.6s 0.9s ease-out forwards"/>
+      <rect x="125" y="25" width="5" height="160" rx="1" fill="var(--ink)" opacity="0" style="animation:obBarSlide 0.6s 1.2s ease-out forwards"/>
+      <!-- One signal breaking through -->
+      <line x1="10" y1="115" x2="150" y2="115" stroke="var(--accent)" stroke-width="1.5" stroke-dasharray="140" stroke-dashoffset="140" style="animation:obSignal 2s 1.5s ease-out forwards"/>
+      <circle cx="150" cy="115" r="3" fill="var(--accent)" opacity="0" style="animation:obFade 0.4s 2.8s forwards"/>
+      <!-- Eye/audience on the right -->
+      <ellipse cx="150" cy="115" rx="6" ry="4" fill="none" stroke="var(--accent)" stroke-width="0.8" opacity="0" style="animation:obFade 0.5s 3s forwards"/>
+      <circle cx="150" cy="115" r="1.5" fill="var(--accent)" opacity="0" style="animation:obFade 0.5s 3s forwards"/>
+      <!-- Source dots on left -->
+      <circle cx="10" cy="45" r="2" fill="var(--muted)" opacity="0" style="animation:obFade 0.3s 0.2s forwards"/>
+      <circle cx="10" cy="80" r="2" fill="var(--muted)" opacity="0" style="animation:obFade 0.3s 0.4s forwards"/>
+      <circle cx="10" cy="115" r="2.5" fill="var(--accent)" style="animation:obGlow 2s 1.5s ease-in-out infinite"/>
+      <circle cx="10" cy="150" r="2" fill="var(--muted)" opacity="0" style="animation:obFade 0.3s 0.6s forwards"/>
+      <!-- Labels -->
+      <text x="10" y="20" font-family="monospace" font-size="6" fill="var(--muted)" letter-spacing="1.5" opacity="0" style="animation:obFade 0.5s 2s forwards">SIGNAL</text>
+      <text x="120" y="20" font-family="monospace" font-size="6" fill="var(--accent)" letter-spacing="1.5" opacity="0" style="animation:obFade 0.5s 2.5s forwards">REACH</text>
+      <text x="80" y="195" font-family="monospace" font-size="6" fill="var(--muted)" text-anchor="middle" letter-spacing="2" opacity="0" style="animation:obFade 0.5s 3.2s forwards">OCCLUSION</text>
+    </svg>
+  </header>
+
+  <!-- Five Constructs -->
+  <div class="constructs-strip">
+    <div class="constructs-header">Five Connected Constructs</div>
+    <div class="constructs-grid">
+      <div class="construct-cell">
+        <div class="construct-num">I</div>
+        <div class="construct-name">Distribution Occlusion</div>
+        <div class="construct-desc">The mechanism by which the distribution layer hides genuine signal at scale</div>
+      </div>
+      <div class="construct-cell">
+        <div class="construct-num">II</div>
+        <div class="construct-name">The Curation Premium</div>
+        <div class="construct-desc">The rising economic value of selection and judgment as noise becomes infinite</div>
+      </div>
+      <div class="construct-cell">
+        <div class="construct-num">III</div>
+        <div class="construct-name">Agent Capture</div>
+        <div class="construct-desc">The structural transition in which AI agents replace human navigation of the web</div>
+      </div>
+      <div class="construct-cell">
+        <div class="construct-num">IV</div>
+        <div class="construct-name">Ad Substrate Collapse</div>
+        <div class="construct-desc">The irreversible economic consequence when the ad model loses its human surface</div>
+      </div>
+      <div class="construct-cell">
+        <div class="construct-num">V</div>
+        <div class="construct-name">Origin Gravity</div>
+        <div class="construct-desc">The force pulling real human consumption toward direct sources indifferent to algorithmic optimization</div>
+      </div>
+    </div>
+  </div>
+
+      <div class="chapter-divider">
+      <div class="chapter-divider-line"></div>
+    </div>
+
+  <!-- Abstract -->
+  <div class="abstract-wrap">
+    <div class="abstract-box">
+      <div class="abstract-header">
+        <span class="abstract-header-text">Abstract</span>
+        <span class="abstract-header-text">Occlusion Bias &nbsp;·&nbsp; v1.0</span>
+      </div>
+      <div class="abstract-body">
+        <p>The prevailing consensus about AI-generated content is not simply that it performs well. It is that performance will compound: that as models improve, the gap between AI-native content and human-originated content will close on quality while the gap on scale and efficiency widens indefinitely. Most of the evidence cited in support of this view is traffic data, engagement metrics, and platform reach. This paper argues that this evidence is systematically misleading, not because the data is wrong, but because the instrument producing it is broken.</p>
+        <p>The problem is not quality. It is volume. AI-native content is not winning because it is better. It is winning because it is more of what the distribution system already knew how to reward, produced at a scale the system was never designed to arbitrate. The algorithmic distribution layer was calibrated on years of human content behavior, before generative AI existed at scale. That calibration cannot discriminate between content that is genuinely better and content that more perfectly fits the patterns it was trained to reward. What we observe performing well is the content that survived the filter at the highest volume, not a representative sample of what was produced. Treating that survivor population as evidence of quality improvement is a survivorship bias built on top of a density problem.</p>
+        <p>This paper introduces five connected constructs. <em>Distribution Occlusion</em> names the structural mechanism: the distribution layer fails to surface genuine signal not because it is biased against quality but because the volume of pattern-optimized content has exceeded its discrimination capacity. <em>The Curation Premium</em> names the economic consequence, and it is sharper than it first appears: when production approaches infinity and distribution amplifies noise, demonstrated selection quality does not merely become more valuable, it becomes a luxury good, scarce and priced accordingly, accessible to those who can pay for proximity to genuine curatorial judgment. <em>Agent Capture</em> names the structural transition already underway: the majority of internet navigation is migrating from human browsers to AI agents, which do not see ads, do not carry cookies, and do not behave like the audience the current web was built for. <em>Ad Substrate Collapse</em> names the irreversible economic consequence of that migration: the advertising model that funds the current content ecosystem loses its surface. <em>Origin Gravity</em> names the destination, with a necessary distinction: as the intermediated web becomes agent territory, real human consumption migrates toward sources with genuine editorial gravity, not merely personality gravity, sources whose curatorial lens outlasts any individual and accumulates value precisely because it is not infinitely reproducible.</p>
+        <p>Each construct carries formal kill criteria, developed in the body of this paper. The argument has a clear falsification path. It also has a genealogy: this paper follows the Narrative-First series, the CMI framework, and the Constitutive Arc in a broader body of work on media authority, interpretive presence, and audience transformation. Where those papers addressed how to build signal, this one addresses the structural condition that determines whether signal reaches anyone at all.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- TOC -->
+  <div class="toc-wrap">
+    <div class="toc">
+      <div class="toc-header"><span class="toc-header-text">Table of Contents</span></div>
+      <div class="toc-body">
+        <a href="#s1" class="toc-item"><span class="toc-num">§1</span><span class="toc-title">The Visibility Illusion <span class="toc-sub">What the data actually measures</span></span></a>
+        <a href="#s2" class="toc-item"><span class="toc-num">§2</span><span class="toc-title">Distribution Occlusion <span class="toc-sub">Construct I - the broken instrument</span></span></a>
+        <a href="#s3" class="toc-item"><span class="toc-num">§3</span><span class="toc-title">The Curation Premium <span class="toc-sub">Construct II - judgment as the bottleneck</span></span></a>
+        <a href="#s4" class="toc-item"><span class="toc-num">§4</span><span class="toc-title">Agent Capture &amp; The Ad Substrate <span class="toc-sub">Constructs III &amp; IV - navigation transition and economic consequence</span></span></a>
+        <a href="#s5" class="toc-item"><span class="toc-num">§5</span><span class="toc-title">Origin Gravity <span class="toc-sub">Construct V - where human consumption goes</span></span></a>
+        <a href="#s6" class="toc-item"><span class="toc-num">§6</span><span class="toc-title">What to Build <span class="toc-sub">Practical implications for media organizations</span></span></a>
+        <a href="#s7" class="toc-item"><span class="toc-num">§7</span><span class="toc-title">Kill Criteria &amp; Proxies <span class="toc-sub">What would falsify this argument</span></span></a>
+      </div>
+    </div>
+  </div>
+
+      <div class="chapter-divider">
+      <div class="chapter-divider-line"></div>
+    </div>
+
+  <!-- Genealogy -->
+  <div class="abstract-wrap">
+    <div class="genealogy">
+      <div class="genealogy-header">Genealogy &nbsp;·&nbsp; Where This Paper Sits</div>
+      <div class="genealogy-row">
+        <div class="genealogy-cell label">ZMOT</div>
+        <div class="genealogy-cell">Google, 2011. The moment before purchase. Influence migrates upstream of the transaction.</div>
+        <div class="genealogy-cell note">Commerce layer</div>
+      </div>
+      <div class="genealogy-row">
+        <div class="genealogy-cell label"><a href="thesis.html" style="color:inherit;text-decoration:none">ZMOI / CMI</a></div>
+        <div class="genealogy-cell">Dell'Agostino, 2026. The moment before belief. Presence architecture across interpretive surfaces.</div>
+        <div class="genealogy-cell note">Media layer</div>
+      </div>
+      <div class="genealogy-row">
+        <div class="genealogy-cell label"><a href="zmox.html" style="color:inherit;text-decoration:none">CAX</a></div>
+        <div class="genealogy-cell">Dell'Agostino, 2026. The constitutive function of media. Who is designing your audience's transformation.</div>
+        <div class="genealogy-cell note">Identity layer</div>
+      </div>
+      <div class="genealogy-row">
+        <div class="genealogy-cell label"><a href="paper-01.html" style="color:inherit;text-decoration:none">Narrative-First</a></div>
+        <div class="genealogy-cell">Dell'Agostino, 2026. Signal quality at the production layer. <a href="paper-01.html" style="color:var(--framework);text-decoration:underline;text-decoration-color:var(--rule);text-underline-offset:3px">Strategic Debt</a>, <a href="paper-02.html" style="color:var(--framework);text-decoration:underline;text-decoration-color:var(--rule);text-underline-offset:3px">MMF</a>, <a href="paper-04.html" style="color:var(--framework);text-decoration:underline;text-decoration-color:var(--rule);text-underline-offset:3px">Narrative Drift</a>.</div>
+        <div class="genealogy-cell note">Production layer</div>
+      </div>
+      <div class="genealogy-row">
+        <div class="genealogy-cell label">Occlusion Bias</div>
+        <div class="genealogy-cell">Dell'Agostino, 2026. The structural condition that determines whether signal reaches anyone. Distribution, judgment, agents, collapse, origin.</div>
+        <div class="genealogy-cell note">Infrastructure layer</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="chapter-divider" style="margin-top:3rem;">
+    <div class="chapter-divider-line"></div>
+    <div class="chapter-divider-ornament">✦ ❧ ✦</div>
+    <div class="chapter-divider-line"></div>
+  </div>
+
+  <!-- Body -->
+  <div class="content">
+
+    <!-- §1 -->
+    <div class="section" id="s1">
+      <div class="section-badge">
+        <div class="section-icon">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7-10-7-10-7z"/></svg>
+        </div>
+        <div class="section-meta">
+          <div class="section-number">§1 &nbsp;/&nbsp; Seven</div>
+          <div class="section-title">The Visibility Illusion</div>
+        </div>
+      </div>
+      <div class="section-rule"></div>
+      <div class="section-body">
+        <p>There is a number that gets cited constantly in conversations about AI content: traffic. Pages indexed, impressions earned, engagement generated. The argument built on top of that number is seductive in its simplicity. AI-native content is performing. Performance is evidence. Therefore the content works.</p>
+        <p>This paper begins with a different question. Works compared to what?</p>
+        <p>The comparison class is never stated. When practitioners cite AI content performance, they are almost never comparing it against a controlled sample of human-originated content published under identical distribution conditions. They are comparing it against what they can see, which is overwhelmingly content that the distribution system chose to surface. The rest, by definition, is invisible. You cannot cite the traffic of what the algorithm decided not to show anyone.</p>
+        <p>This is not a small methodological problem. It is the entire argument.</p>
+
+        <div class="pull-quote">
+          <p>The content we observe performing well is not a representative sample of what was produced. It is a survivor population. The holes you do not see are not safe zones.</p>
+        </div>
+
+        <p>In 1944, Abraham Wald was asked by the U.S. military to analyze where to add armor to bomber planes. The military had collected data on bullet hole locations from planes that returned from combat. The intuitive answer was to reinforce the areas with the most damage. Wald pointed out the error: the data only included planes that survived. The holes on returning planes showed exactly where a plane could be hit and still fly. The places with no holes were not safe zones. They were fatal zones, visible only through the absence of planes that never came back.</p>
+        <p>The media industry is looking at the returning planes and calling it a complete dataset.</p>
+        <p>The content we observe performing well in an AI-saturated distribution environment is the content that cleared a filter. That filter was not designed to measure quality. It was designed, iterated, and calibrated across years of pre-AI content behavior to reward specific signals: click probability, dwell patterns, sharing velocity, return rate, and semantic conformity with high-performing historical content. AI-native content is not winning because it is better. It is winning because it is more of what the system already knew how to reward, produced at a volume the system was never designed to arbitrate.</p>
+        <p>This is a density argument, not a quality argument. The claim is not that human-originated content is better than AI content and the algorithm fails to see it. The claim is that the volume of AI-produced content has exceeded the discrimination capacity of a system built for a different era, and in that condition, the content that wins is the content that fits the system's pattern most reliably at the highest volume. Human content, particularly the kind that is genuinely original, formally unconventional, or editorially risky, does not fit those patterns as consistently. It gets buried not because it is worse but because it is outnumbered and unfamiliar to the instrument measuring it.</p>
+        <p>The improvement narrative, the one that says AI content will keep getting better and the concerns about quality are transitional, rests on an assumption that the current performance data is a reasonable proxy for quality. It is not. It is a proxy for system legibility at scale. The improvement narrative is not measuring quality improving. It is measuring the system's increasing fluency at producing content that its own distribution infrastructure rewards. That is a very different thing, and the difference is the entire argument.</p>
+      </div>
+      <div class="section-end">✦ &nbsp; ❧ &nbsp; ✦</div>
+    </div>
+
+    <!-- §2 -->
+    <div class="section" id="s2">
+      <div class="section-badge">
+        <div class="section-icon">
+          <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+        </div>
+        <div class="section-meta">
+          <div class="section-number">§2 &nbsp;/&nbsp; Seven &nbsp;·&nbsp; Construct I</div>
+          <div class="section-title">Distribution Occlusion</div>
+        </div>
+      </div>
+      <div class="section-rule"></div>
+      <div class="section-body">
+        <p>Every measurement system has a calibration history. The instruments we use to evaluate performance were built in a particular context, for a particular distribution of inputs, and they return accurate readings only while that distribution remains roughly stable. When the inputs change radically, the instrument does not fail loudly. It continues to return numbers. The numbers simply mean something different than they did before, and without a corrective lens, the operator has no way to know.</p>
+        <p>Algorithmic distribution is that instrument. It was calibrated on years of human content behavior: the patterns of sharing, clicking, dwelling, and returning that characterized media consumption before generative AI existed at scale. The system learned to reward what humans, browsing the web, had historically rewarded. That learning was the product's core feature. And it worked, as long as the content being evaluated was predominantly produced by humans for humans.</p>
+        <p>Generative AI changed the input distribution without changing the instrument. The result is not that AI content gets evaluated fairly against a well-calibrated baseline. The result is that AI content is evaluated by a system that was trained on patterns that AI content produces more efficiently and more reliably than human content ever did. Volume, consistency, keyword density, semantic proximity to historically high-performing pieces, rapid publication cadence: these are not difficult for a language model. They are, in fact, its default outputs. The system did not become biased toward AI content intentionally. It became biased because AI content is a more perfect version of what the system was already rewarding.</p>
+
+        <div class="construct-def">
+          <div class="construct-def-label">Construct I</div>
+          <div class="construct-def-name">Distribution Occlusion</div>
+          <div class="construct-def-body">
+            <p>The structural condition in which the distribution layer systematically fails to surface genuine signal because the volume of optimized content has exceeded the system's discrimination capacity. Occlusion is not deletion and it is not a quality judgment. The signal exists. The system cannot find it at the noise level it is now operating under, because it was calibrated for a world where the volume of content was a fraction of what AI production makes possible.</p>
+            <p>Occlusion occurs when: (1) the volume of pattern-optimized content exceeds the system's ability to discriminate between legibility and quality; (2) AI-native content matches the system's reward signals more consistently and at higher volume than human-originated content; and (3) the system's feedback loops reinforce the patterns it already favors, making correction self-limiting without architectural intervention from the platforms themselves.</p>
+          </div>
+        </div>
+
+        <p>The strategic consequence of Distribution Occlusion is not just that good content fails to find an audience. It is that the evidence base for almost every media decision becomes unreliable. Metrics that practitioners use to decide what to produce, how to invest, which formats to pursue, and which voices to amplify are all downstream of a distorted measurement layer. Organizations making rational decisions on top of occluded data are not being irrational. They are being rational about the wrong signal.</p>
+
+        <p>The most serious objection to Distribution Occlusion as a structural condition rather than a transitional one is that algorithmic systems have adapted to volume shocks before. Google has rewritten its ranking systems repeatedly in response to spam, link farms, content mills, and every previous wave of low-cost content production. If it adapted then, why not now? The answer is not that the platforms lack the technical capacity to respond. It is that this change in volume is qualitatively different from all previous ones, not merely larger. Every previous adaptation the platforms made occurred in an environment where low-quality content still had a non-trivial production cost: a human had to write it, however badly. That cost acted as a natural friction on volume. Even the most aggressive content farm faced an economic ceiling on how much it could produce per unit of time and capital. Generative AI does not reduce that cost to zero (inference at scale has real costs) but it reduces it by several orders of magnitude relative to human production. The differential is large enough that the friction which historically constrained volume no longer operates as a brake. A single organization with modest AI infrastructure can produce content at volumes that would have required hundreds of writers a decade ago. This is not a quantitative change in content density. It is a change in the cost regime that made previous equilibria possible, and the feedback loops the platforms have historically used to suppress low-quality content were calibrated for the old regime. The discriminator cannot recalibrate faster than the generator when the generator's marginal cost has collapsed and the discriminator's has not.</p>
+
+        <p>There is a subtler consequence as well. Distribution Occlusion creates a competitive environment where the winning strategy, optimizing for the patterns the algorithm rewards, actively degrades the information quality of the ecosystem it operates in. Each piece of content that wins by being more legible to the algorithm makes the next piece of genuinely original content marginally harder to find. The system becomes progressively worse at its stated purpose, not through any single failure, but through the accumulation of individually rational optimizations that collectively produce a less navigable information environment.</p>
+      </div>
+      <div class="section-end">✦ &nbsp; ❧ &nbsp; ✦</div>
+    </div>
+
+    <!-- §3 -->
+    <div class="section" id="s3">
+      <div class="section-badge">
+        <div class="section-icon">
+          <svg viewBox="0 0 24 24"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+        </div>
+        <div class="section-meta">
+          <div class="section-number">§3 &nbsp;/&nbsp; Seven &nbsp;·&nbsp; Construct II</div>
+          <div class="section-title">The Curation Premium</div>
+        </div>
+      </div>
+      <div class="section-rule"></div>
+      <div class="section-body">
+        <p>Economics is partly a science of scarcity. When something becomes abundant, its price falls. When something becomes scarce, its price rises. The relevant question for media in an AI-saturated environment is not what becomes abundant, which is obvious, but what becomes scarce as a consequence and what that scarcity commands.</p>
+        <p>Production is no longer the bottleneck. Any organization with access to generative AI can produce content at a volume that would have required a large editorial team five years ago. The cost of output has dropped by orders of magnitude relative to human production. What the elimination of that bottleneck reveals underneath it is that the capacity to select has become the constraint. But the Curation Premium is not simply a story about judgment becoming valuable. It is a story about judgment becoming a luxury good.</p>
+        <p>When production is infinite and distribution is occluded, access to a curated view of what matters is no longer a commodity service. It is a scarce, high-value asset with a price architecture that reflects that scarcity. The music producer Rick Rubin does not publish a newsletter. His taste is not available for free. Access to his curatorial judgment on what is worth listening to, when it surfaces at all, commands attention precisely because it is deliberately withheld from the mass market. That is not an accident of personality. It is the economic logic of a world where everyone can produce and almost no one can select well.</p>
+
+        <div class="construct-def">
+          <div class="construct-def-label">Construct II</div>
+          <div class="construct-def-name">The Curation Premium</div>
+          <div class="construct-def-body">
+            <p>The rising economic and strategic value of the capacity to select, sequence, and contextualize information in an environment where production volume is infinite and distribution is a noise amplifier. The Curation Premium is not a cultural preference for human authorship over AI output. It is a structural consequence of the noise-to-signal ratio exceeding the system's filtering capacity, which converts demonstrated selection quality from a commodity into a scarce good.</p>
+            <p>At sufficient scarcity, the Curation Premium becomes a luxury premium: access to the curatorial judgment of individuals or institutions with extraordinary demonstrated taste commands pricing that reflects the cost of exclusion, not the cost of production. The premium scales directly with noise. The more the distribution environment degrades, the more valuable becomes the ability to navigate it on behalf of an audience that cannot, and the more that access can be priced accordingly.</p>
+          </div>
+        </div>
+
+        <p>The practical distinction this introduces is between two categories of curatorial value. The first is functional curation: the newsletter that filters the news, the podcast that summarizes the week, the aggregator that saves time. This category is valuable and will become more valuable as noise increases, but it is also relatively replicable and will face price pressure as AI systems develop better filtering capacity. The second is taste curation: the editor whose selections have been consistently ahead of the market, the analyst whose lens has proven correct over a long enough horizon, the voice whose judgment commands deference not because of institutional affiliation but because of a demonstrated record that cannot be faked or accelerated. This second category is genuinely scarce, structurally difficult for AI to replicate, and will command luxury pricing in the same way that access to any scarce expert judgment does.</p>
+        <p>The Curation Premium therefore does not accrue uniformly to everyone who curates. It accrues in proportion to the demonstrated quality and scarcity of the selection. A curated source that tries to be comprehensive loses the property that makes curation valuable. The narrower the lens, the sharper the selection criteria, and the longer the track record, the stronger the gravitational pull and the higher the defensible price.</p>
+      </div>
+      <div class="section-end">✦ &nbsp; ❧ &nbsp; ✦</div>
+    </div>
+
+    <!-- §4 merged: Agent Capture & Ad Substrate Collapse -->
+    <div class="section" id="s4">
+      <div class="section-badge">
+        <div class="section-icon">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg>
+        </div>
+        <div class="section-meta">
+          <div class="section-number">§4 &nbsp;/&nbsp; Seven &nbsp;·&nbsp; Constructs III &amp; IV</div>
+          <div class="section-title">Agent Capture &amp; The Ad Substrate</div>
+        </div>
+      </div>
+      <div class="section-rule"></div>
+      <div class="section-body">
+        <p>Distribution Occlusion describes a broken instrument. The Curation Premium describes what becomes valuable when the instrument fails. The two constructs in this section describe the structural transition that makes both of the preceding arguments more urgent and less reversible than they would otherwise be, and its direct economic consequence.</p>
+        <p>For thirty years, the architecture of the web assumed a specific actor at the center of the browsing session: a human, with a browser, making navigation decisions in real time. Every layer of the current internet was built for that actor. Search engines return results to human eyeballs. Recommendation algorithms optimize for human engagement signals. Social feeds are designed to produce emotional reactions in biological nervous systems. Advertising systems are calibrated to interrupt human attention at the moment of maximum receptivity. The entire economic and technical infrastructure of the current web is, in the most literal sense, a machine built to influence a human navigator.</p>
+        <p>That navigator is migrating. And the data from 2024 and 2025 is no longer ambiguous about it.</p>
+
+        <p>The first signal is in referral traffic. General search referral traffic to the top 1,000 web domains dropped from 12 billion global visits in June 2024 to 11.2 billion in June 2025, a 6.7% year-over-year decline. That number understates the structural change because it is an aggregate. At the sector level, the picture is more severe: organic traffic to news websites fell from 2.3 billion monthly visits in mid-2024 to under 1.7 billion by May 2025, a loss exceeding 600 million monthly visits in under a year. Individual publishers have fared worse. Business Insider lost 55% of its organic search traffic between April 2022 and April 2025. The Washington Post lost 40%. NBC News lost 42%. These are not editorial failures. The publications did not become worse. The surface changed.</p>
+
+        <p>The second signal is in zero-click behavior. The proportion of Google searches that result in no click to any external site rose from 56% to nearly 69% between mid-2024 and May 2025. On mobile, zero-click searches have already crossed 71%. The search session is increasingly a closed loop: query in, answer out, no human visit to any publisher. The interaction happened. The publisher was invisible to it.</p>
+
+        <p>The third signal is the most structurally important. Bot traffic now accounts for approximately 40% of all visits to the average website. Within that non-human traffic, AI-related bots (systems scraping content for training data, indexing for LLM retrieval, and autonomous browsing agents) made up 29% of all non-human traffic in 2025. Wikipedia documented this directly: despite being cited over 1.1 million times in AI-generated answers, the encyclopedia saw an 8% decline in human pageviews alongside a 50% surge in bandwidth consumption from AI bots. The content is being read. The humans are not doing the reading.</p>
+
+        <p>One legal content organization put the dynamic plainly. After recording a 52% drop in human visitors in the first half of 2025 compared to the prior year, their analysis concluded: they were potentially reaching more people than ever, but could not see them; and those people could not always see who had produced what they were reading. The content is circulating. The relationship is not.</p>
+
+        <div class="construct-def">
+          <div class="construct-def-label">Construct III</div>
+          <div class="construct-def-name">Agent Capture</div>
+          <div class="construct-def-body">
+            <p>The structural transition in which AI agents progressively replace human navigation as the primary mode of internet interaction. Under Agent Capture, the majority of requests to the information layer of the web originate not from human browsers making real-time decisions but from automated systems acting on behalf of human principals who have specified goals rather than navigation paths.</p>
+            <p>Agent Capture does not require that humans stop using the internet. It requires only that the dominant mode of information retrieval shifts from active human navigation to agent-mediated retrieval, which changes the properties of the audience that the current web's infrastructure was designed to serve.</p>
+          </div>
+        </div>
+
+        <p>The agent does not see the banner. The agent does not experience the interstitial. The agent does not have a scroll depth. The agent does not carry cookies in the way that attribution systems require. The agent does not have an emotional state that environmental context can prime toward a purchasing decision. The agent arrives at a page, extracts what it needs for the task at hand, and leaves. From the perspective of every monetization system the current web was built around, the agent is an audience of zero.</p>
+
+        <p>The counterargument that AI platforms are generating referral traffic to offset these losses deserves a precise response. ChatGPT sent 1.2 billion outgoing referrals to publisher sites between September and November 2024, a 52% year-over-year increase. That number sounds significant until it is placed against the denominator: traffic from all AI platforms combined accounts for roughly 1% of all publisher traffic. The replacement is not close to proportional. And referral traffic from an AI platform is structurally different from search referral: a user following a link from a ChatGPT response is in a verification state, not a discovery state. The psychological conditions are different. The conversion behavior is different. A second counterargument (that platforms will engineer a new monetizable equilibrium) is also real, and this paper does not claim Agent Capture is irreversible. What it claims is narrower and more urgent: the transition period is long enough and disruptive enough that organizations without direct audience relationships will not survive to benefit from any future equilibrium. The gap between old model breaking and new model monetizable is where consolidation and extinction occur.</p>
+
+        <p>The transition is not uniform across content types. It is accelerating fastest in categories where the information need is most specific: health information, financial data, educational content, legal research, product comparison, local search. These are the categories where an agent can complete the task most reliably on behalf of a human principal. The categories where human navigation is likely to persist longest are those where the experience of encountering information is itself part of the value: editorial media with strong voice, cultural criticism, investigative journalism, anything where the manner of delivery is inseparable from the meaning delivered. These categories are not immune to Agent Capture. They are simply last in line.</p>
+
+        <p>This migration has a direct economic consequence that warrants its own construct, because it is not merely a revenue problem. It is a structural failure of the model's foundational assumption.</p>
+
+        <div class="construct-def">
+          <div class="construct-def-label">Construct IV</div>
+          <div class="construct-def-name">Ad Substrate Collapse</div>
+          <div class="construct-def-body">
+            <p>The economic consequence of Agent Capture on the advertising model. As the proportion of internet navigation conducted by agents increases, the substrate on which advertising operates (human attention moving through instrumented digital environments) contracts. Ad Substrate Collapse is not a gradual revenue decline. It is a structural failure of the model's foundational assumption: that the entity navigating the web is a human one.</p>
+            <p>Collapse does not require that advertising disappears. It requires that the existing model loses the substrate it requires to function, forcing either architectural reinvention or progressive obsolescence.</p>
+          </div>
+        </div>
+
+        <p>The advertising model is not, at its core, a technology. It is an assumption about human behavior: that people move through digital environments, that those environments can be instrumented to detect their movement, and that relevant messages can be inserted into that movement at moments of sufficient attention and receptivity. Every component of that assumption requires a human navigator. Remove the human navigator and the assumption does not degrade gracefully. It fails completely. You cannot interrupt the attention of an agent that does not have attention. You cannot create receptivity in a system that evaluates information by a goal specification, not by an emotional state.</p>
+
+        <p>The attempt to embed advertising within AI responses (now underway at several major platforms) reveals the problem rather than solving it. An ad inside a language model response is not reaching a person browsing the web. It is reaching a person who asked a specific question and is evaluating a specific answer. The user is in a retrieval state, not a discovery state. The psychological conditions for advertising effectiveness are absent, and no amount of targeting precision compensates for the wrong context. More structurally: the agent evaluates sponsored content by the same criteria it evaluates everything else: does it serve the task? A sponsored result that does not serve the task is noise, and agents are designed to filter noise. The organizations that have recognized Agent Capture earliest are the LLMs themselves, and the embed-ads attempt is the correct diagnosis of the problem paired with the wrong solution.</p>
+
+        <div class="pull-quote">
+          <p>The ad model does not die because advertisers stop wanting to reach people. It dies because the surface on which it operates stops being where people are.</p>
+        </div>
+
+        <p>The organizations most exposed to Ad Substrate Collapse are those whose revenue model depends entirely on the current ad substrate and have no direct relationship with the human principals who are delegating navigation to agents. The organizations least exposed are those with direct audience relationships that do not depend on algorithmic intermediation to function. That distinction is what the next section addresses.</p>
+      </div>
+      <div class="section-end">✦ &nbsp; ❧ &nbsp; ✦</div>
+    </div>
+
+    <div class="section" id="s5">
+      <div class="section-badge">
+        <div class="section-icon">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+        </div>
+        <div class="section-meta">
+          <div class="section-number">§5 &nbsp;/&nbsp; Seven &nbsp;·&nbsp; Construct V</div>
+          <div class="section-title">Origin Gravity</div>
+        </div>
+      </div>
+      <div class="section-rule"></div>
+      <div class="section-body">
+        <p>The five constructs in this paper form a chain. Distribution Occlusion explains why the current measurement of content quality is unreliable. The Curation Premium explains what becomes valuable in a high-noise environment. Agent Capture and Ad Substrate Collapse, argued in the preceding section, explain the structural transition already underway and its direct economic consequence. Origin Gravity names where human consumption goes when all of the above has played out.</p>
+        <p>The answer is not that human consumption disappears. It is that it migrates. When the intermediated web becomes predominantly agent territory, and when the ad-funded content ecosystem that populated that web contracts accordingly, the human reader who still wants to understand something does not stop wanting to understand it. They seek a different path to the source.</p>
+        <p>The construct this paper names is not a prediction. It is a description of something already happening, visible in the performance of a specific category of media organization that built outside the intermediated distribution layer before it became necessary to do so.</p>
+
+        <div class="construct-def">
+          <div class="construct-def-label">Construct V</div>
+          <div class="construct-def-name">Origin Gravity</div>
+          <div class="construct-def-body">
+            <p>The force drawing real human consumption toward direct, unmediated sources in an environment where the intermediated web has become agent territory. Origin Gravity does not require that new platforms be built. It requires that the sources of genuine authority become directly accessible to the humans who want them, without passing through the algorithmic layer that agents have captured.</p>
+            <p>Origin Gravity favors sources that are known directly by name rather than discovered through search; built on genuine trust relationships rather than algorithmic distribution; structured for intentional consumption rather than engagement metrics; and indifferent to the optimization patterns that the current distribution system rewards. The defining property is not invisibility to algorithms but independence from them: these sources publish without reference to what algorithms reward and survive because of it.</p>
+          </div>
+        </div>
+
+        <p>The clearest empirical case for Origin Gravity is Stratechery. Ben Thompson built an audience not by optimizing for search or social distribution but by developing a distinctive analytical lens on technology and business strategy and publishing it consistently, directly to subscribers, over more than a decade. The publication has no SEO strategy in any conventional sense. It does not optimize headlines for click-through rates. It does not publish at the cadence that platform algorithms reward. It publishes when there is something worth saying, to an audience that has paid to receive it directly, and that audience has grown in loyalty and economic value while publications that played by the algorithmic rules have contracted. The reader does not discover Stratechery through a Google search. They are introduced to it by someone who already reads it, or they encounter a reference in a context they trust, or they make a deliberate decision to subscribe after encountering the work through some secondary channel. The discovery path is slow, social, and trust-mediated. The retention rate is high because the relationship was never with an algorithm. It was always with the source.</p>
+
+        <p>The All In Podcast operates differently but produces the same structural outcome. Four principals with distinct and sometimes conflicting points of view, publishing long-form conversations to a direct audience across podcast platforms that carry them without algorithmic intermediation of the content itself. The audience does not discover individual episodes through recommendation engines optimizing for engagement. They subscribe to the source and receive everything it produces. The relationship is with the principals, not with the platform. When one platform changes its algorithm or deprioritizes long-form content, the audience does not disappear. It follows the source wherever it goes.</p>
+
+        <p>This portability is the defining characteristic of Origin Gravity audiences. But it requires a distinction the construct cannot afford to leave implicit. There are two categories of gravitational pull that appear similar on the surface and behave very differently in practice.</p>
+
+        <p>The first is <em>personality gravity</em>: the pull generated by a specific individual whose audience is loyal to that person, not to an editorial identity or institutional criterion. Joe Rogan has personality gravity. So does MrBeast. So does any creator whose audience would follow them to any platform but would not survive their departure. Personality gravity is real and often enormous, but it is structurally fragile. It does not transfer. It does not institutionalize. It does not compound into something that outlasts the individual who generated it. When the person leaves, the audience disperses.</p>
+
+        <p>The second is <em>editorial gravity</em>: the pull generated by a consistent curatorial lens and a demonstrated selection record that is legible independently of any single voice. Stratechery has editorial gravity because the analytical framework it applies to technology strategy is identifiable and valuable even if you disagree with Thompson on any individual piece. The lens is the asset, not the biography. Editorial gravity is what Origin Gravity names and rewards, because it is the kind that accumulates, transfers, and survives the disruptions that personality gravity cannot. Organizations building for the structural condition this paper describes should be building editorial gravity, not personality gravity, even when the latter is faster to generate and easier to measure in the short term.</p>
+
+        <div class="pull-quote">
+          <p>Scale in an algorithmic environment is a function of platform legibility. Scale in an Origin Gravity environment is a function of trust depth. These are not the same capability, and the asset that dominated the last decade is the one that is now contracting.</p>
+        </div>
+
+        <p>There is a historical parallel that clarifies the mechanism. When broadcast television fragmented into cable, the prediction was that audiences would spread evenly across hundreds of channels, reducing the value of any individual program to near zero. What actually happened was different. A small number of cable channels built intense audience relationships by having a clear and consistent point of view, and those channels captured disproportionate loyalty precisely because they were distinct enough to be chosen rather than defaulted to. The fragmentation of the medium did not atomize audience relationships. It concentrated them around the sources that had earned them. The same dynamic applies here. When agents handle information retrieval for routine tasks, the human attention that remains actively engaged is the most intentional human attention in the ecosystem. It is reading that required a decision. That attention does not distribute randomly. It gravitates toward the sources it already trusts enough to seek out without being told to.</p>
+
+        <p>There is a counterargument to Origin Gravity that deserves to be confronted directly rather than deferred to the kill criteria. If editorial gravity is defined as a consistent curatorial lens with a demonstrated selection record, then the obvious question is whether AI agents can accumulate it. Perplexity already has a recognizable editorial tone. ChatGPT users develop preferences for its framing of certain topics. Recommendation systems have been building something that resembles a curatorial identity for years. If agents can develop genuine editorial gravity, the migration toward human origin sources does not occur. The gravity simply relocates to a new kind of source.</p>
+
+        <p>The distinction the paper rests on is not whether agents can produce consistent outputs. They can, and increasingly do. The distinction is whether the trust that underlies editorial gravity can be formed with a system whose selection criteria are opaque, whose training data is undisclosed, whose errors are non-accountable, and whose lens can be updated without notice by the organization that controls it. Editorial gravity in human sources accumulates precisely because it is falsifiable in public: a wrong call is visible, a track record is verifiable, a point of view is attributable to a person or institution that carries reputational consequences for being wrong. An agent's selections carry none of those properties. The trust a user places in a Perplexity response is not the same kind of trust as the trust a subscriber places in an analyst whose previous calls they can audit. One is trust in a pattern. The other is trust in a record with skin in the game.</p>
+
+        <p>This is the property that makes editorial gravity structurally difficult to replicate through AI: not the output, but the accountability structure underneath it. A curated source with genuine editorial gravity is one whose selections can be evaluated against its stated criteria, whose errors carry consequences, and whose record accumulates in a form the audience can inspect. That accountability structure is what converts a consistent output into a trusted judgment. Agents can produce consistency. They cannot, under current conditions, produce accountability of the kind that editorial gravity requires. If that changes, if AI systems develop transparent, auditable, accountable selection criteria with real reputational consequences for errors, the kill criterion for Origin Gravity is triggered. Until then, the gap between consistent output and accountable judgment is where human editorial gravity lives.</p>
+
+        <p>This distinction applies within human curation as well, and the paper cannot afford to leave that implicit. A byline does not automatically confer accountability. What matters is whether the audience can audit the selection record against stated criteria, and whether errors carry genuine consequences for the selector. A legacy media organization with hundreds of bylines but no auditable track record of curatorial calls, no stated selection criteria, and no reputational consequences for being systematically wrong does not possess accountability in the sense this paper describes. It possesses the appearance of accountability, which is a different thing and one that an audience, over time, learns to distinguish. Editorial gravity accrues to the sources where accountability is real and verifiable, not merely institutional. That is as much a constraint on human publishers as it is on AI systems.</p>
+        <p>The sources that will accumulate the most gravitational pull in an agent-mediated environment are not necessarily the largest or most well-known. They are the ones with the strongest trust-to-audience ratio: publications where a relatively small audience has a high degree of conviction that the source is worth seeking out directly. A publication with 50,000 deeply committed direct subscribers who open every email is structurally better positioned for Origin Gravity than a publication with 5 million monthly visitors who arrive through Google and have no relationship with the masthead. This inverts the metric that most media organizations have optimized for over the past two decades. Scale in an algorithmic distribution environment is a function of platform legibility. Scale in an Origin Gravity environment is a function of trust depth. These are not the same capability, and organizations that built the first at the expense of the second are now discovering that the asset they accumulated is the one that is contracting.</p>
+
+        <p>The sources that will not benefit are those whose audience relationship exists entirely through algorithmic surface. A publication whose readership arrives entirely through search or social recommendation has no direct relationship to protect when those surfaces shift toward agent-mediated navigation. The audience relationship was always with the platform, not with the publisher. Origin Gravity does not create a new path for those organizations. It reveals that the path they had was always borrowed.</p>
+
+        <p>A methodological note is warranted here, because the paper that opens with an argument about survivorship bias cannot afford to be blind to its own. Stratechery and All In are survivors. The argument uses them as evidence for Origin Gravity without accounting for the distribution of attempts: the newsletters with genuine editorial gravity that never reached economic sustainability, the paid podcasts with sharp lenses and small audiences that folded quietly, the analysts with real track records who could not convert that record into a subscriber base large enough to matter. That population is invisible for the same reason the paper argues human content is invisible in algorithmic environments: the failures do not generate data that travels. The examples this paper cites are the planes that came back. The honest qualification is that Origin Gravity describes a structural force that is real, not a guaranteed outcome for every organization that tries to build within it. The force exists. Whether any given organization can generate enough gravitational mass to survive on it depends on variables this paper does not model: market size, domain specificity, price elasticity of the target audience, and the quality of the editorial judgment itself. Origin Gravity is not a business plan. It is a description of where durable audience relationships form when the intermediated web can no longer be relied upon. What organizations do with that description is a separate question.</p>
+
+        <p>The media organizations that understand this have been building what might be called origin infrastructure: the direct subscriptions, the named authors with legible points of view, the membership structures accessible by intentional choice rather than algorithmic discovery, and the editorial discipline to publish without optimizing for platform reward patterns. They are not building against the current distribution system. They are building outside it, in preparation for the structural condition this paper describes. The preparation, in most cases, preceded the argument. Origin Gravity rewards the organizations that started early not because they were prescient but because they built something that compounds with time, and time is the one variable that cannot be compressed once the transition accelerates.</p>
+      </div>
+      <div class="section-end">✦ &nbsp; ❧ &nbsp; ✦</div>
+    </div>
+
+    <!-- §8 -->
+    <div class="section" id="s6">
+      <div class="section-badge">
+        <div class="section-icon">
+          <svg viewBox="0 0 24 24"><path d="M18 20V10M12 20V4M6 20v-6"/></svg>
+        </div>
+        <div class="section-meta">
+          <div class="section-number">§6 &nbsp;/&nbsp; Seven</div>
+          <div class="section-title">What to Build While There Is Still Time</div>
+        </div>
+      </div>
+      <div class="section-rule"></div>
+      <div class="section-body">
+        <p>This paper has argued for a structural condition, not a schedule. The five constructs do not arrive simultaneously and do not operate at the same pace for every organization in every market. Distribution Occlusion is already operating. Agent Capture is accelerating and Ad Substrate Collapse follows directly from its trajectory. Origin Gravity is a force that rewards preparation made before the transition completes, not after. The practical question is therefore not whether to respond but what to build during the window that remains.</p>
+        <p>The first thing to build is a direct relationship inventory. Every organization should be able to answer, with precision, what proportion of its current audience would continue to receive its work if every algorithmic distribution channel disappeared tomorrow. Not the proportion that would miss it. The proportion that would actively seek it out through an alternative path. That number, honestly calculated, is the organization's Origin Gravity baseline. Everything else is borrowed reach. The gap between total audience and direct relationship audience is the exposure to Ad Substrate Collapse. Closing that gap is the most urgent structural task in media right now, and it is not a marketing problem. It is an architecture problem.</p>
+        <p>The second thing to build is curatorial identity. The Curation Premium accrues to sources with demonstrated selection quality over time, not to sources that declare themselves curators. Building curatorial identity means making selection decisions visibly and consistently enough that an audience can develop a model of what the source stands for and what it will never publish. It means having a named point of view that is stable across formats and platforms. It means resisting the pressure to expand coverage in directions that increase reach at the cost of legibility. A curated source that tries to be comprehensive loses the property that makes curation valuable. The narrower the lens and the sharper the selection criteria, the stronger the gravitational pull.</p>
+        <p>The third thing to build is format independence. The organizations most exposed to Agent Capture and Ad Substrate Collapse are those whose content exists in a single format optimized for a single distribution surface. A publication that exists as a website optimized for search is one algorithm change away from invisibility. A voice that exists across a direct email list, a paid podcast, a members-only community, and an occasional long-form piece that travels by word of mouth has no single point of failure. Format independence is not the same as being everywhere. It is being present in enough direct-access formats that no platform decision can sever the audience relationship entirely.</p>
+        <p>None of these are new capabilities. They are old ones that the algorithmic distribution era made it rational to deprioritize. The organizations that built them anyway, because they believed in the direct relationship as a value in itself rather than as a hedge, are now discovering that the hedge was the asset. The organizations that are starting now are not too late. They are late enough that the work is harder and the window is narrower. That is the honest accounting. The argument in this paper does not make the work optional. It makes the cost of not doing it visible before the bill arrives.</p>
+      </div>
+      <div class="section-end">✦ &nbsp; ❧ &nbsp; ✦</div>
+    </div>
+
+    <!-- §7 Kill Criteria -->
+    <div class="section" id="s7">
+      <div class="section-badge">
+        <div class="section-icon">
+          <svg viewBox="0 0 24 24"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg>
+        </div>
+        <div class="section-meta">
+          <div class="section-number">§6 &nbsp;/&nbsp; Seven</div>
+          <div class="section-title">Kill Criteria &amp; Proxies</div>
+        </div>
+      </div>
+      <div class="section-rule"></div>
+      <div class="section-body">
+        <p>Every claim in this paper should be held to a falsification standard. The following kill criteria are the honest accounting of what would constitute evidence against each construct. They are stated here not as a defensive gesture but as the condition that makes the argument worth taking seriously.</p>
+
+        <div class="kill-box">
+          <div class="kill-box-label">Kill Criteria &nbsp;·&nbsp; What would falsify each construct</div>
+          <div class="kill-item">
+            <div class="kill-label">K1 - Occlusion</div>
+            <div class="kill-text">If publications with demonstrably strong editorial quality and no algorithmic optimization strategy consistently grow their audience at rates comparable to algorithmically optimized publications over a sustained period, Distribution Occlusion is not operating as described. A further falsifying condition: if major platforms publish credible, auditable evidence that their ranking systems have developed meaningful quality discrimination independent of engagement proxies, demonstrating that genuinely novel or formally unconventional content surfaces at comparable rates to pattern-conforming content, the structural mechanism is weakened. Both conditions are observable from outside platform infrastructure without requiring access to internal ranking data.</div>
+          </div>
+          <div class="kill-item">
+            <div class="kill-label">K2 - Curation</div>
+            <div class="kill-text">If algorithmic systems develop robust quality filtering that reliably surfaces genuine signal regardless of production origin, the Curation Premium contracts toward zero. The construct is falsified if curated sources consistently underperform algorithmically distributed ones on audience retention and trust metrics over a five-year horizon.</div>
+          </div>
+          <div class="kill-item">
+            <div class="kill-label">K3 - Agent Capture</div>
+            <div class="kill-text">If human browsing sessions as a proportion of total web traffic do not decline measurably over the next three years, Agent Capture is premature as a structural transition rather than a marginal phenomenon. The construct requires measurable displacement, not just growth in agent usage alongside stable human usage.</div>
+          </div>
+          <div class="kill-item">
+            <div class="kill-label">K4 - Ad Substrate</div>
+            <div class="kill-text">If a viable advertising architecture emerges that successfully monetizes agent-mediated information retrieval at comparable revenue density to current human-browsing ad models, Ad Substrate Collapse is delayed or averted. The construct is not falsified by a different ad model working; it is falsified if the transition happens without a collapse period.</div>
+          </div>
+          <div class="kill-item">
+            <div class="kill-label">K5 - Origin Gravity</div>
+            <div class="kill-text">If algorithmically distributed media maintains audience loyalty and direct relationship quality equivalent to origin-first publications over a five-year horizon, Origin Gravity is not operating as predicted. The construct requires measurable migration of intentional human consumption toward direct-access sources, not just growth of direct access alongside stable algorithmic channels.</div>
+          </div>
+        </div>
+
+        <p>The proxies that would indicate these constructs are operating as described, short of the full kill criteria being triggered, are the following. Rising cost-per-acquisition for algorithmically distributed content relative to direct-access content is an early indicator of K1. Growing premium pricing for named editorial voices in any format is an early indicator of K2. Declining click-through rates on traditional display formats not explained by creative or targeting factors is an early indicator of K4. Growth in direct subscription and membership revenue as a proportion of total media revenue across the industry is an early indicator of K5.</p>
+        <p>None of these proxies individually constitutes confirmation. In combination, over a sustained period, they constitute the empirical floor below which the argument should be revised.</p>
+
+        <div class="pull-quote">
+          <p>The argument in this paper has a clear falsification path. Holding it to that standard is the condition that makes it worth making.</p>
+        </div>
+
+        <p>One final note on the relationship between this paper and the broader body of work it belongs to. The <a href="paper-01.html" style="color:var(--accent);text-decoration:underline;text-decoration-color:var(--rule);text-underline-offset:3px">Narrative-First series</a> argued that signal quality has to be built into the production layer before distribution begins. The <a href="thesis.html" style="color:var(--accent);text-decoration:underline;text-decoration-color:var(--rule);text-underline-offset:3px">CMI framework</a> argued that presence architecture across interpretive surfaces is the variable that compounds. The <a href="zmox.html" style="color:var(--accent);text-decoration:underline;text-decoration-color:var(--rule);text-underline-offset:3px">Constitutive Arc</a> argued that algorithmic systems have already captured the function of shaping how audiences understand reality. Occlusion Bias argues that the distribution environment is not a neutral measurement instrument and that the structural conditions of the next phase make the arguments of all three preceding papers more urgent, not less.</p>
+        <p>The organizations that will be in the best position when these transitions complete are not the ones who anticipated them perfectly. They are the ones who built direct audience relationships, genuine curatorial authority, and editorial identities strong enough to survive outside the intermediated distribution layer. That work does not require these transitions to arrive on any particular schedule. It is the right work regardless. If the argument here is wrong about the pace, it is not wrong about the direction.</p>
+      </div>
+      <div class="section-end">✦ &nbsp; ❧ &nbsp; ✦</div>
+    </div>
+
+  </div><!-- /content -->
+
+  <footer>
+    <div class="footer-left">Occlusion Bias &nbsp;·&nbsp; v1.0</div>
+    <div class="footer-center">D.</div>
+    <div class="footer-right">Media Strategy &nbsp;·&nbsp; Narrative-First</div>
+  </footer>
+
+</div><!-- /page-wrap -->
+
+<script src="global.js?v=20260419b"></script>
+</body>
+</html>

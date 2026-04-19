@@ -1,0 +1,778 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-TJF4P0NYFT"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-TJF4P0NYFT');
+  </script>
+  <script>(function(){var t=localStorage.getItem("theme");if(!t)t=window.matchMedia("(prefers-color-scheme:dark)").matches?"dark":"light";document.documentElement.setAttribute("data-theme",t)})()</script>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <meta name="theme-color" content="#e6d5b8">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="Narrative Mechanics">
+  <link rel="apple-touch-icon" href="/og-default.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="What a human eye is worth when content is processed by machines -- and how to build for that scarcity before it becomes obvious.">
+  <meta name="author" content="Diego Dell'Agostino">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://diegodella.ar/the-last-human-impression.html">
+  <meta property="og:title" content="The Last Human Impression | Narrative Mechanics">
+  <meta property="og:description" content="What a human eye is worth when content is processed by machines -- and how to build for that scarcity before it becomes obvious.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://diegodella.ar/the-last-human-impression.html">
+  <meta property="og:site_name" content="Narrative Mechanics">
+  <meta property="og:image" content="https://diegodella.ar/og-default.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="The Last Human Impression | Narrative Mechanics">
+  <meta name="twitter:description" content="What a human eye is worth when content is processed by machines -- and how to build for that scarcity before it becomes obvious.">
+  <meta name="twitter:image" content="https://diegodella.ar/og-default.png">
+  <title>The Last Human Impression | Narrative Mechanics</title>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "The Last Human Impression",
+    "author": {
+      "@type": "Person",
+      "name": "Diego Dell'Agostino",
+      "url": "https://diegodella.ar/about.html"
+    },
+    "datePublished": "2026-02-22",
+    "description": "What a human eye is worth when content is processed by machines, and how to build for that scarcity before it becomes obvious.",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Narrative Mechanics",
+      "url": "https://diegodella.ar"
+    },
+    "url": "https://diegodella.ar/the-last-human-impression.html",
+    "mainEntityOfPage": "https://diegodella.ar/the-last-human-impression.html"
+  }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;700&family=Epilogue:ital,wght@0,400;1,400;0,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="global.css?v=20260418f">
+  <link rel="stylesheet" href="components.css?v=20260418f">
+  <style>
+    /* Hero */
+    .hero {
+      max-width: 960px; margin: 0 auto;
+      padding: 6rem 4rem 4rem;
+      display: grid; grid-template-columns: 1fr 200px;
+      gap: 4rem; align-items: start;
+    }
+    .hero-title {
+      font-family: 'Space Grotesk', serif;
+      font-size: clamp(2.8rem, 6vw, 5rem);
+      font-weight: 900; line-height: 1.0;
+      letter-spacing: -0.025em; margin-bottom: 1.25rem;
+    }
+    .hero-title em { font-style: italic; color: var(--ink); display: block; text-decoration: none; background: linear-gradient(180deg, transparent 54%, color-mix(in srgb, var(--accent) 18%, transparent) 54%); padding: 0 0.08em 0.02em 0; box-decoration-break: clone; -webkit-box-decoration-break: clone; }
+    .hero-subtitle {
+      font-size: 1.05rem; color: var(--muted);
+      line-height: 1.7; max-width: 480px; margin-bottom: 1.5rem;
+    }
+    .hero-meta {
+      display: flex; flex-direction: column; gap: 0.6rem; margin-bottom: 1.75rem;
+    }
+    .hero-tag {
+      display: inline-flex; align-items: center; gap: 0.6rem;
+      border: 1px solid var(--rule); padding: 0.4em 0.85em;
+      background: var(--highlight); width: fit-content;
+    }
+    .hero-tag-label {
+      font-family: 'JetBrains Mono', monospace; font-size: 0.44rem;
+      letter-spacing: 0.18em; text-transform: uppercase; color: var(--muted);
+    }
+    .hero-tag-text {
+      font-family: 'JetBrains Mono', monospace; font-size: 0.44rem;
+      letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent);
+    }
+    .hero-illustration { display: flex; align-items: center; justify-content: center; padding-top: 4rem; }
+    .hero-illustration svg { width: 280px; height: 350px; }
+
+    /* Ornamental divider */
+    .chapter-divider {
+      max-width: 960px; margin: 0 auto; padding: 0 4rem;
+      display: flex; align-items: center; gap: 1.5rem;
+    }
+    .chapter-divider-line { flex: 1; height: 1px; background: var(--rule); }
+    .chapter-divider-ornament { color: var(--muted); font-size: 0.75rem; white-space: nowrap; }
+
+    /* Epigraph */
+    .epigraph {
+      max-width: 960px; margin: 3.5rem auto 0;
+      padding: 2.5rem 4rem;
+      border-top: 2px solid var(--ink);
+      border-bottom: 1px solid var(--rule);
+    }
+    .epigraph-text {
+      font-family: 'Space Grotesk', serif;
+      font-size: clamp(1.2rem, 2.5vw, 1.6rem);
+      font-style: italic; line-height: 1.45;
+      color: var(--ink); max-width: 680px;
+    }
+    .epigraph-text em { color: var(--accent); font-style: normal; }
+
+    /* Content area */
+    .content { max-width: 960px; margin: 0 auto; padding: 0 4rem 6rem; }
+
+    /* Section */
+    .section { margin-top: 5.5rem; }
+    .section-body { display: grid; grid-template-columns: 1fr 200px; gap: 3rem; align-items: start; }
+    .section-body p { margin-bottom: 1.35rem; font-size: 1.05rem; }
+    .section-body p:last-child { margin-bottom: 0; }
+    .section-body strong { font-weight: 600; }
+
+    /* Margin notes col */
+    .margin-col { display: flex; flex-direction: column; gap: 2rem; padding-top: 0.25rem; }
+
+    /* Concept box */
+    .concept {
+      background: var(--highlight); border: 1px solid var(--rule);
+      border-left: 3px solid var(--accent); padding: 1.5rem; margin: 2rem 0;
+    }
+    .concept-label {
+      font-family: 'JetBrains Mono', monospace; font-size: 0.44rem;
+      letter-spacing: 0.2em; text-transform: uppercase; color: var(--accent); margin-bottom: 0.4rem;
+    }
+    .concept-name {
+      font-family: 'Space Grotesk', serif; font-size: 1.15rem; font-weight: 700; margin-bottom: 0.6rem;
+    }
+    .concept-def { font-size: 0.95rem; color: var(--muted); line-height: 1.72; }
+
+    /* Agent types table */
+    .agent-types { margin: 2rem 0; border: 1px solid var(--rule); }
+    .agent-types-header {
+      padding: 0.7rem 1.25rem; border-bottom: 1px solid var(--rule);
+      font-family: 'JetBrains Mono', monospace; font-size: 0.44rem;
+      letter-spacing: 0.18em; text-transform: uppercase; color: var(--muted);
+      background: var(--highlight);
+    }
+    .agent-types-grid { display: grid; grid-template-columns: 1fr; }
+    .agent-type { padding: 1.25rem; border-bottom: 1px solid var(--rule); }
+    .agent-type:last-child { border-bottom: none; }
+    .agent-type-label {
+      font-family: 'JetBrains Mono', monospace; font-size: 0.42rem;
+      letter-spacing: 0.18em; text-transform: uppercase; color: var(--muted); margin-bottom: 0.4rem;
+    }
+    .agent-type-name {
+      font-family: 'Space Grotesk', serif; font-size: 0.95rem;
+      font-weight: 700; margin-bottom: 0.5rem; line-height: 1.2;
+    }
+    .agent-type-desc { font-size: 0.84rem; color: var(--muted); line-height: 1.62; margin-bottom: 0.65rem; }
+    .agent-type-gap {
+      font-family: 'JetBrains Mono', monospace; font-size: 0.42rem;
+      letter-spacing: 0.1em; text-transform: uppercase;
+      padding: 0.25em 0.5em; display: inline-block;
+    }
+    .gap-partial { color: var(--muted); border: 1px solid var(--rule); }
+    .gap-real { color: var(--accent); border: 1px solid var(--accent); }
+    .gap-forming { color: var(--muted); border: 1px dashed var(--rule); }
+
+    /* Timeline */
+    .timeline { border: 1px solid var(--rule); margin: 2.5rem 0; }
+    .timeline-header {
+      padding: 0.85rem 1.25rem; border-bottom: 1px solid var(--rule);
+      font-family: 'JetBrains Mono', monospace; font-size: 0.44rem;
+      letter-spacing: 0.2em; text-transform: uppercase; color: var(--muted);
+      background: var(--highlight);
+    }
+    .timeline-row { display: grid; grid-template-columns: 130px 1fr; border-bottom: 1px solid var(--rule); }
+    .timeline-row:last-child { border-bottom: none; }
+    .timeline-period {
+      padding: 1rem 1.25rem; border-right: 1px solid var(--rule);
+      font-family: 'JetBrains Mono', monospace; font-size: 0.46rem;
+      letter-spacing: 0.1em; color: var(--accent);
+      display: flex; align-items: flex-start; padding-top: 1.05rem;
+    }
+    .timeline-desc { padding: 1rem 1.25rem; font-size: 0.9rem; color: var(--ink); line-height: 1.62; }
+    .timeline-desc strong { font-weight: 600; }
+    .timeline-signal {
+      display: block; margin-top: 0.4rem;
+      font-family: 'JetBrains Mono', monospace; font-size: 0.41rem;
+      letter-spacing: 0.06em; color: var(--muted); line-height: 1.6;
+    }
+    .timeline-note {
+      padding: 0.8rem 1.25rem; border-top: 1px solid var(--rule);
+      font-family: 'JetBrains Mono', monospace; font-size: 0.41rem;
+      letter-spacing: 0.06em; color: var(--muted); line-height: 1.65;
+      background: var(--highlight);
+    }
+
+    /* Compare */
+    .compare { display: grid; grid-template-columns: 1fr 1fr; gap: 0; margin: 2rem 0; border: 1px solid var(--rule); }
+    .compare-col { padding: 1.5rem; }
+    .compare-col:first-child { border-right: 1px solid var(--rule); }
+    .compare-label {
+      font-family: 'JetBrains Mono', monospace; font-size: 0.44rem;
+      letter-spacing: 0.2em; text-transform: uppercase; color: var(--muted);
+      margin-bottom: 0.75rem; padding-bottom: 0.5rem; border-bottom: 1px solid var(--rule);
+    }
+    .compare-label.accent { color: var(--accent); }
+    .compare-col ul { list-style: none; padding: 0; }
+    .compare-col ul li {
+      font-size: 0.88rem; color: var(--muted); line-height: 1.6;
+      padding: 0.3rem 0; border-bottom: 1px solid var(--highlight);
+      display: flex; gap: 0.5rem;
+    }
+    .compare-col ul li:last-child { border-bottom: none; }
+    .compare-col ul li::before { content: '-'; color: var(--rule); flex-shrink: 0; }
+    .compare-col ul li.hi { color: var(--ink); }
+    .compare-col ul li.hi::before { content: '→'; color: var(--accent); }
+
+    /* Pull line */
+    .pull-line {
+      border-left: 3px solid var(--accent); padding: 0.6rem 1.25rem; margin: 2rem 0;
+      font-family: 'Space Grotesk', serif; font-size: 1.05rem; font-style: italic;
+      color: var(--muted); line-height: 1.55;
+    }
+
+    /* Models */
+    .models { display: grid; grid-template-columns: 1fr; gap: 1.5rem; margin: 2.5rem 0; }
+    .model { border: 1px solid var(--rule); padding: 1.5rem; background: var(--highlight); }
+    .model-number {
+      font-family: 'JetBrains Mono', monospace; font-size: 0.44rem;
+      letter-spacing: 0.2em; text-transform: uppercase; color: var(--accent); margin-bottom: 0.5rem;
+    }
+    .model-name {
+      font-family: 'Space Grotesk', serif; font-size: 1rem;
+      font-weight: 700; margin-bottom: 0.3rem; line-height: 1.2;
+    }
+    .model-origin {
+      font-family: 'JetBrains Mono', monospace; font-size: 0.42rem;
+      letter-spacing: 0.1em; color: var(--muted); margin-bottom: 0.65rem;
+      padding-bottom: 0.6rem; border-bottom: 1px solid var(--rule);
+    }
+    .model-desc { font-size: 0.88rem; color: var(--muted); line-height: 1.65; }
+    .model-why {
+      margin-top: 0.75rem; padding-top: 0.6rem; border-top: 1px solid var(--rule);
+      font-size: 0.84rem; color: var(--ink); line-height: 1.62;
+    }
+    .model-why strong { font-weight: 600; color: var(--accent); }
+    .model-caveat {
+      margin-top: 0.6rem; padding-top: 0.5rem; border-top: 1px dashed var(--rule);
+      font-size: 0.8rem; color: var(--muted); line-height: 1.55; font-style: italic;
+    }
+
+    /* Kill criteria */
+    .kill-ops { margin: 2rem 0; border: 1px solid var(--rule); }
+    .kill-ops-header {
+      padding: 0.6rem 1.25rem; border-bottom: 1px solid var(--rule);
+      font-family: 'JetBrains Mono', monospace; font-size: 0.44rem;
+      letter-spacing: 0.18em; text-transform: uppercase; color: var(--muted);
+      background: var(--highlight);
+      display: flex; justify-content: space-between; align-items: center;
+    }
+    .kill-ops-header span:last-child { color: var(--accent); }
+    .kill-ops-row { display: grid; grid-template-columns: 170px 1fr; border-bottom: 1px solid var(--rule); }
+    .kill-ops-row:last-child { border-bottom: none; }
+    .kill-ops-signal {
+      padding: 1rem 1.25rem; border-right: 1px solid var(--rule);
+      font-family: 'JetBrains Mono', monospace; font-size: 0.44rem;
+      letter-spacing: 0.08em; color: var(--accent); line-height: 1.6;
+      display: flex; align-items: flex-start; padding-top: 1.05rem;
+    }
+    .kill-ops-action { padding: 1rem 1.25rem; font-size: 0.88rem; color: var(--muted); line-height: 1.65; }
+    .kill-ops-action strong { color: var(--ink); font-weight: 600; }
+
+    /* Series preview */
+    .series-preview { border: 1px solid var(--rule); margin-top: 4rem; }
+    .series-preview-header { padding: 1.25rem 1.75rem; border-bottom: 1px solid var(--rule); background: var(--highlight); }
+    .series-preview-label {
+      font-family: 'JetBrains Mono', monospace; font-size: 0.46rem;
+      letter-spacing: 0.2em; text-transform: uppercase; color: var(--accent); margin-bottom: 0.3rem;
+    }
+    .series-preview-title { font-family: 'Space Grotesk', serif; font-size: 1rem; font-weight: 700; }
+    .series-list { padding: 0; }
+    .series-item {
+      display: flex; align-items: baseline; gap: 1.25rem;
+      padding: 1rem 1.75rem; border-bottom: 1px solid var(--rule);
+    }
+    .series-item:last-child { border-bottom: none; }
+    .series-item-num {
+      font-family: 'JetBrains Mono', monospace; font-size: 0.46rem;
+      letter-spacing: 0.15em; color: var(--accent); flex-shrink: 0; width: 2rem;
+    }
+    .series-item-title { font-family: 'Space Grotesk', serif; font-size: 0.95rem; font-weight: 700; margin-bottom: 0.2rem; }
+    .series-item-title a { color: var(--ink); text-decoration: none; transition: color 0.2s; }
+    .series-item-title a:hover { color: var(--accent); }
+    .series-item-sub { font-size: 0.82rem; color: var(--muted); line-height: 1.5; }
+    .series-item { transition: background 0.2s; }
+    .series-item:hover { background: var(--highlight); }
+
+    @media (max-width: 768px) {
+      .hero { grid-template-columns: 1fr; gap: 2rem; padding: 3rem 1.5rem 2rem; }
+      .hero-illustration { display: none; }
+      .section-body { grid-template-columns: 1fr; }
+      .margin-col { display: none; }
+      /* models already 1fr */
+      .compare { grid-template-columns: 1fr; }
+      .compare-col:first-child { border-right: none; border-bottom: 1px solid var(--rule); }
+      /* agent-types-grid already 1fr */
+      .agent-type { border-right: none; border-bottom: 1px solid var(--rule); }
+      .agent-type:last-child { border-bottom: none; }
+      .timeline-row { grid-template-columns: 1fr; }
+      .timeline-period { border-right: none; border-bottom: 1px solid var(--rule); }
+      .kill-ops-row { grid-template-columns: 1fr; }
+      .kill-ops-signal { border-right: none; border-bottom: 1px solid var(--rule); }
+      .content { padding: 0 1.5rem 4rem; }
+      .epigraph { padding: 2rem 1.5rem; }
+      .chapter-divider { padding: 0 1.5rem; }
+    }
+
+    /* Hero SVG */
+    .hero { display: grid; grid-template-columns: 1fr 280px; gap: 2rem; align-items: center; }
+    .hero-svg { width: 100%; height: auto; }
+    @media (max-width: 768px) {
+      .hero { grid-template-columns: 1fr; }
+      .hero-svg { max-width: 200px; margin: 0 auto; order: -1; }
+    }
+  </style>
+</head>
+<body class="series-ayp">
+  <div id="pbar"></div>
+  <div id="pbar-label"></div>
+  <div class="bg-pattern"></div>
+  <div class="bg-grain"></div>
+  <div class="page-wrap">
+
+      <!-- Top Bar -->
+  <div class="top-bar">
+    <span>Buenos Aires &middot; Since 2008</span>
+    <span>18 Essays &middot; 3 Frameworks &middot; ~289 min of reading &middot; <a href="about.html">About the author</a></span>
+  </div>
+
+  <!-- Nav -->
+  <nav class="nav">
+      <div class="nav-inner">
+        <a href="index.html" class="nav-brand">Narrative<em>Mechanics</em></a>
+        <button class="nav-btn nav-toggle" aria-label="Menu" aria-expanded="false" aria-controls="navLinks" id="navToggle">
+          <svg viewBox="0 0 24 24"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg>
+        </button>
+        <div class="nav-links" id="navLinks">
+          <a href="index.html" class="nav-link">Home</a>
+          <div class="nav-sep"></div>
+          <a href="archive.html" class="nav-link">Start Here</a>
+          <a href="frameworks.html" class="nav-link">Frameworks</a>
+          <a href="series.html" class="nav-link">Series</a>
+          <a href="essays.html" class="nav-link">Essays</a>
+          <a href="notes.html" class="nav-link">Notes</a>
+          <div class="nav-sep"></div>
+          <a href="about.html" class="nav-link">About</a>
+        </div>
+        <div class="nav-right">
+          <button class="nav-btn" aria-label="Toggle theme" id="themeToggle">
+            <svg class="icon-moon" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+            <svg class="icon-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <section class="hero">
+      <div class="hero-left">
+        <div class="hero-kicker">Foundation &nbsp;/&nbsp; Before the Series</div>
+        <h1 class="hero-title">The Last<br><em>Human Impression</em></h1>
+        <p class="hero-subtitle">On what a human eye is worth when content is increasingly processed by machines, and how to build for that scarcity before it becomes obvious that you needed to.</p>
+        <div class="hero-meta">
+          <div class="hero-tag">
+            <span class="hero-tag-label">For</span>
+            <span class="hero-tag-text">Media builders &nbsp;·&nbsp; Brand strategists &nbsp;·&nbsp; Anyone whose business depends on audience</span>
+          </div>
+          <div class="hero-tag">
+            <span class="hero-tag-label">Read</span>
+            <span class="hero-tag-text">~14 min</span>
+          </div>
+        </div>
+        <div class="hero-byline">
+          <div class="hero-byline-dot"></div>
+          <div class="hero-byline-text">Diego Dell'Agostino</div>
+        </div>
+      </div>
+      <div class="hero-illustration">
+        <svg viewBox="0 0 160 220" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <style>
+            @keyframes nodePulse{0%,100%{opacity:0.5}50%{opacity:1}}
+            @keyframes drawLine{from{stroke-dashoffset:80}to{stroke-dashoffset:0}}
+            @keyframes irisPulse{0%,100%{r:7}50%{r:9}}
+            @keyframes youGlow{0%,100%{stroke-width:1.5;opacity:1}50%{stroke-width:2.5;opacity:0.7}}
+            @keyframes fadeLabel{from{opacity:0}to{opacity:1}}
+          </style>
+          <!-- Eye shape -->
+          <ellipse cx="80" cy="80" rx="52" ry="28" stroke="var(--rule)" stroke-width="1.5"/>
+          <!-- Iris ring -->
+          <circle cx="80" cy="80" r="16" stroke="var(--accent)" stroke-width="1.5"/>
+          <!-- Iris fill with pulse -->
+          <circle cx="80" cy="80" r="7" fill="var(--accent)" opacity="0.12"/>
+          <circle cx="80" cy="80" r="7" stroke="var(--accent)" stroke-width="1.5" style="animation:irisPulse 3s ease-in-out infinite"/>
+          <!-- Highlight -->
+          <circle cx="75" cy="76" r="2" fill="var(--paper)"/>
+          <!-- Dashed connection lines (draw on) -->
+          <line x1="20" y1="40" x2="55" y2="68" stroke="var(--rule)" stroke-width="1" stroke-dasharray="3 2" style="stroke-dasharray:80;stroke-dashoffset:80;animation:drawLine 1.8s ease-out 0.3s forwards"/>
+          <line x1="140" y1="40" x2="105" y2="68" stroke="var(--rule)" stroke-width="1" stroke-dasharray="3 2" style="stroke-dasharray:80;stroke-dashoffset:80;animation:drawLine 1.8s ease-out 0.5s forwards"/>
+          <line x1="80" y1="20" x2="80" y2="52" stroke="var(--rule)" stroke-width="1" stroke-dasharray="3 2" style="stroke-dasharray:80;stroke-dashoffset:80;animation:drawLine 1.8s ease-out 0.4s forwards"/>
+          <!-- AI nodes with pulse -->
+          <circle cx="20" cy="38" r="7" fill="var(--paper)" stroke="var(--rule)" stroke-width="1.5" style="animation:nodePulse 2.5s ease-in-out infinite"/>
+          <text x="20" y="41" font-family="monospace" font-size="5" fill="var(--muted)" text-anchor="middle" style="animation:fadeLabel 1s ease-out 0.8s both">AI</text>
+          <circle cx="140" cy="38" r="7" fill="var(--paper)" stroke="var(--rule)" stroke-width="1.5" style="animation:nodePulse 2.5s ease-in-out 0.4s infinite"/>
+          <text x="140" y="41" font-family="monospace" font-size="5" fill="var(--muted)" text-anchor="middle" style="animation:fadeLabel 1s ease-out 1s both">AI</text>
+          <circle cx="80" cy="18" r="7" fill="var(--paper)" stroke="var(--rule)" stroke-width="1.5" style="animation:nodePulse 2.5s ease-in-out 0.8s infinite"/>
+          <text x="80" y="21" font-family="monospace" font-size="5" fill="var(--muted)" text-anchor="middle" style="animation:fadeLabel 1s ease-out 0.9s both">AI</text>
+          <!-- Connection to YOU -->
+          <line x1="80" y1="108" x2="80" y2="140" stroke="var(--accent)" stroke-width="1.5"/>
+          <!-- YOU circle with glow -->
+          <circle cx="80" cy="152" r="12" fill="var(--paper)" stroke="var(--accent)" stroke-width="1.5" style="animation:youGlow 3s ease-in-out infinite"/>
+          <text x="80" y="155" font-family="monospace" font-size="6" fill="var(--accent)" text-anchor="middle">YOU</text>
+          <!-- Labels with fade-in -->
+          <text x="80" y="178" font-family="monospace" font-size="5.5" fill="var(--muted)" text-anchor="middle" style="animation:fadeLabel 1.2s ease-out 1.2s both">HUMAN IMPRESSION</text>
+          <text x="80" y="188" font-family="monospace" font-size="5" fill="var(--accent)" text-anchor="middle" style="animation:fadeLabel 1.2s ease-out 1.5s both">&middot; scarce &middot;</text>
+        </svg>
+      </div>
+    </section>
+
+    <!-- Thesis sentence -->
+    <div class="epigraph">
+      <p class="epigraph-text">Every advertising surface ever built had one job: intercept a human in transit. The Impression Gap is what forms when <em>the human stops being in transit.</em></p>
+    </div>
+
+    <div class="content">
+
+      <!-- SECTION I -->
+      <div class="section-map-wrap">
+        <div class="section-map">
+          <div class="section-map-header"><span>Document Map</span><span>4 Sections</span></div>
+          <div class="section-map-grid">
+            <a href="#lhi-s1" class="section-map-item"><div class="section-map-num">I</div><div><div class="section-map-label">Foundation</div><div class="section-map-title">Three Agents, One Gap</div></div></a>
+            <a href="#lhi-s2" class="section-map-item"><div class="section-map-num">II</div><div><div class="section-map-label">Mechanism</div><div class="section-map-title">Reach Is Indexing</div></div></a>
+            <a href="#lhi-s3" class="section-map-item"><div class="section-map-num">III</div><div><div class="section-map-label">Response</div><div class="section-map-title">Three Models That Survive</div></div></a>
+            <a href="#lhi-s4" class="section-map-item"><div class="section-map-num">IV</div><div><div class="section-map-label">Position</div><div class="section-map-title">The Position</div></div></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="section" id="lhi-s1">
+        <div class="section-badge">
+          <div class="section-icon">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+          </div>
+          <div class="section-meta">
+            <div class="section-number">Section I &nbsp;/&nbsp; Four</div>
+            <div class="section-title">Three Agents, One Gap</div>
+          </div>
+        </div>
+        <div class="section-rule"></div>
+        <div class="section-body">
+          <div class="main-col">
+            <p>This is not a description of a future that hasn't arrived. A growing share of what registers today as a feed encounter or an email impression is processed and discarded by an AI agent before any human eye arrives. The advertising surface (the one two decades of content strategy were built to exploit) is being silently compressed. Not announced. Not replaced. Compressed.</p>
+
+            <p>The word "AI agent" covers too much ground to be useful without a taxonomy. There are at least three distinct types, each with a different relationship to that surface, and the strategic argument changes depending on which one you're dealing with.</p>
+
+            <div class="agent-types">
+              <div class="agent-types-header">Three agent types: distinct relationships to the Impression Gap</div>
+              <div class="agent-types-grid">
+                <div class="agent-type">
+                  <div class="agent-type-label">Type I</div>
+                  <div class="agent-type-name">The Assisted Consumer</div>
+                  <div class="agent-type-desc">A person asking an AI to summarize, compare, or explain. The human initiates, receives the output, and retains the experience. The advertising surface is compressed but not eliminated: the human is still present at reception.</div>
+                  <div class="agent-type-gap gap-partial">Gap: partial</div>
+                </div>
+                <div class="agent-type">
+                  <div class="agent-type-label">Type II</div>
+                  <div class="agent-type-name">The Background Filter</div>
+                  <div class="agent-type-desc">Software operating without human input: email triage, notification filtering, the invisible layer that decides what never reaches the inbox. The human never sees what was discarded. This type operates at scale today, not in future tense. It discards. It does not select and present. That distinction is why it creates the Gap.</div>
+                  <div class="agent-type-gap gap-real">Gap: real and present</div>
+                </div>
+                <div class="agent-type">
+                  <div class="agent-type-label">Type III</div>
+                  <div class="agent-type-name">The Delegated Actor</div>
+                  <div class="agent-type-desc">An agent that not only filters but acts (purchases, books, responds) on behalf of a human who may not review the specifics. Exists in early form for routine tasks. The advertising surface doesn't apply at all: there is no human moment to intercept.</div>
+                  <div class="agent-type-gap gap-forming">Gap: forming</div>
+                </div>
+              </div>
+            </div>
+
+            <p>The urgency lives in Type II, already operating, already compressing the advertising surface in email, search, and filtered feeds. The structural horizon lives in the transition toward Type III. Both are held together by the same concept.</p>
+
+            <div class="concept">
+              <div class="concept-label">Core Concept</div>
+              <div class="concept-name">The Impression Gap</div>
+              <div class="concept-def">The structural void created when agent mediation sits between content and direct human experience. Not a targeting failure, not fixable with better data. The Impression Gap is the absence of the surface the current content economy was built to exploit. Its depth varies by agent type and domain. Its direction is consistent: expanding.<br><br>This concept extends <strong>Agent Capture</strong> from Occlusion Bias, which describes the same transition from the distribution side. The Impression Gap describes it from the economic surface side: what disappears for the content creator when the human is no longer directly present at reception.</div>
+            </div>
+
+            <p>The Gap is not uniform across domains. It opens fastest where tasks are most legible: research, triage, scheduling, comparison shopping. It is shallowest where the experience itself is the point: live events, real-time interaction with verified identity, communities built on genuine mutual recognition. That unevenness is not a reassurance. It is a map.</p>
+
+            <div class="timeline">
+              <div class="timeline-header">Where the Impression Gap is open, opening, and bounded</div>
+              <div class="timeline-row">
+                <div class="timeline-period">Open now</div>
+                <div class="timeline-desc">
+                  <strong>Search and informational queries.</strong> AI assistants synthesize rather than route for a growing share of queries. The click-through (and its ad impression) is replaced by a generated answer.
+                  <span class="timeline-signal">Signal: zero-click rate growth in Search Console; declining referral traffic from informational queries across major publishers since 2023; Cloudflare data showing non-human crawlers as a majority of some sites' total requests.</span>
+                </div>
+              </div>
+              <div class="timeline-row">
+                <div class="timeline-period">Opening</div>
+                <div class="timeline-desc">
+                  <strong>Email and notification triage.</strong> AI-assisted inbox management is growing in enterprise and tech-forward segments. The pre-open impression migrates from human to agent for an increasing share of B2B communications.
+                  <span class="timeline-signal">Signal: open rate compression in technology-sector B2B email since 2024; growth of AI-powered inbox management tools across enterprise environments.</span>
+                </div>
+              </div>
+              <div class="timeline-row">
+                <div class="timeline-period">Forming</div>
+                <div class="timeline-desc">
+                  <strong>Research-intensive purchasing.</strong> For complex considered decisions (enterprise software, financial products, high-consideration categories), agent-assisted research is beginning to replace unaided discovery.
+                  <span class="timeline-signal">Signal: growth of AI shopping and research assistants; early data on AI-influenced purchase decisions in enterprise software.</span>
+                </div>
+              </div>
+              <div class="timeline-row">
+                <div class="timeline-period">Structural floor</div>
+                <div class="timeline-desc">
+                  <strong>High-stakes, high-pleasure, high-identity experiences.</strong> Contexts structurally resistant to full agent mediation: live events, physical presence, communities requiring verified identity, real-time interaction where <em>being there</em> is the product. This is where the last human impression concentrates.
+                  <span class="timeline-signal">This is not a temporary safe haven. It is the permanent floor of direct human experience value: what remains when everything delegable has been delegated.</span>
+                </div>
+              </div>
+              <div class="timeline-note">
+                <strong>Note on adoption speed:</strong> The signals above are drawn primarily from high-adoption markets in North America and Northern Europe. In Latin America and Southeast Asia, the same structural shift is underway, on a 12–24 month lag. For those markets, the current moment is the window: build before the transition makes the strategy obvious and therefore crowded.
+              </div>
+            </div>
+
+          </div>
+          <div class="margin-col">
+            <div class="margin-note">The Background Filter discards invisibly. Recommendation engines select and present visibly. The Gap requires the former. That distinction matters for where you build.</div>
+            <div class="margin-note">Agent Capture (Occlusion Bias): same structural transition, viewed from distribution. Impression Gap: viewed from economic surface. Both are real. Both are now.</div>
+            <div class="margin-note">For markets in LATAM and Southeast Asia: the window is open. Use it before the strategy is obvious.</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SECTION II -->
+      <div class="section" id="lhi-s2">
+        <div class="section-badge">
+          <div class="section-icon">
+            <svg viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+          </div>
+          <div class="section-meta">
+            <div class="section-number">Section II &nbsp;/&nbsp; Four</div>
+            <div class="section-title">Reach Is Indexing</div>
+          </div>
+        </div>
+        <div class="section-rule"></div>
+        <div class="section-body">
+          <div class="main-col">
+            <p>As the Impression Gap widens, reach starts measuring something different from what it was designed to measure. A growing portion of what registers as an impression or feed encounter is agent-mediated: evaluated, in most cases discarded, before a human experiences it. The number moves. The human exposure behind it moves more slowly. The instruments were not built to show the difference.</p>
+
+            <p>The concept that replaces reach as the operative logic is <strong>indexing</strong>: being in the reference set an agent draws from when constructing an answer, filtering a feed, or surfacing a recommendation. Being indexed is not the same as being seen. But it is increasingly what being seen means when the first recipient of content is a machine.</p>
+
+            <p>Here the argument requires one uncomfortable observation before it can be useful: indexing today rewards the already-established, not the genuinely better. Current AI systems weight sources by volume of presence in training data, frequency of citation by other sources, and pattern consistency, not editorial quality in any evaluative sense. In practice, this is structurally closer to legacy SEO than to a meritocratic assessment of insight. A newsletter editor who has published daily analysis in a domain for three years is sitting on an indexing asset. A content team with six months of AI-generated posts is not, even if their traffic numbers look better right now. That is the short-term reality.</p>
+
+            <p>The strategic argument operates on a different horizon. As AI evaluation architectures mature, the inputs to good indexing converge with the inputs to genuine editorial authority: specificity that survives verification, consistency of perspective across time, positions maintained under pressure. These are not abstract virtues. They are becoming the signals that more capable agent evaluation will learn to weight. Building for that horizon rather than gaming the current state is the recommendation, not a certainty about outcomes, but the bet with the better long-term structure.</p>
+
+            <div class="pull-line">There is a second layer worth naming: most AI systems today synthesize rather than cite. The agent may draw on your perspective to form its answer, and the human who receives that answer never knows you exist. There is no traffic. No referral. The economic model for being synthesized rather than cited is still genuinely unresolved.</div>
+
+            <div class="compare">
+              <div class="compare-col">
+                <div class="compare-label">Reach logic: what you optimized for</div>
+                <ul>
+                  <li>Maximize impressions across surfaces</li>
+                  <li>Hook in the first three seconds</li>
+                  <li>Frequency and engagement drive distribution</li>
+                  <li>Volume compounds audience</li>
+                  <li>Success: eyes on content</li>
+                </ul>
+              </div>
+              <div class="compare-col">
+                <div class="compare-label accent">Indexing logic: what compounds from here</div>
+                <ul>
+                  <li class="hi">Be in the reference set for your domain</li>
+                  <li class="hi">Depth and verifiable specificity over hook</li>
+                  <li class="hi">Consistency of perspective over time</li>
+                  <li class="hi">Credibility that survives agent evaluation</li>
+                  <li class="hi">Success: cited or synthesized when it counts</li>
+                </ul>
+              </div>
+            </div>
+
+            <p>One implication worth naming explicitly: the organizations that already have deep, consistent, specific bodies of work in a domain (five, ten, fifteen years of it) are sitting on an indexing asset they may not have recognized as such yet. The archive is no longer just history. It is training data weight. Surfacing, curating, and structuring that archive for machine readability is one of the highest-leverage, lowest-cost actions available to an established media organization right now. That is a claim about current AI system behavior, not about a future state that hasn't arrived.</p>
+
+          </div>
+          <div class="margin-col">
+            <div class="margin-note">Indexing today favors incumbents. The strategic argument is about the direction of travel as evaluation systems mature. Build for the horizon, not the current state.</div>
+            <div class="margin-note">The synthesis-not-citation problem: you can be indexed and invisible. The economic model for that position is still forming. Build the asset now, monetize when the model clarifies.</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SECTION III -->
+      <div class="section" id="lhi-s3">
+        <div class="section-badge">
+          <div class="section-icon">
+            <svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+          </div>
+          <div class="section-meta">
+            <div class="section-number">Section III &nbsp;/&nbsp; Four</div>
+            <div class="section-title">Three Models That Survive</div>
+          </div>
+        </div>
+        <div class="section-rule"></div>
+        <div class="section-body">
+          <div class="main-col">
+            <p>Before the models: two honest observations the argument depends on. First, this transition concentrates value; it doesn't distribute it. The organizations already holding trusted positions, established archives, and recognizable editorial identity are better placed than those starting from scratch. That doesn't make the models irrelevant to newcomers. It means the starting-from-zero problem is real, and this paper doesn't pretend otherwise. If you're a media organization with ten years of domain-specific work, what follows is a playbook. If you launched eighteen months ago, it is a map of where the territory is heading.</p>
+
+            <p>Second, on attention: the three models below assume that as agents absorb routine consumption, freed human attention migrates toward more deliberate engagement. The more likely reality, for most audiences, is that freed attention migrates toward lower friction: Netflix, ambient content, passive scrolling. The models serve the fraction of any audience that responds to agent mediation by becoming more selective, not the fraction that becomes more passive. That fraction exists. In most domains, it is not the majority. You can identify it in your own data: these are the users who complete long content, who respond, who share with comment rather than repost, who attend or buy rather than just follow. Build for them specifically.</p>
+
+            <p>Media organizations face an existential version of the Impression Gap: if the human eye isn't present at reception, the advertising surface disappears. For brands, the problem is more ambiguous. An agent that executes a purchase decision the human has already made or delegated is not necessarily a loss. The three models below are survival architecture for media; for brands, Model I is primary and Models II and III are supplementary.</p>
+
+            <div class="models">
+              <div class="model">
+                <div class="model-number">Model I</div>
+                <div class="model-name">Authority of Reference</div>
+                <div class="model-origin">Predates advertising as: specialist publishing, expert reference, domain media</div>
+                <div class="model-desc">Being the source agents surface and audiences seek for genuine interpretation of a domain. Advertising rents access to attention. Authority of reference builds a position in the judgment architecture of both agents and the humans they serve, on a different time scale, toward a different kind of durability.</div>
+                <div class="model-why"><strong>Why it compounds:</strong> Consistent perspective plus domain specificity plus time produces source reputation that is slow to build and expensive to replicate. The economic model (licensing, subscriptions, inbound authority) is still forming for AI contexts. Build the asset now. The conversion path will clarify.</div>
+                <div class="model-caveat">Caveat: benefits incumbents disproportionately. Being synthesized rather than cited means the revenue mechanism is unresolved. The kill criterion for this model is about the asset, not the revenue. See the kill criteria below.</div>
+              </div>
+              <div class="model">
+                <div class="model-number">Model II</div>
+                <div class="model-name">Direct Human Access</div>
+                <div class="model-origin">Predates advertising as: subscriptions, events, community, direct correspondence</div>
+                <div class="model-desc">Spaces where agent mediation is incomplete or structurally excluded. A distinction matters: newsletters and digital communities are partially mediatable: an agent can summarize a newsletter for you. Physical events, real-time interaction with verified identity, communities requiring genuine mutual recognition: structurally resistant to full substitution.</div>
+                <div class="model-why"><strong>Why it concentrates value:</strong> The person who shows up directly is signaling deliberate choice, the one signal the reach model spent years trying to infer and failing. And deliberate human attention, precisely because it is becoming scarcer as routine consumption migrates to agents, is repricing upward now.<br><br><strong>The pricing implication:</strong> the organizations already operating direct-access channels should be testing price increases before that scarcity becomes legible to everyone. The window to capture that premium before it becomes a commodity argument is open. It won't stay open indefinitely.</div>
+                <div class="model-caveat">Caveat: distinguish partially-mediatable (newsletters, forums) from non-delegable (live, physical, real-time verified). The business model implications are different; the former competes with agent summarization, the latter does not.</div>
+              </div>
+              <div class="model">
+                <div class="model-number">Model III</div>
+                <div class="model-name">Consequential Voice</div>
+                <div class="model-origin">Predates advertising as: named editorial authority, accountability under risk, brand reputation with stakes</div>
+                <div class="model-desc">The organization or individual that publishes under real identity, takes positions, and has something to lose when wrong. The differentiator is asymmetry: when being wrong costs something visible, being right means something real. That asymmetry is what audiences pay for when the alternative is infinite content with no author who has anything at stake.</div>
+                <div class="model-why"><strong>Why it survives agents:</strong> Consequence at scale cannot be fully simulated. An AI can maintain consistent positions. What it cannot replicate is the specific institutional cost (the business relationship damaged, the audience trust forfeited) that makes a position credible when real stakes are present. The defense is making stakes publicly legible: not claiming accountability, but demonstrating a track record of visible specific consequences.</div>
+                <div class="model-caveat">Horizon risk: as AI personas become more persistent and simulated accountability more convincing, the line will blur for some audiences. Specificity and verifiable track record are the defense.</div>
+              </div>
+            </div>
+
+            <div class="kill-ops">
+              <div class="kill-ops-header">
+                <span>Kill Criteria: for people making decisions, not evaluating theses</span>
+                <span>3 signals</span>
+              </div>
+              <div class="kill-ops-row">
+                <div class="kill-ops-signal">Asset not compounding after 12 months</div>
+                <div class="kill-ops-action"><strong>Signal:</strong> your domain-specific body of work has not grown in depth, specificity, or consistency over a 12-month period. Measure this concretely: the number of pieces that take a falsifiable position, the percentage that cite primary sources or original data, the frequency of publication under your name in a single domain. <strong>Threshold:</strong> if those three numbers are flat or declining, you are producing content volume without building an indexing asset. <strong>Action:</strong> do not diagnose this as a distribution or monetization problem. It is an asset problem. Narrow the domain further, increase the specificity of each piece, and hold the publication frequency for 90 days before reassessing. Revenue from authority of reference is a downstream question; the asset has to exist first.</div>
+              </div>
+              <div class="kill-ops-row">
+                <div class="kill-ops-signal">Direct access stagnant vs. reach</div>
+                <div class="kill-ops-action"><strong>If owned and direct channels</strong> (newsletter subscribers, community members, event attendees) <strong>are not growing as a share of total audience over 12 months,</strong> even as distributed reach holds or grows, you are not converting presence into access. Reach maintained, direct access stagnant is the specific failure mode to act on, not the aggregate number.</div>
+              </div>
+              <div class="kill-ops-row">
+                <div class="kill-ops-signal">Deliberate minority contracting</div>
+                <div class="kill-ops-action"><strong>If behavioral signals of deliberate engagement</strong> (completion rates, response rates, direct conversion, attendance) <strong>are declining as a share of total audience interactions,</strong> the fraction of your audience that will benefit from the three models is contracting. This is the earliest warning that your domain is moving toward passive consumption. It does not mean abandon the strategy. It means the pricing, positioning, and community structure need adjustment before the gap becomes unbridgeable.</div>
+              </div>
+            </div>
+
+          </div>
+          <div class="margin-col">
+            <div class="margin-note">For media: existential. For brands: a positioning challenge for agent-era purchase criteria. The models are the same; the urgency is not.</div>
+            <div class="margin-note">Pricing: deliberate human attention is repricing upward now, before the scarcity is legible to everyone. The window is open. Not indefinitely.</div>
+            <div class="margin-note">Kill criterion #1 is about the asset, not the revenue. Build the archive. The conversion path will clarify when the indexing model matures.</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SECTION IV -->
+      <div class="section" id="lhi-s4">
+        <div class="section-badge">
+          <div class="section-icon">
+            <svg viewBox="0 0 24 24"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+          </div>
+          <div class="section-meta">
+            <div class="section-number">Section IV &nbsp;/&nbsp; Four</div>
+            <div class="section-title">The Position</div>
+          </div>
+        </div>
+        <div class="section-rule"></div>
+        <div class="section-body">
+          <div class="main-col">
+            <p>This paper is for media builders, brand strategists, and editorial directors: anyone whose economic model is directly attached to what happens in the space between something published and the human who receives it. The Impression Gap closes that space in a growing number of contexts. The three models are the structures that survive and strengthen as it does.</p>
+
+            <p>Two types of claims have been made throughout. Some are empirical: the Gap is real, measurable in specific domains now, expanding in a consistent direction. Others are strategic recommendations: building authority of reference, direct human access, and consequential voice now positions you advantageously for the transition as it matures. The first can be observed and verified. The second depends on your domain, your starting position, and how quickly the transition reaches your specific context. The map is accurate in direction. The distance is yours to measure.</p>
+
+            <p>The series that follows takes each consequence of the Impression Gap into its specific domain: what happens to engagement when presence is automated, to brand identity when representation is delegated, to content strategy when there are two filters before a human reader, to the trust architecture when the implicit contract of online presence expires without ceremony, and to what you build today so that you have genuine gravity when the transition makes these questions urgent for everyone.</p>
+
+            <p>The last human impression is not a lament and not a threat. It is a clarification: you were always building for human attention. The Impression Gap removes the proxy that obscured that fact. The organizations that understand what they were always building for, and begin building for it directly, before the metrics make it obvious, will hold the position. The ones that wait for the metrics will find it occupied.</p>
+
+          </div>
+          <div class="margin-col">
+            <div class="margin-note">Empirical: the Gap is real and expanding. Strategic: building for it now positions you for the transition. The first is verifiable. The second is a bet with structure behind it.</div>
+            <div class="margin-note">You were always building for human attention. The Impression Gap removes the proxy. What's left is the thing that was always worth building for.</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Series preview -->
+      <div class="series-preview">
+        <div class="series-preview-header">
+          <div class="series-preview-label">After You Post: The Series</div>
+          <div class="series-preview-title">Five essays on the social fabric of the agent internet</div>
+        </div>
+        <div class="series-list">
+          <div class="series-item">
+            <div class="series-item-num">01</div>
+            <div class="series-item-body">
+              <div class="series-item-title"><a href="the-empty-room.html">The Empty Room</a></div>
+              <div class="series-item-sub">On engagement as a measure of human presence, and what it measures when most of the presence is automated.</div>
+            </div>
+          </div>
+          <div class="series-item">
+            <div class="series-item-num">02</div>
+            <div class="series-item-body">
+              <div class="series-item-title"><a href="the-proxy-self.html">The Proxy Self</a></div>
+              <div class="series-item-sub">On identity and delegation: what it means for your brand presence to become a training dataset rather than a living signal.</div>
+            </div>
+          </div>
+          <div class="series-item">
+            <div class="series-item-num">03</div>
+            <div class="series-item-body">
+              <div class="series-item-title"><a href="writing-for-the-filter.html">Writing for the Filter</a></div>
+              <div class="series-item-sub">On content that has to pass two algorithmic layers before reaching a human, and why that changes what good editorial strategy is.</div>
+            </div>
+          </div>
+          <div class="series-item">
+            <div class="series-item-num">04</div>
+            <div class="series-item-body">
+              <div class="series-item-title"><a href="the-trust-collapse.html">The Trust Collapse</a></div>
+              <div class="series-item-sub">On the implicit contract of online presence, and what happens to audience trust when it breaks without ceremony.</div>
+            </div>
+          </div>
+          <div class="series-item">
+            <div class="series-item-num">05</div>
+            <div class="series-item-body">
+              <div class="series-item-title"><a href="origin-gravity.html">Origin Gravity</a></div>
+              <div class="series-item-sub">On what survives when the intermediated web becomes agent territory, and how to build it before you need it.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /content -->
+
+    <div style="max-width:680px;margin:0 auto;padding:0 4rem 2rem;">
+      <p style="font-family:'Inter',serif;font-size:1rem;line-height:1.75;color:var(--muted);font-style:italic;">If the impression gap concerns you, <a href="the-transition-tax.html" style="color:var(--accent)">The Transition Tax</a> names the five structural costs of living through this shift.</p>
+    </div>
+
+    <footer style="border-top: 3px double var(--ink); padding: 1.5rem 5rem; display: flex; justify-content: space-between; align-items: center;">
+      <div style="font-family: 'JetBrains Mono', monospace; font-size: 0.5rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--muted);">&copy; 2026 Diego Dell'Agostino</div>
+      <div style="font-family: 'Space Grotesk', serif; font-size: 1rem; font-style: italic; color: var(--rule);">&#10087;</div>
+      <div style="font-family: 'JetBrains Mono', monospace; font-size: 0.5rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--muted);">Foundation &middot; After You Post</div>
+    </footer>
+
+  </div>
+<script src="global.js?v=20260419b"></script>
+</body>
+</html>

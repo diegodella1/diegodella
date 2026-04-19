@@ -1,0 +1,180 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "Narrative Mechanics API",
+    "version": "1.0.0",
+    "description": "Public and protected endpoints for contact requests, newsletter subscriptions, and operator messaging on diegodella.ar."
+  },
+  "servers": [
+    {
+      "url": "https://diegodella.ar"
+    }
+  ],
+  "components": {
+    "securitySchemes": {
+      "AdminTokenHeader": {
+        "type": "apiKey",
+        "in": "header",
+        "name": "X-Admin-Token",
+        "description": "Required for protected operator endpoints."
+      },
+      "OperatorOIDC": {
+        "type": "openIdConnect",
+        "openIdConnectUrl": "https://diegodella.ar/.well-known/openid-configuration",
+        "description": "Supabase-backed OpenID Connect flow proxied under diegodella.ar/auth/v1. Protected operator endpoints also accept valid bearer tokens for approved operator emails."
+      }
+    },
+    "schemas": {
+      "StatusResponse": {
+        "type": "object",
+        "properties": {
+          "ok": { "type": "boolean" },
+          "service": { "type": "string" },
+          "version": { "type": "string" },
+          "endpoints": {
+            "type": "array",
+            "items": { "type": "string" }
+          }
+        },
+        "required": ["ok", "service", "version", "endpoints"]
+      },
+      "SubscribeRequest": {
+        "type": "object",
+        "properties": {
+          "email": {
+            "type": "string",
+            "format": "email"
+          }
+        },
+        "required": ["email"]
+      },
+      "ContactRequest": {
+        "type": "object",
+        "properties": {
+          "mode": {
+            "type": "string",
+            "enum": ["conversation", "updates"]
+          },
+          "name": { "type": "string" },
+          "email": {
+            "type": "string",
+            "format": "email"
+          },
+          "subject": { "type": "string" },
+          "message": { "type": "string" }
+        },
+        "required": ["email", "subject", "message"]
+      },
+      "SendRequest": {
+        "type": "object",
+        "properties": {
+          "token": { "type": "string" },
+          "subject": { "type": "string" },
+          "message": { "type": "string" },
+          "url": { "type": "string", "format": "uri-reference" }
+        },
+        "required": ["token", "subject", "message"]
+      }
+    }
+  },
+  "paths": {
+    "/api/status": {
+      "get": {
+        "summary": "Health and capability status",
+        "responses": {
+          "200": {
+            "description": "API status",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/StatusResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/subscribe": {
+      "post": {
+        "summary": "Subscribe an email to updates",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SubscribeRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": { "description": "Already subscribed or accepted" },
+          "201": { "description": "Subscription created" },
+          "400": { "description": "Invalid email" },
+          "500": { "description": "Subscription failure" }
+        }
+      }
+    },
+    "/api/contact": {
+      "post": {
+        "summary": "Send a contact or update request",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ContactRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": { "description": "Contact request sent" },
+          "400": { "description": "Missing or invalid fields" },
+          "500": { "description": "Delivery failure" }
+        }
+      }
+    },
+    "/api/subscribers": {
+      "get": {
+        "summary": "List subscribers",
+        "security": [
+          { "AdminTokenHeader": [] },
+          { "OperatorOIDC": ["openid", "email", "profile"] }
+        ],
+        "responses": {
+          "200": { "description": "Subscriber list" },
+          "403": { "description": "Invalid token" },
+          "500": { "description": "Fetch failure" }
+        }
+      }
+    },
+    "/api/send": {
+      "post": {
+        "summary": "Send a message to all subscribers",
+        "security": [
+          { "AdminTokenHeader": [] },
+          { "OperatorOIDC": ["openid", "email", "profile"] }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SendRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": { "description": "Send complete" },
+          "207": { "description": "Partial send with errors" },
+          "403": { "description": "Invalid token" },
+          "404": { "description": "No subscribers" },
+          "500": { "description": "Send failure" }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-TJF4P0NYFT"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-TJF4P0NYFT');
+  </script>
+  <script>(function(){var t=localStorage.getItem("theme");if(!t)t=window.matchMedia("(prefers-color-scheme:dark)").matches?"dark":"light";document.documentElement.setAttribute("data-theme",t)})()</script>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <meta name="theme-color" content="#e6d5b8">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="Narrative Mechanics">
+  <link rel="apple-touch-icon" href="/og-default.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="On building Chango, raising Lucas, and what it means to be human when intelligence stops being scarce.">
+  <meta name="author" content="Diego Dell'Agostino">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://diegodella.ar/the-last-manual-moment.html">
+  <meta property="og:title" content="The Last Manual Moment | Narrative Mechanics">
+  <meta property="og:description" content="On building Chango, raising Lucas, and what it means to be human when intelligence stops being scarce.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://diegodella.ar/the-last-manual-moment.html">
+  <meta property="og:site_name" content="Narrative Mechanics">
+  <meta property="og:image" content="https://diegodella.ar/og-default.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="The Last Manual Moment | Narrative Mechanics">
+  <meta name="twitter:description" content="On building Chango, raising Lucas, and what it means to be human when intelligence stops being scarce.">
+  <meta name="twitter:image" content="https://diegodella.ar/og-default.png">
+  <title>The Last Manual Moment | Narrative Mechanics</title>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "The Last Manual Moment",
+    "author": {
+      "@type": "Person",
+      "name": "Diego Dell'Agostino",
+      "url": "https://diegodella.ar/about.html"
+    },
+    "datePublished": "2026-02-25",
+    "description": "On building Chango, raising Lucas, and what it means to be human when intelligence stops being scarce.",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Narrative Mechanics",
+      "url": "https://diegodella.ar"
+    },
+    "url": "https://diegodella.ar/the-last-manual-moment.html",
+    "mainEntityOfPage": "https://diegodella.ar/the-last-manual-moment.html"
+  }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;700&family=Epilogue:ital,wght@0,400;1,400;0,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="global.css?v=20260418f">
+  <link rel="stylesheet" href="components.css?v=20260418f">
+  <style>
+    /* Hero */
+    .hero {
+      max-width: 960px; margin: 0 auto;
+      padding: 6rem 4rem 4rem;
+      display: grid; grid-template-columns: 1fr 200px;
+      gap: 4rem; align-items: start;
+    }
+    .hero-title {
+      font-family: 'Space Grotesk', serif;
+      font-size: clamp(2.8rem, 6vw, 5rem);
+      font-weight: 900; line-height: 1.0;
+      letter-spacing: -0.025em; margin-bottom: 1.25rem;
+    }
+    .hero-title em { font-style: italic; color: var(--ink); display: block; text-decoration: none; background: linear-gradient(180deg, transparent 54%, color-mix(in srgb, var(--accent) 18%, transparent) 54%); padding: 0 0.08em 0.02em 0; box-decoration-break: clone; -webkit-box-decoration-break: clone; }
+    .hero-subtitle {
+      font-size: 1.05rem; color: var(--muted);
+      line-height: 1.7; max-width: 480px; margin-bottom: 1.5rem;
+    }
+    .hero-meta {
+      display: flex; flex-direction: column; gap: 0.6rem; margin-bottom: 1.75rem;
+    }
+    .hero-tag {
+      display: inline-flex; align-items: center; gap: 0.6rem;
+      border: 1px solid var(--rule); padding: 0.4em 0.85em;
+      background: var(--highlight); width: fit-content;
+    }
+    .hero-tag-label {
+      font-family: 'JetBrains Mono', monospace; font-size: 0.44rem;
+      letter-spacing: 0.18em; text-transform: uppercase; color: var(--muted);
+    }
+    .hero-tag-text {
+      font-family: 'JetBrains Mono', monospace; font-size: 0.44rem;
+      letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent);
+    }
+    .hero-illustration { display: flex; align-items: center; justify-content: center; padding-top: 4rem; }
+    .hero-illustration svg { width: 280px; height: 350px; }
+
+    /* Divider */
+    .chapter-divider {
+      max-width: 960px; margin: 0 auto; padding: 0 4rem;
+      display: flex; align-items: center; gap: 1.5rem;
+    }
+    .chapter-divider-line { flex: 1; height: 1px; background: var(--rule); }
+    .chapter-divider-ornament { color: var(--muted); font-size: 0.75rem; white-space: nowrap; }
+
+    /* Essay content */
+    .content { max-width: 720px; margin: 0 auto; padding: 3rem 2.5rem 8rem; }
+
+    .essay-section {
+      margin-bottom: 4rem;
+      opacity: 0; transform: translateY(24px);
+      animation: fadeUp 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+    }
+    .essay-section:nth-child(1) { animation-delay: 0.1s; }
+    .essay-section:nth-child(2) { animation-delay: 0.2s; }
+    .essay-section:nth-child(3) { animation-delay: 0.3s; }
+    .essay-section:nth-child(4) { animation-delay: 0.4s; }
+    .essay-section:nth-child(5) { animation-delay: 0.5s; }
+    .essay-section:nth-child(6) { animation-delay: 0.6s; }
+    @keyframes fadeUp { to { opacity: 1; transform: translateY(0); } }
+
+    .essay-section p {
+      margin-bottom: 1.5rem;
+      font-size: 1.05rem;
+      line-height: 1.92;
+      text-align: justify;
+      hyphens: auto;
+    }
+    .essay-section p:last-child { margin-bottom: 0; }
+
+    /* Drop cap */
+    .essay-section:first-child p:first-of-type::first-letter {
+      font-family: 'Space Grotesk', serif;
+      font-size: 4rem; font-weight: 900;
+      float: left; line-height: 0.72;
+      margin-right: 0.08em; margin-top: 0.1em;
+      color: var(--accent);
+    }
+
+    .section-break {
+      display: flex; align-items: center; gap: 1.5rem;
+      margin: 3rem 0; opacity: 0.4;
+    }
+    .section-break-line { flex: 1; height: 1px; background: var(--rule); }
+    .section-break-mark { font-family: 'Space Grotesk', serif; font-size: 0.8rem; color: var(--muted); }
+
+    /* Paper nav */
+    .paper-nav { max-width: 680px; margin: 0 auto; padding: 0 4rem 5rem; display: flex; justify-content: flex-start; }
+    .paper-nav-back { display: flex; align-items: center; gap: 0.75rem; text-decoration: none; color: var(--ink); font-family: 'JetBrains Mono', monospace; font-size: 0.55rem; letter-spacing: 0.15em; text-transform: uppercase; transition: color 0.2s; }
+    .paper-nav-back:hover { color: var(--accent); }
+    .paper-nav-back svg { width: 16px; height: 16px; stroke: currentColor; fill: none; stroke-width: 1.5; }
+
+    @media (prefers-reduced-motion: reduce) {
+      .essay-section { opacity: 1; transform: none; animation: none; }
+    }
+
+    @media (max-width: 768px) {
+      .hero { grid-template-columns: 1fr; gap: 2rem; padding: 3rem 1.5rem 2rem; }
+      .hero-illustration { display: none; }
+      .content { padding: 0 1.5rem 5rem; }
+      .chapter-divider { padding: 0 1.5rem; }
+      .pull-quote { margin: 2rem 0; }
+      .paper-nav { padding: 0 1.5rem 3rem; }
+      footer { padding: 1.5rem; flex-direction: column; gap: 0.5rem; }
+    }
+
+    /* Hero SVG */
+    .hero { display: grid; grid-template-columns: 1fr 280px; gap: 2rem; align-items: center; }
+    .hero-svg { width: 100%; height: auto; }
+    @media (max-width: 768px) {
+      .hero { grid-template-columns: 1fr; }
+      .hero-svg { max-width: 200px; margin: 0 auto; order: -1; }
+    }
+  </style>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to content</a>
+  <div id="pbar"></div>
+  <div id="pbar-label"></div>
+  <div class="bg-pattern"></div>
+  <div class="bg-grain"></div>
+
+  <div class="page-wrap">
+
+      <!-- Top Bar -->
+  <div class="top-bar">
+    <span>Buenos Aires &middot; Since 2008</span>
+    <span>18 Essays &middot; 3 Frameworks &middot; ~289 min of reading &middot; <a href="about.html">About the author</a></span>
+  </div>
+
+  <!-- Nav -->
+  <nav class="nav">
+      <div class="nav-inner">
+        <a href="index.html" class="nav-brand">Narrative<em>Mechanics</em></a>
+        <button class="nav-btn nav-toggle" aria-label="Menu" aria-expanded="false" aria-controls="navLinks" id="navToggle">
+          <svg viewBox="0 0 24 24"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg>
+        </button>
+        <div class="nav-links" id="navLinks">
+          <a href="index.html" class="nav-link">Home</a>
+          <div class="nav-sep"></div>
+          <a href="archive.html" class="nav-link">Start Here</a>
+          <a href="frameworks.html" class="nav-link">Frameworks</a>
+          <a href="series.html" class="nav-link">Series</a>
+          <a href="essays.html" class="nav-link">Essays</a>
+          <a href="notes.html" class="nav-link">Notes</a>
+          <div class="nav-sep"></div>
+          <a href="about.html" class="nav-link">About</a>
+        </div>
+        <div class="nav-right">
+          <button class="nav-btn" aria-label="Toggle theme" id="themeToggle">
+            <svg class="icon-moon" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+            <svg class="icon-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <section class="hero">
+      <div class="hero-left">
+        <div class="hero-kicker">Essay</div>
+        <h1 class="hero-title">The Last<em>Manual Moment</em></h1>
+        <p class="hero-subtitle">On building Chango, raising Lucas, and what it means to be human when intelligence stops being scarce.</p>
+        <div class="hero-meta">
+          <div class="hero-tag">
+            <span class="hero-tag-label">For</span>
+            <span class="hero-tag-text">Builders &nbsp;&middot;&nbsp; Parents &nbsp;&middot;&nbsp; Anyone watching the world change</span>
+          </div>
+          <div class="hero-tag">
+            <span class="hero-tag-label">Read</span>
+            <span class="hero-tag-text">~10 min</span>
+          </div>
+        </div>
+        <div class="hero-byline">
+          <div class="hero-byline-dot"></div>
+          <div class="hero-byline-text">Diego Dell'Agostino</div>
+        </div>
+      </div>
+      <div class="hero-illustration">
+        <svg viewBox="0 0 160 220" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <style>
+            @keyframes gridFade{from{opacity:0}to{opacity:1}}
+            @keyframes drawCurve{from{stroke-dashoffset:300}to{stroke-dashoffset:0}}
+            @keyframes crossPulse{0%,100%{r:4;opacity:1}50%{r:6;opacity:0.6}}
+            @keyframes fadeLabel{from{opacity:0}to{opacity:1}}
+            @keyframes drawAxis{from{stroke-dashoffset:160}to{stroke-dashoffset:0}}
+          </style>
+          <!-- Grid background (fade in) -->
+          <g style="animation:gridFade 1.5s ease-out forwards;opacity:0">
+            <line x1="0" y1="25" x2="160" y2="25" stroke="var(--dot-color)" stroke-width="0.5"/>
+            <line x1="0" y1="50" x2="160" y2="50" stroke="var(--dot-color)" stroke-width="0.5"/>
+            <line x1="0" y1="75" x2="160" y2="75" stroke="var(--dot-color)" stroke-width="0.5"/>
+            <line x1="0" y1="100" x2="160" y2="100" stroke="var(--dot-color)" stroke-width="0.5"/>
+            <line x1="0" y1="125" x2="160" y2="125" stroke="var(--dot-color)" stroke-width="0.5"/>
+            <line x1="0" y1="150" x2="160" y2="150" stroke="var(--dot-color)" stroke-width="0.5"/>
+            <line x1="25" y1="0" x2="25" y2="200" stroke="var(--dot-color)" stroke-width="0.5"/>
+            <line x1="50" y1="0" x2="50" y2="200" stroke="var(--dot-color)" stroke-width="0.5"/>
+            <line x1="75" y1="0" x2="75" y2="200" stroke="var(--dot-color)" stroke-width="0.5"/>
+            <line x1="100" y1="0" x2="100" y2="200" stroke="var(--dot-color)" stroke-width="0.5"/>
+            <line x1="125" y1="0" x2="125" y2="200" stroke="var(--dot-color)" stroke-width="0.5"/>
+          </g>
+          <!-- Threshold line -->
+          <line x1="15" y1="100" x2="145" y2="100" stroke="var(--accent)" stroke-width="1" stroke-dasharray="3 3" opacity="0.4" style="stroke-dasharray:160;stroke-dashoffset:160;animation:drawAxis 1.5s ease-out 0.5s forwards"/>
+          <!-- Human curve (draw on) -->
+          <path d="M20 170 C 40 155, 60 130, 80 100 C 100 70, 120 50, 142 35" stroke="var(--muted)" stroke-width="1.5" stroke-dasharray="4 3" fill="none" style="stroke-dasharray:300;stroke-dashoffset:300;animation:drawCurve 2s ease-out 0.8s forwards"/>
+          <!-- AI curve (draw on) -->
+          <path d="M20 170 C 50 140, 80 90, 142 20" stroke="var(--accent)" stroke-width="2" fill="none" style="stroke-dasharray:300;stroke-dashoffset:300;animation:drawCurve 2s ease-out 1s forwards"/>
+          <!-- Crossing dot (pulse) -->
+          <circle cx="80" cy="100" r="4" fill="var(--accent)" style="animation:crossPulse 2.5s ease-in-out 2s infinite"/>
+          <!-- Labels (fade in) -->
+          <text x="146" y="23" font-family="monospace" font-size="6" fill="var(--accent)" style="animation:fadeLabel 0.8s ease-out 2.2s both">AI</text>
+          <text x="146" y="38" font-family="monospace" font-size="6" fill="var(--muted)" style="animation:fadeLabel 0.8s ease-out 2.3s both">H</text>
+          <text x="147" y="98" font-family="monospace" font-size="5" fill="var(--accent)" opacity="0.6" style="animation:fadeLabel 0.8s ease-out 2.4s both">&#8594;</text>
+          <!-- Axis (draw on) -->
+          <line x1="15" y1="20" x2="15" y2="175" stroke="var(--ink)" stroke-width="1" style="stroke-dasharray:160;stroke-dashoffset:160;animation:drawAxis 1.2s ease-out 0.2s forwards"/>
+          <line x1="15" y1="175" x2="150" y2="175" stroke="var(--ink)" stroke-width="1" style="stroke-dasharray:160;stroke-dashoffset:160;animation:drawAxis 1.2s ease-out 0.3s forwards"/>
+          <text x="82" y="190" font-family="monospace" font-size="5.5" fill="var(--muted)" text-anchor="middle" letter-spacing="1" style="animation:fadeLabel 1s ease-out 1.5s both">TIME</text>
+          <text x="82" y="14" font-family="monospace" font-size="5.5" fill="var(--accent)" text-anchor="middle" letter-spacing="1" style="animation:fadeLabel 1s ease-out 1.5s both">THE LAST MANUAL MOMENT</text>
+        </svg>
+      </div>
+    </section>
+
+        <div class="chapter-divider">
+      <div class="chapter-divider-line"></div>
+    </div>
+
+    <main class="content" id="main-content">
+
+      <div class="essay-section">
+        <p>I built Chango on a Tuesday night.</p>
+        <p>Chango is an autonomous agent running on a Raspberry Pi in my home. Small device, the size of a deck of cards, sitting on a shelf doing things I tell it to do without me being in the room. I spent a few nights putting it together, adjusting its personality, watching it respond, adjusting again. At some point it started doing what I intended it to do and I sat back and felt something I didn't have a word for immediately.</p>
+        <p>It wasn't pride exactly. It wasn't excitement in the way launching a product feels exciting. It was something closer to vertigo. The kind you get when you look down from somewhere higher than you expected to be.</p>
+        <p>What surprised me wasn't what Chango did. It was the sudden, total clarity about what everything that comes after Chango is going to be. More autonomous. More capable. More present in the decisions that used to belong exclusively to humans. The specific thing Chango did that night was almost beside the point. What landed was the irreversibility of the moment. The sense that I had crossed something. That the world I was sitting in on that Tuesday night was the last version of the world where this was still unusual.</p>
+        <p>That feeling has a name. I've been calling it the last manual moment. The point just before something that required human effort, human judgment, human time, stops requiring those things. We pass through these moments constantly now. Most of them go unmarked. We notice the capability when it arrives and forget to notice what it replaced.</p>
+        <p>I want to write about what it replaced. Not the jobs or the workflows or the industries, though all of that is real and worth taking seriously. I want to write about something harder to name. The texture of the world before intelligence became abundant. What it felt like to live in a world where thinking was the scarce input, where the person who could reason well about a hard problem had something that couldn't be easily replicated. That world is ending. It ended a little more on the Tuesday I built Chango. And I'm not sure we're grieving it correctly, or at all.</p>
+      </div>
+
+      <div class="section-break">
+        <div class="section-break-line"></div>
+        <div class="section-break-mark">&#9670;</div>
+        <div class="section-break-line"></div>
+      </div>
+
+      <div class="essay-section">
+        <p>This is not a new observation. Every generation has lived through a transition that restructured what it meant to be useful. The printing press made the memorized text less valuable. The calculator made mental arithmetic less impressive. The photograph made the hand-painted portrait into a different kind of object entirely, not worse, just no longer the only way to fix a face in time. Each time, something that had been scarce became abundant, and the humans who had organized their sense of worth around that scarce thing had to find another place to stand.</p>
+        <p>What's different now is the scope. Previous transitions automated specific capabilities. This one is reaching toward general intelligence. Not perfectly, not completely, not without limits that matter. But in the direction of general. The gap between what a capable AI system can do and what a capable human can do is closing faster in more domains than any previous technology managed. And unlike the calculator, which made arithmetic abundant while leaving reasoning intact, this transition is arriving at reasoning itself.</p>
+
+        <div class="pull-quote">
+          <p>You could always tell a child who worried about calculators: learn to think, not just to calculate. The thinking was safe. The refuge was clear. What do you tell a child today, when the refuge itself is becoming less exclusive?</p>
+        </div>
+
+        <p>My son Lucas is twelve. He uses AI for his homework already, or he will soon, the way his generation uses everything: without ceremony, without the weight of novelty, because it was simply there when he arrived. He doesn't know what the internet felt like before recommendation algorithms. He doesn't know what research felt like before search. He will not know what thinking felt like before AI assistance, because he will never have had to think without it available.</p>
+        <p>I'm not sure that's a tragedy. I'm not sure it isn't.</p>
+      </div>
+
+      <div class="section-break">
+        <div class="section-break-line"></div>
+        <div class="section-break-mark">&#9670;</div>
+        <div class="section-break-line"></div>
+      </div>
+
+      <div class="essay-section">
+        <p>What I keep returning to is a specific kind of loss that I can't quite argue is a loss. The friction of not knowing. The experience of sitting with a question that had no immediate answer, of having to hold uncertainty long enough to develop a real relationship with it, of reaching a conclusion slowly and therefore owning it in a way that a fast answer doesn't produce.</p>
+        <p>There is something that happens in a human mind when it struggles with a hard problem over time. The struggle is not inefficiency. It is the process by which understanding becomes durable rather than temporary. When you fight to understand something, when you fail and try again and fail differently and eventually arrive somewhere, you carry the map of that journey inside you. You know not just the answer but the shape of the problem. You know where the traps are because you fell into them.</p>
+        <p>AI gives you the answer. It does not give you the journey. And for most purposes, in most moments, the answer is what you needed. But there is a category of human capability that only develops through the journey, through the sustained struggle, through the experience of being genuinely lost and finding your way back. I don't know what happens to that category when the journey becomes optional. I don't think anyone does yet.</p>
+        <p>Lucas is going to grow up with Chango on the shelf. With systems far more capable than Chango available in his pocket, in his classroom, in every professional context he enters. He will be more capable in certain measurable ways than any generation before him. He will be able to produce, to synthesize, to analyze, to create at a scale that would have seemed impossible when I was his age. What I don't know is whether he will develop the specific kind of depth that only comes from doing things the hard way, from not having the answer available, from sitting alone with a problem until the problem changes you.</p>
+        <p>That's the thing I can't prepare him for. Not because I don't want to. Because the world that required that depth in order to survive is the world that's ending. And the world that comes after it hasn't decided yet what it values.</p>
+      </div>
+
+      <div class="section-break">
+        <div class="section-break-line"></div>
+        <div class="section-break-mark">&#9670;</div>
+        <div class="section-break-line"></div>
+      </div>
+
+      <div class="essay-section">
+        <p>Here is what I think survives. Not as a list of skills for the future economy. As a conviction about what is human in ways that can't be replicated.</p>
+        <p>The first is consequence. The willingness to be wrong in ways that cost something real. AI systems are extraordinarily capable of producing recommendations, analysis, and synthesis. They bear zero cost when they are wrong. They have no reputation that degrades with bad calls, no relationships that break when the advice fails, no career that ends when the strategy collapses. A human who puts their name on something, who is publicly committed to a position, who has skin in the game, carries a kind of authority that doesn't come from capability. It comes from risk. That doesn't disappear when intelligence becomes abundant. It becomes more valuable precisely because the abundance makes it rarer.</p>
+        <p>The second is genuine surprise. The capacity to encounter something you didn't know you needed and let it change you. AI systems optimizing for stated preference are extraordinarily good at giving you what you asked for. They are structurally incapable of giving you what you didn't know to ask for. The encounter with the genuinely unexpected: the book you didn't choose, the conversation that took you somewhere you didn't plan to go, the problem that turned out to be a different problem entirely. That is where human minds develop in ways that preference satisfaction cannot produce. Protecting the conditions for genuine surprise, in your own life and in the lives of the people you're raising, is not nostalgia. It is maintenance of the capacity that makes everything else meaningful.</p>
+        <p>The third is physical presence. Not as sentiment but as mechanism. The things that can only happen when people are in the same room: a shared meal, a long silence, a crisis navigated together in real time. These are not going to be replicated by any system. They are going to become more precious as more of life migrates to mediated interaction. And they are going to become the only proof available that something happened between humans, not just through them. In a world where most interaction can be delegated, the choice to be present becomes the signal itself.</p>
+      </div>
+
+      <div class="section-break">
+        <div class="section-break-line"></div>
+        <div class="section-break-mark">&#9670;</div>
+        <div class="section-break-line"></div>
+      </div>
+
+      <div class="essay-section">
+        <p>I can't prepare Lucas for the world he's going to inherit. That world doesn't fully exist yet and the parts that do are changing faster than any preparation I could offer. What I was taught about how to build a career, how to develop expertise, how to make yourself valuable: some of that will apply to him and some of it will be worse than useless because it will point him toward the wrong things with real confidence.</p>
+        <p>What I can do is something smaller and more durable. I can model what it looks like to keep building in conditions of genuine uncertainty. To make things that matter, slowly, with your name on them. To be wrong sometimes and say so. To stay curious about the things that are hard to understand rather than delegating the understanding. To treat the people in the room as the primary thing rather than the documentation of having been in the room.</p>
+        <p>I built Chango. I think Chango is remarkable. I think what Chango represents, the autonomous, tireless, infinitely scalable intelligence that is going to restructure everything, is one of the most significant developments in human history. I'm glad to be alive at this moment to see it.</p>
+        <p>And I still think the most important thing I can do for my son is show him what a human being looks like when they take their work seriously. Not efficiently. Seriously. With the weight that comes from knowing it matters whether you do it well or poorly, whether you show up or don't, whether you tell the truth or find a way around it.</p>
+      </div>
+
+      <div class="closing">
+        <div class="closing-ornament-top">&#10022; &nbsp; &#10087; &nbsp; &#10022;</div>
+        <p>That's not a lesson about AI.</p>
+        <p>It's a lesson about what being a person means when the world keeps changing underneath you.</p>
+        <p>It's the only lesson I actually know how to give.</p>
+        <div class="closing-ornament-bottom">Essay &nbsp;&middot;&nbsp; Diego Dell'Agostino</div>
+      </div>
+
+    </main>
+
+    <div style="max-width:680px;margin:0 auto;padding:0 4rem 2rem;">
+      <p style="font-family:'Inter',serif;font-size:1rem;line-height:1.75;color:var(--muted);font-style:italic;">For arguments that are still forming about what comes next, read <a href="unfinished-arguments.html" style="color:var(--accent)">Unfinished Arguments</a>.</p>
+    </div>
+
+    <div class="paper-nav">
+      <a href="index.html" class="paper-nav-back">
+        <svg viewBox="0 0 24 24"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+        All Writing
+      </a>
+    </div>
+
+    <footer style="border-top: 3px double var(--ink); padding: 1.5rem 5rem; display: flex; justify-content: space-between; align-items: center;">
+      <div style="font-family: 'JetBrains Mono', monospace; font-size: 0.5rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--muted);">&copy; 2026 Diego Dell'Agostino</div>
+      <div style="font-family: 'Space Grotesk', serif; font-size: 1rem; font-style: italic; color: var(--rule);">&#10087;</div>
+      <div style="font-family: 'JetBrains Mono', monospace; font-size: 0.5rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--muted);">The Last Manual Moment &middot; Essay</div>
+    </footer>
+
+  </div>
+<script src="global.js?v=20260419b"></script>
+</body>
+</html>

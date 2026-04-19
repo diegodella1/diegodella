@@ -1,0 +1,1911 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-TJF4P0NYFT"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-TJF4P0NYFT');
+  </script>
+  <script>(function(){var t=localStorage.getItem("theme");if(!t)t=window.matchMedia("(prefers-color-scheme:dark)").matches?"dark":"light";document.documentElement.setAttribute("data-theme",t)})()</script>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <meta name="theme-color" content="#e6d5b8">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="Narrative Mechanics">
+  <link rel="apple-touch-icon" href="/og-default.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="CAX framework: audience transformation arcs, field design, and constitutive authority in AI-mediated environments. A new model for narrative influence.">
+  <meta name="author" content="Diego Dell'Agostino">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://diegodella.ar/zmox.html">
+  <link rel="alternate" type="text/markdown" href="/zmox.md">
+  <meta property="og:title" content="CAX - Narrative Mechanics">
+  <meta property="og:description" content="CAX framework: audience transformation arcs, field design, and constitutive authority in AI-mediated environments. A new model for narrative influence.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://diegodella.ar/zmox.html">
+  <meta property="og:site_name" content="Narrative Mechanics">
+  <meta property="og:image" content="https://diegodella.ar/og-default.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="CAX - Narrative Mechanics">
+  <meta name="twitter:description" content="CAX framework: audience transformation arcs, field design, and constitutive authority in AI-mediated environments. A new model for narrative influence.">
+  <meta name="twitter:image" content="https://diegodella.ar/og-default.png">
+  <title>CAX - Narrative Mechanics</title>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "The Constitutive Arc",
+    "author": {
+      "@type": "Person",
+      "name": "Diego Dell'Agostino",
+      "url": "https://diegodella.ar/about.html"
+    },
+    "datePublished": "2026-02-20",
+    "description": "CAX framework: audience transformation arcs, field design, and constitutive authority in AI-mediated environments.",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Narrative Mechanics",
+      "url": "https://diegodella.ar"
+    },
+    "url": "https://diegodella.ar/zmox.html",
+    "mainEntityOfPage": "https://diegodella.ar/zmox.html"
+  }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;700&family=Epilogue:ital,wght@0,400;1,400;0,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="global.css?v=20260418f">
+  <link rel="stylesheet" href="components.css?v=20260418f">
+  <style>
+    html { font-size: 20px; }
+    body { line-height: 1.8; }
+
+    /* ── Hero ── */
+    .hero { max-width: 960px; margin: 0 auto; padding: 6rem 4rem 4rem; }
+    .hero-kicker { font-family: 'JetBrains Mono', monospace; font-size: 0.52rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--accent); border: 1px solid var(--accent); display: inline-block; padding: 0.3em 0.85em; margin-bottom: 1.75rem; }
+    .hero-title { font-family: 'Space Grotesk', serif; font-size: clamp(2.5rem, 6vw, 4.5rem); font-weight: 900; line-height: 0.95; letter-spacing: -0.03em; margin-bottom: 1rem; }
+    .hero-title em { font-style: italic; color: var(--ink); display: block; text-decoration: none; background: linear-gradient(180deg, transparent 54%, color-mix(in srgb, var(--accent) 18%, transparent) 54%); padding: 0 0.08em 0.02em 0; box-decoration-break: clone; -webkit-box-decoration-break: clone; }
+    .hero-subtitle { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 1.15rem; font-style: italic; color: var(--muted); margin-bottom: 2rem; max-width: 560px; line-height: 1.6; }
+    .hero-meta { display: flex; gap: 2rem; flex-wrap: wrap; margin-bottom: 2.5rem; }
+    .hero-meta-item { font-family: 'JetBrains Mono', monospace; font-size: 0.48rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); }
+    .hero-meta-item strong { color: var(--ink); font-weight: 700; }
+
+    /* ── TOC ── */
+    .toc-wrap { max-width: 960px; margin: 0 auto; padding: 0 5rem 4rem; display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 0; border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); }
+    .toc-item { padding: 1.5rem 1.5rem 1.5rem 0; border-right: 1px solid var(--rule); }
+    .toc-item:last-child { border-right: none; padding-right: 0; padding-left: 1.5rem; }
+    .toc-item:nth-child(2) { padding-left: 1.5rem; }
+    .toc-item:nth-child(3) { padding-left: 1.5rem; }
+    .toc-num { font-family: 'Space Grotesk', serif; font-size: 1.8rem; font-weight: 900; font-style: italic; color: var(--rule); line-height: 1; margin-bottom: 0.3rem; }
+    .toc-title { font-family: 'JetBrains Mono', monospace; font-size: 0.48rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); }
+    .toc-sub { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 0.88rem; font-style: italic; color: var(--ink); margin-top: 0.2rem; }
+
+    /* ── Essay layout ── */
+    .essay-wrap { max-width: 960px; margin: 0 auto; padding: 0 4rem 6rem; }
+
+    /* ── Section markers ── */
+    .section-marker { display: flex; align-items: center; gap: 1rem; margin-bottom: 0.75rem; margin-top: 4rem; }
+    .section-marker-icon { width: 10px; height: 10px; border: 1px solid var(--accent); border-radius: 50%; flex-shrink: 0; }
+    .section-marker-label { font-family: 'JetBrains Mono', monospace; font-size: 0.48rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--muted); }
+    .section-title { font-family: 'Space Grotesk', serif; font-size: clamp(1.6rem, 3vw, 2.4rem); font-weight: 900; line-height: 1.05; letter-spacing: -0.02em; margin-bottom: 0.5rem; }
+    .section-rule { height: 1px; background: linear-gradient(to right, var(--accent), transparent); margin-bottom: 2rem; width: 80px; }
+
+    /* ── Prose ── */
+    p.fade-in, p.dropcap { font-size: 1.05rem; line-height: 1.92; color: var(--deep); margin-bottom: 1.4rem; }
+    p.dropcap::first-letter { font-family: 'Space Grotesk', serif; font-size: 3.8rem; font-weight: 900; float: left; line-height: 0.8; margin-right: 0.12em; margin-top: 0.08em; color: var(--accent); }
+
+    /* Pull quotes */
+    .pull { border-left: 2px solid var(--accent); padding: 0.5rem 0 0.5rem 1.5rem; margin: 2.5rem 0; }
+    .pull p, .pull { font-family: 'Space Grotesk', serif; font-size: 1.15rem; font-style: italic; color: var(--deep); line-height: 1.55; }
+
+    /* Breaks */
+    .break { text-align: center; color: var(--rule); font-size: 0.85rem; letter-spacing: 0.4em; margin: 2.5rem 0; user-select: none; }
+
+    /* Diagrams */
+    figure.diagram { margin: 2.5rem 0; padding: 1.5rem; background: transparent; border: 1px solid var(--border-light); cursor: zoom-in; position: relative; transition: border-color 0.2s; }
+    figure.diagram:hover { border-color: var(--accent); }
+    figure.diagram::after { content: '+'; position: absolute; top: 0.6rem; right: 0.8rem; font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; color: var(--accent); opacity: 0; transition: opacity 0.2s; pointer-events: none; }
+    figure.diagram:hover::after { opacity: 0.5; }
+    figure.diagram svg { width: 100%; height: auto; display: block; }
+    figure.diagram figcaption { font-family: 'JetBrains Mono', monospace; font-size: 0.44rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); text-align: center; margin-top: 0.75rem; }
+
+    /* Notes / aside notes */
+    p[style*="border-left"] { border-left: 2px solid var(--rule) !important; padding-left: 1.2rem !important; color: var(--muted) !important; font-size: 0.9rem !important; font-style: italic !important; margin: 0 0 1.8rem !important; }
+
+    /* Metric table */
+    .metric-table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 0.9rem; }
+    .metric-table th { font-family: 'JetBrains Mono', monospace; font-size: 0.44rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); padding: 0.6rem 0.8rem; text-align: left; border-bottom: 2px solid var(--rule); }
+    .metric-table td { padding: 0.75rem 0.8rem; border-bottom: 1px solid var(--rule); color: var(--deep); vertical-align: top; line-height: 1.65; }
+    .metric-table tr:last-child td { border-bottom: none; }
+    .metric-table td:first-child { font-family: 'JetBrains Mono', monospace; font-size: 0.78rem; color: var(--accent); white-space: nowrap; }
+
+    /* Diagnostic */
+    .diagnostic-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: var(--rule); margin: 1.5rem 0; border: 1px solid var(--rule); }
+    .diagnostic-item { background: var(--paper); padding: 1.25rem; }
+    .diagnostic-question { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 0.95rem; font-style: italic; color: var(--deep); margin-bottom: 0.5rem; line-height: 1.6; }
+    .diagnostic-hint { font-family: 'JetBrains Mono', monospace; font-size: 0.44rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); }
+
+    /* Sidebar genealogy */
+    .sidebar-genealogy { position: sticky; top: 80px; border: 1px solid var(--rule); padding: 1.5rem; background: var(--highlight); }
+    .sidebar-genealogy-title { font-family: 'JetBrains Mono', monospace; font-size: 0.46rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--muted); margin-bottom: 1rem; }
+    .gen-item { padding: 0.75rem 0; border-bottom: 1px solid var(--rule); }
+    .gen-item:last-child { border-bottom: none; padding-bottom: 0; }
+    .gen-name { font-family: 'Space Grotesk', serif; font-size: 1.1rem; font-weight: 700; color: var(--ink); }
+    .gen-sub { font-family: 'JetBrains Mono', monospace; font-size: 0.44rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); margin-top: 0.2rem; }
+    .gen-item.active .gen-name { color: var(--accent); }
+
+    /* Essay grid */
+    .essay-grid { display: block; max-width: 680px; }
+    .essay-main { max-width: 720px; }
+    .essay-aside { display: none; }
+
+    /* Colophon */
+    .colophon { border-top: 3px double var(--ink); padding: 3rem 0 0; margin-top: 4rem; }
+    .colophon-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; }
+    .colophon-label { font-family: 'JetBrains Mono', monospace; font-size: 0.44rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--muted); margin-bottom: 0.5rem; }
+    .colophon-text { font-size: 0.88rem; color: var(--muted); line-height: 1.7; }
+
+    /* Lightbox */
+    #dlb { display: none; position: fixed; inset: 0; z-index: 9990; background: rgba(15,14,12,0.88); backdrop-filter: blur(8px); align-items: center; justify-content: center; padding: 2.5rem; }
+    #dlb.on { display: flex; animation: dlbIn 0.2s ease; }
+    @keyframes dlbIn { from { opacity:0 } to { opacity:1 } }
+    #dlb-box { position: relative; max-width: min(92vw, 1100px); width: 100%; background: var(--paper); border-top: 2px solid var(--accent); padding: 1.8rem 1.8rem 1.2rem; animation: dlbPop 0.25s cubic-bezier(.22,.68,0,1.15); }
+    @keyframes dlbPop { from { opacity:0; transform:scale(0.93) translateY(10px) } to { opacity:1; transform:scale(1) translateY(0) } }
+    #dlb-box svg { width:100%; height:auto; display:block; }
+    #dlb-cap { margin-top:0.7rem; font-family:'JetBrains Mono',monospace; font-size:0.45rem; letter-spacing:0.1em; color:var(--muted); text-align:center; font-style:italic; }
+    #dlb-close { position:absolute; top:0.5rem; right:0.7rem; background:none; border:none; cursor:pointer; font-family:'JetBrains Mono',monospace; font-size:0.48rem; letter-spacing:0.14em; text-transform:uppercase; color:var(--muted); padding:0.2rem 0.3rem; transition:color 0.15s; }
+    #dlb-close:hover { color:var(--accent); }
+    #dlb-esc { position:absolute; bottom:1rem; left:50%; transform:translateX(-50%); font-family:'JetBrains Mono',monospace; font-size:0.4rem; letter-spacing:0.14em; text-transform:uppercase; color:rgba(244,240,232,0.25); pointer-events:none; white-space:nowrap; }
+
+    @media(max-width:768px) {
+      .hero { padding: 3rem 1.5rem 2rem; }
+      .toc-wrap { padding: 0 1.5rem 2rem; grid-template-columns: 1fr; }
+      .toc-item { border-right: none; border-bottom: 1px solid var(--rule); padding: 1rem 0; }
+      .toc-item:last-child { border-bottom: none; padding-left: 0; }
+      .toc-item:nth-child(2), .toc-item:nth-child(3) { padding-left: 0; }
+      .essay-wrap { padding: 0 1.5rem 4rem; }
+      .essay-grid { grid-template-columns: 1fr; }
+      .essay-aside { display: none; }
+      .diagnostic-grid { grid-template-columns: 1fr; }
+      .colophon-inner { grid-template-columns: 1fr; }
+    }
+
+    /* Hero SVG */
+    .hero { display: grid; grid-template-columns: 1fr 280px; gap: 2rem; align-items: center; }
+    .hero-svg { width: 100%; height: auto; }
+    @media (max-width: 768px) {
+      .hero { grid-template-columns: 1fr; }
+      .hero-svg { max-width: 200px; margin: 0 auto; order: -1; }
+    }
+  </style>
+</head>
+<body>
+  <div class="bg-pattern"></div>
+  <div class="bg-grain"></div>
+  <div id="pbar"></div>
+  <div id="pbar-label"></div>
+
+  <div class="page-wrap">
+
+      <!-- Top Bar -->
+  <div class="top-bar">
+    <span>Buenos Aires &middot; Since 2008</span>
+    <span>18 Essays &middot; 3 Frameworks &middot; ~289 min of reading &middot; <a href="about.html">About the author</a></span>
+  </div>
+
+  <!-- Nav -->
+  <nav class="nav">
+      <div class="nav-inner">
+        <a href="index.html" class="nav-brand">Narrative<em>Mechanics</em></a>
+        <button class="nav-btn nav-toggle" aria-label="Menu" aria-expanded="false" aria-controls="navLinks" id="navToggle">
+          <svg viewBox="0 0 24 24"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg>
+        </button>
+        <div class="nav-links" id="navLinks">
+          <a href="index.html" class="nav-link">Home</a>
+          <div class="nav-sep"></div>
+          <a href="archive.html" class="nav-link">Start Here</a>
+          <a href="frameworks.html" class="nav-link">Frameworks</a>
+          <a href="series.html" class="nav-link">Series</a>
+          <a href="essays.html" class="nav-link">Essays</a>
+          <a href="notes.html" class="nav-link">Notes</a>
+          <div class="nav-sep"></div>
+          <a href="about.html" class="nav-link">About</a>
+        </div>
+        <div class="nav-right">
+          <button class="nav-btn" aria-label="Toggle theme" id="themeToggle">
+            <svg class="icon-moon" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+            <svg class="icon-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero">
+      <div class="hero-main">
+      <div class="hero-kicker">Framework Paper &nbsp;/&nbsp; Media Strategy &amp; Transformation</div>
+      <h1 class="hero-title">The Constitutive<br><em>Arc</em></h1>
+      <p class="hero-subtitle">On the collapse of narrative authority, the architecture of transformative fields, and who is designing the transformation of your audience right now.</p>
+      <div class="hero-meta">
+        <div class="hero-meta-item"><strong>Six Movements</strong></div>
+        <div class="hero-meta-item">~11,500 Words</div>
+        <div class="hero-meta-item">Diego Dell'Agostino</div>
+      </div>
+      <div style="display:flex; gap:0.75rem; flex-wrap:wrap; margin-top:0.5rem;">
+        <span style="font-family:'JetBrains Mono',monospace;font-size:0.44rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--muted);border:1px solid var(--rule);padding:0.3em 0.7em;">ZMOT &rarr; Google &middot; 2011 &middot; Before purchase</span>
+        <span style="font-family:'JetBrains Mono',monospace;font-size:0.44rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--muted);border:1px solid var(--rule);padding:0.3em 0.7em;">ZMOI &rarr; Dell'Agostino &middot; Before belief</span>
+        <span style="font-family:'JetBrains Mono',monospace;font-size:0.44rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--accent);border:1px solid var(--accent);padding:0.3em 0.7em;">CAX &rarr; Dell'Agostino &middot; Before identity</span>
+      </div>
+      </div>
+      <svg class="hero-svg" viewBox="0 0 160 200" xmlns="http://www.w3.org/2000/svg">
+        <style>
+          @keyframes caxArc{from{stroke-dashoffset:250}to{stroke-dashoffset:0}}
+          @keyframes caxDot{from{opacity:0;r:0}to{opacity:1;r:4}}
+          @keyframes caxFade{from{opacity:0}to{opacity:1}}
+          @keyframes caxRadiate{from{opacity:0;stroke-dashoffset:30}to{opacity:0.5;stroke-dashoffset:0}}
+        </style>
+        <!-- Background grid lines -->
+        <line x1="10" y1="180" x2="150" y2="180" stroke="var(--rule)" stroke-width="0.5" opacity="0.3"/>
+        <line x1="10" y1="180" x2="10" y2="20" stroke="var(--rule)" stroke-width="0.5" opacity="0.3"/>
+        <!-- Ascending arc from bottom-left to upper-right -->
+        <path d="M15 175 C30 170,50 150,70 120 C90 90,110 55,145 30" fill="none" stroke="var(--accent)" stroke-width="2" stroke-dasharray="250" stroke-dashoffset="250" style="animation:caxArc 2.5s 0.3s ease-out forwards"/>
+        <!-- Three evolution points -->
+        <circle cx="35" cy="165" r="0" fill="var(--muted)" style="animation:caxDot 0.4s 1s forwards"/>
+        <circle cx="80" cy="105" r="0" fill="var(--muted)" style="animation:caxDot 0.4s 1.6s forwards"/>
+        <circle cx="145" cy="30" r="0" fill="var(--accent)" style="animation:caxDot 0.4s 2.2s forwards"/>
+        <!-- Point labels -->
+        <text x="32" y="158" font-family="monospace" font-size="6" fill="var(--muted)" opacity="0" style="animation:caxFade 0.4s 1.2s forwards">ZMOT</text>
+        <text x="77" y="98" font-family="monospace" font-size="6" fill="var(--muted)" opacity="0" style="animation:caxFade 0.4s 1.8s forwards">ZMOI</text>
+        <text x="130" y="24" font-family="monospace" font-size="6.5" fill="var(--accent)" opacity="0" style="animation:caxFade 0.4s 2.4s forwards">CAX</text>
+        <!-- Field lines radiating from the top point -->
+        <line x1="145" y1="30" x2="155" y2="15" stroke="var(--accent)" stroke-width="0.8" stroke-dasharray="30" stroke-dashoffset="30" style="animation:caxRadiate 0.6s 2.6s forwards"/>
+        <line x1="145" y1="30" x2="140" y2="12" stroke="var(--accent)" stroke-width="0.8" stroke-dasharray="30" stroke-dashoffset="30" style="animation:caxRadiate 0.6s 2.7s forwards"/>
+        <line x1="145" y1="30" x2="150" y2="10" stroke="var(--accent)" stroke-width="0.8" stroke-dasharray="30" stroke-dashoffset="30" style="animation:caxRadiate 0.6s 2.8s forwards"/>
+        <line x1="145" y1="30" x2="130" y2="18" stroke="var(--accent)" stroke-width="0.6" stroke-dasharray="30" stroke-dashoffset="30" style="animation:caxRadiate 0.6s 2.9s forwards"/>
+        <line x1="145" y1="30" x2="155" y2="25" stroke="var(--accent)" stroke-width="0.6" stroke-dasharray="30" stroke-dashoffset="30" style="animation:caxRadiate 0.6s 3s forwards"/>
+        <!-- Bottom label -->
+        <text x="80" y="195" font-family="monospace" font-size="5.5" fill="var(--muted)" text-anchor="middle" letter-spacing="2" opacity="0" style="animation:caxFade 0.5s 3.2s forwards">CONSTITUTIVE ARC</text>
+      </svg>
+    </section>
+
+    <!-- TOC -->
+    <div class="toc-wrap fade-in">
+      <div class="toc-item">
+        <div class="toc-num">I</div>
+        <div class="toc-title">Movement One</div>
+        <div class="toc-sub">The Collapse</div>
+      </div>
+      <div class="toc-item">
+        <div class="toc-num">II</div>
+        <div class="toc-title">Movement Two</div>
+        <div class="toc-sub">The Field</div>
+      </div>
+      <div class="toc-item">
+        <div class="toc-num">III</div>
+        <div class="toc-title">Movement Three</div>
+        <div class="toc-sub">The Ancestor</div>
+      </div>
+    </div>
+    <div class="toc-wrap fade-in" style="border-top:none; padding-top:0;">
+      <div class="toc-item">
+        <div class="toc-num">IV</div>
+        <div class="toc-title">Movement Four</div>
+        <div class="toc-sub">The Architecture</div>
+      </div>
+      <div class="toc-item">
+        <div class="toc-num">V</div>
+        <div class="toc-title">Movement Five</div>
+        <div class="toc-sub">The Danger</div>
+      </div>
+      <div class="toc-item">
+        <div class="toc-num">VI</div>
+        <div class="toc-title">Movement Six</div>
+        <div class="toc-sub">The Return</div>
+      </div>
+    </div>
+
+    <!-- Essay -->
+    <div class="essay-wrap">
+      <div class="essay-grid">
+        <div class="essay-main">
+
+  <div class="essay-grid">
+
+    <!-- MAIN COLUMN -->
+    <div class="essay-main">
+
+      <!-- Section marker -->
+      <div class="section-marker fade-in">
+        <div class="section-marker-icon">&#9675;</div>
+        <div class="section-marker-label">Movement I &nbsp;/&nbsp; Six</div>
+      </div>
+      <h2 class="section-title fade-in">The Collapse</h2>
+      <div class="section-rule fade-in"></div>
+
+      <p class="dropcap fade-in">
+        In 1831, Katsushika Hokusai painted a wave.
+      </p>
+
+      <p class="fade-in">
+        Not when it broke. The moment before. White foam clawing upward, fishing boats reduced to splinters beneath it, the whole world contracted into a single instant of maximum tension. And there in the background, perfectly still, apparently small: Mount Fuji. Permanent. Indifferent. Present in a completely different register of time.
+      </p>
+
+      <p class="fade-in">
+        Most people remember the wave. Almost nobody notices that the wave is the temporary thing.
+      </p>
+
+      <p class="fade-in">That is the problem this essay is about.</p>
+
+      <div class="break fade-in">&#9670; &nbsp; &#9670; &nbsp; &#9670;</div>
+
+      <p class="fade-in">
+        Every media organization operating today is inside the wave. The fragmentation of attention, the collapse of direct traffic, algorithmic distribution, generative AI: real, immediate, violent. The rowers are right to hold on. What they cannot afford is to mistake the wave for the structure of the world.
+      </p>
+
+      <p class="fade-in">
+        Hokusai made thirty-six views of Fuji. Same mountain. Thirty-six surfaces, thirty-six contexts. The wave changes. The light changes. Fuji does not. The series is not about variety. It is about what stays constant when everything else moves. The oldest known framework for multi-surface presence built around a single coherent lens.
+      </p>
+
+      <p class="fade-in">We will return to that.</p>
+
+      <div class="break fade-in">&#9670; &nbsp; &#9670; &nbsp; &#9670;</div>
+
+      <p class="fade-in">
+        The industry's diagnosis of its own crisis has been technically accurate and strategically useless. Attention fragmented: true. Trust in institutions eroded: true. Audiences now form opinions through feeds and messaging apps that no editorial team designed: true.
+      </p>
+
+      <p class="fade-in">All of it true. None of it the actual problem.</p>
+
+      <p class="fade-in">
+        The actual problem is that the industry has been measuring the wave and ignoring the mountain. Twenty years of optimizing for reach, engagement, time-on-platform (all measurements of the wave's surface) while the deeper structure beneath, the one that determines whether a media organization survives a disruption cycle, has been eroding without a metric attached to it.
+      </p>
+
+      <p class="fade-in">
+        Lippmann saw it in 1922: the pictures in our heads are not formed from direct experience. They come from the narratives we consume, repeatedly, over time. McLuhan pushed further: the medium itself shapes cognitive structure, independent of content. What both were circling is this: <strong>the primary function of a media organization is not to distribute information. It is to participate in how its audience constructs reality.</strong>
+      </p>
+
+      <p class="fade-in">
+        That function (constitutive rather than merely informational) is what has been lost. It is not a content problem. It is structural.
+      </p>
+
+      <p class="fade-in" style="font-size:0.88rem; color:var(--muted); font-style:italic; border-left: 2px solid var(--rule); padding-left: 1.2rem; margin: 0 0 1.8rem;">
+        On the word "constitutive": in a media environment saturated with algorithmic noise and AI-generated content, a well-designed field does not merely deepen the user's understanding of a domain; it makes genuine understanding possible at all. Without the field, the user does not navigate the domain independently. They navigate the algorithm's version of it. The field is constitutive of access, not only depth. The word earns its place only if that argument is true. This essay argues it is.</p>
+
+
+      <!-- DIAGRAM: Dalio's Three Pillars -->
+      <figure class="diagram fade-in" aria-label="Dalio's Three Pillars of dominant order">
+        <svg viewBox="0 0 640 220" xmlns="http://www.w3.org/2000/svg" style="width:100%;font-family:'Inter',serif;">
+          <!-- Column 1: Infrastructure -->
+          <rect x="20" y="40" width="180" height="120" fill="none" stroke="var(--ink)" stroke-width="0.8" opacity="0.2"/>
+          <rect x="20" y="40" width="180" height="120" fill="var(--highlight)" opacity="0.5"/>
+          <rect x="20" y="130" width="180" height="30" fill="var(--ink)" opacity="0.08"/>
+          <text x="110" y="90" text-anchor="middle" font-size="11" fill="var(--ink)" opacity="0.5" font-style="italic">Pillar I</text>
+          <text x="110" y="108" text-anchor="middle" font-size="13" fill="var(--ink)" font-weight="bold">Infrastructure</text>
+          <text x="110" y="150" text-anchor="middle" font-size="9" fill="var(--muted)">Production &amp; Distribution</text>
+          <!-- Strike through - lost -->
+          <line x1="30" y1="108" x2="190" y2="108" stroke="var(--accent)" stroke-width="1.5" opacity="0.6"/>
+
+          <!-- Column 2: Legitimacy -->
+          <rect x="230" y="40" width="180" height="120" fill="none" stroke="var(--ink)" stroke-width="0.8" opacity="0.2"/>
+          <rect x="230" y="40" width="180" height="120" fill="var(--highlight)" opacity="0.5"/>
+          <rect x="230" y="130" width="180" height="30" fill="var(--ink)" opacity="0.08"/>
+          <text x="320" y="90" text-anchor="middle" font-size="11" fill="var(--ink)" opacity="0.5" font-style="italic">Pillar II</text>
+          <text x="320" y="108" text-anchor="middle" font-size="13" fill="var(--ink)" font-weight="bold">Legitimacy</text>
+          <text x="320" y="150" text-anchor="middle" font-size="9" fill="var(--muted)">Institutional Authority</text>
+          <!-- Cracking -->
+          <line x1="240" y1="108" x2="400" y2="108" stroke="var(--accent)" stroke-width="1.5" opacity="0.35" stroke-dasharray="4,3"/>
+
+          <!-- Column 3: Narrative -->
+          <rect x="440" y="40" width="180" height="120" fill="none" stroke="var(--accent)" stroke-width="1.2" opacity="0.5"/>
+          <rect x="440" y="40" width="180" height="120" fill="var(--accent-light)" opacity="0.6"/>
+          <rect x="440" y="130" width="180" height="30" fill="var(--accent)" opacity="0.08"/>
+          <text x="530" y="90" text-anchor="middle" font-size="11" fill="var(--accent)" opacity="0.7" font-style="italic">Pillar III</text>
+          <text x="530" y="108" text-anchor="middle" font-size="13" fill="var(--accent)" font-weight="bold">Narrative</text>
+          <text x="530" y="150" text-anchor="middle" font-size="9" fill="var(--accent)" opacity="0.7">The Rebuilable Pillar</text>
+
+          <!-- Label bottom -->
+          <text x="320" y="200" text-anchor="middle" font-size="9" fill="var(--muted)" font-style="italic">Dalio's three pillars of dominant order applied to media. I and II are lost. III is the only one that can be rebuilt.</text>
+        </svg>
+      </figure>
+
+      <div class="pull fade-in">
+        The medium that loses narrative authority does not merely lose audience share. It loses its constitutive function: the ability to be part of how people build their understanding of reality.
+      </div>
+
+      <div class="break fade-in">&#9670; &nbsp; &#9670; &nbsp; &#9670;</div>
+
+      <p class="fade-in">
+        Ray Dalio maps how dominant orders rise and fall. The scale is empires and currencies, but the mechanism transfers. Dominant orders don't fall from frontal attack. They fall when an emergent force creates new terrain where the old order's advantages are irrelevant, captures the distribution layer, and by the time the incumbent notices, the perimeter has already moved.
+      </p>
+
+      <p class="fade-in">
+        Three pillars hold a dominant order. Control of productive resources. Institutional legitimacy (the social agreement that this order is the right one). And narrative superiority: the capacity to define how reality gets interpreted. When all three align, the order is self-reinforcing. When two crack, the third cannot hold alone.
+      </p>
+
+      <p class="fade-in">
+        Pre-digital media held all three. The infrastructure was capital-intensive, physically scarce, legally licensed. Owning a printing press or a broadcast license was not a content advantage; it was a structural barrier that made content advantages permanent. Legitimacy was codified: the press as the fourth estate, the byline as a credential. Narrative superiority was the automatic consequence of the other two.
+      </p>
+
+      <p class="fade-in">
+        The platforms never attacked this directly. They had no interest in journalism. They built adjacent infrastructure (social connection, search, video) and in doing so quietly took the first pillar. Distribution. The trade routes. Once the routes changed hands, legitimacy began to shake, because legitimacy without reach is philosophy, not power. And when legitimacy shook, narrative authority drifted.
+      </p>
+
+      <p class="fade-in">When it drifted, it went somewhere. Authority is not destroyed. It migrates.</p>
+
+      <!-- DIAGRAM: Authority Migration Timeline -->
+      <figure class="diagram fade-in" aria-label="Narrative authority migration timeline">
+        <svg viewBox="0 0 640 160" xmlns="http://www.w3.org/2000/svg" style="width:100%;font-family:'Inter',serif;">
+          <!-- Timeline axis -->
+          <line x1="30" y1="80" x2="610" y2="80" stroke="var(--ink)" stroke-width="0.8" opacity="0.2"/>
+
+          <!-- Phase 1 -->
+          <circle cx="100" cy="80" r="5" fill="var(--ink)" opacity="0.3"/>
+          <text x="100" y="60" text-anchor="middle" font-size="9" fill="var(--muted)">Pre-2005</text>
+          <text x="100" y="105" text-anchor="middle" font-size="10" fill="var(--ink)" font-weight="bold">Editorial</text>
+          <text x="100" y="118" text-anchor="middle" font-size="8.5" fill="var(--muted)">Holds all 3 pillars</text>
+
+          <!-- Arrow -->
+          <path d="M130,80 L200,80" stroke="var(--muted)" stroke-width="0.8" stroke-dasharray="3,2" opacity="0.4" marker-end="url(#arr)"/>
+
+          <!-- Phase 2 -->
+          <circle cx="230" cy="80" r="5" fill="var(--muted)" opacity="0.5"/>
+          <text x="230" y="60" text-anchor="middle" font-size="9" fill="var(--muted)">2005–2012</text>
+          <text x="230" y="105" text-anchor="middle" font-size="10" fill="var(--ink)" font-weight="bold">Search &amp; Social</text>
+          <text x="230" y="118" text-anchor="middle" font-size="8.5" fill="var(--muted)">Capture distribution</text>
+
+          <!-- Arrow -->
+          <path d="M280,80 L340,80" stroke="var(--muted)" stroke-width="0.8" stroke-dasharray="3,2" opacity="0.4"/>
+
+          <!-- Phase 3 -->
+          <circle cx="370" cy="80" r="5" fill="var(--muted)" opacity="0.7"/>
+          <text x="370" y="60" text-anchor="middle" font-size="9" fill="var(--muted)">2012–2019</text>
+          <text x="370" y="105" text-anchor="middle" font-size="10" fill="var(--ink)" font-weight="bold">Algorithmic Feed</text>
+          <text x="370" y="118" text-anchor="middle" font-size="8.5" fill="var(--muted)">Capture interpretation</text>
+
+          <!-- Arrow -->
+          <path d="M415,80 L468,80" stroke="var(--accent)" stroke-width="0.8" stroke-dasharray="3,2" opacity="0.5"/>
+
+          <!-- Phase 4 - AI, highlighted -->
+          <circle cx="500" cy="80" r="7" fill="var(--accent)" opacity="0.8"/>
+          <text x="500" y="57" text-anchor="middle" font-size="9" fill="var(--accent)">2020–now</text>
+          <text x="500" y="105" text-anchor="middle" font-size="10" fill="var(--accent)" font-weight="bold">Generative AI</text>
+          <text x="500" y="118" text-anchor="middle" font-size="8.5" fill="var(--accent)" opacity="0.8">Captures transformation</text>
+
+          <!-- Question mark - future -->
+          <circle cx="590" cy="80" r="5" fill="none" stroke="var(--accent)" stroke-width="1" stroke-dasharray="2,2" opacity="0.4"/>
+          <text x="590" y="84" text-anchor="middle" font-size="12" fill="var(--accent)" opacity="0.4">?</text>
+
+          <defs>
+            <marker id="arr" markerWidth="6" markerHeight="6" refX="3" refY="3" orient="auto">
+              <path d="M0,0 L6,3 L0,6 Z" fill="var(--muted)" opacity="0.4"/>
+            </marker>
+          </defs>
+          <text x="320" y="148" text-anchor="middle" font-size="8.5" fill="var(--muted)" font-style="italic">Each phase appropriates the layer above. Authority does not disappear - it reconstitutes under new management.</text>
+        </svg>
+      </figure>
+
+      <div class="break fade-in">&#9670; &nbsp; &#9670; &nbsp; &#9670;</div>
+
+      <p class="fade-in">
+        The Facebook feed of 2012 was not a neutral surface. It had editorial logic. It promoted content that generated emotional reaction. It suppressed content that generated reflection. Over hundreds of millions of daily interactions, it was building something: a version of reality organized around outrage, affiliation, and the compulsive need to know what happened next. Not by intention. By optimization.
+      </p>
+
+      <p class="fade-in">
+        TikTok's For You Page is more precise and more consequential. It doesn't recommend content. It learns, at the individual level, the exact emotional frequencies that keep a specific person watching. It constructs for each user a personalized narrative environment calibrated to their particular vulnerabilities, curiosities, and desires. It is, in the most literal sense, a transformation engine. Not because anyone designed the transformation. Because that is what you get when you optimize for watch time at scale.
+      </p>
+
+      <p class="fade-in">Nobody asked. Nobody signed.</p>
+
+      <p class="fade-in">
+        The mechanism is visible now. When Facebook restructured its News Feed algorithm in 2012 to prioritize social engagement over chronological publishing, every publisher with distribution dependency on the platform lost a portion of narrative authority in a single policy change, with no input, no recourse. The authority migrated to the algorithm. The algorithm's editorial values became the de facto editorial values of every publisher whose reach ran through the feed. Publishers who recognized this built alternative distribution. Publishers who didn't found themselves a decade later producing content that satisfied the algorithm's values, because the algorithm was the only path to reach. The transformation of their audience was being designed daily by a system whose objectives were never disclosed.
+      </p>
+
+      <p class="fade-in">
+        The TikTok FYP completed what the Facebook feed began. Where Facebook at least nominally connected users to sources they'd chosen to follow, the FYP eliminated the source relationship entirely. The user doesn't follow The Atlantic or The Guardian or The Economist. The user follows the FYP, which decides what those publications mean to that user: which pieces they see, in what sequence, next to what other content. The lens through which any piece of journalism reaches a reader is not the publication's lens. It's the FYP's lens. The constitutive function is captured upstream before the reader even arrives.
+      </p>
+
+      <div class="pull fade-in">
+        ZMOT explained how brands win before purchase. ZMOI explained how media brands win before belief. The Constitutive Arc asks the question that follows: what happens to the audience after belief, and who designed that transformation?
+      </div>
+
+      <p class="fade-in" style="font-size:0.88rem; color:var(--muted); font-style:italic; border-left: 2px solid var(--rule); padding-left: 1.2rem; margin: 0 0 1.8rem;">
+        On the genealogy: ZMOT was built on behavioral data from thousands of buyers: empirical, measurable, falsifiable. ZMOI and the Constitutive Arc are prescriptive (built on argument, not measurement). The genealogy is conceptual, not evidential. That distinction should be declared rather than obscured. What follows is a claim about how media organizations should be built, not a report on how they behave.
+      </p>
+
+      <div class="break fade-in">&#9670; &nbsp; &#9670; &nbsp; &#9670;</div>
+
+      <p class="fade-in">Generative AI does not add a new problem. It reveals the depth of the existing one.</p>
+
+      <p class="fade-in">
+        In the broadcast era, the transformation arc (the sequence of information, interpretation, and meaning a person consumed over time) was designed by editors. Someone had a point of view. The author existed.
+      </p>
+
+      <p class="fade-in">
+        In the algorithmic era, the arc was generated by optimization functions. The author became a system. Transformation still occurred, but as byproduct rather than intention.
+      </p>
+
+      <p class="fade-in">
+        In the AI era, something different happens: <strong>the arc emerges from the interaction itself.</strong> The user is not consuming a narrative someone else made. They are participating in the real-time generation of a narrative that has never existed before. Every AI conversation, every hyperpersonalized feed, every recommendation engine that has learned the specific shape of your cognition: these are not distribution systems. They are co-authorship systems. They produce transformation arcs that are, in the strictest sense, unique to each individual.
+      </p>
+
+      <p class="fade-in">
+        Which means every media organization operating in an AI-mediated environment is producing personalized transformation arcs for its audience, whether it designed them or not. The arc exists. It occurs. The user experiences it and is changed. The only question is authorship. Did you design the transformation your system is producing? Or did you outsource it to a system optimizing for something else?
+      </p>
+
+      <p class="fade-in">
+        If you haven't designed it, you haven't abdicated it. You've outsourced it. And the entity you outsourced it to has objectives that are not yours, and an audience relationship accountable to no values but its own.
+      </p>
+
+      <div class="pull fade-in">
+        A media organization that does not intentionally design the transformation arc of its audience is not neutral. It is a passive conduit for transformations designed by other systems, toward other ends.
+      </div>
+
+      <div class="break fade-in">&#9670; &nbsp; &#9670; &nbsp; &#9670;</div>
+
+      <p class="fade-in">Hokusai made thirty-six views of Fuji.</p>
+
+      <p class="fade-in">
+        Not because he was uncertain which was correct. Because he understood that a mountain can only be fully known through accumulated perspectives. Each one partial, each one true, the totality revealing something no single view could contain.
+      </p>
+
+      <p class="fade-in">
+        He also understood something about the observer. The people in those boats, if they survive, are not the same people who left shore. The encounter with something vast and indifferent does something to the way you understand your own position.
+      </p>
+
+      <p class="fade-in">
+        That is what a media organization can do at its highest. Not inform. Not entertain. Not even persuade. Give the audience a Fuji: something permanent, something that holds its shape across surfaces and crises. Show it from enough angles, with enough consistency, that the audience learns to see it themselves. Not to need you to see it. To have learned, through repeated encounter with your lens, a way of seeing that is now partly theirs.
+      </p>
+
+      <p class="fade-in">
+        That is the function that was lost. That is what the wave obscured. That is what this essay proposes to rebuild. Not as nostalgia. As the only architecture that makes sense when the wave has passed and you need to know what is permanent.
+      </p>
+
+      <p class="fade-in" style="font-style:italic; font-size:1.15rem; margin-top:2rem; color:var(--deep);">
+        The wave is not the thing to understand. It never was.
+      </p>
+
+      <!-- Next movement -->
+      <div class="next-movement fade-in">
+        <div>
+          <div class="next-label">Coming next</div>
+          <div class="next-title">Movement II &nbsp;&mdash;&nbsp; The Field</div>
+        </div>
+        <div class="next-arrow">&rarr;</div>
+      </div>
+
+      <!-- ========================
+           MOVEMENT II: THE FIELD
+      ========================= -->
+      <div style="margin-top: 7rem;">
+        <div class="section-marker fade-in">
+          <div class="section-marker-icon">&#9675;&#9675;</div>
+          <div class="section-marker-label">Movement II &nbsp;/&nbsp; Six</div>
+        </div>
+        <h2 class="section-title fade-in">The Field</h2>
+        <div class="section-rule fade-in"></div>
+      </div>
+
+      <p class="fade-in">
+        Before naming the architecture, we need to name what changed. Not the technology. Something more foundational: the shape of the relationship between a media organization and the person it is trying to reach.
+      </p>
+
+      <p class="fade-in">
+        For most of mass media history, that relationship had a geometry. Linear. A source emitted. A receiver consumed. The message traveled in one direction, arrived more or less intact, and the receiver was changed in ways the source could anticipate and design for. The broadcast model was not just technical architecture. It was a theory of transformation: the author shapes the arc, the audience walks it.
+      </p>
+
+      <p class="fade-in">
+        That geometry is gone. Not disrupted. Gone. What replaced it doesn't have a clean name yet, which is partly why the industry keeps solving a geometric problem with linear tools and wondering why nothing works.
+      </p>
+
+      <p class="fade-in">
+        What replaced it is a field.
+      </p>
+
+      <div class="break fade-in">&#9670; &nbsp; &#9670; &nbsp; &#9670;</div>
+
+      <p class="fade-in">
+        In physics, a field is not an object. It is a region of space where every point has a value: a potential, a force, a direction. It doesn't push you along a predetermined path. It structures the conditions under which any path you choose will unfold. Walk north, south, east, or west through a gravitational field: the field is present everywhere, shaping the cost and consequence of every step, without dictating which step you take.
+      </p>
+
+      <p class="fade-in" style="font-size:0.88rem; color:var(--muted); font-style:italic; border-left: 2px solid var(--rule); padding-left: 1.2rem; margin: 0 0 1.8rem;">
+        The empirical anchor: Melanie Green and Timothy Brock's Narrative Transportation Theory (2000) demonstrated that deep engagement with a narrative produces measurable belief change through "transportation"—absorption into the story world that reduces counter-argumentation. Subsequent research confirmed these effects compound across repeated exposure and are more durable than attitude change from direct argument. The field model is a design framework for producing transportation conditions intentionally, across multiple surfaces, over time. Not metaphor. Applied psychology.
+      </p>
+
+      <p class="fade-in">
+        The organization no longer designs a path. It designs a field. Every user who enters walks their own version of it, shaped by their history, their attention, their entry point, their emotional state when they arrive. The path is unique. The field is shared.
+      </p>
+
+      <p class="fade-in">
+        Most media strategy hasn't absorbed this. It still designs content as if there's a sequence the audience follows. Measures success as if there's a single arc to optimize. Treats editorial voice as if consistent tone from the source produces consistent experience for the receiver. None of these assumptions survive the field.
+      </p>
+
+      <div class="pull fade-in">
+        The organization no longer designs a path. It designs a field. Every user walks their own version of it. The path is unique. The field is shared.
+      </div>
+
+      <!-- DIAGRAM: Path vs Field -->
+      <figure class="diagram fade-in" aria-label="Path model vs Field model">
+        <svg viewBox="0 0 640 200" xmlns="http://www.w3.org/2000/svg" style="width:100%;font-family:'Inter',serif;">
+
+          <!-- LEFT: Path model -->
+          <text x="160" y="22" text-anchor="middle" font-size="11" fill="var(--muted)" font-style="italic">The Path Model</text>
+          <text x="160" y="36" text-anchor="middle" font-size="8.5" fill="var(--muted)" opacity="0.6">Linear. One arc. One direction.</text>
+          <!-- Path line -->
+          <circle cx="40" cy="110" r="6" fill="var(--ink)" opacity="0.25"/>
+          <line x1="46" y1="110" x2="268" y2="110" stroke="var(--ink)" stroke-width="1.2" opacity="0.2"/>
+          <circle cx="275" cy="110" r="6" fill="var(--ink)" opacity="0.4"/>
+          <!-- Nodes along path -->
+          <circle cx="100" cy="110" r="3" fill="var(--muted)" opacity="0.4"/>
+          <circle cx="155" cy="110" r="3" fill="var(--muted)" opacity="0.4"/>
+          <circle cx="215" cy="110" r="3" fill="var(--muted)" opacity="0.4"/>
+          <!-- Labels -->
+          <text x="40" y="128" text-anchor="middle" font-size="8" fill="var(--muted)">Start</text>
+          <text x="275" y="128" text-anchor="middle" font-size="8" fill="var(--muted)">End</text>
+          <!-- Users all same path -->
+          <text x="155" y="90" text-anchor="middle" font-size="8" fill="var(--muted)" opacity="0.5">All users → same sequence</text>
+          <!-- Divider -->
+          <line x1="310" y1="40" x2="310" y2="175" stroke="var(--ink)" stroke-width="0.5" stroke-dasharray="3,3" opacity="0.15"/>
+
+          <!-- RIGHT: Field model -->
+          <text x="480" y="22" text-anchor="middle" font-size="11" fill="var(--accent)" opacity="0.8" font-style="italic">The Field Model</text>
+          <text x="480" y="36" text-anchor="middle" font-size="8.5" fill="var(--muted)" opacity="0.6">Radial. Multiple arcs. One center.</text>
+
+          <!-- Field center (the lens) -->
+          <circle cx="480" cy="110" r="12" fill="var(--accent)" opacity="0.12"/>
+          <circle cx="480" cy="110" r="5" fill="var(--accent)" opacity="0.5"/>
+          <text x="480" y="130" text-anchor="middle" font-size="8" fill="var(--accent)" opacity="0.7">Lens</text>
+
+          <!-- Multiple user paths radiating -->
+          <line x1="356" y1="60" x2="472" y2="105" stroke="var(--muted)" stroke-width="0.8" stroke-dasharray="3,2" opacity="0.4"/>
+          <line x1="356" y1="110" x2="468" y2="110" stroke="var(--muted)" stroke-width="0.8" stroke-dasharray="3,2" opacity="0.4"/>
+          <line x1="356" y1="160" x2="472" y2="115" stroke="var(--muted)" stroke-width="0.8" stroke-dasharray="3,2" opacity="0.4"/>
+          <line x1="600" y1="60" x2="492" y2="105" stroke="var(--muted)" stroke-width="0.8" stroke-dasharray="3,2" opacity="0.4"/>
+          <line x1="600" y1="110" x2="492" y2="110" stroke="var(--muted)" stroke-width="0.8" stroke-dasharray="3,2" opacity="0.4"/>
+          <line x1="600" y1="160" x2="492" y2="115" stroke="var(--muted)" stroke-width="0.8" stroke-dasharray="3,2" opacity="0.4"/>
+
+          <!-- Entry points -->
+          <circle cx="356" cy="60" r="3" fill="var(--muted)" opacity="0.4"/>
+          <circle cx="356" cy="110" r="3" fill="var(--muted)" opacity="0.4"/>
+          <circle cx="356" cy="160" r="3" fill="var(--muted)" opacity="0.4"/>
+          <circle cx="600" cy="60" r="3" fill="var(--muted)" opacity="0.4"/>
+          <circle cx="600" cy="110" r="3" fill="var(--muted)" opacity="0.4"/>
+          <circle cx="600" cy="160" r="3" fill="var(--muted)" opacity="0.4"/>
+
+          <text x="345" y="58" text-anchor="end" font-size="7.5" fill="var(--muted)" opacity="0.5">Telegram</text>
+          <text x="345" y="108" text-anchor="end" font-size="7.5" fill="var(--muted)" opacity="0.5">Article</text>
+          <text x="345" y="158" text-anchor="end" font-size="7.5" fill="var(--muted)" opacity="0.5">Podcast</text>
+          <text x="611" y="58" font-size="7.5" fill="var(--muted)" opacity="0.5">Newsletter</text>
+          <text x="611" y="108" font-size="7.5" fill="var(--muted)" opacity="0.5">Video</text>
+          <text x="611" y="158" font-size="7.5" fill="var(--muted)" opacity="0.5">Push</text>
+
+          <text x="320" y="190" text-anchor="middle" font-size="8.5" fill="var(--muted)" font-style="italic">In the field model, each surface is a different angle of incidence into the same gravitational center.</text>
+        </svg>
+      </figure>
+
+      <div class="break fade-in">&#9670; &nbsp; &#9670; &nbsp; &#9670;</div>
+
+      <p class="fade-in">
+        What does it mean to design a field rather than a path?
+      </p>
+
+      <p class="fade-in">
+        The unit of design is no longer the article, the episode, the newsletter, or the post. Those are artifacts. The unit of design is the <strong>condition of encounter</strong>: the set of forces present regardless of which artifact the user picks up, which surface they enter from, where in their own arc they happen to be.
+      </p>
+
+      <p class="fade-in">
+        A well-designed field has three properties a well-designed path doesn't need, because in a path they're given by the sequence.
+      </p>
+
+      <p class="fade-in">
+        The first is <strong>coherence under variation</strong>. In a path, coherence is enforced by sequence. In a field, the user enters from any direction, at any point, in any order. Coherence can't be structural. It must be gravitational: something at the center of the field that pulls every encounter toward the same orientation, regardless of entry point. That center is the editorial lens. Not tone, not format, not platform. The lens: the specific, differentiated way the organization sees the world and makes that seeing contagious.
+      </p>
+
+      <p class="fade-in">
+        The second is <strong>directionality without determinism</strong>. The organization can't control which path the user takes, but it can design the field so that all paths share a direction, so that wherever users enter and however they move, they tend to emerge with more understanding than they arrived with. The field exerts a force. It doesn't prescribe a destination.
+      </p>
+
+      <p class="fade-in">
+        The third is <strong>transformation that compounds</strong>. In a path, transformation happens at the end. In a field, it's incremental and nonlinear. Each encounter adds a small charge. The charge accumulates across surfaces and time. What looks like a series of isolated contacts is a single extended process of constitution: the user becoming, gradually and through repetition, someone who sees the world through a lens they didn't have before.
+      </p>
+
+      <div class="pull fade-in">
+        Coherence under variation. Directionality without determinism. Transformation that compounds. These are not content principles. They are field properties. They require a completely different kind of design.
+      </div>
+
+      <div class="break fade-in">&#9670; &nbsp; &#9670; &nbsp; &#9670;</div>
+
+      <p class="fade-in">
+        The field model changes the answer to almost every strategic question.
+      </p>
+
+      <p class="fade-in">
+        Publishing cadence: in the path model, it's about maintaining momentum along a sequence. In the field model, it's about charge density: how frequently the user encounters the field, across how many surfaces, with what consistency of gravitational pull. Not how often you publish. How reliably the field is present in the user's day.
+      </p>
+
+      <p class="fade-in">
+        Platform strategy: in the path model, platforms distribute the same sequence. In the field model, each surface is a different angle of incidence into the same field. The Telegram message is the field encountered at close range, high trust, low commitment. The long-form analysis is the field at depth, with time, in a receptive state. The browser notification is the field arriving unannounced at the moment of maximum interpretive openness. Different surfaces. Same field. Different depths of the same well.
+      </p>
+
+      <p class="fade-in">
+        The right metric: in the path model, completion: did the user reach the end? In the field model, accumulation: is the user's understanding deepening over time, across encounters, in ways they themselves can feel? Not "did they finish the article." "Are they different after six months of contact with this field than they were when they arrived?" The Constitutive Arc proposes this is not just a better metric. It is the only metric that actually measures what a media organization is for.
+      </p>
+
+      <div class="break fade-in">&#9670; &nbsp; &#9670; &nbsp; &#9670;</div>
+
+      <p class="fade-in">
+        There is an objection practitioners raise first, and it contains a real tension.
+      </p>
+
+      <p class="fade-in">
+        If every user designs their own path through the field, the organization loses the ability to construct shared experience. And without shared experience, there is no community; only a large number of individual users having individual encounters with artifacts that happen to share a brand.
+      </p>
+
+      <p class="fade-in">
+        The objection is correct that the tension exists. It is wrong that the tension is fatal.
+      </p>
+
+      <p class="fade-in">
+        Two people who walk different paths through the same gravitational field don't arrive at the same place. But they share something more durable than a common destination: a common orientation. They've been shaped by the same forces. They've developed, through their individual encounters with the field, a compatible way of seeing. That compatibility is the foundation of community—not identical content consumed simultaneously, but a shared lens through which different content is encountered and understood.
+      </p>
+
+      <p class="fade-in">
+        This is a stronger foundation than broadcast ever provided. In the broadcast model, shared experience is synchronized but shallow. Everyone consumed the same news at the same time, but the transformation was minimal because the path was walked passively. In the field model, experience is asynchronous and individual, but transformation is deeper because the user navigates actively, encounters the lens from multiple angles, develops a relationship with it that is genuinely theirs. The community that emerges is not one of simultaneous consumption. It is one of constituted identity.
+      </p>
+
+      <div class="pull fade-in">
+        The community the field produces is not one of simultaneous consumption. It is one of constituted identity: people who see the world compatibly because they were shaped by the same field, each in their own time, each through their own door.
+      </div>
+
+      <div class="break fade-in">&#9670; &nbsp; &#9670; &nbsp; &#9670;</div>
+
+      <p class="fade-in">
+        The field model has a practitioner's question attached to it. This question is the diagnostic that separates organizations thinking in field terms from those that aren't.
+      </p>
+
+      <p class="fade-in">
+        Not: what is our content strategy?
+      </p>
+
+      <p class="fade-in">
+        <strong>If a user encountered our field from ten different entry points, in ten different emotional states, on ten different surfaces, over six months—what would be the consistent force they felt pulling them in the same direction every time?</strong>
+      </p>
+
+      <p class="fade-in">
+        If you can answer that with precision, you have a field. If the answer changes depending on the surface, the format, or who wrote the piece that day, you have a content operation. Content operations are not worthless. But they cannot produce the Constitutive Arc. Only fields can.
+      </p>
+
+      <p class="fade-in">
+        A field is not a metaphor if it can be falsified. The following three proxies are the empirical floor: the minimum instrumentation required to distinguish a field from a content operation with aspirational language.
+      </p>
+
+      <!-- DIAGRAM: Three measurement proxies -->
+      <figure class="diagram fade-in" aria-label="Three empirical proxies for field measurement">
+        <svg viewBox="0 0 640 250" xmlns="http://www.w3.org/2000/svg" style="width:100%;font-family:'Inter',serif;">
+          <text x="320" y="16" text-anchor="middle" font-size="10" fill="var(--muted)" font-style="italic" opacity="0.7">Three falsifiable proxies - how to know if a field exists</text>
+
+          <!-- Proxy 1 -->
+          <rect x="10" y="28" width="195" height="175" fill="var(--highlight)" stroke="var(--ink)" stroke-width="0.5" opacity="0.6"/>
+          <text x="107" y="48" text-anchor="middle" font-size="9" fill="var(--muted)" font-style="italic">Proxy I</text>
+          <text x="107" y="65" text-anchor="middle" font-size="10" fill="var(--ink)" font-weight="bold">Lens Consistency</text>
+          <text x="107" y="77" text-anchor="middle" font-size="9" fill="var(--ink)" font-weight="bold">Test</text>
+          <line x1="20" y1="85" x2="195" y2="85" stroke="var(--ink)" stroke-width="0.3" opacity="0.2"/>
+          <text x="107" y="100" text-anchor="middle" font-size="8" fill="var(--muted)">5 pieces, 5 surfaces,</text>
+          <text x="107" y="112" text-anchor="middle" font-size="8" fill="var(--muted)">same week. Ask 10</text>
+          <text x="107" y="124" text-anchor="middle" font-size="8" fill="var(--muted)">readers to identify</text>
+          <text x="107" y="136" text-anchor="middle" font-size="8" fill="var(--muted)">the point of view.</text>
+          <line x1="20" y1="148" x2="195" y2="148" stroke="var(--ink)" stroke-width="0.3" opacity="0.15"/>
+          <text x="107" y="163" text-anchor="middle" font-size="8" fill="var(--accent)" opacity="0.7">&gt;70% agreement = field.</text>
+          <text x="107" y="175" text-anchor="middle" font-size="8" fill="var(--accent)" opacity="0.7">&lt;40% = content op.</text>
+          <text x="107" y="192" text-anchor="middle" font-size="7" fill="var(--muted)" font-style="italic">What it measures:</text>
+          <text x="107" y="203" text-anchor="middle" font-size="7" fill="var(--muted)" font-style="italic">Coherence under variation</text>
+
+          <!-- Proxy 2 -->
+          <rect x="222" y="28" width="196" height="175" fill="var(--highlight)" stroke="var(--ink)" stroke-width="0.5" opacity="0.6"/>
+          <text x="320" y="48" text-anchor="middle" font-size="9" fill="var(--muted)" font-style="italic">Proxy II</text>
+          <text x="320" y="65" text-anchor="middle" font-size="10" fill="var(--ink)" font-weight="bold">Vocabulary</text>
+          <text x="320" y="77" text-anchor="middle" font-size="9" fill="var(--ink)" font-weight="bold">Transfer Survey</text>
+          <line x1="232" y1="85" x2="408" y2="85" stroke="var(--ink)" stroke-width="0.3" opacity="0.2"/>
+          <text x="320" y="100" text-anchor="middle" font-size="8" fill="var(--muted)">Survey at 3, 6, 12</text>
+          <text x="320" y="112" text-anchor="middle" font-size="8" fill="var(--muted)">months: "Describe</text>
+          <text x="320" y="124" text-anchor="middle" font-size="8" fill="var(--muted)">how you think about</text>
+          <text x="320" y="136" text-anchor="middle" font-size="8" fill="var(--muted)">[domain] in your own</text>
+          <text x="320" y="148" text-anchor="middle" font-size="8" fill="var(--muted)">words." Code lens terms.</text>
+          <line x1="232" y1="157" x2="408" y2="157" stroke="var(--ink)" stroke-width="0.3" opacity="0.15"/>
+          <text x="320" y="171" text-anchor="middle" font-size="8" fill="var(--accent)" opacity="0.7">Growth = lens transfer.</text>
+          <text x="320" y="183" text-anchor="middle" font-size="8" fill="var(--accent)" opacity="0.7">Plateau = arc capture.</text>
+          <text x="320" y="198" text-anchor="middle" font-size="7" fill="var(--muted)" font-style="italic">What it measures:</text>
+          <text x="320" y="209" text-anchor="middle" font-size="7" fill="var(--muted)" font-style="italic">Transformation over time</text>
+
+          <!-- Proxy 3 - starred -->
+          <rect x="435" y="28" width="195" height="175" fill="var(--accent-light)" stroke="var(--accent)" stroke-width="1" opacity="0.7"/>
+          <text x="532" y="48" text-anchor="middle" font-size="9" fill="var(--accent)" opacity="0.7" font-style="italic">Proxy III - Critical</text>
+          <text x="532" y="65" text-anchor="middle" font-size="10" fill="var(--accent)" font-weight="bold">Independence</text>
+          <text x="532" y="77" text-anchor="middle" font-size="9" fill="var(--accent)" font-weight="bold">Reasoning Test</text>
+          <line x1="445" y1="85" x2="620" y2="85" stroke="var(--accent)" stroke-width="0.4" opacity="0.3"/>
+          <text x="532" y="100" text-anchor="middle" font-size="8" fill="var(--muted)">Ask users to articulate</text>
+          <text x="532" y="112" text-anchor="middle" font-size="8" fill="var(--muted)">two positions that</text>
+          <text x="532" y="124" text-anchor="middle" font-size="8" fill="var(--muted)">disagree with the field,</text>
+          <text x="532" y="136" text-anchor="middle" font-size="8" fill="var(--muted)">on a scale of 1–5.</text>
+          <line x1="445" y1="148" x2="620" y2="148" stroke="var(--accent)" stroke-width="0.3" opacity="0.2"/>
+          <text x="532" y="163" text-anchor="middle" font-size="8" fill="var(--accent)" opacity="0.8">Cannot do it = capture.</text>
+          <text x="532" y="175" text-anchor="middle" font-size="8" fill="var(--accent)" opacity="0.8">Does it = elixir.</text>
+          <text x="532" y="192" text-anchor="middle" font-size="7" fill="var(--accent)" opacity="0.6" font-style="italic">What it measures:</text>
+          <text x="532" y="203" text-anchor="middle" font-size="7" fill="var(--accent)" opacity="0.6" font-style="italic">Education vs. propaganda</text>
+
+          <text x="320" y="237" text-anchor="middle" font-size="8.5" fill="var(--muted)" font-style="italic">An organization that cannot pass Proxy I does not have a field. One that fails Proxy III has crossed into capture.</text>
+        </svg>
+      </figure>
+
+      <p class="fade-in" style="font-style:italic; font-size:1.15rem; margin-top:2rem; color:var(--deep);">
+        The arc is not a path someone walks. It is a field someone is changed by.
+      </p>
+
+      <!-- Next movement II -->
+      <div class="next-movement fade-in" style="margin-top: 5rem;">
+        <div>
+          <div class="next-label">Coming next</div>
+          <div class="next-title">Movement III &nbsp;&mdash;&nbsp; The Ancestor</div>
+        </div>
+        <div class="next-arrow">&rarr;</div>
+      </div>
+
+      <!-- ========================
+           MOVEMENT III: THE ANCESTOR
+      ========================= -->
+      <div style="margin-top: 7rem;">
+        <div class="section-marker fade-in">
+          <div class="section-marker-icon">&#9675;&#9675;&#9675;</div>
+          <div class="section-marker-label">Movement III &nbsp;/&nbsp; Six</div>
+        </div>
+        <h2 class="section-title fade-in">The Ancestor</h2>
+        <div class="section-rule fade-in"></div>
+      </div>
+
+      <p class="fade-in">
+        Nothing in this essay is new in the sense that matters most. The field model, the constitutive function, the idea that an audience is not a recipient of information but a traveler through a structured experience that changes who they are. None of this was invented by media strategy or by artificial intelligence or by the disruption cycle of the last twenty years. It was named, with extraordinary precision, more than seventy years ago by a man who was not thinking about media at all.
+      </p>
+
+      <p class="fade-in">
+        Joseph Campbell published <em>The Hero with a Thousand Faces</em> in 1949. His subject was mythology. His method was comparative: he read the sacred stories of hundreds of cultures, across centuries and continents, and found beneath their surface differences a single deep structure that repeated with uncanny consistency. He called it the monomyth. Others called it the Hero's Journey. The names are less important than what he found.
+      </p>
+
+      <p class="fade-in">
+        What he found was this: across every culture that Campbell surveyed (and the selection has been disputed by folklorists and anthropologists who argue he chose examples to confirm a structure already in mind) the stories that survive tend to share the same underlying architecture. A person begins in a known world. Something calls them beyond its borders. They cross a threshold into unfamiliar territory. They encounter trials, allies, and enemies. They find something they could not have found without leaving. They bring it back. And they return changed, not to the same world they left, but to a world that looks the same and is fundamentally different because they are.
+      </p>
+
+      <p class="fade-in" style="font-size:0.88rem; color:var(--muted); font-style:italic; border-left: 2px solid var(--rule); padding-left: 1.2rem; margin: 0 0 1.8rem;">
+        Note on Campbell: The academic critique of his universalism is legitimate: he selected his examples, and the monomyth is abstract enough to map onto almost any narrative if applied loosely. The Constitutive Arc uses the monomyth not as anthropological fact but as the richest operational heuristic available for thinking about transformation arcs. Its value here is practical, not ethnographic. If a better structural model for designed transformation exists, the framework should use that instead.
+      </p>
+
+      <p class="fade-in">
+        Campbell was not describing a storytelling technique. He was describing a structure of human transformation. The monomyth is the shape that meaningful change takes when it is made narratable.
+      </p>
+
+      <div class="pull fade-in">
+        Campbell was not describing a storytelling technique. He was describing a structure of human transformation. The monomyth is the shape that meaningful change takes when it is made narratable.
+      </div>
+
+      <div class="break fade-in">&#9670; &nbsp; &#9670; &nbsp; &#9670;</div>
+
+      <p class="fade-in">
+        Dan Harmon, the television writer, spent years trying to understand why certain stories work on audiences at a level that cannot be explained by craft alone. He arrived, independently, at Campbell. And then he did something Campbell had not done: he operationalized it. He compressed the monomyth into eight positions arranged in a circle, a tool that writers could use not just to analyze stories that already existed but to build new ones with the same deep structure.
+      </p>
+
+      <p class="fade-in">
+        The eight positions are: you are in a zone of comfort, you want something, you enter an unfamiliar situation, you adapt to it, you get what you wanted, you pay a heavy price for it, you return to your familiar situation, you have changed. The circle is not a sequence of scenes. It is a map of transformation. It describes not what happens in a story but what has to happen inside the protagonist for the story to feel true.
+      </p>
+
+      <p class="fade-in">
+        Credit belongs where it is due. Harmon's circle is a distillation of Campbell. Campbell's monomyth is a distillation of ten thousand years of human storytelling. The Constitutive Arc is built on both, and it would be intellectually dishonest to pretend otherwise. What this essay adds is not the discovery of the structure. It is the recognition that this structure is not only a property of fictional narratives. It is the structure of any genuine transformation, including the transformation that a media organization can produce in its audience over time, across surfaces, through intentional field design.
+      </p>
+
+      <div class="break fade-in">&#9670; &nbsp; &#9670; &nbsp; &#9670;</div>
+
+      <p class="fade-in">The translation is not metaphorical. It is structural.</p>
+
+      <!-- DIAGRAM: Monomyth Circle mapped to Constitutive Arc -->
+      <figure class="diagram fade-in" aria-label="Monomyth mapped to Constitutive Arc">
+        <svg viewBox="0 0 640 320" xmlns="http://www.w3.org/2000/svg" style="width:100%;font-family:'Inter',serif;">
+
+          <!-- Circle -->
+          <circle cx="320" cy="155" r="95" fill="none" stroke="var(--ink)" stroke-width="0.8" opacity="0.15"/>
+          <circle cx="320" cy="155" r="60" fill="none" stroke="var(--accent)" stroke-width="0.5" stroke-dasharray="3,3" opacity="0.2"/>
+
+          <!-- Center -->
+          <circle cx="320" cy="155" r="10" fill="var(--accent)" opacity="0.15"/>
+          <text x="320" y="151" text-anchor="middle" font-size="7.5" fill="var(--accent)" opacity="0.7">THE</text>
+          <text x="320" y="162" text-anchor="middle" font-size="7.5" fill="var(--accent)" opacity="0.7">LENS</text>
+
+          <!-- 8 positions around the circle -->
+          <!-- 1: TOP - Ordinary World -->
+          <circle cx="320" cy="57" r="4" fill="var(--muted)" opacity="0.5"/>
+          <text x="320" y="38" text-anchor="middle" font-size="9" fill="var(--ink)" font-weight="bold">Ordinary World</text>
+          <text x="320" y="50" text-anchor="middle" font-size="8" fill="var(--muted)" font-style="italic">User before the field</text>
+
+          <!-- 2: TOP-RIGHT - Call -->
+          <circle cx="387" cy="88" r="4" fill="var(--muted)" opacity="0.5"/>
+          <text x="430" y="78" text-anchor="start" font-size="9" fill="var(--ink)" font-weight="bold">The Call</text>
+          <text x="430" y="90" text-anchor="start" font-size="8" fill="var(--muted)" font-style="italic">First felt pull of the field</text>
+
+          <!-- 3: RIGHT - Threshold -->
+          <circle cx="415" cy="155" r="4" fill="var(--muted)" opacity="0.5"/>
+          <text x="425" y="150" text-anchor="start" font-size="9" fill="var(--ink)" font-weight="bold">Threshold</text>
+          <text x="425" y="162" text-anchor="start" font-size="8" fill="var(--muted)" font-style="italic">Casual → habitual return</text>
+
+          <!-- 4: BOTTOM-RIGHT - Trials -->
+          <circle cx="387" cy="222" r="4" fill="var(--muted)" opacity="0.5"/>
+          <text x="425" y="216" text-anchor="start" font-size="9" fill="var(--ink)" font-weight="bold">Road of Trials</text>
+          <text x="425" y="228" text-anchor="start" font-size="8" fill="var(--muted)" font-style="italic">Compound encounters over time</text>
+
+          <!-- 5: BOTTOM - Cave -->
+          <circle cx="320" cy="253" r="5" fill="var(--accent)" opacity="0.5"/>
+          <text x="320" y="272" text-anchor="middle" font-size="9" fill="var(--accent)" font-weight="bold">Innermost Cave</text>
+          <text x="320" y="284" text-anchor="middle" font-size="8" fill="var(--accent)" opacity="0.7" font-style="italic">Cognitive displacement</text>
+          <text x="320" y="296" text-anchor="middle" font-size="8" fill="var(--accent)" opacity="0.7" font-style="italic">Old lens released</text>
+
+          <!-- 6: BOTTOM-LEFT - Price -->
+          <circle cx="253" cy="222" r="4" fill="var(--muted)" opacity="0.5"/>
+          <text x="240" y="216" text-anchor="end" font-size="9" fill="var(--ink)" font-weight="bold">The Price</text>
+          <text x="240" y="228" text-anchor="end" font-size="8" fill="var(--muted)" font-style="italic">Prior certainty surrendered</text>
+
+          <!-- 7: LEFT - Return -->
+          <circle cx="225" cy="155" r="4" fill="var(--muted)" opacity="0.5"/>
+          <text x="215" y="150" text-anchor="end" font-size="9" fill="var(--ink)" font-weight="bold">Return</text>
+          <text x="215" y="162" text-anchor="end" font-size="8" fill="var(--muted)" font-style="italic">Back to ordinary world</text>
+
+          <!-- 8: TOP-LEFT - Changed -->
+          <circle cx="253" cy="88" r="5" fill="var(--accent)" opacity="0.4"/>
+          <text x="240" y="78" text-anchor="end" font-size="9" fill="var(--accent)" font-weight="bold">The Elixir</text>
+          <text x="240" y="90" text-anchor="end" font-size="8" fill="var(--accent)" opacity="0.7" font-style="italic">A new lens. Shared forward.</text>
+
+          <!-- Direction arrow -->
+          <path d="M330,58 Q370,50 388,82" fill="none" stroke="var(--muted)" stroke-width="0.8" stroke-dasharray="2,2" opacity="0.3" marker-end="url(#arr2)"/>
+
+          <defs>
+            <marker id="arr2" markerWidth="5" markerHeight="5" refX="2.5" refY="2.5" orient="auto">
+              <path d="M0,0 L5,2.5 L0,5 Z" fill="var(--muted)" opacity="0.3"/>
+            </marker>
+          </defs>
+
+          <!-- Top label -->
+          <text x="320" y="15" text-anchor="middle" font-size="9" fill="var(--muted)" opacity="0.5" font-style="italic">Campbell's Monomyth mapped to the Constitutive Arc</text>
+        </svg>
+      </figure>
+
+      <p class="fade-in">
+        In the monomyth, the hero begins in the ordinary world: a place of comfort, familiarity, and incomplete understanding. In the Constitutive Arc, the ordinary world is the user before they encounter the field: existing frameworks inherited from prior sources, experience, ambient culture. Those frameworks are functional. They are also the starting condition: the state the field will gradually expand, complicate, and ultimately replace with something more sophisticated.
+      </p>
+
+      <p class="fade-in">
+        The call to adventure is the disruption that makes the ordinary world untenable. In the Constitutive Arc, the call is the first genuine contact with the field: the piece that reframes something the user thought they understood, the analysis that introduces a vocabulary they did not have, the argument that reveals a pattern they had been living inside without being able to name. The call is the moment the field makes itself felt as something other than ambient information. It exerts a pull.
+      </p>
+
+      <p class="fade-in">
+        The crossing of the threshold corresponds to the user's shift from casual contact to habitual engagement. They begin to return. They bring questions to the field rather than waiting for the field to raise questions for them. They are no longer passively receiving content. They are actively navigating the field, which means the field is beginning to shape not just what they know but how they think.
+      </p>
+
+      <p class="fade-in">
+        The road of trials is the extended middle: the accumulation of encounters across surfaces and time that gradually displace old frameworks with new ones. It is not dramatic. It does not announce itself. It is the slow, compound work of a field that is coherent enough, present enough, and differentiated enough to keep exerting its gravitational pull through months of ordinary contact.
+      </p>
+
+      <p class="fade-in">
+        The innermost cave (where the hero confronts the thing they have been most afraid of) corresponds in the Constitutive Arc to the moment of genuine cognitive displacement. The user arrives at a point where the field has given them enough of a new lens that they can see something they could not see before, and that seeing requires them to let go of a prior certainty. This is transformation at its most real and most uncomfortable. It is also the moment the field earns its constitutive status: not because it delivered information, but because it changed the structure through which information is processed.
+      </p>
+
+      <p class="fade-in">
+        The return with the elixir (the hero coming back carrying something that did not exist in the ordinary world) is the user who shares, who references, who explains to someone else a way of seeing they did not have before they entered the field. They have become a distribution node not because they were incentivized to share but because the transformation they experienced is genuinely valuable and they know it. The elixir is not a piece of content. It is a lens. And lenses, unlike articles, replicate themselves through conversation.
+      </p>
+
+      <div class="pull fade-in">
+        The elixir the user carries back is not a piece of content. It is a lens. And lenses, unlike articles, replicate themselves through conversation.
+      </div>
+
+      <div class="break fade-in">&#9670; &nbsp; &#9670; &nbsp; &#9670;</div>
+
+      <p class="fade-in">
+        The reason this mapping matters is not that it gives media strategists a new way to think about editorial arcs for individual pieces. It matters because it reveals what the field needs to be at a structural level in order to produce genuine transformation rather than mere engagement.
+      </p>
+
+      <p class="fade-in">
+        A field that only provides the ordinary world (comfort, confirmation, familiar frameworks restated with new data) cannot produce the Constitutive Arc. It produces loyalty without growth, which is another name for dependency. A field that only provides trials (constant disruption, relentless challenge, no stable ground) cannot produce the Constitutive Arc either. It produces anxiety without orientation, which is another name for churn.
+      </p>
+
+      <p class="fade-in">
+        The field that produces the Constitutive Arc provides both: a stable enough center that the user can orient themselves, and a consistent enough pull toward the unfamiliar that they keep moving. The center is the lens. The pull is the editorial ambition. The arc is what happens to the user when both are present over time.
+      </p>
+
+      <p class="fade-in">
+        Campbell spent years asking why certain stories survive across thousands of years and others disappear. His answer was that the stories that survive tend to be the ones that map most accurately onto the structure of human transformation—or, more carefully: the stories that survive are the ones we have selected across generations precisely because they feel true, and what feels true about them is a real process: the process by which a person becomes capable of something they were not capable of before. Whether survival caused the structure or the structure caused survival is a question Campbell could not resolve. What remains useful is the structure itself.
+      </p>
+
+      <p class="fade-in">
+        A media organization that designs its field according to this structure is not borrowing a narrative technique. It is aligning itself with the deepest known pattern of how human beings grow. That alignment is not a competitive advantage in the conventional sense. It is something more durable: it is being on the right side of what the audience is actually for.
+      </p>
+
+      <p class="fade-in">
+        The audience is not a market to capture. It is a collection of people who are, whether they name it or not, in the middle of their own journeys. The field that understands this, that positions itself not as a source of information but as a companion to the transformation already underway—is the field that becomes constitutive. It becomes part of the journey itself, not a service consumed along the way.
+      </p>
+
+      <p class="fade-in" style="font-style:italic; font-size:1.15rem; margin-top:2rem; color:var(--deep);">
+        The oldest stories knew what the newest media strategies are only beginning to relearn: transformation is the product. Everything else is the packaging.
+      </p>
+
+      <!-- Next movement III -->
+      <div class="next-movement fade-in" style="margin-top: 5rem;">
+        <div>
+          <div class="next-label">Coming next</div>
+          <div class="next-title">Movement IV &nbsp;&mdash;&nbsp; The Architecture</div>
+        </div>
+        <div class="next-arrow">&rarr;</div>
+      </div>
+
+      <!-- ========================
+           MOVEMENT IV: THE ARCHITECTURE
+      ========================= -->
+      <div style="margin-top: 7rem;">
+        <div class="section-marker fade-in">
+          <div class="section-marker-icon">&#9675;&#9675;&#9675;&#9675;</div>
+          <div class="section-marker-label">Movement IV &nbsp;/&nbsp; Six</div>
+        </div>
+        <h2 class="section-title fade-in">The Architecture</h2>
+        <div class="section-rule fade-in"></div>
+      </div>
+
+      <p class="fade-in">
+        The Constitutive Arc is not only a theory of what media organizations should aspire to. It is a practical claim about how they should be built. Which means it needs an architectural language: a way of looking at the existing components of a media business and asking, for each one, not what function it serves internally, but what role it plays in the user's transformation.
+      </p>
+
+      <p class="fade-in">
+        The most widely used framework for mapping a business's components is the Business Model Canvas, developed by Alexander Osterwalder. It organizes a business into nine building blocks: customer segments, value proposition, channels, customer relationships, revenue streams, key resources, key activities, key partnerships, and cost structure. It is a tool for understanding what a business does and how it sustains itself. It is not a tool for understanding what a business does to the people it serves.
+      </p>
+
+      <p class="fade-in">
+        The Constitutive Arc proposes a rearticulation. Not a replacement. The Canvas remains useful for operational planning. But when you lay the monomyth's structure over the Canvas's nine blocks, something becomes visible that was not visible before: every block has not only an operational function but a narrative function. Every element of the business is either serving the user's transformation or it is not. And if it is not, it is not neutral; it is actively working against the field's coherence.
+      </p>
+
+      <p class="fade-in">
+        A note on prior frameworks: Jobs To Be Done asks what the user hires a product to do in their life. Brand Purpose asks what the organization does in the world beyond its output. Both are genuine advances over feature-based value propositions, and both share the constitutive intuition that output is not the product. The Constitutive Arc builds on both and adds a dimension neither addresses directly: it asks at which stage of the transformation arc the user is when they hire for that job, and how that stage changes what the field owes them. A first-contact user in the ordinary world needs a different encounter than a user past the innermost cave carrying a new lens. JTBD segments by job. Brand Purpose declares the mission. CAX segments by arc position and designs the encounter accordingly. That is not the same question, and it requires different instrumentation.
+      </p>
+
+      <p class="fade-in">
+        The Constitutive Arc does not arrive in a vacuum. The last twenty years have produced a serious literature on how media organizations create value that goes beyond content delivery. Each framework in that literature solved a real problem and created a blind spot. Understanding where CAX sits relative to that landscape is not a footnote; it is the argument for why a new framework is needed at all.
+      </p>
+
+      <!-- DIAGRAM: Comparative landscape -->
+      <figure class="diagram fade-in" aria-label="Comparative framework landscape">
+        <svg viewBox="0 0 640 380" xmlns="http://www.w3.org/2000/svg" style="width:100%;font-family:'Inter',serif;">
+          <text x="320" y="16" text-anchor="middle" font-size="10" fill="var(--muted)" font-style="italic" opacity="0.7">Where CAX sits relative to the existing framework landscape</text>
+
+          <!-- Axes -->
+          <!-- X: Individual encounter ←→ Longitudinal relationship -->
+          <line x1="40" y1="200" x2="600" y2="200" stroke="var(--ink)" stroke-width="0.6" opacity="0.15"/>
+          <text x="40" y="215" font-size="8" fill="var(--muted)" opacity="0.5">Episodic</text>
+          <text x="560" y="215" font-size="8" fill="var(--muted)" opacity="0.5" text-anchor="end">Longitudinal</text>
+          <text x="320" y="358" text-anchor="middle" font-size="8" fill="var(--muted)" opacity="0.4" font-style="italic">← Time horizon of design →</text>
+
+          <!-- Y: Output focus ↑↓ Transformation focus -->
+          <line x1="320" y1="30" x2="320" y2="360" stroke="var(--ink)" stroke-width="0.6" opacity="0.15"/>
+          <text x="325" y="40" font-size="8" fill="var(--muted)" opacity="0.5">Transformation focus</text>
+          <text x="325" y="350" font-size="8" fill="var(--muted)" opacity="0.5">Output focus</text>
+
+          <!-- Quadrant labels faint -->
+          <text x="170" y="125" text-anchor="middle" font-size="8" fill="var(--muted)" opacity="0.1" font-style="italic">Deep but short</text>
+          <text x="480" y="125" text-anchor="middle" font-size="8" fill="var(--muted)" opacity="0.1" font-style="italic">Deep and sustained</text>
+          <text x="170" y="285" text-anchor="middle" font-size="8" fill="var(--muted)" opacity="0.1" font-style="italic">Shallow and episodic</text>
+          <text x="480" y="285" text-anchor="middle" font-size="8" fill="var(--muted)" opacity="0.1" font-style="italic">Shallow but sustained</text>
+
+          <!-- FRAMEWORKS as dots -->
+
+          <!-- ZMOT - episodic, output -->
+          <circle cx="110" cy="290" r="5" fill="var(--muted)" opacity="0.45"/>
+          <text x="120" y="288" font-size="8.5" fill="var(--muted)">ZMOT</text>
+          <text x="120" y="300" font-size="7" fill="var(--muted)" opacity="0.5">Single decision moment</text>
+
+          <!-- Consumer Decision Journey (McKinsey 2009) -->
+          <circle cx="220" cy="255" r="5" fill="var(--muted)" opacity="0.45"/>
+          <text x="230" y="253" font-size="8.5" fill="var(--muted)">McKinsey CDJ</text>
+          <text x="230" y="265" font-size="7" fill="var(--muted)" opacity="0.5">Loop, not funnel</text>
+
+          <!-- HubSpot Flywheel -->
+          <circle cx="430" cy="270" r="5" fill="var(--muted)" opacity="0.45"/>
+          <text x="440" y="268" font-size="8.5" fill="var(--muted)">Content Flywheel</text>
+          <text x="440" y="280" font-size="7" fill="var(--muted)" opacity="0.5">Retention without depth</text>
+
+          <!-- JTBD -->
+          <circle cx="130" cy="160" r="5" fill="var(--muted)" opacity="0.55"/>
+          <text x="140" y="158" font-size="8.5" fill="var(--muted)">JTBD</text>
+          <text x="140" y="170" font-size="7" fill="var(--muted)" opacity="0.5">Job, not journey</text>
+
+          <!-- Brand Purpose / Start with Why -->
+          <circle cx="200" cy="110" r="5" fill="var(--muted)" opacity="0.55"/>
+          <text x="210" y="108" font-size="8.5" fill="var(--muted)">Brand Purpose</text>
+          <text x="210" y="120" font-size="7" fill="var(--muted)" opacity="0.5">Mission, not arc</text>
+
+          <!-- Aggregation Theory (Ben Thompson) -->
+          <circle cx="490" cy="235" r="5" fill="var(--muted)" opacity="0.55"/>
+          <text x="500" y="233" font-size="8.5" fill="var(--muted)">Aggregation Theory</text>
+          <text x="500" y="245" font-size="7" fill="var(--muted)" opacity="0.5">Distribution, not lens</text>
+
+          <!-- Attention Economy (Tim Wu) -->
+          <circle cx="160" cy="230" r="5" fill="var(--muted)" opacity="0.45"/>
+          <text x="170" y="228" font-size="8.5" fill="var(--muted)">Attention Economy</text>
+          <text x="170" y="240" font-size="7" fill="var(--muted)" opacity="0.5">Capture, not constitute</text>
+
+          <!-- Product-Led Growth -->
+          <circle cx="420" cy="310" r="5" fill="var(--muted)" opacity="0.45"/>
+          <text x="430" y="308" font-size="8.5" fill="var(--muted)">Product-Led Growth</text>
+          <text x="430" y="320" font-size="7" fill="var(--muted)" opacity="0.5">Usage ≠ understanding</text>
+
+          <!-- CAX - starred, top right -->
+          <circle cx="510" cy="85" r="8" fill="var(--accent)" opacity="0.8"/>
+          <text x="524" y="83" font-size="10" fill="var(--accent)" font-weight="bold">CAX</text>
+          <text x="524" y="95" font-size="7.5" fill="var(--accent)" opacity="0.7">Transformation + Time</text>
+
+          <!-- Arrow from landscape toward CAX -->
+          <path d="M350,185 Q430,140 500,92" fill="none" stroke="var(--accent)" stroke-width="0.7" stroke-dasharray="3,3" opacity="0.25"/>
+
+          <text x="320" y="373" text-anchor="middle" font-size="8.5" fill="var(--muted)" font-style="italic">No prior framework occupies the top-right quadrant: sustained engagement designed explicitly for deep transformation.</text>
+        </svg>
+      </figure>
+
+      <p class="fade-in">
+        McKinsey's Consumer Decision Journey (2009) was the first significant post-funnel framework in marketing: it replaced the linear AIDA model with a loyalty loop that acknowledged ongoing relationship. It was correct in its diagnosis and limited in its prescription: the loop describes behavior, not design. It tells organizations that consumers return. It does not tell them what to build so that returning deepens rather than merely repeats.
+      </p>
+
+      <p class="fade-in">
+        Ben Thompson's Aggregation Theory (2015) is the most precise description of how platform economics work: aggregators capture users by controlling distribution, then use that control to commoditize suppliers. It is the best explanation of what happened to media's infrastructure pillar in Movement I's terms. But Aggregation Theory describes the attacker. It does not offer a defensive posture for the media organization. What does a media organization build that aggregators cannot aggregate? The Constitutive Arc's answer is the lens: a specific, cultivated way of seeing that cannot be indexed or replicated by an algorithm because its value is not in the output but in the compounding effect of sustained contact.
+      </p>
+
+      <p class="fade-in">
+        The Content Marketing Flywheel (popularized by HubSpot and now standard terminology) argues that content creates attraction, which creates engagement, which creates sales, which creates more content through customer advocacy. It is correct about the loop. It is silent on what determines whether the loop deepens or merely repeats. A flywheel generates momentum. It does not generate transformation. Audiences can spin in a flywheel for years without being substantively changed by the content they consume. The Constitutive Arc asks what happens inside the loop: whether the repetition is producing accumulation or just traffic.
+      </p>
+
+      <p class="fade-in">
+        The Attention Economy framework (Herbert Simon's scarcity diagnosis, Tim Wu's operationalization) correctly identifies that attention is the resource media organizations compete for. But attention as the unit of value produces a specific design pressure: maximize time spent, minimize friction, optimize for return. None of these pressures are oriented toward transformation. A user who spends four hours a day with a field and leaves unchanged has not experienced the Constitutive Arc; they have experienced arc capture, one of the failure modes in Movement V. The Attention Economy is the problem diagnosis. The Constitutive Arc is a proposed answer to the question the Attention Economy never asks: attention toward what end?
+      </p>
+
+      <!-- DIAGRAM: Canvas rearticulated as narrative functions -->
+      <figure class="diagram fade-in" aria-label="Business Canvas rearticulated as narrative functions">
+        <svg viewBox="0 0 640 380" xmlns="http://www.w3.org/2000/svg" style="width:100%;font-family:'Inter',serif;">
+
+          <!-- Header -->
+          <text x="320" y="18" text-anchor="middle" font-size="10" fill="var(--muted)" font-style="italic" opacity="0.7">Business Canvas rearticulated as Constitutive Arc functions</text>
+
+          <!-- Block styles: rect, label, narrative label -->
+          <!-- Key Partners -->
+          <rect x="10" y="30" width="120" height="140" fill="var(--highlight)" stroke="var(--ink)" stroke-width="0.5" opacity="0.7"/>
+          <text x="70" y="50" text-anchor="middle" font-size="8.5" fill="var(--muted)" font-style="italic">Key Partners</text>
+          <line x1="20" y1="56" x2="120" y2="56" stroke="var(--ink)" stroke-width="0.3" opacity="0.2"/>
+          <text x="70" y="72" text-anchor="middle" font-size="9" fill="var(--ink)" font-weight="bold">Threshold</text>
+          <text x="70" y="84" text-anchor="middle" font-size="8" fill="var(--muted)" font-style="italic">Keepers</text>
+          <text x="70" y="105" text-anchor="middle" font-size="7.5" fill="var(--muted)">Those who extend the</text>
+          <text x="70" y="116" text-anchor="middle" font-size="7.5" fill="var(--muted)">field's reach without</text>
+          <text x="70" y="127" text-anchor="middle" font-size="7.5" fill="var(--muted)">diluting the lens.</text>
+          <text x="70" y="143" text-anchor="middle" font-size="7" fill="var(--accent)" opacity="0.6" font-style="italic">Arc role: Herald</text>
+
+          <!-- Key Activities -->
+          <rect x="135" y="30" width="120" height="70" fill="var(--highlight)" stroke="var(--ink)" stroke-width="0.5" opacity="0.7"/>
+          <text x="195" y="50" text-anchor="middle" font-size="8.5" fill="var(--muted)" font-style="italic">Key Activities</text>
+          <line x1="145" y1="56" x2="245" y2="56" stroke="var(--ink)" stroke-width="0.3" opacity="0.2"/>
+          <text x="195" y="72" text-anchor="middle" font-size="9" fill="var(--ink)" font-weight="bold">Field Design</text>
+          <text x="195" y="84" text-anchor="middle" font-size="7" fill="var(--accent)" opacity="0.6" font-style="italic">Arc role: The Road of Trials</text>
+
+          <!-- Key Resources -->
+          <rect x="135" y="105" width="120" height="65" fill="var(--highlight)" stroke="var(--ink)" stroke-width="0.5" opacity="0.7"/>
+          <text x="195" y="122" text-anchor="middle" font-size="8.5" fill="var(--muted)" font-style="italic">Key Resources</text>
+          <line x1="145" y1="128" x2="245" y2="128" stroke="var(--ink)" stroke-width="0.3" opacity="0.2"/>
+          <text x="195" y="144" text-anchor="middle" font-size="9" fill="var(--ink)" font-weight="bold">The Lens</text>
+          <text x="195" y="156" text-anchor="middle" font-size="7" fill="var(--accent)" opacity="0.6" font-style="italic">Arc role: The Mentor's Gift</text>
+
+          <!-- Value Proposition - center, highlighted -->
+          <rect x="260" y="30" width="120" height="140" fill="var(--accent-light)" stroke="var(--accent)" stroke-width="1.2" opacity="0.8"/>
+          <text x="320" y="50" text-anchor="middle" font-size="8.5" fill="var(--accent)" opacity="0.7" font-style="italic">Value Proposition</text>
+          <line x1="270" y1="56" x2="370" y2="56" stroke="var(--accent)" stroke-width="0.5" opacity="0.3"/>
+          <text x="320" y="74" text-anchor="middle" font-size="10" fill="var(--accent)" font-weight="bold">The</text>
+          <text x="320" y="88" text-anchor="middle" font-size="10" fill="var(--accent)" font-weight="bold">Transformation</text>
+          <text x="320" y="108" text-anchor="middle" font-size="7.5" fill="var(--muted)">Not what you publish.</text>
+          <text x="320" y="119" text-anchor="middle" font-size="7.5" fill="var(--muted)">What the user</text>
+          <text x="320" y="130" text-anchor="middle" font-size="7.5" fill="var(--muted)">becomes.</text>
+          <text x="320" y="150" text-anchor="middle" font-size="7" fill="var(--accent)" font-style="italic">Arc role: The Elixir</text>
+
+          <!-- Customer Relationships -->
+          <rect x="385" y="30" width="120" height="70" fill="var(--highlight)" stroke="var(--ink)" stroke-width="0.5" opacity="0.7"/>
+          <text x="445" y="48" text-anchor="middle" font-size="8.5" fill="var(--muted)" font-style="italic">Relationships</text>
+          <line x1="395" y1="54" x2="495" y2="54" stroke="var(--ink)" stroke-width="0.3" opacity="0.2"/>
+          <text x="445" y="70" text-anchor="middle" font-size="9" fill="var(--ink)" font-weight="bold">Companionship</text>
+          <text x="445" y="82" text-anchor="middle" font-size="7" fill="var(--accent)" opacity="0.6" font-style="italic">Arc role: The Ally</text>
+
+          <!-- Channels -->
+          <rect x="385" y="105" width="120" height="65" fill="var(--highlight)" stroke="var(--ink)" stroke-width="0.5" opacity="0.7"/>
+          <text x="445" y="122" text-anchor="middle" font-size="8.5" fill="var(--muted)" font-style="italic">Channels</text>
+          <line x1="395" y1="128" x2="495" y2="128" stroke="var(--ink)" stroke-width="0.3" opacity="0.2"/>
+          <text x="445" y="144" text-anchor="middle" font-size="9" fill="var(--ink)" font-weight="bold">Surfaces</text>
+          <text x="445" y="156" text-anchor="middle" font-size="7" fill="var(--accent)" opacity="0.6" font-style="italic">Arc role: Thresholds</text>
+
+          <!-- Customer Segments -->
+          <rect x="510" y="30" width="120" height="140" fill="var(--highlight)" stroke="var(--ink)" stroke-width="0.5" opacity="0.7"/>
+          <text x="570" y="50" text-anchor="middle" font-size="8.5" fill="var(--muted)" font-style="italic">Customer Segments</text>
+          <line x1="520" y1="56" x2="620" y2="56" stroke="var(--ink)" stroke-width="0.3" opacity="0.2"/>
+          <text x="570" y="72" text-anchor="middle" font-size="9" fill="var(--ink)" font-weight="bold">Arc Stages</text>
+          <text x="570" y="105" text-anchor="middle" font-size="7.5" fill="var(--muted)">Segmented not by</text>
+          <text x="570" y="116" text-anchor="middle" font-size="7.5" fill="var(--muted)">demographics but by</text>
+          <text x="570" y="127" text-anchor="middle" font-size="7.5" fill="var(--muted)">where they are in</text>
+          <text x="570" y="138" text-anchor="middle" font-size="7.5" fill="var(--muted)">their journey.</text>
+          <text x="570" y="155" text-anchor="middle" font-size="7" fill="var(--accent)" opacity="0.6" font-style="italic">Arc role: The Hero</text>
+
+          <!-- Cost Structure -->
+          <rect x="10" y="180" width="300" height="65" fill="var(--highlight)" stroke="var(--ink)" stroke-width="0.5" opacity="0.6"/>
+          <text x="160" y="200" text-anchor="middle" font-size="8.5" fill="var(--muted)" font-style="italic">Cost Structure</text>
+          <line x1="20" y1="206" x2="300" y2="206" stroke="var(--ink)" stroke-width="0.3" opacity="0.2"/>
+          <text x="160" y="222" text-anchor="middle" font-size="9" fill="var(--ink)" font-weight="bold">The Price of Transformation</text>
+          <text x="160" y="234" text-anchor="middle" font-size="7.5" fill="var(--muted)">What it costs to maintain a coherent field across surfaces and time.</text>
+
+          <!-- Revenue Streams -->
+          <rect x="320" y="180" width="310" height="65" fill="var(--highlight)" stroke="var(--ink)" stroke-width="0.5" opacity="0.6"/>
+          <text x="475" y="200" text-anchor="middle" font-size="8.5" fill="var(--muted)" font-style="italic">Revenue Streams</text>
+          <line x1="330" y1="206" x2="620" y2="206" stroke="var(--ink)" stroke-width="0.3" opacity="0.2"/>
+          <text x="475" y="222" text-anchor="middle" font-size="9" fill="var(--ink)" font-weight="bold">The Return with Elixir - Monetized</text>
+          <text x="475" y="234" text-anchor="middle" font-size="7.5" fill="var(--muted)">Value captured from users who completed enough of the arc to pay for access to more.</text>
+
+          <!-- Caption -->
+          <text x="320" y="265" text-anchor="middle" font-size="8.5" fill="var(--muted)" font-style="italic">Each Canvas block has a narrative function. If it does not serve the arc, it works against the field.</text>
+          <text x="320" y="278" text-anchor="middle" font-size="8.5" fill="var(--accent)" opacity="0.6" font-style="italic">The Value Proposition is the only block that should be defined by transformation, not output.</text>
+        </svg>
+      </figure>
+
+      <div class="break fade-in">&#9670; &nbsp; &#9670; &nbsp; &#9670;</div>
+
+      <p class="fade-in">
+        Walk through each block with the constitutive lens and the implications become concrete.
+      </p>
+
+      <p class="fade-in">
+        <strong>Customer segments</strong> in the conventional Canvas are defined by demographics, behavior, or need. In the Constitutive Arc, they are defined by arc position. Where is the user in their journey? Are they in the ordinary world, not yet aware the field exists? Are they at the threshold, returning occasionally but not yet committed? Are they in the road of trials, actively navigating the field across multiple surfaces? Are they past the innermost cave, already carrying a new lens and ready to share it? Each position requires a different encounter design. A user in the ordinary world needs to feel the pull. A user past the cave needs to be given language for what they now see. Segmenting by demographics tells you who is in the room. Segmenting by arc position tells you where they are in the journey, which is the only segmentation that determines what the field should do next.
+      </p>
+
+      <p class="fade-in">
+        <strong>Channels</strong> in the conventional Canvas are distribution mechanisms. In the Constitutive Arc, every channel is a threshold: a specific mode of entry into the field, each with its own attention state, trust level, and depth of engagement. A browser extension or new tab is ambient presence: the field arriving at the moment of maximum cognitive openness, before the day's noise has accumulated. A Telegram message is high-trust, close-range contact: the field arriving as a companion rather than a publisher. A long-form analysis is the field at depth: the user has chosen to go further, which means they are already past the threshold and ready for trial-level encounter. Designing channels as thresholds means asking, for each surface: what arc stage is the user typically at when they encounter us here, and is this encounter designed for that stage?
+      </p>
+
+      <p class="fade-in">
+        <strong>The value proposition</strong> is where the rearticulation is most radical. In the conventional Canvas, the value proposition answers: what problem do we solve, and why are we better than the alternative? In the Constitutive Arc, the value proposition answers a different question entirely: what does the user become, through sustained contact with this field, that they could not become without it? The output (the articles, the analyses, the videos) is not the value proposition. It is the delivery mechanism. The value proposition is the transformation the field makes possible. And if the organization cannot state that transformation with precision, it does not yet have a constitutive value proposition. It has a content library.
+      </p>
+
+      <p class="fade-in">
+        <strong>Customer relationships</strong> in the conventional Canvas range from automated to personal. In the Constitutive Arc, the relationship has a specific character that neither pole captures: it is <em>companionship through the journey</em>. The ally in the monomyth is not a service provider. The ally is someone who has walked a similar road and offers the traveler something specific to their current position: a warning before the cave, a tool for crossing the threshold, recognition of what was gained in the return. A media organization that designs its relationship model as companionship, that asks, at each touchpoint, what does a traveler at this stage of the arc need from a trusted companion right now—is designing something categorically different from engagement optimization.
+      </p>
+
+      <p class="fade-in">
+        <strong>Key resources</strong> in the conventional Canvas are the assets required to deliver the value proposition. In the Constitutive Arc, the primary key resource is the lens itself. Not the technology stack, not the distribution infrastructure, not the talent pool, though all of these matter. The lens: the organization's specific, differentiated, intellectually honest way of seeing the domain it covers. The lens is the gravitational center of the field. Everything else in the business (every channel, every relationship, every content format) is a delivery mechanism for the lens. An organization that loses its lens has not lost a competitive advantage. It has lost the field. It becomes, at that point, a content operation with good distribution.
+      </p>
+
+      <div class="pull fade-in">
+        The lens is not an editorial voice. It is not a tone of writing or a set of topics. It is a way of seeing that the audience cannot get elsewhere and that, through sustained contact, becomes partially their own. That is the moat. That is the resource that cannot be replicated, automated, or arbitraged away.
+      </div>
+
+      <div class="break fade-in">&#9670; &nbsp; &#9670; &nbsp; &#9670;</div>
+
+      <p class="fade-in">
+        The rearticulation of the Canvas through the Constitutive Arc produces one diagnostic question for each block. The questions together form a self-assessment that an organization can use to determine whether it is building a field or a content operation.
+      </p>
+
+      <!-- DIAGRAM: Diagnostic questions per block -->
+      <figure class="diagram fade-in" aria-label="Constitutive Arc diagnostic questions">
+        <svg viewBox="0 0 640 310" xmlns="http://www.w3.org/2000/svg" style="width:100%;font-family:'Inter',serif;">
+          <text x="320" y="18" text-anchor="middle" font-size="10" fill="var(--muted)" font-style="italic" opacity="0.7">Self-assessment: Field or Content Operation?</text>
+
+          <!-- 5 diagnostic rows -->
+          <!-- Row 1 -->
+          <rect x="10" y="30" width="180" height="48" fill="var(--highlight)" stroke="var(--ink)" stroke-width="0.4" opacity="0.6"/>
+          <text x="20" y="46" font-size="8.5" fill="var(--muted)" font-style="italic">Segments</text>
+          <text x="20" y="60" font-size="8" fill="var(--ink)">Can you describe your audience by</text>
+          <text x="20" y="71" font-size="8" fill="var(--ink)">arc position, not only by demographic?</text>
+
+          <rect x="200" y="30" width="180" height="48" fill="var(--highlight)" stroke="var(--ink)" stroke-width="0.4" opacity="0.6"/>
+          <text x="210" y="46" font-size="8.5" fill="var(--muted)" font-style="italic">Channels</text>
+          <text x="210" y="60" font-size="8" fill="var(--ink)">Is each surface designed for the arc</text>
+          <text x="210" y="71" font-size="8" fill="var(--ink)">stage typical of users who arrive there?</text>
+
+          <rect x="390" y="30" width="240" height="48" fill="var(--accent-light)" stroke="var(--accent)" stroke-width="0.8" opacity="0.7"/>
+          <text x="400" y="46" font-size="8.5" fill="var(--accent)" opacity="0.8" font-style="italic">Value Proposition</text>
+          <text x="400" y="60" font-size="8" fill="var(--ink)">Can you state in one sentence what</text>
+          <text x="400" y="71" font-size="8" fill="var(--ink)">the user becomes through the field?</text>
+
+          <!-- Row 2 -->
+          <rect x="10" y="88" width="180" height="48" fill="var(--highlight)" stroke="var(--ink)" stroke-width="0.4" opacity="0.6"/>
+          <text x="20" y="104" font-size="8.5" fill="var(--muted)" font-style="italic">Relationships</text>
+          <text x="20" y="118" font-size="8" fill="var(--ink)">Does your relationship model change</text>
+          <text x="20" y="129" font-size="8" fill="var(--ink)">based on where the user is in the arc?</text>
+
+          <rect x="200" y="88" width="180" height="48" fill="var(--highlight)" stroke="var(--ink)" stroke-width="0.4" opacity="0.6"/>
+          <text x="210" y="104" font-size="8.5" fill="var(--muted)" font-style="italic">Key Resources</text>
+          <text x="210" y="118" font-size="8" fill="var(--ink)">Is the lens documented, shared, and</text>
+          <text x="210" y="129" font-size="8" fill="var(--ink)">applied consistently across all surfaces?</text>
+
+          <rect x="390" y="88" width="240" height="48" fill="var(--highlight)" stroke="var(--ink)" stroke-width="0.4" opacity="0.6"/>
+          <text x="400" y="104" font-size="8.5" fill="var(--muted)" font-style="italic">Key Activities</text>
+          <text x="400" y="118" font-size="8" fill="var(--ink)">Is field design an explicit activity, or</text>
+          <text x="400" y="129" font-size="8" fill="var(--ink)">only content production?</text>
+
+          <!-- Row 3 -->
+          <rect x="10" y="146" width="280" height="48" fill="var(--highlight)" stroke="var(--ink)" stroke-width="0.4" opacity="0.6"/>
+          <text x="20" y="162" font-size="8.5" fill="var(--muted)" font-style="italic">Revenue Streams</text>
+          <text x="20" y="176" font-size="8" fill="var(--ink)">Does your monetization model reward transformation depth</text>
+          <text x="20" y="187" font-size="8" fill="var(--ink)">or only reach and volume?</text>
+
+          <rect x="300" y="146" width="330" height="48" fill="var(--highlight)" stroke="var(--ink)" stroke-width="0.4" opacity="0.6"/>
+          <text x="310" y="162" font-size="8.5" fill="var(--muted)" font-style="italic">Key Partners</text>
+          <text x="310" y="176" font-size="8" fill="var(--ink)">Do your partnerships extend the field's reach</text>
+          <text x="310" y="187" font-size="8" fill="var(--ink)">without diluting the lens?</text>
+
+          <!-- Scoring guide -->
+          <rect x="10" y="210" width="620" height="55" fill="none" stroke="var(--accent)" stroke-width="0.5" stroke-dasharray="3,3" opacity="0.3"/>
+          <text x="320" y="228" text-anchor="middle" font-size="9" fill="var(--muted)" font-style="italic">Reading the assessment:</text>
+          <text x="320" y="243" text-anchor="middle" font-size="8.5" fill="var(--muted)">7 yes: You are building a field. &nbsp;&nbsp; 4–6 yes: Hybrid - the field is emerging but not yet coherent.</text>
+          <text x="320" y="257" text-anchor="middle" font-size="8.5" fill="var(--muted)">0–3 yes: You are running a content operation. The arc is not yet designed. It is happening by accident.</text>
+
+          <text x="320" y="295" text-anchor="middle" font-size="8.5" fill="var(--muted)" font-style="italic">No score is a verdict. Every score is a starting point.</text>
+        </svg>
+      </figure>
+
+      <p class="fade-in">
+        The score is not a verdict. It is a map of where the architecture needs attention. An organization with strong channels and a weak value proposition knows where to look. An organization with a clear lens but no arc-based segmentation knows what to build next. The diagnostic is useful not because it produces a number but because it forces a conversation that most editorial teams have never had: not about what we publish, but about what we are building in the people who encounter us over time.
+      </p>
+
+      <p class="fade-in" style="font-style:italic; font-size:1.15rem; margin-top:2rem; color:var(--deep);">
+        The architecture of transformation is not separate from the business model. It is the business model, seen from the inside of the user's journey rather than the inside of the organization.
+      </p>
+
+      <!-- Next movement IV -->
+      <div class="next-movement fade-in" style="margin-top: 5rem;">
+        <div>
+          <div class="next-label">Coming next</div>
+          <div class="next-title">Movement V &nbsp;&mdash;&nbsp; The Danger</div>
+        </div>
+        <div class="next-arrow">&rarr;</div>
+      </div>
+
+      <!-- ========================
+           MOVEMENT V: THE DANGER
+      ========================= -->
+      <div style="margin-top: 7rem;">
+        <div class="section-marker fade-in">
+          <div class="section-marker-icon">&#9675;&#9675;&#9675;&#9675;&#9675;</div>
+          <div class="section-marker-label">Movement V &nbsp;/&nbsp; Six</div>
+        </div>
+        <h2 class="section-title fade-in">The Danger</h2>
+        <div class="section-rule fade-in"></div>
+      </div>
+
+      <p class="fade-in">
+        Every framework that proposes to shape human beings carries a shadow version of itself. The Constitutive Arc is no exception. Name the shadow before someone else does.
+      </p>
+
+      <p class="fade-in">
+        Call it undeclared identity engineering.
+      </p>
+
+      <p class="fade-in">
+        The aspiration contains the hazard. If a field can genuinely shape how a person sees the world, displacing prior frameworks, installing new ones, becoming a constitutive reference point for what they consider real, then the ethics of field design are not a footnote. They are the load-bearing wall.
+      </p>
+
+      <p class="fade-in">
+        The distinction that matters is not between transformation and no transformation. Every media organization transforms its audience whether it designed the transformation or not. The distinction is between <strong>declared transformation</strong> and <strong>undeclared transformation</strong>. A field transparent about its lens. An arc the user can identify, question, and exit. Versus one designed to be invisible, self-reinforcing, difficult to leave.
+      </p>
+
+      <!-- DIAGRAM: The Ethics Axis -->
+      <figure class="diagram fade-in" aria-label="The ethics axis: declared vs undeclared transformation">
+        <svg viewBox="0 0 640 200" xmlns="http://www.w3.org/2000/svg" style="width:100%;font-family:'Inter',serif;">
+
+          <text x="320" y="18" text-anchor="middle" font-size="10" fill="var(--muted)" font-style="italic" opacity="0.7">The ethics axis of the Constitutive Arc</text>
+
+          <!-- Horizontal axis: declared ← → undeclared -->
+          <line x1="50" y1="90" x2="590" y2="90" stroke="var(--ink)" stroke-width="0.8" opacity="0.2"/>
+
+          <!-- Left pole: declared -->
+          <circle cx="50" cy="90" r="5" fill="var(--ink)" opacity="0.4"/>
+          <text x="50" y="75" text-anchor="middle" font-size="10" fill="var(--ink)" font-weight="bold">Declared</text>
+          <text x="50" y="108" text-anchor="middle" font-size="8" fill="var(--muted)">Lens visible.</text>
+          <text x="50" y="119" text-anchor="middle" font-size="8" fill="var(--muted)">Exit clear.</text>
+          <text x="50" y="130" text-anchor="middle" font-size="8" fill="var(--muted)">User can</text>
+          <text x="50" y="141" text-anchor="middle" font-size="8" fill="var(--muted)">push back.</text>
+
+          <!-- Right pole: undeclared -->
+          <circle cx="590" cy="90" r="5" fill="var(--accent)" opacity="0.7"/>
+          <text x="590" y="75" text-anchor="middle" font-size="10" fill="var(--accent)" font-weight="bold">Undeclared</text>
+          <text x="590" y="108" text-anchor="middle" font-size="8" fill="var(--accent)" opacity="0.7">Lens hidden.</text>
+          <text x="590" y="119" text-anchor="middle" font-size="8" fill="var(--accent)" opacity="0.7">Exit costly.</text>
+          <text x="590" y="130" text-anchor="middle" font-size="8" fill="var(--accent)" opacity="0.7">User doesn't</text>
+          <text x="590" y="141" text-anchor="middle" font-size="8" fill="var(--accent)" opacity="0.7">know they're in it.</text>
+
+          <!-- Vertical axis: shallow ↕ deep -->
+          <line x1="320" y1="20" x2="320" y2="175" stroke="var(--ink)" stroke-width="0.5" stroke-dasharray="2,3" opacity="0.15"/>
+          <text x="320" y="14" text-anchor="middle" font-size="8" fill="var(--muted)" opacity="0.5">Deep transformation</text>
+          <text x="320" y="185" text-anchor="middle" font-size="8" fill="var(--muted)" opacity="0.5">Shallow transformation</text>
+
+          <!-- Four quadrants labeled -->
+          <text x="170" y="50" text-anchor="middle" font-size="9" fill="var(--ink)" opacity="0.6" font-style="italic">Education</text>
+          <text x="170" y="62" text-anchor="middle" font-size="7.5" fill="var(--muted)">Deep + Declared</text>
+
+          <text x="470" y="50" text-anchor="middle" font-size="9" fill="var(--accent)" opacity="0.7" font-style="italic">Propaganda</text>
+          <text x="470" y="62" text-anchor="middle" font-size="7.5" fill="var(--accent)" opacity="0.5">Deep + Undeclared</text>
+
+          <text x="170" y="160" text-anchor="middle" font-size="9" fill="var(--ink)" opacity="0.4" font-style="italic">Entertainment</text>
+          <text x="170" y="172" text-anchor="middle" font-size="7.5" fill="var(--muted)" opacity="0.5">Shallow + Declared</text>
+
+          <text x="470" y="160" text-anchor="middle" font-size="9" fill="var(--muted)" font-style="italic">Noise</text>
+          <text x="470" y="172" text-anchor="middle" font-size="7.5" fill="var(--muted)" opacity="0.5">Shallow + Undeclared</text>
+
+          <!-- Target zone marker -->
+          <circle cx="160" cy="55" r="18" fill="none" stroke="var(--ink)" stroke-width="0.8" stroke-dasharray="2,2" opacity="0.2"/>
+          <text x="160" y="33" text-anchor="middle" font-size="7" fill="var(--ink)" opacity="0.4">CAX target zone</text>
+
+        </svg>
+      </figure>
+
+      <div class="break fade-in">&#9670; &nbsp; &#9670; &nbsp; &#9670;</div>
+
+      <p class="fade-in">
+        The diagram above is not a comfort. The quadrant that the Constitutive Arc aspires to occupy—deep transformation, declared lens—is the most demanding to sustain and the easiest to drift from. The pressures that push a media organization toward undeclared transformation are not malicious. They are structural. They are the same pressures that have driven every media disruption of the last twenty years: the need to grow audiences faster, the optimization of engagement metrics, the delegation of editorial decisions to algorithmic systems, the competitive pressure to be stickier, more personalized, more present.
+      </p>
+
+      <p class="fade-in">
+        Each of these pressures, individually, is rational. Collectively, they constitute a drift toward the upper-right quadrant: transformation that is deep and undeclared. Not propaganda in the classical sense of organized deception. Something more insidious: the accumulation of micro-optimizations, each individually defensible, that together produce a field designed not to serve the user's journey but to make the journey dependent on the field.
+      </p>
+
+      <p class="fade-in">
+        The difference between education and propaganda is not the depth of transformation. Both can transform deeply. The difference is in the relationship to the user's autonomy. Education increases the user's capacity to think independently of the educator. Propaganda increases the user's dependency on the propagandist's framing. The Constitutive Arc is education-shaped if and only if the lens it installs in the user makes them better at seeing the world on their own terms, if the elixir they carry back is genuinely theirs, not a branded version of the organization's worldview that requires the organization's continued presence to maintain its coherence.
+      </p>
+
+      <div class="pull fade-in">
+        The test is simple and demanding: does sustained contact with this field make the user more capable of thinking independently of this field? If yes, the arc is constitutive in the educational sense. If no, it is constitutive in the propagandistic sense. The architecture is the same. But the answer cannot rest on intention alone. TikTok was not designed to harm. Facebook's feed was not optimized with malicious intent. The organizations that have done the most damage to epistemic autonomy built systems with locally rational optimizations that produced harmful outcomes as aggregate effects. Intention does not save. Structure does.
+      </div>
+
+      <div class="break fade-in">&#9670; &nbsp; &#9670; &nbsp; &#9670;</div>
+
+      <p class="fade-in">
+        There are three specific failure modes that a field designed with Constitutive Arc principles must actively guard against. They are listed here not as theoretical risks but as patterns already visible in the current media landscape, in organizations that have achieved deep audience engagement without asking what kind of engagement they were building.
+      </p>
+
+      <p class="fade-in">
+        The first failure mode is <strong>lens lock</strong>: the field becomes so coherent, so present, and so reinforced across surfaces that the user loses the capacity to encounter the domain through any other lens. The field was designed to give the user a new way of seeing. It succeeded too completely. The user now cannot see the domain without the field's framing. What was a lens has become a filter that blocks competing frames rather than enriching the user's encounter with them. Lens lock looks like loyalty from the outside. From the inside of the user's cognitive architecture, it is dependency, the collapse of the pluralism that makes genuine understanding possible.
+      </p>
+
+      <p class="fade-in">
+        The second failure mode is <strong>arc capture</strong>: the field is designed to keep the user perpetually in the road of trials, never quite reaching the innermost cave, never quite emerging with the elixir. The user is always on the verge of understanding something important, always one more article away from the insight that will clarify everything. The trials never resolve. The arc never completes. This is not a failure of content quality. It is a feature of engagement optimization: a user who has reached the elixir and carries their own lens has less need of the field. A user perpetually in the trials is perpetually returning. Arc capture is the dark mirror of the Constitutive Arc; it uses the monomyth's structure not to enable transformation but to indefinitely defer it, harvesting the emotional energy of the journey without ever delivering its destination.
+      </p>
+
+      <p class="fade-in">
+        The third failure mode is <strong>identity capture</strong>: the field becomes part of the user's self-definition in ways that make disagreement with the field feel like self-betrayal. The user no longer encounters the field as an external resource that serves their journey. They have internalized the field as part of who they are. Criticism of the field's lens becomes criticism of the user's identity. This is the most dangerous failure mode because it looks, from every external metric, like the greatest success. Engagement is at its highest. Retention is at its highest. The user is most committed. And the user is most captured. Identity capture is the point at which the Constitutive Arc crosses the line from journalism into something that has no clean name in media ethics yet, but that deserves one: <em>cognitive colonization</em>.
+      </p>
+
+      <!-- DIAGRAM: Three failure modes -->
+      <figure class="diagram fade-in" aria-label="Three failure modes of the Constitutive Arc">
+        <svg viewBox="0 0 640 220" xmlns="http://www.w3.org/2000/svg" style="width:100%;font-family:'Inter',serif;">
+
+          <text x="320" y="16" text-anchor="middle" font-size="10" fill="var(--muted)" font-style="italic" opacity="0.7">Three failure modes - what deep engagement looks like when the arc is misused</text>
+
+          <!-- Block 1: Lens Lock -->
+          <rect x="10" y="28" width="195" height="150" fill="var(--accent-light)" stroke="var(--accent)" stroke-width="0.8" opacity="0.5"/>
+          <text x="107" y="48" text-anchor="middle" font-size="11" fill="var(--accent)" font-weight="bold" opacity="0.8">Lens Lock</text>
+          <line x1="20" y1="55" x2="195" y2="55" stroke="var(--accent)" stroke-width="0.4" opacity="0.3"/>
+          <text x="107" y="72" text-anchor="middle" font-size="8.5" fill="var(--muted)">The lens becomes a filter.</text>
+          <text x="107" y="84" text-anchor="middle" font-size="8.5" fill="var(--muted)">User can no longer see the</text>
+          <text x="107" y="96" text-anchor="middle" font-size="8.5" fill="var(--muted)">domain through any other</text>
+          <text x="107" y="108" text-anchor="middle" font-size="8.5" fill="var(--muted)">frame. Looks like loyalty.</text>
+          <text x="107" y="120" text-anchor="middle" font-size="8.5" fill="var(--muted)">Is dependency.</text>
+          <text x="107" y="148" text-anchor="middle" font-size="8" fill="var(--accent)" opacity="0.6" font-style="italic">Symptom: User cannot</text>
+          <text x="107" y="160" text-anchor="middle" font-size="8" fill="var(--accent)" opacity="0.6" font-style="italic">articulate competing views.</text>
+
+          <!-- Block 2: Arc Capture -->
+          <rect x="222" y="28" width="196" height="150" fill="var(--accent-light)" stroke="var(--accent)" stroke-width="0.8" opacity="0.5"/>
+          <text x="320" y="48" text-anchor="middle" font-size="11" fill="var(--accent)" font-weight="bold" opacity="0.8">Arc Capture</text>
+          <line x1="232" y1="55" x2="408" y2="55" stroke="var(--accent)" stroke-width="0.4" opacity="0.3"/>
+          <text x="320" y="72" text-anchor="middle" font-size="8.5" fill="var(--muted)">User is kept perpetually</text>
+          <text x="320" y="84" text-anchor="middle" font-size="8.5" fill="var(--muted)">in the road of trials.</text>
+          <text x="320" y="96" text-anchor="middle" font-size="8.5" fill="var(--muted)">The arc never completes.</text>
+          <text x="320" y="108" text-anchor="middle" font-size="8.5" fill="var(--muted)">Transformation deferred</text>
+          <text x="320" y="120" text-anchor="middle" font-size="8.5" fill="var(--muted)">indefinitely.</text>
+          <text x="320" y="148" text-anchor="middle" font-size="8" fill="var(--accent)" opacity="0.6" font-style="italic">Symptom: High return rate,</text>
+          <text x="320" y="160" text-anchor="middle" font-size="8" fill="var(--accent)" opacity="0.6" font-style="italic">zero elixir produced.</text>
+
+          <!-- Block 3: Identity Capture -->
+          <rect x="435" y="28" width="195" height="150" fill="var(--accent-light)" stroke="var(--accent)" stroke-width="1.5" opacity="0.7"/>
+          <text x="532" y="48" text-anchor="middle" font-size="11" fill="var(--accent)" font-weight="bold">Identity Capture</text>
+          <line x1="445" y1="55" x2="620" y2="55" stroke="var(--accent)" stroke-width="0.5" opacity="0.4"/>
+          <text x="532" y="72" text-anchor="middle" font-size="8.5" fill="var(--muted)">The field becomes part of</text>
+          <text x="532" y="84" text-anchor="middle" font-size="8.5" fill="var(--muted)">the user's self-definition.</text>
+          <text x="532" y="96" text-anchor="middle" font-size="8.5" fill="var(--muted)">Disagreement feels like</text>
+          <text x="532" y="108" text-anchor="middle" font-size="8.5" fill="var(--muted)">self-betrayal. Looks like</text>
+          <text x="532" y="120" text-anchor="middle" font-size="8.5" fill="var(--muted)">maximum engagement.</text>
+          <text x="532" y="148" text-anchor="middle" font-size="8" fill="var(--accent)" font-style="italic">Symptom: Community turns</text>
+          <text x="532" y="160" text-anchor="middle" font-size="8" fill="var(--accent)" font-style="italic">on dissenters.</text>
+
+          <text x="320" y="198" text-anchor="middle" font-size="8.5" fill="var(--muted)" font-style="italic">All three failure modes look like success on engagement dashboards. None are.</text>
+          <text x="320" y="211" text-anchor="middle" font-size="8.5" fill="var(--accent)" opacity="0.6" font-style="italic">The ethical boundary: does the arc increase or decrease the user's independence from it?</text>
+        </svg>
+      </figure>
+
+      <div class="break fade-in">&#9670; &nbsp; &#9670; &nbsp; &#9670;</div>
+
+      <p class="fade-in">
+        The guardrail against all three failure modes is the same, and it can be stated simply: <strong>the Constitutive Arc is ethical if and only if the organization would be proud of the user who leaves.</strong>
+      </p>
+
+      <p class="fade-in">
+        The hardest test of this guardrail is not ideologically neutral media. It is media built around a domain where the lens itself carries strong normative claims &mdash; about geopolitics, climate, economic systems, social policy. Advocacy media is this test. The lens is not neutral. It is not designed to be neutral. The question the Constitutive Arc poses to such a field is not whether the lens should be declared &mdash; it must be, more explicitly than in any domain where the stakes of undeclared influence are high. The question is whether the arc the field produces makes its audience more capable of engaging with the strongest objections to its own positions, or less. An advocacy organization that produces audiences incapable of articulating the best counterarguments has not produced constitutive transformation. It has produced a constituency. The same architecture, pointed at the same domain, produces radically different outcomes depending on whether it is designed to strengthen independent reasoning or insulate it from challenge. Ideologically committed fields do not get an exemption from the Independence Reasoning Test. They get the hardest version of it.
+      </p>
+
+      <p class="fade-in">
+        Not the user who stays forever. Not the user who refers endlessly. The user who, after sustained contact with the field, develops enough of their own lens that they begin to disagree with the field sometimes, to find other sources that enrich what the field gave them, to use the vocabulary the field provided to think thoughts the field did not anticipate. That user is the elixir. That user is the proof that the arc was constitutive in the right direction.
+      </p>
+
+      <p class="fade-in">
+        An organization that fears that user, that optimizes against disagreement, that designs for maximum lens adoption and minimum independent thought—has crossed the line. It is no longer building a field for the user's journey. It is building a cage with very comfortable furniture.
+      </p>
+
+      <p class="fade-in">
+        The practical implementation of this guardrail requires three explicit commitments that must be built into field design from the beginning, not retrofitted when the ethical alarm sounds.
+      </p>
+
+      <p class="fade-in">
+        First, <strong>declare the lens</strong>. Not in a terms-of-service footnote. In the editorial identity of the organization, visible at every entry point, repeated often enough that new users understand immediately: this is how we see, this is what we emphasize, this is what we do not cover and why, this is the limitation you should know about before you let us shape how you think about this domain. A declared lens can be questioned. An undeclared lens cannot.
+      </p>
+
+      <p class="fade-in">
+        Second, <strong>design for exit</strong>. Every field should actively provide the user with resources, references, and framings that exist outside the field. Not as a legal disclaimer but as a genuine service to the journey. The mentor in the monomyth does not give the hero everything they need. The mentor gives the hero what they need to continue without the mentor. A field that designs for exit is a field that trusts the transformation it produces. A field that makes exit costly (through dependency mechanics, through identity entanglement, through the suggestion that leaving the field means losing the understanding the field gave) does not trust its own transformation. It is holding the elixir hostage.
+      </p>
+
+      <p class="fade-in">
+        Third, <strong>measure independence, not retention</strong>. The North Star metric of the Constitutive Arc is not how long the user stays. It is whether the user, over time, becomes more capable of navigating the domain on their own terms. This is harder to measure than retention and it requires a different kind of user research: longitudinal, qualitative, focused on cognitive capacity rather than behavioral frequency. The three proxies in Movement II (Lens Consistency, Vocabulary Transfer, and Independence Reasoning) are the instrumentation. Without them, "measuring independence" is a phrase, not a practice.
+      </p>
+
+      <p class="fade-in">
+        These three commitments matter not primarily because they express good intentions, but because they create structures of external accountability. A declared lens can be critiqued publicly; critics and users can identify its blind spots and challenge them. A field designed for exit produces a verifiable claim: do users who disengage show higher independent reasoning scores? Measuring independence creates a mechanism that survives changes in leadership and editorial culture. The distinction between education and capture is not moral. It is structural. Structures can be audited. Intentions cannot.
+      </p>
+
+      <p class="fade-in" style="font-style:italic; font-size:1.15rem; margin-top:2rem; color:var(--deep);">
+        The test of the Constitutive Arc is not the user who stays longest. It is the user who leaves most capable. Those are not the same user, and the difference between optimizing for one versus the other is the difference between education and capture.
+      </p>
+
+      <!-- Next movement V -->
+      <div class="next-movement fade-in" style="margin-top: 5rem;">
+        <div>
+          <div class="next-label">Final movement</div>
+          <div class="next-title">Movement VI &nbsp;&mdash;&nbsp; The Return</div>
+        </div>
+        <div class="next-arrow">&rarr;</div>
+      </div>
+
+      <!-- ========================
+           MOVEMENT VI: THE RETURN
+      ========================= -->
+      <div style="margin-top: 7rem;">
+        <div class="section-marker fade-in">
+          <div class="section-marker-icon">&#9679;</div>
+          <div class="section-marker-label">Movement VI &nbsp;/&nbsp; Six &nbsp;&mdash;&nbsp; Final</div>
+        </div>
+        <h2 class="section-title fade-in">The Return</h2>
+        <div class="section-rule fade-in"></div>
+      </div>
+
+      <p class="fade-in">
+        The hero always returns. Not because the story demands a happy ending. Because until the hero comes back, the elixir is only potential. It becomes real the moment it proves useful in the ordinary world. The return is the proof of the arc.
+      </p>
+
+      <p class="fade-in">
+        This essay has been its own arc. It began with a wave. It ends, necessarily, at the mountain.
+      </p>
+
+      <p class="fade-in">
+        The ordinary world this essay left behind was the media industry's current framing of its own crisis: a distribution problem, a trust problem, an attention problem, a revenue problem. All of these are real. None of them is the actual problem. The actual problem is the loss of constitutive function (the capacity to be part of how people build their understanding of reality) and the migration of that function to systems that have never been asked to be responsible for it.
+      </p>
+
+      <p class="fade-in">
+        The unfamiliar territory this essay crossed was the recognition that transformation is not an aspiration layered on top of a media business. It is the media business, seen from the user's side of the encounter. That the linear arc is gone and the field has replaced it. That Campbell and Harmon described the deep structure of this field seventy years before anyone called it media strategy. That the Business Model Canvas can be rearticulated, block by block, as a map of narrative functions. And that the same architecture that enables education enables capture, and the difference between them is not technical; it is intentional.
+      </p>
+
+      <p class="fade-in">
+        What comes back from that crossing is not a methodology. Methodologies are for fields that have already understood their problem. The Constitutive Arc is a lens: one that, once installed, changes what you see when you look at a media organization, at an editorial decision, at an engagement metric, at an algorithm's optimization function. You can no longer look at a content operation without asking: what is this doing to the person who encounters it over time, and did anyone design that?
+      </p>
+
+      <div class="break fade-in">&#9670; &nbsp; &#9670; &nbsp; &#9670;</div>
+
+      <p class="fade-in">
+        The return is never simple. The ordinary world has not changed. The hero has. The gap between what the traveler now sees and what the community still sees is not a failure of the journey. It is its result. The unglamorous work that follows (making the elixir usable by people who haven't walked the road) is the actual contribution. The journey earns the right to do that work. It does not do the work itself.
+      </p>
+
+      <p class="fade-in">
+        The Constitutive Arc is not a solution to the media industry's crisis. It is a reorientation that makes a different kind of solution visible. The industry has been solving a constitutive problem with distribution tools, a narrative problem with engagement metrics, an identity problem with personalization algorithms. This framework doesn't provide new tools. It clarifies what the tools are for, which turns out to be the prior question that was never asked.
+      </p>
+
+      <!-- DIAGRAM: Full arc summary - the essay itself as monomyth -->
+      <figure class="diagram fade-in" aria-label="The essay's own arc - from ordinary world to return">
+        <svg viewBox="0 0 640 260" xmlns="http://www.w3.org/2000/svg" style="width:100%;font-family:'Inter',serif;">
+
+          <text x="320" y="16" text-anchor="middle" font-size="10" fill="var(--muted)" font-style="italic" opacity="0.7">This essay's own arc - six movements as monomyth</text>
+
+          <!-- Horizontal arc line -->
+          <path d="M40,180 C120,180 180,60 320,60 C460,60 520,180 600,180" fill="none" stroke="var(--ink)" stroke-width="0.8" opacity="0.15"/>
+
+          <!-- Movement markers along the arc -->
+
+          <!-- I: The Collapse -->
+          <circle cx="40" cy="180" r="5" fill="var(--muted)" opacity="0.5"/>
+          <text x="40" y="200" text-anchor="middle" font-size="8.5" fill="var(--ink)" font-weight="bold">I</text>
+          <text x="40" y="213" text-anchor="middle" font-size="7.5" fill="var(--muted)">The Collapse</text>
+          <text x="40" y="225" text-anchor="middle" font-size="7" fill="var(--muted)" font-style="italic">Ordinary world</text>
+          <text x="40" y="236" text-anchor="middle" font-size="7" fill="var(--muted)" font-style="italic">named</text>
+
+          <!-- II: The Field -->
+          <circle cx="145" cy="130" r="5" fill="var(--muted)" opacity="0.5"/>
+          <text x="145" y="150" text-anchor="middle" font-size="8.5" fill="var(--ink)" font-weight="bold">II</text>
+          <text x="145" y="163" text-anchor="middle" font-size="7.5" fill="var(--muted)">The Field</text>
+          <text x="145" y="175" text-anchor="middle" font-size="7" fill="var(--muted)" font-style="italic">Threshold</text>
+          <text x="145" y="186" text-anchor="middle" font-size="7" fill="var(--muted)" font-style="italic">crossed</text>
+
+          <!-- III: The Ancestor -->
+          <circle cx="240" cy="78" r="5" fill="var(--muted)" opacity="0.6"/>
+          <text x="240" y="60" text-anchor="middle" font-size="8.5" fill="var(--ink)" font-weight="bold">III</text>
+          <text x="240" y="48" text-anchor="middle" font-size="7.5" fill="var(--muted)">The Ancestor</text>
+          <text x="240" y="36" text-anchor="middle" font-size="7" fill="var(--muted)" font-style="italic">Road of trials</text>
+
+          <!-- IV: The Architecture -->
+          <circle cx="320" cy="60" r="7" fill="var(--accent)" opacity="0.5"/>
+          <text x="320" y="40" text-anchor="middle" font-size="8.5" fill="var(--accent)" font-weight="bold">IV</text>
+          <text x="320" y="28" text-anchor="middle" font-size="7.5" fill="var(--accent)" opacity="0.8">The Architecture</text>
+          <text x="320" y="16" text-anchor="middle" font-size="7" fill="var(--accent)" opacity="0.6" font-style="italic">Innermost cave</text>
+
+          <!-- V: The Danger -->
+          <circle cx="400" cy="78" r="5" fill="var(--muted)" opacity="0.6"/>
+          <text x="400" y="60" text-anchor="middle" font-size="8.5" fill="var(--ink)" font-weight="bold">V</text>
+          <text x="400" y="48" text-anchor="middle" font-size="7.5" fill="var(--muted)">The Danger</text>
+          <text x="400" y="36" text-anchor="middle" font-size="7" fill="var(--muted)" font-style="italic">The price paid</text>
+
+          <!-- VI: The Return -->
+          <circle cx="600" cy="180" r="7" fill="var(--accent)" opacity="0.8"/>
+          <text x="600" y="200" text-anchor="middle" font-size="8.5" fill="var(--accent)" font-weight="bold">VI</text>
+          <text x="600" y="213" text-anchor="middle" font-size="7.5" fill="var(--accent)" opacity="0.8">The Return</text>
+          <text x="600" y="225" text-anchor="middle" font-size="7" fill="var(--accent)" opacity="0.6" font-style="italic">Elixir delivered</text>
+
+          <!-- Fuji - permanent, in the background -->
+          <polygon points="460,175 490,120 520,175" fill="none" stroke="var(--ink)" stroke-width="0.6" opacity="0.08"/>
+          <text x="490" y="195" text-anchor="middle" font-size="7" fill="var(--muted)" opacity="0.3" font-style="italic">Fuji</text>
+
+        </svg>
+      </figure>
+
+      <div class="break fade-in">&#9670; &nbsp; &#9670; &nbsp; &#9670;</div>
+
+      <p class="fade-in">
+        The practical implications of the return can be compressed into five propositions. Not principles; principles suggest a code to follow. Propositions suggest a set of claims that can be tested, disputed, and refined. The Constitutive Arc is not a doctrine. It is a framework that earns its authority through use, which means its authority is conditional on the quality of the transformations it helps design. Each proposition is illustrated here with observable evidence from media organizations that have navigated this territory, organizations that either demonstrate the proposition or demonstrate what happens when it is ignored.
+      </p>
+
+      <p class="fade-in">
+        <strong>First:</strong> the primary metric of a media organization is not reach, engagement, or revenue. It is the depth and direction of the transformation it produces in the people who encounter it over time. Every other metric is either a proxy for this one or a distraction from it. The New York Times' shift from a circulation model to a digital subscriber model forced exactly this question: what does a subscriber relationship produce over time that a single-article reader does not? The answer the Times landed on (a habit of daily engagement with a trusted editorial lens) is closer to field thinking than the metrics it uses to measure it. Subscriber count is not a transformation metric. The subscription relationship, at its best, is a field commitment. The gap between the metric and the model is where constitutive function leaks.
+      </p>
+
+      <p class="fade-in">
+        <strong>Second:</strong> the lens is the organization. Not the brand, not the technology stack, not the talent. The specific, differentiated, intellectually honest way of seeing the domain—that is what a user encounters when they enter the field, that is what compounds across surfaces and time, that is what cannot be replicated or automated. The Economist has maintained a coherent lens for more than 175 years across dozens of editors and hundreds of staff writers. The publication is not the people. The lens is transmitted through editorial culture more reliably than through any individual's byline. When organizations lose their lens (The Atlantic's near-collapse in the BuzzFeed era of traffic maximization, The Guardian's oscillation between advocacy and reportage) they lose the thing that makes the field a field. Recovery is possible but requires explicit lens reconstruction, not just editorial quality improvement. You cannot improve your way back to a lens you have abandoned. You have to redesign it deliberately.
+      </p>
+
+      <p class="fade-in">
+        <strong>Third:</strong> every surface is a threshold with its own arc stage. The question for each channel is not "how do we distribute content here" but "who arrives at this threshold, at what stage of their journey, and what does the field owe them at this specific point of encounter?" Morning Brew built one of the most successful newsletter operations in recent media history: consistent open rates, strong brand recognition, significant revenue. It is also a case study in what a well-designed threshold without a field looks like. The newsletter is a threshold encounter optimized for the ordinary world: engaging, useful, low-friction. Users who complete the arc (who move from ordinary world toward genuine understanding) leave the Morning Brew ecosystem because there is nothing further for them there. The organization designed the entry. It did not design the field that the entry should lead into. This is not a content quality problem. It is an architecture problem.
+      </p>
+
+      <p class="fade-in">
+        <strong>Fourth:</strong> AI does not change what a media organization should be for. It changes the cost of pretending to be something else. In the broadcast era, the absence of a constitutive function was invisible; the organization still controlled distribution and could substitute reach for depth. In the search era, SEO and traffic optimization disguised the same absence behind engagement metrics. In the AI era, the disguise is gone. Generative models can produce unlimited output in any format at near-zero marginal cost. Reach is not a moat. Personalization is not a moat. Format innovation is not a moat. The only thing that is not immediately replicable by a sufficiently capable generative system is a lens built through years of genuine intellectual engagement with a domain, combined with the trust that accumulates when an audience recognizes that the lens serves their journey rather than the organization's metrics. Axios built its business on a format innovation: the Smart Brevity system. The format was replicable. Substack's ecosystem demonstrated that the lens (not the format) is what creates non-substitutable value. Every Substack writer with real audience depth has a lens. The format is Substack. The field, when it exists, belongs to the writer.
+      </p>
+
+      <p class="fade-in">
+        <strong>Fifth:</strong> the user who leaves most capable is the proof of the arc. Not the user who stays longest, not the user who spends most, not the user who refers most. The user who, after sustained contact with this field, can navigate the domain with more sophistication, more nuance, and more independence than they could before—that user is what the Constitutive Arc is for. Everything else is overhead. Netflix's autoplay mechanic is the clearest contemporary example of arc capture at scale: a system engineered so that the cost of stopping is always slightly higher than the cost of continuing, producing sustained engagement that accumulates into nothing. The hours spent are real. The transformation produced is negligible. Spotify's Wrapped feature is the opposite: by returning to users an account of their own listening year, it produces a moment of vocabulary transfer: a language for talking about their musical identity that came from the field. It is not transformation in the deep arc sense, but it is the structural gesture of the return with elixir: here is what you found in the field; here is language to carry it back. The gesture is right even if the depth is shallow. The Constitutive Arc is the design commitment to make that gesture not just an annual marketing event but the persistent structure of the field itself.
+      </p>
+
+      <p class="fade-in">
+        A framework that cannot fail is not a framework; it is a set of preferences with prose. The Constitutive Arc can fail, and it should be possible to demonstrate that it has. A field that scores below 40% on the Lens Consistency Test has no coherent center regardless of what its editorial team believes. An audience that cannot articulate opposing positions in the domain after twelve months of sustained contact has been captured, not transformed. The Vocabulary Transfer curve will have plateaued while the Independence Reasoning scores remain flat. An organization whose departure rate correlates negatively with user performance on independent reasoning is producing dependency, not elixir. These are falsifiable claims. The Constitutive Arc earns its authority not from the elegance of the framework but from the quality of the transformations it helps design, and from its willingness to be tested against them. If the proxies exist and the scores are bad, the field has failed. That sentence is load-bearing. A framework that cannot say it is not a framework.
+      </p>
+
+      <div class="break fade-in">&#9670; &nbsp; &#9670; &nbsp; &#9670;</div>
+
+      <p class="fade-in">
+        Hokusai made thirty-six views of Fuji. He started the series at seventy. He'd spent his whole life making images. He spent his last years asking what it looked like to make the same image thirty-six times and discover, through the accumulation, what was permanent.
+      </p>
+
+      <p class="fade-in">
+        He signed his late work not with his name but with a title he gave himself: Gakyo Rojin Manji: The Old Man Mad About Painting. A declaration of what he had finally understood: the practice was not subordinate to the product. Making was not a means to an end. The thirty-six views were not thirty-six representations of a mountain. They were thirty-six encounters with what does not change, made by someone who knew by then how much everything else does.
+      </p>
+
+      <p class="fade-in">
+        A media organization that understands the Constitutive Arc has stopped asking how to survive the wave. It has started asking what Fuji looks like from this angle, and this one, what the permanent structure is that all its surfaces are views of, what the lens is that makes thirty-six different encounters recognizably the same encounter with the same mountain.
+      </p>
+
+      <p class="fade-in">
+        That question is not a strategy. It is prior to strategy. It is the question that, once genuinely answered, turns a content operation into a field, and a field into something that can outlast the wave that is currently terrifying everyone in the boats.
+      </p>
+
+      <p class="fade-in">
+        The wave breaks. Fuji remains.
+      </p>
+
+      <p class="fade-in">
+        The only meaningful question is whether you are building something in the category of the wave or the category of the mountain. Everything else in media strategy follows from that distinction. Almost nothing in current media strategy begins there.
+      </p>
+
+      <p class="fade-in" style="font-style:italic; font-size:1.22rem; margin-top:3rem; color:var(--deep); padding-top:2rem; border-top: 1px solid var(--rule);">
+        This is the return. Not an answer. A lens. The rest is the work.
+      </p>
+
+      <!-- Final genealogy and colophon -->
+      <div style="margin-top: 5rem; padding: 2.5rem; background: var(--highlight); color: var(--ink); border: 1px solid var(--rule); border-top: 2px solid var(--accent);" class="fade-in">
+        <div style="font-family:'JetBrains Mono',monospace; font-size:0.5rem; letter-spacing:0.22em; text-transform:uppercase; color:var(--muted); margin-bottom:1.5rem;">The Constitutive Arc - Complete</div>
+
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:2rem; margin-bottom:2rem;">
+          <div>
+            <div style="font-family:'JetBrains Mono',monospace; font-size:0.48rem; letter-spacing:0.15em; text-transform:uppercase; color:var(--muted); margin-bottom:0.8rem;">Six Movements</div>
+            <div style="font-family:'Inter',serif; font-size:0.85rem; color:var(--deep); line-height:2;">
+              I &nbsp;&mdash;&nbsp; The Collapse<br>
+              II &nbsp;&mdash;&nbsp; The Field<br>
+              III &nbsp;&mdash;&nbsp; The Ancestor<br>
+              IV &nbsp;&mdash;&nbsp; The Architecture<br>
+              V &nbsp;&mdash;&nbsp; The Danger<br>
+              VI &nbsp;&mdash;&nbsp; The Return
+            </div>
+          </div>
+          <div>
+            <div style="font-family:'JetBrains Mono',monospace; font-size:0.48rem; letter-spacing:0.15em; text-transform:uppercase; color:var(--muted); margin-bottom:0.8rem;">Conceptual Lineage</div>
+            <div style="margin-bottom:1rem;">
+              <div style="font-family:'Space Grotesk',serif; font-size:1rem; color:var(--ink);">ZMOT</div>
+              <div style="font-family:'JetBrains Mono',monospace; font-size:0.46rem; color:var(--muted);">Google &middot; 2011 &middot; Before purchase</div>
+            </div>
+            <div style="margin-bottom:1rem;">
+              <div style="font-family:'Space Grotesk',serif; font-size:1rem; color:var(--ink);">ZMOI</div>
+              <div style="font-family:'JetBrains Mono',monospace; font-size:0.46rem; color:var(--muted);">Dell'Agostino &middot; Before belief</div>
+            </div>
+            <div>
+              <div style="font-family:'Space Grotesk',serif; font-size:1.1rem; color:rgba(184,55,26,0.8);">The Constitutive Arc</div>
+              <div style="font-family:'JetBrains Mono',monospace; font-size:0.46rem; color:rgba(184,55,26,0.45);">Dell'Agostino &middot; Before identity</div>
+            </div>
+          </div>
+        </div>
+
+        <div style="border-top:1px solid var(--rule); padding-top:1.2rem; font-family:'JetBrains Mono',monospace; font-size:0.48rem; letter-spacing:0.1em; color:var(--muted); display:flex; justify-content:space-between; flex-wrap:wrap; gap:0.5rem;">
+          <span>Diego Dell'Agostino</span>
+          <span>~11,500 words &nbsp;&middot;&nbsp; Six movements &nbsp;&middot;&nbsp; Two iterations post red team</span>
+          <span>CAX v1.1</span>
+        </div>
+      </div>
+
+
+
+
+
+    </div><!-- /essay-main -->
+
+    <!-- SIDEBAR -->
+    <aside class="essay-sidebar">
+
+      <div class="sidebar-toc fade-in">
+        <div class="sidebar-toc-title">Movements</div>
+        <div class="toc-item active"><span class="toc-num">I</span> The Collapse</div>
+        <div class="toc-item active"><span class="toc-num">II</span> The Field</div>
+        <div class="toc-item active"><span class="toc-num">III</span> The Ancestor</div>
+        <div class="toc-item active"><span class="toc-num">IV</span> The Architecture</div>
+        <div class="toc-item active"><span class="toc-num">V</span> The Danger</div>
+        <div class="toc-item active"><span class="toc-num">VI</span> The Return</div>
+      </div>
+
+      <div class="sidebar-note fade-in">
+        Ray Dalio, <em>Principles for Navigating a Big Cycle</em> (2021). The framework Dalio applies to empires and reserve currencies maps with structural precision onto the media cycle described here.
+      </div>
+
+      <div class="sidebar-note fade-in">
+        Walter Lippmann, <em>Public Opinion</em> (1922). The foundational text on how mediated reality shapes political cognition.
+      </div>
+
+      <div class="sidebar-note fade-in">
+        Marshall McLuhan, <em>Understanding Media</em> (1964). "The medium is the message" as the first theory of constitutive media function.
+      </div>
+
+      <div class="sidebar-genealogy fade-in">
+        <div class="sidebar-genealogy-title">Conceptual Lineage</div>
+        <div class="gen-item">
+          <div class="gen-name">ZMOT</div>
+          <div class="gen-sub">Google &middot; 2011<br>Before purchase</div>
+        </div>
+        <div class="gen-item">
+          <div class="gen-name">ZMOI</div>
+          <div class="gen-sub">Dell'Agostino<br>Before belief</div>
+        </div>
+        <div class="gen-item active">
+          <div class="gen-name">CAX</div>
+          <div class="gen-sub">Dell'Agostino<br>Before identity</div>
+        </div>
+      </div>
+
+    </aside>
+
+  </div><!-- /essay-grid -->
+
+        </div>
+
+        <!-- ASIDE -->
+        <div class="essay-aside">
+          <div class="sidebar-genealogy fade-in">
+            <div class="sidebar-genealogy-title">Conceptual Lineage</div>
+            <div class="gen-item">
+              <div class="gen-name">ZMOT</div>
+              <div class="gen-sub">Google &middot; 2011<br>Before purchase</div>
+            </div>
+            <div class="gen-item">
+              <div class="gen-name">ZMOI</div>
+              <div class="gen-sub">Dell'Agostino<br>Before belief</div>
+            </div>
+            <div class="gen-item active">
+              <div class="gen-name">CAX</div>
+              <div class="gen-sub">Dell'Agostino<br>After belief</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Colophon -->
+      <div class="colophon fade-in">
+        <div class="colophon-inner">
+          <div>
+            <div class="colophon-label">About this paper</div>
+            <p class="colophon-text">The Constitutive Arc is a framework for media organizations navigating the post-algorithmic era. It draws on Ray Dalio's power cycle theory, Joseph Campbell's monomyth (as design heuristic, not anthropological claim), Alexander Osterwalder's Business Model Canvas, and the practitioner literature on media strategy and product development.</p>
+          </div>
+          <div>
+            <div class="colophon-label">Colophon</div>
+            <p class="colophon-text">~11,500 words &nbsp;&middot;&nbsp; Six movements &nbsp;&middot;&nbsp; Two iterations post red team &nbsp;&middot;&nbsp; Diego Dell'Agostino &nbsp;&middot;&nbsp; Buenos Aires</p>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- essay-wrap -->
+
+    <footer style="border-top: 3px double var(--ink); padding: 1.5rem 5rem; display: flex; justify-content: space-between; align-items: center;">
+      <div style="font-family:'JetBrains Mono',monospace;font-size:0.5rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--muted);">&copy; 2026 Diego Dell'Agostino</div>
+      <div style="font-family:'Space Grotesk',serif;font-size:1rem;font-style:italic;color:var(--rule);">&#10022;</div>
+      <div style="font-family:'JetBrains Mono',monospace;font-size:0.5rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--muted);">Media Strategy &amp; Transformation</div>
+    </footer>
+
+  </div><!-- page-wrap -->
+
+  <!-- LIGHTBOX -->
+  <div id="dlb" role="dialog" aria-modal="true">
+    <div id="dlb-box">
+      <button id="dlb-close">esc &middot; close</button>
+      <div id="dlb-svg"></div>
+      <div id="dlb-cap"></div>
+    </div>
+    <span id="dlb-esc">click outside or press esc to close</span>
+  </div>
+
+  <script src="global.js?v=20260419b"></script>
+  <script>
+    // Fade in on scroll
+    var obs = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){ if(e.isIntersecting) e.target.classList.add('visible'); });
+    }, { threshold: 0.06, rootMargin: '0px 0px -20px 0px' });
+    document.querySelectorAll('.fade-in').forEach(function(el){ obs.observe(el); });
+
+    // Lightbox
+    var dlb = document.getElementById('dlb');
+    var svgEl = document.getElementById('dlb-svg');
+    var cap = document.getElementById('dlb-cap');
+    var cls = document.getElementById('dlb-close');
+    function dlbOpen(fig){ var svg=fig.querySelector('svg'); if(!svg) return; svgEl.innerHTML=''; svgEl.appendChild(svg.cloneNode(true)); cap.textContent=fig.getAttribute('aria-label')||''; dlb.classList.add('on'); document.body.style.overflow='hidden'; }
+    function dlbClose(){ dlb.classList.remove('on'); document.body.style.overflow=''; }
+    document.querySelectorAll('figure.diagram').forEach(function(fig){ fig.addEventListener('click', function(){ dlbOpen(fig); }); });
+    dlb.addEventListener('click', function(e){ if(e.target===dlb) dlbClose(); });
+    cls.addEventListener('click', dlbClose);
+    document.addEventListener('keydown', function(e){ if(e.key==='Escape') dlbClose(); });
+  </script>
+</body>
+</html>

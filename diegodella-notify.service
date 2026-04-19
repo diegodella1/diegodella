@@ -1,0 +1,15 @@
+[Unit]
+Description=DiegoDella contact notify service
+After=network.target
+
+[Service]
+Type=simple
+WorkingDirectory=/home/diego/Documents/diegodella/notify
+ExecStart=/home/diego/Documents/diegodella/notify/venv/bin/python /home/diego/Documents/diegodella/notify/app.py
+Restart=always
+RestartSec=5
+User=diego
+Environment=PYTHONUNBUFFERED=1
+
+[Install]
+WantedBy=multi-user.target

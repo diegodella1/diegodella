@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-TJF4P0NYFT"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-TJF4P0NYFT');
+  </script>
+  <script>(function(){var t=localStorage.getItem("theme");if(!t)t=window.matchMedia("(prefers-color-scheme:dark)").matches?"dark":"light";document.documentElement.setAttribute("data-theme",t)})()</script>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <meta name="theme-color" content="#e6d5b8">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="Narrative Mechanics">
+  <link rel="apple-touch-icon" href="/og-default.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="On engagement as a measure of human presence, and what it measures when most of the presence is automated.">
+  <meta name="author" content="Diego Dell'Agostino">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://diegodella.ar/the-empty-room.html">
+  <meta property="og:title" content="The Empty Room — After You Post 01">
+  <meta property="og:description" content="On engagement as a measure of human presence, and what it measures when most of the presence is automated.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://diegodella.ar/the-empty-room.html">
+  <meta property="og:site_name" content="Narrative Mechanics">
+  <meta property="og:image" content="https://diegodella.ar/og-default.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:locale" content="en_US">
+  <meta property="article:author" content="Diego Dell'Agostino">
+  <meta property="article:published_time" content="2026-03-10">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="The Empty Room — After You Post 01">
+  <meta name="twitter:description" content="On engagement as a measure of human presence, and what it measures when most of the presence is automated.">
+  <meta name="twitter:image" content="https://diegodella.ar/og-default.png">
+  <title>The Empty Room — Diego Dell'Agostino</title>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "The Empty Room",
+    "description": "On engagement as a measure of human presence, and what it measures when most of the presence is automated.",
+    "author": {
+      "@type": "Person",
+      "name": "Diego Dell'Agostino",
+      "url": "https://diegodella.ar/about.html"
+    },
+    "datePublished": "2026-03-10",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Narrative Mechanics",
+      "url": "https://diegodella.ar"
+    },
+    "url": "https://diegodella.ar/the-empty-room.html",
+    "mainEntityOfPage": "https://diegodella.ar/the-empty-room.html"
+  }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;700&family=Epilogue:ital,wght@0,400;1,400;0,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="global.css?v=20260418f">
+  <link rel="stylesheet" href="components.css?v=20260418f">
+  <style>
+    ::selection { background: var(--accent); color: var(--paper); }
+    .hero { max-width: 900px; margin: 0 auto; padding: 5rem 4rem 4rem; display: grid; grid-template-columns: 1fr 280px; gap: 2rem; align-items: center; }
+    .hero-title { font-family: 'Space Grotesk', serif; font-size: clamp(2.8rem, 6vw, 5rem); font-weight: 900; line-height: 1.0; letter-spacing: -0.025em; margin-bottom: 1rem; }
+    .hero-title em { font-style: italic; color: var(--ink); display: block; text-decoration: none; background: linear-gradient(180deg, transparent 54%, color-mix(in srgb, var(--accent) 18%, transparent) 54%); padding: 0 0.08em 0.02em 0; box-decoration-break: clone; -webkit-box-decoration-break: clone; }
+    .hero-subtitle { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 1.1rem; font-style: italic; color: var(--muted); margin-bottom: 2rem; line-height: 1.5; max-width: 480px; }
+    .hero-svg { width: 100%; height: auto; }
+    .content { max-width: 720px; margin: 0 auto; padding: 0 2.5rem 4rem; }
+    .essay-section { margin-bottom: 4.5rem; opacity: 0; transform: translateY(24px); animation: fadeUp 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards; }
+    .essay-section:nth-child(1) { animation-delay: 0.05s; }
+    .essay-section:nth-child(2) { animation-delay: 0.12s; }
+    .essay-section:nth-child(3) { animation-delay: 0.19s; }
+    .essay-section:nth-child(4) { animation-delay: 0.26s; }
+    .essay-section:nth-child(5) { animation-delay: 0.33s; }
+    .essay-section:nth-child(6) { animation-delay: 0.40s; }
+    @keyframes fadeUp { to { opacity: 1; transform: translateY(0); } }
+    .essay-section p { margin-bottom: 1.5rem; font-size: 1.05rem; line-height: 1.92; text-align: justify; hyphens: auto; }
+    .essay-section p:last-child { margin-bottom: 0; }
+    .essay-section.intro p:first-of-type::first-letter {
+      font-family: 'Space Grotesk', serif; font-size: 4.2rem; font-weight: 900;
+      float: left; line-height: 0.72; margin-right: 0.07em; margin-top: 0.12em; color: var(--accent);
+    }
+    .series-nav { max-width: 680px; margin: 0 auto; padding: 2rem 2.5rem 0; border-top: 1px solid var(--rule); }
+    .series-nav-label { font-family: 'JetBrains Mono', monospace; font-size: 0.5rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--muted); margin-bottom: 1.25rem; }
+    .series-list { list-style: none; display: flex; flex-direction: column; gap: 0.5rem; }
+    .series-list li { display: flex; align-items: baseline; gap: 0.75rem; }
+    .series-list li a { text-decoration: none; color: var(--ink-2); transition: color 0.2s; }
+    .series-list li a:hover { color: var(--accent); }
+    .series-num { font-family: 'JetBrains Mono', monospace; font-size: 0.5rem; color: var(--muted); min-width: 1.5rem; }
+    .series-title { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 0.9rem; color: var(--ink-2); }
+    .series-title.current { color: var(--ink); font-weight: 600; }
+    .share-btn { display: inline-flex; align-items: center; gap: 0.5rem; font-family: 'JetBrains Mono', monospace; font-size: 0.5rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--muted); background: none; border: 1px solid var(--rule); padding: 0.5em 1em; cursor: pointer; transition: all 0.15s; margin-top: 1rem; position: relative; z-index: 1; }
+    .share-btn:hover { color: var(--accent); border-color: var(--accent); }
+    .share-btn.copied { color: var(--accent); border-color: var(--accent); }
+    .paper-nav { max-width: 680px; margin: 0 auto; padding: 0 2.5rem 5rem; display: flex; justify-content: space-between; }
+    .paper-nav a { display: flex; align-items: center; gap: 0.75rem; text-decoration: none; color: var(--ink); font-family: 'JetBrains Mono', monospace; font-size: 0.55rem; letter-spacing: 0.15em; text-transform: uppercase; transition: color 0.2s; }
+    .paper-nav a:hover { color: var(--accent); }
+    .paper-nav a svg { width: 16px; height: 16px; stroke: currentColor; fill: none; stroke-width: 1.5; }
+    @media (max-width: 768px) {
+      .hero { padding: 3rem 1.5rem 2rem; grid-template-columns: 1fr; }
+      .hero-svg { max-width: 200px; margin: 0 auto; order: -1; }
+      .content { padding: 0 1.5rem 4rem; }
+      .series-nav { padding: 2rem 1.5rem 0; }
+      .paper-nav { padding: 0 1.5rem 3rem; }
+    }
+  </style>
+</head>
+<body class="series-ayp">
+  <div id="pbar"></div>
+  <div id="pbar-label"></div>
+  <div class="bg-pattern"></div>
+  <div class="bg-grain"></div>
+
+  <div class="page-wrap">
+    <div class="top-bar">
+      <span>Buenos Aires &middot; Since 2008</span>
+      <span>18 Essays &middot; 3 Frameworks &middot; ~289 min of reading &middot; <a href="about.html">About the author</a></span>
+    </div>
+
+    <nav class="nav">
+      <div class="nav-inner">
+        <a href="index.html" class="nav-brand">Narrative<em>Mechanics</em></a>
+        <button class="nav-btn nav-toggle" aria-label="Menu" aria-expanded="false" aria-controls="navLinks" id="navToggle">
+          <svg viewBox="0 0 24 24"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg>
+        </button>
+        <div class="nav-links" id="navLinks">
+          <a href="index.html" class="nav-link">Home</a>
+          <div class="nav-sep"></div>
+          <a href="archive.html" class="nav-link">Start Here</a>
+          <a href="frameworks.html" class="nav-link">Frameworks</a>
+          <a href="series.html" class="nav-link">Series</a>
+          <a href="essays.html" class="nav-link">Essays</a>
+          <a href="notes.html" class="nav-link">Notes</a>
+          <div class="nav-sep"></div>
+          <a href="about.html" class="nav-link">About</a>
+        </div>
+        <div class="nav-right">
+          <button class="nav-btn" aria-label="Toggle theme" id="themeToggle">
+            <svg class="icon-moon" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+            <svg class="icon-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <header class="hero">
+      <div class="hero-main">
+        <div class="hero-kicker">After You Post · 01 &nbsp;&middot;&nbsp; March 2026</div>
+        <h1 class="hero-title">The Empty<em>Room</em></h1>
+        <p class="hero-subtitle">On engagement as a measure of human presence, and what it measures when most of the presence is automated.</p>
+        <div class="hero-byline"><div class="hero-byline-dot"></div><span class="hero-byline-text">Diego Dell'Agostino &nbsp;&middot;&nbsp; Buenos Aires</span></div>
+      </div>
+      <!-- SVG: An empty room with a chair, floating engagement metrics dissolving -->
+      <svg class="hero-svg" viewBox="0 0 160 200" xmlns="http://www.w3.org/2000/svg">
+        <style>
+          @keyframes erFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-4px)}}
+          @keyframes erFade{0%{opacity:0.7}100%{opacity:0}}
+          @keyframes erPulse{0%,100%{opacity:0.3}50%{opacity:0.7}}
+          @keyframes erAppear{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+        </style>
+        <!-- Room outline -->
+        <rect x="20" y="40" width="120" height="120" rx="2" fill="none" stroke="var(--rule)" stroke-width="0.8" stroke-dasharray="4 3"/>
+        <!-- Floor line -->
+        <line x1="20" y1="160" x2="140" y2="160" stroke="var(--ink)" stroke-width="1"/>
+        <!-- Empty chair -->
+        <rect x="60" y="110" width="40" height="5" rx="1" fill="none" stroke="var(--ink)" stroke-width="1.2" opacity="0" style="animation:erAppear 0.6s 0.3s forwards"/>
+        <line x1="63" y1="115" x2="63" y2="140" stroke="var(--ink)" stroke-width="1" opacity="0" style="animation:erAppear 0.6s 0.4s forwards"/>
+        <line x1="97" y1="115" x2="97" y2="140" stroke="var(--ink)" stroke-width="1" opacity="0" style="animation:erAppear 0.6s 0.4s forwards"/>
+        <rect x="58" y="90" width="4" height="25" rx="1" fill="none" stroke="var(--ink)" stroke-width="1" opacity="0" style="animation:erAppear 0.6s 0.5s forwards"/>
+        <!-- Floating metrics dissolving -->
+        <g style="animation:erFloat 3s ease-in-out infinite">
+          <text x="35" y="65" font-family="monospace" font-size="7" fill="var(--accent)" style="animation:erFade 4s 1s forwards">+2.4k</text>
+        </g>
+        <g style="animation:erFloat 3.5s ease-in-out infinite 0.5s">
+          <text x="100" y="55" font-family="monospace" font-size="6" fill="var(--muted)" style="animation:erFade 3.5s 1.5s forwards">98%</text>
+        </g>
+        <g style="animation:erFloat 2.8s ease-in-out infinite 1s">
+          <text x="50" y="80" font-family="monospace" font-size="5" fill="var(--rule)" style="animation:erFade 3s 2s forwards">▲ 12.1</text>
+        </g>
+        <g style="animation:erFloat 3.2s ease-in-out infinite 0.3s">
+          <text x="105" y="75" font-family="monospace" font-size="5.5" fill="var(--muted)" style="animation:erFade 4.5s 1.2s forwards">♥ 841</text>
+        </g>
+        <!-- Cursor blinking alone -->
+        <rect x="78" y="130" width="4" height="8" fill="var(--accent)" style="animation:erPulse 1.5s ease-in-out infinite"/>
+        <!-- Label -->
+        <text x="80" y="185" font-family="monospace" font-size="6" fill="var(--muted)" text-anchor="middle" letter-spacing="2" opacity="0" style="animation:erAppear 0.5s 2s forwards">THE ROOM</text>
+        <text x="80" y="195" font-family="monospace" font-size="5" fill="var(--rule)" text-anchor="middle" letter-spacing="1.5" opacity="0" style="animation:erAppear 0.5s 2.3s forwards">who is still here?</text>
+      </svg>
+    </header>
+
+    <div class="chapter-divider"><div class="chapter-divider-line"></div></div>
+
+    <div class="content">
+
+      <!-- INTRO -->
+      <div class="essay-section intro">
+        <p>The numbers were fine. That was the first problem.</p>
+        <p>You published something last week, or last month. The impressions came in. Engagement rate looked fine. Everything the dashboard uses to tell you the thing worked was telling you the thing worked. But something was off. Not dramatically, not silence, just the echo coming back slightly wrong. Responses that felt produced rather than felt. Shares without weight behind them. Like the content passed through people without leaving a mark.</p>
+        <p>You probably filed it under off week. Algorithm change. Audience fatigue. There's always an explanation available when you need one.</p>
+        <p>But the feeling came back. And then again.</p>
+      </div>
+
+      <!-- THE INSTRUMENT -->
+      <div class="essay-section">
+        <div class="section-badge">
+          <div class="section-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="12" x2="16" y2="14"/></svg></div>
+          <div class="section-meta">
+            <span class="section-number">Section 01</span>
+            <span class="section-title">The Instrument</span>
+          </div>
+        </div>
+        <div class="section-rule"></div>
+        <div class="section-body">
+          <p>Engagement metrics were always measuring behavior. Not presence, not attention, not a human on the other side of the screen who actually read the thing. Behavior. The click. The scroll-stop. The repost. A signal that something happened, with no information about who made it happen.</p>
+          <p>For twenty years that didn't matter much, because behavior mostly implied a human. We knew it wasn't perfect: click fraud existed, click farms existed, whole industries grew up around detecting and filtering the noise. But the assumption held well enough to build on. Non-human behavior was the exception you corrected for. The signal, underneath the fraud, still pointed to a person.</p>
+          <p>That's what changed. Agents aren't fraud. They're legitimate traffic. They don't show up as anomalies in your analytics because they aren't anomalies. The system has no reason to filter them out and, increasingly, no way to tell them apart.</p>
+
+          <div class="pull-quote">
+            <p>The room didn't empty overnight. It filled, with something that behaves exactly like the audience used to behave.</p>
+          </div>
+
+          <p>Agents are browsing. Agents are transacting. The web already has llms.txt, a proposed standard modeled on robots.txt, that tells AI crawlers how to read your site. When the infrastructure starts building protocols specifically for non-human visitors, that's not a warning sign. That's a receipt. It already happened, while you were looking at your analytics and feeling vaguely unsettled.</p>
+          <p>The dashboard still glows. The echo is just slightly wrong.</p>
+        </div>
+      </div>
+
+      <!-- WHAT IT PROVES -->
+      <div class="essay-section">
+        <div class="section-badge">
+          <div class="section-icon"><svg viewBox="0 0 24 24"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg></div>
+          <div class="section-meta">
+            <span class="section-number">Section 02</span>
+            <span class="section-title">What It Proves</span>
+          </div>
+        </div>
+        <div class="section-rule"></div>
+        <div class="section-body">
+          <p>The problem isn't that the audience changed. Audiences change all the time, that's the whole history of media. The problem is that the instrument we use to measure the audience was never measuring what we thought. It was measuring behavior. And behavior doesn't require a person anymore.</p>
+          <p>So what does any of it prove? A high-engagement post proves the algorithm rewarded it. A high-traffic article proves something requested it. Neither tells you whether a human read the thing, cared about it, or will think about it tomorrow.</p>
+
+          <div class="margin-note">The content is still being produced. The metrics are still being generated. The feedback loop is still spinning. It's just that somewhere in that loop, the human became optional.</div>
+
+          <p>The dashboard still glows the same color it always did.</p>
+        </div>
+      </div>
+
+      <!-- THE REAL COST -->
+      <div class="essay-section">
+        <div class="section-badge">
+          <div class="section-icon"><svg viewBox="0 0 24 24"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div>
+          <div class="section-meta">
+            <span class="section-number">Section 03</span>
+            <span class="section-title">The Real Cost</span>
+          </div>
+        </div>
+        <div class="section-rule"></div>
+        <div class="section-body">
+          <p>This isn't an argument against publishing, and it's not a warning about what's coming. The thing that bothers me is simpler: the metrics we use to evaluate whether we're reaching people were never designed to distinguish between a person and a process that mimics one.</p>
+          <p>They still aren't.</p>
+          <p>Which means every decision downstream of those metrics (what to publish, when, for whom, in what register) is being made on the basis of a signal that has always been a proxy, and is now a proxy for something increasingly different from what we intended. The optimization loop is intact. It's just that nobody checked what it's optimizing toward.</p>
+          <p>Think about what that means in practice. You A/B test a headline. The variant with more clicks wins. You write more headlines like it. The system learns. You learn. Both of you get better at producing something that generates behavior. But if the behavior is increasingly generated by agents reading for indexing, summarizing for retrieval, or scanning for relevance signals on behalf of a user who will never see your page at all, then you've spent six months getting very good at writing for a reader who isn't there. The reader who isn't there still generates behavior.</p>
+          <p>The room isn't empty. That's the thing. It's full. It's just not full of who you think.</p>
+        </div>
+      </div>
+
+      <!-- THE QUESTION -->
+      <div class="essay-section">
+        <div class="section-badge">
+          <div class="section-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg></div>
+          <div class="section-meta">
+            <span class="section-number">Section 04</span>
+            <span class="section-title">The Question This Series Will Carry</span>
+          </div>
+        </div>
+        <div class="section-rule"></div>
+        <div class="section-body">
+          <p>I'm not going to answer the question I actually want to answer here. That one takes the rest of this series. But I want to leave it somewhere it can sit:</p>
+          <p>If engagement measures behavior, and agents can produce behavior, is there anything in the relationship between a creator and an audience that an agent fundamentally cannot simulate?</p>
+          <p>Not at scale. Not statistically. Not at all.</p>
+          <p>I think yes. I think there's something in that relationship that doesn't survive delegation. But we've never had to name it, because we've never had to defend it. We just called it "connection" and assumed the metrics were picking it up.</p>
+          <p>They weren't. They were tracking clicks.</p>
+          <p>The clicks are still coming. The question is who's making them.</p>
+        </div>
+      </div>
+
+      <!-- CLOSING -->
+      <div class="closing">
+        <div class="closing-ornament-top">&#10022; &nbsp; &#10087; &nbsp; &#10022;</div>
+        <p>The clicks are still coming. The question is who's making them.</p>
+        <div class="closing-ornament-bottom"><a href="https://diegodella.ar" style="color:inherit;text-decoration:none;">diegodella.ar</a> &nbsp;&middot;&nbsp; Buenos Aires, 2026</div>
+        <button class="share-btn" id="shareBtn" onclick="handleShare()"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/><polyline points="16 6 12 2 8 6"/><line x1="12" y1="2" x2="12" y2="15"/></svg> Share</button>
+      </div>
+
+      <!-- Series Nav -->
+      <div class="series-nav">
+        <div class="series-nav-label">After You Post &middot; The Series</div>
+        <ul class="series-list">
+          <li><span class="series-num">01</span><span class="series-title current">The Empty Room</span></li>
+          <li><span class="series-num">02</span><a href="the-proxy-self.html"><span class="series-title">The Proxy Self</span></a></li>
+          <li><span class="series-num">03</span><a href="writing-for-the-filter.html"><span class="series-title">Writing for the Filter</span></a></li>
+          <li><span class="series-num">04</span><a href="the-trust-collapse.html"><span class="series-title">The Trust Collapse</span></a></li>
+          <li><span class="series-num">05</span><a href="origin-gravity.html"><span class="series-title">Origin Gravity</span></a></li>
+        </ul>
+      </div>
+
+      <div class="paper-nav">
+        <a href="the-last-human-impression.html"><svg viewBox="0 0 24 24"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg> The Series</a>
+        <a href="the-proxy-self.html">The Proxy Self &nbsp;<svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+      </div>
+    </div>
+
+    <footer>
+      <div class="footer-left">&copy; 2026 Diego Dell'Agostino</div>
+      <div class="footer-center">&#10087;</div>
+      <div class="footer-right">Media Strategy &amp; Product Thinking</div>
+    </footer>
+  </div>
+<script src="global.js?v=20260419b"></script>
+<script>
+  function handleShare() {
+    var u = window.location.href, t = 'The Empty Room', x = 'On engagement as a measure of human presence, and what it measures when most of the presence is automated.';
+    if (navigator.share) { navigator.share({ title: t, text: x, url: u }).catch(function(){}); }
+    else if (navigator.clipboard) { navigator.clipboard.writeText(u).then(function() { var b = document.getElementById('shareBtn'); b.classList.add('copied'); b.innerHTML = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Copied'; setTimeout(function() { b.classList.remove('copied'); b.innerHTML = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/><polyline points="16 6 12 2 8 6"/><line x1="12" y1="2" x2="12" y2="15"/></svg> Share'; }, 2000); }); }
+  }
+</script>
+</body>
+</html>

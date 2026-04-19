@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-TJF4P0NYFT"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-TJF4P0NYFT');
+  </script>
+  <script>(function(){var t=localStorage.getItem("theme");if(!t)t=window.matchMedia("(prefers-color-scheme:dark)").matches?"dark":"light";document.documentElement.setAttribute("data-theme",t)})()</script>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <meta name="theme-color" content="#e6d5b8">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="Narrative Mechanics">
+  <link rel="apple-touch-icon" href="/og-default.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Go-to-market playbooks assume functional distribution that no longer exists. Three moves to launch through noise. Paper 05.">
+  <meta name="author" content="Diego Dell'Agostino">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://diegodella.ar/paper-05.html">
+  <meta property="og:title" content="Launching Into Noise | Narrative-First Paper 05">
+  <meta property="og:description" content="Go-to-market playbooks assume functional distribution that no longer exists. Three moves to launch through noise. Paper 05.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://diegodella.ar/paper-05.html">
+  <meta property="og:site_name" content="Narrative Mechanics">
+  <meta property="og:image" content="https://diegodella.ar/og-default.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Launching Into Noise | Narrative-First Paper 05">
+  <meta name="twitter:description" content="Go-to-market playbooks assume functional distribution that no longer exists. Three moves to launch through noise. Paper 05.">
+  <meta name="twitter:image" content="https://diegodella.ar/og-default.png">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ScholarlyArticle",
+    "headline": "Launching Into Noise: Go-to-Market After Distribution Occlusion",
+    "description": "The fifth paper in the Narrative-First series. Launching Into Noise argues that the standard go-to-market playbook assumes a functional distribution layer that no longer exists, and proposes three moves: Signal Isolation, Direct Path Construction, and Trust-First Sequencing. By Diego Dell'Agostino.",
+    "author": {
+      "@type": "Person",
+      "name": "Diego Dell'Agostino",
+      "url": "https://diegodella.ar/about.html"
+    },
+    "isPartOf": {
+      "@type": "CreativeWorkSeries",
+      "name": "Narrative-First",
+      "url": "https://diegodella.ar/paper-01.html",
+      "position": 5
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Narrative Mechanics",
+      "url": "https://diegodella.ar"
+    },
+    "url": "https://diegodella.ar/paper-05.html",
+    "datePublished": "2026-02-20",
+    "inLanguage": "en"
+  }
+  </script>
+  <title>Launching Into Noise | Narrative-First Paper 05</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;700&family=Epilogue:ital,wght@0,400;1,400;0,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="global.css?v=20260418f">
+  <link rel="stylesheet" href="components.css?v=20260418f">
+  <style>
+    /* Extra CSS variables for this page */
+    :root {
+      --framework: #1a3a5c;
+      --framework-light: #dce8f0;
+    }
+    [data-theme="dark"] {
+      --framework: #4a9aca;
+      --framework-light: rgba(74,154,202,0.15);
+    }
+
+    /* Hero */
+    .hero { max-width: 900px; margin: 0 auto; padding: 5rem 3rem 5rem; display: grid; grid-template-columns: 1fr auto; gap: 3rem; align-items: start; }
+    .hero-title { font-family: 'Space Grotesk', serif; font-size: clamp(2.8rem, 6vw, 5rem); font-weight: 900; line-height: 1.0; letter-spacing: -0.025em; margin-bottom: 1rem; }
+    .hero-title em { font-style: italic; color: var(--ink); display: block; text-decoration: none; background: linear-gradient(180deg, transparent 54%, color-mix(in srgb, var(--accent) 18%, transparent) 54%); padding: 0 0.08em 0.02em 0; box-decoration-break: clone; -webkit-box-decoration-break: clone; }
+    .hero-subtitle { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 1.15rem; font-style: italic; color: var(--muted); margin-bottom: 2rem; line-height: 1.5; max-width: 440px; }
+    .hero-illustration { width: 280px; flex-shrink: 0; padding-top: 1rem; opacity: 0.85; }
+
+    /* Content */
+    .content { max-width: 720px; margin: 0 auto; padding: 0 2.5rem 8rem; }
+
+    /* Section animations */
+    .section { margin-bottom: 5.5rem; opacity: 0; transform: translateY(28px); animation: fadeUp 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards; }
+    .section:nth-child(1) { animation-delay: 0.1s; } .section:nth-child(2) { animation-delay: 0.25s; } .section:nth-child(3) { animation-delay: 0.4s; } .section:nth-child(4) { animation-delay: 0.55s; } .section:nth-child(5) { animation-delay: 0.65s; } .section:nth-child(6) { animation-delay: 0.75s; } .section:nth-child(7) { animation-delay: 0.85s; } .section:nth-child(8) { animation-delay: 0.9s; }
+    @keyframes fadeUp { to { opacity: 1; transform: translateY(0); } }
+
+    /* Construct definition */
+    .construct-def { margin: 2.5rem 0; border: 1px solid var(--framework); background: var(--framework-light); padding: 1.75rem; }
+    .construct-def-label { font-family: 'JetBrains Mono', monospace; font-size: 0.46rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--framework); margin-bottom: 0.5rem; }
+    .construct-def-name { font-family: 'Space Grotesk', serif; font-size: 1.25rem; font-weight: 900; color: var(--framework); margin-bottom: 0.75rem; }
+    .construct-def-body { font-size: 0.95rem; line-height: 1.75; color: var(--deep); }
+    .construct-def-body p { margin-bottom: 0.75rem; text-align: left !important; }
+    .construct-def-body p::first-letter { float: none !important; font-size: inherit !important; color: inherit !important; margin: 0 !important; }
+    .construct-def-body p:last-child { margin-bottom: 0; }
+
+    /* Three-move diagram */
+    .moves-diagram { border: 1px solid var(--rule); background: var(--highlight); margin: 2.5rem 0; overflow: hidden; }
+    .moves-diagram-header { background: var(--ink); padding: 0.75rem 1.5rem; }
+    .moves-diagram-label { font-family: 'JetBrains Mono', monospace; font-size: 0.5rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--paper); opacity: 0.7; }
+    .moves-diagram-body { padding: 1.75rem 1.5rem; display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1px; background: var(--rule); }
+    .move-cell { background: var(--highlight); padding: 1.25rem; }
+    .move-num { font-family: 'Space Grotesk', serif; font-size: 2.5rem; font-weight: 900; font-style: italic; color: var(--rule); line-height: 1; margin-bottom: 0.5rem; }
+    .move-name { font-family: 'JetBrains Mono', monospace; font-size: 0.46rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent); margin-bottom: 0.5rem; }
+    .move-desc { font-size: 0.88rem; line-height: 1.55; color: var(--muted); }
+
+    /* Mobile overrides */
+    @media (max-width: 768px) {
+      .hero { grid-template-columns: 1fr; padding: 3rem 1.5rem 2rem; }
+      .hero-illustration { display: none; }
+      .content { padding: 0 1.5rem 5rem; }
+      .pull-quote { margin: 2rem 0; }
+      .moves-diagram-body { grid-template-columns: 1fr; }
+      .paper-nav { padding: 0 1.5rem 3rem; }
+    }
+  </style>
+</head>
+<body class="series-nf">
+  <a href="#main-content" class="skip-link">Skip to content</a>
+  <div id="pbar"></div>
+  <div id="pbar-label"></div>
+  <div class="bg-pattern"></div>
+  <div class="bg-grain"></div>
+  <div class="page-wrap">
+
+      <!-- Top Bar -->
+  <div class="top-bar">
+    <span>Buenos Aires &middot; Since 2008</span>
+    <span>18 Essays &middot; 3 Frameworks &middot; ~289 min of reading &middot; <a href="about.html">About the author</a></span>
+  </div>
+
+  <!-- Nav -->
+  <nav class="nav">
+      <div class="nav-inner">
+        <a href="index.html" class="nav-brand">Narrative<em>Mechanics</em></a>
+        <button class="nav-btn nav-toggle" aria-label="Menu" aria-expanded="false" aria-controls="navLinks" id="navToggle">
+          <svg viewBox="0 0 24 24"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg>
+        </button>
+        <div class="nav-links" id="navLinks">
+          <a href="index.html" class="nav-link">Home</a>
+          <div class="nav-sep"></div>
+          <a href="archive.html" class="nav-link">Start Here</a>
+          <a href="frameworks.html" class="nav-link">Frameworks</a>
+          <a href="series.html" class="nav-link">Series</a>
+          <a href="essays.html" class="nav-link">Essays</a>
+          <a href="notes.html" class="nav-link">Notes</a>
+          <div class="nav-sep"></div>
+          <a href="about.html" class="nav-link">About</a>
+        </div>
+        <div class="nav-right">
+          <button class="nav-btn" aria-label="Toggle theme" id="themeToggle">
+            <svg class="icon-moon" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+            <svg class="icon-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <section class="hero">
+      <div>
+        <div class="hero-kicker">Paper Five &nbsp;/&nbsp; Application</div>
+        <h1 class="hero-title">Launching Into<br><em>Noise</em></h1>
+        <p class="hero-subtitle">Go-to-Market After Distribution Occlusion</p>
+        <div class="hero-byline">
+          <div class="hero-byline-dot"></div>
+          <div class="hero-byline-text">Diego Dell'Agostino</div>
+        </div>
+      </div>
+      <div class="hero-illustration">
+        <svg class="hero-svg" viewBox="0 0 160 200" xmlns="http://www.w3.org/2000/svg">
+        <style>
+          @keyframes static-noise{0%{opacity:0.15}25%{opacity:0.4}50%{opacity:0.1}75%{opacity:0.35}100%{opacity:0.15}}
+          @keyframes signal-rise{from{transform:translateY(10px);opacity:0}to{transform:translateY(0);opacity:1}}
+          @keyframes beacon{0%,100%{opacity:1}50%{opacity:0.3}}
+        </style>
+        <!-- Noise lines -->
+        <line x1="10" y1="45" x2="150" y2="45" stroke="var(--rule)" stroke-width="0.7" style="animation:static-noise 1.5s ease-in-out infinite"/>
+        <line x1="10" y1="60" x2="150" y2="60" stroke="var(--rule)" stroke-width="0.7" style="animation:static-noise 1.5s 0.2s ease-in-out infinite"/>
+        <line x1="10" y1="75" x2="150" y2="75" stroke="var(--rule)" stroke-width="0.7" style="animation:static-noise 1.5s 0.4s ease-in-out infinite"/>
+        <line x1="10" y1="90" x2="150" y2="90" stroke="var(--rule)" stroke-width="0.7" style="animation:static-noise 1.5s 0.6s ease-in-out infinite"/>
+        <line x1="10" y1="105" x2="150" y2="105" stroke="var(--rule)" stroke-width="0.7" style="animation:static-noise 1.5s 0.8s ease-in-out infinite"/>
+        <line x1="10" y1="120" x2="150" y2="120" stroke="var(--rule)" stroke-width="0.7" style="animation:static-noise 1.5s 1s ease-in-out infinite"/>
+        <line x1="10" y1="135" x2="150" y2="135" stroke="var(--rule)" stroke-width="0.7" style="animation:static-noise 1.5s 1.2s ease-in-out infinite"/>
+        <!-- Signal cutting through -->
+        <path d="M30 150 L50 130 L60 140 L80 80 L100 90 L120 50 L140 30" stroke="var(--accent)" stroke-width="2.5" fill="none"
+              opacity="0" style="animation:signal-rise 1.5s 0.8s ease-out forwards"/>
+        <!-- Beacon dot at peak -->
+        <circle cx="140" cy="30" r="4" fill="var(--accent)" opacity="0"
+                style="animation:beacon 2s 2s ease-in-out infinite, signal-rise 0.5s 2s forwards"/>
+        <!-- Labels -->
+        <text x="25" y="175" font-family="monospace" font-size="6" fill="var(--rule)" letter-spacing="1">NOISE</text>
+        <text x="105" y="175" font-family="monospace" font-size="6" fill="var(--accent)" letter-spacing="1">SIGNAL</text>
+        <text x="80" y="192" font-family="monospace" font-size="6" fill="var(--accent)" text-anchor="middle" letter-spacing="2"
+              opacity="0" style="animation:signal-rise 0.5s 2.3s forwards">LAUNCH</text>
+      </svg>
+      </div>
+    </section>
+
+        <div class="chapter-divider">
+      <div class="chapter-divider-line"></div>
+    </div>
+
+    <main class="content" id="main-content">
+
+      <article class="section">
+        <div class="section-badge">
+          <div class="section-icon"><svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
+          <div class="section-meta">
+            <div class="section-number">Section I &nbsp;/&nbsp; Six</div>
+            <h2 class="section-title">The Playbook Was Built for a Different World</h2>
+          </div>
+        </div>
+        <div class="section-rule"></div>
+        <div class="section-body">
+          <p>This paper builds on <a href="occlusion-bias.html" style="color:var(--accent);text-decoration:underline;text-decoration-color:var(--rule);text-underline-offset:3px;transition:text-decoration-color 0.2s">Occlusion Bias</a>, the preceding framework in this series, which argues that algorithmic systems now reward volume and pattern-conformity at a scale that exceeds their ability to discriminate genuine signal from noise, a condition called Distribution Occlusion. The argument here is its application to go-to-market. Three moves: Signal Isolation (treating only trust-mediated adoption data as evidence of fit), Direct Path Construction (building a route to the right audience without algorithmic intermediation), and Trust-First Sequencing (reordering the launch so the relationship precedes the release). Each is developed in its own section. The final section provides implementation structures the practitioner can use immediately.</p>
+          <p>The standard go-to-market playbook is a sequence built on a single premise that almost no one states explicitly: that the distribution layer works. That a well-crafted press release gets indexed and travels. That a Product Hunt launch reaches people who actually want the product. That SEO-optimized landing pages attract users with genuine intent. That algorithmic platforms carry real signal forward and surface products to the audiences most likely to need them.</p>
+          <div class="margin-note">The launch is not a moment. It is an architecture. And the architecture most teams are using was designed for an environment that no longer exists.</div>
+          <p>Every tactic in that playbook, every sequenced release beat, every channel strategy, every press tier, presupposes a functional intermediated distribution environment. The playbook does not hedge against distribution failure because, when it was codified, distribution failure was not a structural condition. It was a tactical problem, solvable by better targeting, better creative, better timing.</p>
+          <p>That has changed. <a href="occlusion-bias.html" style="color:var(--accent);text-decoration:underline;text-decoration-color:var(--rule);text-underline-offset:3px">Distribution Occlusion</a>, the structural condition described in the preceding framework paper, means that the distribution layer is no longer a reliable carrier of genuine signal. Algorithmic systems reward volume and pattern-conformity at a scale that exceeds their discrimination capacity. What reaches an audience is not necessarily what deserves to reach an audience. It is what the system's historical calibration already knew how to reward.</p>
+          <p>The implication for go-to-market is direct and underappreciated: a product that generates traffic and early adoption signals in an occluded environment has not necessarily found its market. It may have found the algorithm. And the PMM who declares early traction as evidence of product-market fit, and builds a scaling strategy on that declaration, is committing the same survivorship bias that Occlusion Bias describes in the editorial context. The machine is counting returning planes. It is not counting the ones that didn't come back.</p>
+          <div class="pull-quote">
+            <p>A product that generates traffic in week one has not necessarily found its market. It may have found the algorithm. Those are not the same thing, and the organizations that treat them as equivalent are scaling distribution on top of a misreading.</p>
+          </div>
+          <p>The deeper problem is not that distribution is broken. It is that the breakage corrupts the instruments PMMs use to read the market. PMF is not a PMM competency. It is a product condition. The PMM reads the signals that indicate whether that condition has been achieved. Those signals sit downstream of the distribution layer. When that layer stops discriminating reliably, the signals arrive compromised. A product with strong early metrics may be genuinely resonant, or it may have found the algorithm at the right moment, or been amplified by a high-volume low-intent channel that converts once and doesn't return. The data looks identical in all three cases. The interpretation is entirely different. By the time the retention curve reveals which, the investment has already been made.</p>
+          <p>One precision matters here. Distribution Occlusion corrupts acquisition signals most severely: traffic, early signups, top-of-funnel conversion. Post-acquisition behavioral signals are substantially less corrupted. Someone who arrived through Product Hunt noise and stays ninety days is giving real signal regardless of the channel. The corruption is concentrated at the acquisition layer and propagates downstream only when the channel introduces systematic selection bias toward users who aren't representative of the target market. Retention and engagement data from algorithmically-acquired cohorts deserves scrutiny, not blanket dismissal. What deserves dismissal is using acquisition volume as a proxy for fit before the behavioral data has had time to develop.</p>
+          <p>This section establishes why all three moves are necessary. The following sections explain how to execute them.</p>
+        </div>
+      </article>
+
+      <article class="section">
+        <div class="section-badge">
+          <div class="section-icon"><svg viewBox="0 0 24 24"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div>
+          <div class="section-meta">
+            <div class="section-number">Section II &nbsp;/&nbsp; Six &nbsp;·&nbsp; Move I</div>
+            <h2 class="section-title">Signal Isolation</h2>
+          </div>
+        </div>
+        <div class="section-rule"></div>
+        <div class="section-body">
+          <p>The first practical move in a go-to-market architecture for an occluded environment is not to generate more signal. It is to identify which signals are independent of algorithmic amplification and treat only those as evidence of genuine fit.</p>
+
+          <div class="construct-def">
+            <div class="construct-def-label">Move I</div>
+            <div class="construct-def-name">Signal Isolation</div>
+            <div class="construct-def-body">
+              <p>The deliberate process of applying a two-stage filter to early adoption data. The first stage is at acquisition: did this user arrive through a path the algorithm controlled? If yes, their arrival is evidence of algorithmic exposure, not of fit. The second stage is behavioral: what did this user do after arriving? Post-acquisition retention, engagement depth, and unprompted referral are substantially less corrupted by channel origin and constitute genuine signal regardless of how the user was acquired. Signal Isolation does not dismiss algorithmically-acquired users. It refuses to use their arrival as evidence of fit while remaining fully attentive to what their behavior reveals once they are in.</p>
+              <p>Isolated acquisition signal: word-of-mouth referrals with traceable relationship origin; direct outreach responses; users who arrived because a specific named person sent them. Reliable behavioral signal: ninety-day retention, expansion behavior, and unprompted referral from any cohort, regardless of acquisition channel, once sufficient time has elapsed. The discipline is to keep the two stages separate and never let strong acquisition numbers substitute for the behavioral evidence that has not yet had time to develop.</p>
+            </div>
+          </div>
+
+          <p>A fair objection: in 2026, almost no discovery path is entirely free of algorithmic intermediation. Word-of-mouth travels through WhatsApp, LinkedIn, Slack, and Twitter, all of which surface and suppress content algorithmically. The paper does not pretend that clean separation is possible at scale. What it claims is more limited: the strength of the direct relationship between recommender and recipient is the variable that matters, and that property is measurable even when the delivery channel isn't clean. A user who arrived because a specific person said "you should look at this" is structurally different from one who arrived because an ad appeared in their feed, even if both traveled through the same platform. The measurement challenge is to capture the relationship origin, not the delivery channel.</p>
+          <p>In practice, Signal Isolation means building the measurement architecture before the launch, not after. It means tagging acquisition sources at a level of granularity that distinguishes between a user who arrived because a specific trusted person recommended the product and a user who arrived because an ad appeared in their feed. These two users may convert at the same rate in week one. They will almost certainly behave differently in month three. The organization that cannot distinguish them will misread the early data and draw the wrong inference.</p>
+          <p>The hard implication of Signal Isolation is that it makes early traction look smaller. A launch that generates ten thousand signups from Product Hunt and forty signups from genuine word-of-mouth has strong conventional metrics and weak Signal Isolation metrics. That is the correct reading. The forty matter. The ten thousand are noise until proven otherwise by sustained retention behavior across a long enough horizon. Most organizations do not have the discipline to read it this way because the conventional metrics feel like evidence and the small isolated signal feels like insufficient data. The discipline is to hold the distinction until the cohort behavior resolves.</p>
+          <div class="pull-quote">
+            <p>The discipline is not to dismiss the ten thousand. It is to refuse to act on them before the forty have told you something the ten thousand cannot.</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="section">
+        <div class="section-badge">
+          <div class="section-icon"><svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></div>
+          <div class="section-meta">
+            <div class="section-number">Section III &nbsp;/&nbsp; Six &nbsp;·&nbsp; Move II</div>
+            <h2 class="section-title">Direct Path Construction</h2>
+          </div>
+        </div>
+        <div class="section-rule"></div>
+        <div class="section-body">
+          <p>The second move addresses the structural question that Signal Isolation raises: if algorithmic distribution cannot be trusted to carry genuine signal, and if the small population of users who arrive through trusted recommendation is the only reliable evidence base, then the go-to-market architecture needs a way to reach that population deliberately rather than waiting for it to self-select.</p>
+
+          <div class="construct-def">
+            <div class="construct-def-label">Move II</div>
+            <div class="construct-def-name">Direct Path Construction</div>
+            <div class="construct-def-body">
+              <p>The deliberate design of a route from product to right audience that does not depend on any intermediated surface at any critical stage. Direct Path Construction does not mean avoiding all distribution channels. It means identifying the specific people whose trust already extends to the problem space the product operates in, and building a path to those people that does not require an algorithm to make an introduction.</p>
+              <p>A direct path is any route where the introduction is mediated by a named human relationship rather than a platform recommendation: a former colleague who knows the problem from the inside and sends a personal note to three people they know face the same constraint; a practitioner community member who has seen the product in context and makes a specific targeted introduction; a trusted operator in the category whose endorsement travels person-to-person because it comes with their specific credibility attached, not because an algorithm decided to surface it.</p>
+            </div>
+          </div>
+
+          <p>Direct Path Construction shares lineage with concierge onboarding, design partner programs, and "do things that don't scale." It does not claim to have invented those practices. What it adds is a structural argument for why they are now necessary rather than merely advisable, and a specific criterion for what a "direct path" means in an occluded environment.</p>
+          <p>A named human relationship, as this paper uses the term, meets three conditions. First, the recommender knows the product specifically enough to stake their own credibility on the introduction. They are not broadcasting to an audience but making a targeted referral to someone they know. Second, the recipient would tell you, if asked, whose recommendation brought them. They arrived because a specific person sent them, not because an algorithm surfaced the product. Third, the recommender and the recipient have a relationship with enough history and context that the recommender can say something specific about why the product is relevant to that person's situation, not a generic recommendation broadcast to many, but a targeted one that demonstrates knowledge of the recipient's specific context. This last condition is what separates a genuine relationship from a large-account recommendation: a newsletter writer with fifty thousand subscribers who mentions the product is amplifying, not introducing. Their readers have a relationship with their writing, not with them as a person who knows the reader's specific situation. A founder who emails twelve former colleagues with a personal note explaining why this product is relevant to each of them specifically is constructing direct paths. The distinction matters because it determines whether the resulting signal is evidence of genuine fit or evidence of successful audience targeting, which is a narrower form of the same algorithmic amplification problem. A startup that recruits its first hundred users from a Slack community of practitioners has done something valuable but not the same thing as a startup whose first hundred users arrived through personal introductions. Both are "not scaling." Only the second produces Signal Isolation.</p>
+          <p>The standard go-to-market asks: how do we get discovered? Direct Path Construction asks a different question: who already trusts someone who knows us, and how do we reach them before any algorithm decides whether we deserve to be seen? The second question is narrower, slower, and significantly more expensive per contact in the short term. It is also the only question whose answer produces the high-quality isolated signal that genuinely informs product decisions.</p>
+          <p>The practical work of Direct Path Construction starts before the product exists. It is the work that Narrative-First describes at the production layer: building a public record of thinking about the problem, developing a point of view that attracts the right people before the solution is ready, and establishing a presence in the communities where the right audience already congregates. By the time the product launches, the direct path already exists. The launch is not the beginning of the relationship. It is a milestone in one that has already been established.</p>
+          <p>Organizations that have not done this work before the launch have a harder version of the same problem. They can still construct direct paths, but they are building the relationship and asking for the adoption simultaneously, which creates a trust deficit that paid distribution cannot compensate for. The answer is not to delay the launch indefinitely. It is to scope the initial launch to the size of the direct path that actually exists, and treat everything beyond that scope as experimental distribution rather than evidence-generating signal.</p>
+        </div>
+      </article>
+
+      <article class="section">
+        <div class="section-badge">
+          <div class="section-icon"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></div>
+          <div class="section-meta">
+            <div class="section-number">Section IV &nbsp;/&nbsp; Six &nbsp;·&nbsp; Move III</div>
+            <h2 class="section-title">Trust-First Sequencing</h2>
+          </div>
+        </div>
+        <div class="section-rule"></div>
+        <div class="section-body">
+          <p>The third move is a reordering of the launch timeline that follows directly from the first two. If Signal Isolation requires a small, traceable, trust-mediated population as the evidence base, and if Direct Path Construction requires that the relationship precede the ask, then the standard launch sequence: build, announce publicly, acquire at scale, read the metrics, iterate; is wrong in its ordering for an occluded environment.</p>
+
+          <div class="construct-def">
+            <div class="construct-def-label">Move III</div>
+            <div class="construct-def-name">Trust-First Sequencing</div>
+            <div class="construct-def-body">
+              <p>A launch timeline reordered so that the audience relationship precedes the public release, and the public release is scoped to match the size of the genuine trust-based audience rather than the maximum possible reach. Trust-First Sequencing treats the pre-launch period not as a marketing function but as a product function: the work of identifying and deepening relationships with the specific audience whose behavior will constitute genuine evidence of fit.</p>
+              <p>The sequence: establish presence in the problem space → build direct access to a defined audience → soft-launch to that audience exclusively → collect isolated signal from their behavior → iterate based on that signal → expand to an expansion cohort (outside the founding network, still relationship-recruited) → confirm that the inner and outer cohort signals are consistent → authorize public launch only when both confirm fit. The expansion cohort is not optional. It is the check that separates directional evidence from representative evidence.</p>
+            </div>
+          </div>
+
+          <p>One structural constraint before the case. In most organizations, delaying a public launch is not the PMM's decision. It belongs to the CEO, shaped by board pressure, fundraising timelines, and press cycles that operate on their own logic. A PMM who believes in Trust-First Sequencing but lacks the authority to set launch timing cannot implement this paper alone. These moves require leadership alignment, not just functional conviction. The PMM's job is to make the tradeoff legible: slower launch, smaller initial numbers, better information, lower risk of scaling the wrong hypothesis. That conversation is harder than a launch plan. It is also the more important one.</p>
+          <p>The costs are real and worth naming. Trust-First Sequencing is slower. It produces smaller early numbers. It requires the discipline to resist announcing publicly before the evidence base is real. In most organizations that pressure is structural: investors want to see traction, teams want to celebrate momentum, and conventional launch metrics feel like progress even when they are noise.</p>
+          <p>The case for Trust-First Sequencing is not that it feels better. It is that it produces better information earlier in the product's life, when the cost of acting on wrong information is lowest. A product that soft-launches to two hundred people who were specifically recruited through direct paths, and reads their behavior over ninety days, has more reliable fit evidence than a product that launches publicly to twenty thousand people and reads thirty-day cohort retention. The sample is smaller. The signal is cleaner. The decisions made on top of it are more defensible.</p>
+
+          <div class="moves-diagram">
+            <div class="moves-diagram-header"><div class="moves-diagram-label">The Three Moves &nbsp;·&nbsp; GTM Architecture for Occluded Environments</div></div>
+            <div class="moves-diagram-body">
+              <div class="move-cell">
+                <div class="move-num">I</div>
+                <div class="move-name">Signal Isolation</div>
+                <div class="move-desc">Separate trust-mediated adoption from algorithmic exposure. Only the first constitutes evidence of fit.</div>
+              </div>
+              <div class="move-cell">
+                <div class="move-num">II</div>
+                <div class="move-name">Direct Path Construction</div>
+                <div class="move-desc">Design a route to the right audience that does not require algorithmic intermediation at any critical stage.</div>
+              </div>
+              <div class="move-cell">
+                <div class="move-num">III</div>
+                <div class="move-name">Trust-First Sequencing</div>
+                <div class="move-desc">Reorder the timeline. Relationship before release. Inner cohort before expansion cohort. Public launch only after both confirm fit.</div>
+              </div>
+            </div>
+          </div>
+
+          <p>An honest qualification. Trust-First Sequencing is operationally tractable for B2B products, SaaS tools, and platforms serving defined professional categories. It is structurally harder for mass-market B2C: consumer social apps, mobile games, marketplaces requiring liquidity, where a two-hundred-person cohort is insufficient evidence regardless of its quality. For mass B2C the three moves adapt: Signal Isolation still matters (separate organic word-of-mouth from paid acquisition even at scale), Direct Path Construction still matters (seed the initial community with relationship-recruited users before opening acquisition), but the Fit Threshold needs to be larger and the timeline compressed. The structural argument holds across domains. The operational parameters don't transfer directly, and a PMM building for consumer should not use B2B benchmarks as calibration.</p>
+          <p>The PMM who operates these three moves is not doing a better version of the standard launch. They are doing a fundamentally different job. The standard launch is a distribution event. Trust-First Sequencing is a research operation with a commercial outcome. The skill set required is closer to qualitative research than to channel management, closer to editorial judgment than to performance marketing. This is not an argument against performance marketing as a discipline. It is an argument about sequencing: performance marketing becomes useful after fit is confirmed, not before. Using it before is how organizations scale the wrong hypothesis expensively and discover the error late.</p>
+        </div>
+      </article>
+
+      <article class="section">
+        <div class="section-badge">
+          <div class="section-icon"><svg viewBox="0 0 24 24"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg></div>
+          <div class="section-meta">
+            <div class="section-number">Section V &nbsp;/&nbsp; Six</div>
+            <h2 class="section-title">The New Job Description</h2>
+          </div>
+        </div>
+        <div class="section-rule"></div>
+        <div class="section-body">
+          <p>The PMM operating in an occluded distribution environment needs a different job description, not a better execution of the existing one. The standard definition: translating features into narrative, managing launch events, owning positioning and channel mix, is not wrong. It describes the second half of the job. What it omits is the first half, which is now the more important half: constructing the conditions under which a launch produces reliable evidence rather than noise.</p>
+          <p>That first half has three concrete deliverables that belong in every PMM's scope before a public launch exists. The first is a Signal Map: a documented inventory of the acquisition sources that will constitute genuine evidence of fit, distinguished from those that will constitute exposure, with measurement architecture to separate them from day one. The second is a Relationship Register: a specific, named list of the people whose personal introductions will seed the Trust-First cohort, with documented relationship origin for each. Not community segments. Named people. The third is a Fit Threshold: a pre-committed criterion specifying exactly what behavior, from exactly which cohort, over exactly what time horizon, at exactly what retention level, authorizes a public launch. This criterion must be set before the data exists and written down before the soft launch begins, because the organizational pressure to declare fit early will always exceed what the evidence supports.</p>
+          <div class="margin-note">Signal Map. Relationship Register. Fit Threshold. These are the deliverables that precede the launch, not the launch materials themselves.</div>
+          <p>The Relationship Register carries its own bias that the paper cannot ignore. A cohort built through the founding team's personal network is, almost by definition, over-indexed on people who share context, worldview, and social incentives with the founders. They may engage with the product not only because it solves their problem but because they have a relationship with the person who built it and social reasons to want it to succeed. That engagement can look like product-market fit and not be. The counter-measure is not to abandon the Relationship Register but to calibrate its interpretation: treat the Trust-First cohort as a directional instrument, not a representative sample. It tells you whether the product solves a real problem for people who understand the problem space deeply. It does not tell you whether it will resonate with the broader market of people who do not share that context. The transition from Trust-First signal to public launch should therefore include a deliberate expansion cohort: users recruited from outside the founding network but still through direct paths, whose behavior either confirms or complicates what the inner cohort showed. If the expansion cohort behaves differently, that divergence is the most valuable data the launch has produced.
+          <p>What does a Fit Threshold look like in practice? It varies by domain, but the structure is consistent. In B2B SaaS, a defensible threshold might read: twenty direct-path accounts active at ninety days, with at least twelve showing expansion behavior (additional seats, additional use cases, or documented integration with adjacent workflows), and at least eight able to articulate the product's value in their own words without prompting. In B2C with a defined practitioner audience: a tool for designers, a platform for independent researchers, the threshold might be: one hundred fifty direct-path users at sixty days, with weekly active usage above forty percent and at least thirty unprompted referrals to other named people. These are not universal benchmarks. They are illustrative of the form the threshold should take: specific, behavioral, time-bounded, and set before the data exists. The exact numbers are less important than the discipline of writing them down and honoring them. An organization that sets a threshold and then moves it when the data disappoints has not built a Fit Threshold. It has built a comfort metric.</p>
+          <p>The math of the Relationship Register deserves honest examination. To reach twenty active B2B accounts through direct paths, with a generous forty percent conversion rate on personal introductions, a founding team needs roughly fifty relationships that meet all three named-human-relationship conditions. For most first-time founders, that is a significant ask. The network exists in different concentrations: a founder with ten years in a specific industry vertical may have it easily; a founder building for a domain they entered recently may not have it at all. The paper does not claim this is uniformly achievable. What it argues is that the size of the existing direct-path network is itself diagnostic information. A founding team that cannot construct a Relationship Register of sufficient depth to seed a Trust-First cohort has a distribution problem that a launch will not solve, and discovering that constraint before launch is significantly less expensive than discovering it after. The Relationship Register, even when it reveals a network too thin to seed the required cohort, is doing its job: surfacing a distribution reality that the standard playbook would have hidden until the post-launch retention data made it undeniable.
+          <p>These three deliverables reposition the PMM from a launch manager to a fit architect. The skill set required is closer to qualitative research and editorial judgment than to channel management or performance marketing. The timeline is longer. The initial numbers are smaller. The information produced is significantly more reliable. Performance marketing becomes the PMM's tool after the Fit Threshold is crossed. Not before. Using it before is how organizations scale the wrong hypothesis expensively and discover the error at the worst possible moment.</p>
+          <p>The organizations that build this version of the go-to-market function will produce fewer spectacular launch days and more products that actually grow after the launch noise fades. In an occluded environment, that is the correct tradeoff. The spectacular launch day was always downstream of distribution doing work that distribution no longer does. The question now is what you build to replace it.</p>
+        </div>
+      </article>
+
+
+      <article class="section">
+        <div class="section-badge">
+          <div class="section-icon"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></div>
+          <div class="section-meta">
+            <div class="section-number">Implementation &nbsp;/&nbsp; Start Here</div>
+            <h2 class="section-title">What to Build Before the Launch Exists</h2>
+          </div>
+        </div>
+        <div class="section-rule"></div>
+        <div class="section-body">
+          <p>The three deliverables in this section are not templates. They are minimum structures: the smallest version of each tool that is still useful. Build them before any launch conversation begins.</p>
+
+          <div class="construct-def">
+            <div class="construct-def-label">Deliverable 1</div>
+            <div class="construct-def-name">The Signal Map</div>
+            <div class="construct-def-body">
+              <p>A single document, maintained before and throughout the launch, that classifies every active acquisition source into one of three categories: Isolated (trust-mediated, named-relationship origin), Behavioral (algorithmically acquired but with sufficient post-acquisition time to read retention, minimum 90 days), and Noise (algorithmically acquired, under 90 days, not yet interpretable as evidence of fit).</p>
+              <p>For each Isolated source, record: the name of the person who made the introduction, the relationship between introducer and recipient, and the date of first contact. For each Behavioral source, record: the acquisition channel, the date of acquisition, and the date at which the cohort crosses the 90-day threshold and becomes readable. For Noise sources, record nothing except volume. Do not use that volume in any fit declaration until the cohort has matured.</p>
+              <p>The Signal Map is not a reporting document. It is a discipline document. Its purpose is to make it structurally difficult to declare fit on the basis of Noise. If the Signal Map is kept honestly, the number in the Isolated column will almost always be uncomfortably small. That discomfort is the point.</p>
+            </div>
+          </div>
+
+          <div class="construct-def">
+            <div class="construct-def-label">Deliverable 2</div>
+            <div class="construct-def-name">The Relationship Register</div>
+            <div class="construct-def-body">
+              <p>A named list, built before the soft launch, of every person the founding team can reach through a direct path that meets the three conditions: the recommender can stake their credibility on the introduction, the recipient would name the recommender as the reason they tried the product, and the recommender can say something specific about why the product is relevant to that person's situation.</p>
+              <p>Structure: one row per person. Columns: Name, Relationship Origin (how the founding team knows them and for how long), Domain Relevance (why they are the right person to have in this cohort), Introducer (who on the founding team owns the relationship), and Status (not contacted / contacted / active in cohort / declined).</p>
+              <p>Build the list before any outreach. If the list has fewer than twenty-five names for a B2B product or fewer than eighty for a practitioner B2C product, do not launch yet. Use the gap as a workplan: which relationships need to be built before the soft launch is viable? That work takes months, not weeks. Starting it before the product is complete is the only way to have it ready when the product is.</p>
+              <p>One practical note: if the founding team cannot build the Relationship Register to minimum size within the target domain, that is diagnostic information about the team's fit with the domain, not a reason to abandon the launch, but a reason to either deepen domain presence before launching or to bring in an advisor whose existing register fills the gap.</p>
+            </div>
+          </div>
+
+          <div class="construct-def">
+            <div class="construct-def-label">Deliverable 3</div>
+            <div class="construct-def-name">The Fit Threshold Document</div>
+            <div class="construct-def-body">
+              <p>A one-page document, signed off by the founding team before the soft launch begins, that answers four questions. What is the minimum number of accounts or users in the inner cohort that must be active at day 90? What specific behaviors constitute "active": not login, but meaningful use that indicates the product is solving the problem it claimed to solve? What percentage of those accounts must show expansion behavior (or, in B2C, unprompted referral)? And what is the date at which the inner cohort's 90-day window closes and the expansion cohort begins?</p>
+              <p>The document also defines the expansion cohort threshold: the same four questions applied to the outer cohort, with the additional requirement that the expansion cohort's behavioral pattern must be consistent with the inner cohort's within a defined tolerance. If the expansion cohort's behavioral pattern diverges materially from the inner cohort's, not marginally, but enough that the two cohorts appear to be responding to different value propositions. Treat that divergence as a signal requiring investigation before the public launch. "Material divergence" is intentionally left to the founding team's judgment rather than assigned a fixed percentage, because what constitutes a meaningful difference depends on the product's domain, use pattern, and cohort size. What the document should specify in advance is the team's definition of material for this product: the threshold below which divergence is acceptable noise, and above which it requires a pause and a diagnosis. Setting that definition before the expansion cohort data arrives is what prevents rationalization from looking like judgment.</p>
+              <p>The Fit Threshold Document is binding. Its value is entirely contingent on not moving it when the data disappoints. Write into the document itself the conditions under which it can be revised. There are two legitimate reasons to revise a Fit Threshold and one illegitimate one. The first legitimate reason: the product changed substantially between the threshold being set and the cohort data arriving: a meaningful feature addition, a pricing change, a repositioning, such that the original threshold is measuring a different product than the one the cohort actually used. In that case, the threshold may be reset, but the clock also resets: the cohort period restarts from the point of the meaningful change. The second legitimate reason: new information about the domain revealed that the original threshold was miscalibrated against industry norms, for example, discovering that ninety-day retention in this category typically runs lower than assumed, because the use pattern is seasonal or project-based. In that case the threshold may be adjusted, with documented reasoning and full founding team agreement. The illegitimate reason: the data came in below threshold and the team wants to proceed anyway. That is not a revision. It is a decision to pretend fit was found. The consequences of that decision arrive later and cost more. The Fit Threshold Document should name all three cases explicitly, so the distinction is unambiguous when the pressure to lower arrives. And it will arrive.</p>
+            </div>
+          </div>
+
+          <p>On timeline: the inner cohort phase should run for a minimum of ninety days from the first soft-launch invite. Shorter windows produce acquisition data, not fit data. The expansion cohort phase should run for sixty days minimum before the public launch is authorized. Total pre-public-launch runway for a product with no existing direct-path network: eight to fourteen months. For a founding team that has been building in public and accumulating direct relationships before the product exists: four to six months. The timeline is long. It is also the only timeline that produces the evidence base the public launch needs to be more than a bet.</p>
+        </div>
+      </article>
+
+      <article class="section">
+        <div class="section-badge">
+          <div class="section-icon"><svg viewBox="0 0 24 24"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg></div>
+          <div class="section-meta">
+            <div class="section-number">Kill Criteria &nbsp;/&nbsp; What Would Falsify This</div>
+            <h2 class="section-title">When This Argument No Longer Holds</h2>
+          </div>
+        </div>
+        <div class="section-rule"></div>
+        <div class="section-body">
+          <p>This paper belongs to the same body of work as Occlusion Bias and inherits its epistemic obligation. One distinction, however, must be stated plainly before the criteria. Occlusion Bias describes a structural condition for which empirical evidence already exists: measurable traffic declines, documented zero-click search growth, quantified bot traffic proportions. This paper proposes a response framework for which that kind of comparative evidence does not yet exist. The controlled studies that would confirm or deny whether Trust-First cohorts systematically outperform standard-launch cohorts have not been run. This paper is a structured hypothesis, not a validated playbook. The criteria below are not falsification conditions for proven claims. They are the conditions that would, if observed, confirm or deny the framework, and practitioners who implement it should treat their own results as data that either strengthens or weakens the case for others.</p>
+          <p><strong>K1 - Signal Isolation:</strong> The construct is confirmed if organizations that distinguish trust-mediated cohorts from algorithmically-acquired cohorts systematically make more accurate PMF calls, specifically, if they declare fit less often before ninety-day retention confirms it, and scale prematurely less often as a result. It is weakened if no systematic behavioral difference emerges between cohort types over a twelve-month tracking horizon, or if algorithmic platforms develop reliable relationship-origin attribution that makes the trust/exposure distinction measurable at scale without the manual overhead the Relationship Register requires.</p>
+          <p><strong>K2 - Direct Path Construction:</strong> The construct is confirmed if founding teams that build direct-path networks before launch consistently seed higher-quality Trust-First cohorts, measured by expansion behavior, unprompted referral rate, and qualitative specificity of user feedback, than teams that recruit early users through open community channels or paid acquisition. It is falsified if the cohort quality difference between relationship-recruited and community-recruited early users proves negligible across multiple domains and company stages.</p>
+          <p><strong>K3 - Trust-First Sequencing:</strong> The sequencing argument is confirmed if organizations that sequence relationship before release make more accurate fit calls and waste less capital on premature scaling than those following the standard playbook, measured over twelve months post-launch. It is falsified if the cost of the approach: longer timeline, smaller initial cohort, higher relationship-investment per user, and the organizational alignment cost described in this section, consistently produces information that could have been obtained faster and more cheaply through a standard launch with careful post-launch cohort analysis. Trust-First Sequencing is a claim about information quality and decision cost. Its confirmation or denial should be evaluated on exactly those terms, not on launch day metrics.</p>
+          <p>The paper invites practitioners to report what they find. The framework will require revision if the evidence demands it.</p>
+        </div>
+      </article>
+
+      <div class="closing">
+        <div class="closing-ornament-top">✦ &nbsp; ❧ &nbsp; ✦</div>
+        <p>The standard launch optimizes for the moment. Trust-First Sequencing optimizes for what comes after it.</p>
+        <p>A launch without a direct path is a bet that the distribution layer will find the right audience for you. A launch with one is a confirmation that it already did.</p>
+        <p>The organizations that will grow after the noise settles are not the ones that launched loudest. They are the ones that knew, before the launch existed, exactly who was waiting for it. And had already introduced themselves.</p>
+        <div class="closing-ornament-bottom">End of Paper No. 5 &nbsp;·&nbsp; Narrative-First Series</div>
+      </div>
+      <div style="max-width:720px;margin:1.5rem auto 0;padding:0 2.5rem;font-family:'JetBrains Mono',monospace;font-size:0.5rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--muted);">February 2026</div>
+
+    </main>
+
+    <div style="max-width:680px;margin:0 auto;padding:0 4rem 2rem;">
+      <p style="font-family:'Inter',serif;font-size:1rem;line-height:1.75;color:var(--muted);font-style:italic;">You've validated fit and built direct paths. Now the question is what happens to the consumer journey once algorithms start negotiating it for you.</p>
+    </div>
+
+    <div class="paper-nav">
+      <a href="paper-04.html" class="paper-nav-prev">
+        <svg viewBox="0 0 24 24"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+        Before You Scale
+      </a>
+      <a href="paper-06.html" class="paper-nav-next">
+        Before You Map
+        <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </a>
+    </div>
+
+    <footer>
+      <div class="footer-left">© 2026 Diego Dell'Agostino</div>
+      <div class="footer-center">❧</div>
+      <div class="footer-right">Paper 05 &nbsp;·&nbsp; Narrative-First</div>
+    </footer>
+
+  </div>
+<script src="global.js?v=20260419b"></script>
+</body>
+</html>

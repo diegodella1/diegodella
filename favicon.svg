@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <defs>
+    <linearGradient id="bg" x1="5" y1="3" x2="27" y2="29" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#11142a"/>
+      <stop offset="0.52" stop-color="#090915"/>
+      <stop offset="1" stop-color="#0d1631"/>
+    </linearGradient>
+    <linearGradient id="glow" x1="7" y1="8" x2="25" y2="24" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#ff71ce"/>
+      <stop offset="1" stop-color="#01cdfe"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="32" height="32" rx="6" fill="url(#bg)"/>
+  <rect x="1.25" y="1.25" width="29.5" height="29.5" rx="4.75" fill="none" stroke="#2b3153" stroke-width="1"/>
+
+  <path d="M6 9.5H26" stroke="#ff71ce" stroke-opacity=".55" stroke-width="1.1"/>
+  <path d="M6 22.5H26" stroke="#01cdfe" stroke-opacity=".45" stroke-width="1.1"/>
+
+  <text x="16" y="19.2" text-anchor="middle" font-family="Arial Black, Helvetica, sans-serif" font-size="11.5" letter-spacing="-0.7" fill="#f8f9fa">NM</text>
+  <text x="16.55" y="19.2" text-anchor="middle" font-family="Arial Black, Helvetica, sans-serif" font-size="11.5" letter-spacing="-0.7" fill="#01cdfe" fill-opacity=".55">NM</text>
+  <text x="15.45" y="19.2" text-anchor="middle" font-family="Arial Black, Helvetica, sans-serif" font-size="11.5" letter-spacing="-0.7" fill="#ff71ce" fill-opacity=".45">NM</text>
+
+  <path d="M8 25.75H24" stroke="url(#glow)" stroke-width="1.2" stroke-linecap="square"/>
+</svg>

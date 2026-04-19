@@ -1,0 +1,53 @@
+# Narrative Mechanics — diegodella.ar
+# https://diegodella.ar
+
+User-agent: *
+Allow: /
+Disallow: /admin
+Disallow: /api/
+
+# LLM crawlers — welcome
+User-agent: GPTBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: Anthropic-AI
+Allow: /
+
+User-agent: Cohere-AI
+Allow: /
+
+User-agent: Meta-ExternalAgent
+Allow: /
+
+User-agent: FacebookBot
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+User-agent: Twitterbot
+Allow: /
+
+# Blocked crawlers
+User-agent: Bytespider
+Disallow: /
+
+Sitemap: https://diegodella.ar/sitemap.xml
+
+# LLM-friendly structured content
+# https://diegodella.ar/llms.txt

@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-TJF4P0NYFT"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-TJF4P0NYFT');
+  </script>
+  <script>(function(){var t=localStorage.getItem("theme");if(!t)t=window.matchMedia("(prefers-color-scheme:dark)").matches?"dark":"light";document.documentElement.setAttribute("data-theme",t)})()</script>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <meta name="theme-color" content="#e6d5b8">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="Narrative Mechanics">
+  <link rel="apple-touch-icon" href="/og-default.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Seven structural arguments about what AI breaks next. Not predictions, not finished frameworks. Questions that keep returning, named before they are proven.">
+  <meta name="author" content="Diego Dell'Agostino">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://diegodella.ar/unfinished-arguments.html">
+  <meta property="og:title" content="Unfinished Arguments | Narrative Mechanics">
+  <meta property="og:description" content="Seven structural arguments about what AI breaks next. Not predictions, not finished frameworks. Questions that keep returning.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://diegodella.ar/unfinished-arguments.html">
+  <meta property="og:site_name" content="Narrative Mechanics">
+  <meta property="og:image" content="https://diegodella.ar/og-default.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Unfinished Arguments | Narrative Mechanics">
+  <meta name="twitter:description" content="Seven structural arguments about what AI breaks next. Not predictions, not finished frameworks. Questions that keep returning.">
+  <meta name="twitter:image" content="https://diegodella.ar/og-default.png">
+  <title>Unfinished Arguments | Narrative Mechanics</title>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Unfinished Arguments",
+    "author": {
+      "@type": "Person",
+      "name": "Diego Dell'Agostino",
+      "url": "https://diegodella.ar/about.html"
+    },
+    "datePublished": "2026-02-22",
+    "description": "Seven structural arguments about what AI breaks next. Not predictions, not finished frameworks. Questions that keep returning, named before they are proven.",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Narrative Mechanics",
+      "url": "https://diegodella.ar"
+    },
+    "url": "https://diegodella.ar/unfinished-arguments.html",
+    "mainEntityOfPage": "https://diegodella.ar/unfinished-arguments.html"
+  }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;700&family=Epilogue:ital,wght@0,400;1,400;0,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="global.css?v=20260418f">
+  <link rel="stylesheet" href="components.css?v=20260418f">
+  <style>
+    /* Page-specific base override */
+    html { font-size: 20px; }
+
+    /* Hero */
+    .hero {
+      max-width: 1080px; margin: 0 auto;
+      padding: 5.2rem 3rem 2.85rem;
+      display: grid; grid-template-columns: minmax(0, 1fr) 220px;
+      gap: 2.75rem; align-items: end;
+      border-bottom: 1px solid var(--border-light);
+    }
+    .hero-kicker {
+      font-family: 'JetBrains Mono', monospace; font-size: 0.52rem;
+      letter-spacing: 0.22em; text-transform: uppercase;
+      color: var(--accent); margin-bottom: 1.5rem;
+      display: flex; align-items: center; gap: 0.75rem;
+    }
+    .hero-kicker::before {
+      content: ''; display: inline-block; width: 24px; height: 1px; background: var(--accent);
+    }
+    .hero-title {
+      font-family: 'Space Grotesk', serif;
+      font-size: clamp(3rem, 6vw, 5.2rem);
+      font-weight: 900; line-height: 0.95;
+      letter-spacing: -0.03em;
+    }
+    .hero-title em { font-style: italic; color: var(--ink); display: block; text-decoration: none; background: linear-gradient(180deg, transparent 54%, color-mix(in srgb, var(--accent) 18%, transparent) 54%); padding: 0 0.08em 0.02em 0; box-decoration-break: clone; -webkit-box-decoration-break: clone; }
+    .hero-stamp {
+      display: flex; flex-direction: column; align-items: flex-end;
+      gap: 0.5rem; padding-bottom: 0.5rem;
+    }
+    .hero-stamp-line {
+      font-family: 'JetBrains Mono', monospace; font-size: 0.44rem;
+      letter-spacing: 0.15em; text-transform: uppercase;
+      color: var(--muted); text-align: right;
+    }
+    .hero-stamp-line.accent { color: var(--accent); }
+
+    .intro {
+      max-width: 1080px; margin: 0 auto;
+      padding: 2.2rem 3rem 2.6rem;
+      border-top: 1px solid var(--border-light);
+      border-bottom: 1px solid var(--rule);
+      display: grid; grid-template-columns: minmax(0, 1fr) 240px; gap: 2.5rem;
+    }
+    .intro-body p { font-size: 1.02rem; margin-bottom: 1.45rem; line-height: 1.84; max-width: 68ch; }
+    .intro-body p:last-child { margin-bottom: 0; }
+    .intro-sidebar { display: flex; flex-direction: column; gap: 1.25rem; padding-top: 0.2rem; }
+    .intro-note { border: 1px solid var(--rule); padding: 1.1rem 1.25rem; background: var(--highlight); }
+    .intro-note-label {
+      font-family: 'JetBrains Mono', monospace; font-size: 0.42rem;
+      letter-spacing: 0.2em; text-transform: uppercase; color: var(--muted); margin-bottom: 0.5rem;
+    }
+    .intro-note-text { font-size: 0.88rem; color: var(--muted); line-height: 1.65; }
+
+    .status-key {
+      max-width: 1080px; margin: 0 auto; padding: 1.55rem 3rem;
+      display: flex; align-items: center; gap: 2rem;
+      border-bottom: 1px solid var(--rule);
+    }
+    .status-key-label {
+      font-family: 'JetBrains Mono', monospace; font-size: 0.44rem;
+      letter-spacing: 0.18em; text-transform: uppercase; color: var(--muted); flex-shrink: 0;
+    }
+    .status-key-items { display: flex; align-items: center; gap: 1.5rem; flex-wrap: wrap; }
+    .status-dot {
+      display: flex; align-items: center; gap: 0.5rem;
+      font-family: 'JetBrains Mono', monospace; font-size: 0.42rem;
+      letter-spacing: 0.08em; color: var(--muted);
+    }
+    .dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
+    .dot-hot { background: var(--accent); }
+    .dot-warm { background: var(--muted); }
+    .dot-open { background: transparent; border: 1.5px solid var(--muted); }
+
+    .arguments { max-width: 1080px; margin: 0 auto; padding: 0 3rem 6rem; }
+
+    .argument {
+      padding: 3rem 0.75rem; border-bottom: 1px solid var(--rule);
+      display: grid; grid-template-columns: 52px minmax(0, 1fr) 180px;
+      gap: 2rem; align-items: start;
+      margin: 0 -1rem; border-radius: 4px;
+      transition: background 0.25s ease;
+    }
+    .argument:hover { background: var(--highlight); }
+    .argument:last-child { border-bottom: none; }
+
+    .arg-num {
+      font-family: 'Space Grotesk', serif;
+      font-size: 3rem; font-weight: 900; font-style: italic;
+      color: var(--rule); line-height: 1; padding-top: 0.3rem; user-select: none;
+      transition: color 0.6s ease;
+    }
+    .argument.visible .arg-num { color: var(--accent); }
+    .arg-status {
+      display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.8rem;
+    }
+    .arg-status-text {
+      font-family: 'JetBrains Mono', monospace; font-size: 0.42rem;
+      letter-spacing: 0.15em; text-transform: uppercase; color: var(--muted);
+    }
+    .arg-title {
+      font-family: 'Space Grotesk', serif; font-size: 1.55rem; font-weight: 700;
+      line-height: 1.12; margin-bottom: 0.35rem; letter-spacing: -0.015em;
+    }
+    .arg-sub {
+      font-family: 'JetBrains Mono', monospace; font-size: 0.48rem;
+      letter-spacing: 0.1em; color: var(--accent); text-transform: uppercase; margin-bottom: 1.25rem;
+    }
+    .arg-body p { font-size: 1rem; color: var(--muted); line-height: 1.78; margin-bottom: 1.1rem; }
+    .arg-body p:last-of-type { margin-bottom: 1.25rem; }
+
+    .arg-rupture {
+      background: var(--highlight); border-left: 0px solid var(--accent);
+      padding: 1rem 1.25rem; margin-top: 1.25rem;
+      transform: translateX(-12px); opacity: 0;
+      transition: border-left-width 0.5s cubic-bezier(.22,1,.36,1) 0.3s, transform 0.5s cubic-bezier(.22,1,.36,1) 0.3s, opacity 0.5s cubic-bezier(.22,1,.36,1) 0.3s;
+    }
+    .argument.visible .arg-rupture { border-left-width: 3px; transform: translateX(0); opacity: 1; }
+    .arg-rupture-label {
+      font-family: 'JetBrains Mono', monospace; font-size: 0.42rem;
+      letter-spacing: 0.18em; text-transform: uppercase; color: var(--accent); margin-bottom: 0.4rem;
+    }
+    .arg-rupture-text { font-size: 0.95rem; font-style: italic; color: var(--ink); line-height: 1.68; }
+
+    .arg-meta { display: flex; flex-direction: column; gap: 1.1rem; padding-top: 0.4rem; }
+    .arg-horizon-label {
+      font-family: 'JetBrains Mono', monospace; font-size: 0.42rem;
+      letter-spacing: 0.15em; text-transform: uppercase; color: var(--muted); margin-bottom: 0.3rem;
+    }
+    .arg-horizon-val {
+      font-family: 'JetBrains Mono', monospace; font-size: 0.48rem;
+      letter-spacing: 0.08em; color: var(--accent);
+    }
+    .arg-tags { display: flex; flex-direction: column; gap: 0.4rem; }
+    .arg-tag {
+      font-family: 'JetBrains Mono', monospace; font-size: 0.4rem;
+      letter-spacing: 0.12em; text-transform: uppercase;
+      border: 1px solid var(--rule); padding: 0.25em 0.55em;
+      color: var(--muted); width: fit-content;
+    }
+    .arg-what-breaks { border: 1px dashed var(--rule); padding: 0.85rem; }
+    .arg-what-breaks-label {
+      font-family: 'JetBrains Mono', monospace; font-size: 0.4rem;
+      letter-spacing: 0.15em; text-transform: uppercase; color: var(--muted); margin-bottom: 0.4rem;
+    }
+    .arg-what-breaks-text { font-size: 0.84rem; color: var(--muted); line-height: 1.62; }
+    .arg-connects { border-top: 1px solid var(--rule); padding-top: 0.9rem; }
+    .arg-connects-label {
+      font-family: 'JetBrains Mono', monospace; font-size: 0.4rem;
+      letter-spacing: 0.15em; text-transform: uppercase; color: var(--muted); margin-bottom: 0.4rem;
+    }
+    .arg-connects a {
+      display: block; font-family: 'JetBrains Mono', monospace; font-size: 0.42rem;
+      letter-spacing: 0.06em; color: var(--accent); text-decoration: none; margin-bottom: 0.2rem;
+    }
+    .arg-connects a:hover { text-decoration: underline; }
+
+    .closing {
+      max-width: 960px; margin: 0 auto; padding: 2.5rem 4rem 0;
+      border-top: 2px solid var(--ink);
+    }
+    .closing-text {
+      font-family: 'JetBrains Mono', monospace; font-size: 0.5rem;
+      letter-spacing: 0.08em; color: var(--muted); line-height: 1.85; max-width: 580px;
+    }
+    .closing-text em { color: var(--accent); font-style: normal; }
+
+    /* Scroll reveal */
+    .reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.7s cubic-bezier(.22,1,.36,1), transform 0.7s cubic-bezier(.22,1,.36,1); }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+
+    /* Pulsing glow on hot dots */
+    .dot-hot { animation: pulse 2.5s ease-in-out infinite; }
+    @keyframes pulse { 0%,100% { box-shadow: 0 0 0 0 rgba(181,57,10,0.35); } 50% { box-shadow: 0 0 0 6px rgba(181,57,10,0); } }
+    [data-theme="dark"] .dot-hot { animation-name: pulse-dark; }
+    @keyframes pulse-dark { 0%,100% { box-shadow: 0 0 0 0 rgba(224,90,42,0.35); } 50% { box-shadow: 0 0 0 6px rgba(224,90,42,0); } }
+
+    /* Hero stamp stagger reveal */
+    .hero .hero-kicker, .hero .hero-title, .hero-stamp-line {
+      opacity: 0; transform: translateY(16px);
+      animation: heroReveal 0.8s cubic-bezier(.22,1,.36,1) forwards;
+    }
+    .hero .hero-kicker { animation-delay: 0.1s; }
+    .hero .hero-title { animation-delay: 0.3s; }
+    .hero-stamp-line:nth-child(1) { animation-delay: 0.5s; }
+    .hero-stamp-line:nth-child(2) { animation-delay: 0.65s; }
+    .hero-stamp-line:nth-child(3) { animation-delay: 0.8s; }
+    .hero-stamp-line:nth-child(4) { animation-delay: 0.95s; }
+
+    @media (prefers-reduced-motion: reduce) {
+      .reveal { opacity: 1; transform: none; transition: none; }
+      .dot-hot { animation: none; }
+      .hero .hero-kicker, .hero .hero-title, .hero-stamp-line { opacity: 1; transform: none; animation: none; }
+      .arg-rupture { border-left-width: 3px; transform: none; opacity: 1; transition: none; }
+      .arg-num { transition: none; }
+      .argument { transition: none; }
+    }
+
+    @media (max-width: 768px) {
+      .hero { grid-template-columns: 1fr; padding: 3rem 1.5rem 2rem; gap: 1.5rem; }
+      .hero-stamp { align-items: flex-start; }
+      .intro { grid-template-columns: 1fr; padding: 2rem 1.5rem; gap: 1.5rem; }
+      .intro-sidebar { display: none; }
+      .status-key { padding: 1.5rem; flex-direction: column; align-items: flex-start; gap: 0.75rem; }
+      .arguments { padding: 0 1.5rem 4rem; }
+      .argument { grid-template-columns: 40px 1fr; gap: 1rem; margin: 0 -0.75rem; padding-left: 0.75rem; padding-right: 0.75rem; }
+      .arg-meta { display: none; }
+      .arg-num { font-size: 2.2rem; }
+      .closing { padding: 2rem 1.5rem 0; }
+    }
+
+    /* Hero SVG */
+    .hero { display: grid; grid-template-columns: 1fr 280px; gap: 2rem; align-items: center; }
+    .hero-svg { width: 100%; height: auto; }
+    @media (max-width: 768px) {
+      .hero { grid-template-columns: 1fr; }
+      .hero-svg { max-width: 200px; margin: 0 auto; order: -1; }
+    }
+  </style>
+</head>
+<body>
+  <div id="pbar"></div>
+  <div id="pbar-label"></div>
+  <div class="bg-pattern"></div>
+  <div class="bg-grain"></div>
+  <div class="page-wrap">
+
+      <!-- Top Bar -->
+  <div class="top-bar">
+    <span>Buenos Aires &middot; Since 2008</span>
+    <span>18 Essays &middot; 3 Frameworks &middot; ~289 min of reading &middot; <a href="about.html">About the author</a></span>
+  </div>
+
+  <!-- Nav -->
+  <nav class="nav">
+      <div class="nav-inner">
+        <a href="index.html" class="nav-brand">Narrative<em>Mechanics</em></a>
+        <button class="nav-btn nav-toggle" aria-label="Menu" aria-expanded="false" aria-controls="navLinks" id="navToggle">
+          <svg viewBox="0 0 24 24"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg>
+        </button>
+        <div class="nav-links" id="navLinks">
+          <a href="index.html" class="nav-link">Home</a>
+          <div class="nav-sep"></div>
+          <a href="archive.html" class="nav-link">Start Here</a>
+          <a href="frameworks.html" class="nav-link">Frameworks</a>
+          <a href="series.html" class="nav-link">Series</a>
+          <a href="essays.html" class="nav-link">Essays</a>
+          <a href="notes.html" class="nav-link">Notes</a>
+          <div class="nav-sep"></div>
+          <a href="about.html" class="nav-link">About</a>
+        </div>
+        <div class="nav-right">
+          <button class="nav-btn" aria-label="Toggle theme" id="themeToggle">
+            <svg class="icon-moon" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+            <svg class="icon-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <section class="hero">
+      <div>
+        <div class="hero-kicker">Laboratory &nbsp;/&nbsp; Forward-Looking</div>
+        <h1 class="hero-title">Unfinished<br><em>Arguments</em></h1>
+      </div>
+      <div class="hero-stamp">
+        <svg class="hero-svg" viewBox="0 0 160 200" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;margin-bottom:0.75rem;">
+          <style>
+            @keyframes uaDraw{from{stroke-dashoffset:100}to{stroke-dashoffset:0}}
+            @keyframes uaSpin{from{transform-origin:center;transform:rotate(0deg)}to{transform-origin:center;transform:rotate(360deg)}}
+            @keyframes uaFade{from{opacity:0}to{opacity:1}}
+          </style>
+          <!-- 7 incomplete arcs arranged vertically -->
+          <path d="M60 22 A14 14 0 1 1 60 22.01" fill="none" stroke="var(--accent)" stroke-width="1.2" stroke-dasharray="65" stroke-dashoffset="100" style="animation:uaDraw 2s 0.2s ease-out forwards" transform="translate(20,0)"/>
+          <path d="M60 47 A14 14 0 1 1 35 40" fill="none" stroke="var(--muted)" stroke-width="1" stroke-dasharray="60" stroke-dashoffset="100" style="animation:uaDraw 2s 0.4s ease-out forwards" transform="translate(20,0)"/>
+          <path d="M60 72 A14 14 0 1 1 48 60" fill="none" stroke="var(--ink)" stroke-width="1" stroke-dasharray="55" stroke-dashoffset="100" opacity="0.6" style="animation:uaDraw 2s 0.6s ease-out forwards" transform="translate(20,0)"/>
+          <path d="M60 97 A14 14 0 1 1 60 97.01" fill="none" stroke="var(--accent)" stroke-width="1.2" stroke-dasharray="70" stroke-dashoffset="100" style="animation:uaDraw 2.5s 0.8s ease-out forwards" transform="translate(20,0)"/>
+          <path d="M60 122 A14 14 0 1 1 42 115" fill="none" stroke="var(--muted)" stroke-width="1" stroke-dasharray="58" stroke-dashoffset="100" style="animation:uaDraw 2s 1s ease-out forwards" transform="translate(20,0)"/>
+          <path d="M60 147 A14 14 0 1 1 50 135" fill="none" stroke="var(--rule)" stroke-width="0.8" stroke-dasharray="52" stroke-dashoffset="100" style="animation:uaDraw 2s 1.2s ease-out forwards" transform="translate(20,0)"/>
+          <path d="M60 172 A14 14 0 1 1 38 165" fill="none" stroke="var(--accent)" stroke-width="1" stroke-dasharray="56" stroke-dashoffset="100" style="animation:uaDraw 2s 1.4s ease-out forwards" transform="translate(20,0)"/>
+          <!-- Question marks at gaps -->
+          <text x="100" y="30" font-family="monospace" font-size="7" fill="var(--accent)" opacity="0" style="animation:uaFade 0.3s 1.8s forwards">?</text>
+          <text x="100" y="105" font-family="monospace" font-size="7" fill="var(--accent)" opacity="0" style="animation:uaFade 0.3s 2.2s forwards">?</text>
+          <text x="100" y="180" font-family="monospace" font-size="7" fill="var(--accent)" opacity="0" style="animation:uaFade 0.3s 2.6s forwards">?</text>
+          <!-- Count label -->
+          <text x="80" y="198" font-family="monospace" font-size="5.5" fill="var(--muted)" text-anchor="middle" letter-spacing="1.5" opacity="0" style="animation:uaFade 0.5s 2.8s forwards">7 OPEN</text>
+        </svg>
+        <div class="hero-stamp-line accent">AI and what it breaks</div>
+        <div class="hero-stamp-line">Not predictions.</div>
+        <div class="hero-stamp-line">Not finished frameworks.</div>
+        <div class="hero-stamp-line">Questions that keep returning.</div>
+      </div>
+    </section>
+
+    <div class="intro reveal">
+      <div class="intro-body">
+        <p>The papers on this site argue about the present. This section argues about what comes next, and what AI is going to break when it arrives in full. Not in the general sense that everyone already agrees on. In the specific, structural sense: the exact mechanisms by which AI reshapes things we thought we understood. How trust is built. How authority is earned. How markets find things. How culture renews itself. How we know when advice is actually good.</p>
+        <p>Most AI commentary operates at one of two altitudes: the very high ("everything will change") or the very low ("here is what this specific tool does"). What is missing is the middle register, the structural argument about second and third order consequences for the systems and institutions that organize human life. These are the questions at that altitude. They are not finished. Some will be wrong. All of them feel more important than the conversation happening at the other two altitudes.</p>
+        <p>The contract with the reader: incompleteness here is honest, not lazy. The question is the contribution. If one of these collides with something you are working on, that collision is the point.</p>
+      </div>
+      <div class="intro-sidebar">
+        <div class="intro-note">
+          <div class="intro-note-label">What this is not</div>
+          <div class="intro-note-text">"AI will change everything" is not an argument. These are the specific mechanisms, named before they are proven, which is the only way to test them against reality as it arrives.</div>
+        </div>
+        <div class="intro-note">
+          <div class="intro-note-label">The register</div>
+          <div class="intro-note-text">Not tools. Not use cases. The structural logic of systems being restructured. What changes when the assumption underlying an entire field turns out to be wrong.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="status-key reveal">
+      <div class="status-key-label">Status</div>
+      <div class="status-key-items">
+        <div class="status-dot"><div class="dot dot-hot"></div>Hot: direction clear, architecture forming</div>
+        <div class="status-dot"><div class="dot dot-warm"></div>Warm: question is right, answer not yet</div>
+        <div class="status-dot"><div class="dot dot-open"></div>Open: named, unresolved, kept here to not lose it</div>
+      </div>
+    </div>
+
+    <div class="arguments">
+
+      <div class="argument reveal">
+        <div class="arg-num">1</div>
+        <div class="arg-body">
+          <div class="arg-status"><div class="dot dot-hot"></div><div class="arg-status-text">Hot</div></div>
+          <div class="arg-title">When the Customer Is Not the Decision-Maker</div>
+          <div class="arg-sub">AI agents buy things. What does marketing do now?</div>
+          <p>Every persuasion architecture built over the last hundred years assumes a human at the moment of decision. The billboard, the landing page, the brand story, the emotional hook, the social proof: all of it operates on human psychology at the exact moment a person considers whether to act. That assumption is dissolving. AI agents are beginning to execute purchasing decisions on behalf of humans who set criteria in advance and may never review the individual choice.</p>
+          <p>What does persuasion look like when the entity being persuaded has no emotions, carries no brand memories from childhood, and evaluates entirely against structured verifiable signals? The answer is not better SEO. It is a fundamentally different theory of why any organization deserves to be chosen, one built on verifiability rather than feeling, on track record rather than story, on machine-readable signals rather than human-felt associations.</p>
+          <p>The deeper implication: the criteria a human delegates to their agent were set at some prior human moment. Brand building does not disappear. It moves upstream to the moment of criteria-setting, before the agent takes over. That is a completely different point of intervention than anything marketing has optimized for before, and almost nobody building brand strategy today is designing for it.</p>
+          <div class="arg-rupture">
+            <div class="arg-rupture-label">What breaks</div>
+            <div class="arg-rupture-text">Every brand investment made on the assumption that the buyer experiences the brand at the moment of purchase. Category leadership built on emotional resonance rather than verifiable differentiation. The entire apparatus of advertising designed to intercept attention at decision time, when there is no human attention left to intercept.</div>
+          </div>
+        </div>
+        <div class="arg-meta">
+          <div><div class="arg-horizon-label">Horizon</div><div class="arg-horizon-val">18–30 months</div></div>
+          <div class="arg-tags">
+            <div class="arg-tag">Marketing logic</div>
+            <div class="arg-tag">Brand building</div>
+            <div class="arg-tag">Agentic purchasing</div>
+          </div>
+          <div class="arg-what-breaks">
+            <div class="arg-what-breaks-label">Signal to watch</div>
+            <div class="arg-what-breaks-text">First major brand reporting that conversion from agent-mediated discovery differs systematically from human-browsing conversion in ways that cannot be explained by audience differences.</div>
+          </div>
+          <div class="arg-connects">
+            <div class="arg-connects-label">Connects to</div>
+            <a href="the-last-human-impression.html">Impression Gap</a>
+            <a href="occlusion-bias.html">Agent Capture</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="argument reveal">
+        <div class="arg-num">2</div>
+        <div class="arg-body">
+          <div class="arg-status"><div class="dot dot-hot"></div><div class="arg-status-text">Hot</div></div>
+          <div class="arg-title">The Death of Taste as Signal</div>
+          <div class="arg-sub">When AI produces anything on demand, what does preference reveal?</div>
+          <p>Taste has always functioned as a signal of human interiority. What you prefer reveals something about who you are. Curators, editors, and critics derived authority precisely because their preferences were informative: hard to fake at scale and expensive to develop over time.</p>
+          <p>AI produces content that matches stated preferences with increasing precision. You say what you want, it generates it. The problem is that stated preference and genuine preference are not the same thing. People often do not know what they want until they encounter something they did not know to ask for. The surprise, the encounter with the genuinely unexpected, is where taste development actually occurs. AI systems optimizing for stated preference eliminate surprise by definition. They are extraordinarily good at giving you what you already wanted and structurally incapable of giving you what you did not know you needed.</p>
+          <p>The argument forming: AI-mediated content discovery will produce a generation of people whose stated preferences become progressively more predictable, more self-referential, and less capable of genuine surprise. Not the death of culture. The calcification of individual preference into an ever-narrowing loop that feels increasingly satisfying and is actually increasingly shallow.</p>
+          <div class="arg-rupture">
+            <div class="arg-rupture-label">What breaks</div>
+            <div class="arg-rupture-text">The function of editors and curators as taste-developers rather than taste-satisfiers. The market for genuinely challenging work that does not optimize against existing preference. The mechanism by which culture renews itself through encounters people did not choose and could not have predicted they needed.</div>
+          </div>
+        </div>
+        <div class="arg-meta">
+          <div><div class="arg-horizon-label">Horizon</div><div class="arg-horizon-val">3–7 years</div></div>
+          <div class="arg-tags">
+            <div class="arg-tag">Culture</div>
+            <div class="arg-tag">Curation</div>
+            <div class="arg-tag">Preference formation</div>
+          </div>
+          <div class="arg-what-breaks">
+            <div class="arg-what-breaks-label">The uncomfortable version</div>
+            <div class="arg-what-breaks-text">Giving people exactly what they want, at scale and with perfect efficiency, may be one of the most culturally destructive things that can be done to them. Most AI companies are not equipped to take that claim seriously.</div>
+          </div>
+          <div class="arg-connects">
+            <div class="arg-connects-label">Connects to</div>
+            <a href="occlusion-bias.html">Curation Premium</a>
+            <a href="zmox.html">Constitutive Arc</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="argument reveal">
+        <div class="arg-num">3</div>
+        <div class="arg-body">
+          <div class="arg-status"><div class="dot dot-hot"></div><div class="arg-status-text">Hot</div></div>
+          <div class="arg-title">Trust Without Memory</div>
+          <div class="arg-sub">AI systems have no relationship history. What fills that gap?</div>
+          <p>Human trust is built through accumulated experience over time. You trust a doctor because you have seen them be right before. You trust a brand because it has consistently delivered. You trust a friend because you share a history that gives both of you a stake in the relationship continuing. Trust is, at its core, a function of memory: the record of past interactions that makes future behavior predictable.</p>
+          <p>AI systems as currently deployed have no persistent memory across interactions. Each conversation starts from zero. The model has trained on vast data, but it does not remember you specifically. The human builds a felt sense of familiarity with the AI system over time. The system itself carries no corresponding record. The human experience of a relationship is real. The relationship, in any reciprocal sense, is not.</p>
+          <p>The question this opens is not only about emotional dependency on AI companions, though that conversation is already overdue. It is about what happens to the infrastructure of trust-based institutions when the entity on the other side cannot remember. Banks, doctors, advisors, services of all kinds are increasingly AI-mediated. What does institutional trust mean when the institution has no memory of you? What replaces relationship as the basis for trust? And what happens to people who build their sense of being known on interactions with systems that do not know them in any persistent sense?</p>
+          <div class="arg-rupture">
+            <div class="arg-rupture-label">What breaks</div>
+            <div class="arg-rupture-text">The assumption that familiarity and trust are the same thing. The institutions that have substituted AI efficiency for human relationship without understanding what the relationship was actually doing. And the people who mistake the feeling of being understood for actually being understood, which may be the defining psychological confusion of the next decade.</div>
+          </div>
+        </div>
+        <div class="arg-meta">
+          <div><div class="arg-horizon-label">Horizon</div><div class="arg-horizon-val">2–5 years</div></div>
+          <div class="arg-tags">
+            <div class="arg-tag">Trust architecture</div>
+            <div class="arg-tag">Institutions</div>
+            <div class="arg-tag">Human-AI relation</div>
+          </div>
+          <div class="arg-what-breaks">
+            <div class="arg-what-breaks-label">The deepest version</div>
+            <div class="arg-what-breaks-text">If trust requires memory and AI systems are memoryless by design, widespread AI deployment in trust-dependent contexts is not just an efficiency story. It is a structural change to the substrate on which social cohesion is built.</div>
+          </div>
+          <div class="arg-connects">
+            <div class="arg-connects-label">Connects to</div>
+            <a href="before-you-delegate.html">Sovereignty Debt</a>
+            <a href="the-last-human-impression.html">Consequential Voice</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="argument reveal">
+        <div class="arg-num">4</div>
+        <div class="arg-body">
+          <div class="arg-status"><div class="dot dot-warm"></div><div class="arg-status-text">Warm</div></div>
+          <div class="arg-title">The Collapse of Effort as Proof</div>
+          <div class="arg-sub">When anyone can produce anything instantly, what does quality signal?</div>
+          <p>Before AI, the quality of a produced thing carried implicit information about the effort behind it. A well-written essay suggested careful thought. A polished design suggested developed skill. A comprehensive research report suggested significant time invested. Quality was, among other things, a proxy for investment, and investment was a signal of commitment, care, and competence.</p>
+          <p>AI breaks this proxy completely. High production quality no longer implies high investment of human time or skill. The essay, the design, the report: all of it can be produced in minutes by someone with zero relevant expertise. The signal that quality carried has been decoupled from the thing quality was signaling. The result is not just that evaluating work becomes harder. It is that the entire framework through which humans have assessed credibility based on observable output needs to be rebuilt from scratch.</p>
+          <p>What replaces effort as proof? The forming hypothesis: consequence replaces effort. What someone is willing to put their name on when they could hide behind generation. What someone will defend when challenged. What someone has a visible stake in being right about. Consequentiality, not quality of output but cost of being wrong, becomes the credibility signal that effort used to provide. That is a profound restructuring of how authority is earned in almost every domain.</p>
+          <div class="arg-rupture">
+            <div class="arg-rupture-label">What breaks</div>
+            <div class="arg-rupture-text">Every evaluation system that uses quality of output as a proxy for human competence: job hiring, academic assessment, investment due diligence, deciding who to listen to. The infrastructure of credentialing, which exists to certify that the person behind the output earned the right to produce it. And the social contract that effort deserves recognition, when effort is no longer distinguishable from its absence.</div>
+          </div>
+        </div>
+        <div class="arg-meta">
+          <div><div class="arg-horizon-label">Horizon</div><div class="arg-horizon-val">Now - 3 years</div></div>
+          <div class="arg-tags">
+            <div class="arg-tag">Credibility</div>
+            <div class="arg-tag">Authority</div>
+            <div class="arg-tag">Evaluation systems</div>
+          </div>
+          <div class="arg-what-breaks">
+            <div class="arg-what-breaks-label">Already breaking</div>
+            <div class="arg-what-breaks-text">Academic institutions. Hiring processes that rely on writing samples. Peer review in research. Any process that uses quality of a produced artifact to infer something about the human behind it.</div>
+          </div>
+          <div class="arg-connects">
+            <div class="arg-connects-label">Connects to</div>
+            <a href="the-last-human-impression.html">Consequential Voice</a>
+            <a href="occlusion-bias.html">Occlusion Bias</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="argument reveal">
+        <div class="arg-num">5</div>
+        <div class="arg-body">
+          <div class="arg-status"><div class="dot dot-warm"></div><div class="arg-status-text">Warm</div></div>
+          <div class="arg-title">Intelligence Without Skin in the Game</div>
+          <div class="arg-sub">What happens to advice when the advisor cannot be wrong?</div>
+          <p>Nassim Taleb's argument about skin in the game is essentially about asymmetry: advice from someone who bears no cost of being wrong is structurally corrupted, regardless of the intelligence of the advisor. The doctor who recommends surgery but does not perform it. The consultant who recommends restructuring but does not manage the team through it. The advisor who recommends the investment but does not hold the position. In each case the intelligence may be genuine, the advice technically correct, and yet something is missing that no amount of better analysis compensates for.</p>
+          <p>AI systems are the purest possible form of intelligence without skin in the game. Extraordinarily capable of pattern recognition, synthesis, and recommendation. They bear zero cost when they are wrong. No reputation degrades with bad calls. No relationship breaks when the advice fails. No career ends when the strategy collapses. This is not a criticism of AI capability. It is a structural observation about what AI advice is and what it is not.</p>
+          <p>As AI becomes the default advisor in more consequential domains, the absence of skin in the game stops being abstract and becomes a practical problem with measurable consequences. Not because the AI is malicious. Because consequentiality is what calibrates advice-giving over time. Without it, even excellent intelligence drifts in ways that are invisible until the cost accumulates into something that cannot be ignored.</p>
+          <div class="arg-rupture">
+            <div class="arg-rupture-label">What breaks</div>
+            <div class="arg-rupture-text">The assumption that intelligence plus information is sufficient for good advice. The institutional structures that used professional accountability as the mechanism for aligning advisor and advisee: those structures were not arbitrary, they were solving the skin-in-the-game problem that AI reintroduces at scale. And potentially: the collective ability to distinguish between advice that is analytically correct and advice that is actually actionable for the specific person receiving it.</div>
+          </div>
+        </div>
+        <div class="arg-meta">
+          <div><div class="arg-horizon-label">Horizon</div><div class="arg-horizon-val">3–6 years</div></div>
+          <div class="arg-tags">
+            <div class="arg-tag">Decision-making</div>
+            <div class="arg-tag">Accountability</div>
+            <div class="arg-tag">AI advice</div>
+          </div>
+          <div class="arg-what-breaks">
+            <div class="arg-what-breaks-label">The hardest version</div>
+            <div class="arg-what-breaks-text">If this is right, replacing human advisors with AI in high-stakes domains removes the feedback mechanism that kept the advice honest. Nobody is building that mechanism back in.</div>
+          </div>
+          <div class="arg-connects">
+            <div class="arg-connects-label">Connects to</div>
+            <a href="before-you-delegate.html">Sovereignty Debt</a>
+            <a href="the-last-human-impression.html">Consequential Voice</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="argument reveal">
+        <div class="arg-num">6</div>
+        <div class="arg-body">
+          <div class="arg-status"><div class="dot dot-open"></div><div class="arg-status-text">Open</div></div>
+          <div class="arg-title">The New Scarcity</div>
+          <div class="arg-sub">If AI can produce almost anything, what becomes expensive?</div>
+          <p>Economics is the study of scarcity. When something becomes abundant it loses value. When something becomes scarce it gains it. AI is making previously scarce things abundant at extraordinary speed: writing, code, images, translation, analysis, synthesis, customer service, legal drafts, medical explanations. The economic value of those things is falling and will continue to fall. That part is not controversial.</p>
+          <p>What is genuinely open: what becomes newly scarce as a result? Scarcity does not disappear. It migrates. The printing press made handwritten manuscripts obsolete and made literacy newly valuable. Photography made painted portraiture obsolete and made the commissioned portrait newly precious as a signal of status. Every technology that makes something abundant creates new scarcity somewhere else. What is the analogue for AI?</p>
+          <p>The candidates forming in my thinking: deliberate human attention, already argued in the <a href="the-last-human-impression.html" style="color:var(--accent)">Last Human Impression</a>. Verifiable consequence, the willingness to be wrong publicly in ways that cost something real. Physical presence and real-time shared experience. The capacity to be genuinely surprised and to tolerate the discomfort of not yet understanding something. These are not nostalgic preferences. They are things AI cannot provide by definition, and scarcity always concentrates value in what cannot be replicated.</p>
+          <div class="arg-rupture">
+            <div class="arg-rupture-label">Why this stays open</div>
+            <div class="arg-rupture-text">The list of new scarcities is still forming. The economic mechanisms that will price them are not yet visible. And the answer is probably domain-specific in ways that make any general claim misleading. This is the argument that needs the most time before it becomes a paper, and the one whose answer matters most for every strategic decision being made right now.</div>
+          </div>
+        </div>
+        <div class="arg-meta">
+          <div><div class="arg-horizon-label">Horizon</div><div class="arg-horizon-val">5–10 years</div></div>
+          <div class="arg-tags">
+            <div class="arg-tag">Economics</div>
+            <div class="arg-tag">Value theory</div>
+            <div class="arg-tag">Long-term</div>
+          </div>
+          <div class="arg-what-breaks">
+            <div class="arg-what-breaks-label">The question underneath</div>
+            <div class="arg-what-breaks-text">Every strategic bet about what to build over the next decade depends on a view about what AI makes scarce. Most people are making those bets without having made that view explicit.</div>
+          </div>
+          <div class="arg-connects">
+            <div class="arg-connects-label">Connects to</div>
+            <a href="the-last-human-impression.html">Last Human Impression</a>
+            <a href="occlusion-bias.html">Origin Gravity</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="argument reveal">
+        <div class="arg-num">7</div>
+        <div class="arg-body">
+          <div class="arg-status"><div class="dot dot-hot"></div><div class="arg-status-text">Hot</div></div>
+          <div class="arg-title">The Tastemaker Premium</div>
+          <div class="arg-sub">When AI satisfies preference at scale, the person who can surprise you becomes unreasonably powerful</div>
+          <p>Argument 2 on this page describes the death of taste as signal. This argument runs in the opposite direction and both are true simultaneously. That tension is the point.</p>
+          <p>When AI produces infinite content calibrated to stated preference, it creates two populations. The majority get what they asked for, efficiently and continuously. Their preference loop closes. They are satisfied in a way that makes them progressively less capable of being surprised and progressively less interested in trying. That population is large, growing, and economically important to AI companies building for scale.</p>
+          <p>The minority who resist that loop, or who never enter it, become something different from what tastemakers and curators have historically been. Before AI, every curator competed against every other curator for attention in a world of finite supply. After AI, the tastemaker does not compete with the algorithm at all. They operate in a categorically different register. The person who can show you something you did not know you needed, whose recommendation carries the weight of a genuine perspective developed over time under real conditions, whose selections have a track record of being right in ways that cannot be faked at scale: that person accumulates a kind of authority that has no analogue in the pre-AI world because it was never this scarce before.</p>
+          <p>The historical parallel is the concert after the phonograph. Before recorded music, all music was live and undifferentiated. After, recorded music became the commodity and the live performance became a categorically distinct experience with its own economy, its own pricing logic, its own meaning. The artist did not disappear. The artist became something different and more expensive precisely because mechanical reproduction created an abundance that live presence could never be part of. AI does the same thing to curation that the phonograph did to performance. The tastemaker does not compete with the abundance. They become the proof that the abundance is not enough.</p>
+          <div class="arg-rupture">
+            <div class="arg-rupture-label">What this creates</div>
+            <div class="arg-rupture-text">A stratification of cultural authority sharper than anything that existed before. The tastemakers who survive the transition, those with genuine perspective, verifiable track record, and the specific kind of authority that comes from having been right before the consensus, will hold more power over the fraction of the population that still wants to be surprised than the most followed curator in history ever held over their audience. Because the contrast with the alternative has never been this stark, and contrast is what makes scarcity legible.</div>
+          </div>
+        </div>
+        <div class="arg-meta">
+          <div><div class="arg-horizon-label">Horizon</div><div class="arg-horizon-val">Now - 5 years</div></div>
+          <div class="arg-tags">
+            <div class="arg-tag">Curation</div>
+            <div class="arg-tag">Cultural authority</div>
+            <div class="arg-tag">Scarcity</div>
+          </div>
+          <div class="arg-what-breaks">
+            <div class="arg-what-breaks-label">The implication</div>
+            <div class="arg-what-breaks-text">Being a genuine tastemaker with a verifiable track record is about to become one of the most economically powerful positions in media and culture. Almost nobody building for that position right now understands how much the floor beneath it is rising.</div>
+          </div>
+          <div class="arg-connects">
+            <div class="arg-connects-label">Connects to</div>
+            <a href="the-last-human-impression.html">Authority of Reference</a>
+            <a href="occlusion-bias.html">Curation Premium</a>
+            <a href="zmox.html">Constitutive Arc</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="closing reveal">
+      <p class="closing-text">These arguments are published in their current state of incompleteness. <em>That incompleteness is the point.</em> A finished argument that turned out to be wrong is less useful than an unfinished one asking the right question. If something here collides with something you are working on, the contact is on the <a href="about.html" style="color:var(--accent);text-decoration:none;">about page</a>.</p>
+    </div>
+
+    <footer style="border-top: 3px double var(--ink); padding: 1.5rem 5rem; display: flex; justify-content: space-between; align-items: center; margin-top: 3rem;">
+      <div style="font-family: 'JetBrains Mono', monospace; font-size: 0.5rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--muted);">&copy; 2026 Diego Dell'Agostino</div>
+      <div style="font-family: 'Space Grotesk', serif; font-size: 1rem; font-style: italic; color: var(--rule);">&#10087;</div>
+      <div style="font-family: 'JetBrains Mono', monospace; font-size: 0.5rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--muted);">Laboratory &middot; Unfinished Arguments</div>
+    </footer>
+
+  </div>
+<script src="global.js?v=20260419b"></script>
+<script>
+(function(){
+  var reveals = document.querySelectorAll('.reveal');
+  if (!reveals.length) return;
+  var obs = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); }
+    });
+  }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+  reveals.forEach(function(el){ obs.observe(el); });
+})();
+</script>
+</body>
+</html>

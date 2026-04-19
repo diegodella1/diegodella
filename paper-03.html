@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-TJF4P0NYFT"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-TJF4P0NYFT');
+  </script>
+  <script>(function(){var t=localStorage.getItem("theme");if(!t)t=window.matchMedia("(prefers-color-scheme:dark)").matches?"dark":"light";document.documentElement.setAttribute("data-theme",t)})()</script>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <meta name="theme-color" content="#e6d5b8">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="Narrative Mechanics">
+  <link rel="apple-touch-icon" href="/og-default.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Operating Narrative: strategic clarity requires active maintenance inside organizations, not just positioning at launch. Paper 03.">
+  <meta name="author" content="Diego Dell'Agostino">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://diegodella.ar/paper-03.html">
+  <meta property="og:title" content="Operating Narrative - Narrative-First Paper 03">
+  <meta property="og:description" content="Operating Narrative: strategic clarity requires active maintenance inside organizations, not just positioning at launch. Paper 03.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://diegodella.ar/paper-03.html">
+  <meta property="og:site_name" content="Narrative Mechanics">
+  <meta property="og:image" content="https://diegodella.ar/og-default.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Operating Narrative - Narrative-First Paper 03">
+  <meta name="twitter:description" content="Operating Narrative: strategic clarity requires active maintenance inside organizations, not just positioning at launch. Paper 03.">
+  <meta name="twitter:image" content="https://diegodella.ar/og-default.png">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ScholarlyArticle",
+    "headline": "Operating Narrative",
+    "description": "The third paper in the Narrative-First series. Operating Narrative argues that strategic clarity requires active maintenance inside the organization, not just clear positioning at launch. By Diego Dell'Agostino.",
+    "author": {
+      "@type": "Person",
+      "name": "Diego Dell'Agostino",
+      "url": "https://diegodella.ar/about.html"
+    },
+    "isPartOf": {
+      "@type": "CreativeWorkSeries",
+      "name": "Narrative-First",
+      "url": "https://diegodella.ar/paper-01.html",
+      "position": 3
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Narrative Mechanics",
+      "url": "https://diegodella.ar"
+    },
+    "url": "https://diegodella.ar/paper-03.html",
+    "datePublished": "2026-02-20",
+    "inLanguage": "en"
+  }
+  </script>
+  <title>Operating Narrative - Narrative-First Paper 03</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;700&family=Epilogue:ital,wght@0,400;1,400;0,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="global.css?v=20260418f">
+  <link rel="stylesheet" href="components.css?v=20260418f">
+  <style>
+    /* Masthead */
+    .masthead { border-bottom: 3px double var(--ink); padding: 1.5rem 4rem; display: flex; justify-content: space-between; align-items: center; }
+    .masthead-left { font-family: 'JetBrains Mono', monospace; font-size: 0.55rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--muted); }
+    .masthead-center { display: flex; flex-direction: column; align-items: center; gap: 0.4rem; }
+    .masthead-series { font-family: 'JetBrains Mono', monospace; font-size: 0.55rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--accent); border: 1px solid var(--accent); padding: 0.25em 0.85em; }
+    .masthead-right { font-family: 'JetBrains Mono', monospace; font-size: 0.55rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--muted); text-align: right; }
+
+    /* Nav (old) */
+    /* Nav styles removed — using global.css v2 nav */
+
+    /* Hero */
+    .hero { max-width: 900px; margin: 0 auto; padding: 5rem 3rem 3rem; display: grid; grid-template-columns: 1fr auto; gap: 3rem; align-items: start; position: relative; }
+    .hero-illustration { width: 280px; flex-shrink: 0; opacity: 0.85; padding-top: 1rem; }
+    .hero-title { font-family: 'Space Grotesk', serif; font-size: clamp(2.8rem, 6vw, 5rem); font-weight: 900; line-height: 1.0; letter-spacing: -0.025em; margin-bottom: 1.25rem; }
+    .hero-title em { font-style: italic; color: var(--ink); display: block; text-decoration: none; background: linear-gradient(180deg, transparent 54%, color-mix(in srgb, var(--accent) 18%, transparent) 54%); padding: 0 0.08em 0.02em 0; box-decoration-break: clone; -webkit-box-decoration-break: clone; }
+    .hero-subtitle { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 1.15rem; font-style: italic; color: var(--muted); margin-bottom: 2rem; line-height: 1.5; max-width: 440px; }
+
+    /* Content */
+    .content { max-width: 720px; margin: 0 auto; padding: 0 3rem 8rem; }
+
+    /* Section animations */
+    .section { margin-bottom: 5.5rem; opacity: 0; transform: translateY(28px); animation: fadeUp 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards; position: relative; }
+    .section:nth-child(1) { animation-delay: 0.1s; }
+    .section:nth-child(2) { animation-delay: 0.25s; }
+    .section:nth-child(3) { animation-delay: 0.4s; }
+    .section:nth-child(4) { animation-delay: 0.55s; }
+    @keyframes fadeUp { to { opacity: 1; transform: translateY(0); } }
+
+    /* Narrative list */
+    .narrative-list { margin: 2.5rem 0; }
+    .narrative-item { display: grid; grid-template-columns: 3rem 1fr; gap: 0 1.25rem; margin-bottom: 2.5rem; position: relative; }
+    .narrative-item::after { content: ''; position: absolute; left: 1.35rem; top: 2.5rem; bottom: -1rem; width: 1px; background: var(--rule); }
+    .narrative-item:last-child::after { display: none; }
+    .narrative-item-num-wrap { display: flex; flex-direction: column; align-items: center; padding-top: 0.2rem; }
+    .narrative-item-circle { width: 28px; height: 28px; border-radius: 50%; border: 1px solid var(--rule); background: var(--paper); display: flex; align-items: center; justify-content: center; font-family: 'JetBrains Mono', monospace; font-size: 0.5rem; color: var(--accent); flex-shrink: 0; z-index: 1; }
+    .narrative-item-body {}
+    .narrative-item-title { font-family: 'Space Grotesk', serif; font-size: 1.05rem; font-weight: 700; margin-bottom: 0.5rem; padding-top: 0.15rem; }
+    .narrative-item-text { font-size: 0.98rem; line-height: 1.78; color: var(--ink); margin: 0 !important; text-align: left !important; }
+    .narrative-item-text::first-letter { float: none !important; font-size: inherit !important; color: inherit !important; margin: 0 !important; }
+
+    /* Sequence block */
+    .sequence-block { border: 1px solid var(--rule); margin: 2.5rem 0; overflow: hidden; }
+    .sequence-block-header { background: var(--ink); padding: 0.75rem 1.5rem; display: flex; align-items: center; gap: 0.75rem; }
+    .sequence-block-header svg { width: 14px; height: 14px; stroke: var(--paper); fill: none; stroke-width: 1.5; opacity: 0.7; flex-shrink: 0; }
+    .sequence-block-label { font-family: 'JetBrains Mono', monospace; font-size: 0.5rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--paper); opacity: 0.7; }
+    .sequence-steps { padding: 1.5rem; background: var(--highlight); }
+    .sequence-step { display: grid; grid-template-columns: 2rem 1fr; gap: 0 1rem; margin-bottom: 1.5rem; position: relative; }
+    .sequence-step:last-child { margin-bottom: 0; }
+    .sequence-step-left { display: flex; flex-direction: column; align-items: center; }
+    .sequence-step-dot { width: 10px; height: 10px; border-radius: 50%; background: var(--accent); flex-shrink: 0; margin-top: 0.3rem; }
+    .sequence-step-line { flex: 1; width: 1px; background: var(--rule); margin: 4px 0 0; }
+    .sequence-step:last-child .sequence-step-line { display: none; }
+    .sequence-step-label { font-family: 'JetBrains Mono', monospace; font-size: 0.48rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--muted); margin-bottom: 0.15rem; }
+    .sequence-step-title { font-family: 'Space Grotesk', serif; font-size: 1.05rem; font-weight: 700; margin-bottom: 0.2rem; }
+    .sequence-step-desc { font-size: 0.88rem; font-style: italic; color: var(--muted); line-height: 1.5; }
+
+    /* Mobile overrides */
+    @media (max-width: 768px) {
+      .masthead { padding: 1.25rem 1.5rem; flex-direction: column; gap: 0.5rem; text-align: center; }
+      .hero { grid-template-columns: 1fr; padding: 3rem 1.5rem 2rem; }
+      .hero-illustration { display: none; }
+      .content { padding: 0 1.5rem 5rem; }
+      .pull-quote { margin: 2rem 0; }
+    }
+  </style>
+</head>
+<body class="series-nf">
+  <a href="#main-content" class="skip-link">Skip to content</a>
+  <div id="pbar"></div>
+  <div id="pbar-label"></div>
+
+  <!-- Background layers -->
+  <div class="bg-pattern"></div>
+  <div class="bg-grain"></div>
+
+  <div class="page-wrap">
+
+      <!-- Top Bar -->
+  <div class="top-bar">
+    <span>Buenos Aires &middot; Since 2008</span>
+    <span>18 Essays &middot; 3 Frameworks &middot; ~289 min of reading &middot; <a href="about.html">About the author</a></span>
+  </div>
+
+  <!-- Nav -->
+  <nav class="nav">
+      <div class="nav-inner">
+        <a href="index.html" class="nav-brand">Narrative<em>Mechanics</em></a>
+        <button class="nav-btn nav-toggle" aria-label="Menu" aria-expanded="false" aria-controls="navLinks" id="navToggle">
+          <svg viewBox="0 0 24 24"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg>
+        </button>
+        <div class="nav-links" id="navLinks">
+          <a href="index.html" class="nav-link">Home</a>
+          <div class="nav-sep"></div>
+          <a href="archive.html" class="nav-link">Start Here</a>
+          <a href="frameworks.html" class="nav-link">Frameworks</a>
+          <a href="series.html" class="nav-link">Series</a>
+          <a href="essays.html" class="nav-link">Essays</a>
+          <a href="notes.html" class="nav-link">Notes</a>
+          <div class="nav-sep"></div>
+          <a href="about.html" class="nav-link">About</a>
+        </div>
+        <div class="nav-right">
+          <button class="nav-btn" aria-label="Toggle theme" id="themeToggle">
+            <svg class="icon-moon" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+            <svg class="icon-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+          </button>
+        </div>
+      </div>
+    </nav>
+
+
+    
+
+    <!-- Masthead -->
+    
+    
+
+    <!-- Hero -->
+    <section class="hero">
+      <div class="hero-left">
+        <div class="hero-kicker">Essay &nbsp;/&nbsp; Product Strategy</div>
+        <h1 class="hero-title">
+          The Architecture<br>of <em>Coherence</em>
+        </h1>
+        <p class="hero-subtitle">A manifesto for narrative-first product development - on building products whose story and structure say the same thing.</p>
+        <div class="hero-byline">
+          <div class="hero-byline-dot"></div>
+          <div class="hero-byline-text">By Diego Dell Agostino</div>
+        </div>
+      </div>
+
+      <!-- Hero illustration: architectural blueprint motif -->
+      <div class="hero-illustration">
+        <svg class="hero-svg" viewBox="0 0 180 240" xmlns="http://www.w3.org/2000/svg">
+        <style>
+          @keyframes build-up{from{transform:scaleY(0);opacity:0}to{transform:scaleY(1);opacity:1}}
+          @keyframes glow-line{0%,100%{stroke-opacity:1}50%{stroke-opacity:0.3}}
+          @keyframes fade-in{from{opacity:0}to{opacity:1}}
+        </style>
+        <!-- Central pillar -->
+        <rect x="82" y="30" width="16" height="170" fill="var(--accent)" opacity="0.12"
+              style="transform-origin:90px 200px;animation:build-up 1s ease-out forwards"/>
+        <!-- Horizontal coherence lines -->
+        <line x1="20" y1="65" x2="160" y2="65" stroke="var(--rule)" stroke-width="1" style="animation:fade-in 0.4s 0.5s forwards;opacity:0"/>
+        <line x1="20" y1="105" x2="160" y2="105" stroke="var(--rule)" stroke-width="1" style="animation:fade-in 0.4s 0.7s forwards;opacity:0"/>
+        <line x1="20" y1="145" x2="160" y2="145" stroke="var(--rule)" stroke-width="1" style="animation:fade-in 0.4s 0.9s forwards;opacity:0"/>
+        <!-- Nodes on pillar -->
+        <circle cx="90" cy="65" r="5" fill="var(--accent)" style="animation:fade-in 0.3s 1s forwards;opacity:0"/>
+        <circle cx="90" cy="105" r="5" fill="var(--accent)" style="animation:fade-in 0.3s 1.2s forwards;opacity:0"/>
+        <circle cx="90" cy="145" r="5" fill="var(--accent)" style="animation:fade-in 0.3s 1.4s forwards;opacity:0"/>
+        <!-- Side labels -->
+        <text x="30" y="62" font-family="monospace" font-size="7" fill="var(--muted)" style="animation:fade-in 0.3s 1s forwards;opacity:0">STORY</text>
+        <text x="120" y="62" font-family="monospace" font-size="7" fill="var(--muted)" style="animation:fade-in 0.3s 1s forwards;opacity:0">STRUCT</text>
+        <text x="30" y="102" font-family="monospace" font-size="7" fill="var(--muted)" style="animation:fade-in 0.3s 1.2s forwards;opacity:0">VOICE</text>
+        <text x="120" y="102" font-family="monospace" font-size="7" fill="var(--muted)" style="animation:fade-in 0.3s 1.2s forwards;opacity:0">BUILD</text>
+        <text x="30" y="142" font-family="monospace" font-size="7" fill="var(--muted)" style="animation:fade-in 0.3s 1.4s forwards;opacity:0">BRAND</text>
+        <text x="120" y="142" font-family="monospace" font-size="7" fill="var(--muted)" style="animation:fade-in 0.3s 1.4s forwards;opacity:0">SCALE</text>
+        <!-- Connecting lines -->
+        <line x1="85" y1="65" x2="60" y2="65" stroke="var(--accent)" stroke-width="1" style="animation:glow-line 3s ease-in-out infinite"/>
+        <line x1="95" y1="65" x2="118" y2="65" stroke="var(--accent)" stroke-width="1" style="animation:glow-line 3s 0.5s ease-in-out infinite"/>
+        <line x1="85" y1="105" x2="60" y2="105" stroke="var(--accent)" stroke-width="1" style="animation:glow-line 3s 1s ease-in-out infinite"/>
+        <line x1="95" y1="105" x2="118" y2="105" stroke="var(--accent)" stroke-width="1" style="animation:glow-line 3s 1.5s ease-in-out infinite"/>
+        <line x1="85" y1="145" x2="60" y2="145" stroke="var(--accent)" stroke-width="1" style="animation:glow-line 3s 2s ease-in-out infinite"/>
+        <line x1="95" y1="145" x2="118" y2="145" stroke="var(--accent)" stroke-width="1" style="animation:glow-line 3s 2.5s ease-in-out infinite"/>
+        <!-- Foundation -->
+        <line x1="30" y1="200" x2="150" y2="200" stroke="var(--accent)" stroke-width="2" opacity="0" style="animation:fade-in 0.5s 1.6s forwards"/>
+        <!-- Title -->
+        <text x="90" y="225" font-family="monospace" font-size="7" fill="var(--accent)" text-anchor="middle" letter-spacing="2"
+              opacity="0" style="animation:fade-in 0.5s 1.8s forwards">COHERENCE</text>
+      </svg>
+      </div>
+    </section>
+
+        <div class="chapter-divider">
+      <div class="chapter-divider-line"></div>
+    </div>
+
+    <!-- Content -->
+    <main class="content" id="main-content">
+
+      <!-- Section I -->
+      <article class="section">
+        <div class="section-badge">
+          <div class="section-icon">
+            <svg viewBox="0 0 24 24">
+              <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+              <path d="M2 17l10 5 10-5"/>
+              <path d="M2 12l10 5 10-5"/>
+            </svg>
+          </div>
+          <div class="section-meta">
+            <div class="section-number">Section I &nbsp;/&nbsp; Four</div>
+            <h2 class="section-title">The Fallacy of the Marketing Layer</h2>
+          </div>
+        </div>
+        <div class="section-rule"></div>
+        <div class="section-body">
+          <p>There is a belief, so widespread it has become invisible, that communication is something you apply to a product after it exists. You build the thing, then you describe the thing. The description is adjustable; the product is not. Marketing is the layer you add at the end to make the surface presentable.</p>
+
+          <div class="margin-note">The belief that narrative follows product is so common it has become organizational policy. Most companies do not question it.</div>
+
+          <p>When the message is treated as a layer, it can only work with what the product gives it. And if the product was built without a clear claim about what it is for, no amount of positioning will manufacture that clarity after the fact. You cannot describe your way out of an architectural problem. The message will always tell the truth about the structure underneath; even when it is trying not to.</p>
+
+          <div class="pull-quote">
+            <p>This belief is not just wrong. It is expensive.</p>
+          </div>
+
+          <p>The organizations that understand this do not treat communication as a department. They treat it as a design constraint. The message is not the paint. It is the load-bearing wall. And like any load-bearing wall, it has to be in the plans before the first floor goes up.</p>
+        </div>
+      </article>
+
+      <!-- Section II -->
+      <article class="section">
+        <div class="section-badge">
+          <div class="section-icon">
+            <svg viewBox="0 0 24 24">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+              <polyline points="14 2 14 8 20 8"/>
+              <line x1="16" y1="13" x2="8" y2="13"/>
+              <line x1="16" y1="17" x2="8" y2="17"/>
+              <polyline points="10 9 9 9 8 9"/>
+            </svg>
+          </div>
+          <div class="section-meta">
+            <div class="section-number">Section II &nbsp;/&nbsp; Four</div>
+            <h2 class="section-title">Drafting the Operating Narrative</h2>
+          </div>
+        </div>
+        <div class="section-rule"></div>
+        <div class="section-body">
+          <p>If the Operating Narrative is the foundational document of a narrative-first organization, then writing it well is the most consequential act of early execution. It is not a positioning exercise. It is a series of commitments the product is making before it exists; commitments that will either hold or break under the pressure of actual development.</p>
+
+          <p>There are three questions the Operating Narrative must answer with precision.</p>
+
+          <div class="narrative-list">
+            <div class="narrative-item">
+              <div class="narrative-item-num-wrap">
+                <div class="narrative-item-circle">01</div>
+              </div>
+              <div class="narrative-item-body">
+                <div class="narrative-item-title">The Worldview Audit</div>
+                <p class="narrative-item-text">What does the user already believe before they encounter the product? This is the most underestimated question in product development. Every user arrives with a prior model of the world; a set of assumptions about how their problem works, why it persists, and what a solution would feel like. If the narrative does not align with that prior model, the product will spend its entire acquisition budget trying to educate rather than resonate. Education is expensive. Recognition is not.</p>
+              </div>
+            </div>
+            <div class="narrative-item">
+              <div class="narrative-item-num-wrap">
+                <div class="narrative-item-circle">02</div>
+              </div>
+              <div class="narrative-item-body">
+                <div class="narrative-item-title">The Recognition Moment</div>
+                <p class="narrative-item-text">Not the moment the product works, but the moment the user thinks "this was built for someone like me." These are not the same event. A product can function perfectly and still never produce that second moment. The Recognition Moment is an identity signal, not a utility signal. It has to be engineered deliberately; which means someone has to decide, before the first sprint, what that moment looks like and what the product has to be true, technically, for it to occur.</p>
+              </div>
+            </div>
+            <div class="narrative-item">
+              <div class="narrative-item-num-wrap">
+                <div class="narrative-item-circle">03</div>
+              </div>
+              <div class="narrative-item-body">
+                <div class="narrative-item-title">Technical Truths</div>
+                <p class="narrative-item-text">The list of things the product cannot compromise without breaking the narrative. If the claim is simplicity, the onboarding flow is not a UX decision in isolation; it is a narrative commitment. If the claim is transparency, the data architecture is not an infrastructure choice in isolation; it is a promise. Technical Truths are where the Operating Narrative becomes an engineering document - the constraints that protect the claim from being eroded by short-term decisions that each seemed reasonable at the time.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- Section III -->
+      <article class="section">
+        <div class="section-badge">
+          <div class="section-icon">
+            <svg viewBox="0 0 24 24">
+              <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
+            </svg>
+          </div>
+          <div class="section-meta">
+            <div class="section-number">Section III &nbsp;/&nbsp; Four</div>
+            <h2 class="section-title">The Sequence of Execution</h2>
+          </div>
+        </div>
+        <div class="section-rule"></div>
+        <div class="section-body">
+          <p>Most development processes are organized around capability. What can we build? What do we have the resources to ship? What does the roadmap allow for this quarter? These are legitimate questions. But they are the wrong questions to ask first.</p>
+
+          <p>The sequence matters more than most organizations acknowledge. When capability drives the process, narrative becomes a downstream problem. Someone will eventually have to explain what was built, and they will do it with whatever the product gives them. The result is a message that is accurate but not resonant; technically correct but narratively incoherent.</p>
+
+          <p>The sequence I am proposing inverts this. The Narrative comes first (the claim the product is making about the world). The Constraints come second (the Technical Truths that make the claim credible). The Product comes third (the confirmation of everything that preceded it).</p>
+
+          <div class="sequence-block">
+            <div class="sequence-block-header">
+              <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg>
+              <div class="sequence-block-label">The Correct Sequence of Execution</div>
+            </div>
+            <div class="sequence-steps">
+              <div class="sequence-step">
+                <div class="sequence-step-left">
+                  <div class="sequence-step-dot"></div>
+                  <div class="sequence-step-line"></div>
+                </div>
+                <div>
+                  <div class="sequence-step-label">First</div>
+                  <div class="sequence-step-title">Narrative</div>
+                  <div class="sequence-step-desc">The claim the product is making about the world</div>
+                </div>
+              </div>
+              <div class="sequence-step">
+                <div class="sequence-step-left">
+                  <div class="sequence-step-dot"></div>
+                  <div class="sequence-step-line"></div>
+                </div>
+                <div>
+                  <div class="sequence-step-label">Second</div>
+                  <div class="sequence-step-title">Constraints</div>
+                  <div class="sequence-step-desc">The Technical Truths that make the claim credible</div>
+                </div>
+              </div>
+              <div class="sequence-step">
+                <div class="sequence-step-left">
+                  <div class="sequence-step-dot"></div>
+                  <div class="sequence-step-line"></div>
+                </div>
+                <div>
+                  <div class="sequence-step-label">Third</div>
+                  <div class="sequence-step-title">Product</div>
+                  <div class="sequence-step-desc">The confirmation of everything that preceded it</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="margin-note">The Operating Narrative is the only document that connects strategy to execution without losing meaning at the handoff.</div>
+
+          <p>The Operating Narrative is not a creative document that sits in a folder. It is a decision framework that eliminates entire categories of debate before they begin. When a feature proposal arrives, the question is not whether it is a good idea in the abstract. The question is whether it makes the product more or less true to what it claimed to be.</p>
+
+          <div class="pull-quote">
+            <p>That test takes seconds. The debates it replaces can take weeks.</p>
+          </div>
+        </div>
+      </article>
+
+      <!-- Section IV -->
+      <article class="section">
+        <div class="section-badge">
+          <div class="section-icon">
+            <svg viewBox="0 0 24 24">
+              <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/>
+              <polyline points="17 6 23 6 23 12"/>
+            </svg>
+          </div>
+          <div class="section-meta">
+            <div class="section-number">Section IV &nbsp;/&nbsp; Four</div>
+            <h2 class="section-title">Coherence as Compounding Asset</h2>
+          </div>
+        </div>
+        <div class="section-rule"></div>
+        <div class="section-body">
+          <p>Here is what the sequence produces over time, and why it matters more than any individual tactical decision.</p>
+
+          <p>Every product makes a series of small commitments to its users. Each interaction, each feature, each piece of communication is either confirming the original claim or quietly contradicting it. When these commitments are coherent, they compound. The user's trust deepens not because the product is perfect, but because it is consistent. Consistency, over time, becomes identity. And identity is the most durable competitive advantage a product can build.</p>
+
+          <p>When the commitments are incoherent (even slightly, even gradually) the opposite happens. The user's model of what the product is for begins to blur. They stay, perhaps, because the utility is still there. But they stop referring. They stop advocating. The product works but it does not grow; because it no longer produces the recognition that makes organic growth possible.</p>
+        </div>
+      </article>
+
+      <!-- Closing -->
+      <div class="closing">
+        <div class="closing-ornament-top">✦ &nbsp; ❧ &nbsp; ✦</div>
+        <p>You can re-acquire users. You cannot re-earn the clarity you chose not to build in the first place.</p>
+        <p>That is the architecture. And like any architecture, the time to get it right is before anything is built; not after everything has to be torn down.</p>
+        <div class="closing-ornament-bottom">End of Paper No. 3 &nbsp;·&nbsp; Narrative-First Series</div>
+      </div>
+      <div style="max-width:720px;margin:1.5rem auto 0;padding:0 2.5rem;font-family:'JetBrains Mono',monospace;font-size:0.5rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--muted);">February 2026</div>
+
+    </main>
+
+    <div style="max-width:680px;margin:0 auto;padding:0 4rem 2rem;">
+      <p style="font-family:'Inter',serif;font-size:1rem;line-height:1.75;color:var(--muted);font-style:italic;">Coherence is easy when you're small. The real test is whether it survives growth. That's the subject of Essay 04.</p>
+    </div>
+
+    <div class="paper-nav">
+      <a href="paper-02.html" class="paper-nav-prev">
+        <svg viewBox="0 0 24 24"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+        Before You Fit
+      </a>
+      <a href="paper-04.html" class="paper-nav-next">
+        Before You Scale
+        <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </a>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+      <div class="footer-left">© 2026 Diego Dell Agostino</div>
+      <div class="footer-center">❧</div>
+      <div class="footer-right">Narrative-First Product Development<br>Paper No. 3 of 4</div>
+    </footer>
+
+  </div><!-- .page-wrap -->
+<script src="global.js?v=20260419b"></script>
+</body>
+</html>

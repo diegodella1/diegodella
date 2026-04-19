@@ -1,0 +1,26 @@
+{
+  "$schema": "https://schemas.agentskills.io/discovery/0.2.0/schema.json",
+  "skills": [
+    {
+      "name": "site-navigation",
+      "type": "skill-md",
+      "description": "Navigate the editorial structure of Narrative Mechanics and choose the best entry route.",
+      "url": "/.well-known/agent-skills/navigation/SKILL.md",
+      "digest": "sha256:4fff2111b8579445c4fa79ff50daf20f8f68fb1ab9fab8fa5bea5921afe6c980"
+    },
+    {
+      "name": "contact-diego",
+      "type": "skill-md",
+      "description": "Use the direct contact flow on diegodella.ar to start a conversation or request updates.",
+      "url": "/.well-known/agent-skills/contact/SKILL.md",
+      "digest": "sha256:92e8c93909489c3eb4b19fa8fdcbbed3c6325d13d10c20df69d287accdbf7e46"
+    },
+    {
+      "name": "subscribe-updates",
+      "type": "skill-md",
+      "description": "Subscribe a reader to low-frequency Narrative Mechanics updates.",
+      "url": "/.well-known/agent-skills/subscribe/SKILL.md",
+      "digest": "sha256:a60f15e7c3030d4f773a4dd6d885cbdb79a1383af9e08bfa3c43aa840c28a17b"
+    }
+  ]
+}

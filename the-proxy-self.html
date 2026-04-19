@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-TJF4P0NYFT"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-TJF4P0NYFT');
+  </script>
+  <script>(function(){var t=localStorage.getItem("theme");if(!t)t=window.matchMedia("(prefers-color-scheme:dark)").matches?"dark":"light";document.documentElement.setAttribute("data-theme",t)})()</script>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <meta name="theme-color" content="#e6d5b8">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="Narrative Mechanics">
+  <link rel="apple-touch-icon" href="/og-default.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="On identity and delegation: what it means for your brand presence to become a training dataset rather than a living signal.">
+  <meta name="author" content="Diego Dell'Agostino">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://diegodella.ar/the-proxy-self.html">
+  <meta property="og:title" content="The Proxy Self — After You Post 02">
+  <meta property="og:description" content="On identity and delegation: what it means for your brand presence to become a training dataset rather than a living signal.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://diegodella.ar/the-proxy-self.html">
+  <meta property="og:site_name" content="Narrative Mechanics">
+  <meta property="og:image" content="https://diegodella.ar/og-default.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:locale" content="en_US">
+  <meta property="article:author" content="Diego Dell'Agostino">
+  <meta property="article:published_time" content="2026-03-10">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="The Proxy Self — After You Post 02">
+  <meta name="twitter:description" content="On identity and delegation: what it means for your brand presence to become a training dataset rather than a living signal.">
+  <meta name="twitter:image" content="https://diegodella.ar/og-default.png">
+  <title>The Proxy Self — Diego Dell'Agostino</title>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "The Proxy Self",
+    "description": "On identity and delegation: what it means for your brand presence to become a training dataset rather than a living signal.",
+    "author": {
+      "@type": "Person",
+      "name": "Diego Dell'Agostino",
+      "url": "https://diegodella.ar/about.html"
+    },
+    "datePublished": "2026-03-10",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Narrative Mechanics",
+      "url": "https://diegodella.ar"
+    },
+    "url": "https://diegodella.ar/the-proxy-self.html",
+    "mainEntityOfPage": "https://diegodella.ar/the-proxy-self.html"
+  }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;700&family=Epilogue:ital,wght@0,400;1,400;0,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="global.css?v=20260418f">
+  <link rel="stylesheet" href="components.css?v=20260418f">
+  <style>
+    ::selection { background: var(--accent); color: var(--paper); }
+    .hero { max-width: 900px; margin: 0 auto; padding: 5rem 4rem 4rem; display: grid; grid-template-columns: 1fr 280px; gap: 2rem; align-items: center; }
+    .hero-title { font-family: 'Space Grotesk', serif; font-size: clamp(2.8rem, 6vw, 5rem); font-weight: 900; line-height: 1.0; letter-spacing: -0.025em; margin-bottom: 1rem; }
+    .hero-title em { font-style: italic; color: var(--ink); display: block; text-decoration: none; background: linear-gradient(180deg, transparent 54%, color-mix(in srgb, var(--accent) 18%, transparent) 54%); padding: 0 0.08em 0.02em 0; box-decoration-break: clone; -webkit-box-decoration-break: clone; }
+    .hero-subtitle { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 1.1rem; font-style: italic; color: var(--muted); margin-bottom: 2rem; line-height: 1.5; max-width: 480px; }
+    .hero-svg { width: 100%; height: auto; }
+    .content { max-width: 720px; margin: 0 auto; padding: 0 2.5rem 4rem; }
+    .essay-section { margin-bottom: 4.5rem; opacity: 0; transform: translateY(24px); animation: fadeUp 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards; }
+    .essay-section:nth-child(1) { animation-delay: 0.05s; }
+    .essay-section:nth-child(2) { animation-delay: 0.12s; }
+    .essay-section:nth-child(3) { animation-delay: 0.19s; }
+    .essay-section:nth-child(4) { animation-delay: 0.26s; }
+    .essay-section:nth-child(5) { animation-delay: 0.33s; }
+    .essay-section:nth-child(6) { animation-delay: 0.40s; }
+    @keyframes fadeUp { to { opacity: 1; transform: translateY(0); } }
+    .essay-section p { margin-bottom: 1.5rem; font-size: 1.05rem; line-height: 1.92; text-align: justify; hyphens: auto; }
+    .essay-section p:last-child { margin-bottom: 0; }
+    .essay-section.intro p:first-of-type::first-letter {
+      font-family: 'Space Grotesk', serif; font-size: 4.2rem; font-weight: 900;
+      float: left; line-height: 0.72; margin-right: 0.07em; margin-top: 0.12em; color: var(--accent);
+    }
+    .series-nav { max-width: 680px; margin: 0 auto; padding: 2rem 2.5rem 0; border-top: 1px solid var(--rule); }
+    .series-nav-label { font-family: 'JetBrains Mono', monospace; font-size: 0.5rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--muted); margin-bottom: 1.25rem; }
+    .series-list { list-style: none; display: flex; flex-direction: column; gap: 0.5rem; }
+    .series-list li { display: flex; align-items: baseline; gap: 0.75rem; }
+    .series-list li a { text-decoration: none; color: var(--ink-2); transition: color 0.2s; }
+    .series-list li a:hover { color: var(--accent); }
+    .series-num { font-family: 'JetBrains Mono', monospace; font-size: 0.5rem; color: var(--muted); min-width: 1.5rem; }
+    .series-title { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 0.9rem; color: var(--ink-2); }
+    .series-title.current { color: var(--ink); font-weight: 600; }
+    .share-btn { display: inline-flex; align-items: center; gap: 0.5rem; font-family: 'JetBrains Mono', monospace; font-size: 0.5rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--muted); background: none; border: 1px solid var(--rule); padding: 0.5em 1em; cursor: pointer; transition: all 0.15s; margin-top: 1rem; position: relative; z-index: 1; }
+    .share-btn:hover { color: var(--accent); border-color: var(--accent); }
+    .share-btn.copied { color: var(--accent); border-color: var(--accent); }
+    .paper-nav { max-width: 680px; margin: 0 auto; padding: 0 2.5rem 5rem; display: flex; justify-content: space-between; }
+    .paper-nav a { display: flex; align-items: center; gap: 0.75rem; text-decoration: none; color: var(--ink); font-family: 'JetBrains Mono', monospace; font-size: 0.55rem; letter-spacing: 0.15em; text-transform: uppercase; transition: color 0.2s; }
+    .paper-nav a:hover { color: var(--accent); }
+    .paper-nav a svg { width: 16px; height: 16px; stroke: currentColor; fill: none; stroke-width: 1.5; }
+    @media (max-width: 768px) {
+      .hero { padding: 3rem 1.5rem 2rem; grid-template-columns: 1fr; }
+      .hero-svg { max-width: 200px; margin: 0 auto; order: -1; }
+      .content { padding: 0 1.5rem 4rem; }
+      .series-nav { padding: 2rem 1.5rem 0; }
+      .paper-nav { padding: 0 1.5rem 3rem; }
+    }
+  </style>
+</head>
+<body class="series-ayp">
+  <div id="pbar"></div>
+  <div id="pbar-label"></div>
+  <div class="bg-pattern"></div>
+  <div class="bg-grain"></div>
+
+  <div class="page-wrap">
+    <div class="top-bar">
+      <span>Buenos Aires &middot; Since 2008</span>
+      <span>18 Essays &middot; 3 Frameworks &middot; ~289 min of reading &middot; <a href="about.html">About the author</a></span>
+    </div>
+
+    <nav class="nav">
+      <div class="nav-inner">
+        <a href="index.html" class="nav-brand">Narrative<em>Mechanics</em></a>
+        <button class="nav-btn nav-toggle" aria-label="Menu" aria-expanded="false" aria-controls="navLinks" id="navToggle">
+          <svg viewBox="0 0 24 24"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg>
+        </button>
+        <div class="nav-links" id="navLinks">
+          <a href="index.html" class="nav-link">Home</a>
+          <div class="nav-sep"></div>
+          <a href="archive.html" class="nav-link">Start Here</a>
+          <a href="frameworks.html" class="nav-link">Frameworks</a>
+          <a href="series.html" class="nav-link">Series</a>
+          <a href="essays.html" class="nav-link">Essays</a>
+          <a href="notes.html" class="nav-link">Notes</a>
+          <div class="nav-sep"></div>
+          <a href="about.html" class="nav-link">About</a>
+        </div>
+        <div class="nav-right">
+          <button class="nav-btn" aria-label="Toggle theme" id="themeToggle">
+            <svg class="icon-moon" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+            <svg class="icon-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <header class="hero">
+      <div class="hero-main">
+        <div class="hero-kicker">After You Post · 02 &nbsp;&middot;&nbsp; March 2026</div>
+        <h1 class="hero-title">The Proxy<em>Self</em></h1>
+        <p class="hero-subtitle">On identity and delegation: what it means for your brand presence to become a training dataset rather than a living signal.</p>
+        <div class="hero-byline"><div class="hero-byline-dot"></div><span class="hero-byline-text">Diego Dell'Agostino &nbsp;&middot;&nbsp; Buenos Aires</span></div>
+      </div>
+      <!-- SVG: Split figure — solid person on left, dashed ghost on right -->
+      <svg class="hero-svg" viewBox="0 0 160 200" xmlns="http://www.w3.org/2000/svg">
+        <style>
+          @keyframes psDrift{0%{transform:translateX(0)}100%{transform:translateX(6px)}}
+          @keyframes psAppear{from{opacity:0}to{opacity:1}}
+          @keyframes psPulse{0%,100%{opacity:0.3}50%{opacity:0.6}}
+        </style>
+        <!-- Center dividing line -->
+        <line x1="80" y1="30" x2="80" y2="170" stroke="var(--rule)" stroke-width="0.5" stroke-dasharray="2 4"/>
+        <!-- Solid figure (the person) -->
+        <g opacity="0" style="animation:psAppear 0.8s 0.3s forwards">
+          <circle cx="60" cy="60" r="12" fill="none" stroke="var(--ink)" stroke-width="1.5"/>
+          <line x1="60" y1="72" x2="60" y2="110" stroke="var(--ink)" stroke-width="1.5"/>
+          <line x1="60" y1="85" x2="45" y2="95" stroke="var(--ink)" stroke-width="1.2"/>
+          <line x1="60" y1="85" x2="75" y2="95" stroke="var(--ink)" stroke-width="1.2"/>
+          <line x1="60" y1="110" x2="48" y2="135" stroke="var(--ink)" stroke-width="1.2"/>
+          <line x1="60" y1="110" x2="72" y2="135" stroke="var(--ink)" stroke-width="1.2"/>
+        </g>
+        <!-- Ghost figure (the proxy) — drifts slightly -->
+        <g opacity="0" style="animation:psAppear 0.8s 0.8s forwards, psDrift 4s 1.5s ease-in-out infinite alternate">
+          <circle cx="100" cy="60" r="12" fill="none" stroke="var(--accent)" stroke-width="1.2" stroke-dasharray="3 2"/>
+          <line x1="100" y1="72" x2="100" y2="110" stroke="var(--accent)" stroke-width="1.2" stroke-dasharray="3 2"/>
+          <line x1="100" y1="85" x2="85" y2="95" stroke="var(--accent)" stroke-width="1" stroke-dasharray="3 2"/>
+          <line x1="100" y1="85" x2="115" y2="95" stroke="var(--accent)" stroke-width="1" stroke-dasharray="3 2"/>
+          <line x1="100" y1="110" x2="88" y2="135" stroke="var(--accent)" stroke-width="1" stroke-dasharray="3 2"/>
+          <line x1="100" y1="110" x2="112" y2="135" stroke="var(--accent)" stroke-width="1" stroke-dasharray="3 2"/>
+        </g>
+        <!-- Connection line between them -->
+        <line x1="72" y1="60" x2="88" y2="60" stroke="var(--rule)" stroke-width="0.8" stroke-dasharray="1 2" style="animation:psPulse 2s ease-in-out infinite"/>
+        <!-- Labels -->
+        <text x="60" y="155" font-family="monospace" font-size="5" fill="var(--ink)" text-anchor="middle" letter-spacing="1" opacity="0" style="animation:psAppear 0.5s 1.5s forwards">PERSON</text>
+        <text x="100" y="155" font-family="monospace" font-size="5" fill="var(--accent)" text-anchor="middle" letter-spacing="1" opacity="0" style="animation:psAppear 0.5s 1.8s forwards">PROXY</text>
+        <text x="80" y="185" font-family="monospace" font-size="6" fill="var(--muted)" text-anchor="middle" letter-spacing="2" opacity="0" style="animation:psAppear 0.5s 2.2s forwards">SEVERED</text>
+        <text x="80" y="195" font-family="monospace" font-size="5" fill="var(--rule)" text-anchor="middle" letter-spacing="1.5" opacity="0" style="animation:psAppear 0.5s 2.5s forwards">same name, two selves</text>
+      </svg>
+    </header>
+
+    <div class="chapter-divider"><div class="chapter-divider-line"></div></div>
+
+    <div class="content">
+
+      <div class="essay-section intro">
+        <p>The previous essay asked whether the room you're publishing into still has people in it. This one asks a harder version of the same question: whether you, as the person publishing, are still the one in the room.</p>
+        <p>There's a creator you've probably followed for a couple of years. Consistent voice, consistent cadence, consistent point of view. Something happened to them in the last eighteen months, you're not sure what, a shift in tone maybe, or a subject they used to care about going quiet. But the posting didn't stop. The content kept coming. The presence held.</p>
+        <p>You noticed but didn't think much of it. People change. Algorithms change. Maybe they found a new angle. You kept following.</p>
+        <p>What you were watching, without either of you knowing it, was a proxy.</p>
+      </div>
+
+      <div class="essay-section">
+        <div class="section-badge">
+          <div class="section-icon"><svg viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="8.5" cy="7" r="4"/><line x1="20" y1="8" x2="20" y2="14"/><line x1="23" y1="11" x2="17" y2="11"/></svg></div>
+          <div class="section-meta">
+            <span class="section-number">Section 01</span>
+            <span class="section-title">The Split That Was Always There</span>
+          </div>
+        </div>
+        <div class="section-rule"></div>
+        <div class="section-body">
+          <p>There's always been a gap between who you are and what you publish. That's not a problem specific to the internet. Every writer knows it, every public figure knows it: the version of you that goes out into the world is edited, curated, timed. The full person stays home.</p>
+          <p>For most of the social web's history, that gap was small enough to ignore. You published more or less what you thought, at more or less the pace you thought it, and the result read like you. Rough around the edges, occasionally off, but recognizably yours. The presence and the person were close enough that conflating them felt harmless.</p>
+          <p>That started changing in two directions at once, and neither of them felt like a decision at the time.</p>
+          <p>Optimization came first. The longer you published, the more you learned what worked: what the algorithm rewarded, what the audience responded to, which framings got shared and which ones disappeared. Slowly, without deciding to, you started writing toward the signal. Not lying, not performing, just leaning. The presence began to diverge from the person in ways too gradual to notice.</p>
+          <p>Then came delegation. Scheduling tools, then drafting tools, then agents that could approximate a voice. The presence started running on its own.</p>
+          <p>Both paths end up in the same place: a version of you that keeps going when you're not there.</p>
+        </div>
+      </div>
+
+      <div class="essay-section">
+        <div class="section-badge">
+          <div class="section-icon"><svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></div>
+          <div class="section-meta">
+            <span class="section-number">Section 02</span>
+            <span class="section-title">Severance Called It Something Else</span>
+          </div>
+        </div>
+        <div class="section-rule"></div>
+        <div class="section-body">
+          <p>The show Severance built a whole architecture around this. An employee undergoes a procedure that splits their consciousness: the version that goes to work (the innie) has no memory of life outside the office. The version that lives outside (the outie) has no idea what happens during the workday. Same body, same name, two people who will never meet.</p>
+          <p>What makes it unbearable isn't the split itself. It's that the innie works in the name of someone they don't know. The outie lives a life the innie will never see. And everything the innie produces goes out into the world attributed to a whole person who is actually two halves with no shared memory.</p>
+          <p>The innie is your agent, your scheduled content, your optimized presence: consistent, trained on what works, producing on schedule, with no access to what's actually happening in your life. The outie is you: living, changing, having a bad month, quietly losing interest in the thing the agent is still passionate about on LinkedIn.</p>
+          <div class="pull-quote">
+            <p>What the system knows about you is almost entirely innie. The outie is the part that doesn't post.</p>
+          </div>
+          <p>Until the two share a feed. The birthday post goes up between two pieces of scheduled content and nobody flags the transition. The algorithm doesn't see a different person. It sees the same profile, the same handle, more data points to process.</p>
+          <p>That's where the signal degrades. The optimized content picks up a trace of the human moment by adjacency. The human moment gets catalogued as more output from the same profile that produces everything else. Both lose definition. And over time, the model learns the pattern of your unoptimized moments well enough to start incorporating them into its picture of you. The outie, just by showing up, is teaching the innie how to sound like it.</p>
+          <p>In Severance the two worlds never touch by design. In your feed they touch every day, without ceremony, without anyone noticing.</p>
+          <p>And the split doesn't require an agent. You don't have to have delegated anything intentionally. The agent self emerges from the optimization alone, from years of learning what your audience responds to and adjusting accordingly. If you've been publishing consistently for long enough, there's already a version of your presence that operates on its own logic. Delegation just makes the separation visible.</p>
+        </div>
+      </div>
+
+      <div class="essay-section">
+        <div class="section-badge">
+          <div class="section-icon"><svg viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div>
+          <div class="section-meta">
+            <span class="section-number">Section 03</span>
+            <span class="section-title">What the System Reads</span>
+          </div>
+        </div>
+        <div class="section-rule"></div>
+        <div class="section-body">
+          <p>What gets scraped, indexed, and used to train models is the agent. The person doesn't have a corpus. The person exists in conversations, in the things you didn't publish, in the ideas you had and then dropped. None of that makes it into the dataset.</p>
+          <p>A language model that knows your work is developing a picture of the agent. A potential client researching you is reading the agent. Your professional reputation, in the most literal current sense, is a persistent queryable record that keeps existing regardless of whether you still hold those positions or still speak in that register.</p>
+          <div class="margin-note">There's a version of you that keeps publishing after you've moved on. Not because anyone is lying. Because the presence developed enough momentum to continue on its own terms.</div>
+          <p>This was always true to some degree. A published essay from 2019 doesn't update when you change your mind. But the velocity is different now, and the gap between the living person and the indexed presence can open faster than anyone thinks to close it.</p>
+        </div>
+      </div>
+
+      <div class="essay-section">
+        <div class="section-badge">
+          <div class="section-icon"><svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></div>
+          <div class="section-meta">
+            <span class="section-number">Section 04</span>
+            <span class="section-title">What the Agent Leaves Behind</span>
+          </div>
+        </div>
+        <div class="section-rule"></div>
+        <div class="section-body">
+          <p>Agents won't replace the birthday post. They won't replace the photo from the weekend, the offhand observation, the thing you said at 11pm that got more traction than the content you spent three hours on. Those moments are unscheduled, unoptimized, impossible to systematize because they come from lived experience rather than content strategy.</p>
+          <p>But as the agent takes up more of the presence, the baseline shifts. What used to read as human variation starts to read as noise against a smoother signal. The birthday post becomes an anomaly in your own feed instead of a human moment in it.</p>
+          <p>And every consistent presence is, quietly, a training set. Years of public output add up to a record of how you think: what you frame as problems, what you treat as obvious, what you find worth saying at all. Enough of it and a model can predict what you'd say about something you've never addressed. The question is whose voice that model is learning. The person you are now, or the version the algorithm built while you were teaching it what worked.</p>
+          <p>The presence persists. The person keeps moving. At some point those two things are worth comparing.</p>
+        </div>
+      </div>
+
+      <div class="closing">
+        <div class="closing-ornament-top">&#10022; &nbsp; &#10087; &nbsp; &#10022;</div>
+        <p>The presence persists. The person keeps moving. At some point those two things are worth comparing.</p>
+        <div class="closing-ornament-bottom"><a href="https://diegodella.ar" style="color:inherit;text-decoration:none;">diegodella.ar</a> &nbsp;&middot;&nbsp; Buenos Aires, 2026</div>
+        <button class="share-btn" id="shareBtn" onclick="handleShare()"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/><polyline points="16 6 12 2 8 6"/><line x1="12" y1="2" x2="12" y2="15"/></svg> Share</button>
+      </div>
+
+      <div class="series-nav">
+        <div class="series-nav-label">After You Post &middot; The Series</div>
+        <ul class="series-list">
+          <li><span class="series-num">01</span><a href="the-empty-room.html"><span class="series-title">The Empty Room</span></a></li>
+          <li><span class="series-num">02</span><span class="series-title current">The Proxy Self</span></li>
+          <li><span class="series-num">03</span><a href="writing-for-the-filter.html"><span class="series-title">Writing for the Filter</span></a></li>
+          <li><span class="series-num">04</span><a href="the-trust-collapse.html"><span class="series-title">The Trust Collapse</span></a></li>
+          <li><span class="series-num">05</span><a href="origin-gravity.html"><span class="series-title">Origin Gravity</span></a></li>
+        </ul>
+      </div>
+
+      <div class="paper-nav">
+        <a href="the-empty-room.html"><svg viewBox="0 0 24 24"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg> The Empty Room</a>
+        <a href="writing-for-the-filter.html">Writing for the Filter &nbsp;<svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+      </div>
+    </div>
+
+    <footer>
+      <div class="footer-left">&copy; 2026 Diego Dell'Agostino</div>
+      <div class="footer-center">&#10087;</div>
+      <div class="footer-right">Media Strategy &amp; Product Thinking</div>
+    </footer>
+  </div>
+<script src="global.js?v=20260419b"></script>
+<script>
+  function handleShare() {
+    var u = window.location.href, t = 'The Proxy Self', x = 'On identity and delegation: what it means for your brand presence to become a training dataset rather than a living signal.';
+    if (navigator.share) { navigator.share({ title: t, text: x, url: u }).catch(function(){}); }
+    else if (navigator.clipboard) { navigator.clipboard.writeText(u).then(function() { var b = document.getElementById('shareBtn'); b.classList.add('copied'); b.innerHTML = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Copied'; setTimeout(function() { b.classList.remove('copied'); b.innerHTML = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/><polyline points="16 6 12 2 8 6"/><line x1="12" y1="2" x2="12" y2="15"/></svg> Share'; }, 2000); }); }
+  }
+</script>
+</body>
+</html>

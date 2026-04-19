@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-TJF4P0NYFT"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-TJF4P0NYFT');
+  </script>
+  <script>(function(){var t=localStorage.getItem("theme");if(!t)t=window.matchMedia("(prefers-color-scheme:dark)").matches?"dark":"light";document.documentElement.setAttribute("data-theme",t)})()</script>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <meta name="theme-color" content="#e6d5b8">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="Narrative Mechanics">
+  <link rel="apple-touch-icon" href="/og-default.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="When every material scarcity falls, one remains. A long-form essay on desire, automation, and the human motive that cannot be outsourced or manufactured.">
+  <meta name="author" content="Diego Dell'Agostino">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://diegodella.ar/the-last-scarcity.html">
+  <meta property="og:title" content="The Last Scarcity">
+  <meta property="og:description" content="When every material scarcity falls, one remains. It can't be automated. It can't be distributed. It can only come from inside a body that wants something it can't quite name.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://diegodella.ar/the-last-scarcity.html">
+  <meta property="og:site_name" content="Narrative Mechanics">
+  <meta property="og:image" content="https://diegodella.ar/og-default.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:locale" content="en_US">
+  <meta property="article:author" content="Diego Dell'Agostino">
+  <meta property="article:published_time" content="2026-03-07">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="The Last Scarcity">
+  <meta name="twitter:description" content="When every material scarcity falls, one remains. It can only come from inside a body that wants something it can't quite name.">
+  <meta name="twitter:image" content="https://diegodella.ar/og-default.png">
+  <title>The Last Scarcity — Diego Dell'Agostino</title>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "The Last Scarcity",
+    "description": "When every material scarcity falls, one remains. It cannot be automated. It cannot be distributed. It can only come from inside a body that wants something it cannot quite name.",
+    "author": {
+      "@type": "Person",
+      "name": "Diego Dell'Agostino",
+      "url": "https://diegodella.ar/about.html"
+    },
+    "datePublished": "2026-03-07",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Narrative Mechanics",
+      "url": "https://diegodella.ar"
+    },
+    "url": "https://diegodella.ar/the-last-scarcity.html",
+    "mainEntityOfPage": "https://diegodella.ar/the-last-scarcity.html"
+  }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;700&family=Epilogue:ital,wght@0,400;1,400;0,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="global.css?v=20260418f">
+  <link rel="stylesheet" href="components.css?v=20260418f">
+  <style>
+    ::selection { background: var(--accent); color: var(--paper); }
+
+    /* Hero */
+    .hero { max-width: 900px; margin: 0 auto; padding: 5rem 4rem 4rem; }
+    .hero-kicker { font-family: 'JetBrains Mono', monospace; font-size: 0.55rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--accent); margin-bottom: 1.25rem; display: flex; align-items: center; gap: 0.75rem; }
+    .hero-kicker::before { content: ''; display: inline-block; width: 24px; height: 1px; background: var(--accent); }
+    .hero-title { font-family: 'Space Grotesk', serif; font-size: clamp(2.8rem, 6vw, 5rem); font-weight: 900; line-height: 1.0; letter-spacing: -0.025em; margin-bottom: 1rem; }
+    .hero-title em { font-style: italic; color: var(--ink); display: block; text-decoration: none; background: linear-gradient(180deg, transparent 54%, color-mix(in srgb, var(--accent) 18%, transparent) 54%); padding: 0 0.08em 0.02em 0; box-decoration-break: clone; -webkit-box-decoration-break: clone; }
+    .hero-subtitle { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 1.1rem; font-style: italic; color: var(--muted); margin-bottom: 2rem; line-height: 1.5; max-width: 480px; }
+    .hero-byline { display: flex; align-items: center; gap: 0.75rem; }
+    .hero-byline-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--accent); }
+    .hero-byline-text { font-family: 'JetBrains Mono', monospace; font-size: 0.58rem; letter-spacing: 0.1em; text-transform: uppercase; }
+
+    /* Divider */
+    .chapter-divider { max-width: 900px; margin: 0 auto 3rem; padding: 0 4rem; display: flex; align-items: center; gap: 1.5rem; }
+    .chapter-divider-line { flex: 1; height: 1px; background: linear-gradient(to right, transparent, var(--rule), transparent); }
+    .chapter-divider-ornament { font-family: 'Space Grotesk', serif; font-size: 1.1rem; color: var(--muted); display: flex; gap: 0.4rem; }
+
+    /* Content */
+    .content { max-width: 720px; margin: 0 auto; padding: 0 2.5rem 8rem; }
+
+    .essay-section { margin-bottom: 4.5rem; opacity: 0; transform: translateY(24px); animation: fadeUp 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards; }
+    .essay-section:nth-child(1) { animation-delay: 0.05s; }
+    .essay-section:nth-child(2) { animation-delay: 0.12s; }
+    .essay-section:nth-child(3) { animation-delay: 0.19s; }
+    .essay-section:nth-child(4) { animation-delay: 0.26s; }
+    .essay-section:nth-child(5) { animation-delay: 0.33s; }
+    .essay-section:nth-child(6) { animation-delay: 0.40s; }
+    .essay-section:nth-child(7) { animation-delay: 0.47s; }
+    .essay-section:nth-child(8) { animation-delay: 0.54s; }
+    .essay-section:nth-child(9) { animation-delay: 0.61s; }
+    @keyframes fadeUp { to { opacity: 1; transform: translateY(0); } }
+
+    .section-header { display: flex; align-items: baseline; gap: 1rem; margin-bottom: 1.75rem; padding-bottom: 1rem; border-bottom: 1px solid var(--rule); }
+    .section-header-num { font-family: 'Space Grotesk', serif; font-size: 2.5rem; font-weight: 900; font-style: italic; color: var(--rule); line-height: 1; flex-shrink: 0; transition: color 0.2s; }
+    .essay-section:hover .section-header-num { color: var(--accent); }
+    .section-header-body { display: flex; flex-direction: column; gap: 0.2rem; }
+    .section-header-label { font-family: 'JetBrains Mono', monospace; font-size: 0.48rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--accent); }
+    .section-header-title { font-family: 'Space Grotesk', serif; font-size: 1.35rem; font-weight: 700; line-height: 1.15; letter-spacing: -0.01em; }
+
+    .essay-section p { margin-bottom: 1.5rem; font-size: 1.05rem; line-height: 1.92; text-align: justify; hyphens: auto; }
+    .essay-section p:last-child { margin-bottom: 0; }
+
+    .essay-section.intro p:first-of-type::first-letter {
+      font-family: 'Space Grotesk', serif; font-size: 4.2rem; font-weight: 900;
+      float: left; line-height: 0.72; margin-right: 0.07em; margin-top: 0.12em; color: var(--accent);
+    }
+
+    .pull-quote { margin: 2.5rem -2rem; padding: 1.5rem 2rem 1.5rem 2.5rem; border-left: 3px solid var(--accent); background: var(--accent-light); position: relative; }
+    .pull-quote::before { content: '\201C'; font-family: 'Space Grotesk', serif; font-size: 5rem; color: var(--accent); opacity: 0.2; position: absolute; top: -0.5rem; left: 0.5rem; line-height: 1; }
+    .pull-quote p { font-family: 'Space Grotesk', serif; font-size: 1.2rem; font-style: italic; line-height: 1.5; color: var(--deep); margin: 0 !important; text-align: left !important; position: relative; z-index: 1; }
+    .pull-quote p::first-letter { float: none !important; font-size: inherit !important; color: inherit !important; margin: 0 !important; }
+
+    .margin-note { float: right; width: 140px; margin: 0 -160px 1rem 1.5rem; font-family: 'JetBrains Mono', monospace; font-size: 0.52rem; line-height: 1.6; color: var(--muted); border-left: 2px solid var(--rule); padding-left: 0.75rem; }
+    @media (max-width: 900px) { .margin-note { display: none; } }
+
+    /* Closing */
+    .closing { margin-top: 4rem; padding: 3rem 2rem; border: 1px solid var(--rule); background: var(--highlight); text-align: center; position: relative; overflow: hidden; }
+    .closing::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse at 50% 100%, var(--accent-light) 0%, transparent 70%); pointer-events: none; }
+    .closing-ornament-top { font-family: 'Space Grotesk', serif; font-size: 1.5rem; color: var(--muted); margin-bottom: 1.5rem; opacity: 0.5; }
+    .closing p { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 1.05rem; line-height: 1.85; max-width: 540px; margin: 0 auto 1rem; text-align: left !important; position: relative; z-index: 1; }
+    .closing p:last-of-type { margin-bottom: 0; }
+    .closing p::first-letter { float: none !important; font-size: inherit !important; color: inherit !important; margin: 0 !important; }
+    .closing-final { font-family: 'Space Grotesk', serif !important; font-size: 1.15rem !important; font-style: italic; text-align: center !important; margin-top: 1.5rem !important; color: var(--deep); }
+    .closing-ornament-bottom { margin-top: 1.75rem; font-family: 'JetBrains Mono', monospace; font-size: 0.5rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--muted); }
+
+    .share-btn { display: inline-flex; align-items: center; gap: 0.5rem; font-family: 'JetBrains Mono', monospace; font-size: 0.5rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--muted); background: none; border: 1px solid var(--rule); padding: 0.5em 1em; cursor: pointer; transition: all 0.15s; margin-top: 1rem; position: relative; z-index: 1; }
+    .share-btn:hover { color: var(--accent); border-color: var(--accent); }
+    .share-btn.copied { color: var(--accent); border-color: var(--accent); }
+
+    .paper-nav { max-width: 680px; margin: 0 auto; padding: 0 2.5rem 5rem; display: flex; justify-content: flex-start; }
+    .paper-nav-back { display: flex; align-items: center; gap: 0.75rem; text-decoration: none; color: var(--ink); font-family: 'JetBrains Mono', monospace; font-size: 0.55rem; letter-spacing: 0.15em; text-transform: uppercase; transition: color 0.2s; }
+    .paper-nav-back:hover { color: var(--accent); }
+    .paper-nav-back svg { width: 16px; height: 16px; stroke: currentColor; fill: none; stroke-width: 1.5; }
+
+    @media (max-width: 768px) {
+      .hero { padding: 3rem 1.5rem 2rem; }
+      .content { padding: 0 1.5rem 5rem; }
+      .chapter-divider { padding: 0 1.5rem; }
+      .pull-quote { margin: 2rem 0; }
+      .paper-nav { padding: 0 1.5rem 3rem; }
+    }
+
+    /* Hero SVG */
+    .hero { display: grid; grid-template-columns: 1fr 280px; gap: 2rem; align-items: center; }
+    .hero-svg { width: 100%; height: auto; }
+    @media (max-width: 768px) {
+      .hero { grid-template-columns: 1fr; }
+      .hero-svg { max-width: 200px; margin: 0 auto; order: -1; }
+    }
+  </style>
+</head>
+<body>
+  <div class="bg-pattern"></div>
+  <div class="bg-grain"></div>
+
+  <div class="page-wrap">
+
+      <!-- Top Bar -->
+  <div class="top-bar">
+    <span>Buenos Aires &middot; Since 2008</span>
+    <span>18 Essays &middot; 3 Frameworks &middot; ~289 min of reading &middot; <a href="about.html">About the author</a></span>
+  </div>
+
+  <!-- Nav -->
+  <nav class="nav">
+      <div class="nav-inner">
+        <a href="index.html" class="nav-brand">Narrative<em>Mechanics</em></a>
+        <button class="nav-btn nav-toggle" aria-label="Menu" aria-expanded="false" aria-controls="navLinks" id="navToggle">
+          <svg viewBox="0 0 24 24"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg>
+        </button>
+        <div class="nav-links" id="navLinks">
+          <a href="index.html" class="nav-link">Home</a>
+          <div class="nav-sep"></div>
+          <a href="archive.html" class="nav-link">Start Here</a>
+          <a href="frameworks.html" class="nav-link">Frameworks</a>
+          <a href="series.html" class="nav-link">Series</a>
+          <a href="essays.html" class="nav-link">Essays</a>
+          <a href="notes.html" class="nav-link">Notes</a>
+          <div class="nav-sep"></div>
+          <a href="about.html" class="nav-link">About</a>
+        </div>
+        <div class="nav-right">
+          <button class="nav-btn" aria-label="Toggle theme" id="themeToggle">
+            <svg class="icon-moon" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+            <svg class="icon-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <header class="hero">
+      <div class="hero-main">
+        <div class="hero-kicker">Essay &nbsp;·&nbsp; March 2026</div>
+        <h1 class="hero-title">The Last<em>Scarcity</em></h1>
+        <p class="hero-subtitle">On desire, automation, and the one problem that solves everything except itself.</p>
+        <div class="hero-byline">
+          <div class="hero-byline-dot"></div>
+          <span class="hero-byline-text">Diego Dell'Agostino &nbsp;·&nbsp; Buenos Aires</span>
+        </div>
+      </div>
+      <svg class="hero-svg" viewBox="0 0 160 200" xmlns="http://www.w3.org/2000/svg">
+        <style>
+          @keyframes core-pulse{0%,100%{r:8;opacity:1}50%{r:12;opacity:0.6}}
+          @keyframes ray-rotate{to{transform:rotate(360deg)}}
+          .ls-core{animation:core-pulse 3s ease-in-out infinite;transform-origin:80px 100px}
+        </style>
+        <line x1="20" y1="30" x2="80" y2="80" stroke="var(--rule)" stroke-width="1"/>
+        <line x1="140" y1="30" x2="80" y2="80" stroke="var(--rule)" stroke-width="1"/>
+        <line x1="20" y1="100" x2="55" y2="100" stroke="var(--rule)" stroke-width="1"/>
+        <line x1="105" y1="100" x2="140" y2="100" stroke="var(--rule)" stroke-width="1"/>
+        <line x1="20" y1="170" x2="80" y2="120" stroke="var(--rule)" stroke-width="1"/>
+        <line x1="140" y1="170" x2="80" y2="120" stroke="var(--rule)" stroke-width="1"/>
+        <circle cx="20" cy="30" r="3" fill="var(--muted)" opacity="0.5"/>
+        <circle cx="140" cy="30" r="3" fill="var(--muted)" opacity="0.5"/>
+        <circle cx="20" cy="100" r="3" fill="var(--muted)" opacity="0.5"/>
+        <circle cx="140" cy="100" r="3" fill="var(--muted)" opacity="0.5"/>
+        <circle cx="20" cy="170" r="3" fill="var(--muted)" opacity="0.5"/>
+        <circle cx="140" cy="170" r="3" fill="var(--muted)" opacity="0.5"/>
+        <circle cx="80" cy="100" r="28" fill="var(--accent-light)" opacity="0.5"/>
+        <circle class="ls-core" cx="80" cy="100" r="8" fill="none" stroke="var(--accent)" stroke-width="1.5"/>
+        <circle cx="80" cy="100" r="3" fill="var(--accent)"/>
+        <text x="80" y="140" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="6" fill="var(--accent)" letter-spacing="0.1em" font-weight="600">DESIRE</text>
+        <text x="10" y="16" font-family="JetBrains Mono,monospace" font-size="5" fill="var(--muted)" letter-spacing="0.08em">PRODUCTION</text>
+        <text x="80" y="196" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="5" fill="var(--muted)" letter-spacing="0.08em">EVERYTHING EXCEPT THIS</text>
+      </svg>
+    </header>
+
+        <div class="chapter-divider">
+      <div class="chapter-divider-line"></div>
+    </div>
+
+    <div class="section-map-wrap">
+      <div class="section-map">
+        <div class="section-map-header"><span>Document Map</span><span>7 Sections</span></div>
+        <div class="section-map-grid">
+          <a href="#tls-s1" class="section-map-item"><div class="section-map-num">I</div><div><div class="section-map-label">Setup</div><div class="section-map-title">Five dominoes, four down</div></div></a>
+          <a href="#tls-s2" class="section-map-item"><div class="section-map-num">II</div><div><div class="section-map-label">Argument</div><div class="section-map-title">The thing behind the thing</div></div></a>
+          <a href="#tls-s3" class="section-map-item"><div class="section-map-num">III</div><div><div class="section-map-label">Trap</div><div class="section-map-title">The dignity trap</div></div></a>
+          <a href="#tls-s4" class="section-map-item"><div class="section-map-num">IV</div><div><div class="section-map-label">Market</div><div class="section-map-title">The desire economy</div></div></a>
+          <a href="#tls-s5" class="section-map-item"><div class="section-map-num">V</div><div><div class="section-map-label">Break</div><div class="section-map-title">The thing that almost killed this essay</div></div></a>
+          <a href="#tls-s6" class="section-map-item"><div class="section-map-num">VI</div><div><div class="section-map-label">Turn</div><div class="section-map-title">I am the problem</div></div></a>
+          <a href="#tls-s7" class="section-map-item"><div class="section-map-num">VII</div><div><div class="section-map-label">Close</div><div class="section-map-title">No map for this</div></div></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="content">
+
+      <!-- COLD OPEN -->
+      <div class="essay-section intro">
+        <p>Last Monday I made fifty dollars in two minutes.</p>
+
+        <p>I was with people from work, after hours, and a coworker had Polymarket open on his laptop. For those who don't know it: Polymarket is a prediction market. People bet on whether things will happen. Elections, interest rates, crypto prices. It is gambling dressed in a blazer.</p>
+
+        <p>Watching him operate was a Pandora's box moment. He wasn't doing anything sophisticated. He was just reading the lines, seeing where they looked wrong, and placing small bets. Bitcoin up or down in the next five minutes. That's it. That simple. And it was working. And the thought arrived immediately, the way obvious thoughts do, fully formed and impossible to un-think: <em>if he can do this, why can't I?</em></p>
+
+        <p>I placed a bet. Bitcoin, up or down, next five minutes. The line looked wrong to me. Not wrong in a sophisticated quantitative-finance way. Wrong in the way a crooked painting looks wrong. You don't measure the angle. You just see it. Two minutes later: fifty dollars. I closed the app.</p>
+
+        <p>Now, fifty dollars is a nice dinner. It is not a revelation. If this story were about the fifty dollars, I would not be writing it and you would not be reading it. This story is about what happened when I got home.</p>
+
+        <div class="margin-note">The offer was real. So was what it revealed. Both can be true at the same time.</div>
+
+        <p>Because here's the thing about my brain, and maybe yours: it doesn't care about the fifty dollars. It cares about the <em>crack</em>. The inefficiency. The fact that a line on a screen was wrong and I could see it. And I'd already been working with autonomous AI agents for months, bots that do things on their own, around the clock, while you sleep. So the fifty dollars wasn't a payday. It was a proof of concept. And I didn't want to make money. I wanted to prove a point.</p>
+
+        <p>I went home. Made steak sandwiches and a salad for dinner. Ate with my son and my wife. Didn't do the dishes because according to her I do them wrong, and she's probably right. Normal Monday night. But the whole time, while I was cutting bread and wiping the counter and going through the motions of a regular evening, the thought was turning in the back of my head like a rock tumbler. <em>If he can do this, why can't I? And if I can do this, why can't a bot?</em></p>
+
+        <p>By 11 PM the house was quiet. I walked to my desk. Opened a terminal. And started building.</p>
+
+        <p>Not a fancy bot. A small, stupid bot that would do what I just did, except automatically, twenty-four hours a day, with one-dollar bets, hundreds of times, using a basic strategy called the Kelly criterion to size each bet so it couldn't blow up. In trading terms: a cockroach strategy. Impossible to kill. Very hard to make rich. But relentless.</p>
+
+        <p>By midnight I had a prototype. By 1 AM it was running against historical data and winning, slowly, boringly, the way compound interest wins. By 1:45 AM I was standing in the kitchen pouring myself a coffee, and a thought walked into my head and sat down like it owned the place.</p>
+
+        <p>The thought was: if a 43-year-old media guy from Buenos Aires with no trading background can make fifty dollars in two minutes because he watched a coworker do it first, and if a bot can scale that 24/7 while he sleeps, and if that bot can be copied infinitely, then what is work? What is it for? And if the answer isn't money anymore, is there an answer at all?</p>
+
+        <p>The coffee got cold. I didn't drink it. I went back to my desk.</p>
+
+        <p>Not to work on the bot. The bot was done. I went back to sit with the question. And it's been sitting with me since.</p>
+      </div>
+
+      <!-- I -->
+      <div class="essay-section" id="tls-s1">
+        <div class="section-header">
+          <div class="section-header-num">I</div>
+          <div class="section-header-body">
+            <div class="section-header-label">Section I &nbsp;/&nbsp; Seven</div>
+            <div class="section-header-title">Five dominoes, four down</div>
+          </div>
+        </div>
+
+        <p>Scarcities feel permanent. Like gravity. Like weather. Like a rule so old nobody remembers who wrote it. But they're not rules. They're dominoes. And they've been falling for ten thousand years. We just don't notice because each one takes a few centuries to land.</p>
+
+        <p><em>Domino one: food.</em> For most of human history, almost all human effort went into not dying of hunger. The agricultural revolution tipped this one over. Slowly, brutally, unevenly. But it fell. Today, and I want you to sit with this, more humans die from eating too much than from eating too little. If you told that to a farmer in 1200 AD, he would think you were describing heaven. Or a mental illness.</p>
+
+        <p><em>Domino two: information.</em> Wanted to know something in 1950? Library. If your town had one. If it had the book. If the book was in your language. If you could afford the time to go. Knowledge was locked behind geography, money, and institutions. The internet blew the door off. And then the problem flipped. We went from "I can't find anything" to "I can't stop finding things." The scarcity of information was replaced by the scarcity of attention. We solved one hunger and invented another.</p>
+
+        <p><em>Domino three: production.</em> This one is falling right now, and you can hear the wood cracking. AI doesn't help you make things. AI makes things. Code, images, music, legal briefs, product designs, medical diagnoses, marketing strategy. One person with the right tools now produces what a team of twenty did five years ago. The marginal cost of producing almost anything is on a trajectory that ends at a number very close to zero.</p>
+
+        <div class="margin-note">My bot, the one I built between 11 PM and 1 AM on a Monday while my kid slept, will probably never make me rich. But it will make money while I do nothing.</div>
+
+        <p><em>Domino four: capital.</em> This is the one I felt that Monday night. When autonomous agents can find and exploit inefficiencies across markets, around the clock, without salary or ego or sleep, the ability to generate returns disconnects from human effort. You don't need to be smart. You don't need to work hard. You don't even need to be awake. You need an agent and a Wi-Fi password. And if I can build that in two hours, what can a real team build in two months?</p>
+
+        <p>Four dominoes. Four scarcities that organized all of human civilization. All either fallen or falling.</p>
+
+        <p>There's a fifth one still standing. It's the only one that matters. And almost nobody is talking about it.</p>
+      </div>
+
+      <!-- II -->
+      <div class="essay-section" id="tls-s2">
+        <div class="section-header">
+          <div class="section-header-num">II</div>
+          <div class="section-header-body">
+            <div class="section-header-label">Section II &nbsp;/&nbsp; Seven</div>
+            <div class="section-header-title">The thing behind the thing</div>
+          </div>
+        </div>
+
+        <p>Here's what nobody warns you about when a scarcity falls: it doesn't leave satisfaction behind. It leaves a hole.</p>
+
+        <p>When you're starving, food is the meaning of life. You don't need purpose. You need bread. The need for bread gives you a structure, a direction, a reason to wake up. It's awful. It's also clear. Now: get the bread. Solve the hunger. Watch what happens. You don't feel fulfilled. You feel a new emptiness, one that was always there but the hunger was covering it up, the way loud music covers a crack in the wall. Turn off the music and the crack is suddenly the only thing in the room.</p>
+
+        <p>There was a French psychoanalyst named Jacques Lacan who figured this out sixty years ago. He had a term for it that sounds ridiculous in English, <em>objet petit a</em>, the "little object a", but the idea behind it might be the most important idea for understanding the next century.</p>
+
+        <p>Lacan's idea: you never actually want the thing you think you want. You want the <em>wanting</em>. The thing you're chasing, the job, the raise, the apartment, the person, the fifty dollars, that thing is just a stand-in for a deeper pull that has no object. Desire isn't aimed at anything. It's aimed at the gap between where you are and where you aren't yet. Close the gap and you don't feel satisfied. You feel empty. Because the gap was the engine. And you just turned it off.</p>
+
+        <p>Think about the last thing you really wanted. Remember the wanting? The planning, the energy, the obsession? Now remember the moment you got it. Was the getting as good as the wanting?</p>
+
+        <p>It almost never is.</p>
+
+        <p>That's not a bug. That's how desire works. The getting was never the point. The movement was the point. And this has massive, terrifying consequences for a world that is about to solve every material scarcity on the list.</p>
+
+        <div class="pull-quote">
+          <p>If each solved scarcity reveals the one underneath, and if material scarcities were covering up an existential one, then we are about to experience, at global scale, for the first time in the history of the species, a world where nothing is scarce except the reason to get out of bed.</p>
+        </div>
+
+        <p>The European aristocracies already ran a small version of this experiment. They had food, shelter, capital, security, and unlimited time. Same resources across the board. The results were, and this is the word I want you to hold, <em>bimodal</em>. Some of them made extraordinary things. Art that outlasted empires. Science that rewired our understanding of the universe. Philosophy we're still teaching. Others destroyed themselves. Gambling halls, opium, duels over nothing, a slow gorgeous rot.</p>
+
+        <p>Same resources. Opposite outcomes. The difference wasn't intelligence. Wasn't education. Wasn't money.</p>
+
+        <p>The difference was whether they had a <em>because</em>. A pull. A crack they couldn't stop looking at.</p>
+
+        <p>We're about to run that experiment again. Except this time it's not a few thousand aristocrats with powder wigs. It's eight billion people. And nobody has a protocol.</p>
+      </div>
+
+      <!-- III -->
+      <div class="essay-section" id="tls-s3">
+        <div class="section-header">
+          <div class="section-header-num">III</div>
+          <div class="section-header-body">
+            <div class="section-header-label">Section III &nbsp;/&nbsp; Seven</div>
+            <div class="section-header-title">The dignity trap</div>
+          </div>
+        </div>
+
+        <p><em>El trabajo dignifica.</em> Work dignifies. My grandfather said it. The politician says it. The motivational poster in the break room says it. It sounds so obviously true that nobody ever checks.</p>
+
+        <p>If work dignifies, then every sweatshop is a cathedral. Every data-entry clerk is glowing with purpose. Every person grinding a job they hate, in a building they resent, for a boss who doesn't know their name, to pay rent on an apartment they're never awake in long enough to enjoy. That person should feel dignified.</p>
+
+        <p>They don't.</p>
+
+        <p>They feel used. They feel like the hours of their one life are being converted into someone else's profit at an exchange rate they didn't set and can't negotiate. That's not dignity. That's a transaction with bad terms and no exit clause.</p>
+
+        <p>So what <em>is</em> dignity? I'll tell you what it felt like at 1 AM on that Monday. It felt like choosing. Choosing to build something nobody asked for because my brain wouldn't let it go. Choosing to stay up because the problem was more interesting than sleep. The choice was the dignity. Not the work. The agency. The fact that I could have stopped and I didn't stop because I didn't want to stop.</p>
+
+        <div class="margin-note">Your value as a human, proportional to your output. Produce nothing, be nothing. That's the operating system AI is about to crash.</div>
+
+        <p>"Work dignifies" equates effort with virtue and rest with sin. And it's been the operating system of capitalism for three hundred years: your value as a human is proportional to your output. Produce more, be worth more. Produce nothing, be nothing.</p>
+
+        <p>AI is about to crash that operating system. Not gently. Because when a machine produces more than you, faster, cheaper, better, without complaint or vacation or existential crises, and when your value was always defined by output, then by the logic of the system that raised you: you are worth nothing.</p>
+
+        <p>That's not a policy problem. That's an identity crisis on a civilizational scale. And the proposed solution, the one you hear in every policy paper and conference talk, is UBI. Universal Basic Income. Give everyone money. Floor established. Problem solved.</p>
+
+        <div class="pull-quote">
+          <p>UBI solves the stomach. It does not solve the 6 AM ceiling stare.</p>
+        </div>
+
+        <p>The 6 AM ceiling stare. That's the real problem. What do you do when you wake up and nothing requires you? Your bills are paid. Your fridge is full. Your bot is making money. And you're lying there, in the dark, and the question lands on your chest like a brick: <em>now what?</em></p>
+
+        <p>UBI is necessary. A floor is necessary. Nobody should starve while we figure this out. But UBI is the first sentence of an answer. And the answer is a book. A book nobody has written. A book I'm not sure we know how to write.</p>
+
+        <p>But I think I know what Chapter 2 looks like.</p>
+      </div>
+
+      <!-- IV -->
+      <div class="essay-section" id="tls-s4">
+        <div class="section-header">
+          <div class="section-header-num">IV</div>
+          <div class="section-header-body">
+            <div class="section-header-label">Section IV &nbsp;/&nbsp; Seven</div>
+            <div class="section-header-title">The desire economy</div>
+          </div>
+        </div>
+
+        <p>If the old economy ran on production, and production is being automated, what does the next economy run on?</p>
+
+        <p>I think the answer is desire. Not desire the way marketers use it: countdown timers, manufactured urgency designed to bypass your prefrontal cortex. Desire the way Lacan used it: the force that moves a person toward something they can't quite reach, and in the reaching, they find out who they are.</p>
+
+        <p>This sounds like a philosophy lecture. It's a business model.</p>
+
+        <p>When I got home that Monday and sat down to build the bot, the old economy had nothing to do with it. Nobody was paying me. Nobody assigned it. There was no KPI, no deadline, no performance review. I didn't even want the money. I wanted to prove that it could be done. A crack in a system that my brain could not leave alone. That pull is desire in its purest economic form. I produced something valuable, a working autonomous trading agent, not because of incentive structure. Because of a point I needed to make, mostly to myself.</p>
+
+        <p>The old economy captured labor: give me your time, I'll give you money. The new economy will need to capture desire: give me a reason to move, and I'll give you everything I have for free and stay up until 2 AM doing it.</p>
+
+        <div class="margin-note">Audiences watch. Congregations belong. In a world of infinite free content, watching is worth zero. Belonging is priceless.</div>
+
+        <p>Some of this is already visible, if you know where to look. Audiences are dying. Congregations are being born. An audience watches. A congregation <em>belongs</em>. In a world where AI generates infinite free content, watching has a market value of approximately zero. Belonging is priceless. People already pay fifty dollars a month for private Discord servers when every piece of information ever produced is available for free. What are they buying? Not content. They're buying a border. An inside and an outside. A room small enough to feel real.</p>
+
+        <p>And scarcity, counterintuitively, is becoming a <em>design choice</em>. If abundance kills desire (which it does, that's Lacan, that's the aristocrats, that's the ceiling stare), then designed scarcity creates it. Not the fake scarcity of limited editions and artificial drops. Real structural limitation. Twenty-seven exposures on a Kodak. A writing platform that gives you 500 words per day and locks you out. A feed that shows ten things and closes. People are paying for this right now. Silent retreats. Dumb phones. Apps that block other apps. The fastest-growing market in tech is the market for less tech.</p>
+
+        <p>And the entrepreneur of the future doesn't make products. She makes <em>contexts</em>. Reasons to move. Polymarket didn't invent betting. Betting is ancient. Polymarket created a context where betting is civic participation, prediction, intellectual sport. The mechanism is old. The meaning is new. That's the business model: not what you build, but what reason to move you give people.</p>
+
+        <p>But there's a hole in this whole theory. A big one. And it almost killed the essay, because for three days I couldn't figure out what was bothering me about my own argument. Then I did.</p>
+      </div>
+
+      <!-- V -->
+      <div class="essay-section" id="tls-s5">
+        <div class="section-header">
+          <div class="section-header-num">V</div>
+          <div class="section-header-body">
+            <div class="section-header-label">Section V &nbsp;/&nbsp; Seven</div>
+            <div class="section-header-title">The thing that almost killed this essay</div>
+          </div>
+        </div>
+
+        <p>Here's what was bothering me. I'd been writing about desire, about cracks, about the importance of gaps and mystery and the not-knowing. And then I looked at the dominant ideology of the industry I work in and realized it wants the exact opposite: total transparency.</p>
+
+        <p>Open source. Open data. Open protocols. Blockchain's entire pitch is radical legibility: every transaction visible, every process auditable, every shadow eliminated. The tech industry has spent twenty years building toward a world of total light. No hidden corners. No asymmetry. No fog. The dream is a planet-sized clean room where nothing is unclear and everything is optimized.</p>
+
+        <p>Beautiful idea.</p>
+
+        <p>Terrible, terrible outcome.</p>
+
+        <p>My fifty dollars on Polymarket existed because of a shadow. An inefficiency. A crack where the price didn't match reality. If the market were perfectly transparent and perfectly efficient, that crack wouldn't exist. The price would already be right. There'd be nothing to see, nothing to bet on, nothing to build a bot for. And I'd still be scrolling.</p>
+
+        <div class="pull-quote">
+          <p>Desire needs exactly the thing transparency destroys: a veil. A perfectly lit room has no depth. A perfectly efficient market has no game. A perfectly transparent world has no reason to explore it.</p>
+        </div>
+
+        <p>This isn't an argument against transparency in governance, in justice, in institutions. That's non-negotiable. But total transparency as a universal principle? As a dogma applied to every market, every interaction, every system? That kills the thing that makes humans go. The shadow. The not-knowing. The suspicion that something is hidden and worth finding.</p>
+
+        <p>So the next economy doesn't just need to <em>produce</em> desire. It needs to <em>protect</em> it. To deliberately preserve zones of opacity and productive inefficiency. Spaces where the answer isn't visible. Because the not-knowing is the pull. And the pull is all that's left.</p>
+
+        <p>That's the hole in the theory, and it's also the answer. The desire economy isn't just about creating reasons to move. It's about protecting the conditions that make movement possible. Including, and this is the hard part, the right to not see everything. The right to a shadow.</p>
+      </div>
+
+      <!-- VI -->
+      <div class="essay-section" id="tls-s6">
+        <div class="section-header">
+          <div class="section-header-num">VI</div>
+          <div class="section-header-body">
+            <div class="section-header-label">Section VI &nbsp;/&nbsp; Seven</div>
+            <div class="section-header-title">I am the problem</div>
+          </div>
+        </div>
+
+        <p>I need to tell you who you've been listening to.</p>
+
+        <p>I'm 43. I live in Buenos Aires. I have a twelve-year-old son who beats me at chess and doesn't know it yet, but he sure does know that he can beat me at Rocket League and Super Smash Brothers, and he does. Oh boy he does. I grew up copying cassettes from the radio and I've spent my whole adult life bouncing between media and technology, never quite fitting in either. I co-founded Argentina's first podcast production company. I had a blog for years where I wrote about whatever a young guy entering adulthood writes about when he doesn't know what he's doing yet. I'm not a writer, or at least I've never called myself one. I'm the guy who keeps seeing cracks in things and can't leave them alone. And a few years ago I saw what AI could do to broadcast and content and I threw myself into it headfirst. Now I run AI-powered broadcast systems for a Bitcoin media company. I'm not a programmer. I'm not an engineer. I'm someone who adopted AI so aggressively that it became the centerpiece of everything I do. I didn't build the machine. I moved in.</p>
+
+        <p>And the thing that breaks your head, the thing nobody prepared you for, is the speed. Not the speed of the output. The speed of the iteration. You learn to fish. Fine. Except with these tools you don't stay a fisherman. You go from lone guy with a rod to running a canning factory overnight. Posts, broadcasts, agents, systems. And then someone says "add this feature" and you do it in twenty minutes. The cycle from idea to prototype to deployment that used to take a team three months now takes a person one evening. Iteration itself has become a commodity. The distance between "I wonder if this would work" and "it's live" has collapsed to almost nothing. That's not a productivity gain. That's a different relationship with building. And I'm not sure my brain has caught up with what my hands can now do.</p>
+
+        <p>Read that again slowly. I am, in a very literal sense, the person who saw what AI could do to media production and said <em>yes, more, faster, replace everything that can be replaced.</em> I am an active participant in the demolition of the economy this essay says we need to replace. Not as the engineer who built the engine. As the guy who saw the engine, understood what it meant, and reorganized his entire life around it. I don't know if that's better or worse.</p>
+
+        <p>I am the problem. And I can't stop.</p>
+
+        <p>Not because of the money. I could make money other ways. I can't stop because the <em>wiring</em> is the crack. Figuring out how to connect the tools, how to make the systems talk, how to turn a pile of AI capabilities into something that works at 3 AM without a human. That's the pull. The 2 AM compulsion to make the system work is the exact desire I've been theorizing about for six sections from a comfortable analytical distance that I no longer deserve.</p>
+
+        <p>So here it is, the confession without the clean vantage point: I'm warning you about the flood from the deck of a boat I'm selling. The contradiction is real and it's mine and I cannot resolve it. The bot runs. The broadcast systems ship. The content generates while I sleep. And I sit here writing about the death of work while actively accelerating it. If you find that disqualifying, I understand. If you find it clarifying, I think you're right.</p>
+
+        <p>Because the contradiction <em>is</em> the human condition in 2026. Deploying the machines that replace you because the deploying is the only thing that makes you feel alive. Automating yourself out of the economy and then staying up until 2 AM doing it because you can't stop. Being the person who sees the future clearly and runs toward it anyway, not because it's safe but because the running is the point.</p>
+
+        <p>And this is where my son enters the essay for the last time.</p>
+
+        <p>He's twelve. He's going to grow up in a world where most of the dominoes I described have finished falling. He won't need to work to eat. He probably won't need to work to earn. AI agents will handle production and capital the way plumbing handles water: invisibly, constantly, without requiring anyone to think about it. The question he faces at twenty isn't "how do I make a living?"</p>
+
+        <p>It's "what do I do with my life?"</p>
+
+        <p>And nothing, not his school, not the economy, not the government, not a single institution we've built, is preparing him for that question. We are training children for a world of scarcity that no longer exists. The curriculum is excellent. The scarcity is extinct.</p>
+
+        <div class="pull-quote">
+          <p>The Greeks had a word for what he'll need. Skholē. The free activity of a citizen who doesn't have to work for survival and therefore can dedicate himself to what actually matters. Not because someone pays him. Because it pulls him.</p>
+        </div>
+
+        <p>The catch: Greek <em>skholē</em> was for citizens. Slaves did the work. The fields didn't farm themselves.</p>
+
+        <p>But now the slaves are agents. Bots. Algorithms. The fields are farming themselves. And the question that sounds naive is the one that won't leave me alone: do we go back to the classical? Do we actually return to the original condition, the one where basic needs are covered and what's left is the human project? Painting, thinking, building, arguing, making something that didn't need to exist but does because someone couldn't not make it? Is this the circle closing after ten thousand years?</p>
+
+        <p>Maybe. But the circle doesn't close evenly. And that's the part that keeps me up.</p>
+      </div>
+
+      <!-- VII -->
+      <div class="essay-section" id="tls-s7">
+        <div class="section-header">
+          <div class="section-header-num">VII</div>
+          <div class="section-header-body">
+            <div class="section-header-label">Section VII &nbsp;/&nbsp; Seven</div>
+            <div class="section-header-title">No map for this</div>
+          </div>
+        </div>
+
+        <p>I want to be honest about something. I don't know how this ends.</p>
+
+        <p>But I can see how it splits.</p>
+
+        <p>Because here's what the desire economy does if you're not careful: it widens the gap. Not the income gap. The agency gap. The gap between people who know what to do with freedom and people who drown in it. The aristocrats showed us this already. Same resources, opposite outcomes. Now scale that to eight billion. The people who can reason, who can direct the tools, who know what to ask for, they'll live in <em>skholē</em>. The people who can't will live in a subsidized paralysis that looks like comfort and feels like nothing.</p>
+
+        <p>And this is the part nobody in tech wants to say out loud: AI is like having the Infinity Gauntlet. Genuinely. It's that powerful. But if you don't know how to think, the output is garbage. It's the oldest equation in computing dressed up in a two-trillion-dollar industry: you feed it garbage, you get garbage back. The tool doesn't fix the operator. It amplifies the operator. A person who can reason well and direct AI is a hundred times more productive than they were five years ago. A person who can't reason well and directs AI is a hundred times more efficiently wrong.</p>
+
+        <div class="pull-quote">
+          <p>The gap that's opening is not between those who have AI and those who don't. It's between those who can think and those who delegated the thinking before they learned how.</p>
+        </div>
+
+        <p>That's the real danger of the transition. Not unemployment. Not robots. Not superintelligence. The danger is a world where the tools are free, the access is universal, the floor is guaranteed, and the thing that determines whether you build a cathedral or stare at the ceiling is something no policy can distribute: the capacity to want something specific and pursue it with the full weight of your attention.</p>
+
+        <p>We are entering territory without precedent. And I don't mean "unprecedented" the way people use it to describe a bad quarter or an unusual election. I mean: there is no prior. No case study. No analogue. "This is like the Industrial Revolution." It's not. The Industrial Revolution replaced muscle; the mind was still necessary. "This is like the printing press." It's not. The printing press still needed someone with something to say. This is a species that spent a million years evolving to manage scarcity being handed, within a single generation, a world where scarcity is optional. There is no playbook for this because this has never happened.</p>
+
+        <p>The question has changed. For ten thousand years the question was: how do we produce enough? That question organized everything. Agriculture, industry, capitalism, globalization, the internet, AI. All of it was a different answer to "how do we make more?" The answer worked so well that it made itself obsolete. We figured out how to produce enough. Now we're standing in a room full of everything we asked for, looking at each other, wondering why the room feels empty.</p>
+
+        <div class="pull-quote">
+          <p>The 21st century doesn't have a production problem. It has a desire problem.</p>
+        </div>
+
+        <p>How do we desire well? Not want. Not consume. <em>Desire.</em> How do we maintain the pull, the midnight itch, the crack that won't let you sleep, the need to build the thing nobody asked for, in a world that is systematically removing every external reason to move? How do we protect the gap that makes us go?</p>
+
+        <p>No policy answers this. No technology answers this. No UBI, no blockchain, no AI. Because the desire isn't in the system. It never was. It's in the subject. In you. In what you reach for when nothing requires you to reach for anything. In what you build at 2 AM when nobody is paying and nobody is watching and the bot is already running and the money is already made and there is absolutely, positively, no rational reason to be awake.</p>
+
+        <p>And yet you are.</p>
+      </div>
+
+      <!-- CLOSING -->
+      <div class="closing">
+        <div class="closing-ornament-top">✦ &nbsp; ❧ &nbsp; ✦</div>
+
+        <p>I finished the Polymarket bot. It works. It makes small, consistent, boring money while I sleep. It's exactly what I imagined that Monday night when I got home and couldn't stop thinking.</p>
+
+        <p>And the moment it started working, I lost interest.</p>
+
+        <p>Not because it failed. Because it succeeded. The crack was filled. The architecture was complete. The pull, the thing that kept me up, the thing that made me forget the coffee, the thing that made me feel more alive than I'd felt in weeks, vanished. Like a light switched off.</p>
+
+        <p>I stood in the kitchen again. Same counter. Same cold coffee. Same wall. And the restlessness arrived on schedule, like a train I should've known was coming: what's next? What else? What's the next crack?</p>
+
+        <p>That restlessness. That refusal to stay still when nothing demands movement. That is The Last Scarcity. You can't automate it. You can't distribute it. You can't give it to someone with a policy or a paycheck or a subscription. It can only come from inside a body that wants something it can't quite name.</p>
+
+        <p>Every other scarcity is falling. This one stays. Not because we haven't figured out how to solve it. Because solving it would end us. The gap is not a problem to fix. The gap is what makes you a subject instead of an organism. It's the distance between who you are and who you aren't yet. Close it and there's nothing to walk toward. Leave it open and you can't stop walking.</p>
+
+        <p>It's 2:47 AM. The bot is making money. The essay is done. There is no reason to still be here. And yet here I am. Rewriting the last paragraph. Again.</p>
+
+        <p class="closing-final">That's the answer. You just watched it happen.</p>
+
+        <div class="closing-ornament-bottom"><a href="https://diegodella.ar" style="color:inherit;text-decoration:none;">diegodella.ar</a> &nbsp;·&nbsp; Buenos Aires, 2026</div>
+
+        <button class="share-btn" id="shareBtn" onclick="handleShare()">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/><polyline points="16 6 12 2 8 6"/><line x1="12" y1="2" x2="12" y2="15"/></svg>
+          Share
+        </button>
+      </div>
+
+      <div class="paper-nav">
+        <a href="index.html" class="paper-nav-back">
+          <svg viewBox="0 0 24 24"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+          All Writing
+        </a>
+      </div>
+
+    </div>
+
+    <footer>
+      <div class="footer-left">&copy; 2026 Diego Dell'Agostino</div>
+      <div class="footer-center">❧</div>
+      <div class="footer-right">Buenos Aires &nbsp;·&nbsp; Narrative-First</div>
+    </footer>
+
+  </div>
+
+  <script src="global.js?v=20260419b"></script>
+  <script>
+    function handleShare() {
+      var u = window.location.href;
+      var t = 'The Last Scarcity';
+      var x = 'When every material scarcity falls, one remains. It can\'t be automated. It can only come from inside a body that wants something it can\'t quite name.';
+      if (navigator.share) {
+        navigator.share({ title: t, text: x, url: u }).catch(function(){});
+      } else if (navigator.clipboard) {
+        navigator.clipboard.writeText(u).then(function() {
+          var b = document.getElementById('shareBtn');
+          b.classList.add('copied');
+          b.innerHTML = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Copied';
+          setTimeout(function() {
+            b.classList.remove('copied');
+            b.innerHTML = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/><polyline points="16 6 12 2 8 6"/><line x1="12" y1="2" x2="12" y2="15"/></svg> Share';
+          }, 2000);
+        });
+      }
+    }
+  </script>
+
+</body>
+</html>

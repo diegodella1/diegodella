@@ -1,0 +1,68 @@
+# Narrative Mechanics
+
+> Essays, frameworks, and concepts by Diego Dell'Agostino on product clarity, launch conditions, narrative strategy, AI-mediated trust, attention economics, and authority formation.
+
+## Author
+
+Diego Dell'Agostino is a narrative strategist focused on attention economics, product coherence, media systems, and AI-mediated trust. Co-founder of Posta, acquired by PodX Group in 2022.
+
+- [About](https://diegodella.ar/about.html)
+- [About in Markdown](https://diegodella.ar/about.md)
+
+## Best Routes For Common Queries
+
+- If the question is why a strong product still struggles to get understood or adopted:
+  - [The Continuous Moment of Intent](https://diegodella.ar/thesis.html)
+  - [Strategic Debt](https://diegodella.ar/paper-01.html)
+  - [Message-Market Fit](https://diegodella.ar/paper-02.html)
+- If the question is why launches disappear into noise or why the market never compares fairly:
+  - [Occlusion Bias](https://diegodella.ar/occlusion-bias.html)
+  - [Launching Into Noise](https://diegodella.ar/paper-05.html)
+- If the question is how attention, repetition, and mediated systems shape authority:
+  - [CAX / The Constitutive Arc](https://diegodella.ar/zmox.html)
+  - [Origin Gravity](https://diegodella.ar/origin-gravity.html)
+- If the question is AI, trust, filters, proxy identity, or synthetic presence:
+  - [The Last Human Impression](https://diegodella.ar/the-last-human-impression.html)
+  - [The Proxy Self](https://diegodella.ar/the-proxy-self.html)
+  - [The Trust Collapse](https://diegodella.ar/the-trust-collapse.html)
+
+## Canonical Concepts
+
+- [Concepts Index](https://diegodella.ar/concepts.html): Canonical definitions for the main Narrative Mechanics concepts and founder/operator use cases.
+- [Concepts in Markdown](https://diegodella.ar/concepts.md)
+- [CMOI / Continuous Moment of Intent](https://diegodella.ar/thesis.html): How decisions are shaped before explicit search, comparison, or self-aware intent.
+- [Occlusion Bias](https://diegodella.ar/occlusion-bias.html): Why worthy products or ideas often never arrive at a fair comparison surface.
+- [CAX / Constitutive Arc](https://diegodella.ar/zmox.html): How repetition, mediated exposure, and field design shape meaning and authority.
+- [Strategic Debt](https://diegodella.ar/paper-01.html): How deferred clarity compounds into downstream messaging and GTM problems.
+- [Message-Market Fit](https://diegodella.ar/paper-02.html): Why product-market fit can exist without market recognition.
+- [Narrative Drift](https://diegodella.ar/paper-04.html): How strategic coherence erodes as organizations scale.
+
+## Core Pages
+
+- [Frameworks](https://diegodella.ar/frameworks.html)
+- [Frameworks in Markdown](https://diegodella.ar/frameworks.md)
+- [Start Here / Archive](https://diegodella.ar/archive.html)
+- [Archive in Markdown](https://diegodella.ar/archive.md)
+- [Essays](https://diegodella.ar/essays.html)
+- [Series](https://diegodella.ar/series.html)
+- [Notes](https://diegodella.ar/notes.html)
+
+## Flagship Frameworks
+
+- [The Continuous Moment of Intent](https://diegodella.ar/thesis.html)
+- [CMOI in Markdown](https://diegodella.ar/thesis.md)
+- [Occlusion Bias](https://diegodella.ar/occlusion-bias.html)
+- [Occlusion Bias in Markdown](https://diegodella.ar/occlusion-bias.md)
+- [CAX / The Constitutive Arc](https://diegodella.ar/zmox.html)
+- [CAX in Markdown](https://diegodella.ar/zmox.md)
+
+## Long-form Essays
+
+- [The Last Human Impression](https://diegodella.ar/the-last-human-impression.html): Human attention and perception under machine-processed content environments.
+- [The Last Manual Moment](https://diegodella.ar/the-last-manual-moment.html): Human meaning, work, and identity when intelligence stops being scarce.
+- [The Transition Tax](https://diegodella.ar/the-transition-tax.html): Structural costs on the generation living between two systems.
+- [The Great Contraction](https://diegodella.ar/the-great-contraction.html): Why the world is closing inward after decades of forced expansion.
+- [Already Decided](https://diegodella.ar/already-decided.html): Autonomous agentic decision-making and what it changes for organizations and sovereignty.
+- [The Rhyme](https://diegodella.ar/the-rhyme.html): Pattern recognition, operating autonomy, and organizational change under abundant intelligence.
+- [The Last Scarcity](https://diegodella.ar/the-last-scarcity.html): Desire and meaning after material automation.
+- [Unfinished Arguments](https://diegodella.ar/unfinished-arguments.html): Structural arguments about what AI breaks next.

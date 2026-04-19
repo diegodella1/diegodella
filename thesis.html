@@ -1,0 +1,1149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-TJF4P0NYFT"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-TJF4P0NYFT');
+  </script>
+  <script>(function(){var t=localStorage.getItem("theme");if(!t)t=window.matchMedia("(prefers-color-scheme:dark)").matches?"dark":"light";document.documentElement.setAttribute("data-theme",t)})()</script>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <meta name="theme-color" content="#e6d5b8">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="Narrative Mechanics">
+  <link rel="apple-touch-icon" href="/og-default.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="The Continuous Moment of Intent: Diego Dell'Agostino's thesis on narrative strategy, media, organization, and the moments that shape decisions before search.">
+  <meta name="author" content="Diego Dell'Agostino">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://diegodella.ar/thesis.html">
+  <link rel="alternate" type="text/markdown" href="/thesis.md">
+  <meta property="og:title" content="The Continuous Moment of Intent | Narrative Mechanics">
+  <meta property="og:description" content="Diego Dell'Agostino's thesis on narrative strategy, media, organization, and the moments that shape decisions before search.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://diegodella.ar/thesis.html">
+  <meta property="og:site_name" content="Narrative Mechanics">
+  <meta property="og:image" content="https://diegodella.ar/og-default.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="The Continuous Moment of Intent | Narrative Mechanics">
+  <meta name="twitter:description" content="Diego Dell'Agostino's thesis on narrative strategy, media, organization, and the moments that shape decisions before search.">
+  <meta name="twitter:image" content="https://diegodella.ar/og-default.png">
+  <title>The Continuous Moment of Intent | Narrative Mechanics</title>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "The Continuous Moment of Intent",
+    "author": {
+      "@type": "Person",
+      "name": "Diego Dell'Agostino",
+      "url": "https://diegodella.ar/about.html"
+    },
+    "datePublished": "2026-02-20",
+    "description": "Diego Dell'Agostino's thesis on narrative strategy, media, organization, and the moments that shape decisions before search.",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Narrative Mechanics",
+      "url": "https://diegodella.ar"
+    },
+    "url": "https://diegodella.ar/thesis.html",
+    "mainEntityOfPage": "https://diegodella.ar/thesis.html"
+  }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;700&family=Epilogue:ital,wght@0,400;1,400;0,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="global.css?v=20260418f">
+  <link rel="stylesheet" href="components.css?v=20260418f">
+  <style>
+    /* Page-specific variables */
+    :root {
+      --framework: #1a3a5c; --framework-light: #dce8f0;
+    }
+    [data-theme="dark"] {
+      --framework: #4a9aca; --framework-light: rgba(74,154,202,0.15);
+    }
+
+    html { font-size: 20px; }
+    body { line-height: 1.75; }
+
+    /* Hero */
+    .hero { max-width: 980px; margin: 0 auto; padding: 5.5rem 4rem 2.4rem; }
+    .hero-kicker { margin-bottom: 1rem; }
+    .hero-title { font-family: 'Space Grotesk', serif; font-size: clamp(2.7rem, 5vw, 4.5rem); font-weight: 900; line-height: 0.98; letter-spacing: -0.03em; margin-bottom: 0.85rem; max-width: 11ch; }
+    .hero-title em { font-style: italic; color: var(--ink); text-decoration: none; background: linear-gradient(180deg, transparent 54%, color-mix(in srgb, var(--accent) 22%, transparent) 54%); padding: 0 0.08em 0.02em 0; box-decoration-break: clone; -webkit-box-decoration-break: clone; }
+    .hero-subtitle { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 1.02rem; font-style: italic; color: var(--ink-2); margin-bottom: 1.35rem; line-height: 1.55; max-width: 34rem; }
+    .hero-byline-text { font-size: 0.58rem; }
+
+    /* Hero tags */
+    .hero-tags { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+    .hero-tag { font-family: 'JetBrains Mono', monospace; font-size: 0.45rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); border: 1px solid var(--rule); padding: 0.25em 0.6em; background: var(--surface-1); }
+
+    /* Three ideas — horizontal strip below hero */
+    .three-ideas {
+      max-width: 960px; margin: -1rem auto 0; padding: 0 4rem;
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 0;
+      border: 1px solid var(--rule); background: var(--surface-1); overflow: hidden;
+    }
+    .three-ideas-header {
+      grid-column: 1 / -1;
+      font-family: 'JetBrains Mono', monospace; font-size: 0.5rem;
+      letter-spacing: 0.22em; text-transform: uppercase; color: var(--accent);
+      border-bottom: 1px solid var(--rule); padding: 1rem 1.5rem 0.75rem;
+    }
+    .idea-item {
+      padding: 1.25rem 1.5rem; display: grid;
+      grid-template-columns: 1.5rem 1fr; gap: 0.6rem; align-items: start;
+      border-right: 1px solid var(--rule);
+    }
+    .idea-item:last-child { border-right: none; }
+    .idea-num { font-family: 'Space Grotesk', serif; font-size: 1.4rem; font-weight: 900; font-style: italic; color: var(--accent); line-height: 1.2; }
+    .idea-text { font-size: 0.85rem; line-height: 1.65; }
+
+    /* TOC */
+    .toc-wrap { max-width: 960px; margin: 0 auto; padding: 5rem 4rem 3rem; }
+    .toc { border: 1px solid var(--rule); background: var(--surface-1); overflow: hidden; }
+    .toc-header { background: var(--ink); padding: 0.75rem 1.5rem; }
+    .toc-header-text { font-family: 'JetBrains Mono', monospace; font-size: 0.5rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--paper); opacity: 0.7; }
+    .toc-body { padding: 1.5rem; display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 0.25rem 2rem; }
+    .toc-item { display: flex; gap: 0.5rem; align-items: baseline; padding: 0.2rem 0; }
+    .toc-item-num { font-family: 'JetBrains Mono', monospace; font-size: 0.48rem; color: var(--accent); letter-spacing: 0.1em; flex-shrink: 0; }
+    .toc-item a { font-size: 0.88rem; color: var(--ink); text-decoration: none; transition: color 0.2s; }
+    .toc-item a:hover { color: var(--accent); }
+    .toc-part { grid-column: 1 / -1; font-family: 'JetBrains Mono', monospace; font-size: 0.48rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--muted); border-top: 1px solid var(--rule); padding-top: 0.75rem; margin-top: 0.5rem; }
+    .toc-part:first-child { border-top: none; padding-top: 0; margin-top: 0; }
+
+    /* Content */
+    .content { max-width: 740px; margin: 0 auto; padding: 0 4rem 7rem; }
+
+    /* Part header */
+    .part-header { margin: 4.5rem 0 2.75rem; text-align: center; position: relative; }
+    .part-header::before { content: ''; display: block; width: 100%; height: 1px; background: var(--rule); margin-bottom: 2rem; }
+    .part-header::after { content: ''; display: block; width: 100%; height: 1px; background: var(--rule); margin-top: 2rem; }
+    .part-num { font-family: 'JetBrains Mono', monospace; font-size: 0.5rem; letter-spacing: 0.3em; text-transform: uppercase; color: var(--accent); margin-bottom: 0.5rem; }
+    .part-title { font-family: 'Space Grotesk', serif; font-size: 1.65rem; font-weight: 900; letter-spacing: -0.02em; }
+
+    /* Section */
+    .section { margin-bottom: 4.5rem; scroll-margin-top: 60px; }
+    .section-rule { margin-bottom: 1.75rem; }
+    .section-body p { font-size: 1.05rem; line-height: 1.92; }
+    .section-body p:last-child { margin-bottom: 0; }
+    .section-badge { margin-bottom: 1.25rem; }
+    .section-title { font-size: 1.35rem; }
+
+    /* Subsection */
+    .subsection { margin-top: 2.5rem; margin-bottom: 2rem; }
+    .subsection-title { font-family: 'Space Grotesk', serif; font-size: 1.1rem; font-weight: 700; font-style: italic; margin-bottom: 1rem; display: flex; align-items: center; gap: 0.75rem; }
+    .subsection-title::before { content: ''; display: inline-block; width: 16px; height: 1px; background: var(--accent); }
+    .subsection p { margin-bottom: 1.25rem; font-size: 1rem; line-height: 1.85; }
+    .subsection p::first-letter { float: none !important; }
+
+    /* Definitions */
+    .definition-block { border: 1px solid var(--rule); margin: 2rem 0; overflow: hidden; }
+    .definition-block-header { background: var(--framework); padding: 0.65rem 1.25rem; }
+    .definition-block-header span { font-family: 'JetBrains Mono', monospace; font-size: 0.48rem; letter-spacing: 0.22em; text-transform: uppercase; color: #dce8f0; }
+    .definition-item { padding: 1.25rem 1.5rem; border-bottom: 1px solid var(--rule); }
+    .definition-item:last-child { border-bottom: none; }
+    .definition-term { font-family: 'Space Grotesk', serif; font-size: 1.05rem; font-weight: 700; color: var(--framework); margin-bottom: 0.35rem; display: flex; align-items: center; gap: 0.5rem; }
+    .definition-term-tag { font-family: 'JetBrains Mono', monospace; font-size: 0.42rem; letter-spacing: 0.15em; text-transform: uppercase; background: var(--framework-light); color: var(--framework); padding: 0.2em 0.5em; }
+    .definition-body { font-size: 0.95rem; line-height: 1.75; }
+
+    /* Pull quote override */
+    .pull-quote { margin: 2.25rem -1.5rem; }
+    .pull-quote p { font-size: 1.2rem; }
+
+    /* Margin note */
+    .margin-note { float: right; width: 140px; margin: 0 -165px 1rem 1.5rem; font-family: 'JetBrains Mono', monospace; font-size: 0.5rem; line-height: 1.6; color: var(--muted); border-left: 2px solid var(--rule); padding-left: 0.75rem; }
+    @media (max-width: 1000px) { .margin-note { display: none; } }
+
+    /* Framework evolution diagram */
+    .framework-evolution { display: flex; align-items: center; gap: 0; margin: 2rem 0; border: 1px solid var(--rule); overflow: hidden; }
+    .framework-evolution-item { flex: 1; padding: 1.25rem 1rem; text-align: center; background: var(--highlight); position: relative; }
+    .framework-evolution-item:not(:last-child)::after { content: '→'; position: absolute; right: -0.7rem; top: 50%; transform: translateY(-50%); font-size: 1.1rem; color: var(--accent); z-index: 1; font-family: 'JetBrains Mono', monospace; }
+    .framework-evolution-item:last-child { background: var(--framework-light); border-left: 3px solid var(--framework); }
+    .evolution-abbr { font-family: 'Space Grotesk', serif; font-size: 1.4rem; font-weight: 900; color: var(--framework); line-height: 1; margin-bottom: 0.3rem; }
+    .evolution-name { font-family: 'JetBrains Mono', monospace; font-size: 0.44rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); margin-bottom: 0.5rem; }
+    .evolution-desc { font-size: 0.78rem; line-height: 1.4; font-style: italic; color: var(--muted); }
+
+    /* ZMOI window */
+    .zmoi-flow { display: flex; align-items: stretch; gap: 0; margin: 2rem 0; border: 1px solid var(--rule); overflow: hidden; }
+    .zmoi-step { flex: 1; padding: 1rem; text-align: center; border-right: 1px solid var(--rule); background: var(--highlight); }
+    .zmoi-step:last-child { border-right: none; }
+    .zmoi-step.highlight { background: var(--framework); }
+    .zmoi-step-label { font-family: 'JetBrains Mono', monospace; font-size: 0.45rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--muted); margin-bottom: 0.4rem; }
+    .zmoi-step.highlight .zmoi-step-label { color: rgba(255,255,255,0.6); }
+    .zmoi-step-title { font-family: 'Space Grotesk', serif; font-size: 0.9rem; font-weight: 700; margin-bottom: 0.3rem; }
+    .zmoi-step.highlight .zmoi-step-title { color: white; }
+    .zmoi-step-desc { font-size: 0.78rem; font-style: italic; color: var(--muted); line-height: 1.3; }
+    .zmoi-step.highlight .zmoi-step-desc { color: rgba(255,255,255,0.75); }
+    .zmoi-cmi-label { font-family: 'JetBrains Mono', monospace; font-size: 0.42rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent); margin-top: 0.5rem; }
+    .zmoi-step.highlight .zmoi-cmi-label { color: #ffd580; }
+
+    /* Table */
+    .data-table-wrap { margin: 2rem 0; border: 1px solid var(--rule); overflow-x: auto; }
+    .data-table-header { background: var(--ink); padding: 0.65rem 1.25rem; display: flex; justify-content: space-between; align-items: center; }
+    .data-table-header span { font-family: 'JetBrains Mono', monospace; font-size: 0.48rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--paper); opacity: 0.7; }
+    table { width: 100%; border-collapse: collapse; background: var(--paper); }
+    th { font-family: 'JetBrains Mono', monospace; font-size: 0.46rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink); padding: 0.6rem 0.9rem; text-align: left; background: var(--highlight); border-bottom: 2px solid var(--rule); }
+    td { font-size: 0.87rem; line-height: 1.55; padding: 0.65rem 0.9rem; border-bottom: 1px solid var(--rule); vertical-align: top; }
+    tr:last-child td { border-bottom: none; }
+    tr:nth-child(even) td { background: var(--highlight); }
+    .td-accent { font-family: 'Space Grotesk', serif; font-weight: 700; color: var(--framework); }
+
+    /* Flywheel */
+    .flywheel { display: grid; grid-template-columns: repeat(5, 1fr); gap: 0; margin: 2rem 0; border: 1px solid var(--rule); overflow: hidden; }
+    .flywheel-item { padding: 1.1rem 0.75rem; text-align: center; border-right: 1px solid var(--rule); position: relative; background: var(--highlight); }
+    .flywheel-item:last-child { border-right: none; background: var(--framework-light); border-top: 3px solid var(--framework); }
+    .flywheel-item:not(:last-child)::after { content: '↓'; font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; color: var(--accent); position: absolute; bottom: -0.6rem; left: 50%; transform: translateX(-50%); background: var(--paper); padding: 0 0.2rem; display: none; }
+    .flywheel-num { font-family: 'Space Grotesk', serif; font-size: 1.6rem; font-weight: 900; font-style: italic; color: var(--rule); line-height: 1; margin-bottom: 0.2rem; }
+    .flywheel-item:last-child .flywheel-num { color: var(--framework); }
+    .flywheel-title { font-family: 'JetBrains Mono', monospace; font-size: 0.44rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent); margin-bottom: 0.3rem; }
+    .flywheel-item:last-child .flywheel-title { color: var(--framework); }
+    .flywheel-desc { font-size: 0.78rem; font-style: italic; color: var(--muted); line-height: 1.35; }
+
+    /* Predictions */
+    .prediction-list { display: flex; flex-direction: column; gap: 1.25rem; margin: 2rem 0; }
+    .prediction-item { border: 1px solid var(--rule); overflow: hidden; }
+    .prediction-header { display: grid; grid-template-columns: auto 1fr auto; gap: 1rem; align-items: center; padding: 0.85rem 1.25rem; background: var(--highlight); border-bottom: 1px solid var(--rule); }
+    .prediction-id { font-family: 'Space Grotesk', serif; font-size: 1.1rem; font-weight: 900; font-style: italic; color: var(--framework); }
+    .prediction-name { font-family: 'JetBrains Mono', monospace; font-size: 0.5rem; letter-spacing: 0.15em; text-transform: uppercase; }
+    .kill-badge { font-family: 'JetBrains Mono', monospace; font-size: 0.42rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent); border: 1px solid var(--accent); padding: 0.2em 0.5em; white-space: nowrap; }
+    .prediction-body { padding: 1rem 1.25rem; font-size: 0.92rem; line-height: 1.75; }
+    .kill-criterion { margin-top: 0.75rem; padding-top: 0.75rem; border-top: 1px dashed var(--rule); font-size: 0.85rem; color: var(--muted); }
+    .kill-criterion strong { color: var(--accent); font-family: 'JetBrains Mono', monospace; font-size: 0.48rem; letter-spacing: 0.1em; text-transform: uppercase; }
+
+    /* Risks */
+    .risk-list { display: flex; flex-direction: column; gap: 1rem; margin: 2rem 0; }
+    .risk-item { display: grid; grid-template-columns: auto 1fr; gap: 0 1.25rem; align-items: start; padding: 1.1rem 1.25rem; border: 1px solid var(--rule); background: var(--highlight); }
+    .risk-severity { font-family: 'JetBrains Mono', monospace; font-size: 0.42rem; letter-spacing: 0.1em; text-transform: uppercase; padding: 0.25em 0.6em; white-space: nowrap; margin-top: 0.2rem; }
+    .risk-severity.critical { background: #f0ddd7; color: var(--accent); border: 1px solid var(--accent); }
+    .risk-severity.high { background: #fdf0d5; color: #8a5a00; border: 1px solid #c8980a; }
+    .risk-severity.medium { background: var(--highlight); color: var(--muted); border: 1px solid var(--rule); }
+    .risk-severity.structural { background: var(--framework-light); color: var(--framework); border: 1px solid var(--framework); }
+    .risk-title { font-family: 'Space Grotesk', serif; font-size: 1rem; font-weight: 700; margin-bottom: 0.35rem; }
+    .risk-body { font-size: 0.9rem; line-height: 1.7; }
+
+    /* Self audit */
+    .audit-list { display: flex; flex-direction: column; gap: 1rem; margin: 2rem 0; counter-reset: audit; }
+    .audit-item { display: grid; grid-template-columns: 2.5rem 1fr; gap: 0 1rem; align-items: start; }
+    .audit-num { counter-increment: audit; font-family: 'Space Grotesk', serif; font-size: 2rem; font-weight: 900; font-style: italic; color: var(--rule); line-height: 1; }
+    .audit-q { font-size: 1rem; line-height: 1.65; }
+    .audit-q strong { color: var(--deep); font-weight: 600; }
+    .audit-note { font-size: 0.85rem; font-style: italic; color: var(--muted); margin-top: 0.2rem; }
+
+    /* Segment architecture */
+    .segment-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--rule); border: 1px solid var(--rule); margin: 2rem 0; overflow: hidden; }
+    .segment-item { background: var(--highlight); padding: 1.25rem; }
+    .segment-label { font-family: 'JetBrains Mono', monospace; font-size: 0.45rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--accent); margin-bottom: 0.3rem; }
+    .segment-name { font-family: 'Space Grotesk', serif; font-size: 1rem; font-weight: 700; margin-bottom: 0.5rem; }
+    .segment-job { font-size: 0.85rem; font-style: italic; color: var(--muted); margin-bottom: 0.5rem; }
+    .segment-details { font-family: 'JetBrains Mono', monospace; font-size: 0.45rem; letter-spacing: 0.08em; color: var(--muted); line-height: 1.7; }
+
+    /* Author note */
+    .author-note { margin: 4rem 0 2rem; padding: 2rem; border: 1px solid var(--rule); background: var(--highlight); position: relative; overflow: hidden; }
+    .author-note::before { content: 'Author'; position: absolute; top: 1rem; right: 1.5rem; font-family: 'Space Grotesk', serif; font-size: 4rem; font-weight: 900; font-style: italic; color: var(--rule); line-height: 1; pointer-events: none; }
+    .author-note-label { font-family: 'JetBrains Mono', monospace; font-size: 0.5rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--accent); margin-bottom: 1rem; }
+    .author-note p { font-size: 0.95rem; line-height: 1.8; position: relative; z-index: 1; margin-bottom: 1rem; }
+    .author-note p:last-child { margin-bottom: 0; }
+
+    /* References */
+    .references { margin: 3rem 0; }
+    .references-title { font-family: 'JetBrains Mono', monospace; font-size: 0.5rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--muted); margin-bottom: 1.5rem; border-bottom: 1px solid var(--rule); padding-bottom: 0.75rem; }
+    .reference-item { font-size: 0.82rem; line-height: 1.65; color: var(--muted); padding: 0.5rem 0; border-bottom: 1px solid var(--rule); }
+    .reference-item:last-child { border-bottom: none; }
+
+    /* Hard filter box */
+    .hard-filter { background: var(--ink); padding: 1.5rem 2rem; margin: 2rem 0; }
+    .hard-filter-label { font-family: 'JetBrains Mono', monospace; font-size: 0.48rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--accent); margin-bottom: 0.75rem; }
+    .hard-filter p { font-family: 'Space Grotesk', serif; font-size: 1.05rem; font-style: italic; color: var(--paper); line-height: 1.6; }
+
+    /* Bottom nav */
+    .paper-nav { max-width: 680px; margin: 0 auto; padding: 0 4rem 5rem; display: flex; justify-content: space-between; align-items: center; }
+    .paper-nav-link { display: flex; align-items: center; gap: 0.75rem; text-decoration: none; color: var(--ink); font-family: 'JetBrains Mono', monospace; font-size: 0.55rem; letter-spacing: 0.15em; text-transform: uppercase; transition: color 0.2s; }
+    .paper-nav-link:hover { color: var(--accent); }
+    .paper-nav-link svg { width: 16px; height: 16px; stroke: currentColor; fill: none; stroke-width: 1.5; }
+
+    [data-theme="dark"] .definition-block-header span { color: #141210; }
+    [data-theme="dark"] .zmoi-step.highlight { color: #f4f0e8; }
+
+    @media (max-width: 768px) {
+      .hero { grid-template-columns: 1fr; padding: 3rem 1.5rem 2rem; gap: 2rem; }
+      .three-ideas { grid-template-columns: 1fr; padding: 0 1.5rem; margin-top: 0; }
+      .idea-item { border-right: none; border-bottom: 1px solid var(--rule); }
+      .idea-item:last-child { border-bottom: none; }
+      .content { padding: 0 1.5rem 5rem; }
+      .toc-wrap { padding: 2rem 1.5rem; }
+      .toc-body { grid-template-columns: 1fr; }
+      .framework-evolution { flex-direction: column; }
+      .framework-evolution-item:not(:last-child)::after { content: '↓'; right: auto; bottom: -0.6rem; left: 50%; }
+      .flywheel { grid-template-columns: 1fr 1fr; }
+      .zmoi-flow { flex-direction: column; }
+      .segment-grid { grid-template-columns: 1fr; }
+      .pull-quote { margin: 2rem 0; }
+      .paper-nav { padding: 0 1.5rem 3rem; }
+    }
+
+    @media (max-width: 640px) {
+      .flywheel { grid-template-columns: 1fr 1fr; }
+      .flywheel-item:last-child { grid-column: 1 / -1; }
+      .content { padding-left: 1.5rem; padding-right: 1.5rem; }
+      .paper-nav { padding-left: 1.5rem; padding-right: 1.5rem; }
+    }
+
+    /* Hero SVG */
+    .hero { display: grid; grid-template-columns: 1fr 280px; gap: 2rem; align-items: center; }
+    .hero-svg { width: 100%; height: auto; }
+    @media (max-width: 768px) {
+      .hero { grid-template-columns: 1fr; }
+      .hero-svg { max-width: 200px; margin: 0 auto; order: -1; }
+    }
+  </style>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to content</a>
+  <div id="pbar"></div>
+  <div id="pbar-label"></div>
+  <div class="bg-pattern"></div>
+  <div class="bg-grain"></div>
+  <div class="page-wrap">
+
+      <!-- Top Bar -->
+  <div class="top-bar">
+    <span>Buenos Aires &middot; Since 2008</span>
+    <span>18 Essays &middot; 3 Frameworks &middot; ~289 min of reading &middot; <a href="about.html">About the author</a></span>
+  </div>
+
+  <!-- Nav -->
+  <nav class="nav">
+      <div class="nav-inner">
+        <a href="index.html" class="nav-brand">Narrative<em>Mechanics</em></a>
+        <button class="nav-btn nav-toggle" aria-label="Menu" aria-expanded="false" aria-controls="navLinks" id="navToggle">
+          <svg viewBox="0 0 24 24"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg>
+        </button>
+        <div class="nav-links" id="navLinks">
+          <a href="index.html" class="nav-link">Home</a>
+          <div class="nav-sep"></div>
+          <a href="archive.html" class="nav-link">Start Here</a>
+          <a href="frameworks.html" class="nav-link">Frameworks</a>
+          <a href="series.html" class="nav-link">Series</a>
+          <a href="essays.html" class="nav-link">Essays</a>
+          <a href="notes.html" class="nav-link">Notes</a>
+          <div class="nav-sep"></div>
+          <a href="about.html" class="nav-link">About</a>
+        </div>
+        <div class="nav-right">
+          <button class="nav-btn" aria-label="Toggle theme" id="themeToggle">
+            <svg class="icon-moon" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+            <svg class="icon-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+          </button>
+        </div>
+      </div>
+    </nav>
+
+
+    
+
+    
+
+    <section class="hero">
+      <div class="hero-left">
+        <div class="hero-kicker">Industry Framework Paper &nbsp;/&nbsp; Media Strategy</div>
+        <h1 class="hero-title">The <em>Continuous<br>Moment</em> of Intent</h1>
+        <p class="hero-subtitle">A Strategic Framework for Media Growth in the Age of Fragmented Attention</p>
+        <div class="hero-byline">
+          <div class="hero-byline-dot"></div>
+          <div class="hero-byline-text">Diego Dell'Agostino &nbsp;·&nbsp; v4.2</div>
+        </div>
+        <div class="hero-tags">
+          <span class="hero-tag">ZMOI</span>
+          <span class="hero-tag">CMI</span>
+          <span class="hero-tag">Media Strategy</span>
+          <span class="hero-tag">Attention Economics</span>
+          <span class="hero-tag">Framing Theory</span>
+          <span class="hero-tag">Habit Formation</span>
+          <span class="hero-tag">Growth Architecture</span>
+        </div>
+      </div>
+    <svg class="hero-svg" viewBox="0 0 160 200" xmlns="http://www.w3.org/2000/svg">
+      <style>
+        @keyframes cmFlow{from{stroke-dashoffset:400}to{stroke-dashoffset:0}}
+        @keyframes cmDot{0%,100%{opacity:0.4}50%{opacity:1}}
+        @keyframes cmFade{from{opacity:0}to{opacity:1}}
+        @keyframes cmArrow{from{opacity:0;transform:translateX(-3px)}to{opacity:1;transform:translateX(0)}}
+      </style>
+      <!-- Continuous loop / mobius-like form -->
+      <ellipse cx="80" cy="95" rx="55" ry="65" fill="none" stroke="var(--rule)" stroke-width="0.5" opacity="0.3"/>
+      <path d="M80 30 C120 30,135 55,135 95 C135 135,120 160,80 160 C40 160,25 135,25 95 C25 55,40 30,80 30" fill="none" stroke="var(--accent)" stroke-width="1.5" stroke-dasharray="400" stroke-dashoffset="400" style="animation:cmFlow 2.5s 0.3s ease-out forwards"/>
+      <!-- Flow arrows around the loop -->
+      <polygon points="80,28 84,34 76,34" fill="var(--accent)" opacity="0" style="animation:cmArrow 0.4s 2s forwards"/>
+      <polygon points="137,95 131,91 131,99" fill="var(--accent)" opacity="0" style="animation:cmArrow 0.4s 2.3s forwards"/>
+      <polygon points="80,162 76,156 84,156" fill="var(--accent)" opacity="0" style="animation:cmArrow 0.4s 2.6s forwards"/>
+      <polygon points="23,95 29,99 29,91" fill="var(--accent)" opacity="0" style="animation:cmArrow 0.4s 2.9s forwards"/>
+      <!-- Touchpoints around the loop -->
+      <circle cx="80" cy="30" r="3" fill="var(--accent)" style="animation:cmDot 2s 0.8s ease-in-out infinite"/>
+      <circle cx="135" cy="95" r="3" fill="var(--accent)" style="animation:cmDot 2s 1.2s ease-in-out infinite"/>
+      <circle cx="80" cy="160" r="3" fill="var(--accent)" style="animation:cmDot 2s 1.6s ease-in-out infinite"/>
+      <circle cx="25" cy="95" r="3" fill="var(--accent)" style="animation:cmDot 2s 2s ease-in-out infinite"/>
+      <!-- Intent markers -->
+      <text x="80" y="22" font-family="monospace" font-size="5" fill="var(--accent)" text-anchor="middle" opacity="0" style="animation:cmFade 0.4s 1.2s forwards">DISCOVER</text>
+      <text x="150" y="97" font-family="monospace" font-size="5" fill="var(--muted)" opacity="0" style="animation:cmFade 0.4s 1.6s forwards">ENGAGE</text>
+      <text x="80" y="178" font-family="monospace" font-size="5" fill="var(--muted)" text-anchor="middle" opacity="0" style="animation:cmFade 0.4s 2s forwards">CONVERT</text>
+      <text x="10" y="97" font-family="monospace" font-size="5" fill="var(--muted)" opacity="0" style="animation:cmFade 0.4s 2.4s forwards">RETAIN</text>
+      <!-- Center label -->
+      <text x="80" y="93" font-family="monospace" font-size="6" fill="var(--accent)" text-anchor="middle" letter-spacing="1" opacity="0" style="animation:cmFade 0.5s 2.8s forwards">CMOI</text>
+      <text x="80" y="102" font-family="monospace" font-size="4.5" fill="var(--muted)" text-anchor="middle" letter-spacing="1" opacity="0" style="animation:cmFade 0.5s 3s forwards">CONTINUOUS</text>
+    </svg>
+    </section>
+
+    <div class="three-ideas">
+      <div class="three-ideas-header">Three Ideas Worth Sharing</div>
+      <div class="idea-item">
+        <div class="idea-num">1</div>
+        <div class="idea-text">The battle is no longer for the pageview. It is for the interpretive frame before the opinion forms. I call this the <strong>Zero Moment of Interpretation (ZMOI)</strong>.</div>
+      </div>
+      <div class="idea-item">
+        <div class="idea-num">2</div>
+        <div class="idea-text">Capturing that moment once is not enough. Sustainable growth requires a persistent, multi-surface presence system: the <strong>Continuous Moment of Intent (CMI)</strong>. Not a content strategy; a presence architecture.</div>
+      </div>
+      <div class="idea-item">
+        <div class="idea-num">3</div>
+        <div class="idea-text">Every claim here has a kill criterion. If the results are not those expected, the way CMI is implemented should be revisited. Practitioner's theory, tested or discarded.</div>
+      </div>
+    </div>
+
+    <div class="chapter-divider" style="margin-top:2rem;">
+      <div class="chapter-divider-line"></div>
+      <div class="chapter-divider-ornament"><span>✦</span><span>❧</span><span>✦</span></div>
+      <div class="chapter-divider-line"></div>
+    </div>
+
+    <!-- Abstract -->
+    <div style="max-width:800px;margin:0 auto;padding:2.5rem 4rem 0;">
+      <div style="border:1px solid var(--rule);background:var(--highlight);padding:1.75rem 2rem;margin-bottom:0;">
+        <div style="font-family:'JetBrains Mono',monospace;font-size:0.5rem;letter-spacing:0.22em;text-transform:uppercase;color:var(--accent);margin-bottom:0.75rem;">Abstract</div>
+        <p style="font-size:0.97rem;line-height:1.85;margin-bottom:0.75rem;">In 2011, Google formalized the Zero Moment of Truth (ZMOT) to describe the pre-purchase research phase that determined consumer preference. This document proposes that an analogous shift is occurring in media: the battleground is the moment before belief, not the moment before purchase. I call this the <strong>Zero Moment of Interpretation (ZMOI)</strong>.</p>
+        <p style="font-size:0.97rem;line-height:1.85;margin-bottom:0.75rem;">Capturing ZMOI once is insufficient; sustainable media growth requires a persistent, multi-surface presence system I term the <strong>Continuous Moment of Intent (CMI)</strong>. What follows defines both constructs, positions them within existing literature, and proposes a testable framework with kill criteria.</p>
+        <div style="font-family:'JetBrains Mono',monospace;font-size:0.46rem;letter-spacing:0.12em;color:var(--muted);line-height:1.8;"><strong>Keywords:</strong> ZMOT, ZMOI, CMI, media strategy, attention economics, framing theory, habit formation, user touchpoint architecture</div>
+      </div>
+    </div>
+
+    <!-- TOC -->
+    <div class="toc-wrap">
+      <div class="toc">
+        <div class="toc-header"><div class="toc-header-text">Document Map</div></div>
+        <div class="toc-body">
+          <div class="toc-part">Part I &nbsp;·&nbsp; Problem &amp; Foundations §1–3</div>
+          <div class="toc-item"><span class="toc-item-num">§1</span><a href="#s1">Problem Statement</a></div>
+          <div class="toc-item"><span class="toc-item-num">§2</span><a href="#s2">Core Definitions</a></div>
+          <div class="toc-item"><span class="toc-item-num">§3</span><a href="#s3">Theoretical Basis</a></div>
+          <div class="toc-part">Part II &nbsp;·&nbsp; The CMI System §4–8</div>
+          <div class="toc-item"><span class="toc-item-num">§4</span><a href="#s4">The CMI Framework</a></div>
+          <div class="toc-item"><span class="toc-item-num">§5</span><a href="#s5">Touchpoint Architecture</a></div>
+          <div class="toc-item"><span class="toc-item-num">§6</span><a href="#s6">Audience Architecture</a></div>
+          <div class="toc-item"><span class="toc-item-num">§7</span><a href="#s7">Implementation</a></div>
+          <div class="toc-item"><span class="toc-item-num">§8</span><a href="#s8">Growth Model</a></div>
+          <div class="toc-part">Part III &nbsp;·&nbsp; Validation &amp; Operations §9–13</div>
+          <div class="toc-item"><span class="toc-item-num">§9</span><a href="#s9">Predictions &amp; Kill Criteria</a></div>
+          <div class="toc-item"><span class="toc-item-num">§10</span><a href="#s10">Operational Principles</a></div>
+          <div class="toc-item"><span class="toc-item-num">§11</span><a href="#s11">Risks</a></div>
+          <div class="toc-item"><span class="toc-item-num">§12</span><a href="#s12">Self-Audit</a></div>
+          <div class="toc-item"><span class="toc-item-num">§13</span><a href="#s13">Conclusion</a></div>
+        </div>
+      </div>
+    </div>
+
+    <main class="content" id="main-content">
+
+      <!-- PART I -->
+      <div class="part-header">
+        <div class="part-num">Part I</div>
+        <div class="part-title">Problem &amp; Foundations</div>
+      </div>
+
+      <!-- §1 -->
+      <article class="section" id="s1">
+        <div class="section-badge">
+          <div class="section-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg></div>
+          <div class="section-meta">
+            <div class="section-number">§1</div>
+            <h2 class="section-title">Problem Statement</h2>
+          </div>
+        </div>
+        <div class="section-rule"></div>
+        <div class="section-body">
+          <p>Many media organizations have achieved editorial clarity (a recognizable voice, a defensible point of view, strong production capability) and yet audience growth does not compound. They are strong at output but not yet strong at habit formation and distribution compounding. This is a system gap, not a branding gap.</p>
+          <div class="margin-note">The strategic problem is no longer "publish better content." It is: be present at interpretation time, across the surfaces where interpretation is formed.</div>
+          <p>The structural drivers are well-documented. News consumption has fragmented across social feeds, aggregators, video platforms, messaging apps, and algorithmic surfaces. Trust in news remains fragile, direct engagement with publisher homepages continues to decline (particularly among younger cohorts), and social and video environments increasingly serve as primary discovery channels. Roughly 54% of U.S. adults now get news from social media at least sometimes, with significant platform-level fragmentation by age.</p>
+          <div class="pull-quote">
+            <p>The gap in one line: strong at output. Not yet strong enough at habit formation and distribution compounding.</p>
+          </div>
+        </div>
+      </article>
+
+      <!-- §2 -->
+      <article class="section" id="s2">
+        <div class="section-badge">
+          <div class="section-icon"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+          <div class="section-meta">
+            <div class="section-number">§2</div>
+            <h2 class="section-title">Core Definitions</h2>
+          </div>
+        </div>
+        <div class="section-rule"></div>
+        <div class="section-body">
+          <p>Before the theoretical foundation, here are the two constructs this document introduces. Everything that follows builds on these.</p>
+
+          <div class="definition-block">
+            <div class="definition-block-header"><span>The Two Constructs</span></div>
+            <div class="definition-item">
+              <div class="definition-term"><span class="definition-term-tag">ZMOI</span> Zero Moment of Interpretation</div>
+              <div class="definition-body">The cognitive instant (prior to opinion formation) in which an individual encounters contextual information that shapes how they interpret an event, signal, or narrative. ZMOI is the media analogue of ZMOT: a pre-decision moment, but one where the "decision" is interpretive rather than transactional.</div>
+            </div>
+            <div class="definition-item">
+              <div class="definition-term"><span class="definition-term-tag">CMI</span> Continuous Moment of Intent</div>
+              <div class="definition-body">A growth operating system designed to capture ZMOI repeatedly across a user's daily digital surfaces (browser, mobile, messaging, commerce-adjacent contexts) with sufficient consistency to convert episodic attention into habitual interpretive reliance. CMI is not a content strategy; it is a presence architecture.</div>
+            </div>
+          </div>
+
+          <div class="subsection">
+            <div class="subsection-title">2.1 The Strategic Principle</div>
+            <p>Own the narrative frame before the opinion forms. This is the shift: from destination-first media to surface-first interpretive media. From "publish and distribute" to "frame and compound."</p>
+          </div>
+
+          <div class="zmoi-flow">
+            <div class="zmoi-step">
+              <div class="zmoi-step-label">Stage 1</div>
+              <div class="zmoi-step-title">Event Occurs</div>
+              <div class="zmoi-step-desc">Rate decision, conflict, regulation change</div>
+            </div>
+            <div class="zmoi-step highlight">
+              <div class="zmoi-step-label">Stage 2 &nbsp;/&nbsp; ZMOI Window</div>
+              <div class="zmoi-step-title">Instant Before Opinion</div>
+              <div class="zmoi-step-desc">User seeks a frame. Interpretation not yet set.</div>
+              <div class="zmoi-cmi-label">▲ CMI is present here</div>
+            </div>
+            <div class="zmoi-step">
+              <div class="zmoi-step-label">Stage 3</div>
+              <div class="zmoi-step-title">Opinion Forms</div>
+              <div class="zmoi-step-desc">Frame shapes all future processing</div>
+            </div>
+          </div>
+
+        </div>
+      </article>
+
+      <!-- §3 -->
+      <article class="section" id="s3">
+        <div class="section-badge">
+          <div class="section-icon"><svg viewBox="0 0 24 24"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></div>
+          <div class="section-meta">
+            <div class="section-number">§3</div>
+            <h2 class="section-title">Why This Works: Theoretical Basis</h2>
+          </div>
+        </div>
+        <div class="section-rule"></div>
+        <div class="section-body">
+          <p>ZMOI and CMI inherit from four bodies of work and extend each in a specific direction. This section is the honest accounting of intellectual debts and the precise points of departure.</p>
+
+          <div class="subsection">
+            <div class="subsection-title">3.1 Inherited Foundations</div>
+            <p>ZMOT (Lecinski, 2011) proved that influence migrates upstream of the decision moment. ZMOI applies the same logic to media: audiences arrive at an event with interpretive frames already forming. The Messy Middle (Rennie &amp; Protheroe, 2020) mapped the non-linear exploration/evaluation loops in modern decisions. CMI extends this: in media, interpretive loops do not converge on a purchase; they compound indefinitely. Attention economics (Simon, 1971; Wu, 2016) established that the bottleneck is not supply of content but allocation of attention. ZMOI shifts the question from time spent to meaning assigned. Habit formation (Eyal, 2014; Fogg, 2009) showed that habits require designed triggers. Where Eyal's Hook Model uses hedonic rewards, CMI's reward is cognitive clarity: reduced uncertainty about what an event means.</p>
+          </div>
+
+          <div class="subsection">
+            <div class="subsection-title">3.2 The Framing Question</div>
+            <p>Goffman (1974) introduced frame analysis. Entman (1993) codified media framing as selecting aspects of perceived reality and making them more salient. ZMOI extends this in three dimensions. First, locus: the surface participates in the frame. A Telegram brief at 7 AM carries different interpretive weight than the identical content in a social feed at midnight. Second, temporality: classic framing theory's unit of analysis is per-message; CMI captures the compounding effect of repeated encounters across surfaces over days and weeks. Third, agency: ZMOI describes elective interpretive architecture: the user installs the extension, subscribes to the brief. This is opt-in framing, not broadcast.</p>
+          </div>
+
+          <div class="subsection">
+            <div class="subsection-title">3.3 Manufacturing Consent</div>
+            <p>Herman and Chomsky (1988) argued that mass media can manufacture consent through structural, involuntary mechanisms. The phrase "own the narrative frame" will and should evoke this tradition. CMI inherits the recognition that framing carries real power and real responsibility. But where the propaganda model describes involuntary, institutional, concealed mechanisms, CMI operates under opposite conditions: opt-in (the user installs), transparent (the lens is declared), removable (one click), and non-monopolistic. If any CMI implementation drifts toward lock-in or concealed bias, it has become the thing it must not be.</p>
+          </div>
+
+          <div class="subsection">
+            <div class="subsection-title">3.4 Counter-Evidence: Repetition and Fatigue</div>
+            <p>CMI relies on repeated exposure building trust. The counter-evidence is real: forced advertising repetition produces avoidance and banner blindness (Cho &amp; Cheon, 2004). CMI's prediction is that editorial utility follows a different curve. Advertising delivers the same message repeatedly (diminishing value). Editorial utility delivers new information through a consistent lens (novel signal, stable frame). If CMI surfaces show the same fatigue curves as advertising (declining engagement, rising disable rates), the mechanism is falsified. This is directly operationalized in P2.</p>
+          </div>
+
+          <div class="subsection">
+            <div class="subsection-title">3.5 The Declared-Lens Shift: Evidence from the Market</div>
+            <p>ZMOI is not purely theoretical. The media landscape has already moved toward declared interpretive lenses. Legacy outlets built their brands on implied objectivity. The fastest-growing media properties of 2015-2025 abandoned this model and built audiences by declaring their lens upfront: Morning Brew and Axios on "smart brevity," Stratechery on a single analyst with a consistent technology lens, The Free Press and Puck on explicit transparency about editorial perspective, Ground News and AllSides on making the frame itself the product.</p>
+            <div class="pull-quote">
+              <p>The pattern is consistent: audiences are migrating from implied-neutrality media to declared-lens media. CMI formalizes what the market is already rewarding.</p>
+            </div>
+          </div>
+
+          <div class="subsection">
+            <div class="subsection-title">3.6 Differentiation Summary</div>
+          </div>
+
+          <div class="data-table-wrap">
+            <div class="data-table-header"><span>Table 1 &nbsp;·&nbsp; Framework Positioning</span></div>
+            <table>
+              <thead>
+                <tr><th>Framework</th><th>Domain</th><th>Unit of Analysis</th><th>Temporal Model</th></tr>
+              </thead>
+              <tbody>
+                <tr><td class="td-accent">ZMOT</td><td>Commerce</td><td>Purchase decision</td><td>Point-in-time</td></tr>
+                <tr><td class="td-accent">Messy Middle</td><td>Commerce</td><td>Decision journey</td><td>Looped, converging</td></tr>
+                <tr><td class="td-accent">Attention Economy</td><td>General</td><td>Time allocation</td><td>Continuous (undirected)</td></tr>
+                <tr><td class="td-accent">Framing Theory</td><td>Media / Political</td><td>Salience selection</td><td>Per-message</td></tr>
+                <tr><td class="td-accent">Hook Model</td><td>Product design</td><td>Habit loop</td><td>Cyclical</td></tr>
+                <tr><td class="td-accent" style="color:var(--framework)">ZMOI / CMI</td><td>Media</td><td>Interpretive moment</td><td><strong>Persistent, compounding, opt-in</strong></td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </article>
+
+      <!-- PART II -->
+      <div class="part-header">
+        <div class="part-num">Part II</div>
+        <div class="part-title">The CMI System</div>
+      </div>
+
+      <!-- §4 -->
+      <article class="section" id="s4">
+        <div class="section-badge">
+          <div class="section-icon"><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+          <div class="section-meta">
+            <div class="section-number">§4</div>
+            <h2 class="section-title">The CMI Framework</h2>
+          </div>
+        </div>
+        <div class="section-rule"></div>
+        <div class="section-body">
+
+          <div class="framework-evolution">
+            <div class="framework-evolution-item">
+              <div class="evolution-abbr">ZMOT</div>
+              <div class="evolution-name">Zero Moment of Truth</div>
+              <div class="evolution-desc">Pre-purchase preference formation</div>
+            </div>
+            <div class="framework-evolution-item">
+              <div class="evolution-abbr">ZMOI</div>
+              <div class="evolution-name">Zero Moment of Interpretation</div>
+              <div class="evolution-desc">Pre-opinion interpretation formation</div>
+            </div>
+            <div class="framework-evolution-item">
+              <div class="evolution-abbr">CMI</div>
+              <div class="evolution-name">Continuous Moment of Intent</div>
+              <div class="evolution-desc">Persistent cross-surface interpretive presence</div>
+            </div>
+          </div>
+
+          <div class="subsection">
+            <div class="subsection-title">4.1 The Five-Effect Mechanism</div>
+            <p>CMI generates strategic advantage through five linked effects.</p>
+          </div>
+
+          <div class="flywheel">
+            <div class="flywheel-item">
+              <div class="flywheel-num">1</div>
+              <div class="flywheel-title">Contextual Proximity</div>
+              <div class="flywheel-desc">Meet users where they already spend attention</div>
+            </div>
+            <div class="flywheel-item">
+              <div class="flywheel-num">2</div>
+              <div class="flywheel-title">Interpretive Speed</div>
+              <div class="flywheel-desc">Stable frame in high-noise moments; reduce cognitive cost</div>
+            </div>
+            <div class="flywheel-item">
+              <div class="flywheel-num">3</div>
+              <div class="flywheel-title">Repetition Without Redundancy</div>
+              <div class="flywheel-desc">Multiple surfaces reinforce lens without repeating content</div>
+            </div>
+            <div class="flywheel-item">
+              <div class="flywheel-num">4</div>
+              <div class="flywheel-title">Trust Accumulation</div>
+              <div class="flywheel-desc">Familiarity plus utility converts exposure into credibility</div>
+            </div>
+            <div class="flywheel-item">
+              <div class="flywheel-num">5</div>
+              <div class="flywheel-title">Habit + Compounding</div>
+              <div class="flywheel-desc">Recurring users become distribution nodes</div>
+            </div>
+          </div>
+
+          <div class="subsection">
+            <div class="subsection-title">4.2 The Lens Is the Moat</div>
+            <p>A necessary clarification: the CMI architecture itself is replicable. Any competitor can build multi-surface presence. The moat is the editorial lens. A CMI system amplifies whatever it carries. If the lens is undifferentiated, the system amplifies noise. If the lens is sharp, consistent, and intellectually honest, the system compounds credibility across every surface it touches.</p>
+            <div class="hard-filter">
+              <div class="hard-filter-label">Core Dependency</div>
+              <p>CMI without a defensible lens is infrastructure without signal. The architecture delivers; the lens differentiates.</p>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- §5 -->
+      <article class="section" id="s5">
+        <div class="section-badge">
+          <div class="section-icon"><svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></div>
+          <div class="section-meta">
+            <div class="section-number">§5</div>
+            <h2 class="section-title">Touchpoint-First User Access</h2>
+          </div>
+        </div>
+        <div class="section-rule"></div>
+        <div class="section-body">
+          <p>Surface-first means designing presence for the context and attention state of each touchpoint, not repurposing one format across channels.</p>
+
+          <div class="data-table-wrap">
+            <div class="data-table-header"><span>Table 2 &nbsp;·&nbsp; Taxonomy of CMI Touchpoints</span></div>
+            <table>
+              <thead>
+                <tr><th>Touchpoint</th><th>User Context</th><th>Attention State</th><th>CMI Function</th><th>Design Principle</th></tr>
+              </thead>
+              <tbody>
+                <tr><td class="td-accent">Browser Extension / New Tab</td><td>Desktop session start</td><td>Ambient, habitual</td><td>Daily interpretive anchor</td><td>One card, high signal</td></tr>
+                <tr><td class="td-accent">Web / App (PWA)</td><td>Intentional visit</td><td>Focused, exploratory</td><td>Depth and archive</td><td>Full editorial experience</td></tr>
+                <tr><td class="td-accent">Push / Notifications</td><td>On-the-go, fragmented</td><td>Interrupt-tolerant</td><td>Scheduled stimuli</td><td>Fixed cadence, strict thresholds</td></tr>
+                <tr><td class="td-accent">Telegram / WhatsApp</td><td>Conversational flow</td><td>High-trust, personal</td><td>Shareable editorial units</td><td>Brief, not broadcast</td></tr>
+                <tr><td class="td-accent">Instagram / X / Social</td><td>Scrolling, discovery</td><td>Low-commitment, fast</td><td>Lens-native micro-content</td><td>Native format per platform</td></tr>
+                <tr><td class="td-accent">Streaming / YouTube / Podcast</td><td>Lean-back, captive</td><td>Receptive, long-form</td><td>Narrative depth</td><td>Interview, analysis</td></tr>
+                <tr><td class="td-accent">Commerce-adjacent Overlay</td><td>Price or data comparison</td><td>Evaluative, decision</td><td>Frame translation overlay</td><td>Opt-in, utility-first</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </article>
+
+      <!-- §6 -->
+      <article class="section" id="s6">
+        <div class="section-badge">
+          <div class="section-icon"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+          <div class="section-meta">
+            <div class="section-number">§6</div>
+            <h2 class="section-title">Audience Architecture</h2>
+          </div>
+        </div>
+        <div class="section-rule"></div>
+        <div class="section-body">
+          <p>A common growth error in niche media is treating the audience as a monolith. CMI requires segment-specific packaging: the same lens delivered at different depths for different clusters.</p>
+
+          <div class="segment-grid">
+            <div class="segment-item">
+              <div class="segment-label">Segment A</div>
+              <div class="segment-name">Native Operators</div>
+              <div class="segment-job">Traders, builders, high-frequency information users</div>
+              <div class="segment-details">Job: signal vs. noise filtering at speed<br>Surfaces: real-time widgets, alerts, data overlays<br>Signal: daily active use; low disable rate</div>
+            </div>
+            <div class="segment-item">
+              <div class="segment-label">Segment B</div>
+              <div class="segment-name">Macro-First Professionals</div>
+              <div class="segment-job">Founders, executives, finance-adjacent professionals</div>
+              <div class="segment-details">Job: translating global events to market implications<br>Surfaces: morning briefs, editorial analysis, interviews<br>Signal: email open rate above 40%</div>
+            </div>
+            <div class="segment-item">
+              <div class="segment-label">Segment C</div>
+              <div class="segment-name">Curious Mainstream</div>
+              <div class="segment-job">Non-native audience, entering through world events</div>
+              <div class="segment-details">Job: comprehension without jargon<br>Surfaces: explainer formats, shareable cards<br>Signal: explainer completion; share-to-new-user</div>
+            </div>
+          </div>
+
+          <div class="pull-quote">
+            <p>The error is treating these as one audience. The opportunity is one lens, multiple entry narratives.</p>
+          </div>
+        </div>
+      </article>
+
+      <!-- §7 -->
+      <article class="section" id="s7">
+        <div class="section-badge">
+          <div class="section-icon"><svg viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></div>
+          <div class="section-meta">
+            <div class="section-number">§7</div>
+            <h2 class="section-title">Implementation Architecture</h2>
+          </div>
+        </div>
+        <div class="section-rule"></div>
+        <div class="section-body">
+          <p>This section translates CMI's touchpoints into concrete implementation principles. These are proposed specifications, not validated results. Section 9 defines the predictions they must survive.</p>
+
+          <div class="subsection">
+            <div class="subsection-title">7.1 The Ambient Anchor</div>
+            <p>Principle: occupy one high-frequency, low-effort touchpoint where the user begins their digital day. The goal is not to deliver a full article but to set the interpretive frame before the user encounters competing narratives. The surface should deliver one card with three elements: current context, one headline, one editorial frame. The encounter should take under ten seconds.</p>
+          </div>
+
+          <div class="subsection">
+            <div class="subsection-title">7.2 The Scheduled Stimulus</div>
+            <p>Principle: deliver editorial stimuli at predictable, fixed intervals. The key word is scheduled: predictability builds habit, unpredictability builds fatigue. If every event triggers a push, no event feels important. The structure is constant (frame, context, watchpoint); the packaging adapts to the surface.</p>
+          </div>
+
+          <div class="subsection">
+            <div class="subsection-title">7.3 The Contextual Overlay</div>
+            <p>Principle: add an interpretive layer on top of surfaces where the user is already making decisions or evaluating information. The overlay does not replace the original context; it adds a second frame. This is the most powerful CMI surface because it operates at the exact moment of interpretation, but also the most sensitive: it must be rigorously opt-in, transparent, and removable. If the user did not choose to see it, it is not CMI. It is spam.</p>
+          </div>
+
+          <div class="subsection">
+            <div class="subsection-title">7.4 The Conversational Unit</div>
+            <p>Principle: create editorial units designed for forwarding in messaging environments. Structure: one fact, one implication, one watchpoint. The unit succeeds when the person who receives it forwards it to someone else. Designed for conversation, not broadcast.</p>
+          </div>
+
+          <div class="subsection">
+            <div class="subsection-title">7.5 The Captive Surface</div>
+            <p>Principle: syndicate long-form or interview content into environments where attention exists but competitors are absent (in-flight, waiting rooms, event displays, partner feeds). These surfaces trade frequency for depth and serve as entry points for Segment C audiences.</p>
+          </div>
+
+          <div class="data-table-wrap">
+            <div class="data-table-header"><span>Table 3 &nbsp;·&nbsp; CMI Implementation Principles</span></div>
+            <table>
+              <thead>
+                <tr><th>Touchpoint</th><th>Principle</th><th>Implementation Examples</th></tr>
+              </thead>
+              <tbody>
+                <tr><td class="td-accent">Ambient Anchor</td><td>One card, under 10 seconds, sets the day's frame</td><td>Browser new-tab, lock-screen widget, pinned channel message</td></tr>
+                <tr><td class="td-accent">Scheduled Stimulus</td><td>Fixed editorial stimuli at predictable intervals</td><td>Newsletter, 90-sec audio, Slack digest, vertical video, push alert</td></tr>
+                <tr><td class="td-accent">Contextual Overlay</td><td>Interpretive layer on existing decision surfaces, rigorously opt-in</td><td>Dual-denomination pricing, carbon-cost on product pages</td></tr>
+                <tr><td class="td-accent">Conversational Unit</td><td>One fact, one implication, one watchpoint; designed for forwarding</td><td>Telegram group, WhatsApp broadcast, Slack channel</td></tr>
+                <tr><td class="td-accent">Social Layer</td><td>Lens-native micro-content, not repurposed; format adapts to platform</td><td>Instagram carousel, X thread, TikTok explainer, LinkedIn post</td></tr>
+                <tr><td class="td-accent">Captive Surface</td><td>Long-form depth in low-competition attention environments</td><td>YouTube, podcast, streaming, in-flight, event displays</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </article>
+
+      <!-- §8 -->
+      <article class="section" id="s8">
+        <div class="section-badge">
+          <div class="section-icon"><svg viewBox="0 0 24 24"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg></div>
+          <div class="section-meta">
+            <div class="section-number">§8</div>
+            <h2 class="section-title">Growth Model</h2>
+          </div>
+        </div>
+        <div class="section-rule"></div>
+        <div class="section-body">
+          <p>The core thesis of CMI is that habitual presence compounds, while event-driven distribution resets. Traditional media user touchpoints are event-driven: publish, promote, spike, decay, repeat. Each cycle starts from near-zero. CMI proposes a different curve: each touchpoint encounter builds on the last. The baseline rises. The compounding is not in the content; it is in the user's habit.</p>
+
+          <div class="pull-quote">
+            <p>The metric that separates CMI from content marketing: does the baseline rise between events? If yes, the system is compounding. If no, you are on the treadmill.</p>
+          </div>
+
+          <div class="subsection">
+            <div class="subsection-title">8.1 North Star Metric</div>
+            <p><strong>WRQA: Weekly Returning Qualified Audience.</strong> Users who return 3+ times per week and engage with at least one interpretive unit (card, brief, or analytical segment) per session. "Qualified" means the user engaged with a framing unit, not merely viewed a data feed. WRQA distinguishes habitual interpretive reliance from passive checking.</p>
+          </div>
+
+          <div class="data-table-wrap">
+            <div class="data-table-header"><span>Table 4 &nbsp;·&nbsp; Measurement Framework</span></div>
+            <table>
+              <thead>
+                <tr><th>Metric Family</th><th>Key Indicators</th><th>Success Signal</th></tr>
+              </thead>
+              <tbody>
+                <tr><td class="td-accent">Habit</td><td>Sessions/user/week; D7/D30 retention; notification disable ratio</td><td>Rising weekly return; declining disable rate</td></tr>
+                <tr><td class="td-accent">Interpretation</td><td>Save/share rate on framing units; explainer completion</td><td>Framing units outperform raw data on share and return-to-source</td></tr>
+                <tr><td class="td-accent">Distribution Compounding</td><td>% new users from recurring users; extension-to-WAU ratio</td><td>Improving acquisition efficiency per cohort</td></tr>
+                <tr><td class="td-accent">Economics</td><td>Cost per retained WAU; sponsor retention; CAC payback by surface</td><td>Declining CAC payback; improving LTV/CAC</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </article>
+
+      <!-- PART III -->
+      <div class="part-header">
+        <div class="part-num">Part III</div>
+        <div class="part-title">Validation &amp; Operations</div>
+      </div>
+
+      <!-- §9 -->
+      <article class="section" id="s9">
+        <div class="section-badge">
+          <div class="section-icon"><svg viewBox="0 0 24 24"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg></div>
+          <div class="section-meta">
+            <div class="section-number">§9</div>
+            <h2 class="section-title">Predictions and Kill Criteria</h2>
+          </div>
+        </div>
+        <div class="section-rule"></div>
+        <div class="section-body">
+          <p>A framework without falsifiable predictions is rhetoric. The following predictions apply to any CMI implementation. If a prediction fails, the response is not to abandon the framework but to diagnose which layer is underperforming, adjust, and retest.</p>
+
+          <div class="prediction-list">
+            <div class="prediction-item">
+              <div class="prediction-header">
+                <div class="prediction-id">P1</div>
+                <div class="prediction-name">Recurrence</div>
+                <div class="kill-badge">Kill Criterion</div>
+              </div>
+              <div class="prediction-body">
+                Users engaged through multi-touchpoint CMI will retain at meaningfully higher rates than single-surface users. The touchpoint architecture produces the difference, not the content alone.
+                <div class="kill-criterion"><strong>Kill:</strong> No measurable retention lift after 90 days signals the touchpoint mix needs restructuring.</div>
+              </div>
+            </div>
+            <div class="prediction-item">
+              <div class="prediction-header">
+                <div class="prediction-id">P2</div>
+                <div class="prediction-name">Cadence over Chaos</div>
+                <div class="kill-badge">Kill Criterion</div>
+              </div>
+              <div class="prediction-body">
+                Scheduled stimuli at fixed intervals will retain better than ad hoc alerts. Disable rates should stay well below the 10-15%/month benchmark for news apps.
+                <div class="kill-criterion"><strong>Kill:</strong> Disable rates at or above benchmark means the stimulus cadence or content is not delivering sufficient value. Adjust frequency, format, or depth.</div>
+              </div>
+            </div>
+            <div class="prediction-item">
+              <div class="prediction-header">
+                <div class="prediction-id">P3</div>
+                <div class="prediction-name">Interpretation Over Data</div>
+                <div class="kill-badge">Kill Criterion</div>
+              </div>
+              <div class="prediction-body">
+                Framing units will bring users back at higher rates than raw data or unframed content. The value is in the lens, not the numbers.
+                <div class="kill-criterion"><strong>Kill:</strong> No performance difference between framed and unframed touchpoints means the lens is not landing. Revisit editorial clarity or packaging.</div>
+              </div>
+            </div>
+            <div class="prediction-item">
+              <div class="prediction-header">
+                <div class="prediction-id">P4</div>
+                <div class="prediction-name">Segmented Packaging</div>
+                <div class="kill-badge">Kill Criterion</div>
+              </div>
+              <div class="prediction-body">
+                Segment-specific formats will outperform one-size-fits-all on completion and sharing.
+                <div class="kill-criterion"><strong>Kill:</strong> No segment shows meaningful improvement means the segmentation model or the packaging is wrong, not necessarily the framework.</div>
+              </div>
+            </div>
+            <div class="prediction-item">
+              <div class="prediction-header">
+                <div class="prediction-id">P5</div>
+                <div class="prediction-name">Compounding</div>
+                <div class="kill-badge">Kill Criterion</div>
+              </div>
+              <div class="prediction-body">
+                Acquisition cost per retained user should decline quarterly as habitual users drive organic distribution. This is the economic validation.
+                <div class="kill-criterion"><strong>Kill:</strong> Flat or rising cost after three cohorts (9 months) signals the CMI layers are generating consumption but not advocacy. Redesign the sharing and forwarding mechanics.</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="subsection">
+            <div class="subsection-title">9.1 The Proving Experiment</div>
+            <p>The experiment is straightforward. Take two equivalent content events (same editorial quality, same topic urgency, same production value). Distribute the first through traditional channels: publish, promote on social, let organic take over. Distribute the second through the full CMI stack: ambient anchor pre-positioning, scheduled stimulus at peak windows, contextual overlay in the moment, social amplification, and conversational follow-up. Measure three outcomes: D7 retention of new users acquired during each event, cross-surface migration (did users from one touchpoint appear on another within 48 hours), and organic share rate.</p>
+            <div class="pull-quote">
+              <p>The question is not whether CMI sounds right. It is whether CMI-distributed content compounds in ways that traditionally distributed content does not. One experiment answers that.</p>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- §10 -->
+      <article class="section" id="s10">
+        <div class="section-badge">
+          <div class="section-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14M4.93 4.93a10 10 0 0 0 0 14.14"/></svg></div>
+          <div class="section-meta">
+            <div class="section-number">§10</div>
+            <h2 class="section-title">Operational Principles</h2>
+          </div>
+        </div>
+        <div class="section-rule"></div>
+        <div class="section-body">
+          <p>When I say "we" below, I mean any team implementing CMI, including my own.</p>
+          <p><strong>Habit over virality.</strong> The unit of progress is weekly returning users, not peak views. A viral moment that does not convert to return frequency is not growth; it is noise.</p>
+          <p><strong>Touchpoints with product mentality.</strong> Every point of contact deserves the same design rigor as the core editorial product. Packaging is not an afterthought; it is part of the value proposition. Each touchpoint should feel intentionally built, not repurposed.</p>
+          <p><strong>One lens, many depths.</strong> Same lens, different depth by segment. Speed plus clarity is the advantage.</p>
+          <p><strong>Integrity as strategy.</strong> Presence without utility is intrusion. Never ship mechanics that feel manipulative.</p>
+          <div class="hard-filter">
+            <div class="hard-filter-label">Hard Filter</div>
+            <p>Does it increase recurrence? Does it improve distribution compounding? Does it improve economics? If none of the three, it is out.</p>
+          </div>
+        </div>
+      </article>
+
+      <!-- §11 -->
+      <article class="section" id="s11">
+        <div class="section-badge">
+          <div class="section-icon"><svg viewBox="0 0 24 24"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg></div>
+          <div class="section-meta">
+            <div class="section-number">§11</div>
+            <h2 class="section-title">Risks and Boundary Conditions</h2>
+          </div>
+        </div>
+        <div class="section-rule"></div>
+        <div class="section-body">
+          <div class="risk-list">
+            <div class="risk-item">
+              <div><span class="risk-severity critical">Critical</span></div>
+              <div>
+                <div class="risk-title">11.1 Trust and Intrusiveness</div>
+                <div class="risk-body">Trust in news is fragile. Any mechanic that feels extractive will erode long-term value faster than it generates short-term metrics. Every surface must pass a utility test: genuine value in context, or merely attention capture? P2's disable rate is the early-warning indicator. Trust loss at CMI's scale is non-recoverable.</div>
+              </div>
+            </div>
+            <div class="risk-item">
+              <div><span class="risk-severity structural">Structural</span></div>
+              <div>
+                <div class="risk-title">11.2 Editorial Responsibility</div>
+                <div class="risk-body">Operating at the interpretive layer carries heightened responsibility. The propaganda model is a permanent warning. The obligation: frame with rigor, distinguish analysis from opinion, disclose the lens explicitly. For any brand with a monetary lens, never cross into personalized financial advice.</div>
+              </div>
+            </div>
+            <div class="risk-item">
+              <div><span class="risk-severity high">High</span></div>
+              <div>
+                <div class="risk-title">11.3 Platform Risk</div>
+                <div class="risk-body">Browser extensions and messaging channels operate under platform governance that can change unilaterally. Multi-surface architecture provides resilience, but a simultaneous policy shift across Chrome and messaging would threaten core distribution.</div>
+              </div>
+            </div>
+            <div class="risk-item">
+              <div><span class="risk-severity medium">Medium</span></div>
+              <div>
+                <div class="risk-title">11.4 Interface Disruption</div>
+                <div class="risk-body">AI-native browsers and discovery layers are redefining how users interact with the web. CMI must build on user relationships, not surface mechanics alone.</div>
+              </div>
+            </div>
+            <div class="risk-item">
+              <div><span class="risk-severity structural">Structural</span></div>
+              <div>
+                <div class="risk-title">11.5 Cognitive Concentration Risk</div>
+                <div class="risk-body">If CMI works as designed, it becomes a tool of pre-interpretive influence at scale. The ethical boundary must be stated plainly: a system built to shape how people interpret events before they form opinions carries inherent risk of cognitive concentration. The safeguards are structural: the lens must be declared (never concealed), the user must be able to disengage at any point, and no CMI implementation should seek to become the sole interpretive source for any user. If an implementation trends toward interpretive monopoly, it has crossed the line from journalism into propaganda, regardless of intent.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- §12 -->
+      <article class="section" id="s12">
+        <div class="section-badge">
+          <div class="section-icon"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg></div>
+          <div class="section-meta">
+            <div class="section-number">§12</div>
+            <h2 class="section-title">CMI Self-Audit: Five Questions for Monday Morning</h2>
+          </div>
+        </div>
+        <div class="section-rule"></div>
+        <div class="section-body">
+          <p>This framework is only useful if it changes how people build. Five questions any media operator can ask, no CMI terminology required.</p>
+
+          <div class="audit-list">
+            <div class="audit-item">
+              <div class="audit-num">1</div>
+              <div>
+                <div class="audit-q"><strong>Can your audience describe your lens in one sentence?</strong></div>
+                <div class="audit-note">If not, the interpretive frame is unclear. Declared lenses grow faster than implied ones.</div>
+              </div>
+            </div>
+            <div class="audit-item">
+              <div class="audit-num">2</div>
+              <div>
+                <div class="audit-q"><strong>Are you present on three or more surfaces, or only your site?</strong></div>
+                <div class="audit-note">If all distribution ends at your homepage, you are asking users to relocate. Meet them where they are.</div>
+              </div>
+            </div>
+            <div class="audit-item">
+              <div class="audit-num">3</div>
+              <div>
+                <div class="audit-q"><strong>Do your user touchpoints generate habitual return, or only spikes?</strong></div>
+                <div class="audit-note">Check D7 and D30 retention. If traffic is event-driven with no baseline, you have reach but not habit.</div>
+              </div>
+            </div>
+            <div class="audit-item">
+              <div class="audit-num">4</div>
+              <div>
+                <div class="audit-q"><strong>Do your metrics measure recurrence, or only reach?</strong></div>
+                <div class="audit-note">Pageviews are not growth signals if users never come back. The metric that matters is return frequency on interpretive content.</div>
+              </div>
+            </div>
+            <div class="audit-item">
+              <div class="audit-num">5</div>
+              <div>
+                <div class="audit-q"><strong>Does your packaging change by audience segment?</strong></div>
+                <div class="audit-note">If every user gets the same format regardless of expertise or context, you are leaving growth on the table.</div>
+              </div>
+            </div>
+          </div>
+
+          <p style="margin-top:1.5rem;font-size:0.95rem;font-style:italic;color:var(--muted);">If three or more answers are no, the bottleneck is probably not content quality. It is user touchpoint architecture.</p>
+        </div>
+      </article>
+
+      <!-- §13 -->
+      <article class="section" id="s13">
+        <div class="section-badge">
+          <div class="section-icon"><svg viewBox="0 0 24 24"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg></div>
+          <div class="section-meta">
+            <div class="section-number">§13</div>
+            <h2 class="section-title">Conclusion</h2>
+          </div>
+        </div>
+        <div class="section-rule"></div>
+        <div class="section-body">
+          <p>ZMOT explained how brands win before purchase. ZMOI explains how media brands win before belief. The Continuous Moment of Intent is not a content strategy. It is a growth architecture built on a simple instruction: frame and compound.</p>
+          <p>The next defensible advantage lies not in content quality or distribution scale alone, but in continuous interpretive presence: showing up, repeatedly and credibly, in the moments where people form meaning. For media organizations navigating declining engagement, fragmented attention, and eroding trust, CMI offers a testable alternative to the volume treadmill.</p>
+          <div class="pull-quote">
+            <p>One-line thesis: Own the narrative frame before the opinion forms, repeatedly, across the user's real daily surfaces, and category leadership follows.</p>
+          </div>
+        </div>
+      </article>
+
+      <!-- Author Note -->
+      <div class="author-note">
+        <div class="author-note-label">Author's Note</div>
+        <p>I have spent over a decade building, scaling, and exiting digital media companies across Latin America. Before founding my own company, I worked in digital marketing agencies, SEO, and ad networks (the operational side of how attention is bought, measured, and converted) and taught Digital Marketing for over 5 years at Digital House for thousands of students regionally.</p>
+        <p>As co-founder of Posta (posta.fm), Argentina's first podcast production company, my partners and I scaled a two-person operation into a regional company producing original IP, investigative journalism content, and thousands of original episodes for Netflix, Uber, Microsoft, HBO, PlayStation, Spotify, and 75+ global brands. We won production, journalism, and advertising awards, were selected for the ICFJ/SembraMedia Velocidad accelerator, and Posta since 2022 is part of the PodX Group.</p>
+        <p>This document is a practitioner's thesis; a formalization of patterns I have observed, built on, and sometimes (more than I would like to) gotten wrong over years of execution. </p>
+      </div>
+
+      <!-- References -->
+      <div class="references">
+        <div class="references-title">References</div>
+        <div class="reference-item">Borah, P. (2011). Conceptual Issues in Framing Theory. <em>J. of Communication</em>, 61(2), 246-263.</div>
+        <div class="reference-item">Cho, C.-H., &amp; Cheon, H. J. (2004). Why Do People Avoid Advertising on the Internet? <em>J. of Advertising</em>, 33(4), 89-97.</div>
+        <div class="reference-item">Entman, R. M. (1993). Framing: Toward Clarification of a Fractured Paradigm. <em>J. of Communication</em>, 43(4), 51-58.</div>
+        <div class="reference-item">Eyal, N. (2014). <em>Hooked: How to Build Habit-Forming Products.</em> Portfolio/Penguin.</div>
+        <div class="reference-item">Fogg, B. J. (2009). A Behavior Model for Persuasive Design. <em>Persuasive Technology</em>, Article 40.</div>
+        <div class="reference-item">Goffman, E. (1974). <em>Frame Analysis.</em> Harvard University Press.</div>
+        <div class="reference-item">Herman, E. S., &amp; Chomsky, N. (1988). <em>Manufacturing Consent.</em> Pantheon Books.</div>
+        <div class="reference-item">Kahneman, D. (2011). <em>Thinking, Fast and Slow.</em> Farrar, Straus and Giroux.</div>
+        <div class="reference-item">Lecinski, J. (2011). <em>Winning the Zero Moment of Truth.</em> Google Inc.</div>
+        <div class="reference-item">Newman, N. et al. (2025). <em>Reuters Institute Digital News Report 2025.</em> University of Oxford.</div>
+        <div class="reference-item">Pew Research Center. (2024). Social Media and News Fact Sheet.</div>
+        <div class="reference-item">Rennie, A., &amp; Protheroe, J. (2020). <em>Decoding Decisions: Making Sense of the Messy Middle.</em> Think with Google.</div>
+        <div class="reference-item">Simon, H. A. (1971). <em>Designing Organizations for an Information-Rich World.</em> Johns Hopkins Press.</div>
+        <div class="reference-item">Wu, T. (2016). <em>The Attention Merchants.</em> Alfred A. Knopf.</div>
+      </div>
+
+      <div class="closing">
+        <div class="closing-ornament-top">✦ &nbsp; ❧ &nbsp; ✦</div>
+        <p>This document is an independent industry thesis. Intended for strategic discussion among media practitioners, investors, editorial leadership, and peer organizations.</p>
+        
+        <div class="closing-ornament-bottom">ZMOI / CMI Framework &nbsp;·&nbsp; v4.2 &nbsp;·&nbsp; Diego Dell'Agostino</div>
+      </div>
+
+    </main>
+
+    <div style="max-width:680px;margin:0 auto;padding:0 4rem 2rem;">
+      <p style="font-family:'Inter',serif;font-size:1rem;line-height:1.75;color:var(--muted);font-style:italic;">The framework is the diagnosis. The essays are the operating manual. Start with <a href="paper-01.html" style="color:var(--accent)">Before You Build</a> if you're early-stage, or <a href="the-last-human-impression.html" style="color:var(--accent)">The Last Human Impression</a> if you want the AI argument.</p>
+    </div>
+
+    <div class="paper-nav">
+      <a href="index.html" class="paper-nav-link">
+        <svg viewBox="0 0 24 24"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+        Back to Home
+      </a>
+      <a href="paper-01.html" class="paper-nav-link">
+        Read the Essay Series
+        <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </a>
+    </div>
+
+    <footer>
+      <div class="footer-left">© 2026 Diego Dell'Agostino</div>
+      <div class="footer-center">❧</div>
+      <div class="footer-right">CMOI Framework &nbsp;·&nbsp; v4.2</div>
+    </footer>
+
+  </div>
+<script src="global.js?v=20260419b"></script>
+</body>
+</html>

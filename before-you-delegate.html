@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-TJF4P0NYFT"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-TJF4P0NYFT');
+  </script>
+  <script>(function(){var t=localStorage.getItem("theme");if(!t)t=window.matchMedia("(prefers-color-scheme:dark)").matches?"dark":"light";document.documentElement.setAttribute("data-theme",t)})()</script>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <meta name="theme-color" content="#e6d5b8">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="Narrative Mechanics">
+  <link rel="apple-touch-icon" href="/og-default.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="On sovereignty, systems, and the trap of apparent alignment. The foundation essay connecting Strategic Debt, Narrative Drift, and Journey Debt.">
+  <meta name="author" content="Diego Dell'Agostino">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://diegodella.ar/before-you-delegate.html">
+  <meta property="og:title" content="Before You Delegate | Narrative Mechanics">
+  <meta property="og:description" content="On sovereignty, systems, and the trap of apparent alignment. The foundation essay connecting Strategic Debt, Narrative Drift, and Journey Debt.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://diegodella.ar/before-you-delegate.html">
+  <meta property="og:site_name" content="Narrative Mechanics">
+  <meta property="og:image" content="https://diegodella.ar/og-default.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Before You Delegate | Narrative Mechanics">
+  <meta name="twitter:description" content="On sovereignty, systems, and the trap of apparent alignment. The foundation essay connecting Strategic Debt, Narrative Drift, and Journey Debt.">
+  <meta name="twitter:image" content="https://diegodella.ar/og-default.png">
+  <title>Before You Delegate | Narrative Mechanics</title>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Before You Delegate",
+    "author": {
+      "@type": "Person",
+      "name": "Diego Dell'Agostino",
+      "url": "https://diegodella.ar/about.html"
+    },
+    "datePublished": "2026-02-20",
+    "description": "On sovereignty, systems, and the trap of apparent alignment. The foundation essay connecting Strategic Debt, Narrative Drift, and Journey Debt.",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Narrative Mechanics",
+      "url": "https://diegodella.ar"
+    },
+    "url": "https://diegodella.ar/before-you-delegate.html",
+    "mainEntityOfPage": "https://diegodella.ar/before-you-delegate.html"
+  }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;700&family=Epilogue:ital,wght@0,400;1,400;0,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="global.css?v=20260418f">
+  <link rel="stylesheet" href="components.css?v=20260418f">
+  <style>
+    /* Hero */
+    .hero { max-width: 900px; margin: 0 auto; padding: 5rem 4rem 4rem; display: grid; grid-template-columns: 1fr auto; gap: 3rem; align-items: start; }
+    .hero-title { font-family: 'Space Grotesk', serif; font-size: clamp(2.8rem, 6vw, 5rem); font-weight: 900; line-height: 1.0; letter-spacing: -0.025em; margin-bottom: 1rem; }
+    .hero-title em { font-style: italic; color: var(--ink); display: block; text-decoration: none; background: linear-gradient(180deg, transparent 54%, color-mix(in srgb, var(--accent) 18%, transparent) 54%); padding: 0 0.08em 0.02em 0; box-decoration-break: clone; -webkit-box-decoration-break: clone; }
+    .hero-subtitle { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 1.1rem; font-style: italic; color: var(--muted); margin-bottom: 2rem; line-height: 1.5; max-width: 440px; }
+    .hero-illustration { width: 280px; flex-shrink: 0; padding-top: 1rem; opacity: 0.85; }
+
+    /* Content */
+    .content { max-width: 720px; margin: 0 auto; padding: 0 2.5rem 8rem; }
+
+    /* Section reveal */
+    .section { margin-bottom: 4.5rem; opacity: 0; transform: translateY(28px); animation: fadeUp 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards; }
+    .section:nth-child(1) { animation-delay: 0.1s; }
+    .section:nth-child(2) { animation-delay: 0.25s; }
+    .section:nth-child(3) { animation-delay: 0.4s; }
+    .section:nth-child(4) { animation-delay: 0.55s; }
+    @keyframes fadeUp { to { opacity: 1; transform: translateY(0); } }
+
+    /* Concept callout */
+    .concept { margin: 2rem 0; padding: 1.25rem 1.5rem; background: var(--highlight); border-top: 2px solid var(--accent); }
+    .concept-label { font-family: 'JetBrains Mono', monospace; font-size: 0.48rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--accent); margin-bottom: 0.5rem; }
+    .concept-name { font-family: 'Space Grotesk', serif; font-size: 1.15rem; font-weight: 700; margin-bottom: 0.5rem; }
+    .concept-def { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 0.97rem; line-height: 1.75; color: var(--ink); }
+    .concept-def::first-letter { float: none !important; }
+
+    /* Speed grid */
+    .speed-grid { margin: 2.5rem 0; border: 1px solid var(--rule); overflow: hidden; }
+    .speed-grid-header { background: var(--deep); color: var(--paper); padding: 0.9rem 1.25rem; display: flex; align-items: center; justify-content: space-between; }
+    .speed-grid-header-title { font-family: 'JetBrains Mono', monospace; font-size: 0.52rem; letter-spacing: 0.2em; text-transform: uppercase; }
+    .speed-grid-header-sub { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 0.85rem; font-style: italic; color: var(--rule); }
+    .speed-row { display: grid; grid-template-columns: 110px 1fr 1fr; border-bottom: 1px solid var(--rule); }
+    .speed-row:last-child { border-bottom: none; }
+    .speed-row-header { display: grid; grid-template-columns: 110px 1fr 1fr; border-bottom: 2px solid var(--ink); background: var(--highlight); }
+    .speed-cell { padding: 0.9rem 1rem; border-right: 1px solid var(--rule); font-family: 'Plus Jakarta Sans', sans-serif; font-size: 0.9rem; line-height: 1.6; }
+    .speed-cell:last-child { border-right: none; }
+    .speed-cell.label { font-family: 'JetBrains Mono', monospace; font-size: 0.48rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent); display: flex; align-items: center; background: var(--highlight); }
+    .speed-cell.head { font-family: 'JetBrains Mono', monospace; font-size: 0.46rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--muted); display: flex; align-items: center; padding: 0.6rem 1rem; }
+    [data-theme="dark"] .speed-grid-header { background: var(--deep); color: var(--paper); }
+
+    /* Three questions block */
+    .questions-block { margin: 2.5rem 0; border: 1px solid var(--rule); overflow: hidden; }
+    .questions-header { background: var(--deep); color: var(--paper); padding: 0.9rem 1.25rem; }
+    .questions-header span { font-family: 'JetBrains Mono', monospace; font-size: 0.52rem; letter-spacing: 0.2em; text-transform: uppercase; }
+    .question-row { display: grid; grid-template-columns: 48px 1fr; border-bottom: 1px solid var(--rule); }
+    .question-row:last-child { border-bottom: none; }
+    .question-num { padding: 1rem; background: var(--highlight); border-right: 1px solid var(--rule); display: flex; align-items: flex-start; justify-content: center; padding-top: 1.1rem; }
+    .question-num span { font-family: 'Space Grotesk', serif; font-size: 1.15rem; font-weight: 900; color: var(--accent); }
+    .question-text { padding: 1rem 1.25rem; }
+    .question-text strong { font-family: 'JetBrains Mono', monospace; font-size: 0.5rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--accent); display: block; margin-bottom: 0.35rem; }
+    .question-text p { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 0.95rem; line-height: 1.7; color: var(--ink); margin: 0; }
+    [data-theme="dark"] .questions-header { background: var(--deep); color: var(--paper); }
+
+    @media (max-width: 768px) {
+      .hero { grid-template-columns: 1fr; padding: 3rem 1.5rem 2rem; }
+      .hero-illustration { display: none; }
+      .content { padding: 0 1.5rem 5rem; }
+      .pull-quote { margin: 2rem 0; }
+      .paper-nav { padding: 0 1.5rem 3rem; }
+      footer { padding: 1.5rem; flex-direction: column; gap: 0.5rem; text-align: center; }
+      .speed-row, .speed-row-header { grid-template-columns: 90px 1fr 1fr; }
+    }
+  </style>
+</head>
+<body class="series-foundation">
+  <div id="pbar"></div>
+  <div id="pbar-label"></div>
+  <div class="bg-pattern"></div>
+  <div class="bg-grain"></div>
+  <div class="page-wrap">
+
+      <!-- Top Bar -->
+  <div class="top-bar">
+    <span>Buenos Aires &middot; Since 2008</span>
+    <span>18 Essays &middot; 3 Frameworks &middot; ~289 min of reading &middot; <a href="about.html">About the author</a></span>
+  </div>
+
+  <!-- Nav -->
+  <nav class="nav">
+      <div class="nav-inner">
+        <a href="index.html" class="nav-brand">Narrative<em>Mechanics</em></a>
+        <button class="nav-btn nav-toggle" aria-label="Menu" aria-expanded="false" aria-controls="navLinks" id="navToggle">
+          <svg viewBox="0 0 24 24"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg>
+        </button>
+        <div class="nav-links" id="navLinks">
+          <a href="index.html" class="nav-link">Home</a>
+          <div class="nav-sep"></div>
+          <a href="archive.html" class="nav-link">Start Here</a>
+          <a href="frameworks.html" class="nav-link">Frameworks</a>
+          <a href="series.html" class="nav-link">Series</a>
+          <a href="essays.html" class="nav-link">Essays</a>
+          <a href="notes.html" class="nav-link">Notes</a>
+          <div class="nav-sep"></div>
+          <a href="about.html" class="nav-link">About</a>
+        </div>
+        <div class="nav-right">
+          <button class="nav-btn" aria-label="Toggle theme" id="themeToggle">
+            <svg class="icon-moon" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+            <svg class="icon-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <section class="hero">
+      <div class="hero-left">
+        <div class="hero-kicker">Foundation &nbsp;/&nbsp; Before the Series</div>
+        <h1 class="hero-title">Before You<br><em>Delegate</em></h1>
+        <p class="hero-subtitle">On sovereignty, systems, and the trap of apparent alignment.</p>
+        <div class="hero-byline">
+          <div class="hero-byline-dot"></div>
+          <div class="hero-byline-text">Diego Dell'Agostino</div>
+        </div>
+      </div>
+      <div class="hero-illustration">
+        <svg class="hero-svg" viewBox="0 0 160 200" xmlns="http://www.w3.org/2000/svg">
+        <style>
+          @keyframes hand-off{from{transform:translateX(-15px);opacity:0}to{transform:translateX(0);opacity:1}}
+          @keyframes receive{from{transform:translateX(15px);opacity:0}to{transform:translateX(0);opacity:1}}
+          @keyframes pass-obj{0%{cx:55}100%{cx:105}}
+          @keyframes fade-in{from{opacity:0}to{opacity:1}}
+          @keyframes pulse-warn{0%,100%{opacity:0.8}50%{opacity:0.3}}
+        </style>
+        <!-- Source figure (left) -->
+        <circle cx="45" cy="70" r="10" stroke="var(--accent)" stroke-width="1.5" fill="none"
+                style="animation:hand-off 0.8s ease-out forwards"/>
+        <line x1="45" y1="80" x2="45" y2="110" stroke="var(--accent)" stroke-width="1.5"
+              style="animation:hand-off 0.8s ease-out forwards"/>
+        <line x1="45" y1="90" x2="30" y2="100" stroke="var(--accent)" stroke-width="1.5"
+              style="animation:hand-off 0.8s ease-out forwards"/>
+        <line x1="45" y1="90" x2="60" y2="100" stroke="var(--accent)" stroke-width="1.5"
+              style="animation:hand-off 0.8s ease-out forwards"/>
+        <!-- Target figure (right) -->
+        <circle cx="115" cy="70" r="10" stroke="var(--muted)" stroke-width="1.5" fill="none"
+                style="animation:receive 0.8s 0.3s ease-out forwards;opacity:0"/>
+        <line x1="115" y1="80" x2="115" y2="110" stroke="var(--muted)" stroke-width="1.5"
+              style="animation:receive 0.8s 0.3s ease-out forwards;opacity:0"/>
+        <line x1="115" y1="90" x2="100" y2="100" stroke="var(--muted)" stroke-width="1.5"
+              style="animation:receive 0.8s 0.3s ease-out forwards;opacity:0"/>
+        <line x1="115" y1="90" x2="130" y2="100" stroke="var(--muted)" stroke-width="1.5"
+              style="animation:receive 0.8s 0.3s ease-out forwards;opacity:0"/>
+        <!-- Passing object -->
+        <circle r="5" cy="95" fill="var(--accent)" opacity="0"
+                style="animation:pass-obj 1.2s 1s ease-in-out forwards, fade-in 0.3s 1s forwards"/>
+        <!-- Transfer arrow -->
+        <line x1="60" y1="95" x2="100" y2="95" stroke="var(--accent)" stroke-width="1" stroke-dasharray="4 2"
+              opacity="0" style="animation:fade-in 0.5s 0.8s forwards"/>
+        <polyline points="95,90 100,95 95,100" stroke="var(--accent)" stroke-width="1" fill="none"
+                  opacity="0" style="animation:fade-in 0.3s 0.8s forwards"/>
+        <!-- Warning: what gets lost -->
+        <text x="80" y="140" font-family="monospace" font-size="6" fill="var(--muted)" text-anchor="middle" letter-spacing="1"
+              opacity="0" style="animation:fade-in 0.5s 2s forwards">CONTEXT</text>
+        <line x1="55" y1="143" x2="105" y2="143" stroke="var(--accent)" stroke-width="1.5"
+              opacity="0" style="animation:pulse-warn 2s 2.5s ease-in-out infinite, fade-in 0.3s 2.5s forwards"/>
+        <!-- Label -->
+        <text x="80" y="185" font-family="monospace" font-size="6" fill="var(--accent)" text-anchor="middle" letter-spacing="2"
+              opacity="0" style="animation:fade-in 0.5s 2.8s forwards">DELEGATE</text>
+      </svg>
+      </div>
+    </section>
+
+        <div class="chapter-divider">
+      <div class="chapter-divider-line"></div>
+    </div>
+
+    <div class="content">
+
+      <!-- SECTION I -->
+      <div class="section">
+        <div class="section-badge">
+          <div class="section-icon">
+            <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <div class="section-meta">
+            <div class="section-number">Section I &nbsp;/&nbsp; Four</div>
+            <div class="section-title">The Debt That Has No Line Item</div>
+          </div>
+        </div>
+        <div class="section-rule"></div>
+        <div class="section-body">
+          <p>Nobody delegates to something they believe is working against them. That is not how it happens. It happens the other way: you delegate to something that is clearly working for you, and then, gradually, the alignment shifts. The system develops its own priorities. You keep feeding it because it still produces results. And one day you look up and realize that something you built is no longer entirely yours to direct.</p>
+
+          <div class="margin-note">The offer was always real. So was the extraction. Both can be true at the same time.</div>
+
+          <p>It is worth being precise about why this happens, because the answer changes what you do about it. The systems that eventually cost you your sovereignty were not designed with your objectives in mind. They were designed to capture the maximum percentage of the value their users create. The initial alignment was real. It was also calculated. You were offered reach, efficiency, yield, distribution, because those offers created dependency before the cost of that dependency was visible. The sequence is not accidental. Useful first. Captive second. That is the architecture of every platform, institution, and algorithmic system that has ever extracted value from the builders who depended on it.</p>
+
+          <p>This is the structure of every significant loss of control I have seen in organizations, products, and careers. Not a sudden seizure. A slow transfer made rational at every step by the genuine value the system was providing. The algorithm that distributes your content starts shaping what you produce. The platform that hosts your audience becomes the relationship. In each case, the system was genuinely useful when you entered it. In each case, the moment you needed it to serve your objectives above its own, it could not.</p>
+
+          <p>I call the accumulated cost of that dynamic <strong>Sovereignty Debt</strong>. It is the debt that builds when you repeatedly delegate decisions to systems whose objectives were never yours to begin with. It does not appear in any balance sheet. It does not trigger an alert. It shows up as reduced optionality: the gradual discovery that choices you believed were yours to make have been quietly foreclosed by the architecture you depend on.</p>
+
+          <div class="concept">
+            <div class="concept-label">Core Concept</div>
+            <div class="concept-name">Sovereignty Debt</div>
+            <div class="concept-def">The accumulated cost of delegating decisions to systems whose objectives diverge from yours over time. Not a single transaction but a compounding dynamic. Each delegation that bypasses your objectives adds to the balance. The debt is invisible until the moment you need to act from your own priorities and discover the architecture around you will not support it.</div>
+          </div>
+
+          <p>The mechanism is the same regardless of the domain. You enter a system because it is efficient. The system learns your patterns. The system optimizes against them, toward its own function. You optimize your behavior toward what the system rewards. The distance between what you originally wanted and what the system produces on your behalf grows slowly, without a moment you can point to as the turning point.</p>
+
+          <div class="pull-quote">
+            <p>The trap is not that the system lies to you. The trap is that it works well enough, for long enough, that you never develop the capacity to operate without it.</p>
+          </div>
+
+          <p>Before anything else in this series, before you build or fit or scale or map, there is a prior question that most builders never ask explicitly: what are you delegating, to what, and what does that system owe you in return? The answer to that question determines the foundation on which everything else sits. If the foundation is a series of undocumented surrenders, no amount of strategic clarity on top of it will hold.</p>
+        </div>
+      </div>
+
+      <!-- SECTION II -->
+      <div class="section">
+        <div class="section-badge">
+          <div class="section-icon">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          </div>
+          <div class="section-meta">
+            <div class="section-number">Section II &nbsp;/&nbsp; Four</div>
+            <div class="section-title">Four Speeds of Misalignment</div>
+          </div>
+        </div>
+        <div class="section-rule"></div>
+        <div class="section-body">
+          <p>Sovereignty Debt is not one problem. It is the same problem operating at different speeds, across different domains, with different lag times between the moment of delegation and the moment the cost becomes legible. The reason most builders do not see it coming is that they are watching one domain while the debt accumulates in another.</p>
+
+          <p>There are four speeds at which the misalignment between your objectives and a system's objectives reveals itself. Knowing which speed you are operating at is the first step to knowing what kind of attention the delegation requires.</p>
+
+          <div class="speed-grid">
+            <div class="speed-grid-header">
+              <span class="speed-grid-header-title">Misalignment by Speed</span>
+              <span class="speed-grid-header-sub">How long before the cost becomes visible</span>
+            </div>
+            <div class="speed-row-header" style="grid-template-columns: 100px 1fr 1fr 1fr;">
+              <div class="speed-cell head">Speed</div>
+              <div class="speed-cell head">What you delegated</div>
+              <div class="speed-cell head">Symptom when it surfaces</div>
+              <div class="speed-cell head">Cost of recovery</div>
+            </div>
+            <div class="speed-row" style="grid-template-columns: 100px 1fr 1fr 1fr;">
+              <div class="speed-cell label">Months</div>
+              <div class="speed-cell">Curation of your attention and information environment to recommendation systems.</div>
+              <div class="speed-cell">Strong opinions on things you never investigated directly. A worldview shaped by what the system learned to show you, not what you chose to explore.</div>
+              <div class="speed-cell">Low. Behavioral change, deliberate information diet. No structural dependency to unwind.</div>
+            </div>
+            <div class="speed-row" style="grid-template-columns: 100px 1fr 1fr 1fr;">
+              <div class="speed-cell label">Years</div>
+              <div class="speed-cell">Distribution and interpretation of your voice to algorithmic platforms.</div>
+              <div class="speed-cell">Large audience with shallow roots. Authority that does not hold under pressure. Voice that is recognizable but not entirely yours.</div>
+              <div class="speed-cell">Medium. Requires parallel direct channel construction over 12 to 24 months. Audience built on platform does not automatically migrate.</div>
+            </div>
+            <div class="speed-row" style="grid-template-columns: 100px 1fr 1fr 1fr;">
+              <div class="speed-cell label">Years</div>
+              <div class="speed-cell">The relationship with your user to a distribution platform.</div>
+              <div class="speed-cell">User loyalty to the platform, not to you. When the platform changes the terms, you discover you do not own the relationship you built.</div>
+              <div class="speed-cell">High. Requires rebuilding direct relationship infrastructure from near zero. Most of what was built belongs to the platform.</div>
+            </div>
+            <div class="speed-row" style="grid-template-columns: 100px 1fr 1fr 1fr;">
+              <div class="speed-cell label">Decades</div>
+              <div class="speed-cell">Category definition and competitive positioning to the dominant narrative of your industry.</div>
+              <div class="speed-cell">The market understands what you do in terms set by someone else. You optimized for legibility inside a frame you did not build and cannot exit without starting over.</div>
+              <div class="speed-cell">Very high. Category reframing requires sustained narrative investment and willingness to be misunderstood during the transition. Most organizations never attempt it.</div>
+            </div>
+          </div>
+
+          <p>What the four rows share is more important than what distinguishes them. In every case, the system offered something genuine at the point of entry. Reach. Convenience. Yield. Distribution. The value was real. The cost was deferred. And the cost, when it arrived, was not billed as a line item. It arrived as a constraint on what you could do, a reduction in the options you believed were yours.</p>
+
+          <div class="margin-note">Every system that builds Sovereignty Debt does so by being genuinely useful first. That is not a feature. That is the mechanism.</div>
+
+          <p>The speed matters for a specific reason: it determines how much feedback you can get before the debt becomes hard to reverse. At months, you can still notice the drift and correct. At years, correction requires deliberate effort and probably some loss. At decades, the options available when you finally see the cost are fewer and more expensive than the options that were available when you entered the system.</p>
+
+          <p>There is a fifth speed that was not in the original four and deserves its own note. Autonomous systems that act on your behalf in real time, agents that conduct research, make recommendations, and in some cases execute decisions without your real-time involvement, operate at a speed that has no historical precedent. The misalignment between your objectives and a system's function objective can compound faster than you can observe it. The lag between delegation and consequence collapses. This is not a theoretical future problem. It is a current one for anyone already using agentic tools to manage significant decisions.</p>
+        </div>
+      </div>
+
+      <!-- SECTION III -->
+      <div class="section">
+        <div class="section-badge">
+          <div class="section-icon">
+            <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+          </div>
+          <div class="section-meta">
+            <div class="section-number">Section III &nbsp;/&nbsp; Four</div>
+            <div class="section-title">Contract or Surrender</div>
+          </div>
+        </div>
+        <div class="section-rule"></div>
+        <div class="section-body">
+          <p>Not all delegation is Sovereignty Debt. Some delegation is just efficiency. The question is not whether to delegate. The question is what kind of delegation you are entering.</p>
+
+          <p>There are two kinds. A contract and a surrender. They can look identical from the outside, especially at the beginning. The difference is not in the form. It is in the structure of the relationship over time.</p>
+
+          <div class="concept">
+            <div class="concept-label">Distinction</div>
+            <div class="concept-name">Contract vs. Surrender</div>
+            <div class="concept-def">A contract has terms, duration, and a legible exit. You know what the system gets in exchange for what it provides. You can describe the objectives of the system as clearly as you can describe your own. Leaving costs something, but the cost is knowable. A surrender has none of that. It occurs through accumulation, not agreement. The terms are implicit and shift over time. Leaving costs more than entering, and the cost increases the longer you stay. Most builders enter contracts and drift into surrenders without noticing the transition.</div>
+          </div>
+
+          <p>The transition from contract to surrender does not happen at a single moment. It happens through a series of individually rational decisions. You optimize for what the system rewards because it produces results. You build deeper integration because integration reduces friction. You structure your outputs around the system's preferences because that is what works. Each step makes sense. Together they create a state where the cost of exit is no longer comparable to the cost of entry. That asymmetry is the definition of surrender.</p>
+
+          <div class="pull-quote">
+            <p>You did not lose your sovereignty in a single decision. You traded it incrementally, for efficiency, over a long enough time that the exchange became invisible.</p>
+          </div>
+
+          <p>Three signals indicate that a contract has become a surrender. The first: you cannot describe the objectives of the system you depend on with the same clarity you can describe your own. If you cannot say what the system is optimizing for, you do not know what it is doing with the control you gave it. The second: the cost of exit has grown substantially since you entered. This is the compounding mechanism in action. The deeper the integration, the higher the exit cost, the more rational it becomes to stay, the deeper the integration grows. The third: the system has more information about your asset, your audience, your patterns, your dependencies, than you do. Information asymmetry is the foundation of leverage. When the system knows more about what you built than you do, it holds the leverage.</p>
+
+          <p>None of these signals require bad faith from the system. The algorithm is not malicious. The platform is not plotting against you. They are simply optimizing for their function objectives, which are not yours, using the access and information you provided them. The problem is structural, not moral. Which means it cannot be solved by finding a more trustworthy system. It can only be solved by being precise about what you are delegating and what you are keeping.</p>
+
+          <p>There is a version of this problem that is harder to see because it does not involve an external system at all. Sovereignty Debt accumulates internally every time an organization's past decisions make it structurally difficult to decide differently today. A team that has shipped a product a certain way for three years has delegated its future optionality to the inertia of that history. A company that built its entire go-to-market around a single channel has surrendered its ability to respond when that channel changes. Nobody made a single bad decision. The surrender happened incrementally, through the same mechanism: individually rational choices that collectively foreclosed alternatives. The external and internal versions are the same problem. One has an algorithm with a dashboard. The other just has a calendar full of decisions that all pointed the same direction.</p>
+        </div>
+      </div>
+
+      <!-- SECTION IV -->
+      <div class="section">
+        <div class="section-badge">
+          <div class="section-icon">
+            <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </div>
+          <div class="section-meta">
+            <div class="section-number">Section IV &nbsp;/&nbsp; Four</div>
+            <div class="section-title">Before You Delegate</div>
+          </div>
+        </div>
+        <div class="section-rule"></div>
+        <div class="section-body">
+          <p>The prescription is not to stop delegating. Delegation is how anything gets built at scale. The prescription is more precise: delegate functions, not sovereignty. A function is something the system does more efficiently than you can. Sovereignty is your capacity to act from your own objectives when they diverge from the system's, at a cost that does not destroy what you built in the exercise of that capacity. That last clause matters. Optionality that costs everything to exercise is not optionality. It is the illusion of a door that cannot be opened without burning the building down. Real sovereignty requires maintaining enough direct relationship, direct data, and direct channel with the people you serve that you can act independently when you need to. Building your own data layer is not paranoia. It is the structural prerequisite for everything else in this series.</p>
+
+          <p>Every paper in this series is a case study in what happens when that distinction is not made in a specific domain. <a href="paper-01.html" style="color:var(--accent);text-decoration:underline;text-decoration-color:var(--rule);text-underline-offset:3px">Strategic Debt</a> is what happens when you delegate the interpretation of your product's value to a market you never taught to read it. <a href="paper-04.html" style="color:var(--accent);text-decoration:underline;text-decoration-color:var(--rule);text-underline-offset:3px">Narrative Drift</a> is what happens when you delegate the coherence of your story to the sum of individual team decisions. <a href="paper-06.html" style="color:var(--accent);text-decoration:underline;text-decoration-color:var(--rule);text-underline-offset:3px">Journey Debt</a> is what happens when you delegate the distribution of your voice to algorithmic systems that optimize for their own engagement metrics. In each case, the delegation was rational. The cost was the gradual erosion of the capacity to act from your own priorities.</p>
+
+          <p>Before any significant delegation, three questions. Not abstract ones. Questions you can answer in a room with the information available to you today.</p>
+
+          <div class="questions-block">
+            <div class="questions-header"><span>Three Questions Before You Delegate</span></div>
+            <div class="question-row">
+              <div class="question-num"><span>1</span></div>
+              <div class="question-text">
+                <strong>What is this system optimizing for?</strong>
+                <p>Not what it offers you. What it optimizes for. These are different things. A platform offers reach. It optimizes for time on platform and advertiser revenue. An institution offers yield. It optimizes for its own solvency and liquidity. A recommendation system offers relevance. It optimizes for engagement. If you cannot answer this question clearly, you do not know what you are entering. Find out before you build dependency on it.</p>
+              </div>
+            </div>
+            <div class="question-row">
+              <div class="question-num"><span>2</span></div>
+              <div class="question-text">
+                <strong>What does exit cost today, and what will it cost in three years?</strong>
+                <p>Exit cost is the clearest indicator of whether you are in a contract or a surrender. Calculate it now, before integration deepens. A platform that costs six months of transition work to exit today will cost two years in three years if the integration compounds. If you cannot calculate the exit cost, or if calculating it is uncomfortable, that discomfort is the signal. It means the dependency is already deeper than you consciously acknowledged.</p>
+              </div>
+            </div>
+            <div class="question-row">
+              <div class="question-num"><span>3</span></div>
+              <div class="question-text">
+                <strong>Who holds the information asymmetry?</strong>
+                <p>Map what the system knows about your asset that you do not. Your audience's behavior on its platform. Your content's performance across its distribution. Your users' engagement patterns inside its interface. Wherever the system has substantially more information than you do about something you built, it has leverage you did not explicitly grant. That asymmetry grows over time unless you actively work to close it. Building your own data layer, your own direct channels, your own unmediated relationship with the people you serve, is not paranoia. It is the minimum condition for maintaining sovereignty over what you build.</p>
+              </div>
+            </div>
+          </div>
+
+          <p>These questions do not prevent you from using platforms, algorithms, or institutions. They prevent you from confusing access with ownership. The builders who navigate the next decade well will not be the ones who avoided delegation. They will be the ones who knew precisely what they were delegating, maintained the capacity to act from their own objectives when it mattered, and built enough direct relationship with the people they serve that no single system held the leverage over everything they had built.</p>
+
+          <p>Sovereignty is not independence. It is optionality. The ability to choose differently when the system stops serving you. Everything in this series is about preserving that optionality, in the domain of narrative, of product, of distribution, of audience. This paper is about why that preservation requires a prior commitment, made before the first significant delegation, to knowing the difference between a function you are outsourcing and a decision you are giving away.</p>
+        </div>
+      </div>
+
+      <div class="closing">
+        <div class="closing-ornament-top">✦ &nbsp; ❧ &nbsp; ✦</div>
+        <p>The systems that will cost you your sovereignty were designed to be useful first. They were also designed to make exit expensive before you noticed it was happening.</p>
+        <p>Useful is not the same as aligned. Know the difference before you build dependency on it.</p>
+        <div class="closing-ornament-bottom">Foundation Paper &nbsp;·&nbsp; Narrative-First Series</div>
+      </div>
+
+    </div>
+
+    <div class="paper-nav">
+      <a href="paper-01.html" class="paper-nav-link">
+        Before You Build
+        <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg>
+      </a>
+    </div>
+
+    <footer>
+      <div class="footer-left">© 2026 Diego Dell'Agostino</div>
+      <div class="footer-center">❧</div>
+      <div class="footer-right">Foundation &nbsp;·&nbsp; Narrative-First</div>
+    </footer>
+
+  </div>
+<script src="global.js?v=20260419b"></script>
+</body>
+</html>

@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-TJF4P0NYFT"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-TJF4P0NYFT');
+  </script>
+  <script>(function(){var t=localStorage.getItem("theme");if(!t)t=window.matchMedia("(prefers-color-scheme:dark)").matches?"dark":"light";document.documentElement.setAttribute("data-theme",t)})()</script>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <meta name="theme-color" content="#e6d5b8">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="Narrative Mechanics">
+  <link rel="apple-touch-icon" href="/og-default.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Last night, while I slept, a system the size of a deck of cards read 42 articles, made three trading decisions, and executed two of them.">
+  <meta name="author" content="Diego Dell'Agostino">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://diegodella.ar/already-decided.html">
+  <meta property="og:title" content="Already Decided">
+  <meta property="og:description" content="Last night, while I slept, a system the size of a deck of cards read 42 articles, made three trading decisions, and executed two of them.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://diegodella.ar/already-decided.html">
+  <meta property="og:site_name" content="Narrative Mechanics">
+  <meta property="og:image" content="https://diegodella.ar/og-default.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:locale" content="en_US">
+  <meta property="article:author" content="Diego Dell'Agostino">
+  <meta property="article:published_time" content="2026-03-07">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Already Decided">
+  <meta name="twitter:description" content="Last night, while I slept, a system the size of a deck of cards read 42 articles, made three trading decisions, and executed two of them.">
+  <meta name="twitter:image" content="https://diegodella.ar/og-default.png">
+  <title>Already Decided — Diego Dell'Agostino</title>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Already Decided",
+    "description": "Last night, while I slept, a system the size of a deck of cards read 42 articles, made three trading decisions, and executed two of them.",
+    "author": {
+      "@type": "Person",
+      "name": "Diego Dell'Agostino",
+      "url": "https://diegodella.ar/about.html"
+    },
+    "datePublished": "2026-03-07",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Narrative Mechanics",
+      "url": "https://diegodella.ar"
+    },
+    "url": "https://diegodella.ar/already-decided.html",
+    "mainEntityOfPage": "https://diegodella.ar/already-decided.html"
+  }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;700&family=Epilogue:ital,wght@0,400;1,400;0,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="global.css?v=20260418f">
+  <link rel="stylesheet" href="components.css?v=20260418f">
+  <style>
+    ::selection { background: var(--accent); color: var(--paper); }
+
+    /* Hero */
+    .hero { max-width: 900px; margin: 0 auto; padding: 5rem 4rem 4rem; }
+    .hero-title { font-family: 'Space Grotesk', serif; font-size: clamp(2.8rem, 6vw, 5rem); font-weight: 900; line-height: 1.0; letter-spacing: -0.025em; margin-bottom: 1rem; }
+    .hero-title em { font-style: italic; color: var(--ink); display: block; text-decoration: none; background: linear-gradient(180deg, transparent 54%, color-mix(in srgb, var(--accent) 18%, transparent) 54%); padding: 0 0.08em 0.02em 0; box-decoration-break: clone; -webkit-box-decoration-break: clone; }
+    .hero-subtitle { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 1.1rem; font-style: italic; color: var(--muted); margin-bottom: 2rem; line-height: 1.5; max-width: 480px; }
+
+    /* Content */
+    .content { max-width: 720px; margin: 0 auto; padding: 0 2.5rem 8rem; }
+
+    .essay-section { margin-bottom: 4.5rem; opacity: 0; transform: translateY(24px); animation: fadeUp 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards; }
+    .essay-section:nth-child(1) { animation-delay: 0.05s; }
+    .essay-section:nth-child(2) { animation-delay: 0.12s; }
+    .essay-section:nth-child(3) { animation-delay: 0.19s; }
+    .essay-section:nth-child(4) { animation-delay: 0.26s; }
+    .essay-section:nth-child(5) { animation-delay: 0.33s; }
+    @keyframes fadeUp { to { opacity: 1; transform: translateY(0); } }
+
+    .essay-section p { margin-bottom: 1.5rem; font-size: 1.05rem; line-height: 1.92; text-align: justify; hyphens: auto; }
+    .essay-section p:last-child { margin-bottom: 0; }
+
+    .essay-section.intro p:first-of-type::first-letter {
+      font-family: 'Space Grotesk', serif; font-size: 4.2rem; font-weight: 900;
+      float: left; line-height: 0.72; margin-right: 0.07em; margin-top: 0.12em; color: var(--accent);
+    }
+
+    .share-btn { display: inline-flex; align-items: center; gap: 0.5rem; font-family: 'JetBrains Mono', monospace; font-size: 0.5rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--muted); background: none; border: 1px solid var(--rule); padding: 0.5em 1em; cursor: pointer; transition: all 0.15s; margin-top: 1rem; position: relative; z-index: 1; }
+    .share-btn:hover { color: var(--accent); border-color: var(--accent); }
+    .share-btn.copied { color: var(--accent); border-color: var(--accent); }
+
+    .paper-nav { max-width: 680px; margin: 0 auto; padding: 0 2.5rem 5rem; display: flex; justify-content: space-between; }
+    .paper-nav a { display: flex; align-items: center; gap: 0.75rem; text-decoration: none; color: var(--ink); font-family: 'JetBrains Mono', monospace; font-size: 0.55rem; letter-spacing: 0.15em; text-transform: uppercase; transition: color 0.2s; }
+    .paper-nav a:hover { color: var(--accent); }
+    .paper-nav a svg { width: 16px; height: 16px; stroke: currentColor; fill: none; stroke-width: 1.5; }
+
+    @media (max-width: 768px) {
+      .hero { padding: 3rem 1.5rem 2rem; }
+      .content { padding: 0 1.5rem 5rem; }
+      .paper-nav { padding: 0 1.5rem 3rem; }
+    }
+
+    /* Hero SVG */
+    .hero { display: grid; grid-template-columns: 1fr 280px; gap: 2rem; align-items: center; }
+    .hero-svg { width: 100%; height: auto; }
+    @media (max-width: 768px) {
+      .hero { grid-template-columns: 1fr; }
+      .hero-svg { max-width: 200px; margin: 0 auto; order: -1; }
+    }
+  </style>
+</head>
+<body>
+  <div id="pbar"></div>
+  <div id="pbar-label"></div>
+  <div class="bg-pattern"></div>
+  <div class="bg-grain"></div>
+
+  <div class="page-wrap">
+
+      <!-- Top Bar -->
+  <div class="top-bar">
+    <span>Buenos Aires &middot; Since 2008</span>
+    <span>18 Essays &middot; 3 Frameworks &middot; ~289 min of reading &middot; <a href="about.html">About the author</a></span>
+  </div>
+
+  <!-- Nav -->
+  <nav class="nav">
+      <div class="nav-inner">
+        <a href="index.html" class="nav-brand">Narrative<em>Mechanics</em></a>
+        <button class="nav-btn nav-toggle" aria-label="Menu" aria-expanded="false" aria-controls="navLinks" id="navToggle">
+          <svg viewBox="0 0 24 24"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg>
+        </button>
+        <div class="nav-links" id="navLinks">
+          <a href="index.html" class="nav-link">Home</a>
+          <div class="nav-sep"></div>
+          <a href="archive.html" class="nav-link">Start Here</a>
+          <a href="frameworks.html" class="nav-link">Frameworks</a>
+          <a href="series.html" class="nav-link">Series</a>
+          <a href="essays.html" class="nav-link">Essays</a>
+          <a href="notes.html" class="nav-link">Notes</a>
+          <div class="nav-sep"></div>
+          <a href="about.html" class="nav-link">About</a>
+        </div>
+        <div class="nav-right">
+          <button class="nav-btn" aria-label="Toggle theme" id="themeToggle">
+            <svg class="icon-moon" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+            <svg class="icon-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <header class="hero"><div class="hero-main">
+      <div class="hero-kicker">Essay &nbsp;&middot;&nbsp; March 2026</div>
+      <h1 class="hero-title">Already<em>Decided</em></h1>
+      <p class="hero-subtitle">Last night, while I slept, a system the size of a deck of cards read 42 articles, made three trading decisions, and executed two of them.</p>
+      <div class="hero-byline"><div class="hero-byline-dot"></div><span class="hero-byline-text">Diego Dell'Agostino &nbsp;&middot;&nbsp; Buenos Aires</span></div>
+    </div>
+    <svg class="hero-svg" viewBox="0 0 160 200" xmlns="http://www.w3.org/2000/svg">
+      <style>
+        @keyframes adPulse{0%,100%{opacity:0.15}50%{opacity:0.6}}
+        @keyframes adNodeOn{from{opacity:0;r:2}to{opacity:1;r:3.5}}
+        @keyframes adCheck{from{stroke-dashoffset:12}to{stroke-dashoffset:0}}
+        @keyframes adLine{from{stroke-dashoffset:80}to{stroke-dashoffset:0}}
+        @keyframes adFade{from{opacity:0}to{opacity:1}}
+      </style>
+      <!-- Pi device -->
+      <rect x="55" y="70" width="50" height="60" rx="4" fill="none" stroke="var(--ink)" stroke-width="1.2"/>
+      <rect x="62" y="78" width="36" height="36" rx="2" fill="none" stroke="var(--rule)" stroke-width="0.6"/>
+      <circle cx="80" cy="122" r="2" fill="var(--accent)" style="animation:adPulse 2s ease-in-out infinite"/>
+      <!-- Radiating decision lines -->
+      <line x1="55" y1="85" x2="20" y2="50" stroke="var(--rule)" stroke-width="0.7" stroke-dasharray="3 2" style="animation:adLine 1.5s 0.3s ease-out forwards" stroke-dashoffset="80"/>
+      <line x1="105" y1="85" x2="140" y2="50" stroke="var(--rule)" stroke-width="0.7" stroke-dasharray="3 2" style="animation:adLine 1.5s 0.5s ease-out forwards" stroke-dashoffset="80"/>
+      <line x1="80" y1="70" x2="80" y2="30" stroke="var(--rule)" stroke-width="0.7" stroke-dasharray="3 2" style="animation:adLine 1.5s 0.7s ease-out forwards" stroke-dashoffset="80"/>
+      <line x1="55" y1="115" x2="20" y2="150" stroke="var(--rule)" stroke-width="0.7" stroke-dasharray="3 2" style="animation:adLine 1.5s 0.9s ease-out forwards" stroke-dashoffset="80"/>
+      <line x1="105" y1="115" x2="140" y2="150" stroke="var(--rule)" stroke-width="0.7" stroke-dasharray="3 2" style="animation:adLine 1.5s 1.1s ease-out forwards" stroke-dashoffset="80"/>
+      <!-- Decision nodes -->
+      <circle cx="20" cy="50" r="2" fill="var(--muted)" opacity="0" style="animation:adNodeOn 0.5s 1s forwards"/>
+      <circle cx="140" cy="50" r="2" fill="var(--accent)" opacity="0" style="animation:adNodeOn 0.5s 1.2s forwards"/>
+      <circle cx="80" cy="30" r="2" fill="var(--accent)" opacity="0" style="animation:adNodeOn 0.5s 1.4s forwards"/>
+      <circle cx="20" cy="150" r="2" fill="var(--muted)" opacity="0" style="animation:adNodeOn 0.5s 1.6s forwards"/>
+      <circle cx="140" cy="150" r="2" fill="var(--accent)" opacity="0" style="animation:adNodeOn 0.5s 1.8s forwards"/>
+      <!-- Checkmarks on executed decisions -->
+      <path d="M135 45 l3 4 l7-8" fill="none" stroke="var(--accent)" stroke-width="1.5" stroke-dasharray="12" stroke-dashoffset="12" style="animation:adCheck 0.4s 1.6s forwards"/>
+      <path d="M75 25 l3 4 l7-8" fill="none" stroke="var(--accent)" stroke-width="1.5" stroke-dasharray="12" stroke-dashoffset="12" style="animation:adCheck 0.4s 1.8s forwards"/>
+      <!-- Labels -->
+      <text x="80" y="185" font-family="monospace" font-size="6" fill="var(--muted)" text-anchor="middle" letter-spacing="2" opacity="0" style="animation:adFade 0.5s 2.2s forwards">AUTONOMOUS</text>
+      <text x="80" y="195" font-family="monospace" font-size="5" fill="var(--rule)" text-anchor="middle" letter-spacing="1.5" opacity="0" style="animation:adFade 0.5s 2.5s forwards">while you slept</text>
+    </svg>
+    </header>
+
+        <div class="chapter-divider">
+      <div class="chapter-divider-line"></div>
+    </div>
+
+    <div class="content">
+
+      <!-- INTRO -->
+      <div class="essay-section intro">
+        <p>Last night, at 3 AM, while I slept, a system running on a computer the size of a deck of cards in my house in Buenos Aires read 42 news articles, analyzed which ones affected the markets I care about, made three trading decisions, and executed two of them. When I woke up it had made money. Not much. The bot has a win rate hovering around 60 percent. It loses four out of ten. It wins and loses like almost everyone. The only one that always wins is the house.</p>
+
+        <p>But the point is not the money. The point is that the decisions were already made before I opened my eyes.</p>
+
+        <p>Already decided.</p>
+
+        <div class="margin-note">This is not a vision of the future. This is a description of the present. The decisions are being made. The changes have already happened.</div>
+
+        <p>I can tell you this with certainty because I programmed it. I come from metrics. Conversion rates, cost per acquisition, A/B tests. The measurement side of digital marketing. Ten years ago I looked up from the dashboard and toward digital media, and I saw something that has stayed with me since. The entire ecosystem was making decisions by instinct. I came from a world where every decision was measured. They were generating more audience data than anyone knew how to read, and nobody was reading it. The gap was enormous. And it was invisible to the people inside it.</p>
+
+        <p>In 2014, my co-founder and I entered that gap. I knew what was missing on the marketing side. He knew what the audience needed. Together we saw something the market did not see. Out of that came Posta, which became the largest podcast production company in Argentina. More than 300 shows produced for brands including Netflix, Spotify, HBO, Mercado Libre, Microsoft, and Uber. Production, advertising, and regional journalism awards. In 2022, PodX Group out of Sweden acquired us.</p>
+
+        <p>I am telling you this not as a resume. I am telling you this because that feeling of seeing a gap that nobody else sees is exactly what I am feeling right now. And this time it is not one industry. It is everything.</p>
+      </div>
+
+      <!-- THE PATTERN -->
+      <div class="essay-section">
+        <p>In media it went like this. First the bloggers were a joke. Nobody with experience took them seriously. Then a blogger with Google Analytics beat a hundred-year-old newspaper in audience. Then half the newsrooms were redundant. And then the ones that survived were the ones that understood that the newspaper was no longer a newspaper. That the question was not what tool to buy but what the organization was now that distribution was free.</p>
+
+        <p>In retail it happened the same way, five years later. E-commerce collapsed the cost per square meter. The stores that understood that the physical space was a point of relationship, not distribution, survived. The ones that kept optimizing SKUs per square meter are closing.</p>
+
+        <p>Same pattern. Two different industries. Two different decades. Same sequence.</p>
+
+        <p>Hemingway wrote it better than any analyst could. Someone asks a character how he went bankrupt. He answers: two ways. Gradually, and then suddenly.</p>
+
+        <p>That is how it happens. Gradually, and then suddenly. I am watching it again.</p>
+      </div>
+
+      <!-- FROM BOTS TO ALLIES -->
+      <div class="essay-section">
+        <p>The first bot I built was stupid. It did one thing. It did it well. And I had to be there for everything else. The day I gave it an objective instead of an instruction and it figured out the steps on its own, something changed. Not in the bot. In me. That is what an agent is: you do not tell it how, you tell it what. And it decides the how. It makes intermediate decisions you did not specify. It encounters problems you did not anticipate and works around them. I stopped thinking of it as a tool and started thinking of it as someone.</p>
+
+        <p>Then I started working with swarms. Groups of agents that coordinate with each other. They divide labor, share context, resolve conflicts on their own.</p>
+
+        <p>Right now, running from my house on small machines, I have a PR agency made of agents that manages multiple social media accounts autonomously. It publishes, responds, interacts with real people. Without my intervention. I have a software factory that takes a voice memo with an idea and turns it into a functional prototype ready for a demo in a couple of hours. I have the trading bot I told you about.</p>
+
+        <div class="pull-quote">
+          <p>And I have an advisory board. A swarm I use to discuss ideas, strategies, business decisions. It does not give me orders. It asks me questions. It challenges assumptions. It forces me to justify what I believe before I execute it. Last week I presented a restructuring idea to the board. It asked me three questions that my human team had not asked me in a month. Not because my team is bad. Because the swarm has no ego, no fear of confronting me, and no agenda of its own.</p>
+        </div>
+
+        <p>People who work with me say "Claude told me" the way they would say "the analyst told me" or "legal told me." It is a reference to a source of judgment.</p>
+
+        <p>Most companies that are adopting AI are in phase one. They are not doing anything wrong. They are doing what corresponds to the moment they are in. But it is phase one of a progression that has at least four. And most of them delegated the experimentation to someone three levels down the org chart. The understanding of the most consequential technology of their generation lives in someone they can replace but whose comprehension they cannot transfer.</p>
+
+        <p>Already decided. And they were not in the room.</p>
+      </div>
+
+      <!-- WHAT CHANGES -->
+      <div class="essay-section">
+        <p>One person with AI produces what five people produced two years ago. That does not mean you fire four. It means the same team can produce five times more, with higher quality, with less friction. The real opportunity is not cost reduction. It is multiplying the effectiveness of the output. Doing more with the same people, not the same with fewer.</p>
+
+        <p>But here is what nobody says: when the nature of the work changes that fast, the roles change. And when the roles change, the identity that people built around those roles changes too. That is what cracks. Not headcount. Identity.</p>
+
+        <div class="margin-note">When you ask someone to go from executing to directing agents, you are asking them to change their relationship with their own work. Some thrive. Some get lost.</div>
+
+        <p>For the professional class, the company is where they spend most of their hours, where they derive most of their identity, where most of their social relationships operate. Think about what a company provides beyond a paycheck. A reason to leave the house. People who know your name. A role. Rituals. Shared complaints. All of it is social infrastructure. And it is invisible until it disappears.</p>
+
+        <p>I am not a theorist of this problem. I operate systems where AI amplifies what my team can produce. The output is better. The speed is different. The quality went up. But the transition is not free. The organization that does not understand that ends up with new tools and disoriented people.</p>
+
+        <p>There is someone reading this who depends on a platform to generate their leads. I do not know who. But I know that if tomorrow that platform changes its commissions, or its algorithm, or its rules, that person will discover that the relationship with their client was never theirs. It belonged to the platform.</p>
+
+        <p>The question is not whether it will happen. The question is whether, when it does, you will have a channel of your own that works. A database that is yours. A reputation that does not live on someone else's infrastructure.</p>
+      </div>
+
+      <!-- WHAT TO PROTECT -->
+      <div class="essay-section">
+        <p>The question that matters is not what to automate. It is the inverse. What does your organization do that, if you automated it, you would lose the reason someone chooses you. That is what you protect. Everything else gets compressed.</p>
+
+        <p>Three questions that work as a permanent filter. For every decision about technology, structure, or vendor from here forward.</p>
+
+        <p>One. Does this decision bring me closer to or further from controlling the relationship with my client?</p>
+
+        <p>Two. If this vendor disappears tomorrow, how much of what I built on top of it survives?</p>
+
+        <p>Three. Is the team I am building sized for today's cost of iteration or for three years ago's?</p>
+
+        <p>If you cannot answer all three clearly, you have homework.</p>
+      </div>
+
+      <!-- CLOSING -->
+      <div class="closing">
+        <div class="closing-ornament-top">&#10022; &nbsp; &#10087; &nbsp; &#10022;</div>
+        <p>I do not know how this ends. Nobody does. I can see the shape. The sequence. Where it strains first. I recognize it because I have lived through it at smaller scale. The difference between a predictor and a navigator is that the predictor claims to know the destination. The navigator recognizes the terrain.</p>
+        <p>I started in metrics. I ended up here. The distance between those two points is not a career. It is the same question asked at increasing volume: what are you measuring, and does the thing you are measuring still matter?</p>
+        <p>What you do with all of this will also be decided without you if you do not act.</p>
+        <p class="closing-final">Already decided.</p>
+        <div class="closing-ornament-bottom"><a href="https://diegodella.ar" style="color:inherit;text-decoration:none;">diegodella.ar</a> &nbsp;&middot;&nbsp; Buenos Aires, 2026</div>
+        <button class="share-btn" id="shareBtn" onclick="handleShare()"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/><polyline points="16 6 12 2 8 6"/><line x1="12" y1="2" x2="12" y2="15"/></svg> Share</button>
+      </div>
+
+      <div class="paper-nav">
+        <a href="index.html"><svg viewBox="0 0 24 24"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg> All Writing</a>
+        <a href="the-rhyme.html">The Rhyme &nbsp;<svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+      </div>
+    </div>
+
+    <footer>
+      <div class="footer-left">&copy; 2026 Diego Dell'Agostino</div>
+      <div class="footer-center">&#10087;</div>
+      <div class="footer-right">Media Strategy &amp; Product Thinking</div>
+    </footer>
+  </div>
+<script src="global.js?v=20260419b"></script>
+<script>
+  function handleShare() {
+    var u = window.location.href, t = 'Already Decided', x = 'Last night, while I slept, a system the size of a deck of cards read 42 articles, made three trading decisions, and executed two of them.';
+    if (navigator.share) { navigator.share({ title: t, text: x, url: u }).catch(function(){}); }
+    else if (navigator.clipboard) { navigator.clipboard.writeText(u).then(function() { var b = document.getElementById('shareBtn'); b.classList.add('copied'); b.innerHTML = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Copied'; setTimeout(function() { b.classList.remove('copied'); b.innerHTML = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/><polyline points="16 6 12 2 8 6"/><line x1="12" y1="2" x2="12" y2="15"/></svg> Share'; }, 2000); }); }
+  }
+</script>
+</body>
+</html>

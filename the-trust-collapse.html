@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-TJF4P0NYFT"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-TJF4P0NYFT');
+  </script>
+  <script>(function(){var t=localStorage.getItem("theme");if(!t)t=window.matchMedia("(prefers-color-scheme:dark)").matches?"dark":"light";document.documentElement.setAttribute("data-theme",t)})()</script>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <meta name="theme-color" content="#e6d5b8">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="Narrative Mechanics">
+  <link rel="apple-touch-icon" href="/og-default.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="On the implicit contract of online presence, and what happens when it breaks without ceremony.">
+  <meta name="author" content="Diego Dell'Agostino">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://diegodella.ar/the-trust-collapse.html">
+  <meta property="og:title" content="The Trust Collapse — After You Post 04">
+  <meta property="og:description" content="On the implicit contract of online presence, and what happens when it breaks without ceremony.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://diegodella.ar/the-trust-collapse.html">
+  <meta property="og:site_name" content="Narrative Mechanics">
+  <meta property="og:image" content="https://diegodella.ar/og-default.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:locale" content="en_US">
+  <meta property="article:author" content="Diego Dell'Agostino">
+  <meta property="article:published_time" content="2026-03-10">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="The Trust Collapse — After You Post 04">
+  <meta name="twitter:description" content="On the implicit contract of online presence, and what happens when it breaks without ceremony.">
+  <meta name="twitter:image" content="https://diegodella.ar/og-default.png">
+  <title>The Trust Collapse — Diego Dell'Agostino</title>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "The Trust Collapse",
+    "description": "On the implicit contract of online presence, and what happens when it breaks without ceremony.",
+    "author": {
+      "@type": "Person",
+      "name": "Diego Dell'Agostino",
+      "url": "https://diegodella.ar/about.html"
+    },
+    "datePublished": "2026-03-10",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Narrative Mechanics",
+      "url": "https://diegodella.ar"
+    },
+    "url": "https://diegodella.ar/the-trust-collapse.html",
+    "mainEntityOfPage": "https://diegodella.ar/the-trust-collapse.html"
+  }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;700&family=Epilogue:ital,wght@0,400;1,400;0,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="global.css?v=20260418f">
+  <link rel="stylesheet" href="components.css?v=20260418f">
+  <style>
+    ::selection { background: var(--accent); color: var(--paper); }
+    .hero { max-width: 900px; margin: 0 auto; padding: 5rem 4rem 4rem; display: grid; grid-template-columns: 1fr 280px; gap: 2rem; align-items: center; }
+    .hero-title { font-family: 'Space Grotesk', serif; font-size: clamp(2.8rem, 6vw, 5rem); font-weight: 900; line-height: 1.0; letter-spacing: -0.025em; margin-bottom: 1rem; }
+    .hero-title em { font-style: italic; color: var(--ink); display: block; text-decoration: none; background: linear-gradient(180deg, transparent 54%, color-mix(in srgb, var(--accent) 18%, transparent) 54%); padding: 0 0.08em 0.02em 0; box-decoration-break: clone; -webkit-box-decoration-break: clone; }
+    .hero-subtitle { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 1.1rem; font-style: italic; color: var(--muted); margin-bottom: 2rem; line-height: 1.5; max-width: 480px; }
+    .hero-svg { width: 100%; height: auto; }
+    .content { max-width: 720px; margin: 0 auto; padding: 0 2.5rem 4rem; }
+    .essay-section { margin-bottom: 4.5rem; opacity: 0; transform: translateY(24px); animation: fadeUp 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards; }
+    .essay-section:nth-child(1) { animation-delay: 0.05s; }
+    .essay-section:nth-child(2) { animation-delay: 0.12s; }
+    .essay-section:nth-child(3) { animation-delay: 0.19s; }
+    .essay-section:nth-child(4) { animation-delay: 0.26s; }
+    .essay-section:nth-child(5) { animation-delay: 0.33s; }
+    .essay-section:nth-child(6) { animation-delay: 0.40s; }
+    @keyframes fadeUp { to { opacity: 1; transform: translateY(0); } }
+    .essay-section p { margin-bottom: 1.5rem; font-size: 1.05rem; line-height: 1.92; text-align: justify; hyphens: auto; }
+    .essay-section p:last-child { margin-bottom: 0; }
+    .essay-section.intro p:first-of-type::first-letter {
+      font-family: 'Space Grotesk', serif; font-size: 4.2rem; font-weight: 900;
+      float: left; line-height: 0.72; margin-right: 0.07em; margin-top: 0.12em; color: var(--accent);
+    }
+    .series-nav { max-width: 680px; margin: 0 auto; padding: 2rem 2.5rem 0; border-top: 1px solid var(--rule); }
+    .series-nav-label { font-family: 'JetBrains Mono', monospace; font-size: 0.5rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--muted); margin-bottom: 1.25rem; }
+    .series-list { list-style: none; display: flex; flex-direction: column; gap: 0.5rem; }
+    .series-list li { display: flex; align-items: baseline; gap: 0.75rem; }
+    .series-list li a { text-decoration: none; color: var(--ink-2); transition: color 0.2s; }
+    .series-list li a:hover { color: var(--accent); }
+    .series-num { font-family: 'JetBrains Mono', monospace; font-size: 0.5rem; color: var(--muted); min-width: 1.5rem; }
+    .series-title { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 0.9rem; color: var(--ink-2); }
+    .series-title.current { color: var(--ink); font-weight: 600; }
+    .share-btn { display: inline-flex; align-items: center; gap: 0.5rem; font-family: 'JetBrains Mono', monospace; font-size: 0.5rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--muted); background: none; border: 1px solid var(--rule); padding: 0.5em 1em; cursor: pointer; transition: all 0.15s; margin-top: 1rem; position: relative; z-index: 1; }
+    .share-btn:hover { color: var(--accent); border-color: var(--accent); }
+    .share-btn.copied { color: var(--accent); border-color: var(--accent); }
+    .paper-nav { max-width: 680px; margin: 0 auto; padding: 0 2.5rem 5rem; display: flex; justify-content: space-between; }
+    .paper-nav a { display: flex; align-items: center; gap: 0.75rem; text-decoration: none; color: var(--ink); font-family: 'JetBrains Mono', monospace; font-size: 0.55rem; letter-spacing: 0.15em; text-transform: uppercase; transition: color 0.2s; }
+    .paper-nav a:hover { color: var(--accent); }
+    .paper-nav a svg { width: 16px; height: 16px; stroke: currentColor; fill: none; stroke-width: 1.5; }
+    @media (max-width: 768px) {
+      .hero { padding: 3rem 1.5rem 2rem; grid-template-columns: 1fr; }
+      .hero-svg { max-width: 200px; margin: 0 auto; order: -1; }
+      .content { padding: 0 1.5rem 4rem; }
+      .series-nav { padding: 2rem 1.5rem 0; }
+      .paper-nav { padding: 0 1.5rem 3rem; }
+    }
+  </style>
+</head>
+<body class="series-ayp">
+  <div id="pbar"></div>
+  <div id="pbar-label"></div>
+  <div class="bg-pattern"></div>
+  <div class="bg-grain"></div>
+
+  <div class="page-wrap">
+    <div class="top-bar">
+      <span>Buenos Aires &middot; Since 2008</span>
+      <span>18 Essays &middot; 3 Frameworks &middot; ~289 min of reading &middot; <a href="about.html">About the author</a></span>
+    </div>
+
+    <nav class="nav">
+      <div class="nav-inner">
+        <a href="index.html" class="nav-brand">Narrative<em>Mechanics</em></a>
+        <button class="nav-btn nav-toggle" aria-label="Menu" aria-expanded="false" aria-controls="navLinks" id="navToggle">
+          <svg viewBox="0 0 24 24"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg>
+        </button>
+        <div class="nav-links" id="navLinks">
+          <a href="index.html" class="nav-link">Home</a>
+          <div class="nav-sep"></div>
+          <a href="archive.html" class="nav-link">Start Here</a>
+          <a href="frameworks.html" class="nav-link">Frameworks</a>
+          <a href="series.html" class="nav-link">Series</a>
+          <a href="essays.html" class="nav-link">Essays</a>
+          <a href="notes.html" class="nav-link">Notes</a>
+          <div class="nav-sep"></div>
+          <a href="about.html" class="nav-link">About</a>
+        </div>
+        <div class="nav-right">
+          <button class="nav-btn" aria-label="Toggle theme" id="themeToggle">
+            <svg class="icon-moon" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+            <svg class="icon-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <header class="hero">
+      <div class="hero-main">
+        <div class="hero-kicker">After You Post · 04 &nbsp;&middot;&nbsp; March 2026</div>
+        <h1 class="hero-title">The Trust<em>Collapse</em></h1>
+        <p class="hero-subtitle">On the implicit contract of online presence, and what happens when it breaks without ceremony.</p>
+        <div class="hero-byline"><div class="hero-byline-dot"></div><span class="hero-byline-text">Diego Dell'Agostino &nbsp;&middot;&nbsp; Buenos Aires</span></div>
+      </div>
+      <!-- SVG: Three pillars cracking, floor line breaking -->
+      <svg class="hero-svg" viewBox="0 0 160 200" xmlns="http://www.w3.org/2000/svg">
+        <style>
+          @keyframes tcCrack{from{stroke-dashoffset:40}to{stroke-dashoffset:0}}
+          @keyframes tcFall{from{transform:translateY(0);opacity:1}to{transform:translateY(8px);opacity:0.3}}
+          @keyframes tcAppear{from{opacity:0}to{opacity:1}}
+        </style>
+        <!-- Floor -->
+        <line x1="15" y1="150" x2="70" y2="150" stroke="var(--ink)" stroke-width="1.2" opacity="0" style="animation:tcAppear 0.4s 0.2s forwards"/>
+        <line x1="75" y1="152" x2="85" y2="148" stroke="var(--ink)" stroke-width="1.2" opacity="0" style="animation:tcAppear 0.4s 0.4s forwards"/>
+        <line x1="90" y1="150" x2="145" y2="150" stroke="var(--ink)" stroke-width="1.2" opacity="0" style="animation:tcAppear 0.4s 0.2s forwards"/>
+        <!-- Pillar 1: Journalist contract -->
+        <rect x="25" y="60" width="22" height="90" rx="1" fill="none" stroke="var(--ink)" stroke-width="1" opacity="0" style="animation:tcAppear 0.5s 0.5s forwards"/>
+        <path d="M30 85 L38 75 L42 90" fill="none" stroke="var(--accent)" stroke-width="1" stroke-dasharray="40" stroke-dashoffset="40" style="animation:tcCrack 0.8s 1.2s forwards"/>
+        <!-- Pillar 2: Creator contract -->
+        <rect x="69" y="50" width="22" height="100" rx="1" fill="none" stroke="var(--ink)" stroke-width="1" opacity="0" style="animation:tcAppear 0.5s 0.7s forwards"/>
+        <path d="M74 80 L82 68 L86 88" fill="none" stroke="var(--accent)" stroke-width="1" stroke-dasharray="40" stroke-dashoffset="40" style="animation:tcCrack 0.8s 1.5s forwards"/>
+        <!-- Pillar 3: Human-at-the-other-end -->
+        <rect x="113" y="70" width="22" height="80" rx="1" fill="none" stroke="var(--ink)" stroke-width="1" opacity="0" style="animation:tcAppear 0.5s 0.9s forwards"/>
+        <path d="M118 100 L126 88 L130 105" fill="none" stroke="var(--accent)" stroke-width="1" stroke-dasharray="40" stroke-dashoffset="40" style="animation:tcCrack 0.8s 1.8s forwards"/>
+        <!-- Pillar labels -->
+        <text x="36" y="55" font-family="monospace" font-size="4.5" fill="var(--muted)" text-anchor="middle" opacity="0" style="animation:tcAppear 0.4s 0.6s forwards">BYLINE</text>
+        <text x="80" y="45" font-family="monospace" font-size="4.5" fill="var(--muted)" text-anchor="middle" opacity="0" style="animation:tcAppear 0.4s 0.8s forwards">CREATOR</text>
+        <text x="124" y="65" font-family="monospace" font-size="4.5" fill="var(--muted)" text-anchor="middle" opacity="0" style="animation:tcAppear 0.4s 1s forwards">HUMAN</text>
+        <!-- Falling debris -->
+        <rect x="78" y="155" width="4" height="4" fill="var(--rule)" opacity="0" style="animation:tcFall 1.5s 2.2s forwards"/>
+        <rect x="82" y="153" width="3" height="3" fill="var(--rule)" opacity="0" style="animation:tcFall 1.2s 2.4s forwards"/>
+        <!-- Labels -->
+        <text x="80" y="180" font-family="monospace" font-size="6" fill="var(--muted)" text-anchor="middle" letter-spacing="2" opacity="0" style="animation:tcAppear 0.5s 2.5s forwards">THREE CONTRACTS</text>
+        <text x="80" y="190" font-family="monospace" font-size="5" fill="var(--rule)" text-anchor="middle" letter-spacing="1.5" opacity="0" style="animation:tcAppear 0.5s 2.8s forwards">no ceremony</text>
+      </svg>
+    </header>
+
+    <div class="chapter-divider"><div class="chapter-divider-line"></div></div>
+
+    <div class="content">
+
+      <div class="essay-section intro">
+        <p>Nobody told you the rules changed. That's the part that stays with you afterward.</p>
+        <p>Not the change itself. The absence of an announcement. You assumed, for most of your online life, that when a newspaper published an article, a journalist wrote it. That when a creator posted, the person you'd been following was the one who decided to post. That when a brand's support account responded to your complaint, there was a human on the other end who had read what you wrote, thought about it, and typed a reply. These weren't beliefs you examined. They were the floor. You didn't notice the floor until it wasn't there.</p>
+        <p>The third essay in this series described what the second filter flattens: the curiosity that comes from sensing another mind on the other side. That curiosity needs something to meet it. The trust collapse is what happens when you reach for that something and find the floor is gone.</p>
+      </div>
+
+      <div class="essay-section">
+        <div class="section-badge">
+          <div class="section-icon"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></div>
+          <div class="section-meta">
+            <span class="section-number">Section 01</span>
+            <span class="section-title">Three Contracts, One Assumption</span>
+          </div>
+        </div>
+        <div class="section-rule"></div>
+        <div class="section-body">
+          <p>The journalist contract: what you read was produced by a human who researched it, who made editorial decisions, who put their name on it because they were accountable for what it said. That contract covered newspapers, magazines, newsletters, the bylined post from the expert you'd been reading for years. You trusted it not because you verified it, but because the system had always worked that way. The byline was the guarantee.</p>
+          <p>The creator contract: the person who built an audience over time, who posted about their morning and their opinions and their work, was the one posting. Their presence was continuous with their life. When they spoke, it was them speaking. The parasocial relationship you developed, the sense that you knew something about who they were, was built on that assumption. Not that they were being completely honest. Just that it was actually them.</p>
+          <p>The human-at-the-other-end contract: when you reached out, something happened on the other side. When you complained to the airline and got a response, a person read your complaint. When you messaged the creator and they replied, they saw your message. When you emailed the company, someone's inbox received it. There was a receiver. The loop closed with a human.</p>
+          <p>Three contracts. One assumption underneath all three: there's a person on the other side.</p>
+        </div>
+      </div>
+
+      <div class="essay-section">
+        <div class="section-badge">
+          <div class="section-icon"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></div>
+          <div class="section-meta">
+            <span class="section-number">Section 02</span>
+            <span class="section-title">The Same Day</span>
+          </div>
+        </div>
+        <div class="section-rule"></div>
+        <div class="section-body">
+          <p>The thing about the trust collapse is that it doesn't happen once, in one place, on one day. It happens everywhere in the same week. Sometimes on the same day.</p>
+          <p>You read something and something is slightly off, the smoothness of it, the way it hits every point without landing anywhere, and you wonder. You message a creator you've followed for two years and the reply comes in four minutes, perfectly calibrated to your tone, and you wonder. The support agent resolves your issue faster than a human could have read your message, and you don't wonder anymore. You know.</p>
+          <p>None of these moments comes with a confession. The newspaper doesn't add an editor's note: this was generated. The creator doesn't post: I should tell you what's happening with my feed. The support window doesn't open with: you are talking to an agent, and that agent was trained to sound like it cares about your situation. The contract dissolves without anyone signing the termination papers.</p>
+          <div class="pull-quote">
+            <p>It's like finding out about Santa Claus, the Tooth Fairy, and that your parents have been putting the money under the pillow for years, all at the same time, on a Tuesday afternoon, from nobody in particular.</p>
+          </div>
+          <p>The scale of the revelation isn't proportional to any single moment. It's proportional to how many things it retroactively recontextualizes. You didn't just find out that one thing wasn't what you thought. You found out that a category of things, the category of online presences you assumed were people, is now in question. And you can't check which ones without asking a question that nobody is obligated to answer honestly.</p>
+        </div>
+      </div>
+
+      <div class="essay-section">
+        <div class="section-badge">
+          <div class="section-icon"><svg viewBox="0 0 24 24"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg></div>
+          <div class="section-meta">
+            <span class="section-number">Section 03</span>
+            <span class="section-title">Why It Breaks Without Ceremony</span>
+          </div>
+        </div>
+        <div class="section-rule"></div>
+        <div class="section-body">
+          <p>The contracts were never written down. That's why there's no breach to point to.</p>
+          <p>The publication never promised a journalist wrote it. They implied it with the byline, with the editorial brand, with twenty years of it being true. But implication isn't contract. The creator never promised it was them posting. They built a presence. The presence continues. What changed is the relationship between the presence and the person, and that was never something you were owed visibility into. The company isn't deceiving you in any sense they recognize. They deployed a better system. Your problem got solved faster. From their side, this is progress.</p>
+          <div class="margin-note">Nobody lied. The floor was made of assumptions you never examined. When the assumptions stopped being true, the floor didn't collapse dramatically. It just became unreliable in ways that are hard to name.</div>
+        </div>
+      </div>
+
+      <div class="essay-section">
+        <div class="section-badge">
+          <div class="section-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg></div>
+          <div class="section-meta">
+            <span class="section-number">Section 04</span>
+            <span class="section-title">What You're Left With</span>
+          </div>
+        </div>
+        <div class="section-rule"></div>
+        <div class="section-body">
+          <p>You're left with a question you didn't have before: how much of what I've been consuming, and responding to, and feeling something about, was built by a person?</p>
+          <p>And underneath that: does it matter?</p>
+          <p>Some people land on no. The content was good or it wasn't. The reply solved the problem or it didn't. That sounds like pragmatism. What it actually is, is a quiet reorganization. It changes how you read. How you follow. How you receive something that feels addressed to you personally. You're not ignoring the question. You're updating, in the background, what online presence means to you. The update runs whether you name it or not.</p>
+          <p>Other people land on yes, it matters, and can't explain it to someone who landed on no. The content could be identical. The reply could solve the same problem. But knowing changes it. Not the information, the relationship you thought you were having. What you were attached to wasn't the artifact. It was the assumption that the artifact came from somewhere, from someone who also had skin in the question. Take that away and the identical content becomes a different object. You're not being sentimental. You're noticing that what you valued wasn't the output. It was the person behind it.</p>
+          <p>Neither position gets you back to the floor you were standing on.</p>
+          <p>What the collapse actually does is make a question visible that was always there but never had to be answered. The first essay in this series asked it quietly, as something to carry: is there anything in the relationship between a creator and an audience that an agent fundamentally cannot simulate? Not at scale. Not statistically. As a matter of what the relationship actually is.</p>
+          <p>The collapse makes that question urgent. Because if the answer is no, nothing, then the three contracts were always just convenient fictions and the floor was always an illusion. But if the answer is yes, there is something, then the trust collapse isn't just a crisis of verification. It's a crisis of losing access to the specific thing that made the relationship worth having.</p>
+        </div>
+      </div>
+
+      <div class="closing">
+        <div class="closing-ornament-top">&#10022; &nbsp; &#10087; &nbsp; &#10022;</div>
+        <p>Neither position gets you back to the floor you were standing on.</p>
+        <div class="closing-ornament-bottom"><a href="https://diegodella.ar" style="color:inherit;text-decoration:none;">diegodella.ar</a> &nbsp;&middot;&nbsp; Buenos Aires, 2026</div>
+        <button class="share-btn" id="shareBtn" onclick="handleShare()"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/><polyline points="16 6 12 2 8 6"/><line x1="12" y1="2" x2="12" y2="15"/></svg> Share</button>
+      </div>
+
+      <div class="series-nav">
+        <div class="series-nav-label">After You Post &middot; The Series</div>
+        <ul class="series-list">
+          <li><span class="series-num">01</span><a href="the-empty-room.html"><span class="series-title">The Empty Room</span></a></li>
+          <li><span class="series-num">02</span><a href="the-proxy-self.html"><span class="series-title">The Proxy Self</span></a></li>
+          <li><span class="series-num">03</span><a href="writing-for-the-filter.html"><span class="series-title">Writing for the Filter</span></a></li>
+          <li><span class="series-num">04</span><span class="series-title current">The Trust Collapse</span></li>
+          <li><span class="series-num">05</span><a href="origin-gravity.html"><span class="series-title">Origin Gravity</span></a></li>
+        </ul>
+      </div>
+
+      <div class="paper-nav">
+        <a href="writing-for-the-filter.html"><svg viewBox="0 0 24 24"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg> Writing for the Filter</a>
+        <a href="origin-gravity.html">Origin Gravity &nbsp;<svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+      </div>
+    </div>
+
+    <footer>
+      <div class="footer-left">&copy; 2026 Diego Dell'Agostino</div>
+      <div class="footer-center">&#10087;</div>
+      <div class="footer-right">Media Strategy &amp; Product Thinking</div>
+    </footer>
+  </div>
+<script src="global.js?v=20260419b"></script>
+<script>
+  function handleShare() {
+    var u = window.location.href, t = 'The Trust Collapse', x = 'On the implicit contract of online presence, and what happens when it breaks without ceremony.';
+    if (navigator.share) { navigator.share({ title: t, text: x, url: u }).catch(function(){}); }
+    else if (navigator.clipboard) { navigator.clipboard.writeText(u).then(function() { var b = document.getElementById('shareBtn'); b.classList.add('copied'); b.innerHTML = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Copied'; setTimeout(function() { b.classList.remove('copied'); b.innerHTML = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/><polyline points="16 6 12 2 8 6"/><line x1="12" y1="2" x2="12" y2="15"/></svg> Share'; }, 2000); }); }
+  }
+</script>
+</body>
+</html>

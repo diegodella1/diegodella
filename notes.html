@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <script>(function(){var t=localStorage.getItem("theme");if(!t)t=window.matchMedia("(prefers-color-scheme:dark)").matches?"dark":"light";document.documentElement.setAttribute("data-theme",t)})()</script>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <meta name="theme-color" content="#e6d5b8">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="Narrative Mechanics">
+  <link rel="apple-touch-icon" href="/og-default.png">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "Notes",
+    "description": "Nuggets, unfinished arguments, and compressed entry points into the larger body of work.",
+    "url": "https://diegodella.ar/notes.html",
+    "author": {
+      "@type": "Person",
+      "name": "Diego Dell'Agostino",
+      "url": "https://diegodella.ar/about.html"
+    },
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "Narrative Mechanics",
+      "url": "https://diegodella.ar/"
+    }
+  }
+  </script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Notes from Narrative Mechanics: Nuggets, unfinished arguments, and compressed entry points into the larger body of work.">
+  <meta name="author" content="Diego Dell'Agostino">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://diegodella.ar/notes.html">
+  <meta property="og:title" content="Notes | Narrative Mechanics">
+  <meta property="og:description" content="Nuggets, unfinished arguments, and compressed entry points into the larger body of work.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://diegodella.ar/notes.html">
+  <meta property="og:site_name" content="Narrative Mechanics">
+  <meta property="og:image" content="https://diegodella.ar/og-default.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Notes | Narrative Mechanics">
+  <meta name="twitter:description" content="Nuggets, unfinished arguments, and compressed entry points into the larger body of work.">
+  <meta name="twitter:image" content="https://diegodella.ar/og-default.png">
+  <title>Notes | Narrative Mechanics</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;700&family=Epilogue:ital,wght@0,400;1,400;0,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="global.css?v=20260418f">
+  <link rel="stylesheet" href="components.css?v=20260418f">
+  <style>
+    .hero,.wrap{max-width:1080px;margin:0 auto;padding-left:3rem;padding-right:3rem}
+    .hero{padding-top:5rem;padding-bottom:2.35rem;display:grid;grid-template-columns:minmax(0,1fr) 260px;gap:1.8rem;border-bottom:1px solid var(--border-light)}
+    .hero-title,.section-title,.card-title,.related-title{font-family:'Space Grotesk',serif;line-height:1.02}
+    .hero-title{font-size:clamp(3rem,6vw,4.8rem);letter-spacing:-0.045em;max-width:7ch;margin-bottom:1rem}
+    .hero-title em{font-style:italic;color:var(--gold)}
+    .hero-lead,.section-copy,.card-copy,.card-meta,.related-copy,.hero-aside p{font-size:.95rem;line-height:1.7;color:var(--ink-2)}
+    .hero-routes{display:flex;flex-wrap:wrap;gap:.55rem}
+    .hero-route{font-family:'JetBrains Mono',monospace;font-size:.48rem;letter-spacing:.14em;text-transform:uppercase;text-decoration:none;color:var(--gold);border:1px solid color-mix(in srgb, var(--gold) 26%, var(--border));border-radius:12px;padding:.58rem .8rem;background:color-mix(in srgb, var(--gold-soft) 84%, var(--paper));transition:border-color .18s,background-color .18s,color .18s}
+    .hero-route:hover{color:color-mix(in srgb, var(--gold) 82%, #000);border-color:var(--gold);background:color-mix(in srgb, var(--gold-soft) 96%, var(--paper))}
+    .hero-aside{border-left:1px solid var(--border);padding-left:1rem;display:grid;gap:.85rem}
+    .aside-label,.section-label,.card-kicker{font-family:'JetBrains Mono',monospace;font-size:.46rem;letter-spacing:.16em;text-transform:uppercase;color:var(--gold)}
+    .card-kicker{margin-bottom:.35rem}
+    .wrap{padding-top:1.85rem;padding-bottom:5rem}
+    .section,.related{border:1px solid color-mix(in srgb, var(--gold) 18%, var(--border));border-radius:14px;background:var(--surface-1);padding:1.15rem}
+    .section{margin-bottom:1.2rem}
+    .section-head{display:grid;grid-template-columns:180px minmax(0,1fr);gap:1rem;margin-bottom:.9rem}
+    .section-title{font-size:1.55rem;margin-bottom:.25rem}
+    .card-grid,.related-grid{display:grid;grid-template-columns:1fr 1fr;gap:.75rem}
+    .card,.related-card{display:block;border:1px solid color-mix(in srgb, var(--gold) 18%, var(--border));border-radius:12px;background:var(--surface-2);padding:1.15rem;text-decoration:none;color:inherit;transition:border-color .18s,background-color .18s,box-shadow .18s}
+    .card:hover,.related-card:hover{border-color:color-mix(in srgb, var(--gold) 46%, var(--border));background:color-mix(in srgb, var(--gold-soft) 82%, var(--paper));box-shadow:0 10px 22px rgba(196,106,61,.12)}
+    .card-title{font-size:1.18rem;margin-bottom:.35rem}
+    .card-meta{margin-top:.7rem;font-family:'JetBrains Mono',monospace;font-size:.48rem;letter-spacing:.08em;text-transform:uppercase}
+    .related-title{font-size:1.35rem;margin-bottom:.3rem}
+    .related-card strong{display:block;font-family:'Inter',sans-serif;font-size:.95rem;margin-bottom:.18rem}
+    @media (max-width:900px){.hero,.section-head,.card-grid,.related-grid{grid-template-columns:1fr}.hero-aside{border-left:none;border-top:1px solid var(--border);padding-left:0;padding-top:.9rem}}
+    @media (max-width:640px){.hero,.wrap{padding-left:1.5rem;padding-right:1.5rem}.hero{padding-top:3.8rem}}
+  </style>
+</head>
+<body class="analog-bg">
+  <a href="#main-content" class="skip-link">Skip to content</a>
+  <div class="page-wrap">
+    <div class="top-bar"><span>Buenos Aires &middot; Since 2008</span><span>Compressed paths and active fragments &middot; <a href="about.html">About the author</a></span></div>
+    <nav class="nav"><div class="nav-inner"><a href="index.html" class="nav-brand">Narrative<em>Mechanics</em></a><button class="nav-btn nav-toggle" aria-label="Menu" aria-expanded="false" aria-controls="navLinks" id="navToggle"><svg viewBox="0 0 24 24"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg></button><div class="nav-links" id="navLinks"><a href="index.html" class="nav-link">Home</a><div class="nav-sep"></div><a href="archive.html" class="nav-link">Start Here</a><a href="frameworks.html" class="nav-link">Frameworks</a><a href="series.html" class="nav-link">Series</a><a href="essays.html" class="nav-link">Essays</a><a href="notes.html" class="nav-link active" aria-current="page">Notes</a><div class="nav-sep"></div><a href="about.html" class="nav-link">About</a></div><div class="nav-right"><button class="nav-btn" aria-label="Toggle theme" id="themeToggle"><svg class="icon-moon" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg><svg class="icon-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></button></div></div></nav>
+    <main id="main-content">
+      <section class="hero">
+        <div>
+          <div class="hero-kicker">Shelf / Notes</div>
+          <h1 class="hero-title">Compressed <em>Notes</em></h1>
+          <p class="hero-lead">This shelf is the fast path into the site: sharper entries, shorter arguments, and active fragments that let you get signal before you commit to the larger shelves.</p>
+          <div class="hero-routes">
+            <a href="archive.html" class="hero-route">Open Catalog</a>
+            <a href="essays.html" class="hero-route">Long-form Essays</a>
+            <a href="frameworks.html" class="hero-route">Core Models</a>
+          </div>
+        </div>
+        <aside class="hero-aside">
+          <div class="aside-label">Best use</div>
+          <p>Use this shelf if you want the shortest useful entry into the ideas, or if you want to track active lines of thought without reading the entire archive first.</p>
+          <div class="aside-label">Best first read</div>
+          <p><a href="nuggets.html">Nuggets</a> if you want compression, or <a href="unfinished-arguments.html">Unfinished Arguments</a> if you want live fragments.</p>
+        </aside>
+      </section>
+      <div class="wrap">
+        <section class="section">
+          <div class="section-head">
+            <div class="section-label">On This Shelf</div>
+            <div>
+              <div class="section-title">Fast entry points</div>
+              <div class="section-copy">These pieces are lighter, faster, and intentionally denser. Use them when you want the sharp version first.</div>
+            </div>
+          </div>
+          <div class="card-grid">
+            <a href="nuggets.html" class="card"><div class="card-kicker">Notes</div><div class="card-title">Nuggets</div><div class="card-copy">Compressed ideas extracted from the wider archive, organized for quick access and quick re-entry.</div><div class="card-meta">Shortest path in</div></a>
+            <a href="unfinished-arguments.html" class="card"><div class="card-kicker">Fragments</div><div class="card-title">Unfinished Arguments</div><div class="card-copy">Open lines of thought still under pressure across AI, media systems, product clarity, and narrative strategy.</div><div class="card-meta">Active thinking</div></a>
+          </div>
+        </section>
+        <section class="related">
+          <div class="section-label">Next Shelves</div>
+          <div class="related-title">When the compressed path is not enough</div>
+          <div class="related-copy">Move into essays if you want complete arguments, or into frameworks if you want the site’s core conceptual models.</div>
+          <div class="related-grid">
+            <a href="essays.html" class="related-card"><strong>Essays</strong><div class="related-copy">Move into the longer arguments once one fragment opens the question fully.</div></a>
+            <a href="frameworks.html" class="related-card"><strong>Frameworks</strong><div class="related-copy">Move into the models if you want to understand the site’s conceptual center.</div></a>
+          </div>
+        </section>
+      </div>
+    </main>
+  </div>
+  <script src="global.js?v=20260419b"></script>
+</body>
+</html>

@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-TJF4P0NYFT"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-TJF4P0NYFT');
+  </script>
+  <script>(function(){var t=localStorage.getItem("theme");if(!t)t=window.matchMedia("(prefers-color-scheme:dark)").matches?"dark":"light";document.documentElement.setAttribute("data-theme",t)})()</script>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <meta name="theme-color" content="#e6d5b8">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="Narrative Mechanics">
+  <link rel="apple-touch-icon" href="/og-default.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="The consumer journey is now a negotiation between intent and algorithmic architecture. Introducing the Negotiated Moment. Paper 06.">
+  <meta name="author" content="Diego Dell'Agostino">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://diegodella.ar/paper-06.html">
+  <meta property="og:title" content="The Negotiated Moment | Narrative-First Paper 06">
+  <meta property="og:description" content="The consumer journey is now a negotiation between intent and algorithmic architecture. Introducing the Negotiated Moment. Paper 06.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://diegodella.ar/paper-06.html">
+  <meta property="og:site_name" content="Narrative Mechanics">
+  <meta property="og:image" content="https://diegodella.ar/og-default.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="The Negotiated Moment | Narrative-First Paper 06">
+  <meta name="twitter:description" content="The consumer journey is now a negotiation between intent and algorithmic architecture. Introducing the Negotiated Moment. Paper 06.">
+  <meta name="twitter:image" content="https://diegodella.ar/og-default.png">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ScholarlyArticle",
+    "headline": "Before You Map: The Negotiated Moment",
+    "description": "The sixth paper in the Narrative-First series. Before You Map argues that the consumer journey is no longer a human path - it is a negotiation between intent and algorithmic architecture. Introduces The Negotiated Moment, Journey Debt, Mediation Drift, and Mediation Fitness.",
+    "author": {
+      "@type": "Person",
+      "name": "Diego Dell'Agostino",
+      "url": "https://diegodella.ar/about.html"
+    },
+    "isPartOf": {
+      "@type": "CreativeWorkSeries",
+      "name": "Narrative-First",
+      "url": "https://diegodella.ar/paper-01.html",
+      "position": 6
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Narrative Mechanics",
+      "url": "https://diegodella.ar"
+    },
+    "url": "https://diegodella.ar/paper-06.html",
+    "datePublished": "2026-02-20",
+    "inLanguage": "en"
+  }
+  </script>
+  <title>The Negotiated Moment | Narrative-First Paper 06</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;700&family=Epilogue:ital,wght@0,400;1,400;0,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="global.css?v=20260418f">
+  <link rel="stylesheet" href="components.css?v=20260418f">
+  <style>
+    /* Extra CSS variables for this page */
+    :root {
+      --framework: #1a3a5c;
+      --framework-light: #dce8f0;
+    }
+    [data-theme="dark"] {
+      --framework: #4a9aca;
+      --framework-light: rgba(74,154,202,0.15);
+    }
+
+    /* Hero */
+    .hero { max-width: 900px; margin: 0 auto; padding: 5rem 3rem 5rem; display: grid; grid-template-columns: 1fr auto; gap: 3rem; align-items: start; }
+    .hero-title { font-family: 'Space Grotesk', serif; font-size: clamp(2.8rem, 6vw, 5rem); font-weight: 900; line-height: 1.0; letter-spacing: -0.025em; margin-bottom: 1rem; }
+    .hero-title em { font-style: italic; color: var(--ink); display: block; text-decoration: none; background: linear-gradient(180deg, transparent 54%, color-mix(in srgb, var(--accent) 18%, transparent) 54%); padding: 0 0.08em 0.02em 0; box-decoration-break: clone; -webkit-box-decoration-break: clone; }
+    .hero-subtitle { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 1.15rem; font-style: italic; color: var(--muted); margin-bottom: 2rem; line-height: 1.5; max-width: 440px; }
+    .hero-illustration { width: 280px; flex-shrink: 0; padding-top: 1rem; opacity: 0.85; }
+
+    /* Content */
+    .content { max-width: 720px; margin: 0 auto; padding: 0 2.5rem 8rem; }
+
+    /* Section animations */
+    .section { margin-bottom: 5.5rem; opacity: 0; transform: translateY(28px); animation: fadeUp 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards; }
+    .section:nth-child(1) { animation-delay: 0.1s; } .section:nth-child(2) { animation-delay: 0.25s; } .section:nth-child(3) { animation-delay: 0.4s; } .section:nth-child(4) { animation-delay: 0.55s; }
+    @keyframes fadeUp { to { opacity: 1; transform: translateY(0); } }
+
+    /* Framework block */
+    .framework-block { margin: 2.5rem 0; border: 1px solid var(--rule); overflow: hidden; }
+    .framework-header { background: var(--deep); color: var(--paper); padding: 0.9rem 1.25rem; display: flex; align-items: center; justify-content: space-between; }
+    .framework-header-title { font-family: 'JetBrains Mono', monospace; font-size: 0.52rem; letter-spacing: 0.2em; text-transform: uppercase; }
+    .framework-header-sub { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 0.85rem; font-style: italic; color: var(--rule); }
+    .framework-layers { display: grid; grid-template-columns: repeat(3, 1fr); }
+    .framework-layer { padding: 1.25rem 1rem; border-right: 1px solid var(--rule); }
+    .framework-layer:last-child { border-right: none; }
+    .framework-layer-num { font-family: 'JetBrains Mono', monospace; font-size: 0.45rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--muted); margin-bottom: 0.4rem; }
+    .framework-layer-name { font-family: 'Space Grotesk', serif; font-size: 1rem; font-weight: 700; color: var(--accent); margin-bottom: 0.5rem; line-height: 1.2; }
+    .framework-layer-desc { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 0.88rem; line-height: 1.65; color: var(--ink); }
+    .framework-resonance { padding: 1.25rem; border-top: 2px solid var(--accent); background: var(--accent-light); }
+    .framework-resonance-label { font-family: 'JetBrains Mono', monospace; font-size: 0.45rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--accent); margin-bottom: 0.4rem; }
+    .framework-resonance-name { font-family: 'Space Grotesk', serif; font-size: 1rem; font-weight: 700; color: var(--deep); margin-bottom: 0.5rem; }
+    .framework-resonance-desc { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 0.88rem; line-height: 1.65; color: var(--ink); }
+    .framework-footer { background: var(--highlight); padding: 0.75rem 1.25rem; border-top: 1px solid var(--rule); }
+    .framework-footer p { font-family: 'JetBrains Mono', monospace; font-size: 0.48rem; letter-spacing: 0.1em; color: var(--muted); margin: 0; text-align: center; }
+    @media (max-width: 680px) { .framework-layers { grid-template-columns: 1fr; } .framework-layer { border-right: none; border-bottom: 1px solid var(--rule); } }
+
+    /* Construct definition */
+    .construct-def { margin: 2.5rem 0; border: 1px solid var(--framework); background: var(--framework-light); padding: 1.75rem; }
+    .construct-def-label { font-family: 'JetBrains Mono', monospace; font-size: 0.46rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--framework); margin-bottom: 0.5rem; }
+    .construct-def-name { font-family: 'Space Grotesk', serif; font-size: 1.25rem; font-weight: 900; color: var(--framework); margin-bottom: 0.75rem; }
+    .construct-def-body { font-size: 0.95rem; line-height: 1.75; color: var(--deep); }
+    .construct-def-body p { margin-bottom: 0.75rem; text-align: left !important; }
+    .construct-def-body p::first-letter { float: none !important; font-size: inherit !important; color: inherit !important; margin: 0 !important; }
+    .construct-def-body p:last-child { margin-bottom: 0; }
+
+    /* Action block */
+    .action-block { margin: 2.5rem 0; border: 1px solid var(--rule); overflow: hidden; }
+    .action-header { background: var(--deep); color: var(--paper); padding: 0.9rem 1.25rem; }
+    .action-header span { font-family: 'JetBrains Mono', monospace; font-size: 0.52rem; letter-spacing: 0.2em; text-transform: uppercase; }
+    .action-row { display: grid; grid-template-columns: 48px 1fr; border-bottom: 1px solid var(--rule); }
+    .action-row:last-child { border-bottom: none; }
+    .action-num { padding: 1rem; background: var(--highlight); border-right: 1px solid var(--rule); display: flex; align-items: flex-start; justify-content: center; padding-top: 1.1rem; }
+    .action-num span { font-family: 'Space Grotesk', serif; font-size: 1.15rem; font-weight: 900; color: var(--accent); }
+    .action-text { padding: 1rem 1.25rem; }
+    .action-text strong { font-family: 'JetBrains Mono', monospace; font-size: 0.5rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--accent); display: block; margin-bottom: 0.35rem; }
+    .action-text p { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 0.95rem; line-height: 1.7; color: var(--ink); margin: 0 0 0.75rem; }
+    .action-text p:last-child { margin-bottom: 0; }
+
+    /* Connections block */
+    .connections { margin: 2.5rem 0; border: 1px solid var(--rule); }
+    .connections-header { padding: 0.75rem 1.25rem; background: var(--highlight); border-bottom: 1px solid var(--rule); }
+    .connections-header span { font-family: 'JetBrains Mono', monospace; font-size: 0.48rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--muted); }
+    .connection-row { display: grid; grid-template-columns: 120px 1fr; border-bottom: 1px solid var(--rule); }
+    .connection-row:last-child { border-bottom: none; }
+    .connection-label { padding: 0.9rem 1rem; background: var(--highlight); border-right: 1px solid var(--rule); display: flex; align-items: center; }
+    .connection-label span { font-family: 'JetBrains Mono', monospace; font-size: 0.48rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent); }
+    .connection-text { padding: 0.9rem 1.25rem; font-family: 'Plus Jakarta Sans', sans-serif; font-size: 0.95rem; line-height: 1.7; color: var(--ink); }
+    @media (max-width: 680px) { .connection-row { grid-template-columns: 1fr; } .connection-label { border-right: none; border-bottom: 1px solid var(--rule); } }
+
+    /* Mobile overrides */
+    @media (max-width: 768px) {
+      .hero { grid-template-columns: 1fr; padding: 3rem 1.5rem 2rem; }
+      .hero-illustration { display: none; }
+      .content { padding: 0 1.5rem 5rem; }
+      .pull-quote { margin: 2rem 0; }
+      .paper-nav { padding: 0 1.5rem 3rem; }
+    }
+  </style>
+</head>
+<body class="series-nf">
+  <a href="#main-content" class="skip-link">Skip to content</a>
+  <div id="pbar"></div>
+  <div id="pbar-label"></div>
+  <div class="bg-pattern"></div>
+  <div class="bg-grain"></div>
+  <div class="page-wrap">
+
+      <!-- Top Bar -->
+  <div class="top-bar">
+    <span>Buenos Aires &middot; Since 2008</span>
+    <span>18 Essays &middot; 3 Frameworks &middot; ~289 min of reading &middot; <a href="about.html">About the author</a></span>
+  </div>
+
+  <!-- Nav -->
+  <nav class="nav">
+      <div class="nav-inner">
+        <a href="index.html" class="nav-brand">Narrative<em>Mechanics</em></a>
+        <button class="nav-btn nav-toggle" aria-label="Menu" aria-expanded="false" aria-controls="navLinks" id="navToggle">
+          <svg viewBox="0 0 24 24"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg>
+        </button>
+        <div class="nav-links" id="navLinks">
+          <a href="index.html" class="nav-link">Home</a>
+          <div class="nav-sep"></div>
+          <a href="archive.html" class="nav-link">Start Here</a>
+          <a href="frameworks.html" class="nav-link">Frameworks</a>
+          <a href="series.html" class="nav-link">Series</a>
+          <a href="essays.html" class="nav-link">Essays</a>
+          <a href="notes.html" class="nav-link">Notes</a>
+          <div class="nav-sep"></div>
+          <a href="about.html" class="nav-link">About</a>
+        </div>
+        <div class="nav-right">
+          <button class="nav-btn" aria-label="Toggle theme" id="themeToggle">
+            <svg class="icon-moon" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+            <svg class="icon-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <section class="hero">
+      <div>
+        <div class="hero-kicker">Paper Six &nbsp;/&nbsp; Environment</div>
+        <h1 class="hero-title">Before You<br><em>Map</em></h1>
+        <p class="hero-subtitle">The Negotiated Moment: on why the consumer journey is no longer a human path, and what to do about it.</p>
+        <div class="hero-byline">
+          <div class="hero-byline-dot"></div>
+          <div class="hero-byline-text">Diego Dell'Agostino</div>
+        </div>
+      </div>
+      <div class="hero-illustration">
+        <svg class="hero-svg" viewBox="0 0 160 200" xmlns="http://www.w3.org/2000/svg">
+        <style>
+          @keyframes draw-map{from{stroke-dashoffset:300}to{stroke-dashoffset:0}}
+          @keyframes pin-drop{from{transform:translateY(-8px);opacity:0}to{transform:translateY(0);opacity:1}}
+          @keyframes fade-in{from{opacity:0}to{opacity:1}}
+        </style>
+        <!-- Territory outline -->
+        <path d="M30 50 Q50 30,80 35 Q110 30,130 55 Q145 80,135 110 Q130 140,100 155 Q70 165,45 150 Q20 135,25 105 Q20 75,30 50Z"
+              stroke="var(--rule)" stroke-width="1" fill="none"
+              stroke-dasharray="300" style="animation:draw-map 2s ease-out forwards"/>
+        <!-- Internal paths -->
+        <path d="M50 70 Q65 85,80 80 Q95 75,110 90" stroke="var(--muted)" stroke-width="0.8" fill="none" stroke-dasharray="3 2"
+              opacity="0" style="animation:fade-in 0.5s 1.5s forwards"/>
+        <path d="M60 120 Q80 105,100 115" stroke="var(--muted)" stroke-width="0.8" fill="none" stroke-dasharray="3 2"
+              opacity="0" style="animation:fade-in 0.5s 1.8s forwards"/>
+        <!-- Map pins -->
+        <circle cx="80" cy="80" r="4" fill="var(--accent)" opacity="0" style="animation:pin-drop 0.4s 2s ease-out forwards"/>
+        <circle cx="50" cy="70" r="3" fill="var(--accent)" opacity="0.6" style="animation:pin-drop 0.4s 2.2s ease-out forwards"/>
+        <circle cx="110" cy="90" r="3" fill="var(--accent)" opacity="0.6" style="animation:pin-drop 0.4s 2.4s ease-out forwards"/>
+        <circle cx="70" cy="120" r="3" fill="var(--muted)" opacity="0" style="animation:pin-drop 0.4s 2.6s ease-out forwards"/>
+        <circle cx="100" cy="115" r="3" fill="var(--muted)" opacity="0" style="animation:pin-drop 0.4s 2.8s ease-out forwards"/>
+        <!-- You are here -->
+        <circle cx="80" cy="80" r="8" fill="none" stroke="var(--accent)" stroke-width="1" opacity="0"
+                style="animation:pin-drop 0.3s 2s forwards"/>
+        <!-- Label -->
+        <text x="80" y="190" font-family="monospace" font-size="6" fill="var(--accent)" text-anchor="middle" letter-spacing="2"
+              opacity="0" style="animation:fade-in 0.5s 3s forwards">MAP</text>
+      </svg>
+      </div>
+    </section>
+
+        <div class="chapter-divider">
+      <div class="chapter-divider-line"></div>
+    </div>
+
+    <main class="content" id="main-content">
+
+      <!-- SECTION I -->
+      <article class="section">
+        <div class="section-badge">
+          <div class="section-icon">
+            <svg viewBox="0 0 24 24"><path d="M9 20H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h3.9a2 2 0 0 1 1.69.9l.81 1.2a2 2 0 0 0 1.67.9H20a2 2 0 0 1 2 2v2"/><path d="m13 13 4 4m0 0 4-4m-4 4V7"/></svg>
+          </div>
+          <div class="section-meta">
+            <div class="section-number">Section I &nbsp;/&nbsp; Four</div>
+            <h2 class="section-title">The Map You Are Using Is Wrong</h2>
+          </div>
+        </div>
+        <div class="section-rule"></div>
+        <div class="section-body">
+          <p>The consumer journey frameworks most organizations use today were designed for a world that no longer exists. AIDA dates to 1898. McKinsey's Consumer Decision Journey, the most sophisticated version of the idea, is from 2009. Both were built on the same foundational assumption: the human is the primary agent in the journey. The consumer sees, evaluates, decides. The environment through which they move is a neutral channel. A pipe between brand and audience.</p>
+
+          <div class="margin-note">Every major consumer journey model treats the environment as neutral. That assumption was wrong before it was proven wrong.</div>
+
+          <p>That assumption is no longer the most useful one to make. Not because it was wrong then, but because the territory it described has been restructured by something it did not anticipate: algorithmic architecture that does not transport intent but transforms it. Search ranking systems, social feed curation, recommendation engines, AI assistants that filter and sequence and summarize before any human eye arrives. These systems are not neutral. They optimize for engagement, time on platform, advertiser revenue. They do not care about the original desire that sent the consumer into the environment. The path the consumer experiences as their own is substantially shaped by systems with objectives that have nothing to do with that desire.</p>
+
+          <div class="pull-quote">
+            <p>The environment is not a pipe. It is a party with interests of its own. And it has been redesigning your consumer's journey without your knowledge or consent.</p>
+          </div>
+
+          <p>The objection I anticipate is that media has always mediated. Advertising, editorial gatekeepers, retail layout, TV scheduling: none of this is new. That objection is correct. Here is why it does not settle the question. Historical mediation was static and recognizable. A consumer could see it as advertising, as a shelf arrangement, as a broadcast format. It could not learn their individual behavior and recalibrate against it in real time. It did not know their specific hesitations, their browsing history from yesterday, their susceptibility to scarcity versus social proof. It was influence operating on populations with fixed interventions. What we are dealing with now is influence operating on individuals, continuously, with adaptive optimization against their own revealed signals. That is a structural difference, not a matter of scale. The map most organizations are using to navigate the consumer journey describes a territory that was replaced while everyone was watching the metrics.</p>
+
+          <p>I call the cost of not updating the map <strong>Journey Debt</strong>. The mechanism is this: you set KPIs at the layer where measurement is easy. You optimize content toward what the algorithm amplifies. You read the engagement data as signal about your audience when it is actually signal about the algorithm's preferences. Each decision is individually defensible. Cumulatively, every cycle reinforces the distortion as your default, and makes the gap between your original intent and what your audience actually receives wider and harder to locate. Journey Debt does not announce itself with a dashboard alert. It shows up later as an audience that engages with your content but does not trust your authority when it counts. High reach, shallow roots. By the time it is legible, the decisions that caused it are buried under years of work that each seemed correct at the time.</p>
+        </div>
+      </article>
+
+      <!-- SECTION II -->
+      <article class="section">
+        <div class="section-badge">
+          <div class="section-icon">
+            <svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+          </div>
+          <div class="section-meta">
+            <div class="section-number">Section II &nbsp;/&nbsp; Four</div>
+            <h2 class="section-title">The Three Layers and the Diagnostic Lens</h2>
+          </div>
+        </div>
+        <div class="section-rule"></div>
+        <div class="section-body">
+          <p>The consumer journey in an algorithmically mediated environment is not a path taken by a human toward a decision. It is a negotiation between what the human originally wanted and what the architecture around them allowed them to want. I call this the Negotiated Moment. Not a single event, but the ongoing dynamic in which human intentionality and machine logic bargain over the shape of the decision.</p>
+
+          <p>The framework applies most directly to audiences that arrive with pre-existing intent: a desire, a problem, a question, formed before they entered the algorithmic environment. For audiences whose desires were formed entirely inside curated feeds, the negotiation starts earlier and the framework needs a different entry point. That is a real boundary. I am noting it here because pretending a framework has no seams is exactly the move that makes frameworks useless in practice.</p>
+
+          <p>Within that scope, here is the structure.</p>
+
+          <div class="framework-block">
+            <div class="framework-header">
+              <span class="framework-header-title">The Negotiated Moment</span>
+              <span class="framework-header-sub">Three layers and a diagnostic lens</span>
+            </div>
+            <div class="framework-layers">
+              <div class="framework-layer">
+                <div class="framework-layer-num">Layer 01</div>
+                <div class="framework-layer-name">Intent</div>
+                <div class="framework-layer-desc">The last purely human moment. A raw desire, problem, or need before any algorithmic contact. For most digital categories, this window is measured in seconds. Almost no organization researches this layer directly.</div>
+              </div>
+              <div class="framework-layer">
+                <div class="framework-layer-num">Layer 02</div>
+                <div class="framework-layer-name">Mediation</div>
+                <div class="framework-layer-desc">Where the architecture intervenes. Filters, ranks, sequences, recommends. Intent is reshaped without the consumer's awareness. This is where the map breaks. Most organizations are structurally blind here.</div>
+              </div>
+              <div class="framework-layer">
+                <div class="framework-layer-num">Layer 03</div>
+                <div class="framework-layer-name">Attribution</div>
+                <div class="framework-layer-desc">Where the decision occurs and is measured. The consumer believes they chose freely. Almost all organizational dashboards live here. The distortion from Layer 02 is invisible from this vantage point.</div>
+              </div>
+            </div>
+            <div class="framework-resonance">
+              <div class="framework-resonance-label">Diagnostic Lens</div>
+              <div class="framework-resonance-name">Resonance</div>
+              <div class="framework-resonance-desc">Not a stage in the journey but a measurement of its integrity. Resonance is the distance between Layer 01 intent and Layer 03 outcome. High resonance means the journey served the human's original desire. Low resonance means it did not, even if they converted. It is the only measurement that predicts whether the relationship built will hold under pressure.</div>
+            </div>
+            <div class="framework-footer">
+              <p>The further the outcome drifts from original intent, the more fragile the relationship, regardless of what the conversion metrics report.</p>
+            </div>
+          </div>
+
+          <p>The most important observation about this framework is not what it explains. It is what it makes visible about current practice. Almost all strategy, content design, and measurement lives at Layer 03. Click rates, conversions, engagement, cost per acquisition. These are measurements of what happened after the negotiation was already over. They tell you the outcome. They tell you nothing about what was bargained away to get there.</p>
+
+          <div class="margin-note">Almost all organizational measurement lives at Layer 03. The negotiation at Layer 02 is invisible from there. That invisibility is not accidental.</div>
+
+          <p>Layer 02 is the layer with no metric attached to it in any standard analytics stack. The algorithmic systems operating here were not designed to serve your content strategy or your audience's intentions. They were designed to optimize for engagement, time on platform, and advertiser revenue. Your content enters this layer and what arrives at Layer 03 is a recombined, reranked version of what you put in. That gap is not noise. It is structured distortion, and it compounds with every optimization cycle you run against Layer 03 data alone, because every cycle teaches you to produce more of what survived the distortion rather than less of what caused it.</p>
+
+          <p>Resonance is the name for the measurement that gap requires. It is not a metric anyone has standardized. It is not something you can pull from a dashboard. It is a diagnostic orientation: a commitment to asking whether the outcome of the journey served the human's original intent, not just whether a conversion occurred. A lens, not a formula. The organizations that will navigate the next decade of algorithmic mediation are the ones that develop some version of this orientation, in whatever form is native to their category. The ones that do not will keep optimizing a system whose distortions they cannot see.</p>
+        </div>
+      </article>
+
+      <!-- SECTION III -->
+      <article class="section">
+        <div class="section-badge">
+          <div class="section-icon">
+            <svg viewBox="0 0 24 24"><path d="M12 2 L12 6 M12 18 L12 22 M4.93 4.93 L7.76 7.76 M16.24 16.24 L19.07 19.07 M2 12 L6 12 M18 12 L22 12 M4.93 19.07 L7.76 16.24 M16.24 7.76 L19.07 4.93"/></svg>
+          </div>
+          <div class="section-meta">
+            <div class="section-number">Section III &nbsp;/&nbsp; Four</div>
+            <h2 class="section-title">Mediation Drift and Mediation Fitness</h2>
+          </div>
+        </div>
+        <div class="section-rule"></div>
+        <div class="section-body">
+          <p>In <a href="paper-04.html" style="color:var(--accent);text-decoration:underline;text-decoration-color:var(--rule);text-underline-offset:3px;transition:text-decoration-color 0.2s">the fourth paper in this series</a> I described Narrative Drift: the process by which an organization's original narrative gets diluted through a sequence of individually reasonable decisions, each one small enough to seem harmless, collectively fatal to coherence. Organizational entropy that is only visible when it is already expensive to reverse. The pattern I am describing here is the external version of that same dynamic. It has a different cause and it requires a different kind of attention.</p>
+
+          <div class="construct-def">
+            <div class="construct-def-label">New Construct</div>
+            <div class="construct-def-name">Mediation Drift</div>
+            <div class="construct-def-body">
+              <p>The progressive distortion of a brand's intended message as it travels through algorithmic architecture, without any internal decision causing it. Where Narrative Drift is organizational entropy, Mediation Drift is environmental entropy. An organization can hold perfect narrative coherence internally and still have what arrives at the audience be a distorted projection of that coherence, because Layer 02 systematically amplifies certain signals and suppresses others regardless of what you intended. Nobody flags it because the distortion does not appear in any internal audit. It shows up in the gap between the voice you designed and the voice your audience actually experienced.</p>
+            </div>
+          </div>
+
+          <p>Here is the specific mechanism I am proposing: algorithmic platforms reward emotional legibility over nuance, volume over depth, and novelty over consistency. If your content strategy is built around interpretive authority, which is the hardest thing to build and the most valuable thing to have, Layer 02 will systematically surface the version of your work that is most emotionally immediate and suppress the version that requires the most thought. Over time, if your only feedback loop is Layer 03 data, you will optimize toward the distorted projection. The signal you are reading as audience preference is partly the algorithm's preference. The two are not the same. Treating them as the same is how organizations slowly become the algorithm's preferred version of themselves rather than their own.</p>
+
+          <div class="margin-note">Narrative Drift happens inside. Mediation Drift happens on the way out. Most organizations have a framework for the first and nothing for the second.</div>
+
+          <p>The most common response I observe to this dynamic is to produce louder or more emotionally charged content. That does not reduce the drift. It accelerates it. You are not building your voice anymore. You are building the algorithm's preferred projection of your voice and calling it distribution strategy.</p>
+
+          <p>The distinction between CMI and Mediation Fitness is worth being precise about, because conflating them is costly.</p>
+
+          <div class="construct-def">
+            <div class="construct-def-label">New Construct</div>
+            <div class="construct-def-name">Mediation Fitness</div>
+            <div class="construct-def-body">
+              <p>The structural capacity of a message to maintain its intended meaning across algorithmic mediation. Not gaming the algorithm. Not volume. Not presence. The degree to which what you actually mean can survive the transformation that Layer 02 applies to it and still be recognizable on the other side. It is a property of the message's internal coherence, not of the distribution architecture around it.</p>
+            </div>
+          </div>
+
+          <p>CMI is architecture: how do I build presence across the right surfaces at the right moments? That is a distribution question. Mediation Fitness is craft: does the message I am distributing have the structural properties to survive the journey without losing what makes it mine? The difference is visible in practice. Two organizations in the same category can run identical CMI architectures, identical surface coverage, identical publishing cadence. One produces content where the core argument is self-contained in the first paragraph and every subsequent paragraph is a development of that argument, each sentence doing specific work. The other produces content where the core argument is buried in context, requires the full piece to land, and depends on nuance to be understood. The first survives Layer 02 consistently. The second gets surfaced as a headline and a hook and nothing else. Same architecture. Radically different Mediation Fitness. CMI is about being there. Mediation Fitness is about arriving as yourself. They are different problems and most organizations are only working on one of them.</p>
+
+          <p>I do not have a formula for building Mediation Fitness. I think the audit practice is: take your best-performing content from the last month. Compare what you intended to say with what your audience actually attributes back to you in their own language. Not their engagement behavior. What they repeat, how they describe you when they are not talking to you, what they cite when they are trying to convince someone else. The gap between those two things is your Mediation Drift exposure. If it is wide, your Layer 03 metrics are measuring the algorithm's version of you. If it is narrow, you have Mediation Fitness. The audit is uncomfortable because it requires going outside your own analytics to find the answer, and most of what you find there will not be flattering.</p>
+
+          <div class="pull-quote">
+            <p>The algorithm will always have an opinion about your content. Mediation Fitness is about making sure that opinion does not become the only version of you that arrives.</p>
+          </div>
+
+          <p>There is a harder version of this problem coming that makes all of the above feel preliminary. As agentic AI systems, tools that conduct searches, filter information, and execute decisions on behalf of users without real-time human involvement, become the primary interface between your content and your audience, the Mediation Layer will no longer be experienced by the human at all. The negotiation between intent and architecture will happen entirely between machines. The question of Mediation Fitness will not be whether a human can recognize your voice through the distortion. It will be whether an AI agent representing a human's interests will surface you at all. The organizations that have worked on Layer 01 understanding and Resonance will be positioned for that world. The ones that optimized Layer 03 exclusively will find the agents have no reason to recommend them.</p>
+        </div>
+      </article>
+
+      <!-- SECTION IV -->
+      <article class="section">
+        <div class="section-badge">
+          <div class="section-icon">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+          </div>
+          <div class="section-meta">
+            <div class="section-number">Section IV &nbsp;/&nbsp; Four</div>
+            <h2 class="section-title">Before You Map</h2>
+          </div>
+        </div>
+        <div class="section-rule"></div>
+        <div class="section-body">
+          <p>The costs that destroy organizations are the ones that accumulate silently, without a metric attached. Strategic Debt, Narrative Drift, Message-Market misalignment, scale without governance: all of them share the same structure. They are invisible until they are irreversible. Journey Debt belongs in that family. You can run a sophisticated content operation, build genuine presence across multiple surfaces, execute every framework in this series correctly, and still suffer the consequences of operating with a broken map of how your audience actually moves.</p>
+
+          <p>The framework has a testable boundary. If you compare audiences that arrived through high-mediation paths (algorithmic recommendation, social feed discovery) against audiences that sought you out directly through low-mediation paths (direct navigation, referral, search by name), and you find no meaningful difference in long-term retention, trust behavior, or advocacy over eighteen months, then the distortion this paper attributes to Layer 02 does not produce the consequences I am claiming. That comparison is available to any organization with a functional analytics stack and the discipline to run it. Run it. If the gap is not there, this framework needs revision in your category.</p>
+
+          <div class="pull-quote">
+            <p>Most organizations are optimizing Layer 03 while the territory is being redrawn at Layer 02. The map is always the last to know.</p>
+          </div>
+
+          <p>Before any significant strategy or content cycle, I work through three moves. Not methodology. The minimum standard of honesty about the environment I am actually operating in.</p>
+
+          <div class="action-block">
+            <div class="action-header"><span>Three Moves Before You Map</span></div>
+            <div class="action-row">
+              <div class="action-num"><span>1</span></div>
+              <div class="action-text">
+                <strong>Audit Layer 01 directly, or admit you cannot</strong>
+                <p>Go back to raw audience intent before your content or anyone else's touches them. Forum listening, direct conversation, qualitative research into what they are trying to resolve before any content exists. If your audience is one where Layer 01 may not exist in a pre-algorithmic form, name that explicitly before you build strategy. An audience whose desires were formed inside feeds requires a different kind of understanding than one that arrived with pre-existing intent. Most strategies do not distinguish between the two. That distinction matters enormously for what you build.</p>
+              </div>
+            </div>
+            <div class="action-row">
+              <div class="action-num"><span>2</span></div>
+              <div class="action-text">
+                <strong>Run a Mediation Drift audit outside your analytics</strong>
+                <p>Take one month of your best-performing content. Compare what you intended to say with what your audience actually attributes back to you in their own language, in the places where they are not talking to you. What they repeat, how they describe you, what they cite. The gap between those two is your Mediation Drift exposure. If it is wide, your Layer 03 metrics are measuring the algorithm's version of you. Platform analytics cannot show you this gap because they measure Layer 03 by definition. The audit has to happen outside them.</p>
+              </div>
+            </div>
+            <div class="action-row">
+              <div class="action-num"><span>3</span></div>
+              <div class="action-text">
+                <strong>Track one Resonance signal, however imperfect</strong>
+                <p>Resonance is not in your analytics dashboard by default. You have to go looking for it. Three proxies, in order of effort.</p>
+                <p>The first is available this week in any analytics stack: the ratio of direct traffic plus branded search against total traffic. Direct means someone typed your URL. Branded search means someone searched your name specifically, not your category. Both are behaviors with no algorithmic mediation between intent and arrival. If that ratio is growing, your Resonance is building. If it is flat while total traffic grows, you are acquiring audience through Layer 02 that is not converting into people who remember you exist.</p>
+                <p>The second is harder to capture but more revealing: dark social. Content shared by DM, email, Slack, without a tracked link. It does not appear in referral data. It shows up as direct traffic with no referrer, or does not show up at all. Start tagging your most important pieces with UTM parameters and watch the unattributed traffic. A high dark social volume means people are sending your work to each other on purpose, outside any feed. That is Resonance the algorithm did not produce and cannot take credit for.</p>
+                <p>The third takes an hour and requires no tools: search your name in conversations where you did not start the thread. Reddit, LinkedIn, industry Slack communities, X. What people say about you when they are not talking to you is what survived the Mediation Layer intact. It is the closest thing to a direct reading of Layer 01 intent meeting Layer 03 outcome that most organizations never bother to take.</p>
+              </div>
+            </div>
+          </div>
+
+          <p>The papers before this one were about what happens inside the organization. How narrative precedes product. How message must fit market. How coherence must be governed at scale. Those arguments are incomplete without this one. You can achieve complete internal coherence and still have your message arrive at your audience as something they do not recognize as yours, because the environment it travels through has an agenda that was never yours to control. Before you map your audience's journey, the minimum useful thing is to know that the journey has other architects, and to have a working hypothesis about what they are optimizing for.</p>
+
+          <div class="connections">
+            <div class="connections-header">
+              <span>Connected Frameworks</span>
+            </div>
+            <div class="connection-row">
+              <div class="connection-label"><a href="thesis.html" style="color:inherit;text-decoration:none"><span>ZMOI</span></a></div>
+              <div class="connection-text">The Zero Moment of Interpretation names the territory: the moment before belief forms. The Negotiated Moment proposes what is happening inside that territory. A structural contest between human intent and algorithmic mediation. ZMOI tells you the moment exists and why it matters. This framework tells you who else is inside it, and what they want from it.</div>
+            </div>
+            <div class="connection-row">
+              <div class="connection-label"><a href="thesis.html" style="color:inherit;text-decoration:none"><span>CMI</span></a></div>
+              <div class="connection-text">The Continuous Moment of Intent is a presence architecture for capturing ZMOI across multiple surfaces. CMI answers: am I there at the right moment? Mediation Fitness asks the prior question: when I am there, do I arrive as myself? They are sequential obligations. Solving CMI without addressing Mediation Fitness means you are present at the right moment and unrecognizable when you arrive.</div>
+            </div>
+            <div class="connection-row">
+              <div class="connection-label"><a href="occlusion-bias.html" style="color:inherit;text-decoration:none"><span>Occlusion Bias</span></a></div>
+              <div class="connection-text">Occlusion Bias maps the supply side: how the distribution layer hides genuine signal at volume. The Negotiated Moment maps the demand side: how the same layer reshapes what the consumer actually experiences. They describe the same system from opposite vantage points. Origin Gravity, the force pulling audiences toward direct sources, is the structural consequence of chronic low Resonance. The Negotiated Moment is the mechanism underneath what Occlusion Bias observes from the surface.</div>
+            </div>
+            <div class="connection-row">
+              <div class="connection-label"><a href="paper-02.html" style="color:inherit;text-decoration:none"><span>MMF</span></a></div>
+              <div class="connection-text">Message-Market Fit asks: does the market recognize your product when it arrives? Mediation Fitness asks the prior question: does your message arrive in a form the market can recognize? Strong MMF with poor Mediation Fitness means the market would know you if it could see you clearly. Layer 02 is the reason it cannot. The two frameworks are working on adjacent parts of the same problem.</div>
+            </div>
+            <div class="connection-row">
+              <div class="connection-label"><a href="zmox.html" style="color:inherit;text-decoration:none"><span>CAX</span></a></div>
+              <div class="connection-text">The Constitutive Arc proposes that sustained exposure to a narrative field shapes who the audience becomes, not just what they decide. The Negotiated Moment proposes the mechanism by which that field reaches them: mediated, transformed, filtered by architecture with its own objectives. If the Mediation Layer consistently shapes what your audience encounters, it eventually shapes who they are. The Constitutive Arc is what happens at the scale of identity when the Negotiated Moment operates repeatedly over time. The NIF needs the CAX to explain where it ends.</div>
+            </div>
+          </div>
+
+        </div>
+      </article>
+
+      <div class="closing">
+        <div class="closing-ornament-top">&#10022; &nbsp; &#10087; &nbsp; &#10022;</div>
+        <p>The map was never the territory. In algorithmically mediated environments, the territory is actively working against your map.</p>
+        <p>Before you map the journey, know who else is mapping it.</p>
+        <div class="closing-ornament-bottom">End of Paper No. 6 &nbsp;&middot;&nbsp; Narrative-First Series</div>
+      </div>
+      <div style="max-width:720px;margin:1.5rem auto 0;padding:0 2.5rem;font-family:'JetBrains Mono',monospace;font-size:0.5rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--muted);">February 2026</div>
+
+    </main>
+
+    <div style="max-width:680px;margin:0 auto;padding:0 4rem 2rem;">
+      <p style="font-family:'Inter',serif;font-size:1rem;line-height:1.75;color:var(--muted);font-style:italic;">This completes the essay series. For the structural argument about what AI changes in all of this, read The Last Human Impression.</p>
+    </div>
+
+    <div class="paper-nav">
+      <a href="paper-05.html" class="paper-nav-prev">
+        <svg viewBox="0 0 24 24"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+        Launching Into Noise
+      </a>
+    </div>
+
+    <footer>
+      <div class="footer-left">&copy; 2026 Diego Dell'Agostino</div>
+      <div class="footer-center">&#10087;</div>
+      <div class="footer-right">Paper 06 &nbsp;&middot;&nbsp; Narrative-First</div>
+    </footer>
+
+  </div>
+<script src="global.js?v=20260419b"></script>
+</body>
+</html>

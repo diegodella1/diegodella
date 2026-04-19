@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-TJF4P0NYFT"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-TJF4P0NYFT');
+  </script>
+  <script>(function(){var t=localStorage.getItem("theme");if(!t)t=window.matchMedia("(prefers-color-scheme:dark)").matches?"dark":"light";document.documentElement.setAttribute("data-theme",t)})()</script>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <meta name="theme-color" content="#e6d5b8">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="Narrative Mechanics">
+  <link rel="apple-touch-icon" href="/og-default.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Message-Market Fit: why products with real product-market fit still fail at launch. The narrative gap no one talks about. Paper 02.">
+  <meta name="author" content="Diego Dell'Agostino">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://diegodella.ar/paper-02.html">
+  <meta property="og:title" content="Message-Market Fit - Narrative-First Paper 02">
+  <meta property="og:description" content="Message-Market Fit: why products with real product-market fit still fail at launch. The narrative gap no one talks about. Paper 02.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://diegodella.ar/paper-02.html">
+  <meta property="og:site_name" content="Narrative Mechanics">
+  <meta property="og:image" content="https://diegodella.ar/og-default.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Message-Market Fit - Narrative-First Paper 02">
+  <meta name="twitter:description" content="Message-Market Fit: why products with real product-market fit still fail at launch. The narrative gap no one talks about. Paper 02.">
+  <meta name="twitter:image" content="https://diegodella.ar/og-default.png">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ScholarlyArticle",
+    "headline": "Message-Market Fit",
+    "description": "The second paper in the Narrative-First series. Message-Market Fit examines why products with genuine product-market fit still fail to achieve recognition at launch. By Diego Dell'Agostino.",
+    "author": {
+      "@type": "Person",
+      "name": "Diego Dell'Agostino",
+      "url": "https://diegodella.ar/about.html"
+    },
+    "isPartOf": {
+      "@type": "CreativeWorkSeries",
+      "name": "Narrative-First",
+      "url": "https://diegodella.ar/paper-01.html",
+      "position": 2
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Narrative Mechanics",
+      "url": "https://diegodella.ar"
+    },
+    "url": "https://diegodella.ar/paper-02.html",
+    "datePublished": "2026-02-20",
+    "inLanguage": "en"
+  }
+  </script>
+  <title>Message-Market Fit - Narrative-First Paper 02</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;700&family=Epilogue:ital,wght@0,400;1,400;0,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="global.css?v=20260418f">
+  <link rel="stylesheet" href="components.css?v=20260418f">
+  <style>
+    /* Nav */
+    /* Nav styles removed — using global.css v2 nav */
+
+    /* Hero */
+    .hero { max-width: 900px; margin: 0 auto; padding: 6rem 3rem 5rem; display: grid; grid-template-columns: 1fr auto; gap: 3rem; align-items: start; }
+    .hero-title { font-family: 'Space Grotesk', serif; font-size: clamp(2.8rem, 6vw, 5rem); font-weight: 900; line-height: 1.0; letter-spacing: -0.025em; margin-bottom: 1rem; }
+    .hero-title em { font-style: italic; color: var(--ink); display: block; text-decoration: none; background: linear-gradient(180deg, transparent 54%, color-mix(in srgb, var(--accent) 18%, transparent) 54%); padding: 0 0.08em 0.02em 0; box-decoration-break: clone; -webkit-box-decoration-break: clone; }
+    .hero-subtitle { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 1.15rem; font-style: italic; color: var(--muted); margin-bottom: 2rem; line-height: 1.5; max-width: 440px; }
+    .hero-illustration { width: 280px; flex-shrink: 0; padding-top: 1rem; opacity: 0.85; }
+
+    /* Content */
+    .content { max-width: 720px; margin: 0 auto; padding: 0 2.5rem 8rem; }
+
+    /* Section animations */
+    .section { margin-bottom: 5.5rem; opacity: 0; transform: translateY(28px); animation: fadeUp 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards; }
+    .section:nth-child(1) { animation-delay: 0.1s; } .section:nth-child(2) { animation-delay: 0.25s; } .section:nth-child(3) { animation-delay: 0.4s; } .section:nth-child(4) { animation-delay: 0.55s; } .section:nth-child(5) { animation-delay: 0.65s; }
+    @keyframes fadeUp { to { opacity: 1; transform: translateY(0); } }
+
+    /* MMF diagram */
+    .mmf-diagram { border: 1px solid var(--rule); background: var(--highlight); margin: 2.5rem 0; overflow: hidden; }
+    .mmf-diagram-header { background: var(--ink); padding: 0.75rem 1.5rem; }
+    .mmf-diagram-label { font-family: 'JetBrains Mono', monospace; font-size: 0.5rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--paper); opacity: 0.7; }
+    .mmf-diagram-body { padding: 2rem 1.5rem; display: grid; grid-template-columns: 1fr auto 1fr; gap: 0 1rem; align-items: center; }
+    .mmf-box { border: 1px solid var(--rule); padding: 1rem; background: var(--paper); text-align: center; }
+    .mmf-box-title { font-family: 'Space Grotesk', serif; font-size: 0.95rem; font-weight: 700; margin-bottom: 0.3rem; }
+    .mmf-box-desc { font-family: 'JetBrains Mono', monospace; font-size: 0.48rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); }
+    .mmf-arrow { display: flex; flex-direction: column; align-items: center; gap: 0.25rem; }
+    .mmf-arrow-line { width: 1px; height: 20px; background: var(--accent); }
+    .mmf-arrow-head { width: 0; height: 0; border-left: 4px solid transparent; border-right: 4px solid transparent; border-top: 6px solid var(--accent); }
+    .mmf-arrow-label { font-family: 'JetBrains Mono', monospace; font-size: 0.42rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent); writing-mode: horizontal-tb; }
+    .mmf-center { text-align: center; }
+    .mmf-center-badge { display: inline-block; border: 1px solid var(--accent); color: var(--accent); font-family: 'JetBrains Mono', monospace; font-size: 0.48rem; letter-spacing: 0.15em; text-transform: uppercase; padding: 0.3em 0.6em; }
+
+    /* Mobile overrides */
+    @media (max-width: 768px) {
+      .hero { grid-template-columns: 1fr; padding: 3rem 1.5rem 2rem; }
+      .hero-illustration { display: none; }
+      .content { padding: 0 1.5rem 5rem; }
+      .pull-quote { margin: 2rem 0; }
+      .paper-nav { padding: 0 1.5rem 3rem; }
+    }
+  </style>
+</head>
+<body class="series-nf">
+  <a href="#main-content" class="skip-link">Skip to content</a>
+  <div id="pbar"></div>
+  <div id="pbar-label"></div>
+  <div class="bg-pattern"></div>
+  <div class="bg-grain"></div>
+  <div class="page-wrap">
+
+      <!-- Top Bar -->
+  <div class="top-bar">
+    <span>Buenos Aires &middot; Since 2008</span>
+    <span>18 Essays &middot; 3 Frameworks &middot; ~289 min of reading &middot; <a href="about.html">About the author</a></span>
+  </div>
+
+  <!-- Nav -->
+  <nav class="nav">
+      <div class="nav-inner">
+        <a href="index.html" class="nav-brand">Narrative<em>Mechanics</em></a>
+        <button class="nav-btn nav-toggle" aria-label="Menu" aria-expanded="false" aria-controls="navLinks" id="navToggle">
+          <svg viewBox="0 0 24 24"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg>
+        </button>
+        <div class="nav-links" id="navLinks">
+          <a href="index.html" class="nav-link">Home</a>
+          <div class="nav-sep"></div>
+          <a href="archive.html" class="nav-link">Start Here</a>
+          <a href="frameworks.html" class="nav-link">Frameworks</a>
+          <a href="series.html" class="nav-link">Series</a>
+          <a href="essays.html" class="nav-link">Essays</a>
+          <a href="notes.html" class="nav-link">Notes</a>
+          <div class="nav-sep"></div>
+          <a href="about.html" class="nav-link">About</a>
+        </div>
+        <div class="nav-right">
+          <button class="nav-btn" aria-label="Toggle theme" id="themeToggle">
+            <svg class="icon-moon" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+            <svg class="icon-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+          </button>
+        </div>
+      </div>
+    </nav>
+
+
+    
+
+    
+
+    <section class="hero">
+      <div class="hero-left">
+        <div class="hero-kicker">Paper Two &nbsp;/&nbsp; Concept</div>
+        <h1 class="hero-title">Before You<br><em>Fit</em></h1>
+        <p class="hero-subtitle">The Case for Message-Market Fit as a Completion of PMF</p>
+        <div class="hero-byline">
+          <div class="hero-byline-dot"></div>
+          <div class="hero-byline-text">Diego Dell Agostino</div>
+        </div>
+      </div>
+      <div class="hero-illustration">
+        <svg class="hero-svg" viewBox="0 0 160 200" xmlns="http://www.w3.org/2000/svg">
+        <style>
+          @keyframes converge-l{from{transform:translateX(-20px);opacity:0}to{transform:translateX(0);opacity:1}}
+          @keyframes converge-r{from{transform:translateX(20px);opacity:0}to{transform:translateX(0);opacity:1}}
+          @keyframes lock-pulse{0%,100%{r:6;opacity:0.8}50%{r:9;opacity:0.3}}
+          @keyframes fade-in{from{opacity:0}to{opacity:1}}
+        </style>
+        <!-- Product circle (left) -->
+        <circle cx="45" cy="100" r="30" stroke="var(--muted)" stroke-width="1.5" fill="none"
+                style="animation:converge-l 1.2s ease-out forwards"/>
+        <text x="45" y="104" font-family="monospace" font-size="7" fill="var(--muted)" text-anchor="middle"
+              style="animation:converge-l 1.2s ease-out forwards">PMF</text>
+        <!-- Message circle (right) -->
+        <circle cx="115" cy="100" r="30" stroke="var(--accent)" stroke-width="1.5" fill="none"
+                style="animation:converge-r 1.2s ease-out forwards"/>
+        <text x="115" y="104" font-family="monospace" font-size="7" fill="var(--accent)" text-anchor="middle"
+              style="animation:converge-r 1.2s ease-out forwards">MMF</text>
+        <!-- Overlap zone -->
+        <ellipse cx="80" cy="100" rx="12" ry="28" fill="var(--accent)" opacity="0"
+                 style="animation:fade-in 0.6s 1.2s forwards;opacity:0" fill-opacity="0.1"/>
+        <!-- Lock point -->
+        <circle cx="80" cy="100" r="6" fill="var(--accent)" opacity="0"
+                style="animation:lock-pulse 2s 1.5s ease-in-out infinite, fade-in 0.3s 1.5s forwards"/>
+        <!-- Labels -->
+        <text x="80" y="25" font-family="monospace" font-size="6" fill="var(--muted)" text-anchor="middle" letter-spacing="2"
+              opacity="0" style="animation:fade-in 0.5s 1.8s forwards">MESSAGE · MARKET</text>
+        <text x="80" y="185" font-family="monospace" font-size="6" fill="var(--accent)" text-anchor="middle" letter-spacing="2"
+              opacity="0" style="animation:fade-in 0.5s 2s forwards">FIT</text>
+      </svg>
+      </div>
+    </section>
+
+        <div class="chapter-divider">
+      <div class="chapter-divider-line"></div>
+    </div>
+
+    <main class="content" id="main-content">
+
+      <article class="section">
+        <div class="section-badge">
+          <div class="section-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg></div>
+          <div class="section-meta">
+            <div class="section-number">Section I &nbsp;/&nbsp; Five</div>
+            <h2 class="section-title">The Incomplete Victory of Product-Market Fit</h2>
+          </div>
+        </div>
+        <div class="section-rule"></div>
+        <div class="section-body">
+          <p>Product-Market Fit has become the organizing principle of modern product development. Find the right problem, build the right solution, and growth follows. The framework is sound. The logic is clean. And for a generation of builders, it has served as the clearest signal that a product is worth scaling.</p>
+          <div class="margin-note">PMF is necessary. It is not sufficient. The market can need something and still not recognize it when it arrives.</div>
+          <p>But there is a category of failure that PMF does not account for; one that I have seen repeat itself across industries and company sizes. A product achieves genuine fit with a real market need. The retention numbers are there. The problem is real. The solution works. And yet the product stalls. Acquisition gets expensive, adoption slows, and at some point someone in the room proposes doubling the marketing budget to solve a problem that was never a marketing problem to begin with.</p>
+          <div class="pull-quote">
+            <p>PMF tells you the product belongs in the market. It does not tell you whether the market can recognize it when it arrives.</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="section">
+        <div class="section-badge">
+          <div class="section-icon"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+          <div class="section-meta">
+            <div class="section-number">Section II &nbsp;/&nbsp; Five</div>
+            <h2 class="section-title">The Organizational Gap</h2>
+          </div>
+        </div>
+        <div class="section-rule"></div>
+        <div class="section-body">
+          <p>The reason this failure mode persists is structural. In most organizations, the people responsible for building the product and the people responsible for describing it operate under different incentives, different timelines, and different definitions of success. The product team measures fit through behavior (retention, engagement, usage patterns). The communications team measures fit through perception (awareness, sentiment, conversion). These are not the same thing, and the gap between them is where coherence breaks down.</p>
+          <p>A product can solve the right problem and still be described in a way that attracts the wrong user. It can have genuine depth and still be positioned in a way that signals the wrong value. This is not a failure of either team; it is a failure of the system that keeps them separate. When the people who understand the product most deeply are not the same people shaping how it is introduced to the world, the result is almost always a story that undersells, misdirects, or simply fails to land.</p>
+          <p>The market does not experience a product in isolation. It experiences the narrative first, the product second; and that sequence is not neutral. When the two experiences confirm each other, trust forms quickly and acquisition becomes cheaper over time. When they don't, the user feels a gap they may not be able to articulate but will absolutely act on. They leave, or they stay confused, or they never convert in the first place. In each case, the cost is real and the cause is invisible to anyone looking only at the product metrics.</p>
+        </div>
+      </article>
+
+      <article class="section">
+        <div class="section-badge">
+          <div class="section-icon"><svg viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></div>
+          <div class="section-meta">
+            <div class="section-number">Section III &nbsp;/&nbsp; Five</div>
+            <h2 class="section-title">Message-Market Fit</h2>
+          </div>
+        </div>
+        <div class="section-rule"></div>
+        <div class="section-body">
+          <p>What I am proposing is not a replacement for PMF. It is the dimension that completes it.</p>
+          <div class="mmf-diagram">
+            <div class="mmf-diagram-header"><div class="mmf-diagram-label">The Completion Model</div></div>
+            <div class="mmf-diagram-body">
+              <div class="mmf-box"><div class="mmf-box-title">PMF</div><div class="mmf-box-desc">Product belongs in market</div></div>
+              <div class="mmf-center"><div class="mmf-center-badge">+ MMF</div></div>
+              <div class="mmf-box" style="border-color: var(--accent);"><div class="mmf-box-title" style="color:var(--accent)">Recognition</div><div class="mmf-box-desc">Market can identify the product</div></div>
+            </div>
+          </div>
+          <p>Message-Market Fit is the state in which the way a product is described produces the same recognition as the product itself. It is achieved when the user's first encounter with the narrative (a manifesto, a landing page, a pitch) creates an expectation that the product then confirms exactly. Not approximately. Exactly.</p>
+          <p>Think of the products you have seen grow without apparent effort. Not because they outspent the competition, but because every person who encountered them seemed to already understand what they were for. That is not luck and it is not virality. It is the result of a story and a product that have been aligned so precisely that the user's recognition does the work that advertising usually has to buy.</p>
+          <div class="pull-quote">
+            <p>MMF is not a messaging exercise. It is a coherence test. If the story and the product are not confirming each other at every touchpoint, the system is leaking value somewhere. The question is where.</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="section">
+        <div class="section-badge">
+          <div class="section-icon"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></div>
+          <div class="section-meta">
+            <div class="section-number">Section IV &nbsp;/&nbsp; Five</div>
+            <h2 class="section-title">Operating Narratives</h2>
+          </div>
+        </div>
+        <div class="section-rule"></div>
+        <div class="section-body">
+          <p>The practical mechanism for achieving MMF is what I call an Operating Narrative. This is not a positioning document or a brand brief. It is a foundational text that defines, before anything is built or launched, the claim the product is making about the world and the specific user it is making that claim to.</p>
+          <p>An Operating Narrative answers three questions that a PRD does not. What is the worldview this product assumes the user already holds? What is the single recognition moment we are engineering toward? And what does the product have to be true, technically, for the narrative to hold?</p>
+          <div class="margin-note">The Operating Narrative is where strategy becomes engineering. Where "we believe" becomes "therefore we build."</div>
+          <p>That last question is the most important. It is the point where narrative becomes an engineering constraint rather than a marketing afterthought. When the Operating Narrative is clear, every subsequent decision (feature prioritization, onboarding design, even pricing) has a test it can be run against. The question is no longer whether something moves a metric. The question is whether it makes the product more or less true to what it claimed to be.</p>
+        </div>
+      </article>
+
+      <article class="section">
+        <div class="section-badge">
+          <div class="section-icon"><svg viewBox="0 0 24 24"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg></div>
+          <div class="section-meta">
+            <div class="section-number">Section V &nbsp;/&nbsp; Five</div>
+            <h2 class="section-title">Toward a More Coherent Organization</h2>
+          </div>
+        </div>
+        <div class="section-rule"></div>
+        <div class="section-body">
+          <p>Here is the pattern I have observed: companies that achieve PMF without MMF tend to grow through force. More spend, more sales headcount, more content. The machine works but it requires constant fuel. The moment the fuel slows, so does the growth.</p>
+          <p>Companies that achieve both tend to grow through recognition. The right user encounters the product and feels, almost immediately, that it was built for them. That feeling is not an accident. It is the result of a system in which the story and the product have been aligned from the beginning; not reconciled after the fact.</p>
+        </div>
+      </article>
+
+      <div class="closing">
+        <div class="closing-ornament-top">✦ &nbsp; ❧ &nbsp; ✦</div>
+        <p>PMF without MMF is a product that works and has to be explained. MMF without PMF is a promise the product cannot keep.</p>
+        <p>The work is to close that gap before it costs you the users who were always yours to lose.</p>
+        <div class="closing-ornament-bottom">End of Paper No. 2 &nbsp;·&nbsp; Narrative-First Series</div>
+      </div>
+      <div style="max-width:720px;margin:1.5rem auto 0;padding:0 2.5rem;font-family:'JetBrains Mono',monospace;font-size:0.5rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--muted);">February 2026</div>
+
+    </main>
+
+    <div style="max-width:680px;margin:0 auto;padding:0 4rem 2rem;">
+      <p style="font-family:'Inter',serif;font-size:1rem;line-height:1.75;color:var(--muted);font-style:italic;">Message-market fit names the problem. The Architecture of Coherence is the method for solving it.</p>
+    </div>
+
+    <div class="paper-nav">
+      <a href="paper-01.html" class="paper-nav-prev">
+        <svg viewBox="0 0 24 24"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+        Before You Build
+      </a>
+      <a href="paper-03.html" class="paper-nav-next">
+        Architecture of Coherence
+        <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </a>
+    </div>
+
+    <footer>
+      <div class="footer-left">© 2026 Diego Dell Agostino</div>
+      <div class="footer-center">❧</div>
+      <div class="footer-right">Paper 02 &nbsp;·&nbsp; Narrative-First</div>
+    </footer>
+
+  </div>
+<script src="global.js?v=20260419b"></script>
+</body>
+</html>

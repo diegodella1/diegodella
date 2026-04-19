@@ -1,0 +1,14 @@
+{
+  "resource": "https://diegodella.ar/api",
+  "authorization_servers": [
+    "https://diegodella.ar/auth/v1"
+  ],
+  "scopes_supported": [
+    "openid",
+    "email",
+    "profile"
+  ],
+  "bearer_methods_supported": [
+    "header"
+  ]
+}

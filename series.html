@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <script>(function(){var t=localStorage.getItem("theme");if(!t)t=window.matchMedia("(prefers-color-scheme:dark)").matches?"dark":"light";document.documentElement.setAttribute("data-theme",t)})()</script>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <meta name="theme-color" content="#e6d5b8">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="Narrative Mechanics">
+  <link rel="apple-touch-icon" href="/og-default.png">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "Series",
+    "description": "Guided editorial routes for builders, launches, AI, trust, filters, and mediated presence.",
+    "url": "https://diegodella.ar/series.html",
+    "author": {
+      "@type": "Person",
+      "name": "Diego Dell'Agostino",
+      "url": "https://diegodella.ar/about.html"
+    },
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "Narrative Mechanics",
+      "url": "https://diegodella.ar/"
+    }
+  }
+  </script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Series from Narrative Mechanics: guided editorial routes for builders, launches, AI, trust, filters, and mediated presence.">
+  <meta name="author" content="Diego Dell'Agostino">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://diegodella.ar/series.html">
+  <meta property="og:title" content="Series | Narrative Mechanics">
+  <meta property="og:description" content="Guided editorial routes for builders, launches, AI, trust, filters, and mediated presence.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://diegodella.ar/series.html">
+  <meta property="og:site_name" content="Narrative Mechanics">
+  <meta property="og:image" content="https://diegodella.ar/og-default.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Series | Narrative Mechanics">
+  <meta name="twitter:description" content="Guided editorial routes for builders, launches, AI, trust, filters, and mediated presence.">
+  <meta name="twitter:image" content="https://diegodella.ar/og-default.png">
+  <title>Series | Narrative Mechanics</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;700&family=Epilogue:ital,wght@0,400;1,400;0,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="global.css?v=20260418f">
+  <link rel="stylesheet" href="components.css?v=20260418f">
+  <style>
+    .hero,
+    .shelf-wrap {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding-left: 3rem;
+      padding-right: 3rem;
+    }
+    .hero {
+      padding-top: 5rem;
+      padding-bottom: 2.35rem;
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 260px;
+      gap: 1.8rem;
+      border-bottom: 1px solid var(--border-light);
+    }
+    .hero-title {
+      font-family: 'Space Grotesk', serif;
+      font-size: clamp(3rem, 6vw, 4.8rem);
+      line-height: 0.92;
+      letter-spacing: -0.045em;
+      max-width: 8ch;
+      margin-bottom: 1rem;
+    }
+    .hero-title em { font-style: italic; color: var(--accent); }
+    .hero-lead {
+      max-width: 42rem;
+      font-size: 0.98rem;
+      line-height: 1.72;
+      color: var(--ink-2);
+      margin-bottom: 1.2rem;
+    }
+    .hero-routes,
+    .shelf-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.55rem;
+    }
+    .hero-route,
+    .shelf-link {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.48rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      text-decoration: none;
+      color: var(--accent);
+      border: 1px solid color-mix(in srgb, var(--accent) 24%, var(--border));
+      border-radius: 12px;
+      padding: 0.58rem 0.8rem;
+      background: color-mix(in srgb, var(--accent-light) 84%, var(--paper));
+      transition: border-color 0.18s, background-color 0.18s, color 0.18s;
+    }
+    .hero-route:hover,
+    .shelf-link:hover {
+      color: var(--accent-hover);
+      border-color: var(--accent);
+      background: color-mix(in srgb, var(--accent-light) 96%, var(--paper));
+    }
+    .hero-aside {
+      border-left: 1px solid var(--border);
+      padding-left: 1rem;
+      display: grid;
+      gap: 0.85rem;
+    }
+    .aside-label,
+    .section-label,
+    .card-kicker,
+    .lead-kicker {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.46rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--accent);
+    }
+    .hero-aside p,
+    .section-copy,
+    .card-copy,
+    .card-meta,
+    .lead-copy,
+    .related-copy {
+      font-size: 0.9rem;
+      line-height: 1.6;
+      color: var(--ink-2);
+    }
+    .shelf-wrap {
+      padding-top: 1.85rem;
+      padding-bottom: 5rem;
+    }
+    .lead-card,
+    .section,
+    .related {
+      border: 1px solid color-mix(in srgb, var(--accent) 14%, var(--border));
+      border-radius: 14px;
+      background: var(--surface-1);
+    }
+    .lead-card,
+    .section,
+    .related,
+    .card,
+    .related-card {
+      padding: 1.15rem;
+    }
+    .lead-card {
+      display: grid;
+      grid-template-columns: 180px minmax(0, 1fr) 180px;
+      gap: 1rem;
+      padding: 1rem 1.05rem;
+      margin-bottom: 1.2rem;
+      text-decoration: none;
+      color: inherit;
+    }
+    .lead-title,
+    .card-title,
+    .section-title,
+    .related-title {
+      font-family: 'Space Grotesk', serif;
+      line-height: 1.02;
+    }
+    .lead-title {
+      font-size: 1.55rem;
+      margin-bottom: 0.35rem;
+    }
+    .lead-tail {
+      align-self: end;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.5rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--muted);
+      text-align: right;
+    }
+    .section {
+      padding: 1rem 1.05rem 1.05rem;
+      margin-bottom: 1.2rem;
+    }
+    .section-head {
+      display: grid;
+      grid-template-columns: 180px minmax(0, 1fr);
+      gap: 1rem;
+      margin-bottom: 0.9rem;
+    }
+    .section-title {
+      font-size: 1.55rem;
+      margin-bottom: 0.25rem;
+    }
+    .card-grid,
+    .related-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.75rem;
+    }
+    .card,
+    .related-card {
+      display: block;
+      border: 1px solid color-mix(in srgb, var(--accent) 16%, var(--border));
+      border-radius: 12px;
+      background: var(--surface-2);
+      padding: 1rem;
+      text-decoration: none;
+      color: inherit;
+      transition: border-color 0.18s, background-color 0.18s, box-shadow 0.18s;
+    }
+    .lead-card:hover,
+    .card:hover,
+    .related-card:hover {
+      border-color: color-mix(in srgb, var(--accent) 42%, var(--border));
+      background: color-mix(in srgb, var(--accent-light) 74%, var(--paper));
+      box-shadow: 0 10px 22px color-mix(in srgb, var(--accent) 10%, transparent);
+    }
+    .card-title {
+      font-size: 1.18rem;
+      margin-bottom: 0.35rem;
+    }
+    .card-meta {
+      margin-top: 0.7rem;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.48rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+    .related {
+      padding: 1rem 1.05rem;
+    }
+    .related-title {
+      font-size: 1.35rem;
+      margin-bottom: 0.3rem;
+    }
+    .related-card strong {
+      display: block;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 0.95rem;
+      margin-bottom: 0.18rem;
+    }
+    @media (max-width: 900px) {
+      .hero,
+      .lead-card,
+      .section-head,
+      .card-grid,
+      .related-grid {
+        grid-template-columns: 1fr;
+      }
+      .hero-aside {
+        border-left: none;
+        border-top: 1px solid var(--border);
+        padding-left: 0;
+        padding-top: 0.9rem;
+      }
+      .lead-tail {
+        text-align: left;
+      }
+    }
+    @media (max-width: 640px) {
+      .hero,
+      .shelf-wrap {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+      }
+      .hero {
+        padding-top: 3.8rem;
+      }
+    }
+  </style>
+</head>
+<body class="analog-bg">
+  <a href="#main-content" class="skip-link">Skip to content</a>
+  <div class="page-wrap">
+    <div class="top-bar">
+      <span>Buenos Aires &middot; Since 2008</span>
+      <span>Guided reading paths for builders, launches, AI, trust, filters, and mediated presence &middot; <a href="about.html">About the author</a></span>
+    </div>
+    <nav class="nav">
+      <div class="nav-inner">
+        <a href="index.html" class="nav-brand">Narrative<em>Mechanics</em></a>
+        <button class="nav-btn nav-toggle" aria-label="Menu" aria-expanded="false" aria-controls="navLinks" id="navToggle">
+          <svg viewBox="0 0 24 24"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg>
+        </button>
+        <div class="nav-links" id="navLinks">
+          <a href="index.html" class="nav-link">Home</a>
+          <div class="nav-sep"></div>
+          <a href="archive.html" class="nav-link">Start Here</a>
+          <a href="frameworks.html" class="nav-link">Frameworks</a>
+          <a href="series.html" class="nav-link active" aria-current="page">Series</a>
+          <a href="essays.html" class="nav-link">Essays</a>
+          <a href="notes.html" class="nav-link">Notes</a>
+          <div class="nav-sep"></div>
+          <a href="about.html" class="nav-link">About</a>
+        </div>
+        <div class="nav-right">
+          <button class="nav-btn" aria-label="Toggle theme" id="themeToggle">
+            <svg class="icon-moon" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+            <svg class="icon-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <main id="main-content">
+      <section class="hero">
+        <div>
+          <div class="hero-kicker">Shelf / Series</div>
+          <h1 class="hero-title">Guided <em>Series</em></h1>
+          <p class="hero-lead">This shelf is for readers who want the argument sequenced. Instead of sampling isolated pieces, start with the path that matches your problem and let the sequence do the orientation work.</p>
+          <div class="hero-routes">
+            <a href="archive.html" class="hero-route">Open Catalog</a>
+            <a href="frameworks.html" class="hero-route">Core Models</a>
+            <a href="essays.html" class="hero-route">Standalone Essays</a>
+          </div>
+        </div>
+        <aside class="hero-aside">
+          <div class="aside-label">Best use</div>
+          <p>Use this shelf if you want a designed reading order. These are the clearest routes for builders, launches, AI, trust, filters, and mediated presence.</p>
+          <div class="aside-label">Best first route</div>
+          <p><a href="paper-05.html">Launching Into Noise</a> for product clarity, or <a href="the-last-human-impression.html">The Last Human Impression</a> for AI and mediated trust.</p>
+        </aside>
+      </section>
+
+      <div class="shelf-wrap">
+        <a href="paper-05.html" class="lead-card">
+          <div>
+            <div class="lead-kicker">Start Here</div>
+            <div class="lead-title">Two major guided paths</div>
+          </div>
+          <div class="lead-copy">These are the strongest read-this-in-order routes in the publication. Use them when the theme matters as much as the individual article.</div>
+          <div class="lead-tail">Sequence over sampling</div>
+        </a>
+
+        <section class="section">
+          <div class="section-head">
+            <div class="section-label">On This Shelf</div>
+            <div>
+              <div class="section-title">Narrative-First</div>
+              <div class="section-copy">Six papers on product clarity, message-market fit, launch conditions, operating narrative, drift, and mediated customer journeys.</div>
+            </div>
+          </div>
+          <div class="card-grid">
+            <a href="paper-05.html" class="card">
+              <div class="card-kicker">Series</div>
+              <div class="card-title">Launching Into Noise</div>
+              <div class="card-copy">The most practical first paper if the problem is strong product, weak adoption, unclear category language, or a launch the market failed to read.</div>
+              <div class="card-meta">Best entry</div>
+            </a>
+            <a href="paper-01.html" class="card">
+              <div class="card-kicker">For builders and launches</div>
+              <div class="card-title">Start here inside Narrative-First</div>
+              <div class="card-copy">Move through the full sequence on clarity, fit, coherence, drift, launch conditions, and mediated customer journeys from the first paper onward.</div>
+              <div class="card-meta">Six-paper route</div>
+            </a>
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section-head">
+            <div class="section-label">Series</div>
+            <div>
+              <div class="section-title">After You Post</div>
+              <div class="section-copy">Five essays on mediated attention, proxy identity, synthetic presence, filters, trust collapse, and origin in the agent internet.</div>
+            </div>
+          </div>
+          <div class="card-grid">
+            <a href="the-last-human-impression.html" class="card">
+              <div class="card-kicker">For AI, trust, and media systems</div>
+              <div class="card-title">The Last Human Impression</div>
+              <div class="card-copy">A strong entry if you want the threshold essay first, with the impression gap and the broader AI-mediated trust frame in place before the sequence opens.</div>
+              <div class="card-meta">Best entry</div>
+            </a>
+            <a href="the-empty-room.html" class="card">
+              <div class="card-kicker">Alternative entry</div>
+              <div class="card-title">The Empty Room</div>
+              <div class="card-copy">A strong start if you want to enter After You Post through absence, audiences, and the changed conditions of reception.</div>
+              <div class="card-meta">Start here inside After You Post</div>
+            </a>
+          </div>
+        </section>
+
+        <section class="related">
+          <div class="section-label">Next Shelves</div>
+          <div class="related-title">Read around the series</div>
+          <div class="related-copy">Use the frameworks when you want the underlying model, and the essays when you want adjacent long-form arguments outside the guided paths.</div>
+          <div class="related-grid">
+            <a href="frameworks.html" class="related-card">
+              <strong>Frameworks</strong>
+              <div class="related-copy">Go back to the models if you want the conceptual spine behind the series.</div>
+            </a>
+            <a href="essays.html" class="related-card">
+              <strong>Essays</strong>
+              <div class="related-copy">Move into the broader archive of standalone long-form pieces.</div>
+            </a>
+          </div>
+        </section>
+      </div>
+    </main>
+  </div>
+  <script src="global.js?v=20260419b"></script>
+</body>
+</html>

@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-TJF4P0NYFT"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-TJF4P0NYFT');
+  </script>
+  <script>(function(){var t=localStorage.getItem("theme");if(!t)t=window.matchMedia("(prefers-color-scheme:dark)").matches?"dark":"light";document.documentElement.setAttribute("data-theme",t)})()</script>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <meta name="theme-color" content="#e6d5b8">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="Narrative Mechanics">
+  <link rel="apple-touch-icon" href="/og-default.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Narrative Drift: how strategic coherence erodes at scale and what organizations must build to prevent it. Narrative-First Paper 04.">
+  <meta name="author" content="Diego Dell'Agostino">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://diegodella.ar/paper-04.html">
+  <meta property="og:title" content="Narrative Drift - Narrative-First Paper 04">
+  <meta property="og:description" content="Narrative Drift: how strategic coherence erodes at scale and what organizations must build to prevent it. Narrative-First Paper 04.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://diegodella.ar/paper-04.html">
+  <meta property="og:site_name" content="Narrative Mechanics">
+  <meta property="og:image" content="https://diegodella.ar/og-default.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Narrative Drift - Narrative-First Paper 04">
+  <meta name="twitter:description" content="Narrative Drift: how strategic coherence erodes at scale and what organizations must build to prevent it. Narrative-First Paper 04.">
+  <meta name="twitter:image" content="https://diegodella.ar/og-default.png">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ScholarlyArticle",
+    "headline": "Narrative Drift",
+    "description": "The fourth paper in the Narrative-First series. Narrative Drift examines how strategic coherence erodes at scale, and what organizations must build to prevent it. By Diego Dell'Agostino.",
+    "author": {
+      "@type": "Person",
+      "name": "Diego Dell'Agostino",
+      "url": "https://diegodella.ar/about.html"
+    },
+    "isPartOf": {
+      "@type": "CreativeWorkSeries",
+      "name": "Narrative-First",
+      "url": "https://diegodella.ar/paper-01.html",
+      "position": 4
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Narrative Mechanics",
+      "url": "https://diegodella.ar"
+    },
+    "url": "https://diegodella.ar/paper-04.html",
+    "datePublished": "2026-02-20",
+    "inLanguage": "en"
+  }
+  </script>
+  <title>Narrative Drift - Narrative-First Paper 04</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;700&family=Epilogue:ital,wght@0,400;1,400;0,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="global.css?v=20260418f">
+  <link rel="stylesheet" href="components.css?v=20260418f">
+  <style>
+    /* Nav */
+    /* Nav styles removed — using global.css v2 nav */
+
+    /* Hero */
+    .hero { max-width: 900px; margin: 0 auto; padding: 6rem 3rem 5rem; display: grid; grid-template-columns: 1fr auto; gap: 3rem; align-items: start; }
+    .hero-title { font-family: 'Space Grotesk', serif; font-size: clamp(2.8rem, 6vw, 5rem); font-weight: 900; line-height: 1.0; letter-spacing: -0.025em; margin-bottom: 1rem; }
+    .hero-title em { font-style: italic; color: var(--ink); display: block; text-decoration: none; background: linear-gradient(180deg, transparent 54%, color-mix(in srgb, var(--accent) 18%, transparent) 54%); padding: 0 0.08em 0.02em 0; box-decoration-break: clone; -webkit-box-decoration-break: clone; }
+    .hero-subtitle { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 1.15rem; font-style: italic; color: var(--muted); margin-bottom: 2rem; line-height: 1.5; max-width: 440px; }
+    .hero-illustration { width: 280px; flex-shrink: 0; padding-top: 1rem; opacity: 0.85; }
+
+    /* Content */
+    .content { max-width: 720px; margin: 0 auto; padding: 0 2.5rem 8rem; }
+
+    /* Section animations */
+    .section { margin-bottom: 5.5rem; opacity: 0; transform: translateY(28px); animation: fadeUp 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards; }
+    .section:nth-child(1) { animation-delay: 0.1s; }
+    .section:nth-child(2) { animation-delay: 0.25s; }
+    .section:nth-child(3) { animation-delay: 0.4s; }
+    .section:nth-child(4) { animation-delay: 0.55s; }
+    @keyframes fadeUp { to { opacity: 1; transform: translateY(0); } }
+
+    /* Series recap block */
+    .series-recap { border: 1px solid var(--rule); background: var(--highlight); margin: 2.5rem 0; overflow: hidden; }
+    .series-recap-header { background: var(--ink); padding: 0.75rem 1.5rem; display: flex; align-items: center; gap: 0.75rem; }
+    .series-recap-header svg { width: 14px; height: 14px; stroke: var(--paper); fill: none; stroke-width: 1.5; opacity: 0.7; }
+    .series-recap-label { font-family: 'JetBrains Mono', monospace; font-size: 0.5rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--paper); opacity: 0.7; }
+    .series-recap-body { padding: 1.5rem; display: flex; flex-direction: column; gap: 0; }
+    .series-recap-item { display: grid; grid-template-columns: 2rem 1fr; gap: 0 1rem; position: relative; padding-bottom: 1.25rem; }
+    .series-recap-item:last-child { padding-bottom: 0; }
+    .series-recap-item-left { display: flex; flex-direction: column; align-items: center; }
+    .series-recap-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--accent); flex-shrink: 0; margin-top: 0.3rem; }
+    .series-recap-line { flex: 1; width: 1px; background: var(--rule); margin: 3px 0 0; }
+    .series-recap-item:last-child .series-recap-line { display: none; }
+    .series-recap-num { font-family: 'JetBrains Mono', monospace; font-size: 0.48rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--muted); margin-bottom: 0.15rem; }
+    .series-recap-title { font-family: 'Space Grotesk', serif; font-size: 1rem; font-weight: 700; }
+    .series-recap-concept { font-size: 0.88rem; font-style: italic; color: var(--muted); }
+
+    /* Mobile overrides */
+    @media (max-width: 768px) {
+      .hero { grid-template-columns: 1fr; padding: 3rem 1.5rem 2rem; }
+      .hero-illustration { display: none; }
+      .content { padding: 0 1.5rem 5rem; }
+      .pull-quote { margin: 2rem 0; }
+      .paper-nav { padding: 0 1.5rem 3rem; }
+    }
+  </style>
+</head>
+<body class="series-nf">
+  <a href="#main-content" class="skip-link">Skip to content</a>
+  <div id="pbar"></div>
+  <div id="pbar-label"></div>
+  <div class="bg-pattern"></div>
+  <div class="bg-grain"></div>
+  <div class="page-wrap">
+
+      <!-- Top Bar -->
+  <div class="top-bar">
+    <span>Buenos Aires &middot; Since 2008</span>
+    <span>18 Essays &middot; 3 Frameworks &middot; ~289 min of reading &middot; <a href="about.html">About the author</a></span>
+  </div>
+
+  <!-- Nav -->
+  <nav class="nav">
+      <div class="nav-inner">
+        <a href="index.html" class="nav-brand">Narrative<em>Mechanics</em></a>
+        <button class="nav-btn nav-toggle" aria-label="Menu" aria-expanded="false" aria-controls="navLinks" id="navToggle">
+          <svg viewBox="0 0 24 24"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg>
+        </button>
+        <div class="nav-links" id="navLinks">
+          <a href="index.html" class="nav-link">Home</a>
+          <div class="nav-sep"></div>
+          <a href="archive.html" class="nav-link">Start Here</a>
+          <a href="frameworks.html" class="nav-link">Frameworks</a>
+          <a href="series.html" class="nav-link">Series</a>
+          <a href="essays.html" class="nav-link">Essays</a>
+          <a href="notes.html" class="nav-link">Notes</a>
+          <div class="nav-sep"></div>
+          <a href="about.html" class="nav-link">About</a>
+        </div>
+        <div class="nav-right">
+          <button class="nav-btn" aria-label="Toggle theme" id="themeToggle">
+            <svg class="icon-moon" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+            <svg class="icon-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+          </button>
+        </div>
+      </div>
+    </nav>
+
+
+    
+
+    
+
+    <section class="hero">
+      <div class="hero-left">
+        <div class="hero-kicker">Essay Four &nbsp;/&nbsp; Closing</div>
+        <h1 class="hero-title">Before You<br><em>Scale</em></h1>
+        <p class="hero-subtitle">On Narrative Governance and the Long Game</p>
+        <div class="hero-byline">
+          <div class="hero-byline-dot"></div>
+          <div class="hero-byline-text">Diego Dell Agostino</div>
+        </div>
+      </div>
+      <div class="hero-illustration">
+        <svg class="hero-svg" viewBox="0 0 160 200" xmlns="http://www.w3.org/2000/svg">
+        <style>
+          @keyframes scale-ring{from{r:8;opacity:1}to{r:55;opacity:0}}
+          @keyframes fade-in{from{opacity:0}to{opacity:1}}
+          @keyframes grow-branch{from{stroke-dashoffset:60}to{stroke-dashoffset:0}}
+        </style>
+        <!-- Expanding rings (scale signal) -->
+        <circle cx="80" cy="95" r="8" fill="none" stroke="var(--accent)" stroke-width="1" opacity="0.6"
+                style="animation:scale-ring 3s ease-out infinite"/>
+        <circle cx="80" cy="95" r="8" fill="none" stroke="var(--accent)" stroke-width="1" opacity="0.6"
+                style="animation:scale-ring 3s 1s ease-out infinite"/>
+        <circle cx="80" cy="95" r="8" fill="none" stroke="var(--accent)" stroke-width="1" opacity="0.6"
+                style="animation:scale-ring 3s 2s ease-out infinite"/>
+        <!-- Center core -->
+        <circle cx="80" cy="95" r="8" fill="var(--accent)"/>
+        <!-- Branch lines -->
+        <line x1="80" y1="87" x2="80" y2="40" stroke="var(--accent)" stroke-width="1.5"
+              stroke-dasharray="60" style="animation:grow-branch 1s 0.5s ease-out forwards"/>
+        <line x1="88" y1="95" x2="135" y2="70" stroke="var(--accent)" stroke-width="1.5"
+              stroke-dasharray="60" style="animation:grow-branch 1s 0.8s ease-out forwards"/>
+        <line x1="88" y1="95" x2="135" y2="120" stroke="var(--accent)" stroke-width="1.5"
+              stroke-dasharray="60" style="animation:grow-branch 1s 1.1s ease-out forwards"/>
+        <line x1="72" y1="95" x2="25" y2="70" stroke="var(--muted)" stroke-width="1" stroke-dasharray="3 2"
+              style="animation:grow-branch 1s 1.4s ease-out forwards"/>
+        <line x1="72" y1="95" x2="25" y2="120" stroke="var(--muted)" stroke-width="1" stroke-dasharray="3 2"
+              style="animation:grow-branch 1s 1.7s ease-out forwards"/>
+        <line x1="80" y1="103" x2="80" y2="150" stroke="var(--muted)" stroke-width="1" stroke-dasharray="3 2"
+              style="animation:grow-branch 1s 2s ease-out forwards"/>
+        <!-- Endpoint dots -->
+        <circle cx="80" cy="40" r="3" fill="var(--accent)" opacity="0" style="animation:fade-in 0.3s 1.5s forwards"/>
+        <circle cx="135" cy="70" r="3" fill="var(--accent)" opacity="0" style="animation:fade-in 0.3s 1.8s forwards"/>
+        <circle cx="135" cy="120" r="3" fill="var(--accent)" opacity="0" style="animation:fade-in 0.3s 2.1s forwards"/>
+        <!-- Label -->
+        <text x="80" y="185" font-family="monospace" font-size="6" fill="var(--accent)" text-anchor="middle" letter-spacing="2"
+              opacity="0" style="animation:fade-in 0.5s 2.5s forwards">SCALE</text>
+      </svg>
+      </div>
+    </section>
+
+        <div class="chapter-divider">
+      <div class="chapter-divider-line"></div>
+    </div>
+
+    <main class="content" id="main-content">
+
+      <!-- Section I -->
+      <article class="section">
+        <div class="section-badge">
+          <div class="section-icon">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 8 12 12 14 14"/></svg>
+          </div>
+          <div class="section-meta">
+            <div class="section-number">Section I &nbsp;/&nbsp; Four</div>
+            <h2 class="section-title">The Drift Problem</h2>
+          </div>
+        </div>
+        <div class="section-rule"></div>
+        <div class="section-body">
+          <p>Here is something I have observed consistently, across companies of different sizes and industries: coherence does not break at launch. It breaks in year three.</p>
+
+          <p>At launch, the people who built the product are still the people running it. They remember the original argument. They know why certain decisions were made and what they were protecting. The narrative is not written down anywhere formal, but it does not need to be; it lives in the room, in the people who were there when the story was agreed on.</p>
+
+          <div class="margin-note">The narrative does not need documentation when everyone who agreed on it is still in the room. It needs documentation the moment the first person who wasn't there joins.</div>
+
+          <p>Then the company grows. New hires arrive who were never part of that original conversation. Priorities shift under the pressure of quarterly targets. Features get added not because they serve the claim but because a competitor shipped them, or because a large customer requested them, or because someone in a roadmap meeting made a compelling case that was technically correct and narratively incoherent. Nobody flags it, because nobody has a framework for flagging it. The original story is not violated in a single dramatic moment. It is diluted, one reasonable-sounding decision at a time.</p>
+
+          <div class="pull-quote">
+            <p>This is what I call Narrative Drift. It is the most expensive form of organizational entropy there is, because it is invisible until it is irreversible.</p>
+          </div>
+
+          <p>By the time the product feels incoherent to the market, the decisions that caused it are two years old and buried under layers of subsequent choices that each made sense in isolation. The organization is not failing. It is succeeding at the wrong thing, consistently, over time.</p>
+        </div>
+      </article>
+
+      <!-- Section II -->
+      <article class="section">
+        <div class="section-badge">
+          <div class="section-icon">
+            <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+          </div>
+          <div class="section-meta">
+            <div class="section-number">Section II &nbsp;/&nbsp; Four</div>
+            <h2 class="section-title">Coherence as Economic Moat</h2>
+          </div>
+        </div>
+        <div class="section-rule"></div>
+        <div class="section-body">
+          <p>There is a category of competitive advantage that does not appear on a balance sheet but compounds faster than any metric you can track in a dashboard. Narrative coherence, sustained over time, is that advantage.</p>
+
+          <p>When a product is consistent (not just functionally but in the sense that every version of itself confirms the original claim), something happens in the market that cannot be manufactured or bought. The product develops a predictable identity. Users know not just what it does but what it stands for; and more importantly, what it will never do. That predictability is not a soft benefit. It is a structural one. It reduces the cost of every future acquisition, because trust is already banked. It accelerates every new product launch, because the market already has a mental model for what this company makes. It makes the brand defensible in a way that a logo or a color palette never could be.</p>
+
+          <p>This is the economic moat of coherence. And unlike most moats (network effects, proprietary data, regulatory capture), it is one that a small, disciplined team can build from the beginning. It does not require scale to generate. It requires only the sustained commitment to protect the original claim against the entropy of growth.</p>
+
+          <div class="pull-quote">
+            <p>Most companies abandon this moat precisely when they are about to benefit from it most. The moment they achieve enough traction to grow quickly, they start making the compromises that erode the thing that made them worth growing.</p>
+          </div>
+        </div>
+      </article>
+
+      <!-- Section III -->
+      <article class="section">
+        <div class="section-badge">
+          <div class="section-icon">
+            <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <div class="section-meta">
+            <div class="section-number">Section III &nbsp;/&nbsp; Four</div>
+            <h2 class="section-title">Narrative Governance</h2>
+          </div>
+        </div>
+        <div class="section-rule"></div>
+        <div class="section-body">
+          <p>The solution is not a brand police force. It is not a style guide, a messaging matrix, or a quarterly narrative review. These are the artifacts of organizations that have already lost coherence and are trying to recover it through documentation. By the time you need a brand bible, the story has already left the building.</p>
+
+          <p>Narrative governance, done well, is something quieter. It is the set of decision-making habits that keeps the product aligned with its original claim without requiring constant oversight. And it has a specific starting point: the Operating Narrative cannot be a founding artifact. It has to be a living one.</p>
+
+          <div class="margin-note">An Operating Narrative that is not being used to make decisions is not governance. It is archaeology.</div>
+
+          <p>Most organizations write their version of the Operating Narrative once. It might be a pitch deck, a launch post, a company manifesto. They treat it as a record of how things began rather than as the active document that governs how things evolve. The problem is that a narrative written for eight people does not automatically serve eighty. The claim may hold, but the constraints change. The Technical Truths need to be renegotiated as the product grows. The Recognition Moment needs to be re-examined as the user base shifts. If no one is doing that work, the Operating Narrative becomes a relic; something people cite in onboarding decks but no longer use to make decisions. And the moment it stops being used to make decisions, the Drift has already begun.</p>
+
+          <p>The second habit is making the original claim the explicit test for new decisions; not as a veto mechanism, but as a question that is asked early enough to matter. Before a feature goes on the roadmap, before a partnership is signed, before a new market is entered, someone needs to ask whether this move strengthens or weakens what the product is claiming to be. That question does not always produce a no. Sometimes it produces a better yes; a version of the idea that serves both the commercial objective and the narrative integrity. But it has to arrive before the decision is made, not as a justification constructed afterward.</p>
+
+          <p>The third habit is the most human one and the hardest to systematize: keeping the original story alive in the room. The people who join in year three have no memory of the founding argument. They have the product as it currently exists and the culture as they encounter it. If neither of those things transmits the original claim clearly, what replaces it is not a better story. It is a collection of priorities without a center. Narrative governance is, at its core, a transmission problem. The question is not whether the story exists. It is whether the organization can still tell it to itself.</p>
+        </div>
+      </article>
+
+      <!-- Section IV -->
+      <article class="section">
+        <div class="section-badge">
+          <div class="section-icon">
+            <svg viewBox="0 0 24 24"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
+          </div>
+          <div class="section-meta">
+            <div class="section-number">Section IV &nbsp;/&nbsp; Four</div>
+            <h2 class="section-title">The Long Game</h2>
+          </div>
+        </div>
+        <div class="section-rule"></div>
+        <div class="section-body">
+
+          <div class="series-recap">
+            <div class="series-recap-header">
+              <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg>
+              <div class="series-recap-label">The Pattern Across All Four Essays</div>
+            </div>
+            <div class="series-recap-body">
+              <div class="series-recap-item">
+                <div class="series-recap-item-left"><div class="series-recap-dot"></div><div class="series-recap-line"></div></div>
+                <div><div class="series-recap-num">Essay One</div><div class="series-recap-title"><a href="paper-01.html" style="color:inherit;text-decoration:underline;text-decoration-color:var(--rule);text-underline-offset:3px;transition:text-decoration-color 0.2s">Strategic Debt</a></div><div class="series-recap-concept">Clarity deferred at the start</div></div>
+              </div>
+              <div class="series-recap-item">
+                <div class="series-recap-item-left"><div class="series-recap-dot"></div><div class="series-recap-line"></div></div>
+                <div><div class="series-recap-num">Essay Two</div><div class="series-recap-title"><a href="paper-02.html" style="color:inherit;text-decoration:underline;text-decoration-color:var(--rule);text-underline-offset:3px;transition:text-decoration-color 0.2s">Message-Market Fit</a></div><div class="series-recap-concept">Recognition missing at launch</div></div>
+              </div>
+              <div class="series-recap-item">
+                <div class="series-recap-item-left"><div class="series-recap-dot"></div><div class="series-recap-line"></div></div>
+                <div><div class="series-recap-num">Essay Three</div><div class="series-recap-title"><a href="paper-03.html" style="color:inherit;text-decoration:underline;text-decoration-color:var(--rule);text-underline-offset:3px;transition:text-decoration-color 0.2s">Operating Narrative</a></div><div class="series-recap-concept">Coherence unprotected in execution</div></div>
+              </div>
+              <div class="series-recap-item">
+                <div class="series-recap-item-left"><div class="series-recap-dot"></div></div>
+                <div><div class="series-recap-num">Essay Four</div><div class="series-recap-title">Narrative Drift</div><div class="series-recap-concept">Coherence eroded at scale</div></div>
+              </div>
+            </div>
+          </div>
+
+          <p>The pattern underneath all four of these essays is the same one. Strategic Debt at launch. Narrative Drift at scale. Different names for the same error; clarity deferred, compounding quietly, discovered late.</p>
+
+          <p>The companies I have seen sustain coherence over time are not the ones who never faced pressure to compromise. They all did. They are the ones who had a clear enough articulation of their original claim that they could evaluate the compromise before accepting it. They knew what they were trading, and they made the trade consciously rather than by default. That distinction (between a conscious trade and a default one) is the difference between a product that evolves and one that erodes.</p>
+
+          <p>This is what the framework is ultimately for. Not to make every decision perfect. Not to eliminate the tension between short-term commercial pressure and long-term narrative integrity. That tension is real and it does not go away. The framework exists to make the tension visible early enough to manage it deliberately.</p>
+
+          <p>The products that age well are not the ones that never changed. They are the ones that changed in ways that confirmed rather than contradicted what they had always been about. Their users felt the evolution as growth, not as drift. And that feeling (of a product that knows what it is, even as it becomes more of it) is the rarest and most valuable thing a company can build.</p>
+
+          <p>It does not start at scale. It does not start at launch.</p>
+
+          <p>It starts before the first sprint, in the moment someone slows down long enough to ask the question this series began with: what is the story, exactly, and is it worth building?</p>
+
+          <p>If the answer is yes (and you have done the work to know why) then everything that follows is execution.</p>
+        </div>
+      </article>
+
+      <div class="closing">
+        <div class="closing-ornament-top">✦ &nbsp; ❧ &nbsp; ✦</div>
+        <p>You can re-acquire users. You cannot re-earn the clarity you chose not to build in the first place.</p>
+        <p>That is the architecture. And like any architecture, the time to get it right is before anything is built; not after everything has to be torn down.</p>
+        <div class="closing-ornament-bottom">End of Series &nbsp;·&nbsp; Narrative-First</div>
+      </div>
+      <div style="max-width:720px;margin:1.5rem auto 0;padding:0 2.5rem;font-family:'JetBrains Mono',monospace;font-size:0.5rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--muted);">February 2026</div>
+
+    </main>
+
+    <div style="max-width:680px;margin:0 auto;padding:0 4rem 2rem;">
+      <p style="font-family:'Inter',serif;font-size:1rem;line-height:1.75;color:var(--muted);font-style:italic;">Governance protects the story internally. But what happens when the channels themselves are broken? Essay 05 takes the argument outside.</p>
+    </div>
+
+    <div class="paper-nav">
+      <a href="paper-03.html" class="paper-nav-prev">
+        <svg viewBox="0 0 24 24"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+        Architecture of Coherence
+      </a>
+      <a href="paper-05.html" class="paper-nav-next">
+        Launching Into Noise
+        <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </a>
+    </div>
+
+    <footer>
+      <div class="footer-left">© 2026 Diego Dell Agostino</div>
+      <div class="footer-center">❧</div>
+      <div class="footer-right">Essay 04 &nbsp;·&nbsp; Narrative-First</div>
+    </footer>
+
+  </div>
+<script src="global.js?v=20260419b"></script>
+</body>
+</html>
