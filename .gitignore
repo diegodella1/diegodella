@@ -8,6 +8,9 @@ venv/
 notify/.env
 notify/venv/
 notify/__pycache__/
+services/notify/.env
+services/notify/venv/
+services/notify/__pycache__/
 
 .claude/
 .codex

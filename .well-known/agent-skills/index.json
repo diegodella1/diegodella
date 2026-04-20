@@ -14,13 +14,6 @@
       "description": "Use the direct contact flow on diegodella.ar to start a conversation or request updates.",
       "url": "/.well-known/agent-skills/contact/SKILL.md",
       "digest": "sha256:92e8c93909489c3eb4b19fa8fdcbbed3c6325d13d10c20df69d287accdbf7e46"
-    },
-    {
-      "name": "subscribe-updates",
-      "type": "skill-md",
-      "description": "Subscribe a reader to low-frequency Narrative Mechanics updates.",
-      "url": "/.well-known/agent-skills/subscribe/SKILL.md",
-      "digest": "sha256:a60f15e7c3030d4f773a4dd6d885cbdb79a1383af9e08bfa3c43aa840c28a17b"
     }
   ]
 }
