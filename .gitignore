@@ -23,3 +23,6 @@ services/notify/__pycache__/
 !.agents/skills/
 !.agents/skills/impeccable/
 !.agents/skills/impeccable/**
+
+# Immutable static releases built from Git commits.
+.releases/
