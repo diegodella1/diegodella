@@ -1,0 +1,79 @@
+h1,
+h2,
+h3,
+.hero-title,
+.section-title,
+.part-title {
+  font-family: "Space Grotesk", system-ui, sans-serif;
+  letter-spacing: -0.035em;
+  text-wrap: balance;
+}
+
+h1 {
+  max-width: 20ch;
+  font-size: clamp(2.75rem, 7vw, 5.8rem);
+  line-height: 0.95;
+}
+
+h2 {
+  font-size: clamp(2rem, 4vw, 4rem);
+  line-height: 1.02;
+}
+
+p,
+li {
+  text-wrap: pretty;
+}
+
+.content p,
+.main-col p,
+.section-body p,
+.nm-page-copy {
+  max-width: var(--content-reading);
+}
+
+.page-wrap,
+main,
+.content,
+.wrap,
+.shelf-wrap,
+.concepts-wrap,
+.content-404 {
+  min-width: 0;
+}
+
+.hero,
+.nm-page-hero {
+  width: min(100%, var(--content-wide));
+  margin-inline: auto;
+}
+
+.section,
+article.section,
+.bio-section {
+  scroll-margin-block-start: 7rem;
+}
+
+.card-grid,
+.entry-grid,
+.model-grid,
+.related-grid,
+.routes-404 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 17.5rem), 1fr));
+}
+
+img,
+svg,
+video {
+  max-width: 100%;
+}
+
+@media (max-width: 56.25rem) {
+  .hero,
+  .nm-page-hero,
+  .nm-two-col {
+    grid-template-columns: 1fr;
+  }
+}
+

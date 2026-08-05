@@ -15,7 +15,7 @@ def add_cors(response):
 
 
 def is_valid_email(value):
-    return bool(value and "@" in value)
+    return bool(value and "@" in value and len(value) <= 254)
 
 
 @app.route("/api/contact", methods=["POST", "OPTIONS"])
@@ -36,13 +36,20 @@ def contact():
         return jsonify({"error": "A valid email is required."}), 400
     if not subject:
         return jsonify({"error": "Subject is required."}), 400
+    if len(subject) > 160:
+        return jsonify({"error": "Subject must be 160 characters or fewer."}), 400
     if not message:
         return jsonify({"error": "Message is required."}), 400
+    if len(message) > 5000:
+        return jsonify({"error": "Message must be 5000 characters or fewer."}), 400
+    if len(name) > 120:
+        return jsonify({"error": "Name must be 120 characters or fewer."}), 400
 
     try:
         result = send_contact_email(name, email, subject, message, mode)
-    except Exception as exc:
-        return jsonify({"error": f"Failed to send email: {exc}"}), 500
+    except Exception:
+        app.logger.exception("Contact email delivery failed")
+        return jsonify({"error": "The contact service is unavailable. Please retry or use email."}), 500
 
     return jsonify({"ok": True, "id": result.get("id")}), 200
 

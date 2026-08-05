@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <script>(function(){var d=document.documentElement,m=window.matchMedia("(prefers-color-scheme:dark)"),s;try{s=localStorage.getItem("theme")}catch(e){}var v=s==="dark"||s==="light",t=v?s:(m.matches?"dark":"light");d.setAttribute("data-theme",t);d.setAttribute("data-theme-source",v?"user":"system")})()</script>
   <meta charset="UTF-8">
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-TJF4P0NYFT"></script>
@@ -10,9 +11,8 @@
     gtag('js', new Date());
     gtag('config', 'G-TJF4P0NYFT');
   </script>
-  <script>(function(){var t=localStorage.getItem("theme");if(!t)t=window.matchMedia("(prefers-color-scheme:dark)").matches?"dark":"light";document.documentElement.setAttribute("data-theme",t)})()</script>
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
-  <meta name="theme-color" content="#e6d5b8">
+  <meta name="theme-color" content="#f5f0e8" id="themeColor">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-title" content="Narrative Mechanics">
   <link rel="apple-touch-icon" href="/og-default.png">
@@ -57,10 +57,11 @@
   </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;700&family=Epilogue:ital,wght@0,400;1,400;0,600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="global.css?v=20260418f">
-  <link rel="stylesheet" href="components.css?v=20260418f">
-  <style>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="global.css?v=20260621120500">
+  <link rel="stylesheet" href="components.css?v=20260621120500">
+  <style>@layer page {
+
     /* Page-specific base override */
     html { font-size: 20px; }
 
@@ -73,7 +74,7 @@
       border-bottom: 1px solid var(--border-light);
     }
     .hero-kicker {
-      font-family: 'JetBrains Mono', monospace; font-size: 0.52rem;
+      font-family: 'Space Grotesk', monospace; font-size: 0.75rem;
       letter-spacing: 0.22em; text-transform: uppercase;
       color: var(--accent); margin-bottom: 1.5rem;
       display: flex; align-items: center; gap: 0.75rem;
@@ -93,7 +94,7 @@
       gap: 0.5rem; padding-bottom: 0.5rem;
     }
     .hero-stamp-line {
-      font-family: 'JetBrains Mono', monospace; font-size: 0.44rem;
+      font-family: 'Space Grotesk', monospace; font-size: 0.75rem;
       letter-spacing: 0.15em; text-transform: uppercase;
       color: var(--muted); text-align: right;
     }
@@ -111,7 +112,7 @@
     .intro-sidebar { display: flex; flex-direction: column; gap: 1.25rem; padding-top: 0.2rem; }
     .intro-note { border: 1px solid var(--rule); padding: 1.1rem 1.25rem; background: var(--highlight); }
     .intro-note-label {
-      font-family: 'JetBrains Mono', monospace; font-size: 0.42rem;
+      font-family: 'Space Grotesk', monospace; font-size: 0.75rem;
       letter-spacing: 0.2em; text-transform: uppercase; color: var(--muted); margin-bottom: 0.5rem;
     }
     .intro-note-text { font-size: 0.88rem; color: var(--muted); line-height: 1.65; }
@@ -122,13 +123,13 @@
       border-bottom: 1px solid var(--rule);
     }
     .status-key-label {
-      font-family: 'JetBrains Mono', monospace; font-size: 0.44rem;
+      font-family: 'Space Grotesk', monospace; font-size: 0.75rem;
       letter-spacing: 0.18em; text-transform: uppercase; color: var(--muted); flex-shrink: 0;
     }
     .status-key-items { display: flex; align-items: center; gap: 1.5rem; flex-wrap: wrap; }
     .status-dot {
       display: flex; align-items: center; gap: 0.5rem;
-      font-family: 'JetBrains Mono', monospace; font-size: 0.42rem;
+      font-family: 'Space Grotesk', monospace; font-size: 0.75rem;
       letter-spacing: 0.08em; color: var(--muted);
     }
     .dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
@@ -142,7 +143,7 @@
       padding: 3rem 0.75rem; border-bottom: 1px solid var(--rule);
       display: grid; grid-template-columns: 52px minmax(0, 1fr) 180px;
       gap: 2rem; align-items: start;
-      margin: 0 -1rem; border-radius: 4px;
+      margin: 0 -1rem; border-radius: 0;
       transition: background 0.25s ease;
     }
     .argument:hover { background: var(--highlight); }
@@ -159,7 +160,7 @@
       display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.8rem;
     }
     .arg-status-text {
-      font-family: 'JetBrains Mono', monospace; font-size: 0.42rem;
+      font-family: 'Space Grotesk', monospace; font-size: 0.75rem;
       letter-spacing: 0.15em; text-transform: uppercase; color: var(--muted);
     }
     .arg-title {
@@ -167,54 +168,54 @@
       line-height: 1.12; margin-bottom: 0.35rem; letter-spacing: -0.015em;
     }
     .arg-sub {
-      font-family: 'JetBrains Mono', monospace; font-size: 0.48rem;
+      font-family: 'Space Grotesk', monospace; font-size: 0.75rem;
       letter-spacing: 0.1em; color: var(--accent); text-transform: uppercase; margin-bottom: 1.25rem;
     }
     .arg-body p { font-size: 1rem; color: var(--muted); line-height: 1.78; margin-bottom: 1.1rem; }
     .arg-body p:last-of-type { margin-bottom: 1.25rem; }
 
     .arg-rupture {
-      background: var(--highlight); border-left: 0px solid var(--accent);
+      background: var(--highlight);
       padding: 1rem 1.25rem; margin-top: 1.25rem;
       transform: translateX(-12px); opacity: 0;
-      transition: border-left-width 0.5s cubic-bezier(.22,1,.36,1) 0.3s, transform 0.5s cubic-bezier(.22,1,.36,1) 0.3s, opacity 0.5s cubic-bezier(.22,1,.36,1) 0.3s;
+      transition: transform 0.5s cubic-bezier(.22,1,.36,1) 0.3s, opacity 0.5s cubic-bezier(.22,1,.36,1) 0.3s;
     }
-    .argument.visible .arg-rupture { border-left-width: 3px; transform: translateX(0); opacity: 1; }
+    .argument.visible .arg-rupture { transform: translateX(0); opacity: 1; }
     .arg-rupture-label {
-      font-family: 'JetBrains Mono', monospace; font-size: 0.42rem;
+      font-family: 'Space Grotesk', monospace; font-size: 0.75rem;
       letter-spacing: 0.18em; text-transform: uppercase; color: var(--accent); margin-bottom: 0.4rem;
     }
     .arg-rupture-text { font-size: 0.95rem; font-style: italic; color: var(--ink); line-height: 1.68; }
 
     .arg-meta { display: flex; flex-direction: column; gap: 1.1rem; padding-top: 0.4rem; }
     .arg-horizon-label {
-      font-family: 'JetBrains Mono', monospace; font-size: 0.42rem;
+      font-family: 'Space Grotesk', monospace; font-size: 0.75rem;
       letter-spacing: 0.15em; text-transform: uppercase; color: var(--muted); margin-bottom: 0.3rem;
     }
     .arg-horizon-val {
-      font-family: 'JetBrains Mono', monospace; font-size: 0.48rem;
+      font-family: 'Space Grotesk', monospace; font-size: 0.75rem;
       letter-spacing: 0.08em; color: var(--accent);
     }
     .arg-tags { display: flex; flex-direction: column; gap: 0.4rem; }
     .arg-tag {
-      font-family: 'JetBrains Mono', monospace; font-size: 0.4rem;
+      font-family: 'Space Grotesk', monospace; font-size: 0.75rem;
       letter-spacing: 0.12em; text-transform: uppercase;
       border: 1px solid var(--rule); padding: 0.25em 0.55em;
       color: var(--muted); width: fit-content;
     }
     .arg-what-breaks { border: 1px dashed var(--rule); padding: 0.85rem; }
     .arg-what-breaks-label {
-      font-family: 'JetBrains Mono', monospace; font-size: 0.4rem;
+      font-family: 'Space Grotesk', monospace; font-size: 0.75rem;
       letter-spacing: 0.15em; text-transform: uppercase; color: var(--muted); margin-bottom: 0.4rem;
     }
     .arg-what-breaks-text { font-size: 0.84rem; color: var(--muted); line-height: 1.62; }
     .arg-connects { border-top: 1px solid var(--rule); padding-top: 0.9rem; }
     .arg-connects-label {
-      font-family: 'JetBrains Mono', monospace; font-size: 0.4rem;
+      font-family: 'Space Grotesk', monospace; font-size: 0.75rem;
       letter-spacing: 0.15em; text-transform: uppercase; color: var(--muted); margin-bottom: 0.4rem;
     }
     .arg-connects a {
-      display: block; font-family: 'JetBrains Mono', monospace; font-size: 0.42rem;
+      display: block; font-family: 'Space Grotesk', monospace; font-size: 0.75rem;
       letter-spacing: 0.06em; color: var(--accent); text-decoration: none; margin-bottom: 0.2rem;
     }
     .arg-connects a:hover { text-decoration: underline; }
@@ -224,7 +225,7 @@
       border-top: 2px solid var(--ink);
     }
     .closing-text {
-      font-family: 'JetBrains Mono', monospace; font-size: 0.5rem;
+      font-family: 'Space Grotesk', monospace; font-size: 0.75rem;
       letter-spacing: 0.08em; color: var(--muted); line-height: 1.85; max-width: 580px;
     }
     .closing-text em { color: var(--accent); font-style: normal; }
@@ -235,9 +236,9 @@
 
     /* Pulsing glow on hot dots */
     .dot-hot { animation: pulse 2.5s ease-in-out infinite; }
-    @keyframes pulse { 0%,100% { box-shadow: 0 0 0 0 rgba(181,57,10,0.35); } 50% { box-shadow: 0 0 0 6px rgba(181,57,10,0); } }
+    @keyframes pulse { 0%,100% { box-shadow: 0 0 0 0 color-mix(in srgb, var(--red) 35%, transparent); } 50% { box-shadow: 0 0 0 6px rgba(181,57,10,0); } }
     [data-theme="dark"] .dot-hot { animation-name: pulse-dark; }
-    @keyframes pulse-dark { 0%,100% { box-shadow: 0 0 0 0 rgba(224,90,42,0.35); } 50% { box-shadow: 0 0 0 6px rgba(224,90,42,0); } }
+    @keyframes pulse-dark { 0%,100% { box-shadow: 0 0 0 0 color-mix(in srgb, var(--red) 35%, transparent); } 50% { box-shadow: 0 0 0 6px rgba(224,90,42,0); } }
 
     /* Hero stamp stagger reveal */
     .hero .hero-kicker, .hero .hero-title, .hero-stamp-line {
@@ -255,7 +256,7 @@
       .reveal { opacity: 1; transform: none; transition: none; }
       .dot-hot { animation: none; }
       .hero .hero-kicker, .hero .hero-title, .hero-stamp-line { opacity: 1; transform: none; animation: none; }
-      .arg-rupture { border-left-width: 3px; transform: none; opacity: 1; transition: none; }
+      .arg-rupture { transform: none; opacity: 1; transition: none; }
       .arg-num { transition: none; }
       .argument { transition: none; }
     }
@@ -280,47 +281,38 @@
       .hero { grid-template-columns: 1fr; }
       .hero-svg { max-width: 200px; margin: 0 auto; order: -1; }
     }
-  </style>
+  
+}</style>
 </head>
 <body>
+  <a href="#main-content" class="skip-link">Skip to content</a>
   <div id="pbar"></div>
   <div id="pbar-label"></div>
-  <div class="bg-pattern"></div>
-  <div class="bg-grain"></div>
   <div class="page-wrap">
 
       <!-- Top Bar -->
   <div class="top-bar">
     <span>Buenos Aires &middot; Since 2008</span>
-    <span>18 Essays &middot; 3 Frameworks &middot; ~289 min of reading &middot; <a href="about.html">About the author</a></span>
+    <span>Essays &middot; Frameworks &middot; Guided reading paths &middot; <a href="about.html">About the author</a></span>
   </div>
 
   <!-- Nav -->
   <nav class="nav">
       <div class="nav-inner">
-        <a href="index.html" class="nav-brand">Narrative<em>Mechanics</em></a>
+        <a href="index.html" class="nav-brand" aria-label="Narrative Mechanics — Home">NARRATIVE MECHANICS</a>
         <button class="nav-btn nav-toggle" aria-label="Menu" aria-expanded="false" aria-controls="navLinks" id="navToggle">
           <svg viewBox="0 0 24 24"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg>
         </button>
-        <div class="nav-links" id="navLinks">
-          <a href="index.html" class="nav-link">Home</a>
-          <div class="nav-sep"></div>
-          <a href="archive.html" class="nav-link">Start Here</a>
+        <div class="nav-links" id="navLinks" aria-label="Primary sections">
+          <a href="thesis.html" class="nav-link">Idea</a>
           <a href="frameworks.html" class="nav-link">Frameworks</a>
-          <a href="series.html" class="nav-link">Series</a>
           <a href="essays.html" class="nav-link">Essays</a>
-          <a href="notes.html" class="nav-link">Notes</a>
-          <div class="nav-sep"></div>
+          <a href="about.html#work" class="nav-link" data-open-contact data-contact-mode="conversation">Work</a>
           <a href="about.html" class="nav-link">About</a>
-        </div>
-        <div class="nav-right">
-          <button class="nav-btn" aria-label="Toggle theme" id="themeToggle">
-            <svg class="icon-moon" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
-            <svg class="icon-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
-          </button>
-        </div>
+        </div><div class="nav-right"><button class="nav-btn theme-toggle" type="button" data-theme-toggle aria-label="Use dark theme"><svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3 7 7 0 0 0 21 12.8Z"/></svg><svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.42 1.42M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.42-1.42M17.66 6.34l1.41-1.41"/></svg></button></div>
       </div>
     </nav>
+  <main id="main-content">
 
     <section class="hero">
       <div>
@@ -558,7 +550,7 @@
           <div class="arg-sub">If AI can produce almost anything, what becomes expensive?</div>
           <p>Economics is the study of scarcity. When something becomes abundant it loses value. When something becomes scarce it gains it. AI is making previously scarce things abundant at extraordinary speed: writing, code, images, translation, analysis, synthesis, customer service, legal drafts, medical explanations. The economic value of those things is falling and will continue to fall. That part is not controversial.</p>
           <p>What is genuinely open: what becomes newly scarce as a result? Scarcity does not disappear. It migrates. The printing press made handwritten manuscripts obsolete and made literacy newly valuable. Photography made painted portraiture obsolete and made the commissioned portrait newly precious as a signal of status. Every technology that makes something abundant creates new scarcity somewhere else. What is the analogue for AI?</p>
-          <p>The candidates forming in my thinking: deliberate human attention, already argued in the <a href="the-last-human-impression.html" style="color:var(--accent)">Last Human Impression</a>. Verifiable consequence, the willingness to be wrong publicly in ways that cost something real. Physical presence and real-time shared experience. The capacity to be genuinely surprised and to tolerate the discomfort of not yet understanding something. These are not nostalgic preferences. They are things AI cannot provide by definition, and scarcity always concentrates value in what cannot be replicated.</p>
+          <p>The candidates forming in my thinking: deliberate human attention, already argued in the <a href="the-last-human-impression.html" class="page-inline-a805525bfd">Last Human Impression</a>. Verifiable consequence, the willingness to be wrong publicly in ways that cost something real. Physical presence and real-time shared experience. The capacity to be genuinely surprised and to tolerate the discomfort of not yet understanding something. These are not nostalgic preferences. They are things AI cannot provide by definition, and scarcity always concentrates value in what cannot be replicated.</p>
           <div class="arg-rupture">
             <div class="arg-rupture-label">Why this stays open</div>
             <div class="arg-rupture-text">The list of new scarcities is still forming. The economic mechanisms that will price them are not yet visible. And the answer is probably domain-specific in ways that make any general claim misleading. This is the argument that needs the most time before it becomes a paper, and the one whose answer matters most for every strategic decision being made right now.</div>
@@ -621,17 +613,18 @@
     </div>
 
     <div class="closing reveal">
-      <p class="closing-text">These arguments are published in their current state of incompleteness. <em>That incompleteness is the point.</em> A finished argument that turned out to be wrong is less useful than an unfinished one asking the right question. If something here collides with something you are working on, the contact is on the <a href="about.html" style="color:var(--accent);text-decoration:none;">about page</a>.</p>
+      <p class="closing-text">These arguments are published in their current state of incompleteness. <em>That incompleteness is the point.</em> A finished argument that turned out to be wrong is less useful than an unfinished one asking the right question. If something here collides with something you are working on, the contact is on the <a href="about.html" class="page-inline-fe6ae13c9f">about page</a>.</p>
     </div>
 
-    <footer style="border-top: 3px double var(--ink); padding: 1.5rem 5rem; display: flex; justify-content: space-between; align-items: center; margin-top: 3rem;">
-      <div style="font-family: 'JetBrains Mono', monospace; font-size: 0.5rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--muted);">&copy; 2026 Diego Dell'Agostino</div>
-      <div style="font-family: 'Space Grotesk', serif; font-size: 1rem; font-style: italic; color: var(--rule);">&#10087;</div>
-      <div style="font-family: 'JetBrains Mono', monospace; font-size: 0.5rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--muted);">Laboratory &middot; Unfinished Arguments</div>
+      </main>
+  <footer class="page-inline-4a408ed65c">
+      <div class="page-inline-1e42095b94">&copy; 2026 Diego Dell'Agostino</div>
+      <div class="page-inline-859e8a139c">&#10087;</div>
+      <div class="page-inline-1e42095b94">Laboratory &middot; Unfinished Arguments</div>
     </footer>
 
   </div>
-<script src="global.js?v=20260419b"></script>
+<script src="global.js?v=20260621120500"></script>
 <script>
 (function(){
   var reveals = document.querySelectorAll('.reveal');

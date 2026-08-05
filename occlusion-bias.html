@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <script>(function(){var d=document.documentElement,m=window.matchMedia("(prefers-color-scheme:dark)"),s;try{s=localStorage.getItem("theme")}catch(e){}var v=s==="dark"||s==="light",t=v?s:(m.matches?"dark":"light");d.setAttribute("data-theme",t);d.setAttribute("data-theme-source",v?"user":"system")})()</script>
   <meta charset="UTF-8" />
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-TJF4P0NYFT"></script>
@@ -10,9 +11,8 @@
     gtag('js', new Date());
     gtag('config', 'G-TJF4P0NYFT');
   </script>
-  <script>(function(){var t=localStorage.getItem("theme");if(!t)t=window.matchMedia("(prefers-color-scheme:dark)").matches?"dark":"light";document.documentElement.setAttribute("data-theme",t)})()</script>
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
-  <meta name="theme-color" content="#e6d5b8">
+  <meta name="theme-color" content="#f5f0e8" id="themeColor">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-title" content="Narrative Mechanics">
   <link rel="apple-touch-icon" href="/og-default.png">
@@ -58,10 +58,11 @@
   </script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;700&family=Epilogue:ital,wght@0,400;1,400;0,600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="global.css?v=20260418f">
-  <link rel="stylesheet" href="components.css?v=20260418f">
-  <style>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="global.css?v=20260621120500">
+  <link rel="stylesheet" href="components.css?v=20260621120500">
+  <style>@layer page {
+
     html { font-size: 20px; scroll-behavior: smooth; scroll-padding-top: 60px; }
     body { line-height: 1.8; }
 
@@ -69,27 +70,27 @@
     .hero { max-width: 960px; margin: 0 auto; padding: 6rem 4rem 4rem; }
     .hero-title { font-family: 'Space Grotesk', serif; font-size: clamp(2.5rem, 6vw, 4.5rem); font-weight: 900; line-height: 0.95; letter-spacing: -0.03em; margin-bottom: 1rem; }
     .hero-title em { font-style: italic; color: var(--ink); text-decoration: none; background: linear-gradient(180deg, transparent 54%, color-mix(in srgb, var(--accent) 18%, transparent) 54%); padding: 0 0.08em 0.02em 0; box-decoration-break: clone; -webkit-box-decoration-break: clone; }
-    .hero-subtitle { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 1.15rem; font-style: italic; color: var(--muted); margin-bottom: 2rem; max-width: 560px; line-height: 1.6; }
+    .hero-subtitle { font-family: 'Inter', sans-serif; font-size: 1.15rem; font-style: italic; color: var(--muted); margin-bottom: 2rem; max-width: 560px; line-height: 1.6; }
     .hero-meta { display: flex; gap: 2rem; flex-wrap: wrap; margin-bottom: 2rem; }
-    .hero-meta-item { font-family: 'JetBrains Mono', monospace; font-size: 0.48rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); }
+    .hero-meta-item { font-family: 'Space Grotesk', monospace; font-size: 0.75rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); }
     .hero-meta-item strong { color: var(--ink); font-weight: 700; }
     .hero-tags { display: flex; flex-wrap: wrap; gap: 0.4rem; }
-    .hero-tag { font-family: 'JetBrains Mono', monospace; font-size: 0.45rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); border: 1px solid var(--rule); padding: 0.25em 0.6em; }
+    .hero-tag { font-family: 'Space Grotesk', monospace; font-size: 0.75rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); border: 1px solid var(--rule); padding: 0.25em 0.6em; }
 
     /* ── Constructs Strip ── */
     .constructs-strip { max-width: 960px; margin: 0 auto; padding: 0 4rem; }
-    .constructs-header { font-family: 'JetBrains Mono', monospace; font-size: 0.5rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--accent); margin-bottom: 1rem; text-align: center; }
+    .constructs-header { font-family: 'Space Grotesk', monospace; font-size: 0.75rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--accent); margin-bottom: 1rem; text-align: center; }
     .constructs-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 1px; background: var(--rule); border: 1px solid var(--rule); overflow: hidden; }
     .construct-cell { background: var(--highlight); padding: 1.25rem 1rem; text-align: center; }
     .construct-num { font-family: 'Space Grotesk', serif; font-size: 1.6rem; font-weight: 900; font-style: italic; color: var(--accent); line-height: 1; margin-bottom: 0.4rem; }
-    .construct-name { font-family: 'JetBrains Mono', monospace; font-size: 0.48rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink); margin-bottom: 0.5rem; font-weight: 700; }
+    .construct-name { font-family: 'Space Grotesk', monospace; font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink); margin-bottom: 0.5rem; font-weight: 700; }
     .construct-desc { font-size: 0.78rem; line-height: 1.45; font-style: italic; color: var(--muted); }
 
     /* ── Abstract ── */
     .abstract-wrap { max-width: 960px; margin: 0 auto; padding: 2rem 4rem; }
     .abstract-box { border: 1px solid var(--rule); overflow: hidden; }
     .abstract-header { background: var(--ink); padding: 0.75rem 1.5rem; display: flex; justify-content: space-between; align-items: center; }
-    .abstract-header-text { font-family: 'JetBrains Mono', monospace; font-size: 0.48rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--paper); opacity: 0.7; }
+    .abstract-header-text { font-family: 'Space Grotesk', monospace; font-size: 0.75rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--paper); opacity: 0.7; }
     .abstract-body { padding: 1.5rem 2rem; background: var(--highlight); }
     .abstract-body p { font-size: 0.92rem; line-height: 1.8; margin-bottom: 1.25rem; text-align: justify; hyphens: auto; }
     .abstract-body p:last-child { margin-bottom: 0; }
@@ -99,23 +100,23 @@
     .toc-wrap { max-width: 960px; margin: 0 auto; padding: 0 4rem 3rem; }
     .toc { border: 1px solid var(--rule); background: var(--highlight); overflow: hidden; }
     .toc-header { background: var(--ink); padding: 0.75rem 1.5rem; }
-    .toc-header-text { font-family: 'JetBrains Mono', monospace; font-size: 0.5rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--paper); opacity: 0.7; }
+    .toc-header-text { font-family: 'Space Grotesk', monospace; font-size: 0.75rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--paper); opacity: 0.7; }
     .toc-body { padding: 1rem 1.5rem; display: flex; flex-direction: column; gap: 0; }
     .toc-item { display: flex; gap: 0.75rem; align-items: baseline; padding: 0.6rem 0.5rem; text-decoration: none; border-bottom: 1px solid var(--rule); transition: background 0.2s; }
     .toc-item:last-child { border-bottom: none; }
     .toc-item:hover { background: var(--accent-light); }
-    .toc-num { font-family: 'JetBrains Mono', monospace; font-size: 0.48rem; color: var(--accent); letter-spacing: 0.1em; flex-shrink: 0; }
+    .toc-num { font-family: 'Space Grotesk', monospace; font-size: 0.75rem; color: var(--accent); letter-spacing: 0.1em; flex-shrink: 0; }
     .toc-title { font-size: 0.92rem; color: var(--ink); }
-    .toc-sub { font-family: 'JetBrains Mono', monospace; font-size: 0.44rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); display: block; margin-top: 0.15rem; }
+    .toc-sub { font-family: 'Space Grotesk', monospace; font-size: 0.75rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); display: block; margin-top: 0.15rem; }
 
     /* ── Genealogy ── */
     .genealogy { border: 1px solid var(--rule); overflow: hidden; }
-    .genealogy-header { background: var(--framework); padding: 0.75rem 1.5rem; font-family: 'JetBrains Mono', monospace; font-size: 0.48rem; letter-spacing: 0.22em; text-transform: uppercase; color: #dce8f0; }
+    .genealogy-header { background: var(--framework); padding: 0.75rem 1.5rem; font-family: 'Space Grotesk', monospace; font-size: 0.75rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--paper); }
     .genealogy-row { display: grid; grid-template-columns: 120px 1fr 120px; border-bottom: 1px solid var(--rule); }
     .genealogy-row:last-child { border-bottom: none; }
     .genealogy-cell { padding: 0.85rem 1rem; font-size: 0.88rem; line-height: 1.6; }
-    .genealogy-cell.label { font-family: 'JetBrains Mono', monospace; font-size: 0.52rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--framework); font-weight: 700; display: flex; align-items: center; background: var(--framework-light); }
-    .genealogy-cell.note { font-family: 'JetBrains Mono', monospace; font-size: 0.44rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); display: flex; align-items: center; justify-content: flex-end; }
+    .genealogy-cell.label { font-family: 'Space Grotesk', monospace; font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--framework); font-weight: 700; display: flex; align-items: center; background: var(--framework-light); }
+    .genealogy-cell.note { font-family: 'Space Grotesk', monospace; font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); display: flex; align-items: center; justify-content: flex-end; }
 
     /* ── Content ── */
     .content { max-width: 720px; margin: 0 auto; padding: 0 4rem 6rem; }
@@ -126,19 +127,19 @@
 
     /* ── Construct Definition ── */
     .construct-def { border: 1px solid var(--rule); margin: 2rem 0; overflow: hidden; }
-    .construct-def-label { background: var(--framework); padding: 0.65rem 1.25rem; font-family: 'JetBrains Mono', monospace; font-size: 0.48rem; letter-spacing: 0.22em; text-transform: uppercase; color: #dce8f0; }
+    .construct-def-label { background: var(--framework); padding: 0.65rem 1.25rem; font-family: 'Space Grotesk', monospace; font-size: 0.75rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--paper); }
     .construct-def-name { padding: 1rem 1.25rem 0; font-family: 'Space Grotesk', serif; font-size: 1.15rem; font-weight: 700; color: var(--framework); }
     .construct-def-body { padding: 0.75rem 1.25rem 1.25rem; }
     .construct-def-body p { font-size: 0.92rem; line-height: 1.75; margin-bottom: 1rem; }
     .construct-def-body p:last-child { margin-bottom: 0; }
-    .construct-def-body p::first-letter { float: none !important; font-size: inherit !important; color: inherit !important; margin: 0 !important; }
+    .construct-def-body p::first-letter { float: none; font-size: inherit; color: inherit; margin: 0; }
 
     /* ── Kill Criteria Box ── */
     .kill-box { border: 1px solid var(--accent); margin: 2rem 0; overflow: hidden; }
-    .kill-box-label { background: var(--accent); padding: 0.65rem 1.25rem; font-family: 'JetBrains Mono', monospace; font-size: 0.48rem; letter-spacing: 0.22em; text-transform: uppercase; color: white; }
+    .kill-box-label { background: var(--accent); padding: 0.65rem 1.25rem; font-family: 'Space Grotesk', monospace; font-size: 0.75rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--on-accent); }
     .kill-item { padding: 1.25rem 1.5rem; border-bottom: 1px solid var(--rule); }
     .kill-item:last-child { border-bottom: none; }
-    .kill-label { font-family: 'JetBrains Mono', monospace; font-size: 0.5rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--accent); margin-bottom: 0.5rem; font-weight: 700; }
+    .kill-label { font-family: 'Space Grotesk', monospace; font-size: 0.75rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--accent); margin-bottom: 0.5rem; font-weight: 700; }
     .kill-text { font-size: 0.9rem; line-height: 1.75; }
 
     /* ── Animations (page-specific keyframe fade-in) ── */
@@ -156,7 +157,7 @@
       .abstract-body { padding: 1.25rem; }
       .toc-wrap { padding: 0 1.5rem 2rem; }
       .genealogy-row { grid-template-columns: 1fr; }
-      .genealogy-cell.label { padding: 0.6rem 1rem 0.2rem; font-size: 0.48rem; }
+      .genealogy-cell.label { padding: 0.6rem 1rem 0.2rem; font-size: 0.75rem; }
       .genealogy-cell { padding: 0.4rem 1rem; }
       .genealogy-cell.note { justify-content: flex-start; padding-top: 0; padding-bottom: 0.6rem; }
       .content { padding: 0 1.5rem 4rem; }
@@ -171,48 +172,39 @@
       .hero { grid-template-columns: 1fr; }
       .hero-svg { max-width: 200px; margin: 0 auto; order: -1; }
     }
-  </style>
+  
+}</style>
 </head>
 <body>
+  <a href="#main-content" class="skip-link">Skip to content</a>
 <div id="pbar"></div>
 <div id="pbar-label"></div>
-<div class="bg-pattern"></div>
-<div class="bg-grain"></div>
 <div class="page-wrap">
 
   <!-- Nav -->
       <!-- Top Bar -->
   <div class="top-bar">
     <span>Buenos Aires &middot; Since 2008</span>
-    <span>18 Essays &middot; 3 Frameworks &middot; ~289 min of reading &middot; <a href="about.html">About the author</a></span>
+    <span>Essays &middot; Frameworks &middot; Guided reading paths &middot; <a href="about.html">About the author</a></span>
   </div>
 
   <!-- Nav -->
   <nav class="nav">
       <div class="nav-inner">
-        <a href="index.html" class="nav-brand">Narrative<em>Mechanics</em></a>
+        <a href="index.html" class="nav-brand" aria-label="Narrative Mechanics — Home">NARRATIVE MECHANICS</a>
         <button class="nav-btn nav-toggle" aria-label="Menu" aria-expanded="false" aria-controls="navLinks" id="navToggle">
           <svg viewBox="0 0 24 24"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg>
         </button>
-        <div class="nav-links" id="navLinks">
-          <a href="index.html" class="nav-link">Home</a>
-          <div class="nav-sep"></div>
-          <a href="archive.html" class="nav-link">Start Here</a>
+        <div class="nav-links" id="navLinks" aria-label="Primary sections">
+          <a href="thesis.html" class="nav-link">Idea</a>
           <a href="frameworks.html" class="nav-link">Frameworks</a>
-          <a href="series.html" class="nav-link">Series</a>
           <a href="essays.html" class="nav-link">Essays</a>
-          <a href="notes.html" class="nav-link">Notes</a>
-          <div class="nav-sep"></div>
+          <a href="about.html#work" class="nav-link" data-open-contact data-contact-mode="conversation">Work</a>
           <a href="about.html" class="nav-link">About</a>
-        </div>
-        <div class="nav-right">
-          <button class="nav-btn" aria-label="Toggle theme" id="themeToggle">
-            <svg class="icon-moon" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
-            <svg class="icon-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
-          </button>
-        </div>
+        </div><div class="nav-right"><button class="nav-btn theme-toggle" type="button" data-theme-toggle aria-label="Use dark theme"><svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3 7 7 0 0 0 21 12.8Z"/></svg><svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.42 1.42M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.42-1.42M17.66 6.34l1.41-1.41"/></svg></button></div>
       </div>
     </nav>
+  <main id="main-content">
 
   <!-- Hero -->
   <header class="hero">
@@ -352,18 +344,18 @@
         <div class="genealogy-cell note">Commerce layer</div>
       </div>
       <div class="genealogy-row">
-        <div class="genealogy-cell label"><a href="thesis.html" style="color:inherit;text-decoration:none">ZMOI / CMI</a></div>
+        <div class="genealogy-cell label"><a href="thesis.html" class="page-inline-7bb4174728">ZMOI / CMI</a></div>
         <div class="genealogy-cell">Dell'Agostino, 2026. The moment before belief. Presence architecture across interpretive surfaces.</div>
         <div class="genealogy-cell note">Media layer</div>
       </div>
       <div class="genealogy-row">
-        <div class="genealogy-cell label"><a href="zmox.html" style="color:inherit;text-decoration:none">CAX</a></div>
+        <div class="genealogy-cell label"><a href="zmox.html" class="page-inline-7bb4174728">CAX</a></div>
         <div class="genealogy-cell">Dell'Agostino, 2026. The constitutive function of media. Who is designing your audience's transformation.</div>
         <div class="genealogy-cell note">Identity layer</div>
       </div>
       <div class="genealogy-row">
-        <div class="genealogy-cell label"><a href="paper-01.html" style="color:inherit;text-decoration:none">Narrative-First</a></div>
-        <div class="genealogy-cell">Dell'Agostino, 2026. Signal quality at the production layer. <a href="paper-01.html" style="color:var(--framework);text-decoration:underline;text-decoration-color:var(--rule);text-underline-offset:3px">Strategic Debt</a>, <a href="paper-02.html" style="color:var(--framework);text-decoration:underline;text-decoration-color:var(--rule);text-underline-offset:3px">MMF</a>, <a href="paper-04.html" style="color:var(--framework);text-decoration:underline;text-decoration-color:var(--rule);text-underline-offset:3px">Narrative Drift</a>.</div>
+        <div class="genealogy-cell label"><a href="paper-01.html" class="page-inline-7bb4174728">Narrative-First</a></div>
+        <div class="genealogy-cell">Dell'Agostino, 2026. Signal quality at the production layer. <a href="paper-01.html" class="page-inline-74c2e3f6c8">Strategic Debt</a>, <a href="paper-02.html" class="page-inline-74c2e3f6c8">MMF</a>, <a href="paper-04.html" class="page-inline-74c2e3f6c8">Narrative Drift</a>.</div>
         <div class="genealogy-cell note">Production layer</div>
       </div>
       <div class="genealogy-row">
@@ -374,7 +366,7 @@
     </div>
   </div>
 
-  <div class="chapter-divider" style="margin-top:3rem;">
+  <div class="chapter-divider page-inline-276d74d466">
     <div class="chapter-divider-line"></div>
     <div class="chapter-divider-ornament">✦ ❧ ✦</div>
     <div class="chapter-divider-line"></div>
@@ -672,7 +664,7 @@
           <p>The argument in this paper has a clear falsification path. Holding it to that standard is the condition that makes it worth making.</p>
         </div>
 
-        <p>One final note on the relationship between this paper and the broader body of work it belongs to. The <a href="paper-01.html" style="color:var(--accent);text-decoration:underline;text-decoration-color:var(--rule);text-underline-offset:3px">Narrative-First series</a> argued that signal quality has to be built into the production layer before distribution begins. The <a href="thesis.html" style="color:var(--accent);text-decoration:underline;text-decoration-color:var(--rule);text-underline-offset:3px">CMI framework</a> argued that presence architecture across interpretive surfaces is the variable that compounds. The <a href="zmox.html" style="color:var(--accent);text-decoration:underline;text-decoration-color:var(--rule);text-underline-offset:3px">Constitutive Arc</a> argued that algorithmic systems have already captured the function of shaping how audiences understand reality. Occlusion Bias argues that the distribution environment is not a neutral measurement instrument and that the structural conditions of the next phase make the arguments of all three preceding papers more urgent, not less.</p>
+        <p>One final note on the relationship between this paper and the broader body of work it belongs to. The <a href="paper-01.html" class="page-inline-615982174f">Narrative-First series</a> argued that signal quality has to be built into the production layer before distribution begins. The <a href="thesis.html" class="page-inline-615982174f">CMI framework</a> argued that presence architecture across interpretive surfaces is the variable that compounds. The <a href="zmox.html" class="page-inline-615982174f">Constitutive Arc</a> argued that algorithmic systems have already captured the function of shaping how audiences understand reality. Occlusion Bias argues that the distribution environment is not a neutral measurement instrument and that the structural conditions of the next phase make the arguments of all three preceding papers more urgent, not less.</p>
         <p>The organizations that will be in the best position when these transitions complete are not the ones who anticipated them perfectly. They are the ones who built direct audience relationships, genuine curatorial authority, and editorial identities strong enough to survive outside the intermediated distribution layer. That work does not require these transitions to arrive on any particular schedule. It is the right work regardless. If the argument here is wrong about the pace, it is not wrong about the direction.</p>
       </div>
       <div class="section-end">✦ &nbsp; ❧ &nbsp; ✦</div>
@@ -680,6 +672,7 @@
 
   </div><!-- /content -->
 
+    </main>
   <footer>
     <div class="footer-left">Occlusion Bias &nbsp;·&nbsp; v1.0</div>
     <div class="footer-center">D.</div>
@@ -688,6 +681,6 @@
 
 </div><!-- /page-wrap -->
 
-<script src="global.js?v=20260419b"></script>
+<script src="global.js?v=20260621120500"></script>
 </body>
 </html>

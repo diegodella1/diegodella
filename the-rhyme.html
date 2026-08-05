@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <script>(function(){var d=document.documentElement,m=window.matchMedia("(prefers-color-scheme:dark)"),s;try{s=localStorage.getItem("theme")}catch(e){}var v=s==="dark"||s==="light",t=v?s:(m.matches?"dark":"light");d.setAttribute("data-theme",t);d.setAttribute("data-theme-source",v?"user":"system")})()</script>
   <meta charset="UTF-8">
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-TJF4P0NYFT"></script>
@@ -10,9 +11,8 @@
     gtag('js', new Date());
     gtag('config', 'G-TJF4P0NYFT');
   </script>
-  <script>(function(){var t=localStorage.getItem("theme");if(!t)t=window.matchMedia("(prefers-color-scheme:dark)").matches?"dark":"light";document.documentElement.setAttribute("data-theme",t)})()</script>
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
-  <meta name="theme-color" content="#e6d5b8">
+  <meta name="theme-color" content="#f5f0e8" id="themeColor">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-title" content="Narrative Mechanics">
   <link rel="apple-touch-icon" href="/og-default.png">
@@ -60,17 +60,18 @@
   </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;700&family=Epilogue:ital,wght@0,400;1,400;0,600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="global.css?v=20260418f">
-  <link rel="stylesheet" href="components.css?v=20260418f">
-  <style>
-    ::selection { background: var(--accent); color: var(--paper); }
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="global.css?v=20260621120500">
+  <link rel="stylesheet" href="components.css?v=20260621120500">
+  <style>@layer page {
+
+    ::selection { background: var(--accent); color: var(--on-accent); }
 
     /* Hero */
     .hero { max-width: 900px; margin: 0 auto; padding: 5rem 4rem 4rem; }
     .hero-title { font-family: 'Space Grotesk', serif; font-size: clamp(2.8rem, 6vw, 5rem); font-weight: 900; line-height: 1.0; letter-spacing: -0.025em; margin-bottom: 1rem; }
     .hero-title em { font-style: italic; color: var(--ink); display: block; text-decoration: none; background: linear-gradient(180deg, transparent 54%, color-mix(in srgb, var(--accent) 18%, transparent) 54%); padding: 0 0.08em 0.02em 0; box-decoration-break: clone; -webkit-box-decoration-break: clone; }
-    .hero-subtitle { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 1.1rem; font-style: italic; color: var(--muted); margin-bottom: 2rem; line-height: 1.5; max-width: 480px; }
+    .hero-subtitle { font-family: 'Inter', sans-serif; font-size: 1.1rem; font-style: italic; color: var(--muted); margin-bottom: 2rem; line-height: 1.5; max-width: 480px; }
 
     /* Content */
     .content { max-width: 720px; margin: 0 auto; padding: 0 2.5rem 8rem; }
@@ -89,7 +90,7 @@
     .section-header-num { font-family: 'Space Grotesk', serif; font-size: 2.5rem; font-weight: 900; font-style: italic; color: var(--rule); line-height: 1; flex-shrink: 0; transition: color 0.2s; }
     .essay-section:hover .section-header-num { color: var(--accent); }
     .section-header-body { display: flex; flex-direction: column; gap: 0.2rem; }
-    .section-header-label { font-family: 'JetBrains Mono', monospace; font-size: 0.48rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--accent); }
+    .section-header-label { font-family: 'Space Grotesk', monospace; font-size: 0.75rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--accent); }
     .section-header-title { font-family: 'Space Grotesk', serif; font-size: 1.35rem; font-weight: 700; line-height: 1.15; letter-spacing: -0.01em; }
 
     .essay-section p { margin-bottom: 1.5rem; font-size: 1.05rem; line-height: 1.92; text-align: justify; hyphens: auto; }
@@ -103,16 +104,16 @@
     /* Map List */
     .map-list { margin: 2rem 0; padding: 0; list-style: none; border-top: 1px solid var(--rule); }
     .map-list li { padding: 1rem 0; border-bottom: 1px solid var(--rule); display: grid; grid-template-columns: auto 1fr; gap: 0 1rem; align-items: baseline; }
-    .map-list li .map-tag { font-family: 'JetBrains Mono', monospace; font-size: 0.48rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--accent); white-space: nowrap; padding-top: 0.15rem; }
+    .map-list li .map-tag { font-family: 'Space Grotesk', monospace; font-size: 0.75rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--accent); white-space: nowrap; padding-top: 0.15rem; }
     .map-list li .map-body { font-size: 1rem; line-height: 1.7; }
     .map-list li .map-title { font-family: 'Space Grotesk', serif; font-weight: 700; font-size: 1.05rem; }
 
-    .share-btn { display: inline-flex; align-items: center; gap: 0.5rem; font-family: 'JetBrains Mono', monospace; font-size: 0.5rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--muted); background: none; border: 1px solid var(--rule); padding: 0.5em 1em; cursor: pointer; transition: all 0.15s; margin-top: 1rem; position: relative; z-index: 1; }
+    .share-btn { display: inline-flex; align-items: center; gap: 0.5rem; font-family: 'Space Grotesk', monospace; font-size: 0.75rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--muted); background: none; border: 1px solid var(--rule); padding: 0.5em 1em; cursor: pointer; transition: all 0.15s; margin-top: 1rem; position: relative; z-index: 1; }
     .share-btn:hover { color: var(--accent); border-color: var(--accent); }
     .share-btn.copied { color: var(--accent); border-color: var(--accent); }
 
     .paper-nav { max-width: 680px; margin: 0 auto; padding: 0 2.5rem 5rem; display: flex; justify-content: space-between; }
-    .paper-nav a { display: flex; align-items: center; gap: 0.75rem; text-decoration: none; color: var(--ink); font-family: 'JetBrains Mono', monospace; font-size: 0.55rem; letter-spacing: 0.15em; text-transform: uppercase; transition: color 0.2s; }
+    .paper-nav a { display: flex; align-items: center; gap: 0.75rem; text-decoration: none; color: var(--ink); font-family: 'Space Grotesk', monospace; font-size: 0.75rem; letter-spacing: 0.15em; text-transform: uppercase; transition: color 0.2s; }
     .paper-nav a:hover { color: var(--accent); }
     .paper-nav a svg { width: 16px; height: 16px; stroke: currentColor; fill: none; stroke-width: 1.5; }
 
@@ -129,48 +130,39 @@
       .hero { grid-template-columns: 1fr; }
       .hero-svg { max-width: 200px; margin: 0 auto; order: -1; }
     }
-  </style>
+  
+}</style>
 </head>
 <body>
+  <a href="#main-content" class="skip-link">Skip to content</a>
   <div id="pbar"></div>
   <div id="pbar-label"></div>
-  <div class="bg-pattern"></div>
-  <div class="bg-grain"></div>
 
   <div class="page-wrap">
 
       <!-- Top Bar -->
   <div class="top-bar">
     <span>Buenos Aires &middot; Since 2008</span>
-    <span>18 Essays &middot; 3 Frameworks &middot; ~289 min of reading &middot; <a href="about.html">About the author</a></span>
+    <span>Essays &middot; Frameworks &middot; Guided reading paths &middot; <a href="about.html">About the author</a></span>
   </div>
 
   <!-- Nav -->
   <nav class="nav">
       <div class="nav-inner">
-        <a href="index.html" class="nav-brand">Narrative<em>Mechanics</em></a>
+        <a href="index.html" class="nav-brand" aria-label="Narrative Mechanics — Home">NARRATIVE MECHANICS</a>
         <button class="nav-btn nav-toggle" aria-label="Menu" aria-expanded="false" aria-controls="navLinks" id="navToggle">
           <svg viewBox="0 0 24 24"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg>
         </button>
-        <div class="nav-links" id="navLinks">
-          <a href="index.html" class="nav-link">Home</a>
-          <div class="nav-sep"></div>
-          <a href="archive.html" class="nav-link">Start Here</a>
+        <div class="nav-links" id="navLinks" aria-label="Primary sections">
+          <a href="thesis.html" class="nav-link">Idea</a>
           <a href="frameworks.html" class="nav-link">Frameworks</a>
-          <a href="series.html" class="nav-link">Series</a>
           <a href="essays.html" class="nav-link">Essays</a>
-          <a href="notes.html" class="nav-link">Notes</a>
-          <div class="nav-sep"></div>
+          <a href="about.html#work" class="nav-link" data-open-contact data-contact-mode="conversation">Work</a>
           <a href="about.html" class="nav-link">About</a>
-        </div>
-        <div class="nav-right">
-          <button class="nav-btn" aria-label="Toggle theme" id="themeToggle">
-            <svg class="icon-moon" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
-            <svg class="icon-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
-          </button>
-        </div>
+        </div><div class="nav-right"><button class="nav-btn theme-toggle" type="button" data-theme-toggle aria-label="Use dark theme"><svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3 7 7 0 0 0 21 12.8Z"/></svg><svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.42 1.42M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.42-1.42M17.66 6.34l1.41-1.41"/></svg></button></div>
       </div>
     </nav>
+  <main id="main-content">
 
     <header class="hero"><div class="hero-main">
       <div class="hero-kicker">Essay &nbsp;&middot;&nbsp; March 2026</div>
@@ -328,15 +320,15 @@
         <p>Here is the sequence. Each piece describes a different layer of the same transition. If you know where you are in it, you know which piece to read next.</p>
 
         <ul class="map-list">
-          <li><span class="map-tag">Context</span><span class="map-body"><a href="the-great-contraction.html" style="color:inherit;text-decoration:none;"><span class="map-title">The Great Contraction.</span></a> The world is closing. Not backwards. Inwards. After thirty years of forced expansion, the counter-movement has begun. <em>Read this if you need to understand the macro environment before making strategic decisions.</em></span></li>
-          <li><span class="map-tag">Cost</span><span class="map-body"><a href="the-transition-tax.html" style="color:inherit;text-decoration:none;"><span class="map-title">The Transition Tax.</span></a> Five structural costs that fall on the generation living between two worlds. <em>Read this if you suspect your organization is paying costs it cannot see.</em></span></li>
-          <li><span class="map-tag">Diagnosis</span><span class="map-body"><a href="before-you-delegate.html" style="color:inherit;text-decoration:none;"><span class="map-title">Before You Delegate.</span></a> The accumulated cost of ceding decisions to systems whose objectives were never yours. Sovereignty Debt. <em>Read this before signing your next vendor contract or platform commitment.</em></span></li>
-          <li><span class="map-tag">Threshold</span><span class="map-body"><a href="the-last-manual-moment.html" style="color:inherit;text-decoration:none;"><span class="map-title">The Last Manual Moment.</span></a> The point just before something that required human effort stops requiring it. <em>Read this if you are still building teams around tasks that AI already handles.</em></span></li>
-          <li><span class="map-tag">Fabric</span><span class="map-body"><a href="the-last-scarcity.html" style="color:inherit;text-decoration:none;"><span class="map-title">The Last Scarcity.</span></a> When every material scarcity falls, what remains is the reason to move. And the social architecture that gave people that reason is tearing. <em>Read this if you are restructuring and nobody is talking about what your people lose beyond a paycheck.</em></span></li>
+          <li><span class="map-tag">Context</span><span class="map-body"><a href="the-great-contraction.html" class="page-inline-fbf6071364"><span class="map-title">The Great Contraction.</span></a> The world is closing. Not backwards. Inwards. After thirty years of forced expansion, the counter-movement has begun. <em>Read this if you need to understand the macro environment before making strategic decisions.</em></span></li>
+          <li><span class="map-tag">Cost</span><span class="map-body"><a href="the-transition-tax.html" class="page-inline-fbf6071364"><span class="map-title">The Transition Tax.</span></a> Five structural costs that fall on the generation living between two worlds. <em>Read this if you suspect your organization is paying costs it cannot see.</em></span></li>
+          <li><span class="map-tag">Diagnosis</span><span class="map-body"><a href="before-you-delegate.html" class="page-inline-fbf6071364"><span class="map-title">Before You Delegate.</span></a> The accumulated cost of ceding decisions to systems whose objectives were never yours. Sovereignty Debt. <em>Read this before signing your next vendor contract or platform commitment.</em></span></li>
+          <li><span class="map-tag">Threshold</span><span class="map-body"><a href="the-last-manual-moment.html" class="page-inline-fbf6071364"><span class="map-title">The Last Manual Moment.</span></a> The point just before something that required human effort stops requiring it. <em>Read this if you are still building teams around tasks that AI already handles.</em></span></li>
+          <li><span class="map-tag">Fabric</span><span class="map-body"><a href="the-last-scarcity.html" class="page-inline-fbf6071364"><span class="map-title">The Last Scarcity.</span></a> When every material scarcity falls, what remains is the reason to move. And the social architecture that gave people that reason is tearing. <em>Read this if you are restructuring and nobody is talking about what your people lose beyond a paycheck.</em></span></li>
           <li><span class="map-tag">Operation</span><span class="map-body"><span class="map-title">The Rhyme.</span> This paper. The pattern, the progression from tools to allies, and a framework for deciding what to protect. <em>Read this if you have already started and need to know what comes next.</em></span></li>
         </ul>
 
-        <p>The frameworks I have published elsewhere (<a href="thesis.html" style="color:var(--accent)">CMI</a>, <a href="zmox.html" style="color:var(--accent)">CAX</a>, <a href="occlusion-bias.html" style="color:var(--accent)">Occlusion Bias</a>, <a href="paper-04.html" style="color:var(--accent)">Narrative Drift</a>, <a href="before-you-delegate.html" style="color:var(--accent)">Sovereignty Debt</a>) are the instruments for navigating within this map. They address specific failure modes: how narratives lose coherence, how blind spots form in organizational vision, how control transfers invisibly.</p>
+        <p>The frameworks I have published elsewhere (<a href="thesis.html" class="page-inline-a805525bfd">CMI</a>, <a href="zmox.html" class="page-inline-a805525bfd">CAX</a>, <a href="occlusion-bias.html" class="page-inline-a805525bfd">Occlusion Bias</a>, <a href="paper-04.html" class="page-inline-a805525bfd">Narrative Drift</a>, <a href="before-you-delegate.html" class="page-inline-a805525bfd">Sovereignty Debt</a>) are the instruments for navigating within this map. They address specific failure modes: how narratives lose coherence, how blind spots form in organizational vision, how control transfers invisibly.</p>
 
         <p>I did not plan this body of work as a unified system. It assembled itself. But looking at the map now, I can see where the next stress points will be, because the pattern tells me. Organizations that are currently in phase one (dismissing the tools, or adopting them superficially) are about twelve to eighteen months from phase two (discovering that their team structure no longer matches their cost of iteration). The ones already in phase two are six to twelve months from phase three (the social fabric strain that nobody budgeted for). This is not prophecy. It is the same sequence I watched in media, running at higher speed.</p>
 
@@ -371,23 +363,24 @@
         <p>I used to think the pattern recognition was the valuable thing. The ability to see the rhyme, to recognize the shape of the transition. I am less sure now. What I think is actually valuable is the scar tissue. Having been wrong about timing, having overestimated my own clarity, having built things that worked and things that didn't and not always knowing the difference in advance. The pattern gives you direction. The scar tissue gives you calibration.</p>
         <p>I started in metrics. I ended up here. The distance between those two points is not a career. It is the same question asked at increasing volume: what are you actually measuring, and does the thing you are measuring still matter?</p>
         <p class="closing-final">The rhyme is not the answer. The rhyme is the reason to keep asking.</p>
-        <div class="closing-ornament-bottom"><a href="https://diegodella.ar" style="color:inherit;text-decoration:none;">diegodella.ar</a> &nbsp;&middot;&nbsp; Buenos Aires, 2026</div>
+        <div class="closing-ornament-bottom"><a href="https://diegodella.ar" class="page-inline-fbf6071364">diegodella.ar</a> &nbsp;&middot;&nbsp; Buenos Aires, 2026</div>
         <button class="share-btn" id="shareBtn" onclick="handleShare()"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/><polyline points="16 6 12 2 8 6"/><line x1="12" y1="2" x2="12" y2="15"/></svg> Share</button>
       </div>
 
       <div class="paper-nav">
         <a href="already-decided.html"><svg viewBox="0 0 24 24"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg> Already Decided</a>
-        <a href="index.html">All Writing &nbsp;<svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+        <a href="essays.html">All Writing &nbsp;<svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
       </div>
     </div>
 
-    <footer>
+      </main>
+  <footer>
       <div class="footer-left">&copy; 2026 Diego Dell'Agostino</div>
       <div class="footer-center">&#10087;</div>
       <div class="footer-right">Media Strategy &amp; Product Thinking</div>
     </footer>
   </div>
-<script src="global.js?v=20260419b"></script>
+<script src="global.js?v=20260621120500"></script>
 <script>
   function handleShare() {
     var u = window.location.href, t = 'The Rhyme', x = 'On pattern recognition, operational autonomy, and what happens to organizations when intelligence stops being scarce.';

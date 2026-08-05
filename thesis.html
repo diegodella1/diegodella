@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <script>(function(){var d=document.documentElement,m=window.matchMedia("(prefers-color-scheme:dark)"),s;try{s=localStorage.getItem("theme")}catch(e){}var v=s==="dark"||s==="light",t=v?s:(m.matches?"dark":"light");d.setAttribute("data-theme",t);d.setAttribute("data-theme-source",v?"user":"system")})()</script>
   <meta charset="UTF-8">
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-TJF4P0NYFT"></script>
@@ -10,9 +11,8 @@
     gtag('js', new Date());
     gtag('config', 'G-TJF4P0NYFT');
   </script>
-  <script>(function(){var t=localStorage.getItem("theme");if(!t)t=window.matchMedia("(prefers-color-scheme:dark)").matches?"dark":"light";document.documentElement.setAttribute("data-theme",t)})()</script>
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
-  <meta name="theme-color" content="#e6d5b8">
+  <meta name="theme-color" content="#f5f0e8" id="themeColor">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-title" content="Narrative Mechanics">
   <link rel="apple-touch-icon" href="/og-default.png">
@@ -58,17 +58,10 @@
   </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;700&family=Epilogue:ital,wght@0,400;1,400;0,600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="global.css?v=20260418f">
-  <link rel="stylesheet" href="components.css?v=20260418f">
-  <style>
-    /* Page-specific variables */
-    :root {
-      --framework: #1a3a5c; --framework-light: #dce8f0;
-    }
-    [data-theme="dark"] {
-      --framework: #4a9aca; --framework-light: rgba(74,154,202,0.15);
-    }
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="global.css?v=20260621120500">
+  <link rel="stylesheet" href="components.css?v=20260621120500">
+  <style>@layer page {
 
     html { font-size: 20px; }
     body { line-height: 1.75; }
@@ -78,12 +71,12 @@
     .hero-kicker { margin-bottom: 1rem; }
     .hero-title { font-family: 'Space Grotesk', serif; font-size: clamp(2.7rem, 5vw, 4.5rem); font-weight: 900; line-height: 0.98; letter-spacing: -0.03em; margin-bottom: 0.85rem; max-width: 11ch; }
     .hero-title em { font-style: italic; color: var(--ink); text-decoration: none; background: linear-gradient(180deg, transparent 54%, color-mix(in srgb, var(--accent) 22%, transparent) 54%); padding: 0 0.08em 0.02em 0; box-decoration-break: clone; -webkit-box-decoration-break: clone; }
-    .hero-subtitle { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 1.02rem; font-style: italic; color: var(--ink-2); margin-bottom: 1.35rem; line-height: 1.55; max-width: 34rem; }
-    .hero-byline-text { font-size: 0.58rem; }
+    .hero-subtitle { font-family: 'Inter', sans-serif; font-size: 1.02rem; font-style: italic; color: var(--ink-2); margin-bottom: 1.35rem; line-height: 1.55; max-width: 34rem; }
+    .hero-byline-text { font-size: 0.75rem; }
 
     /* Hero tags */
     .hero-tags { display: flex; flex-wrap: wrap; gap: 0.4rem; }
-    .hero-tag { font-family: 'JetBrains Mono', monospace; font-size: 0.45rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); border: 1px solid var(--rule); padding: 0.25em 0.6em; background: var(--surface-1); }
+    .hero-tag { font-family: 'Space Grotesk', monospace; font-size: 0.75rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); border: 1px solid var(--rule); padding: 0.25em 0.6em; background: var(--surface-1); }
 
     /* Three ideas — horizontal strip below hero */
     .three-ideas {
@@ -93,7 +86,7 @@
     }
     .three-ideas-header {
       grid-column: 1 / -1;
-      font-family: 'JetBrains Mono', monospace; font-size: 0.5rem;
+      font-family: 'Space Grotesk', monospace; font-size: 0.75rem;
       letter-spacing: 0.22em; text-transform: uppercase; color: var(--accent);
       border-bottom: 1px solid var(--rule); padding: 1rem 1.5rem 0.75rem;
     }
@@ -110,13 +103,13 @@
     .toc-wrap { max-width: 960px; margin: 0 auto; padding: 5rem 4rem 3rem; }
     .toc { border: 1px solid var(--rule); background: var(--surface-1); overflow: hidden; }
     .toc-header { background: var(--ink); padding: 0.75rem 1.5rem; }
-    .toc-header-text { font-family: 'JetBrains Mono', monospace; font-size: 0.5rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--paper); opacity: 0.7; }
+    .toc-header-text { font-family: 'Space Grotesk', monospace; font-size: 0.75rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--paper); opacity: 0.7; }
     .toc-body { padding: 1.5rem; display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 0.25rem 2rem; }
     .toc-item { display: flex; gap: 0.5rem; align-items: baseline; padding: 0.2rem 0; }
-    .toc-item-num { font-family: 'JetBrains Mono', monospace; font-size: 0.48rem; color: var(--accent); letter-spacing: 0.1em; flex-shrink: 0; }
+    .toc-item-num { font-family: 'Space Grotesk', monospace; font-size: 0.75rem; color: var(--accent); letter-spacing: 0.1em; flex-shrink: 0; }
     .toc-item a { font-size: 0.88rem; color: var(--ink); text-decoration: none; transition: color 0.2s; }
     .toc-item a:hover { color: var(--accent); }
-    .toc-part { grid-column: 1 / -1; font-family: 'JetBrains Mono', monospace; font-size: 0.48rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--muted); border-top: 1px solid var(--rule); padding-top: 0.75rem; margin-top: 0.5rem; }
+    .toc-part { grid-column: 1 / -1; font-family: 'Space Grotesk', monospace; font-size: 0.75rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--muted); border-top: 1px solid var(--rule); padding-top: 0.75rem; margin-top: 0.5rem; }
     .toc-part:first-child { border-top: none; padding-top: 0; margin-top: 0; }
 
     /* Content */
@@ -126,7 +119,7 @@
     .part-header { margin: 4.5rem 0 2.75rem; text-align: center; position: relative; }
     .part-header::before { content: ''; display: block; width: 100%; height: 1px; background: var(--rule); margin-bottom: 2rem; }
     .part-header::after { content: ''; display: block; width: 100%; height: 1px; background: var(--rule); margin-top: 2rem; }
-    .part-num { font-family: 'JetBrains Mono', monospace; font-size: 0.5rem; letter-spacing: 0.3em; text-transform: uppercase; color: var(--accent); margin-bottom: 0.5rem; }
+    .part-num { font-family: 'Space Grotesk', monospace; font-size: 0.75rem; letter-spacing: 0.3em; text-transform: uppercase; color: var(--accent); margin-bottom: 0.5rem; }
     .part-title { font-family: 'Space Grotesk', serif; font-size: 1.65rem; font-weight: 900; letter-spacing: -0.02em; }
 
     /* Section */
@@ -142,16 +135,16 @@
     .subsection-title { font-family: 'Space Grotesk', serif; font-size: 1.1rem; font-weight: 700; font-style: italic; margin-bottom: 1rem; display: flex; align-items: center; gap: 0.75rem; }
     .subsection-title::before { content: ''; display: inline-block; width: 16px; height: 1px; background: var(--accent); }
     .subsection p { margin-bottom: 1.25rem; font-size: 1rem; line-height: 1.85; }
-    .subsection p::first-letter { float: none !important; }
+    .subsection p::first-letter { float: none; }
 
     /* Definitions */
     .definition-block { border: 1px solid var(--rule); margin: 2rem 0; overflow: hidden; }
     .definition-block-header { background: var(--framework); padding: 0.65rem 1.25rem; }
-    .definition-block-header span { font-family: 'JetBrains Mono', monospace; font-size: 0.48rem; letter-spacing: 0.22em; text-transform: uppercase; color: #dce8f0; }
+    .definition-block-header span { font-family: 'Space Grotesk', monospace; font-size: 0.75rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--paper); }
     .definition-item { padding: 1.25rem 1.5rem; border-bottom: 1px solid var(--rule); }
     .definition-item:last-child { border-bottom: none; }
     .definition-term { font-family: 'Space Grotesk', serif; font-size: 1.05rem; font-weight: 700; color: var(--framework); margin-bottom: 0.35rem; display: flex; align-items: center; gap: 0.5rem; }
-    .definition-term-tag { font-family: 'JetBrains Mono', monospace; font-size: 0.42rem; letter-spacing: 0.15em; text-transform: uppercase; background: var(--framework-light); color: var(--framework); padding: 0.2em 0.5em; }
+    .definition-term-tag { font-family: 'Space Grotesk', monospace; font-size: 0.75rem; letter-spacing: 0.15em; text-transform: uppercase; background: var(--framework-light); color: var(--framework); padding: 0.2em 0.5em; }
     .definition-body { font-size: 0.95rem; line-height: 1.75; }
 
     /* Pull quote override */
@@ -159,16 +152,16 @@
     .pull-quote p { font-size: 1.2rem; }
 
     /* Margin note */
-    .margin-note { float: right; width: 140px; margin: 0 -165px 1rem 1.5rem; font-family: 'JetBrains Mono', monospace; font-size: 0.5rem; line-height: 1.6; color: var(--muted); border-left: 2px solid var(--rule); padding-left: 0.75rem; }
+    .margin-note { float: right; width: 140px; margin: 0 -165px 1rem 1.5rem; font-family: 'Space Grotesk', monospace; font-size: 0.75rem; line-height: 1.6; color: var(--muted); border-block-start: 2px solid var(--rule); padding-block-start: 0.75rem; }
     @media (max-width: 1000px) { .margin-note { display: none; } }
 
     /* Framework evolution diagram */
     .framework-evolution { display: flex; align-items: center; gap: 0; margin: 2rem 0; border: 1px solid var(--rule); overflow: hidden; }
     .framework-evolution-item { flex: 1; padding: 1.25rem 1rem; text-align: center; background: var(--highlight); position: relative; }
-    .framework-evolution-item:not(:last-child)::after { content: '→'; position: absolute; right: -0.7rem; top: 50%; transform: translateY(-50%); font-size: 1.1rem; color: var(--accent); z-index: 1; font-family: 'JetBrains Mono', monospace; }
-    .framework-evolution-item:last-child { background: var(--framework-light); border-left: 3px solid var(--framework); }
+    .framework-evolution-item:not(:last-child)::after { content: '→'; position: absolute; right: -0.7rem; top: 50%; transform: translateY(-50%); font-size: 1.1rem; color: var(--accent); z-index: 1; font-family: 'Space Grotesk', monospace; }
+    .framework-evolution-item:last-child { background: var(--framework-light); border: 2px solid var(--framework); }
     .evolution-abbr { font-family: 'Space Grotesk', serif; font-size: 1.4rem; font-weight: 900; color: var(--framework); line-height: 1; margin-bottom: 0.3rem; }
-    .evolution-name { font-family: 'JetBrains Mono', monospace; font-size: 0.44rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); margin-bottom: 0.5rem; }
+    .evolution-name { font-family: 'Space Grotesk', monospace; font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); margin-bottom: 0.5rem; }
     .evolution-desc { font-size: 0.78rem; line-height: 1.4; font-style: italic; color: var(--muted); }
 
     /* ZMOI window */
@@ -176,21 +169,21 @@
     .zmoi-step { flex: 1; padding: 1rem; text-align: center; border-right: 1px solid var(--rule); background: var(--highlight); }
     .zmoi-step:last-child { border-right: none; }
     .zmoi-step.highlight { background: var(--framework); }
-    .zmoi-step-label { font-family: 'JetBrains Mono', monospace; font-size: 0.45rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--muted); margin-bottom: 0.4rem; }
+    .zmoi-step-label { font-family: 'Space Grotesk', monospace; font-size: 0.75rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--muted); margin-bottom: 0.4rem; }
     .zmoi-step.highlight .zmoi-step-label { color: rgba(255,255,255,0.6); }
     .zmoi-step-title { font-family: 'Space Grotesk', serif; font-size: 0.9rem; font-weight: 700; margin-bottom: 0.3rem; }
     .zmoi-step.highlight .zmoi-step-title { color: white; }
     .zmoi-step-desc { font-size: 0.78rem; font-style: italic; color: var(--muted); line-height: 1.3; }
     .zmoi-step.highlight .zmoi-step-desc { color: rgba(255,255,255,0.75); }
-    .zmoi-cmi-label { font-family: 'JetBrains Mono', monospace; font-size: 0.42rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent); margin-top: 0.5rem; }
-    .zmoi-step.highlight .zmoi-cmi-label { color: #ffd580; }
+    .zmoi-cmi-label { font-family: 'Space Grotesk', monospace; font-size: 0.75rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent); margin-top: 0.5rem; }
+    .zmoi-step.highlight .zmoi-cmi-label { color: var(--yellow); }
 
     /* Table */
     .data-table-wrap { margin: 2rem 0; border: 1px solid var(--rule); overflow-x: auto; }
     .data-table-header { background: var(--ink); padding: 0.65rem 1.25rem; display: flex; justify-content: space-between; align-items: center; }
-    .data-table-header span { font-family: 'JetBrains Mono', monospace; font-size: 0.48rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--paper); opacity: 0.7; }
+    .data-table-header span { font-family: 'Space Grotesk', monospace; font-size: 0.75rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--paper); opacity: 0.7; }
     table { width: 100%; border-collapse: collapse; background: var(--paper); }
-    th { font-family: 'JetBrains Mono', monospace; font-size: 0.46rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink); padding: 0.6rem 0.9rem; text-align: left; background: var(--highlight); border-bottom: 2px solid var(--rule); }
+    th { font-family: 'Space Grotesk', monospace; font-size: 0.75rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink); padding: 0.6rem 0.9rem; text-align: left; background: var(--highlight); border-bottom: 2px solid var(--rule); }
     td { font-size: 0.87rem; line-height: 1.55; padding: 0.65rem 0.9rem; border-bottom: 1px solid var(--rule); vertical-align: top; }
     tr:last-child td { border-bottom: none; }
     tr:nth-child(even) td { background: var(--highlight); }
@@ -200,10 +193,10 @@
     .flywheel { display: grid; grid-template-columns: repeat(5, 1fr); gap: 0; margin: 2rem 0; border: 1px solid var(--rule); overflow: hidden; }
     .flywheel-item { padding: 1.1rem 0.75rem; text-align: center; border-right: 1px solid var(--rule); position: relative; background: var(--highlight); }
     .flywheel-item:last-child { border-right: none; background: var(--framework-light); border-top: 3px solid var(--framework); }
-    .flywheel-item:not(:last-child)::after { content: '↓'; font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; color: var(--accent); position: absolute; bottom: -0.6rem; left: 50%; transform: translateX(-50%); background: var(--paper); padding: 0 0.2rem; display: none; }
+    .flywheel-item:not(:last-child)::after { content: '↓'; font-family: 'Space Grotesk', monospace; font-size: 0.75rem; color: var(--accent); position: absolute; bottom: -0.6rem; left: 50%; transform: translateX(-50%); background: var(--paper); padding: 0 0.2rem; display: none; }
     .flywheel-num { font-family: 'Space Grotesk', serif; font-size: 1.6rem; font-weight: 900; font-style: italic; color: var(--rule); line-height: 1; margin-bottom: 0.2rem; }
     .flywheel-item:last-child .flywheel-num { color: var(--framework); }
-    .flywheel-title { font-family: 'JetBrains Mono', monospace; font-size: 0.44rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent); margin-bottom: 0.3rem; }
+    .flywheel-title { font-family: 'Space Grotesk', monospace; font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent); margin-bottom: 0.3rem; }
     .flywheel-item:last-child .flywheel-title { color: var(--framework); }
     .flywheel-desc { font-size: 0.78rem; font-style: italic; color: var(--muted); line-height: 1.35; }
 
@@ -212,18 +205,18 @@
     .prediction-item { border: 1px solid var(--rule); overflow: hidden; }
     .prediction-header { display: grid; grid-template-columns: auto 1fr auto; gap: 1rem; align-items: center; padding: 0.85rem 1.25rem; background: var(--highlight); border-bottom: 1px solid var(--rule); }
     .prediction-id { font-family: 'Space Grotesk', serif; font-size: 1.1rem; font-weight: 900; font-style: italic; color: var(--framework); }
-    .prediction-name { font-family: 'JetBrains Mono', monospace; font-size: 0.5rem; letter-spacing: 0.15em; text-transform: uppercase; }
-    .kill-badge { font-family: 'JetBrains Mono', monospace; font-size: 0.42rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent); border: 1px solid var(--accent); padding: 0.2em 0.5em; white-space: nowrap; }
+    .prediction-name { font-family: 'Space Grotesk', monospace; font-size: 0.75rem; letter-spacing: 0.15em; text-transform: uppercase; }
+    .kill-badge { font-family: 'Space Grotesk', monospace; font-size: 0.75rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent); border: 1px solid var(--accent); padding: 0.2em 0.5em; white-space: nowrap; }
     .prediction-body { padding: 1rem 1.25rem; font-size: 0.92rem; line-height: 1.75; }
     .kill-criterion { margin-top: 0.75rem; padding-top: 0.75rem; border-top: 1px dashed var(--rule); font-size: 0.85rem; color: var(--muted); }
-    .kill-criterion strong { color: var(--accent); font-family: 'JetBrains Mono', monospace; font-size: 0.48rem; letter-spacing: 0.1em; text-transform: uppercase; }
+    .kill-criterion strong { color: var(--accent); font-family: 'Space Grotesk', monospace; font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; }
 
     /* Risks */
     .risk-list { display: flex; flex-direction: column; gap: 1rem; margin: 2rem 0; }
     .risk-item { display: grid; grid-template-columns: auto 1fr; gap: 0 1.25rem; align-items: start; padding: 1.1rem 1.25rem; border: 1px solid var(--rule); background: var(--highlight); }
-    .risk-severity { font-family: 'JetBrains Mono', monospace; font-size: 0.42rem; letter-spacing: 0.1em; text-transform: uppercase; padding: 0.25em 0.6em; white-space: nowrap; margin-top: 0.2rem; }
-    .risk-severity.critical { background: #f0ddd7; color: var(--accent); border: 1px solid var(--accent); }
-    .risk-severity.high { background: #fdf0d5; color: #8a5a00; border: 1px solid #c8980a; }
+    .risk-severity { font-family: 'Space Grotesk', monospace; font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; padding: 0.25em 0.6em; white-space: nowrap; margin-top: 0.2rem; }
+    .risk-severity.critical { background: var(--surface-accent); color: var(--accent); border: 1px solid var(--accent); }
+    .risk-severity.high { background: var(--surface-accent); color: var(--ink); border: 1px solid var(--ink); }
     .risk-severity.medium { background: var(--highlight); color: var(--muted); border: 1px solid var(--rule); }
     .risk-severity.structural { background: var(--framework-light); color: var(--framework); border: 1px solid var(--framework); }
     .risk-title { font-family: 'Space Grotesk', serif; font-size: 1rem; font-weight: 700; margin-bottom: 0.35rem; }
@@ -240,36 +233,36 @@
     /* Segment architecture */
     .segment-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--rule); border: 1px solid var(--rule); margin: 2rem 0; overflow: hidden; }
     .segment-item { background: var(--highlight); padding: 1.25rem; }
-    .segment-label { font-family: 'JetBrains Mono', monospace; font-size: 0.45rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--accent); margin-bottom: 0.3rem; }
+    .segment-label { font-family: 'Space Grotesk', monospace; font-size: 0.75rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--accent); margin-bottom: 0.3rem; }
     .segment-name { font-family: 'Space Grotesk', serif; font-size: 1rem; font-weight: 700; margin-bottom: 0.5rem; }
     .segment-job { font-size: 0.85rem; font-style: italic; color: var(--muted); margin-bottom: 0.5rem; }
-    .segment-details { font-family: 'JetBrains Mono', monospace; font-size: 0.45rem; letter-spacing: 0.08em; color: var(--muted); line-height: 1.7; }
+    .segment-details { font-family: 'Space Grotesk', monospace; font-size: 0.75rem; letter-spacing: 0.08em; color: var(--muted); line-height: 1.7; }
 
     /* Author note */
     .author-note { margin: 4rem 0 2rem; padding: 2rem; border: 1px solid var(--rule); background: var(--highlight); position: relative; overflow: hidden; }
     .author-note::before { content: 'Author'; position: absolute; top: 1rem; right: 1.5rem; font-family: 'Space Grotesk', serif; font-size: 4rem; font-weight: 900; font-style: italic; color: var(--rule); line-height: 1; pointer-events: none; }
-    .author-note-label { font-family: 'JetBrains Mono', monospace; font-size: 0.5rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--accent); margin-bottom: 1rem; }
+    .author-note-label { font-family: 'Space Grotesk', monospace; font-size: 0.75rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--accent); margin-bottom: 1rem; }
     .author-note p { font-size: 0.95rem; line-height: 1.8; position: relative; z-index: 1; margin-bottom: 1rem; }
     .author-note p:last-child { margin-bottom: 0; }
 
     /* References */
     .references { margin: 3rem 0; }
-    .references-title { font-family: 'JetBrains Mono', monospace; font-size: 0.5rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--muted); margin-bottom: 1.5rem; border-bottom: 1px solid var(--rule); padding-bottom: 0.75rem; }
+    .references-title { font-family: 'Space Grotesk', monospace; font-size: 0.75rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--muted); margin-bottom: 1.5rem; border-bottom: 1px solid var(--rule); padding-bottom: 0.75rem; }
     .reference-item { font-size: 0.82rem; line-height: 1.65; color: var(--muted); padding: 0.5rem 0; border-bottom: 1px solid var(--rule); }
     .reference-item:last-child { border-bottom: none; }
 
     /* Hard filter box */
     .hard-filter { background: var(--ink); padding: 1.5rem 2rem; margin: 2rem 0; }
-    .hard-filter-label { font-family: 'JetBrains Mono', monospace; font-size: 0.48rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--accent); margin-bottom: 0.75rem; }
+    .hard-filter-label { font-family: 'Space Grotesk', monospace; font-size: 0.75rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--accent); margin-bottom: 0.75rem; }
     .hard-filter p { font-family: 'Space Grotesk', serif; font-size: 1.05rem; font-style: italic; color: var(--paper); line-height: 1.6; }
 
     /* Bottom nav */
     .paper-nav { max-width: 680px; margin: 0 auto; padding: 0 4rem 5rem; display: flex; justify-content: space-between; align-items: center; }
-    .paper-nav-link { display: flex; align-items: center; gap: 0.75rem; text-decoration: none; color: var(--ink); font-family: 'JetBrains Mono', monospace; font-size: 0.55rem; letter-spacing: 0.15em; text-transform: uppercase; transition: color 0.2s; }
+    .paper-nav-link { display: flex; align-items: center; gap: 0.75rem; text-decoration: none; color: var(--ink); font-family: 'Space Grotesk', monospace; font-size: 0.75rem; letter-spacing: 0.15em; text-transform: uppercase; transition: color 0.2s; }
     .paper-nav-link:hover { color: var(--accent); }
     .paper-nav-link svg { width: 16px; height: 16px; stroke: currentColor; fill: none; stroke-width: 1.5; }
 
-    [data-theme="dark"] .definition-block-header span { color: #141210; }
+    [data-theme="dark"] .definition-block-header span { color: var(--ink); }
     [data-theme="dark"] .zmoi-step.highlight { color: #f4f0e8; }
 
     @media (max-width: 768px) {
@@ -303,46 +296,35 @@
       .hero { grid-template-columns: 1fr; }
       .hero-svg { max-width: 200px; margin: 0 auto; order: -1; }
     }
-  </style>
+  
+}</style>
 </head>
 <body>
   <a href="#main-content" class="skip-link">Skip to content</a>
   <div id="pbar"></div>
   <div id="pbar-label"></div>
-  <div class="bg-pattern"></div>
-  <div class="bg-grain"></div>
   <div class="page-wrap">
 
       <!-- Top Bar -->
   <div class="top-bar">
     <span>Buenos Aires &middot; Since 2008</span>
-    <span>18 Essays &middot; 3 Frameworks &middot; ~289 min of reading &middot; <a href="about.html">About the author</a></span>
+    <span>Essays &middot; Frameworks &middot; Guided reading paths &middot; <a href="about.html">About the author</a></span>
   </div>
 
   <!-- Nav -->
   <nav class="nav">
       <div class="nav-inner">
-        <a href="index.html" class="nav-brand">Narrative<em>Mechanics</em></a>
+        <a href="index.html" class="nav-brand" aria-label="Narrative Mechanics — Home">NARRATIVE MECHANICS</a>
         <button class="nav-btn nav-toggle" aria-label="Menu" aria-expanded="false" aria-controls="navLinks" id="navToggle">
           <svg viewBox="0 0 24 24"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg>
         </button>
-        <div class="nav-links" id="navLinks">
-          <a href="index.html" class="nav-link">Home</a>
-          <div class="nav-sep"></div>
-          <a href="archive.html" class="nav-link">Start Here</a>
+        <div class="nav-links" id="navLinks" aria-label="Primary sections">
+          <a href="thesis.html" class="nav-link">Idea</a>
           <a href="frameworks.html" class="nav-link">Frameworks</a>
-          <a href="series.html" class="nav-link">Series</a>
           <a href="essays.html" class="nav-link">Essays</a>
-          <a href="notes.html" class="nav-link">Notes</a>
-          <div class="nav-sep"></div>
+          <a href="about.html#work" class="nav-link" data-open-contact data-contact-mode="conversation">Work</a>
           <a href="about.html" class="nav-link">About</a>
-        </div>
-        <div class="nav-right">
-          <button class="nav-btn" aria-label="Toggle theme" id="themeToggle">
-            <svg class="icon-moon" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
-            <svg class="icon-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
-          </button>
-        </div>
+        </div><div class="nav-right"><button class="nav-btn theme-toggle" type="button" data-theme-toggle aria-label="Use dark theme"><svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3 7 7 0 0 0 21 12.8Z"/></svg><svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.42 1.42M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.42-1.42M17.66 6.34l1.41-1.41"/></svg></button></div>
       </div>
     </nav>
 
@@ -417,19 +399,19 @@
       </div>
     </div>
 
-    <div class="chapter-divider" style="margin-top:2rem;">
+    <div class="chapter-divider page-inline-6e58ee35af">
       <div class="chapter-divider-line"></div>
       <div class="chapter-divider-ornament"><span>✦</span><span>❧</span><span>✦</span></div>
       <div class="chapter-divider-line"></div>
     </div>
 
     <!-- Abstract -->
-    <div style="max-width:800px;margin:0 auto;padding:2.5rem 4rem 0;">
-      <div style="border:1px solid var(--rule);background:var(--highlight);padding:1.75rem 2rem;margin-bottom:0;">
-        <div style="font-family:'JetBrains Mono',monospace;font-size:0.5rem;letter-spacing:0.22em;text-transform:uppercase;color:var(--accent);margin-bottom:0.75rem;">Abstract</div>
-        <p style="font-size:0.97rem;line-height:1.85;margin-bottom:0.75rem;">In 2011, Google formalized the Zero Moment of Truth (ZMOT) to describe the pre-purchase research phase that determined consumer preference. This document proposes that an analogous shift is occurring in media: the battleground is the moment before belief, not the moment before purchase. I call this the <strong>Zero Moment of Interpretation (ZMOI)</strong>.</p>
-        <p style="font-size:0.97rem;line-height:1.85;margin-bottom:0.75rem;">Capturing ZMOI once is insufficient; sustainable media growth requires a persistent, multi-surface presence system I term the <strong>Continuous Moment of Intent (CMI)</strong>. What follows defines both constructs, positions them within existing literature, and proposes a testable framework with kill criteria.</p>
-        <div style="font-family:'JetBrains Mono',monospace;font-size:0.46rem;letter-spacing:0.12em;color:var(--muted);line-height:1.8;"><strong>Keywords:</strong> ZMOT, ZMOI, CMI, media strategy, attention economics, framing theory, habit formation, user touchpoint architecture</div>
+    <div class="page-inline-d50e46e6b1">
+      <div class="page-inline-584c7b933e">
+        <div class="page-inline-c187e2fee3">Abstract</div>
+        <p class="page-inline-6a0023a3f1">In 2011, Google formalized the Zero Moment of Truth (ZMOT) to describe the pre-purchase research phase that determined consumer preference. This document proposes that an analogous shift is occurring in media: the battleground is the moment before belief, not the moment before purchase. I call this the <strong>Zero Moment of Interpretation (ZMOI)</strong>.</p>
+        <p class="page-inline-6a0023a3f1">Capturing ZMOI once is insufficient; sustainable media growth requires a persistent, multi-surface presence system I term the <strong>Continuous Moment of Intent (CMI)</strong>. What follows defines both constructs, positions them within existing literature, and proposes a testable framework with kill criteria.</p>
+        <div class="page-inline-aa5cf8f92c"><strong>Keywords:</strong> ZMOT, ZMOI, CMI, media strategy, attention economics, framing theory, habit formation, user touchpoint architecture</div>
       </div>
     </div>
 
@@ -595,7 +577,7 @@
                 <tr><td class="td-accent">Attention Economy</td><td>General</td><td>Time allocation</td><td>Continuous (undirected)</td></tr>
                 <tr><td class="td-accent">Framing Theory</td><td>Media / Political</td><td>Salience selection</td><td>Per-message</td></tr>
                 <tr><td class="td-accent">Hook Model</td><td>Product design</td><td>Habit loop</td><td>Cyclical</td></tr>
-                <tr><td class="td-accent" style="color:var(--framework)">ZMOI / CMI</td><td>Media</td><td>Interpretive moment</td><td><strong>Persistent, compounding, opt-in</strong></td></tr>
+                <tr><td class="td-accent page-inline-3ee99a0d21">ZMOI / CMI</td><td>Media</td><td>Interpretive moment</td><td><strong>Persistent, compounding, opt-in</strong></td></tr>
               </tbody>
             </table>
           </div>
@@ -1063,7 +1045,7 @@
             </div>
           </div>
 
-          <p style="margin-top:1.5rem;font-size:0.95rem;font-style:italic;color:var(--muted);">If three or more answers are no, the bottleneck is probably not content quality. It is user touchpoint architecture.</p>
+          <p class="page-inline-6e3385fb7d">If three or more answers are no, the bottleneck is probably not content quality. It is user touchpoint architecture.</p>
         </div>
       </article>
 
@@ -1122,8 +1104,8 @@
 
     </main>
 
-    <div style="max-width:680px;margin:0 auto;padding:0 4rem 2rem;">
-      <p style="font-family:'Inter',serif;font-size:1rem;line-height:1.75;color:var(--muted);font-style:italic;">The framework is the diagnosis. The essays are the operating manual. Start with <a href="paper-01.html" style="color:var(--accent)">Before You Build</a> if you're early-stage, or <a href="the-last-human-impression.html" style="color:var(--accent)">The Last Human Impression</a> if you want the AI argument.</p>
+    <div class="page-inline-f7663ce6f4">
+      <p class="page-inline-e1aee5fa1f">The framework is the diagnosis. The essays are the operating manual. Start with <a href="paper-01.html" class="page-inline-a805525bfd">Before You Build</a> if you're early-stage, or <a href="the-last-human-impression.html" class="page-inline-a805525bfd">The Last Human Impression</a> if you want the AI argument.</p>
     </div>
 
     <div class="paper-nav">
@@ -1132,7 +1114,7 @@
         Back to Home
       </a>
       <a href="paper-01.html" class="paper-nav-link">
-        Read the Essay Series
+        Open Reading Path
         <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
       </a>
     </div>
@@ -1144,6 +1126,6 @@
     </footer>
 
   </div>
-<script src="global.js?v=20260419b"></script>
+<script src="global.js?v=20260621120500"></script>
 </body>
 </html>

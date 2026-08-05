@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <script>(function(){var d=document.documentElement,m=window.matchMedia("(prefers-color-scheme:dark)"),s;try{s=localStorage.getItem("theme")}catch(e){}var v=s==="dark"||s==="light",t=v?s:(m.matches?"dark":"light");d.setAttribute("data-theme",t);d.setAttribute("data-theme-source",v?"user":"system")})()</script>
   <meta charset="UTF-8">
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-TJF4P0NYFT"></script>
@@ -10,9 +11,8 @@
     gtag('js', new Date());
     gtag('config', 'G-TJF4P0NYFT');
   </script>
-  <script>(function(){var t=localStorage.getItem("theme");if(!t)t=window.matchMedia("(prefers-color-scheme:dark)").matches?"dark":"light";document.documentElement.setAttribute("data-theme",t)})()</script>
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
-  <meta name="theme-color" content="#e6d5b8">
+  <meta name="theme-color" content="#f5f0e8" id="themeColor">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-title" content="Narrative Mechanics">
   <link rel="apple-touch-icon" href="/og-default.png">
@@ -60,10 +60,11 @@
   </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;700&family=Epilogue:ital,wght@0,400;1,400;0,600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="global.css?v=20260418f">
-  <link rel="stylesheet" href="components.css?v=20260418f">
-  <style>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="global.css?v=20260621120500">
+  <link rel="stylesheet" href="components.css?v=20260621120500">
+  <style>@layer page {
+
     /* Hero */
     .hero {
       max-width: 960px; margin: 0 auto;
@@ -91,11 +92,11 @@
       background: var(--highlight); width: fit-content;
     }
     .hero-tag-label {
-      font-family: 'JetBrains Mono', monospace; font-size: 0.44rem;
+      font-family: 'Space Grotesk', monospace; font-size: 0.75rem;
       letter-spacing: 0.18em; text-transform: uppercase; color: var(--muted);
     }
     .hero-tag-text {
-      font-family: 'JetBrains Mono', monospace; font-size: 0.44rem;
+      font-family: 'Space Grotesk', monospace; font-size: 0.75rem;
       letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent);
     }
     .hero-illustration { display: flex; align-items: center; justify-content: center; padding-top: 4rem; }
@@ -147,7 +148,7 @@
     .essay-section:hover .section-header-num { color: var(--accent); }
     .section-header-body { display: flex; flex-direction: column; gap: 0.2rem; }
     .section-header-label {
-      font-family: 'JetBrains Mono', monospace; font-size: 0.48rem;
+      font-family: 'Space Grotesk', monospace; font-size: 0.75rem;
       letter-spacing: 0.2em; text-transform: uppercase; color: var(--accent);
     }
     .section-header-title {
@@ -157,12 +158,12 @@
 
     /* Source reference */
     .source-ref {
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 0.55rem; line-height: 1.6;
+      font-family: 'Space Grotesk', monospace;
+      font-size: 0.75rem; line-height: 1.6;
       color: var(--muted);
       margin-top: -0.5rem; margin-bottom: 1.5rem;
-      padding-left: 1rem;
-      border-left: 2px solid var(--rule);
+      padding-top: 1rem;
+      border-top: 2px solid var(--rule);
     }
 
     /* Interlude */
@@ -209,14 +210,8 @@
       transition: background 0.4s ease;
     }
     .layer-card:hover { background: var(--highlight); }
-    .layer-card::before {
-      content: ''; position: absolute; top: 0; left: 0;
-      width: 3px; height: 0; background: var(--accent);
-      transition: height 0.6s ease;
-    }
-    .layer-card:hover::before { height: 100%; }
     .layer-label {
-      font-family: 'JetBrains Mono', monospace; font-size: 0.5rem;
+      font-family: 'Space Grotesk', monospace; font-size: 0.75rem;
       letter-spacing: 0.25em; text-transform: uppercase;
       color: var(--accent); margin-bottom: 0.75rem;
     }
@@ -246,12 +241,12 @@
       color: var(--accent); line-height: 1; margin-bottom: 0.5rem;
     }
     .stat-label {
-      font-family: 'JetBrains Mono', monospace; font-size: 0.5rem;
+      font-family: 'Space Grotesk', monospace; font-size: 0.75rem;
       letter-spacing: 0.15em; text-transform: uppercase;
       color: var(--muted); line-height: 1.5;
     }
     .stat-source {
-      font-family: 'JetBrains Mono', monospace; font-size: 0.42rem;
+      font-family: 'Space Grotesk', monospace; font-size: 0.75rem;
       color: var(--muted); opacity: 0.6; margin-top: 0.5rem;
     }
 
@@ -262,7 +257,7 @@
     }
     .share-btn {
       display: inline-flex; align-items: center; gap: 0.5rem;
-      font-family: 'JetBrains Mono', monospace; font-size: 0.55rem;
+      font-family: 'Space Grotesk', monospace; font-size: 0.75rem;
       letter-spacing: 0.15em; text-transform: uppercase;
       color: var(--muted); background: none;
       border: 1px solid var(--rule);
@@ -274,7 +269,7 @@
 
     /* Paper nav */
     .paper-nav { max-width: 680px; margin: 0 auto; padding: 0 2.5rem 5rem; display: flex; justify-content: flex-start; }
-    .paper-nav-back { display: flex; align-items: center; gap: 0.75rem; text-decoration: none; color: var(--ink); font-family: 'JetBrains Mono', monospace; font-size: 0.55rem; letter-spacing: 0.15em; text-transform: uppercase; transition: color 0.2s; }
+    .paper-nav-back { display: flex; align-items: center; gap: 0.75rem; text-decoration: none; color: var(--ink); font-family: 'Space Grotesk', monospace; font-size: 0.75rem; letter-spacing: 0.15em; text-transform: uppercase; transition: color 0.2s; }
     .paper-nav-back:hover { color: var(--accent); }
     .paper-nav-back svg { width: 16px; height: 16px; stroke: currentColor; fill: none; stroke-width: 1.5; }
 
@@ -322,36 +317,36 @@
     }
 
     @media print {
-      body { background: #fff; color: #111; font-size: 11pt; }
+      body { background: #fff; color: var(--ink); font-size: 11pt; }
       body::before, body::after { display: none; }
-      .bg-pattern, .bg-grain, #pbar, .nav, .share-row { display: none; }
+      #pbar, .nav, .share-row { display: none; }
       .hero { grid-template-columns: 1fr; padding: 2rem 0; }
       .hero-illustration { display: none; }
       .hero-kicker, .hero-title, .hero-subtitle, .hero-byline, .hero-tag { opacity: 1; transform: none; animation: none; }
       .content { padding: 1rem 0; max-width: 100%; }
-      .essay-section p { text-align: left; hyphens: none; color: #222; }
-      .section-header-num { color: #c23a22; }
-      .section-header-label { color: #c23a22; }
-      .pull-quote { margin: 1.5rem 0; border-left-color: #c23a22; background: #f9f6f3; }
-      .pull-quote p { color: #111; }
+      .essay-section p { text-align: left; hyphens: none; color: var(--ink); }
+      .section-header-num { color: var(--red); }
+      .section-header-label { color: var(--red); }
+      .pull-quote { margin: 1.5rem 0; border-left-color: var(--red); background: var(--paper); }
+      .pull-quote p { color: var(--ink); }
       .interlude { min-height: auto; padding: 2rem 0; background: #fff; border: none; }
       .interlude::before { display: none; }
-      .interlude-text { color: #111; }
-      .interlude-text .stroke { -webkit-text-stroke-color: #111; }
-      .interlude-text .accent { color: #c23a22; }
+      .interlude-text { color: var(--ink); }
+      .interlude-text .stroke { -webkit-text-stroke-color: var(--ink); }
+      .interlude-text .accent { color: var(--red); }
       .layers-wrap, .stat-strip-wrap { padding: 0; }
-      .layers-grid { background: #ddd; }
+      .layers-grid { background: var(--border-light); }
       .layer-card { background: #fff; }
       .layer-card::before { display: none; }
-      .layer-label { color: #c23a22; }
-      .layer-title { color: #111; }
-      .stat-strip { background: #ddd; }
+      .layer-label { color: var(--red); }
+      .layer-title { color: var(--ink); }
+      .stat-strip { background: var(--border-light); }
       .stat-block { background: #fff; }
-      .stat-number { color: #c23a22; }
-      .closing { background: #f9f6f3; border-color: #ddd; }
+      .stat-number { color: var(--red); }
+      .closing { background: var(--paper); border-color: var(--border-light); }
       .closing::before { display: none; }
-      .closing p { color: #111; }
-      .source-ref { color: #666; border-color: #ccc; }
+      .closing p { color: var(--ink); }
+      .source-ref { color: var(--muted); border-color: var(--border-light); }
       .paper-nav { display: none; }
       .reveal { opacity: 1; transform: none; transition: none; }
     }
@@ -363,48 +358,39 @@
       .hero { grid-template-columns: 1fr; }
       .hero-svg { max-width: 200px; margin: 0 auto; order: -1; }
     }
-  </style>
+  
+}</style>
 </head>
 <body>
+  <a href="#main-content" class="skip-link">Skip to content</a>
 
   <div id="pbar"></div>
-  <div class="bg-pattern"></div>
-  <div class="bg-grain"></div>
 
   <div class="page-wrap">
 
       <!-- Top Bar -->
   <div class="top-bar">
     <span>Buenos Aires &middot; Since 2008</span>
-    <span>18 Essays &middot; 3 Frameworks &middot; ~289 min of reading &middot; <a href="about.html">About the author</a></span>
+    <span>Essays &middot; Frameworks &middot; Guided reading paths &middot; <a href="about.html">About the author</a></span>
   </div>
 
   <!-- Nav -->
   <nav class="nav">
       <div class="nav-inner">
-        <a href="index.html" class="nav-brand">Narrative<em>Mechanics</em></a>
+        <a href="index.html" class="nav-brand" aria-label="Narrative Mechanics — Home">NARRATIVE MECHANICS</a>
         <button class="nav-btn nav-toggle" aria-label="Menu" aria-expanded="false" aria-controls="navLinks" id="navToggle">
           <svg viewBox="0 0 24 24"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg>
         </button>
-        <div class="nav-links" id="navLinks">
-          <a href="index.html" class="nav-link">Home</a>
-          <div class="nav-sep"></div>
-          <a href="archive.html" class="nav-link">Start Here</a>
+        <div class="nav-links" id="navLinks" aria-label="Primary sections">
+          <a href="thesis.html" class="nav-link">Idea</a>
           <a href="frameworks.html" class="nav-link">Frameworks</a>
-          <a href="series.html" class="nav-link">Series</a>
           <a href="essays.html" class="nav-link">Essays</a>
-          <a href="notes.html" class="nav-link">Notes</a>
-          <div class="nav-sep"></div>
+          <a href="about.html#work" class="nav-link" data-open-contact data-contact-mode="conversation">Work</a>
           <a href="about.html" class="nav-link">About</a>
-        </div>
-        <div class="nav-right">
-          <button class="nav-btn" aria-label="Toggle theme" id="themeToggle">
-            <svg class="icon-moon" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
-            <svg class="icon-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
-          </button>
-        </div>
+        </div><div class="nav-right"><button class="nav-btn theme-toggle" type="button" data-theme-toggle aria-label="Use dark theme"><svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3 7 7 0 0 0 21 12.8Z"/></svg><svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.42 1.42M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.42-1.42M17.66 6.34l1.41-1.41"/></svg></button></div>
       </div>
     </nav>
+  <main id="main-content">
 
     <section class="hero">
       <div class="hero-left">
@@ -749,7 +735,9 @@
     </div>
 
   </div>
-<script src="global.js?v=20260419b"></script>
+      </main>
+  <footer></footer>
+<script src="global.js?v=20260621120500"></script>
 <script>
 (function(){
   var reveals = document.querySelectorAll('.reveal');

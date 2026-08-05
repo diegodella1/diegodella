@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <script>(function(){var d=document.documentElement,m=window.matchMedia("(prefers-color-scheme:dark)"),s;try{s=localStorage.getItem("theme")}catch(e){}var v=s==="dark"||s==="light",t=v?s:(m.matches?"dark":"light");d.setAttribute("data-theme",t);d.setAttribute("data-theme-source",v?"user":"system")})()</script>
   <meta charset="UTF-8">
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-TJF4P0NYFT"></script>
@@ -10,9 +11,8 @@
     gtag('js', new Date());
     gtag('config', 'G-TJF4P0NYFT');
   </script>
-  <script>(function(){var t=localStorage.getItem("theme");if(!t)t=window.matchMedia("(prefers-color-scheme:dark)").matches?"dark":"light";document.documentElement.setAttribute("data-theme",t)})()</script>
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
-  <meta name="theme-color" content="#e6d5b8">
+  <meta name="theme-color" content="#f5f0e8" id="themeColor">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-title" content="Narrative Mechanics">
   <link rel="apple-touch-icon" href="/og-default.png">
@@ -36,9 +36,9 @@
   <title>Narrative Nuggets | Diego Dell'Agostino</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;700&family=Epilogue:ital,wght@0,400;1,400;0,600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="global.css?v=20260418f">
-  <link rel="stylesheet" href="components.css?v=20260418f">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="global.css?v=20260621120500">
+  <link rel="stylesheet" href="components.css?v=20260621120500">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -129,7 +129,8 @@
     ]
   }
   </script>
-  <style>
+  <style>@layer page {
+
     :root {
       --highlight-hover: #e8e3d6;
       --highlight-hover-alt: #ece7db;
@@ -140,7 +141,7 @@
     }
     [data-theme="dark"] .hero-stat-pill,
     [data-theme="dark"] .filter-chip {
-      color: #d7def0;
+      color: var(--ink-2);
       border-color: color-mix(in srgb, var(--accent) 20%, rgba(255,255,255,0.14));
       background: rgba(255,255,255,0.07);
     }
@@ -148,12 +149,12 @@
       color: #ffffff;
     }
     [data-theme="dark"] .filter-chip:hover {
-      color: #ffffff;
+      color: var(--control-fg);
       background: color-mix(in srgb, var(--accent) 14%, rgba(255,255,255,0.06));
       border-color: color-mix(in srgb, var(--accent) 42%, rgba(255,255,255,0.14));
     }
     [data-theme="dark"] .filter-chip.active {
-      color: #090915;
+      color: var(--on-accent);
       background: var(--accent);
       border-color: var(--accent);
     }
@@ -167,16 +168,16 @@
     .hero-illustration svg { width: 280px; height: 350px; }
     .hero-lead { font-size: 1.08rem; line-height: 1.72; color: var(--ink-2); max-width: 34rem; margin-bottom: 1.7rem; }
     .hero-stats-row { display: flex; gap: 0.8rem; flex-wrap: wrap; }
-    .hero-stat-pill { font-family: 'JetBrains Mono', monospace; font-size: 0.55rem; letter-spacing: 0.13em; text-transform: uppercase; color: var(--muted); border: 1px solid var(--rule); padding: 0.45em 0.85em; background: rgba(255,255,255,0.42); }
+    .hero-stat-pill { font-family: 'Space Grotesk', monospace; font-size: 0.75rem; letter-spacing: 0.13em; text-transform: uppercase; color: var(--muted); border: 1px solid var(--rule); padding: 0.45em 0.85em; background: rgba(255,255,255,0.42); }
     .hero-stat-pill strong { color: var(--deep); font-weight: 700; }
 
     /* ── Filter chips ── */
     .filter-bar { max-width: 1080px; margin: 0 auto; padding: 0 3rem 1.6rem; }
     .filter-chips { display: flex; flex-wrap: wrap; gap: 0.4rem; }
-    .filter-chip { font-family: 'JetBrains Mono', monospace; font-size: 0.55rem; letter-spacing: 0.13em; text-transform: uppercase; color: var(--muted); border: 1px solid var(--rule); padding: 0.5em 0.95em; border-radius: 3px; cursor: pointer; transition: all 0.2s; background: rgba(255,255,255,0.42); }
+    .filter-chip { font-family: 'Space Grotesk', monospace; font-size: 0.75rem; letter-spacing: 0.13em; text-transform: uppercase; color: var(--muted); border: 1px solid var(--rule); padding: 0.5em 0.95em; border-radius: 0; cursor: pointer; transition: all 0.2s; background: rgba(255,255,255,0.42); }
     .filter-chip:hover { color: var(--accent); border-color: var(--accent); }
     .filter-chip:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
-    .filter-chip.active { color: white; background: var(--accent); border-color: var(--accent); }
+    .filter-chip.active { color: var(--on-accent); background: var(--accent); border-color: var(--accent); }
     .filter-count { font-weight: 700; opacity: 0.7; margin-left: 0.3em; }
 
     /* ── Nuggets grid ── */
@@ -193,17 +194,11 @@
       transition: background 0.25s, transform 0.25s, box-shadow 0.25s;
     }
     .nugget-card:nth-child(3n) { border-right: none; }
-    .nugget-card::before {
-      content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 3px;
-      background: var(--accent); transform: scaleY(0); transition: transform 0.25s cubic-bezier(.4,0,.2,1);
-      transform-origin: bottom;
-    }
-    .nugget-card:hover { background: rgba(255,255,255,0.72); transform: translateY(-2px); box-shadow: 0 4px 16px rgba(20,20,20,0.05); z-index: 2; }
-    .nugget-card:hover::before { transform: scaleY(1); }
+    .nugget-card:hover { background: rgba(255,255,255,0.72); transform: translateY(-2px); z-index: 2; }
     .nugget-card:focus-visible { outline: 2px solid var(--accent); outline-offset: -2px; }
     .nugget-card.expanded {
       background: rgba(255,255,255,0.78); grid-column: 1 / -1;
-      border-right: none; border-left: 2px solid var(--accent);
+      border-inline: 0; border-block: 2px solid var(--accent);
       display: grid; grid-template-columns: 1fr 1fr; gap: 0 2.5rem;
       padding: 1.8rem 2.1rem;
     }
@@ -216,7 +211,7 @@
     }
     [data-theme="dark"] .nugget-card:hover {
       background: rgba(255,255,255,0.1);
-      box-shadow: 0 18px 34px rgba(0,0,0,0.26);
+      box-shadow: 0 18px 34px color-mix(in srgb, var(--ink) 26%, transparent);
     }
     [data-theme="dark"] .nugget-card.expanded {
       background: rgba(255,255,255,0.12);
@@ -224,7 +219,7 @@
 
     /* ── Tag: dot + label ── */
     .nugget-tag {
-      font-family: 'JetBrains Mono', monospace; font-size: 0.5rem;
+      font-family: 'Space Grotesk', monospace; font-size: 0.75rem;
       letter-spacing: 0.18em; text-transform: uppercase; color: var(--accent);
       margin-bottom: 0.6rem; display: flex; align-items: center; gap: 0.5em;
       border: none; padding: 0;
@@ -243,13 +238,13 @@
       line-height: 1.25; letter-spacing: -0.01em; margin-bottom: 0.6rem; flex: 1;
     }
     [data-theme="dark"] .nugget-title {
-      color: #f6f8ff;
+      color: var(--ink);
     }
     .nugget-toggle {
       width: 18px; height: 18px; flex-shrink: 0; margin-top: 0.25rem;
       stroke: var(--rule); fill: none; stroke-width: 2;
       stroke-linecap: round; stroke-linejoin: round;
-      transition: transform 0.35s cubic-bezier(.34,1.56,.64,1), stroke 0.2s;
+      transition: transform 0.35s cubic-bezier(.22,1,.36,1), stroke 0.2s;
     }
     [data-theme="dark"] .nugget-toggle {
       stroke: rgba(255,255,255,0.5);
@@ -264,22 +259,21 @@
       overflow: hidden;
     }
     [data-theme="dark"] .nugget-insight {
-      color: #d4dcef;
+      color: var(--ink-2);
     }
     .nugget-card.expanded .nugget-insight { -webkit-line-clamp: unset; overflow: visible; }
 
     /* ── Expand panel ── */
     .nugget-expand {
-      max-height: 0; overflow: hidden; opacity: 0;
-      transition: max-height 0.4s cubic-bezier(.4,0,.2,1), opacity 0.3s ease 0.05s;
+      display: none;
     }
-    .nugget-card.expanded .nugget-expand { max-height: 800px; opacity: 1; }
+    .nugget-card.expanded .nugget-expand { display: block; }
     .nugget-divider {
       display: flex; align-items: center; gap: 0.75rem; margin: 1.25rem 0 1rem;
     }
     .nugget-divider::before, .nugget-divider::after { content: ''; flex: 1; height: 1px; background: var(--rule); }
     .nugget-divider-text {
-      font-family: 'JetBrains Mono', monospace; font-size: 0.5rem;
+      font-family: 'Space Grotesk', monospace; font-size: 0.75rem;
       letter-spacing: 0.18em; text-transform: uppercase; color: var(--muted); white-space: nowrap;
     }
     [data-theme="dark"] .nugget-divider::before,
@@ -288,21 +282,21 @@
     }
     [data-theme="dark"] .nugget-divider-text,
     [data-theme="dark"] .nugget-actions-label {
-      color: #aeb9d1;
+      color: var(--ink-3);
     }
     .nugget-detail { font-size: 1.02rem; line-height: 1.75; color: var(--deep); margin-bottom: 1rem; }
     [data-theme="dark"] .nugget-detail {
-      color: #f1f5ff;
+      color: var(--ink);
     }
     .nugget-link {
-      font-family: 'JetBrains Mono', monospace; font-size: 0.56rem;
+      font-family: 'Space Grotesk', monospace; font-size: 0.75rem;
       letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent);
       text-decoration: none; display: inline-flex; align-items: center; gap: 0.4rem;
       padding: 0.4em 0; border-bottom: 1px solid transparent; transition: border-color 0.2s;
     }
     .nugget-link:hover { border-color: var(--accent); }
     [data-theme="dark"] .nugget-link {
-      color: #8bddff;
+      color: var(--accent);
       border-bottom-color: transparent;
     }
     .nugget-link svg { width: 12px; height: 12px; stroke: currentColor; fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
@@ -313,34 +307,34 @@
       padding-top: 0.9rem; border-top: 1px dashed var(--rule); flex-wrap: wrap;
     }
     .nugget-actions-label {
-      font-family: 'JetBrains Mono', monospace; font-size: 0.52rem;
+      font-family: 'Space Grotesk', monospace; font-size: 0.75rem;
       letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted);
       margin-right: 0.25rem; font-weight: 700;
     }
     .nugget-share-btn {
-      background: none; border: 1.5px solid var(--accent); border-radius: 20px;
-      padding: 0.45em 1em; cursor: pointer; font-family: 'JetBrains Mono', monospace;
-      font-size: 0.55rem; letter-spacing: 0.08em; text-transform: uppercase;
+      background: none; border: 1.5px solid var(--accent); border-radius: 0;
+      padding: 0.45em 1em; cursor: pointer; font-family: 'Space Grotesk', monospace;
+      font-size: 0.75rem; letter-spacing: 0.08em; text-transform: uppercase;
       color: var(--accent); display: inline-flex; align-items: center; gap: 0.3rem;
       transition: all 0.2s; line-height: 1.4; font-weight: 600;
     }
     [data-theme="dark"] .nugget-share-btn {
-      color: #8bddff;
-      border-color: #8bddff;
+      color: var(--accent);
+      border-color: var(--accent);
       background: rgba(255,255,255,0.03);
     }
-    .nugget-share-btn:hover { background: var(--accent); color: white; border-color: var(--accent); }
-    .nugget-share-btn.copied { background: var(--accent); color: white; border-color: var(--accent); }
+    .nugget-share-btn:hover { background: var(--accent); color: var(--on-accent); border-color: var(--accent); }
+    .nugget-share-btn.copied { background: var(--accent); color: var(--on-accent); border-color: var(--accent); }
 
     /* ── Surprise button ── */
     .surprise-btn {
-      font-family: 'JetBrains Mono', monospace; font-size: 0.6rem;
+      font-family: 'Space Grotesk', monospace; font-size: 0.75rem;
       letter-spacing: 0.15em; text-transform: uppercase; color: var(--accent);
-      border: 2px solid var(--accent); padding: 0.65em 1.5em; border-radius: 20px;
+      border: 2px solid var(--accent); padding: 0.65em 1.5em; border-radius: 0;
       cursor: pointer; background: none; transition: all 0.25s;
       margin-top: 1.5rem; display: inline-flex; align-items: center; gap: 0.5rem;
     }
-    .surprise-btn:hover { background: var(--accent); color: white; }
+    .surprise-btn:hover { background: var(--accent); color: var(--on-accent); }
 
     /* ── Nugget highlight flash ── */
     .nugget-card.flash { box-shadow: inset 0 0 0 2px var(--accent); transition: box-shadow 0.3s ease; }
@@ -386,50 +380,39 @@
       .hero { padding: 3.5rem 1.5rem 2rem; }
       .filter-bar { padding: 0 1.5rem 1.5rem; }
       .nuggets-grid { grid-template-columns: 1fr; padding: 0 1.5rem; }
-      .nugget-card { border-right: none !important; }
+      .nugget-card { border-right: none; }
       .nugget-card.expanded { grid-template-columns: 1fr; padding: 1.5rem; }
       .hero-stats-row { gap: 1rem; flex-wrap: wrap; }
     }
-  </style>
+  
+}</style>
 </head>
 <body>
   <a href="#main-content" class="skip-link">Skip to content</a>
   <div id="pbar"></div>
   <div id="pbar-label"></div>
-  <div class="bg-pattern"></div>
-  <div class="bg-grain"></div>
   <div class="page-wrap">
 
       <!-- Top Bar -->
   <div class="top-bar">
     <span>Buenos Aires &middot; Since 2008</span>
-    <span>18 Essays &middot; 3 Frameworks &middot; ~289 min of reading &middot; <a href="about.html">About the author</a></span>
+    <span>Essays &middot; Frameworks &middot; Guided reading paths &middot; <a href="about.html">About the author</a></span>
   </div>
 
   <!-- Nav -->
   <nav class="nav">
       <div class="nav-inner">
-        <a href="index.html" class="nav-brand">Narrative<em>Mechanics</em></a>
+        <a href="index.html" class="nav-brand" aria-label="Narrative Mechanics — Home">NARRATIVE MECHANICS</a>
         <button class="nav-btn nav-toggle" aria-label="Menu" aria-expanded="false" aria-controls="navLinks" id="navToggle">
           <svg viewBox="0 0 24 24"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg>
         </button>
-        <div class="nav-links" id="navLinks">
-          <a href="index.html" class="nav-link">Home</a>
-          <div class="nav-sep"></div>
-          <a href="archive.html" class="nav-link">Start Here</a>
+        <div class="nav-links" id="navLinks" aria-label="Primary sections">
+          <a href="thesis.html" class="nav-link">Idea</a>
           <a href="frameworks.html" class="nav-link">Frameworks</a>
-          <a href="series.html" class="nav-link">Series</a>
           <a href="essays.html" class="nav-link">Essays</a>
-          <a href="notes.html" class="nav-link active" aria-current="page">Notes</a>
-          <div class="nav-sep"></div>
+          <a href="about.html#work" class="nav-link" data-open-contact data-contact-mode="conversation">Work</a>
           <a href="about.html" class="nav-link">About</a>
-        </div>
-        <div class="nav-right">
-          <button class="nav-btn" aria-label="Toggle theme" id="themeToggle">
-            <svg class="icon-moon" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
-            <svg class="icon-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
-          </button>
-        </div>
+        </div><div class="nav-right"><button class="nav-btn theme-toggle" type="button" data-theme-toggle aria-label="Use dark theme"><svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3 7 7 0 0 0 21 12.8Z"/></svg><svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.42 1.42M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.42-1.42M17.66 6.34l1.41-1.41"/></svg></button></div>
       </div>
     </nav>
 
@@ -1663,7 +1646,7 @@
   })();
   </script>
 
-  <script src="global.js?v=20260419b"></script>
+  <script src="global.js?v=20260621120500"></script>
 
   <!-- Progress bar + nugget counter label -->
   <script>

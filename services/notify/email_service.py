@@ -1,4 +1,5 @@
 import os
+from html import escape
 
 import requests
 from dotenv import load_dotenv
@@ -14,9 +15,10 @@ CONTACT_TO_EMAIL = os.environ.get("CONTACT_TO_EMAIL", "dellagostino@gmail.com")
 
 def build_contact_html(name, email, subject, message, mode):
     mode_label = "Update request" if mode == "updates" else "Contact request"
-    safe_name = name or "Not provided"
-    safe_email = email or "Not provided"
-    safe_message = message.replace("\n", "<br>")
+    safe_name = escape(name or "Not provided")
+    safe_email = escape(email or "Not provided")
+    safe_subject = escape(subject)
+    safe_message = escape(message).replace("\n", "<br>")
     return f"""<!DOCTYPE html>
 <html><head><meta charset="utf-8"></head>
 <body style="margin:0;padding:0;background:#0a0a0a;font-family:system-ui,-apple-system,sans-serif">
@@ -27,7 +29,7 @@ def build_contact_html(name, email, subject, message, mode):
   Narrative Mechanics · {mode_label}
 </td></tr>
 <tr><td style="color:#e5e5e5;font-size:20px;font-weight:600;line-height:1.3;padding-bottom:16px">
-  {subject}
+  {safe_subject}
 </td></tr>
 <tr><td style="color:#a3a3a3;font-size:14px;line-height:1.6;padding-bottom:20px">
   <strong style="color:#e5e5e5">Name:</strong> {safe_name}<br>

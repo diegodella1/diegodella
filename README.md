@@ -27,3 +27,17 @@ La API quedó reducida a dos capacidades:
 - `GET /api/status`: healthcheck mínimo.
 
 Si se elimina, el sitio sigue renderizando, pero deja de funcionar el formulario de contacto.
+
+## Validación local
+
+```bash
+node scripts/validate-site.mjs
+node scripts/audit-theme.mjs
+python3 -m unittest services/notify/test_app.py
+```
+
+El primer comando revisa las 33 páginas, navegación compartida, landmarks, rutas, hashes y assets locales. El segundo abre Chromium y verifica contraste WCAG AA, overflow, solapamientos, foco, modal, filtros y menú móvil en light/dark sobre cinco viewports. El tercero cubre validación, compatibilidad y escape del formulario de contacto.
+
+## CSS
+
+`global.css` conserva el entrypoint público y carga una cascada estratificada. La arquitectura, orden de capas y excepción temporal de Tailwind en home están documentados en `styles/README.md`.

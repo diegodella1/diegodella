@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <script>(function(){var d=document.documentElement,m=window.matchMedia("(prefers-color-scheme:dark)"),s;try{s=localStorage.getItem("theme")}catch(e){}var v=s==="dark"||s==="light",t=v?s:(m.matches?"dark":"light");d.setAttribute("data-theme",t);d.setAttribute("data-theme-source",v?"user":"system")})()</script>
   <meta charset="UTF-8">
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-TJF4P0NYFT"></script>
@@ -10,9 +11,8 @@
     gtag('js', new Date());
     gtag('config', 'G-TJF4P0NYFT');
   </script>
-  <script>(function(){var t=localStorage.getItem("theme");if(!t)t=window.matchMedia("(prefers-color-scheme:dark)").matches?"dark":"light";document.documentElement.setAttribute("data-theme",t)})()</script>
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
-  <meta name="theme-color" content="#e6d5b8">
+  <meta name="theme-color" content="#f5f0e8" id="themeColor">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-title" content="Narrative Mechanics">
   <link rel="apple-touch-icon" href="/og-default.png">
@@ -58,21 +58,22 @@
   </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;700&family=Epilogue:ital,wght@0,400;1,400;0,600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="global.css?v=20260418f">
-  <link rel="stylesheet" href="components.css?v=20260418f">
-  <style>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="global.css?v=20260621120500">
+  <link rel="stylesheet" href="components.css?v=20260621120500">
+  <style>@layer page {
+
     html { font-size: 20px; }
     body { line-height: 1.8; }
 
     /* ── Hero ── */
     .hero { max-width: 960px; margin: 0 auto; padding: 6rem 4rem 4rem; }
-    .hero-kicker { font-family: 'JetBrains Mono', monospace; font-size: 0.52rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--accent); border: 1px solid var(--accent); display: inline-block; padding: 0.3em 0.85em; margin-bottom: 1.75rem; }
+    .hero-kicker { font-family: 'Space Grotesk', monospace; font-size: 0.75rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--accent); border: 1px solid var(--accent); display: inline-block; padding: 0.3em 0.85em; margin-bottom: 1.75rem; }
     .hero-title { font-family: 'Space Grotesk', serif; font-size: clamp(2.5rem, 6vw, 4.5rem); font-weight: 900; line-height: 0.95; letter-spacing: -0.03em; margin-bottom: 1rem; }
     .hero-title em { font-style: italic; color: var(--ink); display: block; text-decoration: none; background: linear-gradient(180deg, transparent 54%, color-mix(in srgb, var(--accent) 18%, transparent) 54%); padding: 0 0.08em 0.02em 0; box-decoration-break: clone; -webkit-box-decoration-break: clone; }
-    .hero-subtitle { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 1.15rem; font-style: italic; color: var(--muted); margin-bottom: 2rem; max-width: 560px; line-height: 1.6; }
+    .hero-subtitle { font-family: 'Inter', sans-serif; font-size: 1.15rem; font-style: italic; color: var(--muted); margin-bottom: 2rem; max-width: 560px; line-height: 1.6; }
     .hero-meta { display: flex; gap: 2rem; flex-wrap: wrap; margin-bottom: 2.5rem; }
-    .hero-meta-item { font-family: 'JetBrains Mono', monospace; font-size: 0.48rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); }
+    .hero-meta-item { font-family: 'Space Grotesk', monospace; font-size: 0.75rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); }
     .hero-meta-item strong { color: var(--ink); font-weight: 700; }
 
     /* ── TOC ── */
@@ -82,8 +83,8 @@
     .toc-item:nth-child(2) { padding-left: 1.5rem; }
     .toc-item:nth-child(3) { padding-left: 1.5rem; }
     .toc-num { font-family: 'Space Grotesk', serif; font-size: 1.8rem; font-weight: 900; font-style: italic; color: var(--rule); line-height: 1; margin-bottom: 0.3rem; }
-    .toc-title { font-family: 'JetBrains Mono', monospace; font-size: 0.48rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); }
-    .toc-sub { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 0.88rem; font-style: italic; color: var(--ink); margin-top: 0.2rem; }
+    .toc-title { font-family: 'Space Grotesk', monospace; font-size: 0.75rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); }
+    .toc-sub { font-family: 'Inter', sans-serif; font-size: 0.88rem; font-style: italic; color: var(--ink); margin-top: 0.2rem; }
 
     /* ── Essay layout ── */
     .essay-wrap { max-width: 960px; margin: 0 auto; padding: 0 4rem 6rem; }
@@ -91,7 +92,7 @@
     /* ── Section markers ── */
     .section-marker { display: flex; align-items: center; gap: 1rem; margin-bottom: 0.75rem; margin-top: 4rem; }
     .section-marker-icon { width: 10px; height: 10px; border: 1px solid var(--accent); border-radius: 50%; flex-shrink: 0; }
-    .section-marker-label { font-family: 'JetBrains Mono', monospace; font-size: 0.48rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--muted); }
+    .section-marker-label { font-family: 'Space Grotesk', monospace; font-size: 0.75rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--muted); }
     .section-title { font-family: 'Space Grotesk', serif; font-size: clamp(1.6rem, 3vw, 2.4rem); font-weight: 900; line-height: 1.05; letter-spacing: -0.02em; margin-bottom: 0.5rem; }
     .section-rule { height: 1px; background: linear-gradient(to right, var(--accent), transparent); margin-bottom: 2rem; width: 80px; }
 
@@ -100,7 +101,7 @@
     p.dropcap::first-letter { font-family: 'Space Grotesk', serif; font-size: 3.8rem; font-weight: 900; float: left; line-height: 0.8; margin-right: 0.12em; margin-top: 0.08em; color: var(--accent); }
 
     /* Pull quotes */
-    .pull { border-left: 2px solid var(--accent); padding: 0.5rem 0 0.5rem 1.5rem; margin: 2.5rem 0; }
+    .pull { border-block: 2px solid var(--accent); padding: 1rem 0; margin: 2.5rem 0; }
     .pull p, .pull { font-family: 'Space Grotesk', serif; font-size: 1.15rem; font-style: italic; color: var(--deep); line-height: 1.55; }
 
     /* Breaks */
@@ -109,34 +110,34 @@
     /* Diagrams */
     figure.diagram { margin: 2.5rem 0; padding: 1.5rem; background: transparent; border: 1px solid var(--border-light); cursor: zoom-in; position: relative; transition: border-color 0.2s; }
     figure.diagram:hover { border-color: var(--accent); }
-    figure.diagram::after { content: '+'; position: absolute; top: 0.6rem; right: 0.8rem; font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; color: var(--accent); opacity: 0; transition: opacity 0.2s; pointer-events: none; }
+    figure.diagram::after { content: '+'; position: absolute; top: 0.6rem; right: 0.8rem; font-family: 'Space Grotesk', monospace; font-size: 0.75rem; color: var(--accent); opacity: 0; transition: opacity 0.2s; pointer-events: none; }
     figure.diagram:hover::after { opacity: 0.5; }
     figure.diagram svg { width: 100%; height: auto; display: block; }
-    figure.diagram figcaption { font-family: 'JetBrains Mono', monospace; font-size: 0.44rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); text-align: center; margin-top: 0.75rem; }
+    figure.diagram figcaption { font-family: 'Space Grotesk', monospace; font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); text-align: center; margin-top: 0.75rem; }
 
     /* Notes / aside notes */
-    p[style*="border-left"] { border-left: 2px solid var(--rule) !important; padding-left: 1.2rem !important; color: var(--muted) !important; font-size: 0.9rem !important; font-style: italic !important; margin: 0 0 1.8rem !important; }
+    p[style*="border-left"] { border-left: 0; border-block-start: 2px solid var(--rule); padding-block-start: 1rem; color: var(--muted); font-size: 0.9rem; font-style: italic; margin: 0 0 1.8rem; }
 
     /* Metric table */
     .metric-table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 0.9rem; }
-    .metric-table th { font-family: 'JetBrains Mono', monospace; font-size: 0.44rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); padding: 0.6rem 0.8rem; text-align: left; border-bottom: 2px solid var(--rule); }
+    .metric-table th { font-family: 'Space Grotesk', monospace; font-size: 0.75rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); padding: 0.6rem 0.8rem; text-align: left; border-bottom: 2px solid var(--rule); }
     .metric-table td { padding: 0.75rem 0.8rem; border-bottom: 1px solid var(--rule); color: var(--deep); vertical-align: top; line-height: 1.65; }
     .metric-table tr:last-child td { border-bottom: none; }
-    .metric-table td:first-child { font-family: 'JetBrains Mono', monospace; font-size: 0.78rem; color: var(--accent); white-space: nowrap; }
+    .metric-table td:first-child { font-family: 'Space Grotesk', monospace; font-size: 0.78rem; color: var(--accent); white-space: nowrap; }
 
     /* Diagnostic */
     .diagnostic-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: var(--rule); margin: 1.5rem 0; border: 1px solid var(--rule); }
     .diagnostic-item { background: var(--paper); padding: 1.25rem; }
-    .diagnostic-question { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 0.95rem; font-style: italic; color: var(--deep); margin-bottom: 0.5rem; line-height: 1.6; }
-    .diagnostic-hint { font-family: 'JetBrains Mono', monospace; font-size: 0.44rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); }
+    .diagnostic-question { font-family: 'Inter', sans-serif; font-size: 0.95rem; font-style: italic; color: var(--deep); margin-bottom: 0.5rem; line-height: 1.6; }
+    .diagnostic-hint { font-family: 'Space Grotesk', monospace; font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); }
 
     /* Sidebar genealogy */
     .sidebar-genealogy { position: sticky; top: 80px; border: 1px solid var(--rule); padding: 1.5rem; background: var(--highlight); }
-    .sidebar-genealogy-title { font-family: 'JetBrains Mono', monospace; font-size: 0.46rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--muted); margin-bottom: 1rem; }
+    .sidebar-genealogy-title { font-family: 'Space Grotesk', monospace; font-size: 0.75rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--muted); margin-bottom: 1rem; }
     .gen-item { padding: 0.75rem 0; border-bottom: 1px solid var(--rule); }
     .gen-item:last-child { border-bottom: none; padding-bottom: 0; }
     .gen-name { font-family: 'Space Grotesk', serif; font-size: 1.1rem; font-weight: 700; color: var(--ink); }
-    .gen-sub { font-family: 'JetBrains Mono', monospace; font-size: 0.44rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); margin-top: 0.2rem; }
+    .gen-sub { font-family: 'Space Grotesk', monospace; font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); margin-top: 0.2rem; }
     .gen-item.active .gen-name { color: var(--accent); }
 
     /* Essay grid */
@@ -147,20 +148,20 @@
     /* Colophon */
     .colophon { border-top: 3px double var(--ink); padding: 3rem 0 0; margin-top: 4rem; }
     .colophon-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; }
-    .colophon-label { font-family: 'JetBrains Mono', monospace; font-size: 0.44rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--muted); margin-bottom: 0.5rem; }
+    .colophon-label { font-family: 'Space Grotesk', monospace; font-size: 0.75rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--muted); margin-bottom: 0.5rem; }
     .colophon-text { font-size: 0.88rem; color: var(--muted); line-height: 1.7; }
 
     /* Lightbox */
-    #dlb { display: none; position: fixed; inset: 0; z-index: 9990; background: rgba(15,14,12,0.88); backdrop-filter: blur(8px); align-items: center; justify-content: center; padding: 2.5rem; }
+    #dlb { display: none; position: fixed; inset: 0; z-index: var(--z-modal); background: color-mix(in srgb, var(--ink) 88%, transparent); backdrop-filter: blur(8px); align-items: center; justify-content: center; padding: 2.5rem; }
     #dlb.on { display: flex; animation: dlbIn 0.2s ease; }
     @keyframes dlbIn { from { opacity:0 } to { opacity:1 } }
-    #dlb-box { position: relative; max-width: min(92vw, 1100px); width: 100%; background: var(--paper); border-top: 2px solid var(--accent); padding: 1.8rem 1.8rem 1.2rem; animation: dlbPop 0.25s cubic-bezier(.22,.68,0,1.15); }
+    #dlb-box { position: relative; max-width: min(92vw, 1100px); width: 100%; background: var(--paper); border-top: 2px solid var(--accent); padding: 1.8rem 1.8rem 1.2rem; animation: dlbPop 0.25s cubic-bezier(.22,1,.36,1); }
     @keyframes dlbPop { from { opacity:0; transform:scale(0.93) translateY(10px) } to { opacity:1; transform:scale(1) translateY(0) } }
     #dlb-box svg { width:100%; height:auto; display:block; }
-    #dlb-cap { margin-top:0.7rem; font-family:'JetBrains Mono',monospace; font-size:0.45rem; letter-spacing:0.1em; color:var(--muted); text-align:center; font-style:italic; }
-    #dlb-close { position:absolute; top:0.5rem; right:0.7rem; background:none; border:none; cursor:pointer; font-family:'JetBrains Mono',monospace; font-size:0.48rem; letter-spacing:0.14em; text-transform:uppercase; color:var(--muted); padding:0.2rem 0.3rem; transition:color 0.15s; }
+    #dlb-cap { margin-top:0.7rem; font-family:'Space Grotesk',monospace; font-size: 0.75rem; letter-spacing:0.1em; color:var(--muted); text-align:center; font-style:italic; }
+    #dlb-close { position:absolute; top:0.5rem; right:0.7rem; background:none; border:none; cursor:pointer; font-family:'Space Grotesk',monospace; font-size: 0.75rem; letter-spacing:0.14em; text-transform:uppercase; color:var(--muted); padding:0.2rem 0.3rem; transition:color 0.15s; }
     #dlb-close:hover { color:var(--accent); }
-    #dlb-esc { position:absolute; bottom:1rem; left:50%; transform:translateX(-50%); font-family:'JetBrains Mono',monospace; font-size:0.4rem; letter-spacing:0.14em; text-transform:uppercase; color:rgba(244,240,232,0.25); pointer-events:none; white-space:nowrap; }
+    #dlb-esc { position:absolute; bottom:1rem; left:50%; transform:translateX(-50%); font-family:'Space Grotesk',monospace; font-size: 0.75rem; letter-spacing:0.14em; text-transform:uppercase; color:rgba(244,240,232,0.25); pointer-events:none; white-space:nowrap; }
 
     @media(max-width:768px) {
       .hero { padding: 3rem 1.5rem 2rem; }
@@ -182,11 +183,11 @@
       .hero { grid-template-columns: 1fr; }
       .hero-svg { max-width: 200px; margin: 0 auto; order: -1; }
     }
-  </style>
+  
+}</style>
 </head>
 <body>
-  <div class="bg-pattern"></div>
-  <div class="bg-grain"></div>
+  <a href="#main-content" class="skip-link">Skip to content</a>
   <div id="pbar"></div>
   <div id="pbar-label"></div>
 
@@ -195,35 +196,26 @@
       <!-- Top Bar -->
   <div class="top-bar">
     <span>Buenos Aires &middot; Since 2008</span>
-    <span>18 Essays &middot; 3 Frameworks &middot; ~289 min of reading &middot; <a href="about.html">About the author</a></span>
+    <span>Essays &middot; Frameworks &middot; Guided reading paths &middot; <a href="about.html">About the author</a></span>
   </div>
 
   <!-- Nav -->
   <nav class="nav">
       <div class="nav-inner">
-        <a href="index.html" class="nav-brand">Narrative<em>Mechanics</em></a>
+        <a href="index.html" class="nav-brand" aria-label="Narrative Mechanics — Home">NARRATIVE MECHANICS</a>
         <button class="nav-btn nav-toggle" aria-label="Menu" aria-expanded="false" aria-controls="navLinks" id="navToggle">
           <svg viewBox="0 0 24 24"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg>
         </button>
-        <div class="nav-links" id="navLinks">
-          <a href="index.html" class="nav-link">Home</a>
-          <div class="nav-sep"></div>
-          <a href="archive.html" class="nav-link">Start Here</a>
+        <div class="nav-links" id="navLinks" aria-label="Primary sections">
+          <a href="thesis.html" class="nav-link">Idea</a>
           <a href="frameworks.html" class="nav-link">Frameworks</a>
-          <a href="series.html" class="nav-link">Series</a>
           <a href="essays.html" class="nav-link">Essays</a>
-          <a href="notes.html" class="nav-link">Notes</a>
-          <div class="nav-sep"></div>
+          <a href="about.html#work" class="nav-link" data-open-contact data-contact-mode="conversation">Work</a>
           <a href="about.html" class="nav-link">About</a>
-        </div>
-        <div class="nav-right">
-          <button class="nav-btn" aria-label="Toggle theme" id="themeToggle">
-            <svg class="icon-moon" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
-            <svg class="icon-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
-          </button>
-        </div>
+        </div><div class="nav-right"><button class="nav-btn theme-toggle" type="button" data-theme-toggle aria-label="Use dark theme"><svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3 7 7 0 0 0 21 12.8Z"/></svg><svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.42 1.42M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.42-1.42M17.66 6.34l1.41-1.41"/></svg></button></div>
       </div>
     </nav>
+  <main id="main-content">
 
     <!-- Hero -->
     <section class="hero">
@@ -236,10 +228,10 @@
         <div class="hero-meta-item">~11,500 Words</div>
         <div class="hero-meta-item">Diego Dell'Agostino</div>
       </div>
-      <div style="display:flex; gap:0.75rem; flex-wrap:wrap; margin-top:0.5rem;">
-        <span style="font-family:'JetBrains Mono',monospace;font-size:0.44rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--muted);border:1px solid var(--rule);padding:0.3em 0.7em;">ZMOT &rarr; Google &middot; 2011 &middot; Before purchase</span>
-        <span style="font-family:'JetBrains Mono',monospace;font-size:0.44rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--muted);border:1px solid var(--rule);padding:0.3em 0.7em;">ZMOI &rarr; Dell'Agostino &middot; Before belief</span>
-        <span style="font-family:'JetBrains Mono',monospace;font-size:0.44rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--accent);border:1px solid var(--accent);padding:0.3em 0.7em;">CAX &rarr; Dell'Agostino &middot; Before identity</span>
+      <div class="page-inline-68534e5700">
+        <span class="page-inline-379d1cc184">ZMOT &rarr; Google &middot; 2011 &middot; Before purchase</span>
+        <span class="page-inline-379d1cc184">ZMOI &rarr; Dell'Agostino &middot; Before belief</span>
+        <span class="page-inline-3f7498a065">CAX &rarr; Dell'Agostino &middot; Before identity</span>
       </div>
       </div>
       <svg class="hero-svg" viewBox="0 0 160 200" xmlns="http://www.w3.org/2000/svg">
@@ -291,7 +283,7 @@
         <div class="toc-sub">The Ancestor</div>
       </div>
     </div>
-    <div class="toc-wrap fade-in" style="border-top:none; padding-top:0;">
+    <div class="toc-wrap fade-in page-inline-37ceb1e5df">
       <div class="toc-item">
         <div class="toc-num">IV</div>
         <div class="toc-title">Movement Four</div>
@@ -373,7 +365,7 @@
         That function (constitutive rather than merely informational) is what has been lost. It is not a content problem. It is structural.
       </p>
 
-      <p class="fade-in" style="font-size:0.88rem; color:var(--muted); font-style:italic; border-left: 2px solid var(--rule); padding-left: 1.2rem; margin: 0 0 1.8rem;">
+      <p class="fade-in page-inline-ccaa3e45c9">
         On the word "constitutive": in a media environment saturated with algorithmic noise and AI-generated content, a well-designed field does not merely deepen the user's understanding of a domain; it makes genuine understanding possible at all. Without the field, the user does not navigate the domain independently. They navigate the algorithm's version of it. The field is constitutive of access, not only depth. The word earns its place only if that argument is true. This essay argues it is.</p>
 
 
@@ -513,7 +505,7 @@
         ZMOT explained how brands win before purchase. ZMOI explained how media brands win before belief. The Constitutive Arc asks the question that follows: what happens to the audience after belief, and who designed that transformation?
       </div>
 
-      <p class="fade-in" style="font-size:0.88rem; color:var(--muted); font-style:italic; border-left: 2px solid var(--rule); padding-left: 1.2rem; margin: 0 0 1.8rem;">
+      <p class="fade-in page-inline-ccaa3e45c9">
         On the genealogy: ZMOT was built on behavioral data from thousands of buyers: empirical, measurable, falsifiable. ZMOI and the Constitutive Arc are prescriptive (built on argument, not measurement). The genealogy is conceptual, not evidential. That distinction should be declared rather than obscured. What follows is a claim about how media organizations should be built, not a report on how they behave.
       </p>
 
@@ -565,7 +557,7 @@
         That is the function that was lost. That is what the wave obscured. That is what this essay proposes to rebuild. Not as nostalgia. As the only architecture that makes sense when the wave has passed and you need to know what is permanent.
       </p>
 
-      <p class="fade-in" style="font-style:italic; font-size:1.15rem; margin-top:2rem; color:var(--deep);">
+      <p class="fade-in page-inline-6763ea8904">
         The wave is not the thing to understand. It never was.
       </p>
 
@@ -581,7 +573,7 @@
       <!-- ========================
            MOVEMENT II: THE FIELD
       ========================= -->
-      <div style="margin-top: 7rem;">
+      <div class="page-inline-075d8f8992">
         <div class="section-marker fade-in">
           <div class="section-marker-icon">&#9675;&#9675;</div>
           <div class="section-marker-label">Movement II &nbsp;/&nbsp; Six</div>
@@ -612,7 +604,7 @@
         In physics, a field is not an object. It is a region of space where every point has a value: a potential, a force, a direction. It doesn't push you along a predetermined path. It structures the conditions under which any path you choose will unfold. Walk north, south, east, or west through a gravitational field: the field is present everywhere, shaping the cost and consequence of every step, without dictating which step you take.
       </p>
 
-      <p class="fade-in" style="font-size:0.88rem; color:var(--muted); font-style:italic; border-left: 2px solid var(--rule); padding-left: 1.2rem; margin: 0 0 1.8rem;">
+      <p class="fade-in page-inline-ccaa3e45c9">
         The empirical anchor: Melanie Green and Timothy Brock's Narrative Transportation Theory (2000) demonstrated that deep engagement with a narrative produces measurable belief change through "transportation"—absorption into the story world that reduces counter-argumentation. Subsequent research confirmed these effects compound across repeated exposure and are more durable than attitude change from direct argument. The field model is a design framework for producing transportation conditions intentionally, across multiple surfaces, over time. Not metaphor. Applied psychology.
       </p>
 
@@ -841,12 +833,12 @@
         </svg>
       </figure>
 
-      <p class="fade-in" style="font-style:italic; font-size:1.15rem; margin-top:2rem; color:var(--deep);">
+      <p class="fade-in page-inline-6763ea8904">
         The arc is not a path someone walks. It is a field someone is changed by.
       </p>
 
       <!-- Next movement II -->
-      <div class="next-movement fade-in" style="margin-top: 5rem;">
+      <div class="next-movement fade-in page-inline-2ea962c110">
         <div>
           <div class="next-label">Coming next</div>
           <div class="next-title">Movement III &nbsp;&mdash;&nbsp; The Ancestor</div>
@@ -857,7 +849,7 @@
       <!-- ========================
            MOVEMENT III: THE ANCESTOR
       ========================= -->
-      <div style="margin-top: 7rem;">
+      <div class="page-inline-075d8f8992">
         <div class="section-marker fade-in">
           <div class="section-marker-icon">&#9675;&#9675;&#9675;</div>
           <div class="section-marker-label">Movement III &nbsp;/&nbsp; Six</div>
@@ -878,7 +870,7 @@
         What he found was this: across every culture that Campbell surveyed (and the selection has been disputed by folklorists and anthropologists who argue he chose examples to confirm a structure already in mind) the stories that survive tend to share the same underlying architecture. A person begins in a known world. Something calls them beyond its borders. They cross a threshold into unfamiliar territory. They encounter trials, allies, and enemies. They find something they could not have found without leaving. They bring it back. And they return changed, not to the same world they left, but to a world that looks the same and is fundamentally different because they are.
       </p>
 
-      <p class="fade-in" style="font-size:0.88rem; color:var(--muted); font-style:italic; border-left: 2px solid var(--rule); padding-left: 1.2rem; margin: 0 0 1.8rem;">
+      <p class="fade-in page-inline-ccaa3e45c9">
         Note on Campbell: The academic critique of his universalism is legitimate: he selected his examples, and the monomyth is abstract enough to map onto almost any narrative if applied loosely. The Constitutive Arc uses the monomyth not as anthropological fact but as the richest operational heuristic available for thinking about transformation arcs. Its value here is practical, not ethnographic. If a better structural model for designed transformation exists, the framework should use that instead.
       </p>
 
@@ -1031,12 +1023,12 @@
         The audience is not a market to capture. It is a collection of people who are, whether they name it or not, in the middle of their own journeys. The field that understands this, that positions itself not as a source of information but as a companion to the transformation already underway—is the field that becomes constitutive. It becomes part of the journey itself, not a service consumed along the way.
       </p>
 
-      <p class="fade-in" style="font-style:italic; font-size:1.15rem; margin-top:2rem; color:var(--deep);">
+      <p class="fade-in page-inline-6763ea8904">
         The oldest stories knew what the newest media strategies are only beginning to relearn: transformation is the product. Everything else is the packaging.
       </p>
 
       <!-- Next movement III -->
-      <div class="next-movement fade-in" style="margin-top: 5rem;">
+      <div class="next-movement fade-in page-inline-2ea962c110">
         <div>
           <div class="next-label">Coming next</div>
           <div class="next-title">Movement IV &nbsp;&mdash;&nbsp; The Architecture</div>
@@ -1047,7 +1039,7 @@
       <!-- ========================
            MOVEMENT IV: THE ARCHITECTURE
       ========================= -->
-      <div style="margin-top: 7rem;">
+      <div class="page-inline-075d8f8992">
         <div class="section-marker fade-in">
           <div class="section-marker-icon">&#9675;&#9675;&#9675;&#9675;</div>
           <div class="section-marker-label">Movement IV &nbsp;/&nbsp; Six</div>
@@ -1357,12 +1349,12 @@
         The score is not a verdict. It is a map of where the architecture needs attention. An organization with strong channels and a weak value proposition knows where to look. An organization with a clear lens but no arc-based segmentation knows what to build next. The diagnostic is useful not because it produces a number but because it forces a conversation that most editorial teams have never had: not about what we publish, but about what we are building in the people who encounter us over time.
       </p>
 
-      <p class="fade-in" style="font-style:italic; font-size:1.15rem; margin-top:2rem; color:var(--deep);">
+      <p class="fade-in page-inline-6763ea8904">
         The architecture of transformation is not separate from the business model. It is the business model, seen from the inside of the user's journey rather than the inside of the organization.
       </p>
 
       <!-- Next movement IV -->
-      <div class="next-movement fade-in" style="margin-top: 5rem;">
+      <div class="next-movement fade-in page-inline-2ea962c110">
         <div>
           <div class="next-label">Coming next</div>
           <div class="next-title">Movement V &nbsp;&mdash;&nbsp; The Danger</div>
@@ -1373,7 +1365,7 @@
       <!-- ========================
            MOVEMENT V: THE DANGER
       ========================= -->
-      <div style="margin-top: 7rem;">
+      <div class="page-inline-075d8f8992">
         <div class="section-marker fade-in">
           <div class="section-marker-icon">&#9675;&#9675;&#9675;&#9675;&#9675;</div>
           <div class="section-marker-label">Movement V &nbsp;/&nbsp; Six</div>
@@ -1569,12 +1561,12 @@
         These three commitments matter not primarily because they express good intentions, but because they create structures of external accountability. A declared lens can be critiqued publicly; critics and users can identify its blind spots and challenge them. A field designed for exit produces a verifiable claim: do users who disengage show higher independent reasoning scores? Measuring independence creates a mechanism that survives changes in leadership and editorial culture. The distinction between education and capture is not moral. It is structural. Structures can be audited. Intentions cannot.
       </p>
 
-      <p class="fade-in" style="font-style:italic; font-size:1.15rem; margin-top:2rem; color:var(--deep);">
+      <p class="fade-in page-inline-6763ea8904">
         The test of the Constitutive Arc is not the user who stays longest. It is the user who leaves most capable. Those are not the same user, and the difference between optimizing for one versus the other is the difference between education and capture.
       </p>
 
       <!-- Next movement V -->
-      <div class="next-movement fade-in" style="margin-top: 5rem;">
+      <div class="next-movement fade-in page-inline-2ea962c110">
         <div>
           <div class="next-label">Final movement</div>
           <div class="next-title">Movement VI &nbsp;&mdash;&nbsp; The Return</div>
@@ -1585,7 +1577,7 @@
       <!-- ========================
            MOVEMENT VI: THE RETURN
       ========================= -->
-      <div style="margin-top: 7rem;">
+      <div class="page-inline-075d8f8992">
         <div class="section-marker fade-in">
           <div class="section-marker-icon">&#9679;</div>
           <div class="section-marker-label">Movement VI &nbsp;/&nbsp; Six &nbsp;&mdash;&nbsp; Final</div>
@@ -1736,18 +1728,18 @@
         The only meaningful question is whether you are building something in the category of the wave or the category of the mountain. Everything else in media strategy follows from that distinction. Almost nothing in current media strategy begins there.
       </p>
 
-      <p class="fade-in" style="font-style:italic; font-size:1.22rem; margin-top:3rem; color:var(--deep); padding-top:2rem; border-top: 1px solid var(--rule);">
+      <p class="fade-in page-inline-7a2fadb85e">
         This is the return. Not an answer. A lens. The rest is the work.
       </p>
 
       <!-- Final genealogy and colophon -->
-      <div style="margin-top: 5rem; padding: 2.5rem; background: var(--highlight); color: var(--ink); border: 1px solid var(--rule); border-top: 2px solid var(--accent);" class="fade-in">
-        <div style="font-family:'JetBrains Mono',monospace; font-size:0.5rem; letter-spacing:0.22em; text-transform:uppercase; color:var(--muted); margin-bottom:1.5rem;">The Constitutive Arc - Complete</div>
+      <div class="fade-in page-inline-0cb832d841">
+        <div class="page-inline-78408f86f7">The Constitutive Arc - Complete</div>
 
-        <div style="display:grid; grid-template-columns:1fr 1fr; gap:2rem; margin-bottom:2rem;">
+        <div class="page-inline-208ef70ec5">
           <div>
-            <div style="font-family:'JetBrains Mono',monospace; font-size:0.48rem; letter-spacing:0.15em; text-transform:uppercase; color:var(--muted); margin-bottom:0.8rem;">Six Movements</div>
-            <div style="font-family:'Inter',serif; font-size:0.85rem; color:var(--deep); line-height:2;">
+            <div class="page-inline-67f7710b3f">Six Movements</div>
+            <div class="page-inline-726f7e9ae3">
               I &nbsp;&mdash;&nbsp; The Collapse<br>
               II &nbsp;&mdash;&nbsp; The Field<br>
               III &nbsp;&mdash;&nbsp; The Ancestor<br>
@@ -1757,23 +1749,23 @@
             </div>
           </div>
           <div>
-            <div style="font-family:'JetBrains Mono',monospace; font-size:0.48rem; letter-spacing:0.15em; text-transform:uppercase; color:var(--muted); margin-bottom:0.8rem;">Conceptual Lineage</div>
-            <div style="margin-bottom:1rem;">
-              <div style="font-family:'Space Grotesk',serif; font-size:1rem; color:var(--ink);">ZMOT</div>
-              <div style="font-family:'JetBrains Mono',monospace; font-size:0.46rem; color:var(--muted);">Google &middot; 2011 &middot; Before purchase</div>
+            <div class="page-inline-67f7710b3f">Conceptual Lineage</div>
+            <div class="page-inline-16884469a8">
+              <div class="page-inline-87521e6156">ZMOT</div>
+              <div class="page-inline-61c801655b">Google &middot; 2011 &middot; Before purchase</div>
             </div>
-            <div style="margin-bottom:1rem;">
-              <div style="font-family:'Space Grotesk',serif; font-size:1rem; color:var(--ink);">ZMOI</div>
-              <div style="font-family:'JetBrains Mono',monospace; font-size:0.46rem; color:var(--muted);">Dell'Agostino &middot; Before belief</div>
+            <div class="page-inline-16884469a8">
+              <div class="page-inline-87521e6156">ZMOI</div>
+              <div class="page-inline-61c801655b">Dell'Agostino &middot; Before belief</div>
             </div>
             <div>
-              <div style="font-family:'Space Grotesk',serif; font-size:1.1rem; color:rgba(184,55,26,0.8);">The Constitutive Arc</div>
-              <div style="font-family:'JetBrains Mono',monospace; font-size:0.46rem; color:rgba(184,55,26,0.45);">Dell'Agostino &middot; Before identity</div>
+              <div class="page-inline-3bba940a4a">The Constitutive Arc</div>
+              <div class="page-inline-70bf66a744">Dell'Agostino &middot; Before identity</div>
             </div>
           </div>
         </div>
 
-        <div style="border-top:1px solid var(--rule); padding-top:1.2rem; font-family:'JetBrains Mono',monospace; font-size:0.48rem; letter-spacing:0.1em; color:var(--muted); display:flex; justify-content:space-between; flex-wrap:wrap; gap:0.5rem;">
+        <div class="page-inline-2dd0a3f95e">
           <span>Diego Dell'Agostino</span>
           <span>~11,500 words &nbsp;&middot;&nbsp; Six movements &nbsp;&middot;&nbsp; Two iterations post red team</span>
           <span>CAX v1.1</span>
@@ -1869,10 +1861,11 @@
 
     </div><!-- essay-wrap -->
 
-    <footer style="border-top: 3px double var(--ink); padding: 1.5rem 5rem; display: flex; justify-content: space-between; align-items: center;">
-      <div style="font-family:'JetBrains Mono',monospace;font-size:0.5rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--muted);">&copy; 2026 Diego Dell'Agostino</div>
-      <div style="font-family:'Space Grotesk',serif;font-size:1rem;font-style:italic;color:var(--rule);">&#10022;</div>
-      <div style="font-family:'JetBrains Mono',monospace;font-size:0.5rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--muted);">Media Strategy &amp; Transformation</div>
+      </main>
+  <footer class="page-inline-b7f14f6d32">
+      <div class="page-inline-f790c67229">&copy; 2026 Diego Dell'Agostino</div>
+      <div class="page-inline-6f559b0d0c">&#10022;</div>
+      <div class="page-inline-f790c67229">Media Strategy &amp; Transformation</div>
     </footer>
 
   </div><!-- page-wrap -->
@@ -1887,7 +1880,7 @@
     <span id="dlb-esc">click outside or press esc to close</span>
   </div>
 
-  <script src="global.js?v=20260419b"></script>
+  <script src="global.js?v=20260621120500"></script>
   <script>
     // Fade in on scroll
     var obs = new IntersectionObserver(function(entries){

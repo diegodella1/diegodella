@@ -1,136 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <script>(function(){var d=document.documentElement,m=window.matchMedia("(prefers-color-scheme:dark)"),s;try{s=localStorage.getItem("theme")}catch(e){}var v=s==="dark"||s==="light",t=v?s:(m.matches?"dark":"light");d.setAttribute("data-theme",t);d.setAttribute("data-theme-source",v?"user":"system")})()</script>
   <meta charset="UTF-8">
-  <script>(function(){var t=localStorage.getItem("theme");if(!t)t=window.matchMedia("(prefers-color-scheme:dark)").matches?"dark":"light";document.documentElement.setAttribute("data-theme",t)})()</script>
-  <link rel="icon" href="favicon.svg" type="image/svg+xml">
-  <meta name="theme-color" content="#e6d5b8">
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-title" content="Narrative Mechanics">
-  <link rel="apple-touch-icon" href="/og-default.png">
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "CollectionPage",
-    "name": "Essays",
-    "description": "Standalone long-form writing on AI, trust, labor, scarcity, identity, and mediated attention.",
-    "url": "https://diegodella.ar/essays.html",
-    "author": {
-      "@type": "Person",
-      "name": "Diego Dell'Agostino",
-      "url": "https://diegodella.ar/about.html"
-    },
-    "isPartOf": {
-      "@type": "WebSite",
-      "name": "Narrative Mechanics",
-      "url": "https://diegodella.ar/"
-    }
-  }
-  </script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Essays from Narrative Mechanics: standalone long-form writing on AI, trust, labor, scarcity, identity, and mediated attention.">
+  <meta name="theme-color" content="#f5f0e8" id="themeColor">
+  <meta name="description" content="Long-form essays from Narrative Mechanics on AI, trust, identity, scarcity, filters, and mediated attention.">
   <meta name="author" content="Diego Dell'Agostino">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://diegodella.ar/essays.html">
   <meta property="og:title" content="Essays | Narrative Mechanics">
-  <meta property="og:description" content="Standalone long-form writing on AI, trust, labor, scarcity, identity, and mediated attention.">
+  <meta property="og:description" content="Long-form essays on AI, trust, identity, scarcity, filters, and mediated attention.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://diegodella.ar/essays.html">
-  <meta property="og:site_name" content="Narrative Mechanics">
   <meta property="og:image" content="https://diegodella.ar/og-default.png">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Essays | Narrative Mechanics">
-  <meta name="twitter:description" content="Standalone long-form writing on AI, trust, labor, scarcity, identity, and mediated attention.">
-  <meta name="twitter:image" content="https://diegodella.ar/og-default.png">
   <title>Essays | Narrative Mechanics</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;700&family=Epilogue:ital,wght@0,400;1,400;0,600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="global.css?v=20260418f">
-  <link rel="stylesheet" href="components.css?v=20260418f">
-  <style>
-    .hero,.wrap{max-width:1080px;margin:0 auto;padding-left:3rem;padding-right:3rem}
-    .hero{padding-top:5rem;padding-bottom:2.35rem;display:grid;grid-template-columns:minmax(0,1fr) 260px;gap:1.8rem;border-bottom:1px solid var(--border-light)}
-    .hero-title,.section-title,.card-title,.related-title{font-family:'Space Grotesk',serif;line-height:1.02}
-    .hero-title{font-size:clamp(3rem,6vw,4.8rem);letter-spacing:-0.045em;max-width:7ch;margin-bottom:1rem}
-    .hero-title em{font-style:italic;color:var(--accent)}
-    .hero-lead,.section-copy,.card-copy,.card-meta,.related-copy,.hero-aside p{font-size:.95rem;line-height:1.7;color:var(--ink-2)}
-    .hero-routes{display:flex;flex-wrap:wrap;gap:.55rem}
-    .hero-route{font-family:'JetBrains Mono',monospace;font-size:.48rem;letter-spacing:.14em;text-transform:uppercase;text-decoration:none;color:var(--accent);border:1px solid color-mix(in srgb, var(--accent) 24%, var(--border));border-radius:12px;padding:.58rem .8rem;background:color-mix(in srgb, var(--accent-light) 84%, var(--paper));transition:border-color .18s,background-color .18s,color .18s}
-    .hero-route:hover{color:var(--accent-hover);border-color:var(--accent);background:color-mix(in srgb, var(--accent-light) 96%, var(--paper))}
-    .hero-aside{border-left:1px solid var(--border);padding-left:1rem;display:grid;gap:.85rem}
-    .aside-label,.section-label,.card-kicker{font-family:'JetBrains Mono',monospace;font-size:.46rem;letter-spacing:.16em;text-transform:uppercase;color:var(--accent)}
-    .card-kicker{margin-bottom:.35rem}
-    .wrap{padding-top:1.85rem;padding-bottom:5rem}
-    .section,.related{border:1px solid color-mix(in srgb, var(--accent) 14%, var(--border));border-radius:14px;background:var(--surface-1);padding:1.15rem}
-    .section{margin-bottom:1.2rem}
-    .section-head{display:grid;grid-template-columns:180px minmax(0,1fr);gap:1rem;margin-bottom:.9rem}
-    .section-title{font-size:1.55rem;margin-bottom:.25rem}
-    .card-grid,.related-grid{display:grid;grid-template-columns:1fr 1fr;gap:.75rem}
-    .card,.related-card{display:block;border:1px solid color-mix(in srgb, var(--accent) 16%, var(--border));border-radius:12px;background:var(--surface-2);padding:1.15rem;text-decoration:none;color:inherit;transition:border-color .18s,background-color .18s,box-shadow .18s}
-    .card:hover,.related-card:hover{border-color:color-mix(in srgb, var(--accent) 42%, var(--border));background:color-mix(in srgb, var(--accent-light) 74%, var(--paper));box-shadow:0 10px 22px color-mix(in srgb, var(--accent) 10%, transparent)}
-    .card-title{font-size:1.18rem;margin-bottom:.35rem}
-    .card-meta{margin-top:.7rem;font-family:'JetBrains Mono',monospace;font-size:.48rem;letter-spacing:.08em;text-transform:uppercase}
-    .related-title{font-size:1.35rem;margin-bottom:.3rem}
-    .related-card strong{display:block;font-family:'Inter',sans-serif;font-size:.95rem;margin-bottom:.18rem}
-    @media (max-width:900px){.hero,.section-head,.card-grid,.related-grid{grid-template-columns:1fr}.hero-aside{border-left:none;border-top:1px solid var(--border);padding-left:0;padding-top:.9rem}}
-    @media (max-width:640px){.hero,.wrap{padding-left:1.5rem;padding-right:1.5rem}.hero{padding-top:3.8rem}}
-  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="global.css?v=20260621120500">
+  <link rel="stylesheet" href="components.css?v=20260621120500">
+  <style>@layer page {
+body.nm-page{font-family:"Inter",system-ui,sans-serif}body.nm-page h1,body.nm-page h2,body.nm-page h3,body.nm-page strong{font-family:"Space Grotesk",system-ui,sans-serif}
+}</style>
 </head>
-<body class="analog-bg">
+<body class="nm-page">
   <a href="#main-content" class="skip-link">Skip to content</a>
-  <div class="page-wrap">
-    <div class="top-bar"><span>Buenos Aires &middot; Since 2008</span><span>Long-form arguments across AI, trust, labor, and attention &middot; <a href="about.html">About the author</a></span></div>
-    <nav class="nav"><div class="nav-inner"><a href="index.html" class="nav-brand">Narrative<em>Mechanics</em></a><button class="nav-btn nav-toggle" aria-label="Menu" aria-expanded="false" aria-controls="navLinks" id="navToggle"><svg viewBox="0 0 24 24"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg></button><div class="nav-links" id="navLinks"><a href="index.html" class="nav-link">Home</a><div class="nav-sep"></div><a href="archive.html" class="nav-link">Start Here</a><a href="frameworks.html" class="nav-link">Frameworks</a><a href="series.html" class="nav-link">Series</a><a href="essays.html" class="nav-link active" aria-current="page">Essays</a><a href="notes.html" class="nav-link">Notes</a><div class="nav-sep"></div><a href="about.html" class="nav-link">About</a></div><div class="nav-right"><button class="nav-btn" aria-label="Toggle theme" id="themeToggle"><svg class="icon-moon" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg><svg class="icon-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></button></div></div></nav>
-    <main id="main-content">
-      <section class="hero">
-        <div>
-          <div class="hero-kicker">Shelf / Essays</div>
-          <h1 class="hero-title">Long-form <em>Essays</em></h1>
-          <p class="hero-lead">This shelf is for readers who want standalone arguments rather than frameworks or sequences. Each piece can be entered independently, but together they trace the wider worldview of the site.</p>
-          <div class="hero-routes">
-            <a href="archive.html" class="hero-route">Open Catalog</a>
-            <a href="series.html" class="hero-route">Guided Paths</a>
-            <a href="notes.html" class="hero-route">Compressed Notes</a>
-          </div>
+  <div class="top-bar"><span>Essays</span><span>Long-form arguments, ordered by problem</span></div>
+  <nav class="nav"><div class="nav-inner"><a href="index.html" class="nav-brand" aria-label="Narrative Mechanics — Home">NARRATIVE MECHANICS</a><button class="nav-btn nav-toggle" aria-label="Menu" aria-expanded="false" aria-controls="navLinks" id="navToggle"><svg viewBox="0 0 24 24"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg></button><div class="nav-links" id="navLinks" aria-label="Primary sections">
+          <a href="thesis.html" class="nav-link">Idea</a>
+          <a href="frameworks.html" class="nav-link">Frameworks</a>
+          <a href="essays.html" class="nav-link">Essays</a>
+          <a href="about.html#work" class="nav-link" data-open-contact data-contact-mode="conversation">Work</a>
+          <a href="about.html" class="nav-link">About</a>
+        </div><div class="nav-right"><button class="nav-btn theme-toggle" type="button" data-theme-toggle aria-label="Use dark theme"><svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3 7 7 0 0 0 21 12.8Z"/></svg><svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.42 1.42M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.42-1.42M17.66 6.34l1.41-1.41"/></svg></button></div></div></nav>
+  <main id="main-content">
+    <header class="nm-page-hero">
+      <p class="nm-page-label">Essays</p>
+      <h1>Read by the failure you are trying to name.</h1>
+      <p>The essays are not a chronological blog. They are routes into recurring problems: product clarity, AI-mediated trust, launch noise, identity delegation, scarcity, and what remains human when intelligence scales.</p>
+    </header>
+    <section class="nm-page-main">
+      <div class="library-filter" aria-label="Filter essays by topic">
+        <div class="library-filter-buttons">
+          <button type="button" data-essay-filter="all" aria-pressed="true">All</button>
+          <button type="button" data-essay-filter="product-clarity" aria-pressed="false">Product clarity</button>
+          <button type="button" data-essay-filter="ai-trust" aria-pressed="false">AI &amp; trust</button>
+          <button type="button" data-essay-filter="distribution" aria-pressed="false">Distribution</button>
+          <button type="button" data-essay-filter="operating-systems" aria-pressed="false">Operating systems</button>
         </div>
-        <aside class="hero-aside">
-          <div class="aside-label">Best use</div>
-          <p>Use this shelf if you want to enter through one strong long-form piece on scarcity, trust, macro systems, identity, or transition costs.</p>
-          <div class="aside-label">Best first read</div>
-          <p><a href="the-last-scarcity.html">The Last Scarcity</a> is a strong modern entry point if you want the broad climate of the argument.</p>
-        </aside>
-      </section>
-      <div class="wrap">
-        <section class="section">
-          <div class="section-head">
-            <div class="section-label">On This Shelf</div>
-            <div>
-              <div class="section-title">Standalone long-form entries</div>
-              <div class="section-copy">These are useful if you want one complete argument at a time, without committing to a full sequence first.</div>
-            </div>
-          </div>
-          <div class="card-grid">
-            <a href="the-last-scarcity.html" class="card"><div class="card-kicker">Essay</div><div class="card-title">The Last Scarcity</div><div class="card-copy">What remains scarce when information and generation become abundant, and why trust and judgment become more expensive.</div><div class="card-meta">Recent entry point</div></a>
-            <a href="the-great-contraction.html" class="card"><div class="card-kicker">Essay</div><div class="card-title">The Great Contraction</div><div class="card-copy">Shrinking surfaces, tighter systems, and the disappearing margins that used to make experimentation easier.</div><div class="card-meta">Macro systems</div></a>
-            <a href="the-last-manual-moment.html" class="card"><div class="card-kicker">Essay</div><div class="card-title">The Last Manual Moment</div><div class="card-copy">On the handoff from human routing to automated delegation and what vanishes when human mediation leaves the loop.</div><div class="card-meta">Threshold and automation</div></a>
-            <a href="the-rhyme.html" class="card"><div class="card-kicker">Essay</div><div class="card-title">The Rhyme</div><div class="card-copy">Pattern recognition across mediated cycles, and the repeated structures underneath apparently new moments.</div><div class="card-meta">Historical pattern</div></a>
-            <a href="the-trust-collapse.html" class="card"><div class="card-kicker">Essay</div><div class="card-title">The Trust Collapse</div><div class="card-copy">Why high-volume mediation environments corrode confidence faster than institutions can restore it.</div><div class="card-meta">Trust and legibility</div></a>
-            <a href="the-proxy-self.html" class="card"><div class="card-kicker">Essay</div><div class="card-title">The Proxy Self</div><div class="card-copy">Identity, delegation, and the systems that increasingly negotiate social and commercial presence for us.</div><div class="card-meta">Identity and mediation</div></a>
-          </div>
-        </section>
-        <section class="related">
-          <div class="section-label">Next Shelves</div>
-          <div class="related-title">Read beside the essays</div>
-          <div class="related-copy">Use the series for guided sequences, or the notes for shorter and faster entry points.</div>
-          <div class="related-grid">
-            <a href="series.html" class="related-card"><strong>Series</strong><div class="related-copy">Move into the guided paths if you want the ideas staged in sequence.</div></a>
-            <a href="notes.html" class="related-card"><strong>Notes</strong><div class="related-copy">Move into Nuggets and unfinished arguments if you want sharper compression.</div></a>
-          </div>
-        </section>
+        <p class="library-filter-status" role="status" aria-live="polite"></p>
       </div>
-    </main>
-  </div>
-  <script src="global.js?v=20260419b"></script>
+      <div class="nm-two-col" data-essay-group>
+        <h2>Product clarity and narrative mechanics</h2>
+        <div class="nm-ledger">
+          <a href="thesis.html" data-topics="product-clarity distribution"><span class="nm-page-label">Core thesis</span><strong>The Continuous Moment of Intent</strong><p>The central model: markets begin deciding before visible demand, search, or comparison.</p></a>
+          <a href="paper-01.html" data-topics="product-clarity operating-systems"><span class="nm-page-label">Foundation</span><strong>Before You Build</strong><p>Strategic debt and the cost of building before the market has a story it can repeat.</p></a>
+          <a href="paper-02.html" data-topics="product-clarity distribution"><span class="nm-page-label">Message</span><strong>Message-Market Fit</strong><p>Why product-market fit can exist before the market has usable language for the value.</p></a>
+          <a href="paper-03.html" data-topics="product-clarity operating-systems"><span class="nm-page-label">Coherence</span><strong>The Architecture of Coherence</strong><p>Operating narrative as an internal alignment layer, not a slogan or campaign surface.</p></a>
+          <a href="paper-04.html" data-topics="product-clarity operating-systems"><span class="nm-page-label">Scale</span><strong>Narrative Drift</strong><p>How teams lose the story through small decisions that each seem locally reasonable.</p></a>
+          <a href="paper-05.html" data-topics="product-clarity distribution"><span class="nm-page-label">Launch</span><strong>Launching Into Noise</strong><p>The practical launch diagnosis for strong products that the market fails to read.</p></a>
+          <a href="paper-06.html" data-topics="distribution operating-systems"><span class="nm-page-label">Journey</span><strong>Before You Map</strong><p>The mediated customer journey and the hidden negotiation that happens before a user arrives.</p></a>
+        </div>
+      </div>
+      <div class="nm-two-col" data-essay-group>
+        <h2>AI, filters, and trust</h2>
+        <div class="nm-ledger">
+          <a href="the-last-human-impression.html" data-topics="ai-trust distribution"><span class="nm-page-label">Start here</span><strong>The Last Human Impression</strong><p>What a human eye is worth when content is processed by machines first.</p></a>
+          <a href="the-empty-room.html" data-topics="ai-trust distribution"><span class="nm-page-label">Reception</span><strong>The Empty Room</strong><p>What changes when the audience surface disappears, fragments, or arrives too late to matter.</p></a>
+          <a href="the-proxy-self.html" data-topics="ai-trust operating-systems"><span class="nm-page-label">Identity</span><strong>The Proxy Self</strong><p>What happens when brand presence becomes a training dataset instead of a living signal.</p></a>
+          <a href="writing-for-the-filter.html" data-topics="ai-trust distribution"><span class="nm-page-label">Discovery</span><strong>Writing for the Filter</strong><p>How content changes when it must pass algorithmic layers before reaching a person.</p></a>
+          <a href="the-trust-collapse.html" data-topics="ai-trust"><span class="nm-page-label">Trust</span><strong>The Trust Collapse</strong><p>The implicit contract of online presence, and what happens when it breaks.</p></a>
+          <a href="origin-gravity.html" data-topics="ai-trust distribution"><span class="nm-page-label">Origin</span><strong>Origin Gravity</strong><p>Why trusted origin becomes more valuable as mediated environments become synthetic.</p></a>
+          <a href="before-you-delegate.html" data-topics="ai-trust operating-systems"><span class="nm-page-label">Delegation</span><strong>Before You Delegate</strong><p>The sovereignty cost of outsourcing choices before you understand what must remain yours.</p></a>
+        </div>
+      </div>
+      <div class="nm-two-col" data-essay-group>
+        <h2>Automation, scarcity, and agency</h2>
+        <div class="nm-ledger">
+          <a href="already-decided.html" data-topics="ai-trust operating-systems"><span class="nm-page-label">Agency</span><strong>Already Decided</strong><p>How decisions move upstream into systems before humans experience choice.</p></a>
+          <a href="the-last-scarcity.html" data-topics="ai-trust product-clarity"><span class="nm-page-label">Scarcity</span><strong>The Last Scarcity</strong><p>When intelligence and production scale, desire becomes the remaining bottleneck.</p></a>
+          <a href="the-rhyme.html" data-topics="operating-systems"><span class="nm-page-label">Pattern</span><strong>The Rhyme</strong><p>Recurring structures beneath technological change and organizational adaptation.</p></a>
+          <a href="the-transition-tax.html" data-topics="ai-trust operating-systems"><span class="nm-page-label">Cost</span><strong>The Transition Tax</strong><p>The structural costs paid by the generation living between two systems.</p></a>
+          <a href="the-last-manual-moment.html" data-topics="ai-trust operating-systems"><span class="nm-page-label">Manual</span><strong>The Last Manual Moment</strong><p>The shrinking window where human choice still happens directly before systems take over the route.</p></a>
+          <a href="the-great-contraction.html" data-topics="distribution operating-systems"><span class="nm-page-label">Macro</span><strong>The Great Contraction</strong><p>What disappears when a long era of forced expansion turns inward.</p></a>
+        </div>
+      </div>
+      <div class="nm-two-col" data-essay-group>
+        <h2>Fragments, notes, and active work</h2>
+        <div class="nm-ledger">
+          <a href="nuggets.html" data-topics="product-clarity ai-trust distribution operating-systems"><span class="nm-page-label">Compressed</span><strong>Narrative Nuggets</strong><p>Short, sharp claims extracted from the larger corpus. Use this when you want signal before commitment.</p></a>
+          <a href="unfinished-arguments.html" data-topics="ai-trust operating-systems"><span class="nm-page-label">Unfinished</span><strong>Unfinished Arguments</strong><p>Seven live arguments about what AI breaks next, published while they are still under pressure.</p></a>
+          <a href="notes.html" data-topics="product-clarity ai-trust"><span class="nm-page-label">Shelf</span><strong>Notes</strong><p>The entry point for compressed paths, active fragments, and shorter ways into the larger work.</p></a>
+          <a href="series.html" data-topics="product-clarity ai-trust distribution operating-systems"><span class="nm-page-label">Paths</span><strong>Reading Paths</strong><p>Guided routes through the corpus for builders, launches, AI trust, filters, and mediated presence.</p></a>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer></footer>
+  <script src="global.js?v=20260621120500"></script>
 </body>
 </html>

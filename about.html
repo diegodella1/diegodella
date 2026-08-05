@@ -1,449 +1,124 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <script>(function(){var d=document.documentElement,m=window.matchMedia("(prefers-color-scheme:dark)"),s;try{s=localStorage.getItem("theme")}catch(e){}var v=s==="dark"||s==="light",t=v?s:(m.matches?"dark":"light");d.setAttribute("data-theme",t);d.setAttribute("data-theme-source",v?"user":"system")})()</script>
   <meta charset="UTF-8">
-  <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-TJF4P0NYFT"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-TJF4P0NYFT');
-  </script>
-  <script>(function(){var t=localStorage.getItem("theme");if(!t)t=window.matchMedia("(prefers-color-scheme:dark)").matches?"dark":"light";document.documentElement.setAttribute("data-theme",t)})()</script>
-  <link rel="icon" href="favicon.svg" type="image/svg+xml">
-  <meta name="theme-color" content="#e6d5b8">
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-title" content="Narrative Mechanics">
-  <link rel="apple-touch-icon" href="/og-default.png">
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-TJF4P0NYFT');</script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="About Diego Dell'Agostino: narrative strategy, media growth, product thinking, Posta co-founder, Roxom TV founding team, and advisory work across Latin America.">
+  <meta name="theme-color" content="#f5f0e8" id="themeColor">
+  <meta name="description" content="About Diego Dell'Agostino: product, media, and operations executive. Co-founder of Posta, founding media architect at Roxom TV, and author of Narrative Mechanics.">
   <meta name="author" content="Diego Dell'Agostino">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://diegodella.ar/about.html">
   <link rel="alternate" type="text/markdown" href="/about.md">
   <meta property="og:title" content="About Diego Dell'Agostino | Narrative Mechanics">
-  <meta property="og:description" content="Narrative strategy, media growth, product thinking, Posta co-founder, Roxom TV founding team, and advisory work across Latin America.">
+  <meta property="og:description" content="Product, media, and operations executive. Co-founder of Posta, founding media architect at Roxom TV, and author of Narrative Mechanics.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://diegodella.ar/about.html">
-  <meta property="og:site_name" content="Narrative Mechanics">
   <meta property="og:image" content="https://diegodella.ar/og-default.png">
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="630">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="About Diego Dell'Agostino | Narrative Mechanics">
-  <meta name="twitter:description" content="Narrative strategy, media growth, product thinking, Posta co-founder, Roxom TV founding team, and advisory work across Latin America.">
-  <meta name="twitter:image" content="https://diegodella.ar/og-default.png">
   <title>About Diego Dell'Agostino | Narrative Mechanics</title>
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Person",
-    "name": "Diego Dell'Agostino",
-    "url": "https://diegodella.ar/about.html",
-    "description": "Narrative strategy, media growth, product thinking, Posta co-founder, Roxom TV founding team, and advisory work across Latin America.",
-    "jobTitle": "Narrative Strategist",
-    "knowsAbout": ["Narrative Strategy", "Attention Economics", "Product Strategy", "Media Growth"],
-    "sameAs": [],
-    "mainEntityOfPage": "https://diegodella.ar/about.html"
-  }
-  </script>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;700&family=Epilogue:ital,wght@0,400;1,400;0,600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="global.css?v=20260418f">
-  <link rel="stylesheet" href="components.css?v=20260418f">
-  <style>
-    /* ── Hero — single column, generous ── */
-    .hero { max-width: 1080px; margin: 0 auto; padding: 5.4rem 3rem 2.8rem; display: grid; grid-template-columns: minmax(0, 1fr) 250px; gap: 2.25rem; align-items: start; border-bottom: 1px solid var(--border-light); }
-    .hero-svg { width: 100%; height: auto; }
-    .hero-kicker { margin-bottom: 1.25rem; }
-    .hero-title { font-family: 'Space Grotesk', serif; font-size: clamp(3.35rem, 6vw, 5.5rem); font-weight: 900; line-height: 0.92; letter-spacing: -0.04em; margin-bottom: 1.5rem; max-width: 8ch; }
-    .hero-title em { font-style: italic; color: var(--ink); display: block; text-decoration: underline; text-decoration-color: color-mix(in srgb, var(--accent) 22%, transparent); text-underline-offset: 0.08em; text-decoration-thickness: 1px; }
-    .hero-lead { font-size: 1rem; line-height: 1.8; color: var(--ink-2); max-width: 38rem; margin-bottom: 1.8rem; }
-    .hero-actions { display: flex; gap: 0.85rem; flex-wrap: wrap; }
-    .hero-btn {
-      display: inline-flex; align-items: center; justify-content: center;
-      font-family: 'Plus Jakarta Sans', sans-serif; font-size: 0.75rem; font-weight: 700;
-      letter-spacing: 0.06em; text-transform: uppercase; text-decoration: none;
-      padding: 0.84rem 1.15rem; transition: background 0.2s, color 0.2s, border-color 0.2s, box-shadow 0.2s, transform 0.2s;
-      box-shadow: var(--shadow-soft);
-    }
-    .hero-btn.primary { background: var(--accent); color: #fff; border: 1px solid color-mix(in srgb, var(--accent) 28%, var(--border)); box-shadow: var(--shadow-button); }
-    .hero-btn.primary:hover { background: var(--accent-hover); }
-    .hero-btn.secondary { border: 1px solid var(--rule); color: var(--ink-2); background: color-mix(in srgb, var(--surface-2) 94%, transparent); }
-    .hero-btn.secondary:hover { border-color: var(--accent); color: var(--accent); }
-
-    /* ── Content ── */
-    .content { max-width: 820px; margin: 0 auto; padding: 0 3rem 7rem; }
-
-    .bio-section { margin-bottom: 3.9rem; }
-    .bio-section-label { font-family: 'JetBrains Mono', monospace; font-size: 0.5rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--ink); margin-bottom: 1.25rem; display: flex; align-items: center; gap: 1rem; }
-    .bio-section-label::after { content: ''; flex: 1; height: 1px; background: var(--rule); }
-    .bio-section p { font-size: 1.02rem; line-height: 1.84; margin-bottom: 1.5rem; color: var(--deep); max-width: 68ch; }
-    .bio-section p:last-child { margin-bottom: 0; }
-    .bio-section p:first-of-type::first-letter { font-family: 'Space Grotesk', serif; font-size: 3.5rem; font-weight: 900; float: left; line-height: 0.75; margin-right: 0.08em; margin-top: 0.12em; color: var(--accent); }
-
-    /* ── Pull quote ── */
-    .pull-quote { margin: 2.25rem 0; padding: 1.1rem 1.35rem 1.1rem 1.75rem; border-left: 2px solid var(--accent); background: var(--surface-1); }
-    .pull-quote p { font-family: 'Space Grotesk', serif; font-size: 1.15rem; font-style: italic; line-height: 1.5; color: var(--deep); margin: 0 !important; }
-    .pull-quote p::first-letter { float: none !important; font-size: inherit !important; color: inherit !important; margin: 0 !important; }
-
-    /* ── Works grid ── */
-    .works-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: var(--rule); border: 1px solid var(--rule); margin: 2.2rem 0; overflow: hidden; }
-    .work-item { background: var(--surface-1); padding: 1.15rem 1.3rem; }
-    .work-item-label { font-family: 'JetBrains Mono', monospace; font-size: 0.42rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--accent); margin-bottom: 0.3rem; }
-    .work-item-title { font-family: 'Space Grotesk', serif; font-size: 1rem; font-weight: 700; margin-bottom: 0.25rem; }
-    .work-item-desc { font-size: 0.88rem; line-height: 1.6; color: var(--muted); }
-    .service-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--rule); border: 1px solid var(--rule); margin: 2.2rem 0; overflow: hidden; }
-    .service-item { background: var(--surface-2); padding: 1.15rem 1.2rem; }
-    .service-item-label { font-family: 'JetBrains Mono', monospace; font-size: 0.42rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--accent); margin-bottom: 0.35rem; }
-    .service-item-title { font-family: 'Space Grotesk', serif; font-size: 1rem; font-weight: 700; margin-bottom: 0.35rem; }
-    .service-item-desc { font-size: 0.86rem; line-height: 1.65; color: var(--muted); }
-
-    /* ── Writing links ── */
-    .writing-links { display: flex; flex-direction: column; gap: 1px; background: var(--rule); border: 1px solid var(--rule); margin: 2.2rem 0; overflow: hidden; }
-    .writing-link { display: grid; grid-template-columns: auto 1fr auto; gap: 0 1.25rem; align-items: center; padding: 1.05rem 1.15rem; background: var(--surface-1); text-decoration: none; color: inherit; transition: background 0.15s; }
-    .writing-link:hover { background: var(--surface-2); }
-    .writing-link.featured { background: color-mix(in srgb, var(--accent-light) 58%, var(--paper)); border-left: 2px solid var(--accent); }
-    .writing-link.featured:hover { background: color-mix(in srgb, var(--accent-light) 78%, var(--paper)); }
-    .writing-link-num { font-family: 'Space Grotesk', serif; font-size: 1.5rem; font-weight: 900; font-style: italic; color: var(--rule); line-height: 1; transition: color 0.15s; min-width: 2rem; }
-    .writing-link:hover .writing-link-num { color: var(--accent); }
-    .writing-link-tag { font-family: 'JetBrains Mono', monospace; font-size: 0.42rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--accent); margin-bottom: 0.2rem; }
-    .writing-link-title { font-family: 'Space Grotesk', serif; font-size: 1rem; font-weight: 700; }
-    .writing-link-arrow svg { width: 14px; height: 14px; stroke: var(--muted); fill: none; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; transition: stroke 0.15s; }
-    .writing-link:hover .writing-link-arrow svg { stroke: var(--accent); }
-
-    /* ── Closing ── */
-    .closing { margin-top: 4rem; padding: 2.2rem 2rem; border: 1px solid var(--rule); border-top: 2px solid var(--accent); background: var(--surface-2); text-align: center; }
-    .closing-ornament { font-family: 'Space Grotesk', serif; font-size: 1.2rem; color: var(--rule); margin-bottom: 1.25rem; }
-    .closing p { font-family: 'Space Grotesk', serif; font-size: 1.1rem; font-style: italic; line-height: 1.65; color: var(--deep); }
-    .contact-actions { display: flex; justify-content: center; gap: 0.8rem; flex-wrap: wrap; margin-top: 1.25rem; }
-    .contact-link {
-      display: inline-flex; align-items: center; justify-content: center;
-      font-family: 'Plus Jakarta Sans', sans-serif; font-size: 0.75rem; font-weight: 700;
-      letter-spacing: 0.06em; text-transform: uppercase; text-decoration: none;
-      padding: 0.84rem 1.1rem; transition: background 0.2s, color 0.2s, border-color 0.2s, box-shadow 0.2s, transform 0.2s;
-      box-shadow: var(--shadow-soft);
-    }
-    .contact-link.primary { background: var(--accent); color: #fff; border: 1px solid color-mix(in srgb, var(--accent) 28%, var(--border)); box-shadow: var(--shadow-button); }
-    .contact-link.secondary { border: 1px solid var(--rule); color: var(--ink-2); background: color-mix(in srgb, var(--surface-2) 94%, transparent); }
-
-    /* ── Fade in ── */
-    .fade-in { opacity: 0; transform: translateY(12px); transition: opacity 0.65s ease, transform 0.65s ease; }
-    .fade-in.visible { opacity: 1; transform: translateY(0); }
-
-    @media (max-width: 768px) {
-      .hero { grid-template-columns: 1fr; }
-      .hero-svg { max-width: 200px; margin: 0 auto; order: -1; }
-      .service-grid { grid-template-columns: 1fr; }
-    }
-    @media (max-width: 640px) {
-      .hero { padding: 3.5rem 1.5rem 2rem; }
-      .content { padding: 0 1.5rem 5rem; }
-      .works-grid { grid-template-columns: 1fr; }
-    }
-  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="global.css?v=20260621120500">
+  <link rel="stylesheet" href="components.css?v=20260621120500">
+  <style>@layer page {
+body.nm-page{font-family:"Inter",system-ui,sans-serif}body.nm-page h1,body.nm-page h2,body.nm-page h3,body.nm-page strong{font-family:"Space Grotesk",system-ui,sans-serif}
+}</style>
 </head>
-<body>
+<body class="nm-page">
   <a href="#main-content" class="skip-link">Skip to content</a>
-  <div class="bg-pattern"></div>
-  <div class="bg-grain"></div>
-  <div class="page-wrap">
-
-      <!-- Top Bar -->
-  <div class="top-bar">
-    <span>Buenos Aires &middot; Since 2008</span>
-    <span>20 Essays &middot; 3 Frameworks &middot; ~310 min of reading &middot; <a href="about.html">About the author</a></span>
-  </div>
-
-  <!-- Nav -->
-  <nav class="nav">
-      <div class="nav-inner">
-        <a href="index.html" class="nav-brand">Narrative<em>Mechanics</em></a>
-        <button class="nav-btn nav-toggle" aria-label="Menu" aria-expanded="false" aria-controls="navLinks" id="navToggle">
-          <svg viewBox="0 0 24 24"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg>
-        </button>
-        <div class="nav-links" id="navLinks">
-          <a href="index.html" class="nav-link">Home</a>
-          <div class="nav-sep"></div>
-          <a href="archive.html" class="nav-link">Start Here</a>
+  <div class="top-bar"><span>About Diego</span><span>Product, media and operations executive · Buenos Aires / global remote</span></div>
+  <nav class="nav"><div class="nav-inner"><a href="index.html" class="nav-brand" aria-label="Narrative Mechanics — Home">NARRATIVE MECHANICS</a><button class="nav-btn nav-toggle" aria-label="Menu" aria-expanded="false" aria-controls="navLinks" id="navToggle"><svg viewBox="0 0 24 24"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg></button><div class="nav-links" id="navLinks" aria-label="Primary sections">
+          <a href="thesis.html" class="nav-link">Idea</a>
           <a href="frameworks.html" class="nav-link">Frameworks</a>
-          <a href="series.html" class="nav-link">Series</a>
           <a href="essays.html" class="nav-link">Essays</a>
-          <a href="notes.html" class="nav-link">Notes</a>
-          <div class="nav-sep"></div>
-          <a href="about.html" class="nav-link active" aria-current="page">About</a>
-        </div>
-        <div class="nav-right">
-          <button class="nav-btn" aria-label="Toggle theme" id="themeToggle">
-            <svg class="icon-moon" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
-            <svg class="icon-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
-          </button>
-        </div>
+          <a href="about.html#work" class="nav-link" data-open-contact data-contact-mode="conversation">Work</a>
+          <a href="about.html" class="nav-link">About</a>
+        </div><div class="nav-right"><button class="nav-btn theme-toggle" type="button" data-theme-toggle aria-label="Use dark theme"><svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3 7 7 0 0 0 21 12.8Z"/></svg><svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.42 1.42M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.42-1.42M17.66 6.34l1.41-1.41"/></svg></button></div></div></nav>
+  <main id="main-content">
+    <header class="nm-page-hero about-hero">
+      <div class="about-hero-copy">
+        <p class="nm-page-label">Diego Dell'Agostino</p>
+        <h1>I build media companies, products, and operating systems.</h1>
+        <p>Product, media, and operations executive based in Buenos Aires. Co-founder of Posta, acquired by PodX. Founding media architect and product operations lead at Roxom TV. Author of Narrative Mechanics.</p>
       </div>
-    </nav>
-
-    <!-- Hero -->
-    <section class="hero fade-in">
-      <div class="hero-main">
-        <div class="hero-kicker">The Author</div>
-        <h1 class="hero-title">Diego<br><em>Dell'Agostino</em></h1>
-        <p class="hero-lead">Over a decade building and scaling digital media companies across Latin America. From ad networks to podcast studios, always circling the same question: why do some media organizations build lasting authority while others, with better distribution, never do?</p>
-        <div class="hero-actions">
-          <button type="button" class="hero-btn primary" data-open-contact data-contact-mode="conversation">Start a conversation</button>
-          <a href="frameworks.html" class="hero-btn secondary">Read the frameworks</a>
-          <a href="concepts.html" class="hero-btn secondary">Open concepts</a>
-        </div>
+      <div class="about-signal" aria-hidden="true">
+        <svg viewBox="0 0 420 420" role="img">
+          <rect class="signal-frame" x="18" y="18" width="384" height="384" />
+          <path class="signal-orbit signal-orbit-one" d="M68 272 C120 116 292 94 352 198 C398 278 268 354 166 306 C96 272 112 190 188 174 C260 158 310 216 280 264" />
+          <path class="signal-orbit signal-orbit-two" d="M84 152 C158 62 318 92 342 212 C366 326 206 374 104 280 C44 224 86 116 202 116 C300 116 340 214 268 276" />
+          <line class="signal-axis" x1="72" y1="332" x2="348" y2="88" />
+          <line class="signal-axis signal-axis-two" x1="92" y1="94" x2="330" y2="330" />
+          <circle class="signal-node signal-node-one" cx="124" cy="274" r="18" />
+          <circle class="signal-node signal-node-two" cx="292" cy="154" r="24" />
+          <circle class="signal-node signal-node-three" cx="214" cy="218" r="34" />
+          <text x="42" y="64">MEANING</text>
+          <text x="228" y="372">BEFORE INTENT</text>
+        </svg>
       </div>
-      <svg class="hero-svg" viewBox="0 0 160 200" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-        <style>
-          @keyframes penDraw { from { stroke-dashoffset: 180; } to { stroke-dashoffset: 0; } }
-          @keyframes lineDraw1 { from { stroke-dashoffset: 80; } to { stroke-dashoffset: 0; } }
-          @keyframes lineDraw2 { from { stroke-dashoffset: 65; } to { stroke-dashoffset: 0; } }
-          @keyframes lineDraw3 { from { stroke-dashoffset: 50; } to { stroke-dashoffset: 0; } }
-          @keyframes lineDraw4 { from { stroke-dashoffset: 35; } to { stroke-dashoffset: 0; } }
-          @keyframes dotPulse { 0%, 100% { r: 2.5; opacity: 0.6; } 50% { r: 4; opacity: 1; } }
-          @keyframes labelFade { from { opacity: 0; } to { opacity: 1; } }
-        </style>
-        <!-- Pen stroke (vertical) -->
-        <line x1="30" y1="20" x2="30" y2="150" stroke="var(--accent)" stroke-width="2" stroke-linecap="round"
-              stroke-dasharray="180" style="animation: penDraw 1.8s ease-out forwards;" />
-        <!-- Pen nib -->
-        <polygon points="27,16 30,8 33,16" fill="var(--accent)" opacity="0.7" />
-        <!-- Writing lines branching right -->
-        <line x1="30" y1="45" x2="110" y2="45" stroke="var(--ink)" stroke-width="1.5" stroke-linecap="round"
-              stroke-dasharray="80" style="animation: lineDraw1 1.2s ease-out 0.6s both;" />
-        <line x1="30" y1="75" x2="95" y2="75" stroke="var(--ink)" stroke-width="1.5" stroke-linecap="round"
-              stroke-dasharray="65" style="animation: lineDraw2 1.2s ease-out 0.9s both;" />
-        <line x1="30" y1="105" x2="80" y2="105" stroke="var(--ink)" stroke-width="1.5" stroke-linecap="round"
-              stroke-dasharray="50" style="animation: lineDraw3 1.2s ease-out 1.2s both;" />
-        <line x1="30" y1="135" x2="65" y2="135" stroke="var(--muted)" stroke-width="1.5" stroke-linecap="round"
-              stroke-dasharray="35" style="animation: lineDraw4 1.2s ease-out 1.5s both;" />
-        <!-- Dots at line ends -->
-        <circle cx="113" cy="45" fill="var(--accent)" style="animation: dotPulse 2.5s ease-in-out 1.8s infinite;" r="2.5" />
-        <circle cx="98" cy="75" fill="var(--accent)" style="animation: dotPulse 2.5s ease-in-out 2.1s infinite;" r="2.5" />
-        <circle cx="83" cy="105" fill="var(--accent)" style="animation: dotPulse 2.5s ease-in-out 2.4s infinite;" r="2.5" />
-        <circle cx="68" cy="135" fill="var(--muted)" style="animation: dotPulse 2.5s ease-in-out 2.7s infinite;" r="2.5" />
-        <!-- Connecting thought lines (subtle network) -->
-        <line x1="113" y1="45" x2="130" y2="60" stroke="var(--rule)" stroke-width="0.8" stroke-dasharray="3 3" opacity="0.5" />
-        <line x1="98" y1="75" x2="130" y2="60" stroke="var(--rule)" stroke-width="0.8" stroke-dasharray="3 3" opacity="0.5" />
-        <circle cx="130" cy="60" r="3" fill="none" stroke="var(--rule)" stroke-width="0.8" opacity="0.5" />
-        <!-- Label -->
-        <text x="80" y="185" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="8" letter-spacing="0.15em" fill="var(--muted)" style="animation: labelFade 0.8s ease 2.2s both;">SINCE 2008</text>
-      </svg>
-    </section>
-
-    <main class="content" id="main-content">
-
-      <div class="bio-section fade-in">
-        <div class="bio-section-label">Background</div>
-        <p>I have spent over a decade building, scaling, and exiting digital media companies across Latin America. Before founding my own, I worked in digital marketing agencies, SEO, and ad networks (the operational side of how attention is bought, measured, and converted). That experience gave me a perspective I have never been able to shake: the gap between what media organizations think they are building and what the market actually experiences.</p>
-        <p>At Posta, Argentina's first podcast production company, my partners and I scaled from two people into a regional operation producing original IP, investigative journalism, and thousands of original episodes for clients including Netflix, Uber, Microsoft, HBO, PlayStation, Spotify, and over 75 global brands. We won production, journalism, and advertising awards, were selected for the ICFJ/SembraMedia Velocidad accelerator, and Posta has been part of PodX Group since 2022.</p>
-
-        <div class="pull-quote">
-          <p>This is a practitioner's body of work — a formalization of patterns I have observed, built on, and sometimes gotten wrong over years of execution.</p>
-        </div>
-
-        <p>The work collected here emerged from a specific frustration: most frameworks for media growth and product strategy treat communication as a downstream activity (something you do after the product is built, after the market is identified, after the architecture is fixed). My experience across media, audio, and financial news convinced me the opposite is true, and that the cost of getting it backwards is higher than most organizations realize until it is too late to fix cheaply.</p>
-        <p>Right now, I am putting those lessons to work in a new venture, applying interpretive authority (not distribution volume) as the primary growth variable. The frameworks here are not theoretical conclusions. They are the questions I work with every day.</p>
-      </div>
-
-      <div class="bio-section fade-in">
-        <div class="bio-section-label">Work</div>
-        <div class="works-grid">
-          <div class="work-item">
-            <div class="work-item-label">2017–2022</div>
-            <div class="work-item-title">Posta (posta.fm)</div>
-            <div class="work-item-desc">Co-founder. Argentina's first podcast production company. From two people to a regional operation. Part of PodX Group since 2022.</div>
-          </div>
-          <div class="work-item">
-            <div class="work-item-label">Teaching</div>
-            <div class="work-item-title">Digital House</div>
-            <div class="work-item-desc">Digital Marketing faculty for 5+ years. Thousands of students across Latin America.</div>
-          </div>
-          <div class="work-item">
-            <div class="work-item-label">Founding team</div>
-            <div class="work-item-title">Roxom TV</div>
-            <div class="work-item-desc">Part of the founding team, adding early operating and media-building experience to the broader narrative and growth work.</div>
-          </div>
-          <div class="work-item">
-            <div class="work-item-label">Recognition</div>
-            <div class="work-item-title">ICFJ / SembraMedia</div>
-            <div class="work-item-desc">Velocidad accelerator. Production, journalism, and advertising awards across regional and global programs, plus jury work for local and regional marketing and advertising awards.</div>
-          </div>
-        </div>
-        <div class="service-grid">
-          <div class="service-item">
-            <div class="service-item-label">Advisory</div>
-            <div class="service-item-title">Narrative positioning</div>
-            <div class="service-item-desc">Clarify what the company is really selling, what the market is hearing, and where the story breaks.</div>
-          </div>
-          <div class="service-item">
-            <div class="service-item-label">Launches</div>
-            <div class="service-item-title">Message architecture</div>
-            <div class="service-item-desc">Turn product complexity into a story the market can repeat, understand, and act on.</div>
-          </div>
-          <div class="service-item">
-            <div class="service-item-label">Media systems</div>
-            <div class="service-item-title">Authority-building strategy</div>
-            <div class="service-item-desc">Design the editorial and distribution layer that makes recurring trust possible across surfaces.</div>
-          </div>
-        </div>
-      </div>
-
-      <div class="bio-section fade-in">
-        <div class="bio-section-label">Writing</div>
-        <p>Two bodies of work, one underlying conviction. The frameworks address the question of why some media organizations build lasting authority and others don't. The essays address the more operational question of what that means for how you sequence the work of building.</p>
-
-        <div class="writing-links">
-          <a href="thesis.html" class="writing-link featured">
-            <div class="writing-link-num" style="font-size:1.1rem;color:var(--accent);">CMOI</div>
-            <div class="writing-link-body">
-              <div class="writing-link-tag">Framework &nbsp;·&nbsp; Thesis</div>
-              <div class="writing-link-title">The Continuous Moment of Intent</div>
-            </div>
-            <div class="writing-link-arrow"><svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></div>
-          </a>
-          <a href="zmox.html" class="writing-link featured">
-            <div class="writing-link-num" style="font-size:1.1rem;color:var(--accent);">CAX</div>
-            <div class="writing-link-body">
-              <div class="writing-link-tag">Framework &nbsp;·&nbsp; Thesis</div>
-              <div class="writing-link-title">The Constitutive Arc</div>
-            </div>
-            <div class="writing-link-arrow"><svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></div>
-          </a>
-          <a href="occlusion-bias.html" class="writing-link featured">
-            <div class="writing-link-num" style="font-size:1.1rem;color:var(--accent);">OB</div>
-            <div class="writing-link-body">
-              <div class="writing-link-tag">Framework &nbsp;·&nbsp; Thesis</div>
-              <div class="writing-link-title">Occlusion Bias</div>
-            </div>
-            <div class="writing-link-arrow"><svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></div>
-          </a>
-          <a href="before-you-delegate.html" class="writing-link">
-            <div class="writing-link-num">00</div>
-            <div class="writing-link-body">
-              <div class="writing-link-tag">Essay Zero &nbsp;·&nbsp; Prelude</div>
-              <div class="writing-link-title">Before You Delegate</div>
-            </div>
-            <div class="writing-link-arrow"><svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></div>
-          </a>
-          <a href="paper-01.html" class="writing-link">
-            <div class="writing-link-num">01</div>
-            <div class="writing-link-body">
-              <div class="writing-link-tag">Essay One &nbsp;·&nbsp; Foundation</div>
-              <div class="writing-link-title">Before You Build</div>
-            </div>
-            <div class="writing-link-arrow"><svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></div>
-          </a>
-          <a href="paper-02.html" class="writing-link">
-            <div class="writing-link-num">02</div>
-            <div class="writing-link-body">
-              <div class="writing-link-tag">Essay Two &nbsp;·&nbsp; Concept</div>
-              <div class="writing-link-title">Before You Fit</div>
-            </div>
-            <div class="writing-link-arrow"><svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></div>
-          </a>
-          <a href="paper-03.html" class="writing-link">
-            <div class="writing-link-num">03</div>
-            <div class="writing-link-body">
-              <div class="writing-link-tag">Essay Three &nbsp;·&nbsp; Method</div>
-              <div class="writing-link-title">The Architecture of Coherence</div>
-            </div>
-            <div class="writing-link-arrow"><svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></div>
-          </a>
-          <a href="paper-04.html" class="writing-link">
-            <div class="writing-link-num">04</div>
-            <div class="writing-link-body">
-              <div class="writing-link-tag">Essay Four &nbsp;·&nbsp; Closing</div>
-              <div class="writing-link-title">Before You Scale</div>
-            </div>
-            <div class="writing-link-arrow"><svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></div>
-          </a>
-          <a href="paper-05.html" class="writing-link">
-            <div class="writing-link-num">05</div>
-            <div class="writing-link-body">
-              <div class="writing-link-tag">Essay Five &nbsp;·&nbsp; Go-to-Market</div>
-              <div class="writing-link-title">Launching Into Noise</div>
-            </div>
-            <div class="writing-link-arrow"><svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></div>
-          </a>
-          <a href="paper-06.html" class="writing-link">
-            <div class="writing-link-num">06</div>
-            <div class="writing-link-body">
-              <div class="writing-link-tag">Essay Six &nbsp;·&nbsp; Journey</div>
-              <div class="writing-link-title">Before You Map</div>
-            </div>
-            <div class="writing-link-arrow"><svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></div>
-          </a>
-        </div>
-      </div>
-
-      <div class="closing fade-in">
-        <div class="closing-ornament">✦ &nbsp; ❧ &nbsp; ✦</div>
-        <p style="font-family:'JetBrains Mono',monospace;font-size:0.5rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--muted);font-style:normal;margin-bottom:0.6rem;">Contact</p>
-        <p>If you want to talk about narrative strategy, positioning, launches, or media systems, email me directly.</p>
-        <div class="contact-actions">
-          <a href="mailto:dellagostino@gmail.com" class="contact-link primary">dellagostino@gmail.com</a>
-          <a href="index.html" class="contact-link secondary">Back to home</a>
-        </div>
-      </div>
-
-    </main>
-
-    <footer>
-      <div class="footer-left">&copy; 2026 Diego Dell'Agostino</div>
-      <div class="footer-center">❧</div>
-      <div class="footer-right">Buenos Aires &nbsp;·&nbsp; Narrative-First</div>
-    </footer>
-
-  </div>
-
-  <div class="modal-backdrop" id="contactModalBackdrop"></div>
-  <div class="contact-modal" id="contactModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="contactModalTitle">
-    <div class="contact-modal-inner">
-      <div class="contact-modal-top">
+    </header>
+    <section class="nm-page-main">
+      <div class="nm-two-col">
+        <h2>Why this work exists.</h2>
         <div>
-          <div class="contact-modal-kicker">Email Draft</div>
-          <div class="contact-modal-title" id="contactModalTitle">Start a Conversation</div>
+          <p class="nm-page-copy">For 15+ years I have worked across media, technology, product, marketing, and operations, usually in places where the map was not fully drawn yet.</p>
+          <p class="nm-page-copy">My work sits between strategy and execution: turning ideas into products, teams, workflows, editorial systems, content operations, distribution loops, technical processes, and internal tools that can actually run.</p>
+          <p class="nm-page-copy">The recurring pattern was clear: many organizations do not lose because the work is weak. They lose because the product, team, market, and operating system are not coherent enough for the value to become legible.</p>
         </div>
-        <button type="button" class="contact-modal-close" aria-label="Close contact modal" data-close-contact>×</button>
       </div>
-      <div class="contact-modal-desc" id="contactModalDesc">Add context and the site will send Diego a direct email through Resend.</div>
-      <form class="contact-modal-form" id="contactModalForm">
-        <label class="contact-modal-label">
-          Name
-          <input class="contact-modal-input" id="contactName" name="name" type="text" autocomplete="name" placeholder="Your name">
-        </label>
-        <label class="contact-modal-label">
-          Subject
-          <input class="contact-modal-input" id="contactSubject" name="subject" type="text" autocomplete="off" required>
-        </label>
-        <label class="contact-modal-label">
-          Your Email
-          <input class="contact-modal-input" id="contactReply" name="reply_email" type="email" inputmode="email" autocomplete="email" placeholder="you@example.com">
-        </label>
-        <label class="contact-modal-label">
-          Message
-          <textarea class="contact-modal-textarea" id="contactBody" name="body" required></textarea>
-        </label>
-        <div class="contact-modal-actions">
-          <button type="submit" class="contact-modal-submit" id="contactSubmit">Send Email</button>
-          <button type="button" class="contact-modal-secondary" data-close-contact>Cancel</button>
+      <div class="nm-two-col">
+        <h2>What I bring.</h2>
+        <div class="nm-ledger">
+          <div class="nm-ledger-item"><span class="nm-page-label">Company building</span><strong>From early idea to operating company</strong><p>Built and scaled media ventures from first shape to working organization, including Posta's growth and acquisition by PodX.</p></div>
+          <div class="nm-ledger-item"><span class="nm-page-label">Media systems</span><strong>Content, audience, and distribution infrastructure</strong><p>Podcasts, digital media, live broadcasting, content operations, audience development, and multi-platform distribution.</p></div>
+          <div class="nm-ledger-item"><span class="nm-page-label">Product and ops</span><strong>Systems that let teams execute</strong><p>Workflows, tools, processes, team routines, product priorities, internal systems, and delivery habits.</p></div>
+          <div class="nm-ledger-item"><span class="nm-page-label">Technical fluency</span><strong>Business, creative, editorial, and technical translation</strong><p>Early background in help desk, telecom NOC, digital platforms, and product management. Comfortable between teams that usually speak different languages.</p></div>
+          <div class="nm-ledger-item"><span class="nm-page-label">AI layer</span><strong>Agents, workflows, and execution leverage</strong><p>A personal operating layer for research, prototyping, writing, analysis, documentation, QA thinking, automation, and execution.</p></div>
         </div>
-      </form>
-      <div class="contact-modal-status" id="contactStatus" aria-live="polite"></div>
-      <div class="contact-modal-footnote">Messages are sent through Resend to Diego's inbox. Update requests also register the email for low-frequency essay notifications.</div>
-    </div>
-  </div>
-
-  <script src="global.js?v=20260419b"></script>
-  <script>
-    var obs = new IntersectionObserver(function(entries){
-      entries.forEach(function(e){ if(e.isIntersecting) e.target.classList.add('visible'); });
-    }, { threshold: 0.06 });
-    document.querySelectorAll('.fade-in').forEach(function(el){ obs.observe(el); });
-  </script>
+      </div>
+      <div class="nm-two-col" id="products">
+        <h2>Products I'm working on.</h2>
+        <div class="nm-ledger">
+          <a href="https://liveoverlay.diegodella.ar/" target="_blank" rel="noopener noreferrer"><span class="nm-page-label">Live graphics</span><strong>LiveOverlay <span aria-hidden="true">↗</span></strong><p>Controls QR codes, polls, tickers, lower thirds, sponsors, and more from a single OBS Browser Source.</p></a>
+          <a href="https://renamer.diegodella.ar/" target="_blank" rel="noopener noreferrer"><span class="nm-page-label">File utilities</span><strong>Renamer <span aria-hidden="true">↗</span></strong><p>Turns vague filenames into descriptive, safe, and reversible names for photos, screenshots, and PDFs, processed locally.</p></a>
+          <a href="https://lifearg.diegodella.ar/" target="_blank" rel="noopener noreferrer"><span class="nm-page-label">Relocation intelligence</span><strong>Life Match Argentina <span aria-hidden="true">↗</span></strong><p>Matches the life you want with Argentine cities using comparable evidence, transparent trade-offs, and confidence levels.</p></a>
+          <a href="https://digsign.diegodella.ar/" target="_blank" rel="noopener noreferrer"><span class="nm-page-label">Digital signage</span><strong>DigSign <span aria-hidden="true">↗</span></strong><p>Centralizes campaigns, approvals, playlists, screens, and playback monitoring for brands, franchises, and agencies.</p></a>
+          <a href="https://intelligenz.diegodella.ar/" target="_blank" rel="noopener noreferrer"><span class="nm-page-label">Strategic intelligence</span><strong>Intelligenz <span aria-hidden="true">↗</span></strong><p>Turns monitored sources into daily briefs ranked against each leader's goals, risks, actors, and opportunities.</p></a>
+          <a href="https://audience.diegodella.ar/" target="_blank" rel="noopener noreferrer"><span class="nm-page-label">Product research</span><strong>DecisionOS <span aria-hidden="true">↗</span></strong><p>Uses synthetic focus groups to surface objections and turn a product proposal into next experiments before building or launching.</p></a>
+          <a href="https://broadcast-planner.diegodella.ar/" target="_blank" rel="noopener noreferrer"><span class="nm-page-label">Broadcast operations</span><strong>Broadcast Control Room <span aria-hidden="true">↗</span></strong><p>Plans the broadcast day, prepares media, catches schedule risk, and sends protected browser playout into OBS or vMix.</p></a>
+          <a href="https://teleprompter.diegodella.ar/" target="_blank" rel="noopener noreferrer"><span class="nm-page-label">Live production</span><strong>telePRO <span aria-hidden="true">↗</span></strong><p>A browser-based teleprompter for live production, remote control, rehearsal, and reliable on-camera delivery.</p></a>
+          <a href="https://tradingbot.diegodella.ar/" target="_blank" rel="noopener noreferrer"><span class="nm-page-label">Trading systems</span><strong>PolyBot BTC <span aria-hidden="true">↗</span></strong><p>A safety-first research and paper-trading framework for recurring BTC Up/Down prediction markets.</p></a>
+        </div>
+      </div>
+      <div class="nm-two-col" id="work">
+        <h2>Work with Diego.</h2>
+        <div class="nm-ledger">
+          <div class="nm-ledger-item"><span class="nm-page-label">Fractional executive</span><strong>Product, media, and operations leadership</strong><p>For media ventures, AI-native operations, venture studios, audience systems, live media infrastructure, and teams that need senior operating leverage without a full-time hire.</p></div>
+          <div class="nm-ledger-item"><span class="nm-page-label">Advisory</span><strong>Strategic narrative and market legibility</strong><p>Clarify what the company is really selling, what the market is hearing, and where the story, product, or operating system breaks.</p></div>
+          <div class="nm-ledger-item"><span class="nm-page-label">Build</span><strong>Operating systems for media and product teams</strong><p>Design workflows, editorial systems, AI-assisted processes, publishing loops, internal tools, and routines that make execution more reliable.</p></div>
+          <div class="nm-ledger-item"><span class="nm-page-label">Launch</span><strong>Positioning, distribution, and message architecture</strong><p>Turn product complexity into language and channels the market can understand, trust, repeat, and act on.</p></div>
+          <div class="nm-contact-actions">
+            <a class="nm-work-button" href="about.html#work" data-open-contact data-contact-mode="conversation">Work with Diego</a>
+            <p>Send context, what you are building, and where the product, team, market, or operating system is not clear enough yet. You can also reach me on <a href="https://www.linkedin.com/in/diegodella/" target="_blank" rel="noopener noreferrer">LinkedIn</a>.</p>
+          </div>
+        </div>
+      </div>
+      <div class="nm-two-col">
+        <h2>Proof of work.</h2>
+        <div class="nm-ledger">
+          <div class="nm-ledger-item"><span class="nm-page-label">Posta</span><strong>Co-founder / CEO / CMO</strong><p>Built one of Latin America's leading podcast and audio production companies. Developed 400+ original shows for 90+ clients, worked with brands and platforms including Spotify, Netflix, and National Geographic, expanded across Argentina, Chile, Brazil, and Mexico, and participated in the company's acquisition by PodX.</p></div>
+          <div class="nm-ledger-item"><span class="nm-page-label">Roxom TV</span><strong>Founding media architect and product operations lead</strong><p>Helped build a 24/7 Bitcoin-native global media network combining live broadcasting, editorial workflows, real-time financial data, and product infrastructure across studio operations in San Francisco, London, and Hong Kong.</p></div>
+          <div class="nm-ledger-item"><span class="nm-page-label">Education</span><strong>Digital House</strong><p>Digital Marketing faculty for more than five years, teaching thousands of students across Latin America.</p></div>
+          <div class="nm-ledger-item"><span class="nm-page-label">Recognition</span><strong>ICFJ / SembraMedia Velocidad</strong><p>Selected for the accelerator; production, journalism, and advertising recognition across regional and global programs.</p></div>
+          <div class="nm-ledger-item"><span class="nm-page-label">Body of work</span><strong>Narrative Mechanics</strong><p>A working corpus of essays and frameworks on strategy, AI, attention, category language, mediated trust, filtered discovery, and how products become legible in the market.</p></div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer></footer>
+  <script src="global.js?v=20260621120500"></script>
 </body>
 </html>

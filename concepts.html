@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <script>(function(){var d=document.documentElement,m=window.matchMedia("(prefers-color-scheme:dark)"),s;try{s=localStorage.getItem("theme")}catch(e){}var v=s==="dark"||s==="light",t=v?s:(m.matches?"dark":"light");d.setAttribute("data-theme",t);d.setAttribute("data-theme-source",v?"user":"system")})()</script>
   <meta charset="UTF-8">
-  <script>(function(){var t=localStorage.getItem("theme");if(!t)t=window.matchMedia("(prefers-color-scheme:dark)").matches?"dark":"light";document.documentElement.setAttribute("data-theme",t)})()</script>
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
-  <meta name="theme-color" content="#e6d5b8">
+  <meta name="theme-color" content="#f5f0e8" id="themeColor">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-title" content="Narrative Mechanics">
   <link rel="apple-touch-icon" href="/og-default.png">
@@ -76,10 +76,11 @@
   </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;700&family=Epilogue:ital,wght@0,400;1,400;0,600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="global.css?v=20260418f">
-  <link rel="stylesheet" href="components.css?v=20260418f">
-  <style>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="global.css?v=20260621120500">
+  <link rel="stylesheet" href="components.css?v=20260621120500">
+  <style>@layer page {
+
     .hero,
     .concepts-wrap {
       max-width: 1080px;
@@ -89,57 +90,77 @@
     }
     .hero {
       padding-top: 5rem;
-      padding-bottom: 2.3rem;
+      padding-bottom: 2.8rem;
       display: grid;
-      grid-template-columns: minmax(0, 1fr) 270px;
-      gap: 1.8rem;
+      grid-template-columns: minmax(0, 1fr) 292px;
+      gap: 2.3rem;
       border-bottom: 1px solid var(--border-light);
+      position: relative;
+      align-items: start;
+    }
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: auto 3rem -1px 3rem;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, color-mix(in srgb, var(--accent) 42%, var(--border)), transparent);
+      pointer-events: none;
     }
     .hero-title {
       font-family: 'Space Grotesk', serif;
       font-size: clamp(3rem, 6vw, 4.9rem);
       line-height: 0.93;
-      letter-spacing: -0.045em;
+      letter-spacing: -0.04em;
       margin-bottom: 0.9rem;
-      max-width: 9ch;
+      max-width: 8ch;
+      text-wrap: balance;
     }
     .hero-title em { font-style: italic; color: var(--accent); }
     .hero-lead {
-      max-width: 42rem;
-      font-size: 0.98rem;
-      line-height: 1.72;
+      max-width: 39rem;
+      font-size: 0.96rem;
+      line-height: 1.76;
       color: var(--ink-2);
       margin-bottom: 1.2rem;
+      text-wrap: pretty;
     }
     .hero-routes { display: flex; flex-wrap: wrap; gap: 0.55rem; }
     .hero-route {
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 0.48rem;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Space Grotesk', monospace;
+      font-size: 0.75rem;
       letter-spacing: 0.14em;
       text-transform: uppercase;
       text-decoration: none;
       color: var(--accent);
       border: 1px solid color-mix(in srgb, var(--accent) 24%, var(--border));
-      border-radius: 12px;
+      border-radius: 0;
       padding: 0.58rem 0.8rem;
       background: color-mix(in srgb, var(--accent-light) 84%, var(--paper));
+      box-shadow: var(--shadow-soft);
+      transition: color 0.18s, border-color 0.18s, background-color 0.18s, transform 0.18s, box-shadow 0.18s;
     }
     .hero-route:hover {
       color: var(--accent-hover);
       border-color: var(--accent);
       background: color-mix(in srgb, var(--accent-light) 96%, var(--paper));
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-button);
     }
     .hero-aside {
       border-left: 1px solid var(--border);
       padding-left: 1rem;
       display: grid;
       gap: 0.85rem;
+      align-content: start;
     }
     .aside-label,
     .section-label,
     .concept-tag {
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 0.46rem;
+      font-family: 'Space Grotesk', monospace;
+      font-size: 0.75rem;
       letter-spacing: 0.16em;
       text-transform: uppercase;
       color: var(--accent);
@@ -150,56 +171,100 @@
     .concept-bestfor,
     .entry-copy {
       font-size: 0.9rem;
-      line-height: 1.6;
+      line-height: 1.68;
       color: var(--ink-2);
     }
-    .concepts-wrap { padding-top: 1.7rem; padding-bottom: 5rem; }
+    .concepts-wrap {
+      padding-top: 2rem;
+      padding-bottom: 5.4rem;
+      display: grid;
+      gap: 1.2rem;
+    }
     .intro,
     .entries,
     .concept-grid {
       border: 1px solid color-mix(in srgb, var(--accent) 14%, var(--border));
-      border-radius: 14px;
+      border-radius: 0;
       background: var(--surface-1);
+      position: relative;
+      overflow: hidden;
+      box-shadow: var(--shadow-soft);
     }
     .intro,
     .entries,
-    .concept-grid { padding: 1.05rem; margin-bottom: 1.15rem; }
+    .concept-grid {
+      padding: 1.2rem;
+      margin-bottom: 0;
+    }
+    .intro::before,
+    .entries::before,
+    .concept-grid::before {
+      content: "";
+      position: absolute;
+      inset: 0 0 auto 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, color-mix(in srgb, var(--accent) 34%, var(--border)), transparent);
+      pointer-events: none;
+    }
     .intro-head,
     .entries-head {
       display: grid;
-      grid-template-columns: 180px minmax(0, 1fr);
+      grid-template-columns: 170px minmax(0, 1fr);
       gap: 1rem;
-      margin-bottom: 0.85rem;
+      margin-bottom: 1rem;
     }
     .intro-title,
     .entries-title {
       font-family: 'Space Grotesk', serif;
-      font-size: 1.5rem;
+      font-size: 1.58rem;
       line-height: 1.03;
-      margin-bottom: 0.28rem;
+      letter-spacing: -0.04em;
+      margin-bottom: 0.34rem;
     }
-    .entry-grid,
-    .grid {
+    .entry-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 0.7rem;
+      gap: 0.9rem;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 0.3rem;
     }
     .entry-card,
     .concept-card {
-      display: block;
+      display: flex;
+      flex-direction: column;
       border: 1px solid color-mix(in srgb, var(--accent) 16%, var(--border));
-      border-radius: 12px;
+      border-radius: 0;
       background: var(--surface-2);
       padding: 1rem;
       text-decoration: none;
       color: inherit;
-      transition: border-color 0.18s, background-color 0.18s, box-shadow 0.18s;
+      min-height: 100%;
+      transition: border-color 0.18s, background-color 0.18s, box-shadow 0.18s, transform 0.18s;
+    }
+    .concept-card {
+      display: grid;
+      grid-template-columns: 160px minmax(0, 1fr) 200px;
+      gap: 1rem;
+      align-items: start;
+      border-width: 0 0 1px 0;
+      border-radius: 0;
+      background: transparent;
+      padding: 0.9rem 0;
+      box-shadow: none;
+    }
+    .entry-card:first-child {
+      grid-column: 1 / -1;
+      padding: 1.1rem 1.15rem;
     }
     .entry-card:hover,
     .concept-card:hover {
       border-color: color-mix(in srgb, var(--accent) 42%, var(--border));
-      background: color-mix(in srgb, var(--accent-light) 74%, var(--paper));
-      box-shadow: 0 10px 22px color-mix(in srgb, var(--accent) 10%, transparent);
+      background: transparent;
+      box-shadow: none;
+      transform: none;
     }
     .entry-title,
     .concept-name {
@@ -209,29 +274,146 @@
       margin-bottom: 0.35rem;
     }
     .entry-title { font-size: 1.05rem; }
-    .concept-term { font-family: 'JetBrains Mono', monospace; font-size: 0.48rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); margin-bottom: 0.28rem; }
+    .concept-term { font-family: 'Space Grotesk', monospace; font-size: 0.75rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent); margin-bottom: 0; grid-column: 1; }
+    .concept-name,
+    .concept-definition,
+    .concept-bestfor { grid-column: 2; }
     .concept-definition {
       font-size: 0.95rem;
       line-height: 1.66;
       color: var(--deep);
       margin-bottom: 0.65rem;
+      text-wrap: pretty;
     }
     .concept-bestfor { margin-bottom: 0.7rem; }
     .concept-meta,
     .entry-meta {
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 0.48rem;
+      font-family: 'Space Grotesk', monospace;
+      font-size: 0.75rem;
       letter-spacing: 0.08em;
       text-transform: uppercase;
       color: var(--muted);
+      margin-top: auto;
+      padding-top: 0.82rem;
+      border-top: 1px solid color-mix(in srgb, var(--accent) 14%, var(--border));
+    }
+    .concept-meta {
+      margin-top: 0;
+      padding-top: 0;
+      border-top: 0;
+      text-align: right;
+      grid-column: 3;
+      grid-row: 1 / span 3;
+      align-self: end;
+    }
+    .footer {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 0 3rem 3rem;
+      display: block;
+      grid-template-columns: none;
+      align-items: initial;
+      border-top: none;
+    }
+    .footer-inner {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 1.4rem 2rem;
+      align-items: center;
+      border-top: 1px solid var(--border);
+      padding-top: 1.2rem;
+    }
+    .footer-brand {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      min-width: 0;
+    }
+    .footer-mark {
+      width: 2.7rem;
+      height: 2.7rem;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid color-mix(in srgb, var(--accent) 20%, var(--border));
+      border-radius: 0;
+      background: color-mix(in srgb, var(--accent-light) 78%, var(--paper));
+      box-shadow: var(--shadow-soft);
+      font-family: 'Space Grotesk', serif;
+      font-size: 1rem;
+      font-weight: 900;
+      letter-spacing: -0.04em;
+      color: var(--accent);
+    }
+    .footer-copy {
+      display: flex;
+      align-items: baseline;
+      gap: 0.75rem;
+      min-width: 0;
+      flex-wrap: wrap;
+    }
+    .footer-title {
+      font-family: 'Space Grotesk', monospace;
+      font-size: 0.75rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--accent);
+      white-space: nowrap;
+      flex: 0 0 auto;
+    }
+    .footer-brand p {
+      max-width: none;
+      font-size: 0.82rem;
+      line-height: 1.55;
+      color: var(--ink-2);
+      flex: 1 1 24rem;
+    }
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      gap: 0.55rem;
+    }
+    .footer-links a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 2.2rem;
+      padding: 0.56rem 0.82rem;
+      border: 1px solid color-mix(in srgb, var(--accent) 18%, var(--border));
+      border-radius: 0;
+      background: var(--surface-1);
+      font-family: 'Space Grotesk', monospace;
+      font-size: 0.75rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      text-decoration: none;
+      color: var(--ink);
+      transition: color 0.18s, border-color 0.18s, background-color 0.18s, transform 0.18s, box-shadow 0.18s;
+    }
+    .footer-links a:hover {
+      color: var(--accent);
+      border-color: color-mix(in srgb, var(--accent) 44%, var(--border));
+      background: color-mix(in srgb, var(--accent-light) 86%, var(--paper));
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-soft);
     }
     @media (max-width: 900px) {
       .hero,
       .intro-head,
       .entries-head,
       .entry-grid,
-      .grid {
+      .concept-card {
         grid-template-columns: 1fr;
+      }
+      .concept-term,
+      .concept-name,
+      .concept-definition,
+      .concept-bestfor,
+      .concept-meta {
+        grid-column: auto;
+        grid-row: auto;
+        text-align: left;
       }
       .hero-aside {
         border-left: none;
@@ -239,18 +421,42 @@
         padding-left: 0;
         padding-top: 0.9rem;
       }
+      .entry-card:first-child {
+        grid-column: auto;
+      }
+      .footer-inner {
+        grid-template-columns: 1fr;
+      }
+      .footer-brand {
+        display: grid;
+        grid-template-columns: 1fr;
+      }
+      .footer-copy {
+        display: grid;
+        gap: 0.3rem;
+      }
+      .footer-links {
+        justify-content: flex-start;
+      }
     }
     @media (max-width: 640px) {
       .hero,
-      .concepts-wrap {
+      .concepts-wrap,
+      .footer {
         padding-left: 1.5rem;
         padding-right: 1.5rem;
       }
       .hero { padding-top: 3.8rem; }
+      .intro,
+      .entries,
+      .concept-grid {
+        padding: 1rem;
+      }
     }
-  </style>
+  
+}</style>
 </head>
-<body class="analog-bg">
+<body class="analog-bg page-concepts">
   <a href="#main-content" class="skip-link">Skip to content</a>
   <div class="page-wrap">
     <div class="top-bar">
@@ -259,45 +465,34 @@
     </div>
     <nav class="nav">
       <div class="nav-inner">
-        <a href="index.html" class="nav-brand">Narrative<em>Mechanics</em></a>
+        <a href="index.html" class="nav-brand" aria-label="Narrative Mechanics — Home">NARRATIVE MECHANICS</a>
         <button class="nav-btn nav-toggle" aria-label="Menu" aria-expanded="false" aria-controls="navLinks" id="navToggle">
           <svg viewBox="0 0 24 24"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg>
         </button>
-        <div class="nav-links" id="navLinks">
-          <a href="index.html" class="nav-link">Home</a>
-          <div class="nav-sep"></div>
-          <a href="archive.html" class="nav-link">Start Here</a>
+        <div class="nav-links" id="navLinks" aria-label="Primary sections">
+          <a href="thesis.html" class="nav-link">Idea</a>
           <a href="frameworks.html" class="nav-link">Frameworks</a>
-          <a href="series.html" class="nav-link">Series</a>
           <a href="essays.html" class="nav-link">Essays</a>
-          <a href="notes.html" class="nav-link">Notes</a>
-          <div class="nav-sep"></div>
+          <a href="about.html#work" class="nav-link" data-open-contact data-contact-mode="conversation">Work</a>
           <a href="about.html" class="nav-link">About</a>
-        </div>
-        <div class="nav-right">
-          <button class="nav-btn" aria-label="Toggle theme" id="themeToggle">
-            <svg class="icon-moon" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
-            <svg class="icon-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
-          </button>
-        </div>
+        </div><div class="nav-right"><button class="nav-btn theme-toggle" type="button" data-theme-toggle aria-label="Use dark theme"><svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3 7 7 0 0 0 21 12.8Z"/></svg><svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.42 1.42M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.42-1.42M17.66 6.34l1.41-1.41"/></svg></button></div>
       </div>
     </nav>
 
     <main id="main-content">
       <section class="hero">
         <div>
-          <div class="hero-kicker">Glossary / Concepts</div>
+          <div class="hero-kicker">Frameworks / Concepts</div>
           <h1 class="hero-title">Canonical <em>Concepts</em></h1>
-          <p class="hero-lead">This page defines the main Narrative Mechanics concepts in plain language. Use it if you want the shortest path into the vocabulary behind the essays, frameworks, launches, and operator-facing arguments.</p>
+          <p class="hero-lead">This page defines the main Narrative Mechanics concepts in plain language. Use it as the vocabulary companion to Frameworks, Essays, and the reading paths in Start.</p>
           <div class="hero-routes">
-            <a href="frameworks.html" class="hero-route">Open Frameworks</a>
-            <a href="archive.html" class="hero-route">Open Catalog</a>
+            <a href="frameworks.html" class="hero-route">Back to Frameworks</a>
             <a href="/concepts.md" class="hero-route">Markdown Version</a>
           </div>
         </div>
         <aside class="hero-aside">
           <div class="aside-label">Best use</div>
-          <p>Start here if you want definitions before long-form reading. Each concept links to its main essay or framework page.</p>
+          <p>Start here if you want definitions before long-form reading. Each concept links to one main essay or framework page.</p>
           <div class="aside-label">Best first route</div>
           <p>If your problem is strong product but weak adoption, start with <a href="thesis.html">CMOI</a>, then move to <a href="paper-01.html">Strategic Debt</a> and <a href="paper-02.html">Message-Market Fit</a>.</p>
         </aside>
@@ -316,7 +511,7 @@
 
         <section class="entries">
           <div class="entries-head">
-            <div class="section-label">Start Here</div>
+            <div class="section-label">Best Entries</div>
             <div>
               <div class="entries-title">Best entry paths by problem</div>
               <div class="entry-copy">Choose the route that matches your question, then follow the concept that names the real failure mode.</div>
@@ -424,16 +619,20 @@
       <div class="footer-inner">
         <div class="footer-brand">
           <span class="footer-mark">NM</span>
-          <p>Essays, frameworks, and notes on strategy, AI, attention, and authority.</p>
+          <div class="footer-copy">
+            <div class="footer-title">Narrative Mechanics</div>
+            <p>Canonical vocabulary for the essays, frameworks, and operator-facing arguments on strategy, AI, attention, and authority.</p>
+          </div>
         </div>
         <div class="footer-links">
-          <a href="archive.html">Archive</a>
+          <a href="index.html">Home</a>
+          <a href="archive.html">Start</a>
           <a href="frameworks.html">Frameworks</a>
           <a href="about.html">About</a>
         </div>
       </div>
     </footer>
   </div>
-  <script src="global.js?v=20260419b"></script>
+  <script src="global.js?v=20260621120500"></script>
 </body>
 </html>

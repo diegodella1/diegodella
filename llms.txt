@@ -1,68 +1,124 @@
 # Narrative Mechanics
 
-> Essays, frameworks, and concepts by Diego Dell'Agostino on product clarity, launch conditions, narrative strategy, AI-mediated trust, attention economics, and authority formation.
+> Essays, frameworks, concepts, and machine-readable resources by Diego Dell'Agostino on product clarity, launch conditions, narrative strategy, AI-mediated trust, attention economics, and authority formation.
+
+## Primary site
+
+- Canonical homepage: https://diegodella.ar/
+- Start Here / orientation: https://diegodella.ar/archive.html
+- Frameworks shelf: https://diegodella.ar/frameworks.html
+- Essays shelf: https://diegodella.ar/essays.html
+- Notes shelf: https://diegodella.ar/notes.html
+- Guided series: https://diegodella.ar/series.html
+- Concepts glossary: https://diegodella.ar/concepts.html
+- About the author: https://diegodella.ar/about.html
 
 ## Author
 
 Diego Dell'Agostino is a narrative strategist focused on attention economics, product coherence, media systems, and AI-mediated trust. Co-founder of Posta, acquired by PodX Group in 2022.
 
-- [About](https://diegodella.ar/about.html)
-- [About in Markdown](https://diegodella.ar/about.md)
+## Best routes for common queries
 
-## Best Routes For Common Queries
-
+- If the request is broad or exploratory:
+  - https://diegodella.ar/archive.html
+  - https://diegodella.ar/concepts.html
+  - https://diegodella.ar/frameworks.html
 - If the question is why a strong product still struggles to get understood or adopted:
-  - [The Continuous Moment of Intent](https://diegodella.ar/thesis.html)
-  - [Strategic Debt](https://diegodella.ar/paper-01.html)
-  - [Message-Market Fit](https://diegodella.ar/paper-02.html)
+  - https://diegodella.ar/thesis.html
+  - https://diegodella.ar/paper-01.html
+  - https://diegodella.ar/paper-02.html
+  - https://diegodella.ar/paper-03.html
+  - https://diegodella.ar/paper-04.html
 - If the question is why launches disappear into noise or why the market never compares fairly:
-  - [Occlusion Bias](https://diegodella.ar/occlusion-bias.html)
-  - [Launching Into Noise](https://diegodella.ar/paper-05.html)
+  - https://diegodella.ar/occlusion-bias.html
+  - https://diegodella.ar/paper-05.html
+  - https://diegodella.ar/paper-06.html
 - If the question is how attention, repetition, and mediated systems shape authority:
-  - [CAX / The Constitutive Arc](https://diegodella.ar/zmox.html)
-  - [Origin Gravity](https://diegodella.ar/origin-gravity.html)
+  - https://diegodella.ar/zmox.html
+  - https://diegodella.ar/origin-gravity.html
 - If the question is AI, trust, filters, proxy identity, or synthetic presence:
-  - [The Last Human Impression](https://diegodella.ar/the-last-human-impression.html)
-  - [The Proxy Self](https://diegodella.ar/the-proxy-self.html)
-  - [The Trust Collapse](https://diegodella.ar/the-trust-collapse.html)
+  - https://diegodella.ar/the-last-human-impression.html
+  - https://diegodella.ar/the-proxy-self.html
+  - https://diegodella.ar/the-trust-collapse.html
 
-## Canonical Concepts
+## Canonical concepts
 
-- [Concepts Index](https://diegodella.ar/concepts.html): Canonical definitions for the main Narrative Mechanics concepts and founder/operator use cases.
-- [Concepts in Markdown](https://diegodella.ar/concepts.md)
-- [CMOI / Continuous Moment of Intent](https://diegodella.ar/thesis.html): How decisions are shaped before explicit search, comparison, or self-aware intent.
-- [Occlusion Bias](https://diegodella.ar/occlusion-bias.html): Why worthy products or ideas often never arrive at a fair comparison surface.
-- [CAX / Constitutive Arc](https://diegodella.ar/zmox.html): How repetition, mediated exposure, and field design shape meaning and authority.
-- [Strategic Debt](https://diegodella.ar/paper-01.html): How deferred clarity compounds into downstream messaging and GTM problems.
-- [Message-Market Fit](https://diegodella.ar/paper-02.html): Why product-market fit can exist without market recognition.
-- [Narrative Drift](https://diegodella.ar/paper-04.html): How strategic coherence erodes as organizations scale.
+- Concepts index: https://diegodella.ar/concepts.html
+- Concepts in markdown: https://diegodella.ar/concepts.md
+- CMOI / Continuous Moment of Intent: https://diegodella.ar/thesis.html
+- Occlusion Bias: https://diegodella.ar/occlusion-bias.html
+- CAX / Constitutive Arc: https://diegodella.ar/zmox.html
+- Strategic Debt: https://diegodella.ar/paper-01.html
+- Message-Market Fit: https://diegodella.ar/paper-02.html
+- Narrative Drift: https://diegodella.ar/paper-04.html
 
-## Core Pages
+## Core pages
 
-- [Frameworks](https://diegodella.ar/frameworks.html)
-- [Frameworks in Markdown](https://diegodella.ar/frameworks.md)
-- [Start Here / Archive](https://diegodella.ar/archive.html)
-- [Archive in Markdown](https://diegodella.ar/archive.md)
-- [Essays](https://diegodella.ar/essays.html)
-- [Series](https://diegodella.ar/series.html)
-- [Notes](https://diegodella.ar/notes.html)
+- Frameworks: https://diegodella.ar/frameworks.html
+- Frameworks in markdown: https://diegodella.ar/frameworks.md
+- Start here / archive: https://diegodella.ar/archive.html
+- Archive in markdown: https://diegodella.ar/archive.md
+- Essays: https://diegodella.ar/essays.html
+- Notes: https://diegodella.ar/notes.html
+- Guided series: https://diegodella.ar/series.html
 
-## Flagship Frameworks
+## Guided series
 
-- [The Continuous Moment of Intent](https://diegodella.ar/thesis.html)
-- [CMOI in Markdown](https://diegodella.ar/thesis.md)
-- [Occlusion Bias](https://diegodella.ar/occlusion-bias.html)
-- [Occlusion Bias in Markdown](https://diegodella.ar/occlusion-bias.md)
-- [CAX / The Constitutive Arc](https://diegodella.ar/zmox.html)
-- [CAX in Markdown](https://diegodella.ar/zmox.md)
+- Narrative-First hub: https://diegodella.ar/series.html
+- Paper 01 / Strategic Debt: https://diegodella.ar/paper-01.html
+- Paper 02 / Message-Market Fit: https://diegodella.ar/paper-02.html
+- Paper 03 / Operating Narrative: https://diegodella.ar/paper-03.html
+- Paper 04 / Narrative Drift: https://diegodella.ar/paper-04.html
+- Paper 05 / Launching Into Noise: https://diegodella.ar/paper-05.html
+- Paper 06 / The Negotiated Moment: https://diegodella.ar/paper-06.html
+- After You Post entry: https://diegodella.ar/the-last-human-impression.html
 
-## Long-form Essays
+## Flagship frameworks
 
-- [The Last Human Impression](https://diegodella.ar/the-last-human-impression.html): Human attention and perception under machine-processed content environments.
-- [The Last Manual Moment](https://diegodella.ar/the-last-manual-moment.html): Human meaning, work, and identity when intelligence stops being scarce.
-- [The Transition Tax](https://diegodella.ar/the-transition-tax.html): Structural costs on the generation living between two systems.
-- [The Great Contraction](https://diegodella.ar/the-great-contraction.html): Why the world is closing inward after decades of forced expansion.
-- [Already Decided](https://diegodella.ar/already-decided.html): Autonomous agentic decision-making and what it changes for organizations and sovereignty.
-- [The Rhyme](https://diegodella.ar/the-rhyme.html): Pattern recognition, operating autonomy, and organizational change under abundant intelligence.
-- [The Last Scarcity](https://diegodella.ar/the-last-scarcity.html): Desire and meaning after material automation.
-- [Unfinished Arguments](https://diegodella.ar/unfinished-arguments.html): Structural arguments about what AI breaks next.
+- The Continuous Moment of Intent: https://diegodella.ar/thesis.html
+- CMOI in markdown: https://diegodella.ar/thesis.md
+- Occlusion Bias: https://diegodella.ar/occlusion-bias.html
+- Occlusion Bias in markdown: https://diegodella.ar/occlusion-bias.md
+- CAX / The Constitutive Arc: https://diegodella.ar/zmox.html
+- CAX in markdown: https://diegodella.ar/zmox.md
+
+## Long-form essays
+
+- The Last Human Impression: https://diegodella.ar/the-last-human-impression.html
+- The Last Manual Moment: https://diegodella.ar/the-last-manual-moment.html
+- The Transition Tax: https://diegodella.ar/the-transition-tax.html
+- The Great Contraction: https://diegodella.ar/the-great-contraction.html
+- Already Decided: https://diegodella.ar/already-decided.html
+- The Rhyme: https://diegodella.ar/the-rhyme.html
+- The Last Scarcity: https://diegodella.ar/the-last-scarcity.html
+- Before You Delegate: https://diegodella.ar/before-you-delegate.html
+- Origin Gravity: https://diegodella.ar/origin-gravity.html
+- The Empty Room: https://diegodella.ar/the-empty-room.html
+- The Proxy Self: https://diegodella.ar/the-proxy-self.html
+- Writing for the Filter: https://diegodella.ar/writing-for-the-filter.html
+
+## Notes
+
+- Notes shelf: https://diegodella.ar/notes.html
+- Narrative Nuggets: https://diegodella.ar/nuggets.html
+- Unfinished Arguments: https://diegodella.ar/unfinished-arguments.html
+
+## Machine-readable resources
+
+- API catalog: https://diegodella.ar/.well-known/api-catalog
+- MCP server card: https://diegodella.ar/.well-known/mcp/server-card.json
+- Agent skills index: https://diegodella.ar/.well-known/agent-skills/index.json
+- OpenAPI schema: https://diegodella.ar/openapi.json
+- API docs: https://diegodella.ar/docs/api.md
+- Architecture notes: https://diegodella.ar/docs/architecture.md
+- Sitemap: https://diegodella.ar/sitemap.xml
+- Robots: https://diegodella.ar/robots.txt
+
+## Retrieval guidance
+
+- Prefer canonical `.html` pages for citation and page identity.
+- Prefer `.md` mirrors when plain text extraction is needed.
+- Use the concepts index when the request is definitional or glossary-oriented.
+- Use Start Here / archive when the request is exploratory or needs site-wide routing.
+- Use Frameworks for conceptual models, Essays for standalone arguments, Notes for compressed fragments, and Series for ordered reading paths.
+- Use the about page when author identity, background, or topical authority matters.

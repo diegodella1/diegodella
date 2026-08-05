@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <script>(function(){var d=document.documentElement,m=window.matchMedia("(prefers-color-scheme:dark)"),s;try{s=localStorage.getItem("theme")}catch(e){}var v=s==="dark"||s==="light",t=v?s:(m.matches?"dark":"light");d.setAttribute("data-theme",t);d.setAttribute("data-theme-source",v?"user":"system")})()</script>
   <meta charset="UTF-8">
-  <script>(function(){var t=localStorage.getItem("theme");if(!t)t=window.matchMedia("(prefers-color-scheme:dark)").matches?"dark":"light";document.documentElement.setAttribute("data-theme",t)})()</script>
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
-  <meta name="theme-color" content="#e6d5b8">
+  <meta name="theme-color" content="#f5f0e8" id="themeColor">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-title" content="Narrative Mechanics">
   <link rel="apple-touch-icon" href="/og-default.png">
@@ -12,8 +12,8 @@
   {
     "@context": "https://schema.org",
     "@type": "CollectionPage",
-    "name": "Series",
-    "description": "Guided editorial routes for builders, launches, AI, trust, filters, and mediated presence.",
+    "name": "Reading Paths",
+    "description": "Guided editorial reading paths for builders, launches, AI, trust, filters, and mediated presence.",
     "url": "https://diegodella.ar/series.html",
     "author": {
       "@type": "Person",
@@ -28,27 +28,28 @@
   }
   </script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Series from Narrative Mechanics: guided editorial routes for builders, launches, AI, trust, filters, and mediated presence.">
+  <meta name="description" content="Reading paths from Narrative Mechanics: guided editorial routes for builders, launches, AI, trust, filters, and mediated presence.">
   <meta name="author" content="Diego Dell'Agostino">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://diegodella.ar/series.html">
-  <meta property="og:title" content="Series | Narrative Mechanics">
+  <meta property="og:title" content="Reading Paths | Narrative Mechanics">
   <meta property="og:description" content="Guided editorial routes for builders, launches, AI, trust, filters, and mediated presence.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://diegodella.ar/series.html">
   <meta property="og:site_name" content="Narrative Mechanics">
   <meta property="og:image" content="https://diegodella.ar/og-default.png">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Series | Narrative Mechanics">
+  <meta name="twitter:title" content="Reading Paths | Narrative Mechanics">
   <meta name="twitter:description" content="Guided editorial routes for builders, launches, AI, trust, filters, and mediated presence.">
   <meta name="twitter:image" content="https://diegodella.ar/og-default.png">
-  <title>Series | Narrative Mechanics</title>
+  <title>Reading Paths | Narrative Mechanics</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;700&family=Epilogue:ital,wght@0,400;1,400;0,600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="global.css?v=20260418f">
-  <link rel="stylesheet" href="components.css?v=20260418f">
-  <style>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="global.css?v=20260621120500">
+  <link rel="stylesheet" href="components.css?v=20260621120500">
+  <style>@layer page {
+
     .hero,
     .shelf-wrap {
       max-width: 1080px;
@@ -68,7 +69,7 @@
       font-family: 'Space Grotesk', serif;
       font-size: clamp(3rem, 6vw, 4.8rem);
       line-height: 0.92;
-      letter-spacing: -0.045em;
+      letter-spacing: -0.04em;
       max-width: 8ch;
       margin-bottom: 1rem;
     }
@@ -88,14 +89,14 @@
     }
     .hero-route,
     .shelf-link {
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 0.48rem;
+      font-family: 'Space Grotesk', monospace;
+      font-size: 0.75rem;
       letter-spacing: 0.14em;
       text-transform: uppercase;
       text-decoration: none;
       color: var(--accent);
       border: 1px solid color-mix(in srgb, var(--accent) 24%, var(--border));
-      border-radius: 12px;
+      border-radius: 0;
       padding: 0.58rem 0.8rem;
       background: color-mix(in srgb, var(--accent-light) 84%, var(--paper));
       transition: border-color 0.18s, background-color 0.18s, color 0.18s;
@@ -116,8 +117,8 @@
     .section-label,
     .card-kicker,
     .lead-kicker {
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 0.46rem;
+      font-family: 'Space Grotesk', monospace;
+      font-size: 0.75rem;
       letter-spacing: 0.16em;
       text-transform: uppercase;
       color: var(--accent);
@@ -136,11 +137,89 @@
       padding-top: 1.85rem;
       padding-bottom: 5rem;
     }
+    .path-block {
+      display: grid;
+      grid-template-columns: 180px minmax(0, 1fr);
+      gap: 1rem;
+      margin-bottom: 1.2rem;
+      padding: 1rem 1.05rem 1.15rem;
+      border: 1px solid color-mix(in srgb, var(--accent) 14%, var(--border));
+      background: var(--surface-1);
+    }
+    .path-headline {
+      font-family: 'Space Grotesk', serif;
+      font-size: 1.58rem;
+      line-height: 1.02;
+      margin-bottom: 0.28rem;
+    }
+    .path-copy {
+      max-width: 42rem;
+      font-size: 0.9rem;
+      line-height: 1.6;
+      color: var(--ink-2);
+    }
+    .path-sequence {
+      display: grid;
+      gap: 0.65rem;
+      margin-top: 0.95rem;
+    }
+    .path-step {
+      display: grid;
+      grid-template-columns: 54px minmax(0, 1fr) 170px;
+      gap: 0.8rem;
+      align-items: start;
+      padding: 0.8rem 0;
+      border-top: 1px solid var(--border-light);
+      text-decoration: none;
+      color: inherit;
+    }
+    .path-step:first-child {
+      border-top: 0;
+      padding-top: 0;
+    }
+    .path-step-num {
+      font-family: 'Space Grotesk', serif;
+      font-size: 1.4rem;
+      line-height: 1;
+      color: color-mix(in srgb, var(--accent) 48%, var(--border));
+    }
+    .path-step-title {
+      font-family: 'Space Grotesk', serif;
+      font-size: 1.08rem;
+      line-height: 1.04;
+      margin-bottom: 0.22rem;
+    }
+    .path-step-copy,
+    .path-step-meta,
+    .path-aside-copy {
+      font-size: 0.86rem;
+      line-height: 1.56;
+      color: var(--ink-2);
+    }
+    .path-step-meta {
+      font-family: 'Space Grotesk', monospace;
+      font-size: 0.75rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      text-align: right;
+    }
+    .path-aside-label,
+    .path-step-label {
+      font-family: 'Space Grotesk', monospace;
+      font-size: 0.75rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--accent);
+    }
+    .path-aside {
+      padding-top: 0.2rem;
+      border-top: 1px solid var(--rule);
+    }
     .lead-card,
     .section,
     .related {
       border: 1px solid color-mix(in srgb, var(--accent) 14%, var(--border));
-      border-radius: 14px;
+      border-radius: 0;
       background: var(--surface-1);
     }
     .lead-card,
@@ -172,8 +251,8 @@
     }
     .lead-tail {
       align-self: end;
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 0.5rem;
+      font-family: 'Space Grotesk', monospace;
+      font-size: 0.75rem;
       letter-spacing: 0.1em;
       text-transform: uppercase;
       color: var(--muted);
@@ -203,7 +282,7 @@
     .related-card {
       display: block;
       border: 1px solid color-mix(in srgb, var(--accent) 16%, var(--border));
-      border-radius: 12px;
+      border-radius: 0;
       background: var(--surface-2);
       padding: 1rem;
       text-decoration: none;
@@ -223,8 +302,8 @@
     }
     .card-meta {
       margin-top: 0.7rem;
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 0.48rem;
+      font-family: 'Space Grotesk', monospace;
+      font-size: 0.75rem;
       letter-spacing: 0.08em;
       text-transform: uppercase;
     }
@@ -237,13 +316,15 @@
     }
     .related-card strong {
       display: block;
-      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-family: 'Inter', sans-serif;
       font-size: 0.95rem;
       margin-bottom: 0.18rem;
     }
     @media (max-width: 900px) {
       .hero,
       .lead-card,
+      .path-block,
+      .path-step,
       .section-head,
       .card-grid,
       .related-grid {
@@ -269,7 +350,8 @@
         padding-top: 3.8rem;
       }
     }
-  </style>
+  
+}</style>
 </head>
 <body class="analog-bg">
   <a href="#main-content" class="skip-link">Skip to content</a>
@@ -280,45 +362,34 @@
     </div>
     <nav class="nav">
       <div class="nav-inner">
-        <a href="index.html" class="nav-brand">Narrative<em>Mechanics</em></a>
+        <a href="index.html" class="nav-brand" aria-label="Narrative Mechanics — Home">NARRATIVE MECHANICS</a>
         <button class="nav-btn nav-toggle" aria-label="Menu" aria-expanded="false" aria-controls="navLinks" id="navToggle">
           <svg viewBox="0 0 24 24"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg>
         </button>
-        <div class="nav-links" id="navLinks">
-          <a href="index.html" class="nav-link">Home</a>
-          <div class="nav-sep"></div>
-          <a href="archive.html" class="nav-link">Start Here</a>
+        <div class="nav-links" id="navLinks" aria-label="Primary sections">
+          <a href="thesis.html" class="nav-link">Idea</a>
           <a href="frameworks.html" class="nav-link">Frameworks</a>
-          <a href="series.html" class="nav-link active" aria-current="page">Series</a>
           <a href="essays.html" class="nav-link">Essays</a>
-          <a href="notes.html" class="nav-link">Notes</a>
-          <div class="nav-sep"></div>
+          <a href="about.html#work" class="nav-link" data-open-contact data-contact-mode="conversation">Work</a>
           <a href="about.html" class="nav-link">About</a>
-        </div>
-        <div class="nav-right">
-          <button class="nav-btn" aria-label="Toggle theme" id="themeToggle">
-            <svg class="icon-moon" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
-            <svg class="icon-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
-          </button>
-        </div>
+        </div><div class="nav-right"><button class="nav-btn theme-toggle" type="button" data-theme-toggle aria-label="Use dark theme"><svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3 7 7 0 0 0 21 12.8Z"/></svg><svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.42 1.42M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.42-1.42M17.66 6.34l1.41-1.41"/></svg></button></div>
       </div>
     </nav>
 
     <main id="main-content">
       <section class="hero">
         <div>
-          <div class="hero-kicker">Shelf / Series</div>
-          <h1 class="hero-title">Guided <em>Series</em></h1>
-          <p class="hero-lead">This shelf is for readers who want the argument sequenced. Instead of sampling isolated pieces, start with the path that matches your problem and let the sequence do the orientation work.</p>
+          <div class="hero-kicker">Start / Reading Paths</div>
+          <h1 class="hero-title">Reading <em>Paths</em></h1>
+          <p class="hero-lead">This page expands the sequenced routes inside Start. Use it when sampling individual pieces is less useful than following an argument in order.</p>
           <div class="hero-routes">
-            <a href="archive.html" class="hero-route">Open Catalog</a>
-            <a href="frameworks.html" class="hero-route">Core Models</a>
-            <a href="essays.html" class="hero-route">Standalone Essays</a>
+            <a href="archive.html" class="hero-route">Back to Start</a>
+            <a href="frameworks.html" class="hero-route">Frameworks</a>
           </div>
         </div>
         <aside class="hero-aside">
           <div class="aside-label">Best use</div>
-          <p>Use this shelf if you want a designed reading order. These are the clearest routes for builders, launches, AI, trust, filters, and mediated presence.</p>
+          <p>Use this page after Start has narrowed the problem and you want a designed reading order instead of isolated pieces.</p>
           <div class="aside-label">Best first route</div>
           <p><a href="paper-05.html">Launching Into Noise</a> for product clarity, or <a href="the-last-human-impression.html">The Last Human Impression</a> for AI and mediated trust.</p>
         </aside>
@@ -327,69 +398,61 @@
       <div class="shelf-wrap">
         <a href="paper-05.html" class="lead-card">
           <div>
-            <div class="lead-kicker">Start Here</div>
-            <div class="lead-title">Two major guided paths</div>
+            <div class="lead-kicker">Best Entry</div>
+            <div class="lead-title">Two reading paths worth following in order</div>
           </div>
-          <div class="lead-copy">These are the strongest read-this-in-order routes in the publication. Use them when the theme matters as much as the individual article.</div>
+          <div class="lead-copy">These are the strongest read-this-in-order routes in the publication. Use them when sequence matters as much as the individual article.</div>
           <div class="lead-tail">Sequence over sampling</div>
         </a>
 
-        <section class="section">
-          <div class="section-head">
-            <div class="section-label">On This Shelf</div>
-            <div>
-              <div class="section-title">Narrative-First</div>
-              <div class="section-copy">Six papers on product clarity, message-market fit, launch conditions, operating narrative, drift, and mediated customer journeys.</div>
-            </div>
+        <section class="path-block">
+          <div class="path-aside">
+            <div class="path-aside-label">Reading path</div>
           </div>
-          <div class="card-grid">
-            <a href="paper-05.html" class="card">
-              <div class="card-kicker">Series</div>
-              <div class="card-title">Launching Into Noise</div>
-              <div class="card-copy">The most practical first paper if the problem is strong product, weak adoption, unclear category language, or a launch the market failed to read.</div>
-              <div class="card-meta">Best entry</div>
-            </a>
-            <a href="paper-01.html" class="card">
-              <div class="card-kicker">For builders and launches</div>
-              <div class="card-title">Start here inside Narrative-First</div>
-              <div class="card-copy">Move through the full sequence on clarity, fit, coherence, drift, launch conditions, and mediated customer journeys from the first paper onward.</div>
-              <div class="card-meta">Six-paper route</div>
-            </a>
+          <div>
+            <div class="path-headline">Narrative-First</div>
+            <div class="path-copy">Six papers on product clarity, message-market fit, launch conditions, operating narrative, drift, and mediated customer journeys. Read it when the business problem needs a sequence, not isolated advice.</div>
+            <div class="path-sequence">
+              <a href="paper-01.html" class="path-step"><div class="path-step-num">01</div><div><div class="path-step-label">Foundation</div><div class="path-step-title">Before You Build</div><div class="path-step-copy">Strategic Debt and the cost of building before the market has a story it can repeat.</div></div><div class="path-step-meta">Start of sequence</div></a>
+              <a href="paper-02.html" class="path-step"><div class="path-step-num">02</div><div><div class="path-step-label">Market language</div><div class="path-step-title">Message-Market Fit</div><div class="path-step-copy">The language layer that must fit before launch spend, feature work, or positioning can compound.</div></div><div class="path-step-meta">Interpretation layer</div></a>
+              <a href="paper-03.html" class="path-step"><div class="path-step-num">03</div><div><div class="path-step-label">Internal coherence</div><div class="path-step-title">The Architecture of Coherence</div><div class="path-step-copy">Operating narrative as an internal alignment layer, not a slogan or campaign surface.</div></div><div class="path-step-meta">Operating layer</div></a>
+              <a href="paper-04.html" class="path-step"><div class="path-step-num">04</div><div><div class="path-step-label">Drift control</div><div class="path-step-title">Narrative Drift</div><div class="path-step-copy">How teams lose the story through small decisions that each seem locally reasonable.</div></div><div class="path-step-meta">Failure mode</div></a>
+              <a href="paper-05.html" class="path-step"><div class="path-step-num">05</div><div><div class="path-step-label">Practical entry</div><div class="path-step-title">Launching Into Noise</div><div class="path-step-copy">The best first paper if the problem is strong product, weak adoption, unclear category language, or a launch the market failed to read.</div></div><div class="path-step-meta">Best entry</div></a>
+              <a href="paper-06.html" class="path-step"><div class="path-step-num">06</div><div><div class="path-step-label">Journey layer</div><div class="path-step-title">Before You Map</div><div class="path-step-copy">The mediated customer journey and the hidden negotiation that happens before a user arrives.</div></div><div class="path-step-meta">Close sequence</div></a>
+            </div>
           </div>
         </section>
 
-        <section class="section">
-          <div class="section-head">
-            <div class="section-label">Series</div>
-            <div>
-              <div class="section-title">After You Post</div>
-              <div class="section-copy">Five essays on mediated attention, proxy identity, synthetic presence, filters, trust collapse, and origin in the agent internet.</div>
-            </div>
+        <section class="path-block">
+          <div class="path-aside">
+            <div class="path-aside-label">Reading path</div>
           </div>
-          <div class="card-grid">
-            <a href="the-last-human-impression.html" class="card">
-              <div class="card-kicker">For AI, trust, and media systems</div>
-              <div class="card-title">The Last Human Impression</div>
-              <div class="card-copy">A strong entry if you want the threshold essay first, with the impression gap and the broader AI-mediated trust frame in place before the sequence opens.</div>
-              <div class="card-meta">Best entry</div>
-            </a>
-            <a href="the-empty-room.html" class="card">
-              <div class="card-kicker">Alternative entry</div>
-              <div class="card-title">The Empty Room</div>
-              <div class="card-copy">A strong start if you want to enter After You Post through absence, audiences, and the changed conditions of reception.</div>
-              <div class="card-meta">Start here inside After You Post</div>
-            </a>
+          <div>
+            <div class="path-headline">After You Post</div>
+            <div class="path-copy">A route through mediated attention, proxy identity, synthetic presence, filters, trust collapse, and origin gravity. Use it when the question is no longer just publishing, but what happens after publishing in agent-mediated systems.</div>
+            <div class="path-sequence">
+              <a href="the-last-human-impression.html" class="path-step"><div class="path-step-num">01</div><div><div class="path-step-label">Threshold essay</div><div class="path-step-title">The Last Human Impression</div><div class="path-step-copy">Start here for the impression gap and the broader AI-mediated trust frame.</div></div><div class="path-step-meta">Best entry</div></a>
+              <a href="the-empty-room.html" class="path-step"><div class="path-step-num">02</div><div><div class="path-step-label">Reception</div><div class="path-step-title">The Empty Room</div><div class="path-step-copy">Enter through absence, audiences, and the changed conditions of reception.</div></div><div class="path-step-meta">Alternative entry</div></a>
+              <a href="the-proxy-self.html" class="path-step"><div class="path-step-num">03</div><div><div class="path-step-label">Identity</div><div class="path-step-title">The Proxy Self</div><div class="path-step-copy">Delegated identity and the systems that increasingly negotiate social and commercial presence for us.</div></div><div class="path-step-meta">Proxy identity</div></a>
+              <a href="writing-for-the-filter.html" class="path-step"><div class="path-step-num">04</div><div><div class="path-step-label">Discovery</div><div class="path-step-title">Writing for the Filter</div><div class="path-step-copy">How writing changes when discovery is increasingly mediated by retrieval and ranking systems.</div></div><div class="path-step-meta">Filter logic</div></a>
+              <a href="the-trust-collapse.html" class="path-step"><div class="path-step-num">05</div><div><div class="path-step-label">Trust failure</div><div class="path-step-title">The Trust Collapse</div><div class="path-step-copy">Why high-volume mediation environments corrode confidence faster than institutions can restore it.</div></div><div class="path-step-meta">Trust erosion</div></a>
+              <a href="origin-gravity.html" class="path-step"><div class="path-step-num">06</div><div><div class="path-step-label">Return to source</div><div class="path-step-title">Origin Gravity</div><div class="path-step-copy">Why source credibility matters more as mediated systems become saturated and synthetic.</div></div><div class="path-step-meta">Closing frame</div></a>
+            </div>
           </div>
         </section>
 
         <section class="related">
-          <div class="section-label">Next Shelves</div>
-          <div class="related-title">Read around the series</div>
-          <div class="related-copy">Use the frameworks when you want the underlying model, and the essays when you want adjacent long-form arguments outside the guided paths.</div>
+          <div class="section-label">Next Moves</div>
+          <div class="related-title">Read around the paths</div>
+          <div class="related-copy">Use Frameworks when you want the underlying model, and Essays when you want adjacent long-form arguments outside the sequenced paths.</div>
           <div class="related-grid">
             <a href="frameworks.html" class="related-card">
               <strong>Frameworks</strong>
-              <div class="related-copy">Go back to the models if you want the conceptual spine behind the series.</div>
+              <div class="related-copy">Go back to the models if you want the conceptual spine behind the reading paths.</div>
+            </a>
+            <a href="concepts.html" class="related-card">
+              <strong>Concepts</strong>
+              <div class="related-copy">Use the glossary when a sequence term needs a stable definition before the next paper.</div>
             </a>
             <a href="essays.html" class="related-card">
               <strong>Essays</strong>
@@ -400,6 +463,7 @@
       </div>
     </main>
   </div>
-  <script src="global.js?v=20260419b"></script>
+    <footer></footer>
+<script src="global.js?v=20260621120500"></script>
 </body>
 </html>

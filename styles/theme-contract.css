@@ -1,0 +1,360 @@
+/*
+ * Final theme contract.
+ *
+ * Legacy and page CSS may still reference old public names, but palette values
+ * come only from tokens.css. Applying aliases at the last cascade layer keeps
+ * inherited body variables from shadowing the selected root theme.
+ */
+:root,
+body {
+  --ink: var(--theme-ink);
+  --ink-2: var(--theme-ink-2);
+  --ink-3: var(--theme-ink-3);
+  --deep: var(--theme-ink);
+  --paper: var(--theme-paper);
+  --paper-2: var(--theme-paper-2);
+  --paper-3: var(--theme-paper-3);
+  --surface: var(--theme-surface-1);
+  --surface-1: var(--theme-surface-1);
+  --surface-2: var(--theme-surface-2);
+  --surface-accent: var(--theme-surface-accent);
+  --accent: var(--theme-accent);
+  --accent-hover: var(--theme-accent-hover);
+  --accent-light: var(--theme-accent-light);
+  --blue: var(--theme-accent);
+  --red: var(--theme-red);
+  --yellow: var(--theme-yellow);
+  --highlight: var(--theme-highlight);
+  --muted: var(--theme-muted);
+  --rule: var(--theme-ink);
+  --border: var(--theme-ink);
+  --border-light: var(--theme-border-light);
+  --nav-bg: var(--theme-paper);
+  --nav-bg-mobile: var(--theme-paper);
+  --control-bg: var(--theme-control-bg);
+  --control-fg: var(--theme-ink);
+  --control-primary-bg: var(--theme-control-primary-bg);
+  --control-primary-fg: var(--theme-control-primary-fg);
+  --control-accent-bg: var(--theme-yellow);
+  --control-accent-fg: var(--theme-control-accent-fg);
+  --on-accent: var(--theme-on-accent);
+  --gold: var(--theme-accent);
+  --gold-soft: var(--theme-accent-light);
+  --navy: var(--theme-ink);
+  --framework: var(--theme-accent);
+  --framework-light: var(--theme-accent-light);
+
+  /* Compatibility aliases used by the current About/Hub templates. */
+  --nm-ink: var(--theme-ink);
+  --nm-body: var(--theme-ink);
+  --nm-muted: var(--theme-muted);
+  --nm-paper: var(--theme-paper);
+  --nm-surface: var(--theme-surface-1);
+  --nm-line: var(--theme-ink);
+  --nm-rule: var(--theme-ink);
+  --nm-accent: var(--theme-accent);
+  --nm-accent-2: var(--theme-accent);
+  --nm-signal: var(--theme-red);
+  --nm-yellow: var(--theme-yellow);
+}
+
+html {
+  background: var(--paper);
+}
+
+body,
+body.site-shell,
+body.font-body,
+body.site-shell .page-wrap {
+  background: var(--paper);
+  color: var(--ink);
+}
+
+/* Shared shell: explicit descendants prevent old high-specificity rules from
+   assigning foreground and background from the same semantic side. */
+.top-bar,
+.top-bar span,
+.top-bar a {
+  background-color: var(--ink);
+  color: var(--paper);
+}
+
+.nav,
+.nav-links {
+  background-color: var(--nav-bg);
+  color: var(--ink);
+}
+
+.nav-link {
+  color: var(--ink);
+}
+
+.nav-brand {
+  background: transparent;
+  color: var(--ink);
+}
+
+.site-breadcrumb-wrap,
+.site-tail-nav,
+.reading-map,
+.library-disclosure {
+  background-color: var(--paper-2);
+  color: var(--ink);
+}
+
+.site-footer,
+footer.site-footer {
+  background-color: var(--ink);
+  color: var(--paper);
+}
+
+.site-footer a,
+.site-footer p,
+.site-footer span,
+.site-footer strong,
+.site-footer-title,
+.site-footer-link {
+  color: var(--paper);
+}
+
+.site-footer-link {
+  background: transparent;
+}
+
+.site-footer-mark,
+.site-footer-link:hover,
+.site-footer-link:active {
+  background-color: var(--yellow);
+  color: #1a1a1a;
+}
+
+/* Accent surfaces always use a fixed dark foreground in both themes. */
+.reading-map summary,
+.library-disclosure summary,
+.library-filter button[aria-pressed="true"],
+.library-filter button:hover,
+.nav-link[aria-current="page"],
+.nav-link.active,
+.home-proof,
+.home-proof * {
+  color: #1a1a1a;
+}
+
+.home-action-primary {
+  background: var(--control-primary-bg);
+  color: var(--control-primary-fg);
+}
+
+.home-contact h2,
+.home-contact p {
+  color: #f5f0e8;
+}
+
+.home-contact .home-action-primary {
+  background: #f5f0e8;
+  color: #1a1a1a;
+}
+
+/* Native controls need explicit colors for Windows/system dark mode. */
+input,
+textarea,
+select,
+button {
+  color-scheme: inherit;
+}
+
+select,
+option {
+  background-color: var(--control-bg);
+  color: var(--control-fg);
+}
+
+.contact-modal {
+  overscroll-behavior: contain;
+}
+
+.contact-modal-input[aria-invalid="true"],
+.contact-modal-textarea[aria-invalid="true"] {
+  border-color: var(--red);
+}
+
+.contact-field-error,
+.contact-modal-status {
+  background: var(--paper);
+}
+
+/* Legacy label chips use ink as their background. Keep inverse text tied to
+   theme surface instead of hardcoded white. */
+.hero-kicker,
+.aside-label,
+.section-label,
+.section-number,
+.part-num,
+.card-kicker,
+.route-404-label,
+.toc-header-text,
+.data-table-header span,
+body.nm-page .nm-page-label {
+  color: var(--paper);
+}
+
+body.nm-page .nm-ledger a .nm-page-label,
+body.nm-page .nm-ledger-item .nm-page-label {
+  color: #1a1a1a;
+}
+
+/* The archive ledger previously inherited its light palette from a
+   high-specificity legacy body rule after a runtime theme switch. */
+[data-theme="dark"] body.nm-page .nm-ledger a,
+[data-theme="dark"] body.nm-page .nm-ledger-item {
+  background: var(--theme-surface-1);
+  color: var(--theme-ink);
+}
+
+[data-theme="dark"] body.nm-page .nm-ledger strong,
+[data-theme="dark"] body.nm-page .nm-ledger-item strong {
+  color: var(--theme-ink);
+}
+
+[data-theme="dark"] body.nm-page .nm-ledger p,
+[data-theme="dark"] body.nm-page .nm-ledger-item p {
+  color: var(--theme-muted);
+}
+
+/* Highlight uses yellow in light mode and a dark gold surface in dark mode. */
+.margin-note,
+.hero-tag-label,
+.hero-tag-text,
+.concept-label,
+.construct-num,
+.construct-name,
+.construct-desc {
+  color: var(--ink);
+}
+
+.speed-grid-header-sub,
+.definition-block-header,
+.definition-block-header *,
+.data-table-header,
+.data-table-header *,
+.abstract-header,
+.abstract-header * {
+  color: var(--paper);
+}
+
+.hard-filter-label {
+  color: var(--paper);
+}
+
+.framework-header-sub {
+  color: var(--paper);
+}
+
+.zmoi-step.highlight,
+.zmoi-step.highlight * {
+  color: var(--on-accent);
+}
+
+body.nm-page .about-signal,
+body.nm-page .about-signal text,
+body.nm-page .nm-contact-actions,
+body.nm-page .nm-contact-actions p,
+body.nm-page .nm-contact-actions p a {
+  color: #1a1a1a;
+}
+
+body.nm-page .nm-contact-actions .nm-work-button {
+  background: var(--nm-ink);
+  color: var(--nm-paper);
+}
+
+body.nm-page .nm-contact-actions p a {
+  background: transparent;
+}
+
+body.nm-page .nm-ledger .nm-contact-actions,
+body.nm-page .nm-ledger .nm-contact-actions p,
+body.nm-page .nm-ledger .nm-contact-actions p a {
+  color: #1a1a1a;
+}
+
+body.nm-page .nm-ledger .nm-contact-actions p a {
+  background: transparent;
+}
+
+[data-theme="dark"] body.nm-page .nm-ledger .nm-contact-actions {
+  background: var(--theme-yellow);
+}
+
+body.nm-page .about-signal text {
+  fill: currentColor;
+}
+
+.prediction-header,
+.prediction-header * {
+  color: var(--ink);
+}
+
+.interlude-text .stroke {
+  color: var(--ink);
+  -webkit-text-stroke: 0;
+}
+
+.page-inline-3bba940a4a {
+  color: var(--ink);
+}
+
+.page-inline-70bf66a744 {
+  color: var(--ink-2);
+}
+
+.paper-nav-next,
+.paper-nav-prev,
+.paper-nav-link,
+.paper-nav-back {
+  background: var(--surface-1);
+  color: var(--ink);
+}
+
+.hero-kicker::before {
+  background: currentColor;
+}
+
+@media (hover: hover) {
+  a,
+  button,
+  summary,
+  [role="button"] {
+    transition:
+      background-color 180ms var(--ease-out),
+      border-color 180ms var(--ease-out),
+      color 180ms var(--ease-out),
+      opacity 180ms var(--ease-out),
+      transform 180ms var(--ease-out);
+  }
+}
+
+a:active,
+button:active,
+summary:active,
+[role="button"]:active {
+  transform: translateY(1px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms;
+    animation-iteration-count: 1;
+    scroll-behavior: auto;
+    transition-duration: 0.01ms;
+  }
+
+  a,
+  button,
+  summary,
+  [role="button"] {
+    transition: none;
+  }
+}

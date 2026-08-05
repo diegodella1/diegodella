@@ -14,4 +14,12 @@ services/notify/__pycache__/
 
 .claude/
 .codex
+.codex/*
+!.codex/
+!.codex/hooks.json
 .agents/
+.agents/*
+!.agents/
+!.agents/skills/
+!.agents/skills/impeccable/
+!.agents/skills/impeccable/**

@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <script>(function(){var d=document.documentElement,m=window.matchMedia("(prefers-color-scheme:dark)"),s;try{s=localStorage.getItem("theme")}catch(e){}var v=s==="dark"||s==="light",t=v?s:(m.matches?"dark":"light");d.setAttribute("data-theme",t);d.setAttribute("data-theme-source",v?"user":"system")})()</script>
   <meta charset="UTF-8">
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-TJF4P0NYFT"></script>
@@ -10,9 +11,8 @@
     gtag('js', new Date());
     gtag('config', 'G-TJF4P0NYFT');
   </script>
-  <script>(function(){var t=localStorage.getItem("theme");if(!t)t=window.matchMedia("(prefers-color-scheme:dark)").matches?"dark":"light";document.documentElement.setAttribute("data-theme",t)})()</script>
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
-  <meta name="theme-color" content="#e6d5b8">
+  <meta name="theme-color" content="#f5f0e8" id="themeColor">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-title" content="Narrative Mechanics">
   <link rel="apple-touch-icon" href="/og-default.png">
@@ -63,25 +63,16 @@
   <title>The Negotiated Moment | Narrative-First Paper 06</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;700&family=Epilogue:ital,wght@0,400;1,400;0,600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="global.css?v=20260418f">
-  <link rel="stylesheet" href="components.css?v=20260418f">
-  <style>
-    /* Extra CSS variables for this page */
-    :root {
-      --framework: #1a3a5c;
-      --framework-light: #dce8f0;
-    }
-    [data-theme="dark"] {
-      --framework: #4a9aca;
-      --framework-light: rgba(74,154,202,0.15);
-    }
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="global.css?v=20260621120500">
+  <link rel="stylesheet" href="components.css?v=20260621120500">
+  <style>@layer page {
 
     /* Hero */
     .hero { max-width: 900px; margin: 0 auto; padding: 5rem 3rem 5rem; display: grid; grid-template-columns: 1fr auto; gap: 3rem; align-items: start; }
     .hero-title { font-family: 'Space Grotesk', serif; font-size: clamp(2.8rem, 6vw, 5rem); font-weight: 900; line-height: 1.0; letter-spacing: -0.025em; margin-bottom: 1rem; }
     .hero-title em { font-style: italic; color: var(--ink); display: block; text-decoration: none; background: linear-gradient(180deg, transparent 54%, color-mix(in srgb, var(--accent) 18%, transparent) 54%); padding: 0 0.08em 0.02em 0; box-decoration-break: clone; -webkit-box-decoration-break: clone; }
-    .hero-subtitle { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 1.15rem; font-style: italic; color: var(--muted); margin-bottom: 2rem; line-height: 1.5; max-width: 440px; }
+    .hero-subtitle { font-family: 'Inter', sans-serif; font-size: 1.15rem; font-style: italic; color: var(--muted); margin-bottom: 2rem; line-height: 1.5; max-width: 440px; }
     .hero-illustration { width: 280px; flex-shrink: 0; padding-top: 1rem; opacity: 0.85; }
 
     /* Content */
@@ -95,53 +86,53 @@
     /* Framework block */
     .framework-block { margin: 2.5rem 0; border: 1px solid var(--rule); overflow: hidden; }
     .framework-header { background: var(--deep); color: var(--paper); padding: 0.9rem 1.25rem; display: flex; align-items: center; justify-content: space-between; }
-    .framework-header-title { font-family: 'JetBrains Mono', monospace; font-size: 0.52rem; letter-spacing: 0.2em; text-transform: uppercase; }
-    .framework-header-sub { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 0.85rem; font-style: italic; color: var(--rule); }
+    .framework-header-title { font-family: 'Space Grotesk', monospace; font-size: 0.75rem; letter-spacing: 0.2em; text-transform: uppercase; }
+    .framework-header-sub { font-family: 'Inter', sans-serif; font-size: 0.85rem; font-style: italic; color: var(--rule); }
     .framework-layers { display: grid; grid-template-columns: repeat(3, 1fr); }
     .framework-layer { padding: 1.25rem 1rem; border-right: 1px solid var(--rule); }
     .framework-layer:last-child { border-right: none; }
-    .framework-layer-num { font-family: 'JetBrains Mono', monospace; font-size: 0.45rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--muted); margin-bottom: 0.4rem; }
+    .framework-layer-num { font-family: 'Space Grotesk', monospace; font-size: 0.75rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--muted); margin-bottom: 0.4rem; }
     .framework-layer-name { font-family: 'Space Grotesk', serif; font-size: 1rem; font-weight: 700; color: var(--accent); margin-bottom: 0.5rem; line-height: 1.2; }
-    .framework-layer-desc { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 0.88rem; line-height: 1.65; color: var(--ink); }
+    .framework-layer-desc { font-family: 'Inter', sans-serif; font-size: 0.88rem; line-height: 1.65; color: var(--ink); }
     .framework-resonance { padding: 1.25rem; border-top: 2px solid var(--accent); background: var(--accent-light); }
-    .framework-resonance-label { font-family: 'JetBrains Mono', monospace; font-size: 0.45rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--accent); margin-bottom: 0.4rem; }
+    .framework-resonance-label { font-family: 'Space Grotesk', monospace; font-size: 0.75rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--accent); margin-bottom: 0.4rem; }
     .framework-resonance-name { font-family: 'Space Grotesk', serif; font-size: 1rem; font-weight: 700; color: var(--deep); margin-bottom: 0.5rem; }
-    .framework-resonance-desc { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 0.88rem; line-height: 1.65; color: var(--ink); }
+    .framework-resonance-desc { font-family: 'Inter', sans-serif; font-size: 0.88rem; line-height: 1.65; color: var(--ink); }
     .framework-footer { background: var(--highlight); padding: 0.75rem 1.25rem; border-top: 1px solid var(--rule); }
-    .framework-footer p { font-family: 'JetBrains Mono', monospace; font-size: 0.48rem; letter-spacing: 0.1em; color: var(--muted); margin: 0; text-align: center; }
+    .framework-footer p { font-family: 'Space Grotesk', monospace; font-size: 0.75rem; letter-spacing: 0.1em; color: var(--muted); margin: 0; text-align: center; }
     @media (max-width: 680px) { .framework-layers { grid-template-columns: 1fr; } .framework-layer { border-right: none; border-bottom: 1px solid var(--rule); } }
 
     /* Construct definition */
     .construct-def { margin: 2.5rem 0; border: 1px solid var(--framework); background: var(--framework-light); padding: 1.75rem; }
-    .construct-def-label { font-family: 'JetBrains Mono', monospace; font-size: 0.46rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--framework); margin-bottom: 0.5rem; }
+    .construct-def-label { font-family: 'Space Grotesk', monospace; font-size: 0.75rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--framework); margin-bottom: 0.5rem; }
     .construct-def-name { font-family: 'Space Grotesk', serif; font-size: 1.25rem; font-weight: 900; color: var(--framework); margin-bottom: 0.75rem; }
     .construct-def-body { font-size: 0.95rem; line-height: 1.75; color: var(--deep); }
-    .construct-def-body p { margin-bottom: 0.75rem; text-align: left !important; }
-    .construct-def-body p::first-letter { float: none !important; font-size: inherit !important; color: inherit !important; margin: 0 !important; }
+    .construct-def-body p { margin-bottom: 0.75rem; text-align: left; }
+    .construct-def-body p::first-letter { float: none; font-size: inherit; color: inherit; margin: 0; }
     .construct-def-body p:last-child { margin-bottom: 0; }
 
     /* Action block */
     .action-block { margin: 2.5rem 0; border: 1px solid var(--rule); overflow: hidden; }
     .action-header { background: var(--deep); color: var(--paper); padding: 0.9rem 1.25rem; }
-    .action-header span { font-family: 'JetBrains Mono', monospace; font-size: 0.52rem; letter-spacing: 0.2em; text-transform: uppercase; }
+    .action-header span { font-family: 'Space Grotesk', monospace; font-size: 0.75rem; letter-spacing: 0.2em; text-transform: uppercase; }
     .action-row { display: grid; grid-template-columns: 48px 1fr; border-bottom: 1px solid var(--rule); }
     .action-row:last-child { border-bottom: none; }
     .action-num { padding: 1rem; background: var(--highlight); border-right: 1px solid var(--rule); display: flex; align-items: flex-start; justify-content: center; padding-top: 1.1rem; }
     .action-num span { font-family: 'Space Grotesk', serif; font-size: 1.15rem; font-weight: 900; color: var(--accent); }
     .action-text { padding: 1rem 1.25rem; }
-    .action-text strong { font-family: 'JetBrains Mono', monospace; font-size: 0.5rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--accent); display: block; margin-bottom: 0.35rem; }
-    .action-text p { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 0.95rem; line-height: 1.7; color: var(--ink); margin: 0 0 0.75rem; }
+    .action-text strong { font-family: 'Space Grotesk', monospace; font-size: 0.75rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--accent); display: block; margin-bottom: 0.35rem; }
+    .action-text p { font-family: 'Inter', sans-serif; font-size: 0.95rem; line-height: 1.7; color: var(--ink); margin: 0 0 0.75rem; }
     .action-text p:last-child { margin-bottom: 0; }
 
     /* Connections block */
     .connections { margin: 2.5rem 0; border: 1px solid var(--rule); }
     .connections-header { padding: 0.75rem 1.25rem; background: var(--highlight); border-bottom: 1px solid var(--rule); }
-    .connections-header span { font-family: 'JetBrains Mono', monospace; font-size: 0.48rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--muted); }
+    .connections-header span { font-family: 'Space Grotesk', monospace; font-size: 0.75rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--muted); }
     .connection-row { display: grid; grid-template-columns: 120px 1fr; border-bottom: 1px solid var(--rule); }
     .connection-row:last-child { border-bottom: none; }
     .connection-label { padding: 0.9rem 1rem; background: var(--highlight); border-right: 1px solid var(--rule); display: flex; align-items: center; }
-    .connection-label span { font-family: 'JetBrains Mono', monospace; font-size: 0.48rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent); }
-    .connection-text { padding: 0.9rem 1.25rem; font-family: 'Plus Jakarta Sans', sans-serif; font-size: 0.95rem; line-height: 1.7; color: var(--ink); }
+    .connection-label span { font-family: 'Space Grotesk', monospace; font-size: 0.75rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent); }
+    .connection-text { padding: 0.9rem 1.25rem; font-family: 'Inter', sans-serif; font-size: 0.95rem; line-height: 1.7; color: var(--ink); }
     @media (max-width: 680px) { .connection-row { grid-template-columns: 1fr; } .connection-label { border-right: none; border-bottom: 1px solid var(--rule); } }
 
     /* Mobile overrides */
@@ -152,46 +143,35 @@
       .pull-quote { margin: 2rem 0; }
       .paper-nav { padding: 0 1.5rem 3rem; }
     }
-  </style>
+  
+}</style>
 </head>
 <body class="series-nf">
   <a href="#main-content" class="skip-link">Skip to content</a>
   <div id="pbar"></div>
   <div id="pbar-label"></div>
-  <div class="bg-pattern"></div>
-  <div class="bg-grain"></div>
   <div class="page-wrap">
 
       <!-- Top Bar -->
   <div class="top-bar">
     <span>Buenos Aires &middot; Since 2008</span>
-    <span>18 Essays &middot; 3 Frameworks &middot; ~289 min of reading &middot; <a href="about.html">About the author</a></span>
+    <span>Essays &middot; Frameworks &middot; Guided reading paths &middot; <a href="about.html">About the author</a></span>
   </div>
 
   <!-- Nav -->
   <nav class="nav">
       <div class="nav-inner">
-        <a href="index.html" class="nav-brand">Narrative<em>Mechanics</em></a>
+        <a href="index.html" class="nav-brand" aria-label="Narrative Mechanics — Home">NARRATIVE MECHANICS</a>
         <button class="nav-btn nav-toggle" aria-label="Menu" aria-expanded="false" aria-controls="navLinks" id="navToggle">
           <svg viewBox="0 0 24 24"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg>
         </button>
-        <div class="nav-links" id="navLinks">
-          <a href="index.html" class="nav-link">Home</a>
-          <div class="nav-sep"></div>
-          <a href="archive.html" class="nav-link">Start Here</a>
+        <div class="nav-links" id="navLinks" aria-label="Primary sections">
+          <a href="thesis.html" class="nav-link">Idea</a>
           <a href="frameworks.html" class="nav-link">Frameworks</a>
-          <a href="series.html" class="nav-link">Series</a>
           <a href="essays.html" class="nav-link">Essays</a>
-          <a href="notes.html" class="nav-link">Notes</a>
-          <div class="nav-sep"></div>
+          <a href="about.html#work" class="nav-link" data-open-contact data-contact-mode="conversation">Work</a>
           <a href="about.html" class="nav-link">About</a>
-        </div>
-        <div class="nav-right">
-          <button class="nav-btn" aria-label="Toggle theme" id="themeToggle">
-            <svg class="icon-moon" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
-            <svg class="icon-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
-          </button>
-        </div>
+        </div><div class="nav-right"><button class="nav-btn theme-toggle" type="button" data-theme-toggle aria-label="Use dark theme"><svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3 7 7 0 0 0 21 12.8Z"/></svg><svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.42 1.42M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.42-1.42M17.66 6.34l1.41-1.41"/></svg></button></div>
       </div>
     </nav>
 
@@ -346,7 +326,7 @@
         </div>
         <div class="section-rule"></div>
         <div class="section-body">
-          <p>In <a href="paper-04.html" style="color:var(--accent);text-decoration:underline;text-decoration-color:var(--rule);text-underline-offset:3px;transition:text-decoration-color 0.2s">the fourth paper in this series</a> I described Narrative Drift: the process by which an organization's original narrative gets diluted through a sequence of individually reasonable decisions, each one small enough to seem harmless, collectively fatal to coherence. Organizational entropy that is only visible when it is already expensive to reverse. The pattern I am describing here is the external version of that same dynamic. It has a different cause and it requires a different kind of attention.</p>
+          <p>In <a href="paper-04.html" class="page-inline-82b02d24de">the fourth paper in this series</a> I described Narrative Drift: the process by which an organization's original narrative gets diluted through a sequence of individually reasonable decisions, each one small enough to seem harmless, collectively fatal to coherence. Organizational entropy that is only visible when it is already expensive to reverse. The pattern I am describing here is the external version of that same dynamic. It has a different cause and it requires a different kind of attention.</p>
 
           <div class="construct-def">
             <div class="construct-def-label">New Construct</div>
@@ -442,23 +422,23 @@
               <span>Connected Frameworks</span>
             </div>
             <div class="connection-row">
-              <div class="connection-label"><a href="thesis.html" style="color:inherit;text-decoration:none"><span>ZMOI</span></a></div>
+              <div class="connection-label"><a href="thesis.html" class="page-inline-7bb4174728"><span>ZMOI</span></a></div>
               <div class="connection-text">The Zero Moment of Interpretation names the territory: the moment before belief forms. The Negotiated Moment proposes what is happening inside that territory. A structural contest between human intent and algorithmic mediation. ZMOI tells you the moment exists and why it matters. This framework tells you who else is inside it, and what they want from it.</div>
             </div>
             <div class="connection-row">
-              <div class="connection-label"><a href="thesis.html" style="color:inherit;text-decoration:none"><span>CMI</span></a></div>
+              <div class="connection-label"><a href="thesis.html" class="page-inline-7bb4174728"><span>CMI</span></a></div>
               <div class="connection-text">The Continuous Moment of Intent is a presence architecture for capturing ZMOI across multiple surfaces. CMI answers: am I there at the right moment? Mediation Fitness asks the prior question: when I am there, do I arrive as myself? They are sequential obligations. Solving CMI without addressing Mediation Fitness means you are present at the right moment and unrecognizable when you arrive.</div>
             </div>
             <div class="connection-row">
-              <div class="connection-label"><a href="occlusion-bias.html" style="color:inherit;text-decoration:none"><span>Occlusion Bias</span></a></div>
+              <div class="connection-label"><a href="occlusion-bias.html" class="page-inline-7bb4174728"><span>Occlusion Bias</span></a></div>
               <div class="connection-text">Occlusion Bias maps the supply side: how the distribution layer hides genuine signal at volume. The Negotiated Moment maps the demand side: how the same layer reshapes what the consumer actually experiences. They describe the same system from opposite vantage points. Origin Gravity, the force pulling audiences toward direct sources, is the structural consequence of chronic low Resonance. The Negotiated Moment is the mechanism underneath what Occlusion Bias observes from the surface.</div>
             </div>
             <div class="connection-row">
-              <div class="connection-label"><a href="paper-02.html" style="color:inherit;text-decoration:none"><span>MMF</span></a></div>
+              <div class="connection-label"><a href="paper-02.html" class="page-inline-7bb4174728"><span>MMF</span></a></div>
               <div class="connection-text">Message-Market Fit asks: does the market recognize your product when it arrives? Mediation Fitness asks the prior question: does your message arrive in a form the market can recognize? Strong MMF with poor Mediation Fitness means the market would know you if it could see you clearly. Layer 02 is the reason it cannot. The two frameworks are working on adjacent parts of the same problem.</div>
             </div>
             <div class="connection-row">
-              <div class="connection-label"><a href="zmox.html" style="color:inherit;text-decoration:none"><span>CAX</span></a></div>
+              <div class="connection-label"><a href="zmox.html" class="page-inline-7bb4174728"><span>CAX</span></a></div>
               <div class="connection-text">The Constitutive Arc proposes that sustained exposure to a narrative field shapes who the audience becomes, not just what they decide. The Negotiated Moment proposes the mechanism by which that field reaches them: mediated, transformed, filtered by architecture with its own objectives. If the Mediation Layer consistently shapes what your audience encounters, it eventually shapes who they are. The Constitutive Arc is what happens at the scale of identity when the Negotiated Moment operates repeatedly over time. The NIF needs the CAX to explain where it ends.</div>
             </div>
           </div>
@@ -470,14 +450,14 @@
         <div class="closing-ornament-top">&#10022; &nbsp; &#10087; &nbsp; &#10022;</div>
         <p>The map was never the territory. In algorithmically mediated environments, the territory is actively working against your map.</p>
         <p>Before you map the journey, know who else is mapping it.</p>
-        <div class="closing-ornament-bottom">End of Paper No. 6 &nbsp;&middot;&nbsp; Narrative-First Series</div>
+        <div class="closing-ornament-bottom">End of Paper No. 6 &nbsp;&middot;&nbsp; Narrative-First Reading Path</div>
       </div>
-      <div style="max-width:720px;margin:1.5rem auto 0;padding:0 2.5rem;font-family:'JetBrains Mono',monospace;font-size:0.5rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--muted);">February 2026</div>
+      <div class="page-inline-ab0bf34fff">February 2026</div>
 
     </main>
 
-    <div style="max-width:680px;margin:0 auto;padding:0 4rem 2rem;">
-      <p style="font-family:'Inter',serif;font-size:1rem;line-height:1.75;color:var(--muted);font-style:italic;">This completes the essay series. For the structural argument about what AI changes in all of this, read The Last Human Impression.</p>
+    <div class="page-inline-f7663ce6f4">
+      <p class="page-inline-e1aee5fa1f">This completes the essay series. For the structural argument about what AI changes in all of this, read The Last Human Impression.</p>
     </div>
 
     <div class="paper-nav">
@@ -494,6 +474,6 @@
     </footer>
 
   </div>
-<script src="global.js?v=20260419b"></script>
+<script src="global.js?v=20260621120500"></script>
 </body>
 </html>

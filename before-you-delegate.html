@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <script>(function(){var d=document.documentElement,m=window.matchMedia("(prefers-color-scheme:dark)"),s;try{s=localStorage.getItem("theme")}catch(e){}var v=s==="dark"||s==="light",t=v?s:(m.matches?"dark":"light");d.setAttribute("data-theme",t);d.setAttribute("data-theme-source",v?"user":"system")})()</script>
   <meta charset="UTF-8">
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-TJF4P0NYFT"></script>
@@ -10,9 +11,8 @@
     gtag('js', new Date());
     gtag('config', 'G-TJF4P0NYFT');
   </script>
-  <script>(function(){var t=localStorage.getItem("theme");if(!t)t=window.matchMedia("(prefers-color-scheme:dark)").matches?"dark":"light";document.documentElement.setAttribute("data-theme",t)})()</script>
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
-  <meta name="theme-color" content="#e6d5b8">
+  <meta name="theme-color" content="#f5f0e8" id="themeColor">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-title" content="Narrative Mechanics">
   <link rel="apple-touch-icon" href="/og-default.png">
@@ -57,15 +57,16 @@
   </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;700&family=Epilogue:ital,wght@0,400;1,400;0,600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="global.css?v=20260418f">
-  <link rel="stylesheet" href="components.css?v=20260418f">
-  <style>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="global.css?v=20260621120500">
+  <link rel="stylesheet" href="components.css?v=20260621120500">
+  <style>@layer page {
+
     /* Hero */
     .hero { max-width: 900px; margin: 0 auto; padding: 5rem 4rem 4rem; display: grid; grid-template-columns: 1fr auto; gap: 3rem; align-items: start; }
     .hero-title { font-family: 'Space Grotesk', serif; font-size: clamp(2.8rem, 6vw, 5rem); font-weight: 900; line-height: 1.0; letter-spacing: -0.025em; margin-bottom: 1rem; }
     .hero-title em { font-style: italic; color: var(--ink); display: block; text-decoration: none; background: linear-gradient(180deg, transparent 54%, color-mix(in srgb, var(--accent) 18%, transparent) 54%); padding: 0 0.08em 0.02em 0; box-decoration-break: clone; -webkit-box-decoration-break: clone; }
-    .hero-subtitle { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 1.1rem; font-style: italic; color: var(--muted); margin-bottom: 2rem; line-height: 1.5; max-width: 440px; }
+    .hero-subtitle { font-family: 'Inter', sans-serif; font-size: 1.1rem; font-style: italic; color: var(--muted); margin-bottom: 2rem; line-height: 1.5; max-width: 440px; }
     .hero-illustration { width: 280px; flex-shrink: 0; padding-top: 1rem; opacity: 0.85; }
 
     /* Content */
@@ -81,36 +82,36 @@
 
     /* Concept callout */
     .concept { margin: 2rem 0; padding: 1.25rem 1.5rem; background: var(--highlight); border-top: 2px solid var(--accent); }
-    .concept-label { font-family: 'JetBrains Mono', monospace; font-size: 0.48rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--accent); margin-bottom: 0.5rem; }
+    .concept-label { font-family: 'Space Grotesk', monospace; font-size: 0.75rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--accent); margin-bottom: 0.5rem; }
     .concept-name { font-family: 'Space Grotesk', serif; font-size: 1.15rem; font-weight: 700; margin-bottom: 0.5rem; }
-    .concept-def { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 0.97rem; line-height: 1.75; color: var(--ink); }
-    .concept-def::first-letter { float: none !important; }
+    .concept-def { font-family: 'Inter', sans-serif; font-size: 0.97rem; line-height: 1.75; color: var(--ink); }
+    .concept-def::first-letter { float: none; }
 
     /* Speed grid */
     .speed-grid { margin: 2.5rem 0; border: 1px solid var(--rule); overflow: hidden; }
     .speed-grid-header { background: var(--deep); color: var(--paper); padding: 0.9rem 1.25rem; display: flex; align-items: center; justify-content: space-between; }
-    .speed-grid-header-title { font-family: 'JetBrains Mono', monospace; font-size: 0.52rem; letter-spacing: 0.2em; text-transform: uppercase; }
-    .speed-grid-header-sub { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 0.85rem; font-style: italic; color: var(--rule); }
+    .speed-grid-header-title { font-family: 'Space Grotesk', monospace; font-size: 0.75rem; letter-spacing: 0.2em; text-transform: uppercase; }
+    .speed-grid-header-sub { font-family: 'Inter', sans-serif; font-size: 0.85rem; font-style: italic; color: var(--rule); }
     .speed-row { display: grid; grid-template-columns: 110px 1fr 1fr; border-bottom: 1px solid var(--rule); }
     .speed-row:last-child { border-bottom: none; }
     .speed-row-header { display: grid; grid-template-columns: 110px 1fr 1fr; border-bottom: 2px solid var(--ink); background: var(--highlight); }
-    .speed-cell { padding: 0.9rem 1rem; border-right: 1px solid var(--rule); font-family: 'Plus Jakarta Sans', sans-serif; font-size: 0.9rem; line-height: 1.6; }
+    .speed-cell { padding: 0.9rem 1rem; border-right: 1px solid var(--rule); font-family: 'Inter', sans-serif; font-size: 0.9rem; line-height: 1.6; }
     .speed-cell:last-child { border-right: none; }
-    .speed-cell.label { font-family: 'JetBrains Mono', monospace; font-size: 0.48rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent); display: flex; align-items: center; background: var(--highlight); }
-    .speed-cell.head { font-family: 'JetBrains Mono', monospace; font-size: 0.46rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--muted); display: flex; align-items: center; padding: 0.6rem 1rem; }
+    .speed-cell.label { font-family: 'Space Grotesk', monospace; font-size: 0.75rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent); display: flex; align-items: center; background: var(--highlight); }
+    .speed-cell.head { font-family: 'Space Grotesk', monospace; font-size: 0.75rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--muted); display: flex; align-items: center; padding: 0.6rem 1rem; }
     [data-theme="dark"] .speed-grid-header { background: var(--deep); color: var(--paper); }
 
     /* Three questions block */
     .questions-block { margin: 2.5rem 0; border: 1px solid var(--rule); overflow: hidden; }
     .questions-header { background: var(--deep); color: var(--paper); padding: 0.9rem 1.25rem; }
-    .questions-header span { font-family: 'JetBrains Mono', monospace; font-size: 0.52rem; letter-spacing: 0.2em; text-transform: uppercase; }
+    .questions-header span { font-family: 'Space Grotesk', monospace; font-size: 0.75rem; letter-spacing: 0.2em; text-transform: uppercase; }
     .question-row { display: grid; grid-template-columns: 48px 1fr; border-bottom: 1px solid var(--rule); }
     .question-row:last-child { border-bottom: none; }
     .question-num { padding: 1rem; background: var(--highlight); border-right: 1px solid var(--rule); display: flex; align-items: flex-start; justify-content: center; padding-top: 1.1rem; }
     .question-num span { font-family: 'Space Grotesk', serif; font-size: 1.15rem; font-weight: 900; color: var(--accent); }
     .question-text { padding: 1rem 1.25rem; }
-    .question-text strong { font-family: 'JetBrains Mono', monospace; font-size: 0.5rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--accent); display: block; margin-bottom: 0.35rem; }
-    .question-text p { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 0.95rem; line-height: 1.7; color: var(--ink); margin: 0; }
+    .question-text strong { font-family: 'Space Grotesk', monospace; font-size: 0.75rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--accent); display: block; margin-bottom: 0.35rem; }
+    .question-text p { font-family: 'Inter', sans-serif; font-size: 0.95rem; line-height: 1.7; color: var(--ink); margin: 0; }
     [data-theme="dark"] .questions-header { background: var(--deep); color: var(--paper); }
 
     @media (max-width: 768px) {
@@ -122,51 +123,42 @@
       footer { padding: 1.5rem; flex-direction: column; gap: 0.5rem; text-align: center; }
       .speed-row, .speed-row-header { grid-template-columns: 90px 1fr 1fr; }
     }
-  </style>
+  
+}</style>
 </head>
 <body class="series-foundation">
+  <a href="#main-content" class="skip-link">Skip to content</a>
   <div id="pbar"></div>
   <div id="pbar-label"></div>
-  <div class="bg-pattern"></div>
-  <div class="bg-grain"></div>
   <div class="page-wrap">
 
       <!-- Top Bar -->
   <div class="top-bar">
     <span>Buenos Aires &middot; Since 2008</span>
-    <span>18 Essays &middot; 3 Frameworks &middot; ~289 min of reading &middot; <a href="about.html">About the author</a></span>
+    <span>Essays &middot; Frameworks &middot; Guided reading paths &middot; <a href="about.html">About the author</a></span>
   </div>
 
   <!-- Nav -->
   <nav class="nav">
       <div class="nav-inner">
-        <a href="index.html" class="nav-brand">Narrative<em>Mechanics</em></a>
+        <a href="index.html" class="nav-brand" aria-label="Narrative Mechanics — Home">NARRATIVE MECHANICS</a>
         <button class="nav-btn nav-toggle" aria-label="Menu" aria-expanded="false" aria-controls="navLinks" id="navToggle">
           <svg viewBox="0 0 24 24"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg>
         </button>
-        <div class="nav-links" id="navLinks">
-          <a href="index.html" class="nav-link">Home</a>
-          <div class="nav-sep"></div>
-          <a href="archive.html" class="nav-link">Start Here</a>
+        <div class="nav-links" id="navLinks" aria-label="Primary sections">
+          <a href="thesis.html" class="nav-link">Idea</a>
           <a href="frameworks.html" class="nav-link">Frameworks</a>
-          <a href="series.html" class="nav-link">Series</a>
           <a href="essays.html" class="nav-link">Essays</a>
-          <a href="notes.html" class="nav-link">Notes</a>
-          <div class="nav-sep"></div>
+          <a href="about.html#work" class="nav-link" data-open-contact data-contact-mode="conversation">Work</a>
           <a href="about.html" class="nav-link">About</a>
-        </div>
-        <div class="nav-right">
-          <button class="nav-btn" aria-label="Toggle theme" id="themeToggle">
-            <svg class="icon-moon" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
-            <svg class="icon-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
-          </button>
-        </div>
+        </div><div class="nav-right"><button class="nav-btn theme-toggle" type="button" data-theme-toggle aria-label="Use dark theme"><svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3 7 7 0 0 0 21 12.8Z"/></svg><svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.42 1.42M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.42-1.42M17.66 6.34l1.41-1.41"/></svg></button></div>
       </div>
     </nav>
+  <main id="main-content">
 
     <section class="hero">
       <div class="hero-left">
-        <div class="hero-kicker">Foundation &nbsp;/&nbsp; Before the Series</div>
+        <div class="hero-kicker">Foundation &nbsp;/&nbsp; Before the Reading Path</div>
         <h1 class="hero-title">Before You<br><em>Delegate</em></h1>
         <p class="hero-subtitle">On sovereignty, systems, and the trap of apparent alignment.</p>
         <div class="hero-byline">
@@ -288,31 +280,31 @@
               <span class="speed-grid-header-title">Misalignment by Speed</span>
               <span class="speed-grid-header-sub">How long before the cost becomes visible</span>
             </div>
-            <div class="speed-row-header" style="grid-template-columns: 100px 1fr 1fr 1fr;">
+            <div class="speed-row-header page-inline-bd762ac0bf">
               <div class="speed-cell head">Speed</div>
               <div class="speed-cell head">What you delegated</div>
               <div class="speed-cell head">Symptom when it surfaces</div>
               <div class="speed-cell head">Cost of recovery</div>
             </div>
-            <div class="speed-row" style="grid-template-columns: 100px 1fr 1fr 1fr;">
+            <div class="speed-row page-inline-bd762ac0bf">
               <div class="speed-cell label">Months</div>
               <div class="speed-cell">Curation of your attention and information environment to recommendation systems.</div>
               <div class="speed-cell">Strong opinions on things you never investigated directly. A worldview shaped by what the system learned to show you, not what you chose to explore.</div>
               <div class="speed-cell">Low. Behavioral change, deliberate information diet. No structural dependency to unwind.</div>
             </div>
-            <div class="speed-row" style="grid-template-columns: 100px 1fr 1fr 1fr;">
+            <div class="speed-row page-inline-bd762ac0bf">
               <div class="speed-cell label">Years</div>
               <div class="speed-cell">Distribution and interpretation of your voice to algorithmic platforms.</div>
               <div class="speed-cell">Large audience with shallow roots. Authority that does not hold under pressure. Voice that is recognizable but not entirely yours.</div>
               <div class="speed-cell">Medium. Requires parallel direct channel construction over 12 to 24 months. Audience built on platform does not automatically migrate.</div>
             </div>
-            <div class="speed-row" style="grid-template-columns: 100px 1fr 1fr 1fr;">
+            <div class="speed-row page-inline-bd762ac0bf">
               <div class="speed-cell label">Years</div>
               <div class="speed-cell">The relationship with your user to a distribution platform.</div>
               <div class="speed-cell">User loyalty to the platform, not to you. When the platform changes the terms, you discover you do not own the relationship you built.</div>
               <div class="speed-cell">High. Requires rebuilding direct relationship infrastructure from near zero. Most of what was built belongs to the platform.</div>
             </div>
-            <div class="speed-row" style="grid-template-columns: 100px 1fr 1fr 1fr;">
+            <div class="speed-row page-inline-bd762ac0bf">
               <div class="speed-cell label">Decades</div>
               <div class="speed-cell">Category definition and competitive positioning to the dominant narrative of your industry.</div>
               <div class="speed-cell">The market understands what you do in terms set by someone else. You optimized for legibility inside a frame you did not build and cannot exit without starting over.</div>
@@ -382,7 +374,7 @@
         <div class="section-body">
           <p>The prescription is not to stop delegating. Delegation is how anything gets built at scale. The prescription is more precise: delegate functions, not sovereignty. A function is something the system does more efficiently than you can. Sovereignty is your capacity to act from your own objectives when they diverge from the system's, at a cost that does not destroy what you built in the exercise of that capacity. That last clause matters. Optionality that costs everything to exercise is not optionality. It is the illusion of a door that cannot be opened without burning the building down. Real sovereignty requires maintaining enough direct relationship, direct data, and direct channel with the people you serve that you can act independently when you need to. Building your own data layer is not paranoia. It is the structural prerequisite for everything else in this series.</p>
 
-          <p>Every paper in this series is a case study in what happens when that distinction is not made in a specific domain. <a href="paper-01.html" style="color:var(--accent);text-decoration:underline;text-decoration-color:var(--rule);text-underline-offset:3px">Strategic Debt</a> is what happens when you delegate the interpretation of your product's value to a market you never taught to read it. <a href="paper-04.html" style="color:var(--accent);text-decoration:underline;text-decoration-color:var(--rule);text-underline-offset:3px">Narrative Drift</a> is what happens when you delegate the coherence of your story to the sum of individual team decisions. <a href="paper-06.html" style="color:var(--accent);text-decoration:underline;text-decoration-color:var(--rule);text-underline-offset:3px">Journey Debt</a> is what happens when you delegate the distribution of your voice to algorithmic systems that optimize for their own engagement metrics. In each case, the delegation was rational. The cost was the gradual erosion of the capacity to act from your own priorities.</p>
+          <p>Every paper in this series is a case study in what happens when that distinction is not made in a specific domain. <a href="paper-01.html" class="page-inline-615982174f">Strategic Debt</a> is what happens when you delegate the interpretation of your product's value to a market you never taught to read it. <a href="paper-04.html" class="page-inline-615982174f">Narrative Drift</a> is what happens when you delegate the coherence of your story to the sum of individual team decisions. <a href="paper-06.html" class="page-inline-615982174f">Journey Debt</a> is what happens when you delegate the distribution of your voice to algorithmic systems that optimize for their own engagement metrics. In each case, the delegation was rational. The cost was the gradual erosion of the capacity to act from your own priorities.</p>
 
           <p>Before any significant delegation, three questions. Not abstract ones. Questions you can answer in a room with the information available to you today.</p>
 
@@ -421,7 +413,7 @@
         <div class="closing-ornament-top">✦ &nbsp; ❧ &nbsp; ✦</div>
         <p>The systems that will cost you your sovereignty were designed to be useful first. They were also designed to make exit expensive before you noticed it was happening.</p>
         <p>Useful is not the same as aligned. Know the difference before you build dependency on it.</p>
-        <div class="closing-ornament-bottom">Foundation Paper &nbsp;·&nbsp; Narrative-First Series</div>
+        <div class="closing-ornament-bottom">Foundation paper &nbsp;·&nbsp; Narrative-First Reading Path</div>
       </div>
 
     </div>
@@ -433,13 +425,14 @@
       </a>
     </div>
 
-    <footer>
+      </main>
+  <footer>
       <div class="footer-left">© 2026 Diego Dell'Agostino</div>
       <div class="footer-center">❧</div>
       <div class="footer-right">Foundation &nbsp;·&nbsp; Narrative-First</div>
     </footer>
 
   </div>
-<script src="global.js?v=20260419b"></script>
+<script src="global.js?v=20260621120500"></script>
 </body>
 </html>

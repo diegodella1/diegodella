@@ -1,0 +1,183 @@
+.home-page { background: var(--paper); color: var(--ink); }
+.home-page main { overflow: clip; }
+
+.home-shell {
+  width: min(100%, var(--content-wide));
+  margin-inline: auto;
+  padding-inline: clamp(1rem, 4vw, 3rem);
+}
+
+.home-hero {
+  display: grid;
+  min-height: min(47rem, calc(100dvh - 4.5rem));
+  padding-block: clamp(4rem, 9vw, 8rem);
+  grid-template-columns: minmax(0, 1.65fr) minmax(17rem, 0.7fr);
+  align-items: center;
+  gap: clamp(2rem, 6vw, 6rem);
+}
+
+.home-hero-copy { max-width: 63rem; }
+
+.home-signature {
+  display: inline-flex;
+  margin: 0 0 1.5rem;
+  align-items: center;
+  gap: 0.75rem;
+  color: var(--ink-2);
+  font-family: "Space Grotesk", system-ui, sans-serif;
+  font-size: var(--text-xs);
+  font-weight: 800;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+}
+
+.home-signature::before { width: 2rem; height: 0.35rem; background: var(--yellow); content: ""; }
+
+.home-hero h1 {
+  max-width: 10ch;
+  margin: 0;
+  color: var(--ink);
+  font-size: clamp(3.7rem, 8vw, 7.5rem);
+  letter-spacing: -0.065em;
+  line-height: 0.88;
+  text-wrap: balance;
+}
+
+.home-hero-lede {
+  max-width: 44rem;
+  margin: 2rem 0 0;
+  color: var(--ink-2);
+  font-size: clamp(1.05rem, 1.8vw, 1.3rem);
+  line-height: 1.55;
+}
+
+.home-actions { display: flex; margin-block-start: 2rem; align-items: center; flex-wrap: wrap; gap: 0.75rem; }
+
+.home-action-primary,
+.home-action-secondary {
+  display: inline-flex;
+  min-height: 3.25rem;
+  padding: 0.85rem 1.15rem;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid var(--ink);
+  font-family: "Space Grotesk", system-ui, sans-serif;
+  font-size: var(--text-sm);
+  font-weight: 800;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.home-action-primary { background: var(--control-primary-bg); color: var(--control-primary-fg); }
+.home-action-secondary { background: transparent; color: var(--ink); }
+.home-action-primary:hover,
+.home-action-primary:active,
+.home-action-secondary:hover,
+.home-action-secondary:active { background: var(--yellow); color: #1a1a1a; }
+
+.home-fit { align-self: center; border: 3px solid var(--ink); background: var(--paper-2); }
+.home-fit h2 {
+  margin: 0;
+  padding: 1rem 1.25rem;
+  border-block-end: 3px solid var(--ink);
+  background: var(--yellow);
+  color: #1a1a1a;
+  font-size: var(--text-sm);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+.home-fit ul { margin: 0; padding: 0; list-style: none; }
+.home-fit li { padding: 1rem 1.25rem; border-block-end: 1px solid var(--border-light); color: var(--ink-2); }
+.home-fit li:last-child { border-block-end: 0; }
+.home-fit li::before { margin-inline-end: 0.65rem; color: var(--accent); content: "■"; font-size: 0.7em; }
+
+.home-proof {
+  padding-block: clamp(4rem, 8vw, 7rem);
+  border-block: 4px solid #1a1a1a;
+  background: #ffcc00;
+  color: #1a1a1a;
+}
+.home-proof-intro { display: grid; grid-template-columns: minmax(17rem, 0.7fr) minmax(0, 1.3fr); align-items: end; gap: clamp(2rem, 6vw, 6rem); }
+.home-proof-intro h2,
+.home-offer h2,
+.home-routes h2,
+.home-system h2,
+.home-contact h2 {
+  margin: 0;
+  font-size: clamp(2.6rem, 5.5vw, 5rem);
+  letter-spacing: -0.045em;
+  line-height: 0.94;
+  text-wrap: balance;
+}
+.home-proof-statement { max-width: 48rem; margin: 0; font-size: clamp(1.2rem, 2.4vw, 1.9rem); font-weight: 650; line-height: 1.35; }
+.home-proof-facts { display: grid; margin-block-start: 3.5rem; grid-template-columns: repeat(3, 1fr); border: 3px solid #1a1a1a; }
+.home-proof-fact { min-width: 0; min-height: 14rem; padding: 1.5rem; border-inline-end: 3px solid #1a1a1a; background: #f5f0e8; color: #1a1a1a; }
+.home-proof-fact:last-child { border-inline-end: 0; }
+.home-proof-fact strong { display: block; margin-block-end: 0.9rem; font: 800 clamp(1.6rem, 3vw, 2.5rem)/1 "Space Grotesk", system-ui, sans-serif; letter-spacing: -0.04em; }
+.home-proof-fact p { margin: 0; line-height: 1.6; }
+
+.home-offer,
+.home-routes,
+.home-system { padding-block: clamp(5rem, 10vw, 9rem); }
+.home-offer { display: grid; grid-template-columns: minmax(18rem, 0.72fr) minmax(0, 1.28fr); gap: clamp(3rem, 7vw, 7rem); }
+.home-offer-intro { align-self: start; }
+.home-offer-intro > p,
+.home-routes-head p,
+.home-system-head p { max-width: 42rem; margin-block: 1.25rem 0; color: var(--ink-2); font-size: var(--text-lg); line-height: 1.7; }
+.home-offer-list { margin: 0; border-block-start: 3px solid var(--ink); }
+.home-offer-row { display: grid; padding: 1.5rem 0; border-block-end: 2px solid var(--ink); grid-template-columns: minmax(10rem, 0.58fr) minmax(0, 1fr); gap: 2rem; }
+.home-offer-row dt { font-family: "Space Grotesk", system-ui, sans-serif; font-size: 1.15rem; font-weight: 800; line-height: 1.15; }
+.home-offer-row dd { margin: 0; color: var(--ink-2); }
+
+.home-routes { border-block: 4px solid var(--ink); background: var(--paper-2); }
+.home-routes-head,
+.home-system-head { display: grid; grid-template-columns: minmax(17rem, 0.72fr) minmax(0, 1.28fr); align-items: end; gap: clamp(3rem, 7vw, 7rem); }
+.home-route-list { display: grid; margin-block-start: 3rem; border: 3px solid var(--ink); grid-template-columns: repeat(2, 1fr); }
+.home-route { display: grid; min-height: 13rem; padding: 1.5rem; align-content: space-between; border-inline-end: 3px solid var(--ink); color: var(--ink); text-decoration: none; }
+.home-route:nth-child(2) { border-inline-end: 0; }
+.home-route strong { max-width: 12ch; font: 800 clamp(1.8rem, 4vw, 3.5rem)/0.95 "Space Grotesk", system-ui, sans-serif; letter-spacing: -0.045em; }
+.home-route > span:not(:last-child) { color: var(--accent); font-size: var(--text-xs); font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; }
+.home-route span:last-child { color: var(--ink-2); }
+.home-route:hover { background: var(--yellow); color: #1a1a1a; }
+
+.home-system { background: var(--paper); }
+.home-system-flow { position: relative; display: grid; margin-block-start: 4rem; grid-template-columns: repeat(4, 1fr); }
+.home-system-flow::before { position: absolute; inset: 2.2rem 0 auto; z-index: 0; height: 4px; background: var(--ink); content: ""; }
+.home-system-step { position: relative; z-index: 1; padding-inline-end: 1.5rem; }
+.home-system-step::before { display: block; width: 4.5rem; height: 4.5rem; margin-block-end: 1.25rem; border: 4px solid var(--ink); background: var(--yellow); content: ""; }
+.home-system-step > span { display: block; margin-block-end: 0.5rem; color: var(--accent); font-size: var(--text-xs); font-weight: 800; letter-spacing: 0.08em; }
+.home-system-step strong { display: block; font: 800 1.2rem/1.15 "Space Grotesk", system-ui, sans-serif; }
+.home-system-step p { margin-block: 0.75rem 0; color: var(--ink-2); }
+
+.home-contact { border-block-start: 4px solid #1a1a1a; background: #1a1a1a; color: #f5f0e8; }
+.home-contact-inner { display: grid; padding-block: clamp(4rem, 8vw, 7rem); grid-template-columns: minmax(0, 1.25fr) auto; align-items: center; gap: 2rem; }
+.home-contact h2 { color: #f5f0e8; }
+.home-contact p { max-width: 46rem; margin-block: 1.25rem 0; color: #f5f0e8; }
+.home-contact .home-action-primary { border-color: #f5f0e8; background: #f5f0e8; color: #1a1a1a; }
+.home-contact .home-action-primary:hover { border-color: #ffcc00; background: #ffcc00; }
+
+@media (max-width: 56.25rem) {
+  .home-hero,
+  .home-offer,
+  .home-proof-intro,
+  .home-routes-head,
+  .home-system-head,
+  .home-contact-inner { grid-template-columns: 1fr; }
+  .home-hero { min-height: auto; }
+  .home-fit { max-width: 38rem; }
+  .home-system-flow { grid-template-columns: repeat(2, 1fr); gap: 3rem 1rem; }
+  .home-system-flow::before { display: none; }
+}
+
+@media (max-width: 40rem) {
+  .home-shell { padding-inline: 1rem; }
+  .home-hero h1 { font-size: clamp(3.2rem, 18vw, 5.4rem); }
+  .home-proof-facts,
+  .home-route-list,
+  .home-system-flow { grid-template-columns: 1fr; }
+  .home-proof-fact,
+  .home-route { min-height: auto; border-inline-end: 0; border-block-end: 3px solid #1a1a1a; }
+  .home-proof-fact:last-child,
+  .home-route:last-child { border-block-end: 0; }
+  .home-offer-row { grid-template-columns: 1fr; gap: 0.75rem; }
+}

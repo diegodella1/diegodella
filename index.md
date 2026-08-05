@@ -1,14 +1,16 @@
 # Narrative Mechanics
 
-Narrative Mechanics is the publishing site of Diego Dell'Agostino.
+The market decides before the search begins.
+
+Narrative Mechanics is Diego Dell'Agostino's work on how intent, trust, attention, and product meaning are shaped before visible demand.
 
 It focuses on:
 
-- narrative strategy
-- AI and mediated trust
+- narrative strategy before comparison
+- AI-mediated trust and discovery
 - attention economics
-- product clarity
-- long-form essays and frameworks
+- product and launch clarity
+- authority formation
 
 ## Main routes
 
@@ -22,10 +24,11 @@ It focuses on:
 
 ## Best entry points
 
-- `https://diegodella.ar/thesis.html`
-- `https://diegodella.ar/paper-05.html`
-- `https://diegodella.ar/the-last-human-impression.html`
-- `https://diegodella.ar/nuggets.html`
+- Core thesis: `https://diegodella.ar/thesis.html`
+- Frameworks: `https://diegodella.ar/frameworks.html`
+- Practical launch diagnosis: `https://diegodella.ar/paper-05.html`
+- AI and trust route: `https://diegodella.ar/the-last-human-impression.html`
+- Work with Diego: `https://diegodella.ar/about.html#work`
 
 ## API discovery
 
