@@ -1,139 +1,81 @@
 ---
-name: Narrative Mechanics
-description: "A personal authority platform built around the idea that the market decides before the search begins."
+name: Narrative Mechanics — Asphalt & Ivory
+description: "An industrial editorial system for strategy, market legibility, and mediated trust."
 colors:
-  primary: "#1a1a1a"
-  background: "#f5f0e8"
-  surface: "#ffffff"
-  yellow: "#ffcc00"
-  red: "#c52f24"
-  blue: "#0055ff"
-  muted: "#4a4a4a"
+  background: "#131313"
+  void: "#0e0e0e"
+  surface: "#1c1b1b"
+  industrial: "#262626"
+  text: "#f5f3f0"
+  muted: "#cfc4c5"
+  orange: "#f97316"
 typography:
-  display:
-    fontFamily: "Space Grotesk"
-    fontSize: "clamp(3rem, 7vw, 5.8rem)"
-    fontWeight: 700
-    lineHeight: 0.92
-    letterSpacing: "-0.035em"
-  headline:
-    fontFamily: "Space Grotesk"
-    fontSize: "clamp(2rem, 4vw, 4rem)"
-    fontWeight: 700
-    lineHeight: 1.02
-    letterSpacing: "-0.025em"
-  body:
-    fontFamily: "Inter"
-    fontSize: "1rem"
-    fontWeight: 500
-    lineHeight: 1.55
-  label:
-    fontFamily: "Space Grotesk"
-    fontSize: "0.78rem"
-    fontWeight: 700
-    lineHeight: 1.2
-    minSize: "0.75rem"
-rounded:
-  none: "0px"
+  display: "Space Grotesk 700"
+  body: "Inter 400/500/600"
+  label: "Space Grotesk 700, uppercase, 0.1em tracking"
 spacing:
-  xs: "8px"
-  sm: "16px"
-  md: "24px"
-  lg: "48px"
-  xl: "80px"
-components:
-  button-primary:
-    backgroundColor: "{colors.primary}"
-    textColor: "{colors.surface}"
-    border: "2px solid {colors.primary}"
-    padding: "14px 24px"
-  button-secondary:
-    backgroundColor: "{colors.surface}"
-    textColor: "{colors.primary}"
-    border: "2px solid {colors.primary}"
-    padding: "14px 24px"
+  base: "8px"
+  container: "1440px"
+  desktopMargin: "64px"
+  mobileMargin: "20px"
+shapes:
+  radius: "0px"
 ---
 
-# Design System: Bauhaus Neo-Brutalist
+# Narrative Mechanics — Asphalt & Ivory
 
-## North Star
+## North star
 
-**Form follows function.**
+Site feels like strategy transmitted through industrial publishing equipment: direct, nocturnal, precise, and slightly unstable. Visual tension serves hierarchy. Long-form reading remains calm.
 
-The site should feel bold, raw, commercial, and legible. It is not a soft editorial archive and not a standard consultant WordPress theme. It is a public thesis with a clear offer: Diego helps founders make strong work understandable before the market has already decided.
+## Palette
 
-## Visual Character
+- `#131313`: main background.
+- `#0e0e0e`: deepest panels, navigation, footer, contact stage.
+- `#1c1b1b` and `#262626`: layered industrial surfaces.
+- `#f5f3f0`: primary text and structural contrast.
+- `#cfc4c5`: secondary text.
+- `#f97316`: only brand accent; actions, active states, rules, status.
 
-- Large geometric type.
-- Thick black borders.
-- Flat color blocks.
-- Square corners.
-- Offset black shadows only when depth is useful.
-- One dominant claim per viewport.
-- Compact internal pages that behave like ledgers, not long decorative scroll.
-
-## Colors
-
-- **Primary** (`#1a1a1a`): Text, borders, dark sections, primary buttons.
-- **Background** (`#f5f0e8`): Warm off-white base.
-- **Surface** (`#ffffff`): Dense cards, ledgers, modal surfaces.
-- **Accent Yellow** (`#ffcc00`): Primary highlight, active states, strong CTA contrast.
-- **Accent Red** (`#c52f24`): Rare urgency or geometric emphasis.
-- **Accent Blue** (`#0055ff`): Links, focus, interactive emphasis.
-- **Muted** (`#4a4a4a`): Secondary text only.
-
-No gradients, glass, glow, soft shadows, beige-on-beige softness, or AI-style atmospheric backgrounds.
+Orange stays below roughly 10% of each viewport. No blue, yellow, gradients pretending to be light, glass, blur, or soft shadows.
 
 ## Typography
 
-- **Headlines / Labels:** Space Grotesk, bold, uppercase when used as signage.
-- **Body:** Inter, readable and direct.
-- **Scale:** Display text should be dramatically larger than body text, but capped so it does not overflow on mobile.
-- **Letter spacing:** Never tighter than `-0.04em`.
-- **Paragraph measure:** 65-75 characters max for prose.
+- Space Grotesk carries display, navigation, labels, numbers, and controls. Large titles use tight leading and negative tracking.
+- Inter carries paragraphs, descriptions, form fields, and long-form content.
+- Display text may use a restrained orange offset shadow. Body text never uses glitch effects.
+- Reading measure stays near 65–75 characters.
 
 ## Layout
 
-- Home page uses high-contrast sections with strong horizontal cuts.
-- Internal pages use compact ruled ledgers and two-column blocks to reduce vertical scroll.
-- Cards are only for distinct repeated items or framed tools. Do not nest cards.
-- Use asymmetry for emphasis, not confusion.
-- Every page should quickly answer: what is this, why should I care, where do I go next?
+- Fixed-fluid 12-column desktop grid and stacked four-column mobile rhythm.
+- Container maximum: 1440px. Desktop gutter: 64px. Mobile gutter: 20px.
+- Home uses broken grids, controlled overlap, terminal windows, data grids, and hard offsets.
+- Editorial pages use industrial framing around restrained, single-column prose.
+- Every surface uses square corners. Depth uses hard black or gray offsets, never blur.
 
 ## Components
 
-### Buttons
+- Top bar: orange signal strip with contextual page message.
+- Navigation: floating black panel, thin gray outline, orange active state, bracketed route labels.
+- Primary action: orange or ivory fill, black text, hard offset shadow.
+- Secondary action: dark fill, orange outline.
+- Terminal panel: dark surface, thin outline, compact status header, optional hard shadow.
+- Form: dark controls with bottom rules, explicit labels, visible errors, native dialog.
+- Footer: oversized DIEGO wordmark, orange outline, compact real navigation.
 
-Solid fill or white fill, thick black border, uppercase label, square corners. Hover inverts or switches to yellow. Focus uses blue outline.
+## Motion and access
 
-### Cards / Ledgers
+- Use only transform and opacity for movement.
+- Hover motion stays within 2–8px and never hides meaning.
+- `prefers-reduced-motion` disables reveal, glitch, and transition effects.
+- All text and controls meet WCAG AA. Focus ring uses signal orange.
+- Scanlines and grids remain pointer-transparent and decorative.
 
-Thick black border, white surface, square corners. Offset shadow may be used for home cards. Internal ledgers should stay denser with strong rules and minimal scroll.
+## Content and implementation rules
 
-### Navigation
-
-Primary routes: `Idea`, `Frameworks`, `Essays`, `Work`, `About`. `Start` is a contextual route from Home and the footer, not a sixth primary destination.
-
-The navbar brand is `NARRATIVE MECHANICS`. Personal attribution and footer identity remain `DIEGO`.
-
-### Forms
-
-Bottom-border inputs, clear labels, high contrast, no rounded fields.
-
-Contact uses one native dialog flow everywhere. Direct email remains visible inside it as recovery, not as a competing primary path.
-
-### Discovery
-
-- Start shows three recommended routes before exposing the full library.
-- Essays may be filtered by topic without removing content from the underlying HTML.
-- Custom framework names must be paired with plain-language “use this when” context at entry points.
-
-## Rules
-
-- Lead with: `The market decides before the search begins.`
-- Explain the commercial problem before exposing the full archive.
-- Make `Start with the thesis` and `Work with Diego` visible early.
-- Do not make the site feel like a default WordPress theme.
-- Do not make the internals feel like a separate design system.
-- Do not add decorative scroll for its own sake.
-- Do not hide the advisory offer under essays.
+- Keep Narrative Mechanics copy, routes, SEO, JSON-LD, contact API, and native dialog.
+- Never copy Foreign Rodeo branding, fake warnings, fake metrics, or placeholder links from design reference.
+- No Tailwind runtime, Material Symbols, decorative remote assets, or new framework.
+- CSS tokens in `styles/tokens.css` are palette source of truth.
+- Home composition lives in `styles/home.css`; shared shell and editorial overrides remain layered.

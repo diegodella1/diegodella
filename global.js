@@ -2,64 +2,9 @@
    global.js — diegodella.ar shared scripts v2
    ══════════════════════════════════════════════ */
 
-/* Theme contract: user choice wins; otherwise track operating-system mode. */
-(function(){
-  var root = document.documentElement;
-  var media = window.matchMedia('(prefers-color-scheme: dark)');
-  var storageKey = 'theme';
-
-  function storedTheme() {
-    try {
-      var value = localStorage.getItem(storageKey);
-      return value === 'light' || value === 'dark' ? value : null;
-    } catch (error) {
-      return null;
-    }
-  }
-
-  function syncControls() {
-    var theme = root.getAttribute('data-theme') || 'light';
-    document.querySelectorAll('[data-theme-toggle]').forEach(function(button){
-      button.setAttribute('aria-label', theme === 'dark' ? 'Use light theme' : 'Use dark theme');
-      button.setAttribute('aria-pressed', theme === 'dark' ? 'true' : 'false');
-      button.setAttribute('title', theme === 'dark' ? 'Use light theme' : 'Use dark theme');
-    });
-  }
-
-  function apply(theme, options) {
-    var next = theme === 'dark' ? 'dark' : 'light';
-    var source = options && options.source === 'user' ? 'user' : 'system';
-    root.setAttribute('data-theme', next);
-    root.setAttribute('data-theme-source', source);
-    if (source === 'user') {
-      try { localStorage.setItem(storageKey, next); } catch (error) {}
-    }
-    syncControls();
-    return next;
-  }
-
-  function toggle() {
-    return apply(root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark', { source: 'user' });
-  }
-
-  function followSystem(event) {
-    if (!storedTheme()) apply(event.matches ? 'dark' : 'light', { source: 'system' });
-  }
-
-  var saved = storedTheme();
-  apply(saved || (media.matches ? 'dark' : 'light'), { source: saved ? 'user' : 'system' });
-  if (media.addEventListener) media.addEventListener('change', followSystem);
-  else if (media.addListener) media.addListener(followSystem);
-
-  document.addEventListener('click', function(event){
-    var button = event.target.closest('[data-theme-toggle]');
-    if (!button) return;
-    event.preventDefault();
-    toggle();
-  });
-
-  window.NMTheme = { apply: apply, toggle: toggle, syncControls: syncControls };
-})();
+/* Theme is intentionally fixed. Keep the document contract explicit for pages
+   opened from disk and for older cached HTML. */
+document.documentElement.setAttribute('data-theme', 'dark');
 
 /* Nav toggle (hamburger menu) */
 (function(){
@@ -654,20 +599,7 @@
       '<a href="about.html" class="nav-link">About</a>';
 
     var navRight = nav.querySelector('.nav-right');
-    if (!navRight) {
-      navRight = create('div', 'nav-right');
-      (nav.querySelector('.nav-inner') || nav).appendChild(navRight);
-    }
-    if (!navRight.querySelector('[data-theme-toggle]')) {
-      var themeButton = create('button', 'nav-btn theme-toggle');
-      themeButton.type = 'button';
-      themeButton.setAttribute('data-theme-toggle', '');
-      themeButton.innerHTML =
-        '<svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3 7 7 0 0 0 21 12.8Z"></path></svg>' +
-        '<svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.93 4.93l1.42 1.42M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.42-1.42M17.66 6.34l1.41-1.41"></path></svg>';
-      navRight.appendChild(themeButton);
-    }
-    if (window.NMTheme) window.NMTheme.syncControls();
+    if (navRight) navRight.remove();
   }
 
   function ensureFooter() {
@@ -926,32 +858,6 @@
         trigger.setAttribute('data-contact-mode', mode);
         trigger.click();
         return result('Opened the contact flow.', { ok: true, mode: mode });
-      }
-    },
-    {
-      name: 'toggle_site_theme',
-      title: 'Toggle Site Theme',
-      description: 'Switch Narrative Mechanics between its light and dark themes.',
-      inputSchema: {
-        type: 'object',
-        properties: {
-          theme: {
-            type: 'string',
-            enum: ['light', 'dark'],
-            description: 'Theme to apply.'
-          }
-        },
-        required: ['theme'],
-        additionalProperties: false
-      },
-      annotations: { readOnlyHint: false },
-      execute: async function(input) {
-        var theme = input && input.theme;
-        if (!window.NMTheme || (theme !== 'light' && theme !== 'dark')) {
-          return result('Unable to apply theme.', { ok: false });
-        }
-        window.NMTheme.apply(theme, { source: 'user' });
-        return result('Applied ' + theme + ' theme.', { ok: true, theme: theme });
       }
     }
   ];

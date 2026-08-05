@@ -75,13 +75,13 @@ body.site-shell .page-wrap {
 .top-bar,
 .top-bar span,
 .top-bar a {
-  background-color: var(--ink);
-  color: var(--paper);
+  background-color: var(--accent);
+  color: #111111;
 }
 
 .nav,
 .nav-links {
-  background-color: var(--nav-bg);
+  background-color: var(--paper-2);
   color: var(--ink);
 }
 
@@ -104,8 +104,8 @@ body.site-shell .page-wrap {
 
 .site-footer,
 footer.site-footer {
-  background-color: var(--ink);
-  color: var(--paper);
+  background-color: #0e0e0e;
+  color: var(--ink);
 }
 
 .site-footer a,
@@ -114,7 +114,7 @@ footer.site-footer {
 .site-footer strong,
 .site-footer-title,
 .site-footer-link {
-  color: var(--paper);
+  color: var(--ink);
 }
 
 .site-footer-link {
@@ -124,7 +124,7 @@ footer.site-footer {
 .site-footer-mark,
 .site-footer-link:hover,
 .site-footer-link:active {
-  background-color: var(--yellow);
+  background-color: var(--accent);
   color: #1a1a1a;
 }
 
@@ -134,9 +134,7 @@ footer.site-footer {
 .library-filter button[aria-pressed="true"],
 .library-filter button:hover,
 .nav-link[aria-current="page"],
-.nav-link.active,
-.home-proof,
-.home-proof * {
+.nav-link.active {
   color: #1a1a1a;
 }
 
@@ -147,12 +145,16 @@ footer.site-footer {
 
 .home-contact h2,
 .home-contact p {
-  color: #f5f0e8;
+  color: var(--ink);
 }
 
 .home-contact .home-action-primary {
-  background: #f5f0e8;
-  color: #1a1a1a;
+  background: var(--ink);
+  color: #111111;
+}
+
+.site-footer .site-footer-title {
+  color: var(--ink);
 }
 
 /* Native controls need explicit colors for Windows/system dark mode. */
@@ -205,19 +207,19 @@ body.nm-page .nm-ledger-item .nm-page-label {
 
 /* The archive ledger previously inherited its light palette from a
    high-specificity legacy body rule after a runtime theme switch. */
-[data-theme="dark"] body.nm-page .nm-ledger a,
-[data-theme="dark"] body.nm-page .nm-ledger-item {
+body.nm-page .nm-ledger a,
+body.nm-page .nm-ledger-item {
   background: var(--theme-surface-1);
   color: var(--theme-ink);
 }
 
-[data-theme="dark"] body.nm-page .nm-ledger strong,
-[data-theme="dark"] body.nm-page .nm-ledger-item strong {
+body.nm-page .nm-ledger strong,
+body.nm-page .nm-ledger-item strong {
   color: var(--theme-ink);
 }
 
-[data-theme="dark"] body.nm-page .nm-ledger p,
-[data-theme="dark"] body.nm-page .nm-ledger-item p {
+body.nm-page .nm-ledger p,
+body.nm-page .nm-ledger-item p {
   color: var(--theme-muted);
 }
 
@@ -282,8 +284,8 @@ body.nm-page .nm-ledger .nm-contact-actions p a {
   background: transparent;
 }
 
-[data-theme="dark"] body.nm-page .nm-ledger .nm-contact-actions {
-  background: var(--theme-yellow);
+body.nm-page .nm-ledger .nm-contact-actions {
+  background: var(--theme-accent);
 }
 
 body.nm-page .about-signal text {
@@ -318,6 +320,144 @@ body.nm-page .about-signal text {
 
 .hero-kicker::before {
   background: currentColor;
+}
+
+/* Asphalt & Ivory editorial layer. Keep long-form pages readable while their
+   framing, indexes, and tools share the industrial home language. */
+body.site-shell .page-wrap,
+body.nm-page .page-wrap {
+  background: transparent;
+}
+
+body.site-shell .hero,
+body.nm-page .nm-page-hero {
+  position: relative;
+  margin-block-start: clamp(2rem, 5vw, 4rem);
+  border-block: 1px solid var(--border-light);
+  background-color: color-mix(in srgb, var(--paper-2) 88%, transparent);
+  background-image:
+    linear-gradient(to right, rgb(249 115 22 / 0.07) 1px, transparent 1px),
+    linear-gradient(to bottom, rgb(249 115 22 / 0.07) 1px, transparent 1px);
+  background-size: 32px 32px;
+  box-shadow: 8px 8px 0 var(--surface-2);
+}
+
+body.site-shell .hero-title,
+body.nm-page .nm-page-hero h1,
+body.nm-page .nm-hero h1,
+.content-404 h1 {
+  color: var(--ink);
+  text-shadow: 2px 0 var(--accent);
+  text-transform: uppercase;
+}
+
+body.site-shell .hero-kicker,
+body.site-shell .section-label,
+body.site-shell .archive-kicker,
+body.nm-page .nm-page-label,
+body.nm-page .nm-label {
+  width: fit-content;
+  padding: 0.45rem 0.65rem;
+  background: var(--accent);
+  color: #111111;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+body.site-shell .hero-kicker::before {
+  display: none;
+}
+
+body.site-shell .section,
+body.site-shell .essay-section,
+body.site-shell .argument {
+  border-block-start: 1px solid var(--border-light);
+}
+
+body.site-shell .section-title,
+body.site-shell .section-header-title,
+body.site-shell .arg-title,
+body.nm-page .nm-two-col h2 {
+  color: var(--ink);
+  text-transform: uppercase;
+}
+
+body.site-shell .section-rule,
+body.site-shell .chapter-divider-line {
+  background: linear-gradient(to right, var(--accent), var(--border-light) 40%, transparent);
+}
+
+body.site-shell .section-map,
+body.site-shell .definition-block,
+body.site-shell .moves-diagram,
+body.site-shell .data-table-wrap,
+body.site-shell .prediction-item,
+body.site-shell .risk-item,
+body.site-shell .concept,
+body.site-shell .questions-block,
+body.site-shell .speed-grid,
+body.site-shell .closing,
+body.site-shell .card,
+body.site-shell .entry-card,
+body.nm-page .nm-ledger a,
+body.nm-page .nm-ledger-item {
+  border-color: var(--border-light);
+  border-radius: 0;
+  background: var(--surface-1);
+  box-shadow: 5px 5px 0 #000000;
+}
+
+body.site-shell .definition-block-header,
+body.site-shell .data-table-header,
+body.site-shell .abstract-header,
+body.site-shell .framework-header,
+body.site-shell .speed-grid-header,
+body.site-shell .questions-header {
+  background: var(--accent);
+  color: #111111;
+}
+
+body.site-shell .definition-block-header *,
+body.site-shell .data-table-header *,
+body.site-shell .abstract-header *,
+body.site-shell .framework-header *,
+body.site-shell .speed-grid-header *,
+body.site-shell .questions-header * {
+  color: #111111;
+}
+
+body.site-shell .paper-nav a,
+body.site-shell .paper-nav-back,
+body.site-shell .site-tail-card {
+  border: 1px solid var(--border-light);
+  background: var(--surface-1);
+  box-shadow: 4px 4px 0 #000000;
+}
+
+body.site-shell .paper-nav a:hover,
+body.site-shell .paper-nav-back:hover,
+body.site-shell .site-tail-card:hover,
+body.nm-page .nm-ledger a:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+  transform: translate(-2px, -2px);
+}
+
+body.nm-page .nm-ledger {
+  gap: 1rem;
+  background: transparent;
+}
+
+body.nm-page .nm-ledger strong {
+  text-transform: uppercase;
+}
+
+body.page-404 .content-404,
+.content-404 {
+  border: 2px solid var(--accent);
+  background: var(--paper-2);
+  box-shadow: 9px 9px 0 var(--surface-2);
 }
 
 @media (hover: hover) {

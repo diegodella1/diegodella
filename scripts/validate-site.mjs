@@ -87,10 +87,13 @@ for (const file of pages) {
   const head = source.slice(0, source.indexOf('</head>'));
   if (!/<html[^>]+lang="[^"]+"/i.test(source)) fail(file, 'missing html lang');
   if (!/<meta[^>]+name="viewport"/i.test(source)) fail(file, 'missing viewport meta');
-  if (!/<meta[^>]+name="theme-color"[^>]+id="themeColor"|<meta[^>]+id="themeColor"[^>]+name="theme-color"/i.test(source)) {
-    fail(file, 'missing addressable theme-color meta');
+  if (!/<meta[^>]+name="theme-color"[^>]+content="#131313"[^>]+id="themeColor"|<meta[^>]+content="#131313"[^>]+name="theme-color"[^>]+id="themeColor"/i.test(source)) {
+    fail(file, 'missing fixed dark theme-color meta');
   }
-  if (!/data-theme-source/i.test(head)) fail(file, 'missing theme bootstrap contract');
+  if (!/<html[^>]+data-theme="dark"/i.test(source)) fail(file, 'missing fixed dark document theme');
+  if (/data-theme-source|prefers-color-scheme:dark|id="themeToggle"|data-theme-toggle/i.test(head)) {
+    fail(file, 'obsolete theme switching contract remains');
+  }
   if (!/href="#main-content"/i.test(source)) fail(file, 'missing skip link');
   if (!/<main[^>]+id="main-content"/i.test(source)) fail(file, 'missing main-content landmark');
   if (count(source, /<h1\b/gi) !== 1) fail(file, `expected one h1, found ${count(source, /<h1\b/gi)}`);
@@ -117,9 +120,6 @@ for (const file of pages) {
   }
   if (!/class="nav-brand"[^>]*>NARRATIVE MECHANICS<\/a>/i.test(source)) {
     fail(file, 'primary brand must be NARRATIVE MECHANICS');
-  }
-  if (!/<div class="nav-links"[\s\S]*?<div class="nav-right">[\s\S]*?data-theme-toggle/i.test(source)) {
-    fail(file, 'navigation must include theme control after primary links');
   }
 
   for (const match of source.matchAll(/(?:href|src)="([^"#?]+)(?:\?[^"#]*)?(?:#[^"]*)?"/gi)) {
@@ -169,10 +169,8 @@ for (const token of [
     fail('styles/tokens.css', `${token} must be a single public alias`);
   }
 }
-const lightThemeBlock = tokensCss.match(/:root\s*\{([\s\S]*?)\n\}/)?.[1];
-const darkThemeBlock = tokensCss.match(/\[data-theme="dark"\]\s*\{([\s\S]*?)\n\}/)?.[1];
-const lightThemeTokens = lightThemeBlock ? tokenMap(lightThemeBlock) : {};
-const darkThemeTokens = darkThemeBlock ? { ...lightThemeTokens, ...tokenMap(darkThemeBlock) } : {};
+const themeBlock = tokensCss.match(/:root\s*\{([\s\S]*?)\n\}/)?.[1];
+const themeTokens = themeBlock ? tokenMap(themeBlock) : {};
 for (const token of [
   '--theme-ink',
   '--theme-ink-2',
@@ -196,13 +194,14 @@ for (const token of [
   '--theme-control-accent-fg',
   '--theme-on-accent'
 ]) {
-  if (!lightThemeTokens[token] || !darkThemeTokens[token]) {
-    fail('styles/tokens.css', `${token} must define light and dark values`);
+  if (!themeTokens[token]) {
+    fail('styles/tokens.css', `${token} must define a fixed dark value`);
   }
 }
-if (!lightThemeBlock || !darkThemeBlock) {
-  fail('styles/tokens.css', 'missing light or dark token block');
-} else for (const [theme, values] of [['light', lightThemeTokens], ['dark', darkThemeTokens]]) {
+if (!themeBlock) {
+  fail('styles/tokens.css', 'missing fixed dark token block');
+} else {
+  const values = themeTokens;
   for (const [foreground, background, minimum] of [
     ['--control-fg', '--control-bg', 4.5],
     ['--control-primary-fg', '--control-primary-bg', 4.5],
@@ -215,12 +214,12 @@ if (!lightThemeBlock || !darkThemeBlock) {
     const foregroundValue = tokenValue(values, foreground);
     const backgroundValue = tokenValue(values, background);
     if (!foregroundValue || !backgroundValue) {
-      fail('styles/tokens.css', `${theme} contrast pair ${foreground}/${background} must use hex values`);
+      fail('styles/tokens.css', `contrast pair ${foreground}/${background} must use hex values`);
       continue;
     }
     const ratio = contrastRatio(foregroundValue, backgroundValue);
     if (ratio < minimum) {
-      fail('styles/tokens.css', `${theme} ${foreground}/${background} contrast ${ratio.toFixed(2)} is below ${minimum}:1`);
+      fail('styles/tokens.css', `${foreground}/${background} contrast ${ratio.toFixed(2)} is below ${minimum}:1`);
     }
   }
 }
@@ -263,8 +262,11 @@ for (const legacyStylesheet of ['styles/legacy.css', 'styles/legacy-components.c
 }
 
 const globalJs = fs.readFileSync(path.join(root, 'global.js'), 'utf8');
-if (!/window\.NMTheme/.test(globalJs) || !/data-theme-source/.test(globalJs)) {
-  fail('global.js', 'missing runtime theme switching contract');
+if (!/document\.documentElement\.setAttribute\('data-theme', 'dark'\)/.test(globalJs)) {
+  fail('global.js', 'missing fixed dark runtime fallback');
+}
+if (/window\.NMTheme|themeToggle|data-theme-toggle|localStorage\.getItem\('theme'\)/.test(globalJs)) {
+  fail('global.js', 'obsolete theme switching runtime remains');
 }
 if (!/<dialog class="contact-modal"/.test(globalJs) || !/\.showModal\(\)/.test(globalJs)) {
   fail('global.js', 'contact flow must use a native dialog');

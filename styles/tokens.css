@@ -1,26 +1,27 @@
 :root {
-  --theme-ink: #1a1a1a;
-  --theme-ink-2: #3f3f3f;
-  --theme-ink-3: #4a4a4a;
-  --theme-paper: #f5f0e8;
-  --theme-paper-2: #ffffff;
-  --theme-paper-3: #eee8de;
-  --theme-surface-1: #ffffff;
-  --theme-surface-2: #f5f0e8;
-  --theme-surface-accent: #fff4bf;
-  --theme-accent: #004bd6;
-  --theme-accent-hover: #003aa8;
-  --theme-accent-light: #e6eeff;
-  --theme-yellow: #ffcc00;
-  --theme-highlight: #ffcc00;
-  --theme-red: #c52f24;
-  --theme-muted: #4a4a4a;
-  --theme-border-light: #767676;
-  --theme-control-bg: #ffffff;
-  --theme-control-primary-bg: #1a1a1a;
-  --theme-control-primary-fg: #f5f0e8;
+  /* Asphalt & Ivory: one fixed, high-contrast dark theme. */
+  --theme-ink: #f5f3f0;
+  --theme-ink-2: #d1ccca;
+  --theme-ink-3: #b3acab;
+  --theme-paper: #131313;
+  --theme-paper-2: #0e0e0e;
+  --theme-paper-3: #201f1f;
+  --theme-surface-1: #1c1b1b;
+  --theme-surface-2: #262626;
+  --theme-surface-accent: #352117;
+  --theme-accent: #f97316;
+  --theme-accent-hover: #ff9a52;
+  --theme-accent-light: #352117;
+  --theme-yellow: #f97316;
+  --theme-highlight: #2b1b13;
+  --theme-red: #ffb4ab;
+  --theme-muted: #cfc4c5;
+  --theme-border-light: #70696a;
+  --theme-control-bg: #0e0e0e;
+  --theme-control-primary-bg: #f5f3f0;
+  --theme-control-primary-fg: #111111;
   --theme-control-accent-fg: #111111;
-  --theme-on-accent: #ffffff;
+  --theme-on-accent: #111111;
 
   --ink: var(--theme-ink);
   --ink-2: var(--theme-ink-2);
@@ -79,30 +80,5 @@
   --z-toast: 100;
   --z-tooltip: 110;
   --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
-  color-scheme: light;
-}
-
-[data-theme="dark"] {
-  --theme-ink: #f5f0e8;
-  --theme-ink-2: #e5dfd5;
-  --theme-ink-3: #d1cbc1;
-  --theme-paper: #1a1a1a;
-  --theme-paper-2: #242424;
-  --theme-paper-3: #303030;
-  --theme-surface-1: #242424;
-  --theme-surface-2: #1a1a1a;
-  --theme-surface-accent: #403600;
-  --theme-accent: #8fb0ff;
-  --theme-accent-hover: #bfd0ff;
-  --theme-accent-light: #25345c;
-  --theme-highlight: #403600;
-  --theme-red: #ff8378;
-  --theme-muted: #d1cbc1;
-  --theme-border-light: #a39e96;
-  --theme-control-bg: #242424;
-  --theme-control-primary-bg: #f5f0e8;
-  --theme-control-primary-fg: #1a1a1a;
-  --theme-control-accent-fg: #1a1a1a;
-  --theme-on-accent: #1a1a1a;
   color-scheme: dark;
 }

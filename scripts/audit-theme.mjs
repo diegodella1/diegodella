@@ -19,7 +19,7 @@ const requestedViewports = process.env.AUDIT_VIEWPORTS?.split(',').map((name) =>
 const viewports = allViewports.filter(
   (viewport) => !requestedViewports || requestedViewports.includes(viewport.name)
 );
-const themes = ['light', 'dark'];
+const themes = ['dark'];
 const browserCandidates = [
   process.env.CHROME_PATH,
   '/usr/bin/chromium',
@@ -254,14 +254,14 @@ try {
       let pageReady = false;
       for (let attempt = 0; attempt < 400; attempt += 1) {
         pageReady = await evaluate(
-          `location.href === ${JSON.stringify(pageUrl)} && document.readyState === "complete" && Boolean(window.NMTheme)`
+          `location.href === ${JSON.stringify(pageUrl)} && document.readyState === "complete" && document.documentElement.getAttribute("data-theme") === "dark"`
         );
         if (pageReady) break;
         await new Promise((resolve) => setTimeout(resolve, 25));
       }
       if (!pageReady) {
-        const state = await evaluate('({ href: location.href, readyState: document.readyState, theme: document.documentElement.getAttribute("data-theme"), hasTheme: Boolean(window.NMTheme) })');
-        throw new Error(`${page} did not load its theme contract: ${JSON.stringify(state)}`);
+        const state = await evaluate('({ href: location.href, readyState: document.readyState, theme: document.documentElement.getAttribute("data-theme") })');
+        throw new Error(`${page} did not load its fixed theme: ${JSON.stringify(state)}`);
       }
       await evaluate(`(() => {
         const style = document.createElement('style');
@@ -273,7 +273,6 @@ try {
       // the computed fallback stack instead of waiting forever on document.fonts.
 
       for (const theme of themes) {
-        await evaluate(`window.NMTheme.apply(${JSON.stringify(theme)}, { source: "audit" })`);
         await evaluate('new Promise((resolve) => requestAnimationFrame(() => requestAnimationFrame(resolve)))');
         if (process.env.AUDIT_DEBUG && theme === 'dark') {
           const debug = await evaluate(`({
@@ -291,6 +290,19 @@ try {
           console.error(`${page} theme debug: ${JSON.stringify(debug)}`);
         }
         record(page, viewport.name, theme, 'default', await evaluate(auditExpression));
+
+        if (process.env.AUDIT_SCREENSHOT_DIR) {
+          fs.mkdirSync(process.env.AUDIT_SCREENSHOT_DIR, { recursive: true });
+          const capture = await client.call('Page.captureScreenshot', {
+            format: 'png',
+            captureBeyondViewport: true,
+            fromSurface: true
+          });
+          fs.writeFileSync(
+            path.join(process.env.AUDIT_SCREENSHOT_DIR, `${page.replace(/\.html$/, '')}-${viewport.name}.png`),
+            Buffer.from(capture.data, 'base64')
+          );
+        }
 
         if (page === 'index.html' && viewport.name === 'desktop') {
           await evaluate('document.querySelector("[data-open-contact]")?.click()');
@@ -315,9 +327,10 @@ try {
   if (client) client.close();
   if (browser.exitCode === null) {
     browser.kill('SIGTERM');
+    await new Promise((resolve) => browser.once('exit', resolve));
   }
   try {
-    fs.rmSync(profile, { recursive: true, force: true, maxRetries: 5, retryDelay: 100 });
+    fs.rmSync(profile, { recursive: true, force: true, maxRetries: 10, retryDelay: 150 });
   } catch (error) {
     console.error(`Theme audit warning: could not remove temporary Chromium profile (${error.code || error.message}).`);
   }
