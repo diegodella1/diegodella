@@ -49,7 +49,9 @@ if [[ ! -d "$target" ]]; then
 
   (
     cd "$staging"
-    find . -type f -print0 | sort -z | xargs -0 sha256sum > RELEASE_MANIFEST.sha256
+    find . -type f ! -name RELEASE_MANIFEST.sha256 -print0 \
+      | sort -z \
+      | xargs -0 sha256sum > RELEASE_MANIFEST.sha256
   )
 
   mv "$staging" "$target"

@@ -15,6 +15,12 @@ curl -fsS https://diegodella.ar/ >/dev/null
 an exact commit, validates the site and contact tests, builds a public-file
 allowlist, writes a SHA-256 manifest, and atomically switches `current`.
 
+Verify an activated release at any time:
+
+```bash
+(cd .releases/current && sha256sum -c RELEASE_MANIFEST.sha256)
+```
+
 `--workspace` exists only for bootstrap and local recovery. Normal production
 deploys must use committed refs.
 
