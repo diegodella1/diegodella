@@ -21,6 +21,8 @@ Diego Dell'Agostino writes Narrative Mechanics, a publication on narrative strat
 - [Broadcast Control Room](https://broadcast-planner.diegodella.ar/): broadcast planning, media preparation, schedule validation, and browser playout for OBS or vMix.
 - [telePRO](https://teleprompter.diegodella.ar/): browser-based teleprompter for live production, remote control, rehearsal, and reliable on-camera delivery.
 - [PolyBot BTC](https://tradingbot.diegodella.ar/): safety-first research and paper-trading framework for recurring BTC Up/Down prediction markets.
+- [Referí](https://referi.diegodella.ar/): a pocket referee booth for live football matches where you review the play, make the call, and compare it with the official ruling.
+- [El Presidente](https://presidente.diegodella.ar/): a daily game of decisions, consequences, and minigames where you govern for four years and discover what kind of president you were.
 
 ## Best starting points
 

@@ -294,6 +294,12 @@ for (const [file, source] of [['about.html', aboutHtml], ['about.md', aboutMarkd
   if (!source.includes('https://lifearg.diegodella.ar/')) {
     fail(file, 'missing Life Match Argentina project link');
   }
+  if (!source.includes('https://referi.diegodella.ar/')) {
+    fail(file, 'missing Referí project link');
+  }
+  if (!source.includes('https://presidente.diegodella.ar/')) {
+    fail(file, 'missing El Presidente project link');
+  }
   if (source.includes('rtvtime.diegodella.ar')) {
     fail(file, 'obsolete rtvtime URL is still present');
   }
