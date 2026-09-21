@@ -13,19 +13,26 @@ The canonical Person is Diego Dell'Agostino.
 authoritative profile: https://diegodella.ar/about.html
 ```
 
-The complete Person node appears on `about.html` inside a `ProfilePage` graph. Other pages reference the same `@id`; they do not create competing identities.
+The same complete Person node appears on `about.html` inside a `ProfilePage` graph and on the homepage alongside `WebSite` and `WebPage`. Both resolve the `entity: person` marker in `src/data/presentation.json` through `src/layouts/SiteLayout.astro`, using `src/data/site.json`. Other pages reference the same `@id`; they do not create competing identities.
 
 Supported public facts include:
 
 - official name: Diego Dell'Agostino;
-- location: Argentina;
-- category: media and digital product entrepreneur;
+- location: Buenos Aires, Argentina (`Place` with a city-level `PostalAddress`, country code `AR`);
+- category: media and product entrepreneur focused on AI-native media;
+- languages: English and Spanish;
+- email: dellagostino@gmail.com, already public on Contact, Consulting, and Privacy;
 - core experience: digital media, digital products, marketing, content strategy, audience development, and communities;
 - Posta relationship: co-founder;
 - Roxom TV relationship: founding team, media architecture, and product operations;
+- Digital House relationship: Digital Marketing professor (2017–2022), Academic Content Lead (2018–2022);
 - current territory: AI-native media, agents, agentic workflows, editorial operations, media automation, and AI-mediated discovery.
 
-Do not add a portrait to Person schema until Diego supplies or approves a repository image. Do not use `worksFor` for historical relationships. If role dates become available and are worth modeling, use supported Role nodes with sourced dates.
+The three organizations appear under `affiliation` with factual descriptions of Diego's roles. No current employment, graduation, or award is implied. El Ojo jury service remains in the canonical short bio used for `description`.
+
+The September 2026 asset review found only typographic site graphics, so Person `image` is omitted. Add it when an actual representative person image is available; do not substitute a generic site graphic. LinkedIn and GitHub remain the only verified personal profile URLs found in active repository content. `person.sameAs` must match `socialProfiles`, and `person.description` must match `bios.short`; the build validator checks both.
+
+Schema Eligibility & Impact Index: 83/100, valid but limited (content alignment 25, search-feature eligibility 10, data completeness 18, technical correctness 15, maintenance 10, low spam risk 5). The purpose is consistent entity identification. Person markup does not promise a rich result. Reference: [Schema.org Person](https://schema.org/Person) and [Google ProfilePage guidance](https://developers.google.com/search/docs/appearance/structured-data/profile-page).
 
 ### WebSite
 
@@ -84,6 +91,10 @@ Schema is present in source HTML. It must not depend on JavaScript execution.
 - Articles: `Article` whose `author` and `publisher` reference Person `#person`; `mainEntityOfPage` points to the canonical WebPage.
 - Hubs and case studies: `CollectionPage` or `WebPage` plus a breadcrumb graph.
 - Visible navigation hierarchy: `BreadcrumbList` matching the page’s visible breadcrumb.
+
+About, Consulting, and Speaking also have visible FAQ sections (9, 8, and 7 questions). `src/data/faqs.json` supplies both the HTML and FAQPage JSON-LD through `src/components/FaqSection.astro`. Answers paraphrase the existing page copy. The consulting service area—Argentina and Latin America, with remote work worldwide—was explicitly confirmed by Diego. `src/data/consulting.json` supplies the visible lede and Service definition, whose provider references Person `#person`. FAQ parity tests compare the rendered questions, answers, and links against JSON-LD.
+
+FAQ/Service eligibility assessment: 75/100, valid but limited (content alignment 25, Google rich-result eligibility 0, accuracy 20, technical correctness 15, maintenance 10, low spam risk 5). Google [retired FAQ rich results in May 2026](https://developers.google.com/search/updates#may-2026); this markup expresses the visible answers and service without promising a Search feature or AI citation.
 
 Person and ProfilePage markup primarily improves entity clarity. It is not represented as a Google rich-result promise. Article and visible breadcrumb markup are stronger search-feature candidates when their visible content and other eligibility requirements are satisfied.
 

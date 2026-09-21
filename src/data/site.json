@@ -11,9 +11,17 @@
     "id": "https://diegodella.ar/#person",
     "name": "Diego Dell'Agostino",
     "url": "https://diegodella.ar/about.html",
-    "jobTitle": "Media and digital product entrepreneur",
-    "homeLocation": "Argentina",
-    "description": "Media and digital product entrepreneur. Co-founder of Posta, member of Roxom TV's founding team, and builder of AI-assisted editorial tools.",
+    "jobTitle": "Media and product entrepreneur focused on AI-native media",
+    "homeLocation": {
+      "@type": "Place",
+      "name": "Buenos Aires, Argentina",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Buenos Aires",
+        "addressCountry": "AR"
+      }
+    },
+    "description": "Diego Dell'Agostino has worked in digital media for more than 15 years. He co-founded Posta (ICFJ and SembraMedia’s Velocidad accelerator; PodX 2022) and joined Roxom TV’s founding team. He taught Digital Marketing at Digital House and served as a jury member for El Ojo de Iberoamérica (Audio & Sound). He now applies that experience to AI-native media.",
     "sameAs": [
       "https://www.linkedin.com/in/diegodella/",
       "https://github.com/diegodella1"
@@ -31,6 +39,30 @@
       "Agentic Workflows",
       "Media Automation",
       "AI-Mediated Discovery"
+    ],
+    "knowsLanguage": [
+      "en",
+      "es"
+    ],
+    "email": "dellagostino@gmail.com",
+    "affiliation": [
+      {
+        "@type": "Organization",
+        "name": "Posta",
+        "url": "https://diegodella.ar/work-posta.html",
+        "description": "Diego Dell'Agostino co-founded Posta in Buenos Aires."
+      },
+      {
+        "@type": "Organization",
+        "name": "Roxom TV",
+        "url": "https://diegodella.ar/work-roxom.html",
+        "description": "Diego Dell'Agostino joined Roxom TV’s founding team, working on media architecture and product operations."
+      },
+      {
+        "@type": "Organization",
+        "name": "Digital House",
+        "description": "Diego Dell'Agostino taught Digital Marketing (2017–2022) and was Academic Content Lead for the initial and advanced courses in Argentina and Brazil (2018–2022)."
+      }
     ]
   },
   "positioning": {

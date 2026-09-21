@@ -211,8 +211,8 @@ for (const file of pages) {
     if (file !== 'index.html' && !schemas.some((schema) => findSchemaObjects(schema, (node) => typeIncludes(node?.['@type'], 'BreadcrumbList')).length)) {
       fail(file, 'missing static BreadcrumbList schema');
     }
-    if (schemas.some((schema) => findSchemaObjects(schema, (node) => typeIncludes(node?.['@type'], 'FAQPage')).length)) {
-      fail(file, 'unsupported FAQPage schema remains');
+    if (!['about.html', 'consulting.html', 'speaking.html'].includes(file) && schemas.some((schema) => findSchemaObjects(schema, (node) => typeIncludes(node?.['@type'], 'FAQPage')).length)) {
+      fail(file, 'FAQPage schema requires an approved visible FAQ section');
     }
     if (schemas.some((schema) => findSchemaObjects(schema, (node) => typeIncludes(node?.['@type'], 'ScholarlyArticle')).length)) {
       fail(file, 'editorial content must not be labeled ScholarlyArticle');
@@ -298,16 +298,31 @@ for (const [file, schemas] of schemasByFile) {
     }
   }
 }
-if (fullPersonDefinitions.length !== 1 || fullPersonDefinitions[0]?.file !== 'about.html') {
-  fail('about.html', `expected one complete canonical Person definition, found ${fullPersonDefinitions.length}`);
-} else {
-  const canonicalPerson = fullPersonDefinitions[0].entity;
-  if (canonicalPerson.name !== siteData.person.name) fail('about.html', 'Person name differs from site-data.json');
-  if (canonicalPerson.url !== siteData.person.url) fail('about.html', 'Person URL differs from site-data.json');
-  if (canonicalPerson.jobTitle !== siteData.person.jobTitle) fail('about.html', 'Person job title differs from site-data.json');
-  if (canonicalPerson.description !== siteData.person.description) fail('about.html', 'Person description differs from site-data.json');
-  if (JSON.stringify(canonicalPerson.sameAs) !== JSON.stringify(siteData.person.sameAs)) fail('about.html', 'Person sameAs differs from site-data.json');
-  if (JSON.stringify(canonicalPerson.knowsAbout) !== JSON.stringify(siteData.person.knowsAbout)) fail('about.html', 'Person knowsAbout differs from site-data.json');
+if (JSON.stringify(fullPersonDefinitions.map(({ file }) => file).sort()) !== JSON.stringify(['about.html', 'index.html'])) {
+  fail('about.html', 'expected one complete canonical Person definition on each of About and home');
+}
+const { id: canonicalPersonId, ...personProperties } = siteData.person;
+const expectedPerson = {
+  '@type': 'Person',
+  '@id': canonicalPersonId,
+  ...personProperties,
+  mainEntityOfPage: { '@id': `${siteData.person.url}#webpage` },
+};
+for (const { file, entity } of fullPersonDefinitions) {
+  if (JSON.stringify(entity) !== JSON.stringify(expectedPerson)) fail(file, 'complete Person graph differs from site-data.json');
+}
+if (siteData.person.description !== siteData.bios.short) {
+  fail('site-data.json', 'Person description must match the canonical short bio');
+}
+if (JSON.stringify(siteData.person.sameAs) !== JSON.stringify(siteData.socialProfiles.map(profile => profile.url))) {
+  fail('site-data.json', 'Person sameAs must match socialProfiles');
+}
+const personAddress = siteData.person.homeLocation?.address;
+if (siteData.person.homeLocation?.['@type'] !== 'Place' || personAddress?.['@type'] !== 'PostalAddress' || personAddress?.addressLocality !== 'Buenos Aires' || personAddress?.addressCountry !== 'AR') {
+  fail('site-data.json', 'Person homeLocation must identify Buenos Aires, AR');
+}
+if (JSON.stringify(siteData.person.knowsLanguage) !== JSON.stringify(['en', 'es'])) {
+  fail('site-data.json', 'Person knowsLanguage must identify English and Spanish');
 }
 
 const aboutNodes = (schemasByFile.get('about.html') || []).flatMap(schemaNodes);

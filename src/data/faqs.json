@@ -1,0 +1,104 @@
+{
+  "about": [
+    {
+      "question": "Who is Diego Dell'Agostino?",
+      "answer": "Diego Dell'Agostino builds media products and the systems behind them. He co-founded Posta, joined Roxom TV’s founding team, and now works on AI-assisted editorial operations."
+    },
+    {
+      "question": "Where is Diego based?",
+      "answer": "Diego is based in Buenos Aires, Argentina, and worked remotely from Buenos Aires on Roxom TV’s global operation."
+    },
+    {
+      "question": "What did Diego build at Posta?",
+      "answer": "Diego co-founded <a href=\"work-posta.html\">Posta</a>, which built original programming, branded audio, audience relationships, distribution, and regional operations. He worked across product, marketing, growth, positioning, and business development; PodX acquired a majority stake in 2022."
+    },
+    {
+      "question": "What was Diego’s role at Roxom TV?",
+      "answer": "As part of <a href=\"work-roxom.html\">Roxom TV’s founding team</a>, Diego worked on media architecture and product operations for a 24/7 network spanning San Francisco, London, and Hong Kong, including live production, data, automation, and internal tools."
+    },
+    {
+      "question": "What is Narrative Mechanics?",
+      "answer": "<a href=\"essays.html\">Narrative Mechanics</a> is Diego’s body of essays and frameworks about positioning, attention, trust, product meaning, and what changes when machines increasingly mediate discovery."
+    },
+    {
+      "question": "What does Diego work on now?",
+      "answer": "Diego builds and tests agents, research systems, live-production tools, editorial infrastructure, product experiments, and interfaces for <a href=\"ai-media.html\">AI-native media</a>: products and operations designed with AI inside the workflow."
+    },
+    {
+      "question": "Where can I find official bios and identity details?",
+      "answer": "The <a href=\"media-kit.html\">Media Kit</a> contains Diego’s official name, bios, location, topics, and identity links."
+    },
+    {
+      "question": "How do I contact Diego for press, consulting, or speaking?",
+      "answer": "For interviews and events, see <a href=\"speaking.html\">Speaking</a>; for product, positioning, and operational advice, see <a href=\"consulting.html\">Consulting</a>. Use <a href=\"contact.html\">Contact</a> to start a conversation with context on what you are building and where the product, workflow, team, or market interpretation is breaking."
+    },
+    {
+      "question": "How is Diego’s name spelled?",
+      "answer": "The official spelling is Diego Dell'Agostino, with an apostrophe and no space after Dell. The <a href=\"media-kit.html\">Media Kit</a> provides the name and identity details for credits and biographies."
+    }
+  ],
+  "consulting": [
+    {
+      "question": "Who is consulting for, and what problems does it address?",
+      "answer": "Consulting is for digital media, audio and video, newsrooms, content-product teams, marketers, and education programs. Typical problems include weak operating systems around strong creative work, unclear positioning or distribution, AI tools without ownership or recovery, and teams scaling without shared processes."
+    },
+    {
+      "question": "What engagement shapes are available?",
+      "answer": "Options include an operational diagnosis in a short intensive block; product or positioning sparring on a monthly retainer or 4–6 week block; an outcome-scoped editorial or AI-ops project; a half-day or full-day in-company workshop; and education program support per module or cohort. Scope and timing are agreed in conversation."
+    },
+    {
+      "question": "Where does Diego consult, and is remote work available?",
+      "answer": "Diego is based in Buenos Aires and consults in Argentina and Latin America, with remote work available worldwide."
+    },
+    {
+      "question": "How do I start a consulting conversation?",
+      "answer": "Email <a href=\"mailto:dellagostino@gmail.com\">dellagostino@gmail.com</a> or use <a href=\"contact.html\">Contact</a>. Include what has to work, what exists today, the relevant team or product, timing, and where the system breaks. Consulting fees are by inquiry."
+    },
+    {
+      "question": "Should I use Consulting or Speaking?",
+      "answer": "Consulting is for advisory work with a team or product. For interviews, panels, and event bookings, use <a href=\"speaking.html#booking\">Speaking</a>."
+    },
+    {
+      "question": "What experience does Diego bring from Posta?",
+      "answer": "Diego co-founded <a href=\"work-posta.html\">Posta</a>, working on product, marketing, positioning, and business development; PodX acquired a majority stake in December 2022."
+    },
+    {
+      "question": "What experience does Diego bring from Roxom TV?",
+      "answer": "Diego was on <a href=\"work-roxom.html\">Roxom TV’s founding team</a>, working on media architecture and product operations for a 24/7 network."
+    },
+    {
+      "question": "What did Diego teach at Digital House?",
+      "answer": "Diego was a Digital Marketing professor and Academic Content Lead for Argentina and Brazil, including immersion and in-company programs; see <a href=\"about.html\">About</a> for his background."
+    }
+  ],
+  "speaking": [
+    {
+      "question": "What topics does Diego speak about?",
+      "answer": "Topics include AI-native media, agents in media workflows, editorial judgment, media products, global live operations, podcasting, marketing and distribution, branded audio, teaching, audiences and communities, AI-mediated discovery, and narrative mechanics."
+    },
+    {
+      "question": "What speaking formats are available?",
+      "answer": "Formats include interviews, panels, 20–40 minute talks plus Q&A, and 90–180 minute workshops. Long-form interviews, reported conversations, operator panels, working sessions, and talks built around a concrete problem all fit."
+    },
+    {
+      "question": "Who are these talks for?",
+      "answer": "Audiences include media and newsroom leaders, audio and video teams, founders, product and marketing teams, and education programs."
+    },
+    {
+      "question": "Where has Diego spoken before?",
+      "answer": "Diego was a panelist at the Ibero-American Colloquium on Digital Journalism at UT Austin, in the framework of ICFJ, in 2021 and 2022. He also spoke at UCES in 2023 and Interact in 2024. See <a href=\"speaking.html#past-talks\">Past talks</a>."
+    },
+    {
+      "question": "How do I book a talk or interview?",
+      "answer": "Use <a href=\"contact.html\">Contact</a> and include the format, audience, date, location or time zone, and the question you want the conversation to answer. Speaking fees are by inquiry."
+    },
+    {
+      "question": "Where can organizers find copy-ready bios?",
+      "answer": "Copy-ready bios are in the <a href=\"media-kit.html\">Media Kit</a>; the <a href=\"speaking.html#organizers\">Speaker kit</a> summarizes Diego’s background, formats, audiences, and booking details."
+    },
+    {
+      "question": "How is speaking different from consulting?",
+      "answer": "Speaking covers interviews, panels, workshops, and talks for an audience. For advisory work with a team or product, see <a href=\"consulting.html\">Consulting</a>."
+    }
+  ]
+}

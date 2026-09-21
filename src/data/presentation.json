@@ -308,39 +308,7 @@
           "@context": "https://schema.org",
           "@graph": [
             {
-              "@type": "Person",
-              "@id": "https://diegodella.ar/#person",
-              "name": "Diego Dell'Agostino",
-              "url": "https://diegodella.ar/about.html",
-              "description": {
-                "person": "description"
-              },
-              "jobTitle": "Media and digital product entrepreneur",
-              "homeLocation": {
-                "@type": "Country",
-                "name": "Argentina"
-              },
-              "sameAs": [
-                "https://www.linkedin.com/in/diegodella/",
-                "https://github.com/diegodella1"
-              ],
-              "knowsAbout": [
-                "Digital Media",
-                "Digital Products",
-                "Marketing",
-                "Content Strategy",
-                "Audience Development and Communities",
-                "Media Products",
-                "Editorial Operations",
-                "AI-Native Media",
-                "AI Agents",
-                "Agentic Workflows",
-                "Media Automation",
-                "AI-Mediated Discovery"
-              ],
-              "mainEntityOfPage": {
-                "@id": "https://diegodella.ar/about.html#webpage"
-              }
+              "entity": "person"
             },
             {
               "@type": "ProfilePage",
@@ -3327,16 +3295,7 @@
               }
             },
             {
-              "@type": "Person",
-              "@id": "https://diegodella.ar/#person",
-              "name": "Diego Dell'Agostino",
-              "url": "https://diegodella.ar/about.html",
-              "mainEntityOfPage": {
-                "@id": "https://diegodella.ar/about.html#webpage"
-              },
-              "description": {
-                "person": "description"
-              }
+              "entity": "person"
             }
           ]
         }

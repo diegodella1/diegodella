@@ -12,6 +12,15 @@ const article = site.writing.find(article => article.slug === page);
 function resolve(value: any): any {
   if (Array.isArray(value)) return value.map(resolve);
   if (value && typeof value === 'object') {
+    if (value.entity === 'person') {
+      const { id, ...person } = site.person;
+      return {
+        '@type': 'Person',
+        '@id': id,
+        ...person,
+        mainEntityOfPage: { '@id': `${person.url}#webpage` },
+      };
+    }
     if (value.article) return article?.[value.article as keyof typeof article];
     if (value.bio) return site.bios[value.bio as keyof typeof site.bios];
     if (value.person) return site.person[value.person as keyof typeof site.person];

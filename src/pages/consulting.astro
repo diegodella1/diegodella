@@ -2,6 +2,20 @@
 import SiteLayout from '../layouts/SiteLayout.astro';
 import Navigation from '../components/Navigation.astro';
 import Footer from '../components/Footer.astro';
+import FaqSection from '../components/FaqSection.astro';
+import consulting from '../data/consulting.json';
+import site from '../data/site.json';
+
+const serviceUrl = new URL('consulting.html', site.site.url).href;
+const serviceSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  '@id': `${serviceUrl}#service`,
+  ...consulting,
+  url: serviceUrl,
+  provider: { '@id': site.person.id },
+  mainEntityOfPage: { '@id': `${serviceUrl}#webpage` },
+};
 
 const engagements = [
   { name: 'Operational diagnosis', description: 'Review of product, workflow, and distribution; a friction map and priorities.', shape: 'Short intensive block' },
@@ -18,7 +32,7 @@ const engagements = [
   <main id="main-content">
     <header class="nm-page-hero">
       <h1>Advise.</h1>
-      <p>Consulting for media and product teams, from Buenos Aires. I advise when the work is strong but the system — product, distribution, operations, or market meaning — is not coherent enough yet.</p>
+      <p>{consulting.description}</p>
     </header>
     <section class="nm-page-main">
       <div class="nm-two-col" id="who-for">
@@ -85,9 +99,11 @@ const engagements = [
           <p class="nm-page-copy">For interviews, panels, and event bookings, use <a href="speaking.html#booking">Speaking</a>.</p>
         </div>
       </div>
+      <FaqSection page="consulting" />
     </section>
   </main>
   <Footer />
+  <script type="application/ld+json" is:inline set:html={JSON.stringify(serviceSchema).replaceAll('<', '\\u003c')} />
 </SiteLayout>
 
 <style>

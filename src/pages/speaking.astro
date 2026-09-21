@@ -2,6 +2,7 @@
 import SiteLayout from "../layouts/SiteLayout.astro";
 import Footer from "../components/Footer.astro";
 import Navigation from "../components/Navigation.astro";
+import FaqSection from "../components/FaqSection.astro";
 
 const pastTalks = [
   { id: 'ut-austin-2021', year: '2021', name: 'UT Austin / ICFJ', detail: 'Panelist at the Ibero-American Colloquium on Digital Journalism, University of Texas at Austin, in the framework of ICFJ.' },
@@ -85,6 +86,7 @@ const pastTalks = [
 <p class="nm-page-copy">For advisory work with a team or product, see <a href="consulting.html">Consulting</a>.</p>
 </div>
 </div>
+<FaqSection page="speaking" />
 </section>
 </main>
 <Footer />

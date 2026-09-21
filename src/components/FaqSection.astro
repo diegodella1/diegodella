@@ -1,0 +1,40 @@
+---
+import faqs from '../data/faqs.json';
+import site from '../data/site.json';
+
+interface Props { page: keyof typeof faqs }
+const { page } = Astro.props;
+const items = faqs[page];
+const url = new URL(`${page}.html`, site.site.url).href;
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  '@id': `${url}#faq`,
+  url: `${url}#faq`,
+  isPartOf: { '@id': `${url}#webpage` },
+  mainEntity: items.map(({ question, answer }) => ({
+    '@type': 'Question',
+    name: question,
+    acceptedAnswer: { '@type': 'Answer', text: answer },
+  })),
+};
+---
+<section class="nm-two-col" id="faq" aria-labelledby="faq-title">
+  <h2 id="faq-title">Frequently asked questions.</h2>
+  <div class="nm-ledger">
+    {items.map(({ question, answer }) => (
+      <div class="nm-ledger-item" data-faq-item>
+        <h3 data-faq-question>{question}</h3>
+        <p data-faq-answer set:html={answer} />
+      </div>
+    ))}
+  </div>
+</section>
+<script type="application/ld+json" is:inline set:html={JSON.stringify(schema).replaceAll('<', '\\u003c')} />
+
+<style>
+  @layer page {
+    h3 { margin: 0 0 .75rem; font-size: 1.2rem; line-height: 1.35; }
+    p { margin: 0; }
+  }
+</style>
