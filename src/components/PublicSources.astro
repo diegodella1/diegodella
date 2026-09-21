@@ -1,0 +1,57 @@
+---
+interface Props { title?: string }
+const { title = 'Press & verification.' } = Astro.props;
+const sources = [
+  {
+    label: 'Press coverage · December 2022',
+    title: 'LA NACION — Posta and PodX',
+    url: 'https://www.lanacion.com.ar/tecnologia/el-podcast-argentino-da-un-salto-internacional-con-la-asociacion-entre-posta-y-la-sueca-podx-nid07122022/',
+    context: 'Reports on the Posta–PodX partnership, identifies Diego as a co-founder, and describes support from Velocidad, an initiative of SembraMedia, ICFJ, and Luminate.',
+  },
+  {
+    label: 'Press release · December 2022',
+    title: 'Podnews — PodX’s investment in Posta',
+    url: 'https://podnews.net/press-release/podx-group-posta',
+    context: 'The acquisition announcement identifies Diego as Posta’s co-founder and Chief Marketing Officer at the time of the investment.',
+  },
+  {
+    label: 'Official company directory',
+    title: 'PodX — Studio directory',
+    url: 'https://podx.com/studios/',
+    context: 'Lists Posta Podcasts among PodX’s studios, with its origins in Buenos Aires and operations in Argentina.',
+  },
+  {
+    label: 'Official network website',
+    title: 'Roxom TV — Live network',
+    url: 'https://roxom.tv/',
+    context: 'The network’s public site describes its 24/7 Bitcoin and financial news coverage.',
+  },
+  {
+    label: 'Official company background',
+    title: 'Roxom TV — Global bureaus',
+    url: 'https://roxom.tv/about',
+    context: 'Lists the network’s San Francisco, London, and Hong Kong bureaus.',
+  },
+  {
+    label: 'University announcement · 2021',
+    title: 'Knight Center / UT Austin — Digital journalism colloquium',
+    url: 'https://knightcenter.utexas.edu/registration-open-for-14th-ibero-american-colloquium-on-digital-journalism/',
+    context: 'Lists Diego Dell’Agostino, co-founder of Posta, among the speakers at the 14th Ibero-American Colloquium on Digital Journalism.',
+  },
+];
+---
+<section class="nm-two-col" id="public-sources" aria-labelledby="public-sources-title">
+  <h2 id="public-sources-title">{title}</h2>
+  <div>
+    <div class="nm-ledger">
+      {sources.map(source => (
+        <a href={source.url} target="_blank" rel="noopener noreferrer">
+          <span class="nm-page-label">{source.label}</span>
+          <strong>{source.title} <span aria-hidden="true">↗</span></strong>
+          <p>{source.context}</p>
+        </a>
+      ))}
+    </div>
+    <p class="nm-page-copy">For my account of the work, read the <a href="work-posta.html">Posta case study</a> and <a href="work-roxom.html">Roxom TV case study</a>. More event context is on <a href="speaking.html#past-talks">Speaking</a>.</p>
+  </div>
+</section>

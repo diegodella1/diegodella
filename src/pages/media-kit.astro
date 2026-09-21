@@ -1,6 +1,7 @@
 ---
 import SiteLayout from "../layouts/SiteLayout.astro";
 import Biography from "../components/Biography.astro";
+import PublicSources from "../components/PublicSources.astro";
 import Footer from "../components/Footer.astro";
 import Navigation from "../components/Navigation.astro";
 import site from "../data/site.json";
@@ -65,6 +66,7 @@ const wordCount = (text: string) => text.trim().split(/\s+/).length;
 <p>For a current press photo, <a href="contact.html">contact Diego</a>. See <a href="speaking.html#organizers">Speaking</a> for the organizer one-pager, <a href="consulting.html">Consulting</a> for advisory work, and <a href="about.html">About</a> for his background.</p>
 </div>
 </div>
+<PublicSources title="Verification links." />
 </section>
 </main>
 <Footer />
