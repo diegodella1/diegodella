@@ -1,0 +1,71 @@
+---
+import SiteLayout from "../layouts/SiteLayout.astro";
+import Biography from "../components/Biography.astro";
+import Footer from "../components/Footer.astro";
+import Navigation from "../components/Navigation.astro";
+import site from "../data/site.json";
+
+const wordCount = (text: string) => text.trim().split(/\s+/).length;
+---
+<SiteLayout page="media-kit">
+<a href="#main-content" class="skip-link">Skip to content</a>
+<div class="top-bar"><span>Media Kit</span><span>Official bios · Topics · Identity · Links</span></div>
+<Navigation />
+<main id="main-content">
+<header class="nm-page-hero">
+<p class="nm-page-label">Copy-ready and factual</p>
+<h1>Media Kit</h1>
+<p>Official bios and identity details for journalists, podcast producers, event organizers, and researchers. Please preserve the apostrophe and spelling in Dell'Agostino.</p>
+</header>
+<section class="nm-page-main">
+<div class="nm-two-col">
+<h2>Micro bio.</h2>
+<div>
+<p class="nm-page-label">{site.bios.micro.length} characters · Under 160 characters</p>
+<p class="nm-page-copy"><Biography kind="micro" /></p>
+</div>
+</div>
+<div class="nm-two-col">
+<h2>Short bio.</h2>
+<div>
+<p class="nm-page-label">{wordCount(site.bios.short)} words</p>
+<p class="nm-page-copy"><Biography kind="short" /></p>
+</div>
+</div>
+<div class="nm-two-col">
+<h2>Full bio.</h2>
+<div>
+<p class="nm-page-label">{wordCount(site.bios.full)} words</p>
+<p class="nm-page-copy"><Biography kind="full" /></p>
+</div>
+</div>
+<div class="nm-two-col">
+<h2>Topics.</h2>
+<div class="nm-ledger">
+<div class="nm-ledger-item"><span class="nm-page-label">Media and AI</span><strong>AI-native media · AI agents in media · Future of newsrooms</strong><p>Workflow design, editorial responsibility, operational automation, interfaces, and AI-mediated discovery.</p></div>
+<div class="nm-ledger-item"><span class="nm-page-label">Product and operations</span><strong>Media products · Distributed global operations · Live production</strong><p>Building the systems behind continuous media, including tooling, handoffs, observability, and recovery.</p></div>
+<div class="nm-ledger-item"><span class="nm-page-label">Company building</span><strong>Podcasting · Digital audio · Media entrepreneurship in Latin America</strong><p>Posta, format transitions, business models, distribution, and regional company building.</p></div>
+<div class="nm-ledger-item"><span class="nm-page-label">Marketing, content, and communities</span><strong>Positioning · Editorial strategy · Audience development</strong><p>How products become legible, how content supports the product, and how reach develops into durable audience and community relationships.</p></div>
+<div class="nm-ledger-item"><span class="nm-page-label">Narrative</span><strong>Positioning · AI-mediated discovery · Narrative mechanics</strong><p>How people and machines interpret products, sources, and ideas before comparison.</p></div>
+</div>
+</div>
+<div class="nm-two-col">
+<h2>Identity.</h2>
+<div class="nm-ledger">
+<div class="nm-ledger-item"><span class="nm-page-label">Official name</span><strong>Diego Dell'Agostino</strong><p>Use this spelling in headlines, captions, credits, metadata, and event programs.</p></div>
+<div class="nm-ledger-item"><span class="nm-page-label">Location</span><strong>Argentina</strong><p>Buenos Aires may be used when city-level context is useful. No street address is published.</p></div>
+<a href="https://www.linkedin.com/in/diegodella/" target="_blank" rel="noopener noreferrer"><span class="nm-page-label">Authoritative profile</span><strong>LinkedIn</strong><p>Professional identity and current public background.</p></a>
+<a href="https://github.com/diegodella1" target="_blank" rel="noopener noreferrer"><span class="nm-page-label">Public work</span><strong>GitHub</strong><p>Public repositories and technical experiments.</p></a>
+</div>
+</div>
+<div class="nm-two-col">
+<h2>Headshot and requests.</h2>
+<div class="nm-contact-actions">
+<a class="nm-work-button" href="about.html#work" data-open-contact="" data-contact-mode="conversation">Request media assets</a>
+<p>For a current press photo, <a href="contact.html">contact Diego</a>. See <a href="speaking.html#organizers">Speaking</a> for the organizer one-pager, <a href="consulting.html">Consulting</a> for advisory work, and <a href="about.html">About</a> for his background.</p>
+</div>
+</div>
+</section>
+</main>
+<Footer />
+</SiteLayout>

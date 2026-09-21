@@ -1,0 +1,37 @@
+<svg is:raw class="hero-svg" viewBox="0 0 160 200" xmlns="http://www.w3.org/2000/svg">
+        <style is:inline>
+          @keyframes wfDrop{from{transform:translateY(-20px);opacity:0}to{transform:translateY(0);opacity:1}}
+          @keyframes wfShrink{from{transform:scaleX(1)}to{transform:scaleX(0.5)}}
+          @keyframes wfFade{from{opacity:0}to{opacity:1}}
+        </style>
+        <!-- Content lines entering from top -->
+        <g opacity="0" style="animation:wfDrop 0.6s 0.2s forwards">
+          <line stroke="var(--ink)" stroke-width="1.5" x1="40" x2="120" y1="25" y2="25"></line>
+          <line opacity="0.6" stroke="var(--ink-2,var(--ink))" stroke-width="1" x1="50" x2="110" y1="33" y2="33"></line>
+          <line opacity="0.6" stroke="var(--ink-2,var(--ink))" stroke-width="1" x1="45" x2="115" y1="41" y2="41"></line>
+          <line opacity="0.4" stroke="var(--ink-2,var(--ink))" stroke-width="0.8" x1="55" x2="105" y1="49" y2="49"></line>
+        </g>
+        <!-- Filter 1: Algorithm -->
+        <rect fill="none" height="16" opacity="0" rx="2" stroke="var(--accent)" stroke-width="1.2" style="animation:wfFade 0.4s 0.8s forwards" width="110" x="25" y="65"></rect>
+        <text fill="var(--accent)" font-family="monospace" font-size="6" letter-spacing="2" opacity="0" style="animation:wfFade 0.4s 1s forwards" text-anchor="middle" x="80" y="76">FILTER 01</text>
+        <!-- Fewer lines after filter 1 -->
+        <g opacity="0" style="animation:wfFade 0.5s 1.3s forwards">
+          <line stroke="var(--ink)" stroke-width="1.2" x1="50" x2="110" y1="95" y2="95"></line>
+          <line opacity="0.5" stroke="var(--ink-2,var(--ink))" stroke-width="0.8" x1="55" x2="105" y1="103" y2="103"></line>
+        </g>
+        <!-- Filter 2: Agent -->
+        <rect fill="none" height="16" opacity="0" rx="2" stroke="var(--muted)" stroke-width="1.2" style="animation:wfFade 0.4s 1.6s forwards" width="110" x="25" y="120"></rect>
+        <text fill="var(--muted)" font-family="monospace" font-size="6" letter-spacing="2" opacity="0" style="animation:wfFade 0.4s 1.8s forwards" text-anchor="middle" x="80" y="131">FILTER 02</text>
+        <!-- Single compressed line after filter 2 -->
+        <g opacity="0" style="animation:wfFade 0.5s 2.1s forwards">
+          <line stroke="var(--rule)" stroke-width="1" x1="60" x2="100" y1="150" y2="150"></line>
+        </g>
+        <!-- Human eye at bottom -->
+        <g opacity="0" style="animation:wfFade 0.6s 2.5s forwards">
+          <ellipse cx="80" cy="170" fill="none" rx="10" ry="6" stroke="var(--ink)" stroke-width="1"></ellipse>
+          <circle cx="80" cy="170" fill="var(--ink)" r="3"></circle>
+        </g>
+        <!-- Labels -->
+        <text fill="var(--muted)" font-family="monospace" font-size="6" letter-spacing="2" opacity="0" style="animation:wfFade 0.5s 3s forwards" text-anchor="middle" x="80" y="192">TWO MACHINES</text>
+        <text fill="var(--rule)" font-family="monospace" font-size="5" letter-spacing="1.5" opacity="0" style="animation:wfFade 0.5s 3.3s forwards" text-anchor="middle" x="80" y="200">before the human</text>
+      </svg>

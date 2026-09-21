@@ -1,0 +1,6 @@
+---
+import site from '../data/site.json';
+interface Props { kind: keyof typeof site.bios }
+const { kind } = Astro.props;
+---
+{site.bios[kind]}

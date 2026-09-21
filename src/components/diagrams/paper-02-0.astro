@@ -1,0 +1,21 @@
+<svg is:raw class="hero-svg" viewBox="0 0 160 200" xmlns="http://www.w3.org/2000/svg">
+        <style is:inline>
+          @keyframes converge-l{from{transform:translateX(-20px);opacity:0}to{transform:translateX(0);opacity:1}}
+          @keyframes converge-r{from{transform:translateX(20px);opacity:0}to{transform:translateX(0);opacity:1}}
+          @keyframes lock-pulse{0%,100%{r:6;opacity:0.8}50%{r:9;opacity:0.3}}
+          @keyframes fade-in{from{opacity:0}to{opacity:1}}
+        </style>
+        <!-- Product circle (left) -->
+        <circle cx="45" cy="100" fill="none" r="30" stroke="var(--muted)" stroke-width="1.5" style="animation:converge-l 1.2s ease-out forwards"></circle>
+        <text fill="var(--muted)" font-family="monospace" font-size="7" style="animation:converge-l 1.2s ease-out forwards" text-anchor="middle" x="45" y="104">PMF</text>
+        <!-- Message circle (right) -->
+        <circle cx="115" cy="100" fill="none" r="30" stroke="var(--accent)" stroke-width="1.5" style="animation:converge-r 1.2s ease-out forwards"></circle>
+        <text fill="var(--accent)" font-family="monospace" font-size="7" style="animation:converge-r 1.2s ease-out forwards" text-anchor="middle" x="115" y="104">MMF</text>
+        <!-- Overlap zone -->
+        <ellipse cx="80" cy="100" fill="var(--accent)" fill-opacity="0.1" opacity="0" rx="12" ry="28" style="animation:fade-in 0.6s 1.2s forwards;opacity:0"></ellipse>
+        <!-- Lock point -->
+        <circle cx="80" cy="100" fill="var(--accent)" opacity="0" r="6" style="animation:lock-pulse 2s 1.5s ease-in-out infinite, fade-in 0.3s 1.5s forwards"></circle>
+        <!-- Labels -->
+        <text fill="var(--muted)" font-family="monospace" font-size="6" letter-spacing="2" opacity="0" style="animation:fade-in 0.5s 1.8s forwards" text-anchor="middle" x="80" y="25">MESSAGE · MARKET</text>
+        <text fill="var(--accent)" font-family="monospace" font-size="6" letter-spacing="2" opacity="0" style="animation:fade-in 0.5s 2s forwards" text-anchor="middle" x="80" y="185">FIT</text>
+      </svg>

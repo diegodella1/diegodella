@@ -1,0 +1,124 @@
+@layer page {
+
+    html { font-size: 20px; }
+    body { line-height: 1.8; }
+
+    /* ── Hero ── */
+    .hero { max-width: 960px; margin: 0 auto; padding: 6rem 4rem 4rem; }
+    .hero-kicker { font-family: 'Space Grotesk', monospace; font-size: 0.75rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--accent); border: 1px solid var(--accent); display: inline-block; padding: 0.3em 0.85em; margin-bottom: 1.75rem; }
+    .hero-title { font-family: 'Space Grotesk', serif; font-size: clamp(2.5rem, 6vw, 4.5rem); font-weight: 900; line-height: 0.95; letter-spacing: -0.03em; margin-bottom: 1rem; }
+    .hero-title em { font-style: italic; color: var(--ink); display: block; text-decoration: none; background: linear-gradient(180deg, transparent 54%, color-mix(in srgb, var(--accent) 18%, transparent) 54%); padding: 0 0.08em 0.02em 0; box-decoration-break: clone; -webkit-box-decoration-break: clone; }
+    .hero-subtitle { font-family: 'Inter', sans-serif; font-size: 1.15rem; font-style: italic; color: var(--muted); margin-bottom: 2rem; max-width: 560px; line-height: 1.6; }
+    .hero-meta { display: flex; gap: 2rem; flex-wrap: wrap; margin-bottom: 2.5rem; }
+    .hero-meta-item { font-family: 'Space Grotesk', monospace; font-size: 0.75rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); }
+    .hero-meta-item strong { color: var(--ink); font-weight: 700; }
+
+    /* ── TOC ── */
+    .toc-wrap { max-width: 960px; margin: 0 auto; padding: 0 5rem 4rem; display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 0; border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); }
+    .toc-item { padding: 1.5rem 1.5rem 1.5rem 0; border-right: 1px solid var(--rule); }
+    .toc-item:last-child { border-right: none; padding-right: 0; padding-left: 1.5rem; }
+    .toc-item:nth-child(2) { padding-left: 1.5rem; }
+    .toc-item:nth-child(3) { padding-left: 1.5rem; }
+    .toc-num { font-family: 'Space Grotesk', serif; font-size: 1.8rem; font-weight: 900; font-style: italic; color: var(--rule); line-height: 1; margin-bottom: 0.3rem; }
+    .toc-title { font-family: 'Space Grotesk', monospace; font-size: 0.75rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); }
+    .toc-sub { font-family: 'Inter', sans-serif; font-size: 0.88rem; font-style: italic; color: var(--ink); margin-top: 0.2rem; }
+
+    /* ── Essay layout ── */
+    .essay-wrap { max-width: 960px; margin: 0 auto; padding: 0 4rem 6rem; }
+
+    /* ── Section markers ── */
+    .section-marker { display: flex; align-items: center; gap: 1rem; margin-bottom: 0.75rem; margin-top: 4rem; }
+    .section-marker-icon { width: 10px; height: 10px; border: 1px solid var(--accent); border-radius: 50%; flex-shrink: 0; }
+    .section-marker-label { font-family: 'Space Grotesk', monospace; font-size: 0.75rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--muted); }
+    .section-title { font-family: 'Space Grotesk', serif; font-size: clamp(1.6rem, 3vw, 2.4rem); font-weight: 900; line-height: 1.05; letter-spacing: -0.02em; margin-bottom: 0.5rem; }
+    .section-rule { height: 1px; background: linear-gradient(to right, var(--accent), transparent); margin-bottom: 2rem; width: 80px; }
+
+    /* ── Prose ── */
+    p.fade-in, p.dropcap { font-size: 1.05rem; line-height: 1.92; color: var(--deep); margin-bottom: 1.4rem; }
+    p.dropcap::first-letter { font-family: 'Space Grotesk', serif; font-size: 3.8rem; font-weight: 900; float: left; line-height: 0.8; margin-right: 0.12em; margin-top: 0.08em; color: var(--accent); }
+
+    /* Pull quotes */
+    .pull { border-block: 2px solid var(--accent); padding: 1rem 0; margin: 2.5rem 0; }
+    .pull p, .pull { font-family: 'Space Grotesk', serif; font-size: 1.15rem; font-style: italic; color: var(--deep); line-height: 1.55; }
+
+    /* Breaks */
+    .break { text-align: center; color: var(--rule); font-size: 0.85rem; letter-spacing: 0.4em; margin: 2.5rem 0; user-select: none; }
+
+    /* Diagrams */
+    figure.diagram { margin: 2.5rem 0; padding: 1.5rem; background: transparent; border: 1px solid var(--border-light); cursor: default; position: relative; transition: border-color 0.2s; }
+    figure.diagram:hover { border-color: var(--accent); }
+    figure.diagram::after { content: none; position: absolute; top: 0.6rem; right: 0.8rem; font-family: 'Space Grotesk', monospace; font-size: 0.75rem; color: var(--accent); opacity: 0; transition: opacity 0.2s; pointer-events: none; }
+    figure.diagram:hover::after { opacity: 0.5; }
+    figure.diagram svg { width: 100%; height: auto; display: block; }
+    figure.diagram figcaption { font-family: 'Space Grotesk', monospace; font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); text-align: center; margin-top: 0.75rem; }
+
+    /* Notes / aside notes */
+    p[style*="border-left"] { border-left: 0; border-block-start: 2px solid var(--rule); padding-block-start: 1rem; color: var(--muted); font-size: 0.9rem; font-style: italic; margin: 0 0 1.8rem; }
+
+    /* Metric table */
+    .metric-table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 0.9rem; }
+    .metric-table th { font-family: 'Space Grotesk', monospace; font-size: 0.75rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); padding: 0.6rem 0.8rem; text-align: left; border-bottom: 2px solid var(--rule); }
+    .metric-table td { padding: 0.75rem 0.8rem; border-bottom: 1px solid var(--rule); color: var(--deep); vertical-align: top; line-height: 1.65; }
+    .metric-table tr:last-child td { border-bottom: none; }
+    .metric-table td:first-child { font-family: 'Space Grotesk', monospace; font-size: 0.78rem; color: var(--accent); white-space: nowrap; }
+
+    /* Diagnostic */
+    .diagnostic-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: var(--rule); margin: 1.5rem 0; border: 1px solid var(--rule); }
+    .diagnostic-item { background: var(--paper); padding: 1.25rem; }
+    .diagnostic-question { font-family: 'Inter', sans-serif; font-size: 0.95rem; font-style: italic; color: var(--deep); margin-bottom: 0.5rem; line-height: 1.6; }
+    .diagnostic-hint { font-family: 'Space Grotesk', monospace; font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); }
+
+    /* Sidebar genealogy */
+    .sidebar-genealogy { position: sticky; top: 80px; border: 1px solid var(--rule); padding: 1.5rem; background: var(--highlight); }
+    .sidebar-genealogy-title { font-family: 'Space Grotesk', monospace; font-size: 0.75rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--muted); margin-bottom: 1rem; }
+    .gen-item { padding: 0.75rem 0; border-bottom: 1px solid var(--rule); }
+    .gen-item:last-child { border-bottom: none; padding-bottom: 0; }
+    .gen-name { font-family: 'Space Grotesk', serif; font-size: 1.1rem; font-weight: 700; color: var(--ink); }
+    .gen-sub { font-family: 'Space Grotesk', monospace; font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); margin-top: 0.2rem; }
+    .gen-item.active .gen-name { color: var(--accent); }
+
+    /* Essay grid */
+    .essay-grid { display: block; max-width: 680px; }
+    .essay-main { max-width: 720px; }
+    .essay-aside { display: none; }
+
+    /* Colophon */
+    .colophon { border-top: 3px double var(--ink); padding: 3rem 0 0; margin-top: 4rem; }
+    .colophon-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; }
+    .colophon-label { font-family: 'Space Grotesk', monospace; font-size: 0.75rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--muted); margin-bottom: 0.5rem; }
+    .colophon-text { font-size: 0.88rem; color: var(--muted); line-height: 1.7; }
+
+    /* Lightbox */
+    #dlb { display: none; position: fixed; inset: 0; z-index: var(--z-modal); background: color-mix(in srgb, var(--ink) 88%, transparent); backdrop-filter: blur(8px); align-items: center; justify-content: center; padding: 2.5rem; }
+    #dlb.on { display: flex; animation: dlbIn 0.2s ease; }
+    @keyframes dlbIn { from { opacity:0 } to { opacity:1 } }
+    #dlb-box { position: relative; max-width: min(92vw, 1100px); width: 100%; background: var(--paper); border-top: 2px solid var(--accent); padding: 1.8rem 1.8rem 1.2rem; animation: dlbPop 0.25s cubic-bezier(.22,1,.36,1); }
+    @keyframes dlbPop { from { opacity:0; transform:scale(0.93) translateY(10px) } to { opacity:1; transform:scale(1) translateY(0) } }
+    #dlb-box svg { width:100%; height:auto; display:block; }
+    #dlb-cap { margin-top:0.7rem; font-family:'Space Grotesk',monospace; font-size: 0.75rem; letter-spacing:0.1em; color:var(--muted); text-align:center; font-style:italic; }
+    #dlb-close { position:absolute; top:0.5rem; right:0.7rem; background:none; border:none; cursor:pointer; font-family:'Space Grotesk',monospace; font-size: 0.75rem; letter-spacing:0.14em; text-transform:uppercase; color:var(--muted); padding:0.2rem 0.3rem; transition:color 0.15s; }
+    #dlb-close:hover { color:var(--accent); }
+    #dlb-esc { position:absolute; bottom:1rem; left:50%; transform:translateX(-50%); font-family:'Space Grotesk',monospace; font-size: 0.75rem; letter-spacing:0.14em; text-transform:uppercase; color:rgba(244,240,232,0.25); pointer-events:none; white-space:nowrap; }
+
+    @media(max-width:768px) {
+      .hero { padding: 3rem 1.5rem 2rem; }
+      .toc-wrap { padding: 0 1.5rem 2rem; grid-template-columns: 1fr; }
+      .toc-item { border-right: none; border-bottom: 1px solid var(--rule); padding: 1rem 0; }
+      .toc-item:last-child { border-bottom: none; padding-left: 0; }
+      .toc-item:nth-child(2), .toc-item:nth-child(3) { padding-left: 0; }
+      .essay-wrap { padding: 0 1.5rem 4rem; }
+      .essay-grid { grid-template-columns: 1fr; }
+      .essay-aside { display: none; }
+      .diagnostic-grid { grid-template-columns: 1fr; }
+      .colophon-inner { grid-template-columns: 1fr; }
+    }
+
+    /* Hero SVG */
+    .hero { display: grid; grid-template-columns: 1fr 280px; gap: 2rem; align-items: center; }
+    .hero-svg { width: 100%; height: auto; }
+    @media (max-width: 768px) {
+      .hero { grid-template-columns: 1fr; }
+      .hero-svg { max-width: 200px; margin: 0 auto; order: -1; }
+    }
+  
+}

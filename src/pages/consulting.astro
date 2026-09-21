@@ -1,0 +1,107 @@
+---
+import SiteLayout from '../layouts/SiteLayout.astro';
+import Navigation from '../components/Navigation.astro';
+import Footer from '../components/Footer.astro';
+
+const engagements = [
+  { name: 'Operational diagnosis', description: 'Review of product, workflow, and distribution; a friction map and priorities.', shape: 'Short intensive block' },
+  { name: 'Product / positioning sparring', description: 'Recurring sessions with a founder or product / marketing lead, focused on concrete decisions.', shape: 'Monthly retainer or 4–6 week block' },
+  { name: 'Editorial / AI-ops system design', description: 'Bounded agents, automation, handoffs, and observability, with humans accountable.', shape: 'Outcome-scoped project' },
+  { name: 'In-company workshop', description: 'A practical session on marketing, branded audio, distribution, or an introduction to AI-native media.', shape: 'Half day / full day' },
+  { name: 'Education program support', description: 'Review or design of curriculum and assessment for digital marketing or media product.', shape: 'Per module or cohort' },
+];
+---
+<SiteLayout page="consulting">
+  <a href="#main-content" class="skip-link">Skip to content</a>
+  <div class="top-bar"><span>Consulting</span><span>Product · Distribution · Operations · Education</span></div>
+  <Navigation />
+  <main id="main-content">
+    <header class="nm-page-hero">
+      <h1>Advise.</h1>
+      <p>Consulting for media and product teams, from Buenos Aires. I advise when the work is strong but the system — product, distribution, operations, or market meaning — is not coherent enough yet.</p>
+    </header>
+    <section class="nm-page-main">
+      <div class="nm-two-col" id="who-for">
+        <h2>Who it is for.</h2>
+        <div>
+          <p class="nm-page-copy">Digital media, audio and video, newsrooms, content-product teams, and marketers who need a format they can operate. Also education programs updating digital-marketing or media curricula.</p>
+          <p class="nm-page-copy">The background is building <a href="work-posta.html">Posta</a> and <a href="work-roxom.html">Roxom TV</a>, teaching digital marketing at <a href="about.html">Digital House</a>, and current work on <a href="ai-media.html">AI-native editorial operations</a>.</p>
+          <p class="nm-page-copy"><a href="#start">Discuss your project</a> · <a href="#engagements">Ways to work together</a></p>
+        </div>
+      </div>
+      <div class="nm-two-col" id="problems">
+        <h2>Typical problems.</h2>
+        <ul class="consulting-list nm-page-copy">
+          <li>Strong creative or editorial work, but a weak operating system: product, distribution, operations, or handoffs.</li>
+          <li>New AI or tools without bounds, ownership, or recovery, creating more noise than capacity.</li>
+          <li>A format exists, such as a branded podcast or a 24/7 live network, but positioning, packaging, and distribution are unclear.</li>
+          <li>People or markets are scaling without shared process, metrics, and language.</li>
+          <li>A team needs training in digital marketing or media product without inventing the syllabus from scratch.</li>
+        </ul>
+      </div>
+      <div class="nm-two-col" id="engagements">
+        <h2>Ways to work together.</h2>
+        <div>
+          <p class="nm-page-copy">Typical shapes are a starting point. Scope and timing are agreed in conversation.</p>
+          <div class="engagements">
+            {engagements.map(({ name, description, shape }) => (
+              <article class="engagement">
+                <h3>{name}</h3>
+                <p class="nm-page-copy">{description}</p>
+                <p class="nm-page-label">{shape}</p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </div>
+      <div class="nm-two-col" id="outcomes">
+        <h2>What we work toward.</h2>
+        <ul class="consulting-list nm-page-copy">
+          <li>A clear map of what is broken in the product, operations, or market meaning, and what to leave in place.</li>
+          <li>Positioning and packaging decisions the team can execute.</li>
+          <li>Workflow design with ownership, exceptions, and recovery.</li>
+          <li>Criteria for adopting AI in editorial and production without handing over judgment.</li>
+          <li>A structure usable to train a team or cohort.</li>
+        </ul>
+      </div>
+      <div class="nm-two-col" id="background">
+        <h2>Experience behind the work.</h2>
+        <div>
+          <p class="nm-page-copy"><a href="work-posta.html">Posta → PodX</a> · Co-founder; product, marketing, positioning, and business development. PodX acquired a majority stake in December 2022.</p>
+          <p class="nm-page-copy"><a href="work-roxom.html">Roxom TV founding team</a> · Media architecture and product operations for a 24/7 network.</p>
+          <p class="nm-page-copy"><a href="about.html">Digital House teaching</a> · Digital Marketing professor and Academic Content Lead for Argentina and Brazil, including immersion and in-company programs.</p>
+          <p class="nm-page-copy">Read the <a href="work.html">work case studies</a>, <a href="media-kit.html">official bios</a>, or <a href="speaking.html">speaking topics and past talks</a>.</p>
+        </div>
+      </div>
+      <div class="nm-two-col" id="start">
+        <h2>How to start.</h2>
+        <div>
+          <p class="nm-page-copy">Consulting fees are by inquiry. Email with what has to work, what exists today, the relevant team or product, timing, and where the system breaks.</p>
+          <div class="nm-contact-actions">
+            <a class="nm-work-button" href="mailto:dellagostino@gmail.com?subject=Consulting%20inquiry">Email about consulting</a>
+            <p><a href="mailto:dellagostino@gmail.com">dellagostino@gmail.com</a> · Prefer a form? Use <a href="contact.html">Contact</a>.</p>
+          </div>
+          <p class="nm-page-copy">Useful subject: Consulting — [product/team] — [problem in one line].</p>
+          <p class="nm-page-copy">For interviews, panels, and event bookings, use <a href="speaking.html#booking">Speaking</a>.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+  <Footer />
+</SiteLayout>
+
+<style>
+  @layer page {
+    .consulting-list { margin: 0; padding-left: 1.25rem; }
+    .consulting-list li + li { margin-top: 1rem; }
+    .engagement { padding-block: 1.5rem; border-bottom: 1px solid var(--panel-border); }
+    .engagement h3 { margin: 0 0 .75rem; font-family: var(--font-display); font-size: 1.4rem; line-height: 1.3; }
+    .engagement p { margin: 0; }
+    .engagement .nm-page-label { margin-top: .75rem; }
+  }
+  @layer design {
+    @media (max-width: 640px) {
+      :global(body) .nm-two-col > h2 { font-size: 24px; line-height: 1.2; }
+    }
+  }
+</style>

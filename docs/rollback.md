@@ -1,57 +1,33 @@
-# Site release and rollback runbook
+# Releases y rollback
 
-Production serves an immutable release through `.releases/current`. Editing the
-Git worktree must not change the public site.
+Producción sirve una release inmutable mediante `.releases/current`. Editar el workspace no cambia el sitio publicado.
 
-## Deploy a verified commit
-
-```bash
-bash scripts/deploy_release.sh <git-ref>
-curl -fsS http://127.0.0.1:3080/ >/dev/null
-curl -fsS https://diegodella.ar/ >/dev/null
-```
-
-`<git-ref>` may be a commit, branch, or annotated tag. The script resolves it to
-an exact commit, validates the site and contact tests, builds a public-file
-allowlist, writes a SHA-256 manifest, and atomically switches `current`.
-
-Verify an activated release at any time:
+## Preparar, verificar y activar
 
 ```bash
-(cd .releases/current && sha256sum -c RELEASE_MANIFEST.sha256)
+bash scripts/deploy_release.sh --workspace --prepare
+bash scripts/deploy_release.sh --activate RELEASE_ID
 ```
 
-`--workspace` exists only for bootstrap and local recovery. Normal production
-deploys must use committed refs.
+El primer comando instala las dependencias fijadas, verifica tipos, genera Astro y ejecuta validaciones y tests en una copia temporal. No copia documentos históricos, credenciales ni el entorno Python local. Solo `dist/` llega a la release con su manifiesto SHA-256. El segundo comando verifica ese manifiesto y cambia el enlace de manera atómica.
 
-## Revert a change and redeploy
+También se puede construir y activar desde un commit, rama o tag con `bash scripts/deploy_release.sh REF`. No se crean commits ni se publica automáticamente al preparar un artefacto.
 
-Start from an up-to-date, clean branch:
+## Volver a una versión anterior
 
 ```bash
-git switch -c rollback/YYYYMMDD-description
-git revert --no-commit <commit-to-revert>
-node scripts/validate-site.mjs
-node scripts/audit-theme.mjs
-python3 -m unittest services/notify/test_app.py
-git diff --check
-git commit -m "revert: <description>"
-git push -u origin rollback/YYYYMMDD-description
+bash scripts/deploy_release.sh --rollback RELEASE_ID
 ```
 
-After review and integration into `main`:
+El script rechaza releases inexistentes o con un manifiesto inválido. No necesita reinstalar dependencias para activar una release ya preparada. Registrar la versión anterior y el motivo antes de activar, y comprobar páginas, assets y API después.
+
+Se conservan la release activa y dos anteriores para recuperación inmediata. Las más antiguas están en el archivo local verificado; consultar [cleanup-and-archives.md](cleanup-and-archives.md) antes de restaurarlas. Una candidata sin publicar se conserva aparte de esa retención.
+
+## Validación HTTP
 
 ```bash
-bash scripts/deploy_release.sh main
-git tag -a rollback/YYYYMMDD-HHMM -m "Rollback: <description>"
-git push origin rollback/YYYYMMDD-HHMM
+SITE_BASE_URL=http://127.0.0.1:3080 npm run smoke:discovery
+SITE_BASE_URL=https://diegodella.ar npm run smoke:discovery
 ```
 
-If validation fails before commit, run `git revert --abort`. Production remains
-on its previous immutable release until the deploy script switches `current`.
-
-## Emergency release switch
-
-Repointing `.releases/current` is reserved for restoring availability while the
-auditable Git revert is prepared. Record the activated release SHA and still
-complete the revert workflow afterward.
+El dominio público puede aplicar reglas de Cloudflare que no existen en el origen. Distinguir fallos del sitio de restricciones del borde; no cambiar esas reglas como parte de un rollback sin evaluar su causa.

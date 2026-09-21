@@ -1,0 +1,27 @@
+<svg is:raw class="hero-svg" viewBox="0 0 160 200" xmlns="http://www.w3.org/2000/svg">
+      <style is:inline>
+        @keyframes rhWave{from{stroke-dashoffset:300}to{stroke-dashoffset:0}}
+        @keyframes rhDot{0%,100%{r:2;opacity:0.5}50%{r:3.5;opacity:1}}
+        @keyframes rhFade{from{opacity:0}to{opacity:1}}
+      </style>
+      <!-- Wave cycle 1 -->
+      <path d="M10 70 C30 40,50 40,70 70 C90 100,110 100,130 70 C140 55,148 55,155 70" fill="none" stroke="var(--accent)" stroke-dasharray="300" stroke-dashoffset="300" stroke-width="1.5" style="animation:rhWave 2s 0.2s ease-out forwards"></path>
+      <!-- Wave cycle 2 (phase shifted) -->
+      <path d="M10 100 C30 70,50 70,70 100 C90 130,110 130,130 100 C140 85,148 85,155 100" fill="none" opacity="0.6" stroke="var(--muted)" stroke-dasharray="300" stroke-dashoffset="300" stroke-width="1" style="animation:rhWave 2s 0.6s ease-out forwards"></path>
+      <!-- Wave cycle 3 (further shifted) -->
+      <path d="M10 130 C30 100,50 100,70 130 C90 160,110 160,130 130 C140 115,148 115,155 130" fill="none" opacity="0.4" stroke="var(--rule)" stroke-dasharray="300" stroke-dashoffset="300" stroke-width="0.8" style="animation:rhWave 2s 1s ease-out forwards"></path>
+      <!-- Alignment dots where cycles cross same phase -->
+      <circle cx="70" cy="70" fill="var(--accent)" r="2" style="animation:rhDot 2.5s 1.5s ease-in-out infinite"></circle>
+      <circle cx="70" cy="100" fill="var(--accent)" r="2" style="animation:rhDot 2.5s 1.8s ease-in-out infinite"></circle>
+      <circle cx="70" cy="130" fill="var(--accent)" r="2" style="animation:rhDot 2.5s 2.1s ease-in-out infinite"></circle>
+      <!-- Vertical alignment line -->
+      <line opacity="0" stroke="var(--accent)" stroke-dasharray="2 2" stroke-width="0.5" style="animation:rhFade 0.5s 1.8s forwards" x1="70" x2="70" y1="60" y2="140"></line>
+      <!-- Second alignment -->
+      <circle cx="130" cy="70" fill="var(--accent)" r="2" style="animation:rhDot 2.5s 2s ease-in-out infinite"></circle>
+      <circle cx="130" cy="100" fill="var(--accent)" r="2" style="animation:rhDot 2.5s 2.3s ease-in-out infinite"></circle>
+      <circle cx="130" cy="130" fill="var(--accent)" r="2" style="animation:rhDot 2.5s 2.6s ease-in-out infinite"></circle>
+      <line opacity="0" stroke="var(--accent)" stroke-dasharray="2 2" stroke-width="0.5" style="animation:rhFade 0.5s 2.2s forwards" x1="130" x2="130" y1="60" y2="140"></line>
+      <!-- Labels -->
+      <text fill="var(--muted)" font-family="monospace" font-size="6" letter-spacing="2" opacity="0" style="animation:rhFade 0.5s 2.5s forwards" text-anchor="middle" x="80" y="30">PATTERN</text>
+      <text fill="var(--muted)" font-family="monospace" font-size="6" letter-spacing="2" opacity="0" style="animation:rhFade 0.5s 2.8s forwards" text-anchor="middle" x="80" y="185">RECOGNITION</text>
+    </svg>

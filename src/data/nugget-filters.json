@@ -1,0 +1,46 @@
+[
+  {
+    "source": "all",
+    "label": "All"
+  },
+  {
+    "source": "foundation",
+    "label": "Foundation"
+  },
+  {
+    "source": "cmoi",
+    "label": "CMI"
+  },
+  {
+    "source": "cax",
+    "label": "CAX"
+  },
+  {
+    "source": "ob",
+    "label": "OB"
+  },
+  {
+    "source": "lhi",
+    "label": "LHI"
+  },
+  {
+    "source": "lmm",
+    "label": "LMM"
+  },
+  {
+    "source": "gc",
+    "label": "GC"
+  },
+  {
+    "source": "ls",
+    "label": "LS"
+  },
+  {
+    "source": "ayp",
+    "label": "AYP"
+  },
+  {
+    "source": "essays",
+    "label": "Essays"
+  }
+]

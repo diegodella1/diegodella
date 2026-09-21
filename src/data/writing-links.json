@@ -1,0 +1,29 @@
+[
+  {
+    "group": 3,
+    "order": 0,
+    "topics": "product-clarity ai-trust distribution operating-systems",
+    "label": "Compressed",
+    "href": "nuggets.html",
+    "title": "Narrative Nuggets",
+    "description": "Short, sharp claims extracted from the larger corpus. Start here if you want a short idea before choosing an essay."
+  },
+  {
+    "group": 3,
+    "order": 2,
+    "topics": "product-clarity ai-trust",
+    "label": "Shelf",
+    "href": "notes.html",
+    "title": "Notes",
+    "description": "The entry point for compressed paths, active fragments, and shorter ways into the larger work."
+  },
+  {
+    "group": 3,
+    "order": 3,
+    "topics": "product-clarity ai-trust distribution operating-systems",
+    "label": "Paths",
+    "href": "series.html",
+    "title": "Reading Paths",
+    "description": "Guided routes through the corpus for builders, launches, AI trust, filters, and mediated presence."
+  }
+]

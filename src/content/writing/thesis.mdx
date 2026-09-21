@@ -1,0 +1,652 @@
+---
+title: "The Continuous Moment of Intent"
+description: "A proposal for repeated editorial encounters that help readers form interpretations and develop a habit of return."
+datePublished: "2026-02-20"
+tags: ["media", "product", "narrative", "distribution"]
+dateModified: "2026-09-14"
+presentation: "thesis"
+order: 19
+listing: {"group": 0, "order": 0, "topics": "product-clarity distribution", "label": "Core thesis"}
+---
+
+import ArticleField from "../../components/ArticleField.astro";
+import Footer from "../../components/Footer.astro";
+import Navigation from "../../components/Navigation.astro";
+import ArticleHeader from "../../components/ArticleHeader.astro";
+import Block0 from "../../components/diagrams/thesis-0.astro";
+import Block1 from "../../components/diagrams/paper-01-1.astro";
+import Block2 from "../../components/diagrams/before-you-delegate-1.astro";
+import Block3 from "../../components/diagrams/thesis-3.astro";
+import Block4 from "../../components/diagrams/thesis-4.astro";
+import Block5 from "../../components/diagrams/before-you-delegate-4.astro";
+import Block6 from "../../components/diagrams/thesis-6.astro";
+import Block7 from "../../components/diagrams/thesis-7.astro";
+import Block8 from "../../components/diagrams/paper-02-2.astro";
+import Block9 from "../../components/diagrams/thesis-9.astro";
+import Block10 from "../../components/diagrams/thesis-10.astro";
+import Block11 from "../../components/diagrams/paper-02-5.astro";
+import Block12 from "../../components/diagrams/thesis-12.astro";
+import Block13 from "../../components/diagrams/thesis-13.astro";
+import Block14 from "../../components/diagrams/thesis-14.astro";
+import Block15 from "../../components/diagrams/paper-05-7.astro";
+import Block16 from "../../components/diagrams/before-you-delegate-3.astro";
+import Block17 from "../../components/diagrams/thesis-17.astro";
+import Block18 from "../../components/diagrams/already-decided-2.astro";
+import Block19 from "../../components/diagrams/already-decided-3.astro";
+
+<a href="#main-content" class="skip-link">Skip to content</a>
+<div id="pbar"></div>
+<div id="pbar-label"></div>
+<div class="page-wrap">
+
+
+
+<Navigation />
+<ArticleHeader />
+<div class="three-ideas">
+<div class="three-ideas-header">Three Ideas Worth Sharing</div>
+<div class="idea-item">
+<div class="idea-num">1</div>
+<div class="idea-text">The battle is no longer for the pageview. It is for the interpretive frame before the opinion forms. I call this the <strong>Zero Moment of Interpretation (ZMOI)</strong>.</div>
+</div>
+<div class="idea-item">
+<div class="idea-num">2</div>
+<div class="idea-text">The <strong>Continuous Moment of Intent (CMI)</strong> proposes a repeated presence across the places an audience already uses. Its question is whether those encounters help people recognize a perspective and develop a habit of return.</div>
+</div>
+<div class="idea-item">
+<div class="idea-num">3</div>
+<div class="idea-text">Every claim here has a kill criterion. If the results are not those expected, the way CMI is implemented should be revisited. Practitioner's theory, tested or discarded.</div>
+</div>
+</div>
+<div class="chapter-divider page-inline-6e58ee35af">
+<div class="chapter-divider-line"></div>
+<div class="chapter-divider-ornament"><span>✦</span><span>❧</span><span>✦</span></div>
+<div class="chapter-divider-line"></div>
+</div>
+
+<div class="page-inline-d50e46e6b1">
+<div class="page-inline-584c7b933e">
+<div class="page-inline-c187e2fee3">Abstract</div>
+<p class="page-inline-6a0023a3f1">In 2011, Google formalized the Zero Moment of Truth (ZMOT) to describe the pre-purchase research phase that determined consumer preference. This document proposes that an analogous shift is occurring in media: the battleground is the moment before belief, not the moment before purchase. I call this the <strong>Zero Moment of Interpretation (ZMOI)</strong>.</p>
+<div class="article-opening-diagram"><Block0 /></div>
+<p class="page-inline-6a0023a3f1">I call the proposed system for repeated encounters the <strong>Continuous Moment of Intent (CMI)</strong>. What follows defines it alongside ZMOI, explains the earlier work it draws on, and sets out predictions that could support or weaken the framework.</p>
+<div class="page-inline-aa5cf8f92c"><strong>Keywords:</strong> ZMOT, ZMOI, CMI, media strategy, attention economics, framing theory, habit formation, user touchpoint architecture</div>
+</div>
+</div>
+
+<div class="toc-wrap">
+<div class="toc">
+<div class="toc-header"><div class="toc-header-text">Document Map</div></div>
+<div class="toc-body">
+<div class="toc-part">Part I · Problem &amp; Foundations §1–3</div>
+<div class="toc-item"><span class="toc-item-num">§1</span><a href="#s1">Problem Statement</a></div>
+<div class="toc-item"><span class="toc-item-num">§2</span><a href="#s2">Core Definitions</a></div>
+<div class="toc-item"><span class="toc-item-num">§3</span><a href="#s3">Theoretical Basis</a></div>
+<div class="toc-part">Part II · The CMI System §4–8</div>
+<div class="toc-item"><span class="toc-item-num">§4</span><a href="#s4">The CMI Framework</a></div>
+<div class="toc-item"><span class="toc-item-num">§5</span><a href="#s5">Touchpoint Architecture</a></div>
+<div class="toc-item"><span class="toc-item-num">§6</span><a href="#s6">Audience Architecture</a></div>
+<div class="toc-item"><span class="toc-item-num">§7</span><a href="#s7">Implementation</a></div>
+<div class="toc-item"><span class="toc-item-num">§8</span><a href="#s8">Growth Model</a></div>
+<div class="toc-part">Part III · Validation &amp; Operations §9–13</div>
+<div class="toc-item"><span class="toc-item-num">§9</span><a href="#s9">Predictions &amp; Kill Criteria</a></div>
+<div class="toc-item"><span class="toc-item-num">§10</span><a href="#s10">Operational Principles</a></div>
+<div class="toc-item"><span class="toc-item-num">§11</span><a href="#s11">Risks</a></div>
+<div class="toc-item"><span class="toc-item-num">§12</span><a href="#s12">Self-Audit</a></div>
+<div class="toc-item"><span class="toc-item-num">§13</span><a href="#s13">Conclusion</a></div>
+</div>
+</div>
+</div>
+<main class="content" id="main-content">
+
+<div class="part-header">
+<div class="part-num">Part I</div>
+<div class="part-title">Problem &amp; Foundations</div>
+</div>
+
+<article class="section" id="s1">
+<div class="section-badge">
+<div class="section-icon"><Block1 /></div>
+<div class="section-meta">
+<div class="section-number">§1</div>
+<h2 class="section-title">Problem Statement</h2>
+</div>
+</div>
+<div class="section-rule"></div>
+<div class="section-body">
+<p>Many media organizations have achieved editorial clarity (a recognizable voice, a defensible point of view, strong production capability) and yet audience growth does not compound. They are strong at output but not yet strong at habit formation and distribution compounding. This is a system gap, not a branding gap.</p>
+<div class="margin-note">The strategic problem is no longer "publish better content." It is: be present at interpretation time, across the surfaces where interpretation is formed.</div>
+<p>News reaches people through publisher sites, social feeds, video, messaging, and search. In <a href="https://www.pewresearch.org/journalism/fact-sheet/social-media-and-news-fact-sheet/">Pew Research Center’s 2024 data</a>, 54% of U.S. adults said they at least sometimes got news from social media. That establishes the importance of those channels in that population; it does not by itself demonstrate the effects CMI proposes.</p>
+
+</div>
+</article>
+
+<article class="section" id="s2">
+<div class="section-badge">
+<div class="section-icon"><Block2 /></div>
+<div class="section-meta">
+<div class="section-number">§2</div>
+<h2 class="section-title">Core Definitions</h2>
+</div>
+</div>
+<div class="section-rule"></div>
+<div class="section-body">
+<p>The framework uses two constructs: ZMOI describes a moment of interpretation; CMI describes repeated encounters with a source.</p>
+<div class="definition-block">
+<div class="definition-block-header"><span>The Two Constructs</span></div>
+<div class="definition-item">
+<div class="definition-term"><span class="definition-term-tag">ZMOI</span> Zero Moment of Interpretation</div>
+<div class="definition-body">The cognitive instant (prior to opinion formation) in which an individual encounters contextual information that shapes how they interpret an event, signal, or narrative. ZMOI is the media analogue of ZMOT: a pre-decision moment, but one where the "decision" is interpretive rather than transactional.</div>
+</div>
+<div class="definition-item">
+<div class="definition-term"><span class="definition-term-tag">CMI</span> Continuous Moment of Intent</div>
+<div class="definition-body">A proposed system of repeated encounters with an editorial perspective across the channels a reader uses. CMI asks whether useful, consistent contact can encourage recognition and a habit of return.</div>
+</div>
+</div>
+<div class="subsection">
+<div class="subsection-title">2.1 The Strategic Principle</div>
+<p>Own the narrative frame before the opinion forms. This is the shift: from destination-first media to surface-first interpretive media. From "publish and distribute" to "frame and compound."</p>
+</div>
+<div class="zmoi-flow">
+<div class="zmoi-step">
+<div class="zmoi-step-label">Stage 1</div>
+<div class="zmoi-step-title">Event Occurs</div>
+<div class="zmoi-step-desc">Rate decision, conflict, regulation change</div>
+</div>
+<div class="zmoi-step highlight">
+<div class="zmoi-step-label">Stage 2 / ZMOI Window</div>
+<div class="zmoi-step-title">Instant Before Opinion</div>
+<div class="zmoi-step-desc">User seeks a frame. Interpretation not yet set.</div>
+<div class="zmoi-cmi-label">▲ CMI is present here</div>
+</div>
+<div class="zmoi-step">
+<div class="zmoi-step-label">Stage 3</div>
+<div class="zmoi-step-title">Opinion Forms</div>
+<div class="zmoi-step-desc">Frame shapes all future processing</div>
+</div>
+</div>
+</div>
+</article>
+
+<article class="section" id="s3">
+<div class="section-badge">
+<div class="section-icon"><Block3 /></div>
+<div class="section-meta">
+<div class="section-number">§3</div>
+<h2 class="section-title">Why This Works: Theoretical Basis</h2>
+</div>
+</div>
+<div class="section-rule"></div>
+<div class="section-body">
+<p>Here is what ZMOI and CMI borrow from earlier work, and where I propose extending it.</p>
+<div class="subsection">
+<div class="subsection-title">3.1 Inherited Foundations</div>
+<p>ZMOT (Lecinski, 2011) proved that influence migrates upstream of the decision moment. ZMOI applies the same logic to media: audiences arrive at an event with interpretive frames already forming. The Messy Middle (Rennie &amp; Protheroe, 2020) mapped the non-linear exploration/evaluation loops in modern decisions. CMI extends this: in media, interpretive loops do not converge on a purchase; they can continue beyond a single decision. Attention economics (Simon, 1971; Wu, 2016) established that the bottleneck is not supply of content but allocation of attention. ZMOI shifts the question from time spent to meaning assigned. Habit formation (Eyal, 2014; Fogg, 2009) showed that habits require designed triggers. Where Eyal's Hook Model uses hedonic rewards, CMI's reward is cognitive clarity: reduced uncertainty about what an event means.</p>
+</div>
+<div class="subsection">
+<div class="subsection-title">3.2 The Framing Question</div>
+<p>Goffman (1974) introduced frame analysis. Entman (1993) codified media framing as selecting aspects of perceived reality and making them more salient. ZMOI extends this in three dimensions. First, locus: the surface participates in the frame. A Telegram brief at 7 AM carries different interpretive weight than the identical content in a social feed at midnight. Second, temporality: classic framing theory's unit of analysis is per-message; CMI captures the compounding effect of repeated encounters across surfaces over days and weeks. Third, agency: ZMOI describes elective interpretive architecture: the user installs the extension, subscribes to the brief. This is opt-in framing, not broadcast.</p>
+</div>
+<div class="subsection">
+<div class="subsection-title">3.3 Manufacturing Consent</div>
+<p>Herman and Chomsky (1988) argued that mass media can manufacture consent through structural, involuntary mechanisms. The phrase "own the narrative frame" will and should evoke this tradition. CMI inherits the recognition that framing carries real power and real responsibility. But where the propaganda model describes involuntary, institutional, concealed mechanisms, CMI operates under opposite conditions: opt-in (the user installs), transparent (the lens is declared), removable (one click), and non-monopolistic. If any CMI implementation drifts toward lock-in or concealed bias, it has become the thing it must not be.</p>
+</div>
+<div class="subsection">
+<div class="subsection-title">3.4 Counter-Evidence: Repetition and Fatigue</div>
+<p>CMI relies on repeated exposure building trust. The counter-evidence is real: forced advertising repetition produces avoidance and banner blindness (Cho &amp; Cheon, 2004). CMI's prediction is that editorial utility follows a different curve. Advertising delivers the same message repeatedly (diminishing value). Editorial utility delivers new information through a consistent lens (novel signal, stable frame). If CMI surfaces show the same fatigue curves as advertising (declining engagement, rising disable rates), the mechanism is falsified. This is directly operationalized in P2.</p>
+</div>
+<div class="subsection">
+<div class="subsection-title">3.5 The Declared-Lens Shift: Evidence from the Market</div>
+<p>ZMOI is not purely theoretical. The media landscape has already moved toward declared interpretive lenses. Legacy outlets built their brands on implied objectivity. The fastest-growing media properties of 2015-2025 abandoned this model and built audiences by declaring their lens upfront: Morning Brew and Axios on "smart brevity," Stratechery on a single analyst with a consistent technology lens, The Free Press and Puck on explicit transparency about editorial perspective, Ground News and AllSides on making the frame itself the product.</p>
+<div class="pull-quote">
+<p>These examples suggest that an explicit editorial perspective can support a relationship with readers. They do not establish that every audience is moving in the same direction, or that declaring a lens by itself produces growth.</p>
+</div>
+</div>
+<div class="subsection">
+<div class="subsection-title">3.6 Differentiation Summary</div>
+</div>
+<div class="data-table-wrap">
+<div class="data-table-header"><span>Table 1 · Framework Positioning</span></div>
+<Block4 />
+</div>
+</div>
+</article>
+
+<div class="part-header">
+<div class="part-num">Part II</div>
+<div class="part-title">The CMI System</div>
+</div>
+
+<article class="section" id="s4">
+<div class="section-badge">
+<div class="section-icon"><Block5 /></div>
+<div class="section-meta">
+<div class="section-number">§4</div>
+<h2 class="section-title">The CMI Framework</h2>
+</div>
+</div>
+<div class="section-rule"></div>
+<div class="section-body">
+<div class="framework-evolution">
+<div class="framework-evolution-item">
+<div class="evolution-abbr">ZMOT</div>
+<div class="evolution-name">Zero Moment of Truth</div>
+<div class="evolution-desc">Pre-purchase preference formation</div>
+</div>
+<div class="framework-evolution-item">
+<div class="evolution-abbr">ZMOI</div>
+<div class="evolution-name">Zero Moment of Interpretation</div>
+<div class="evolution-desc">Pre-opinion interpretation formation</div>
+</div>
+<div class="framework-evolution-item">
+<div class="evolution-abbr">CMI</div>
+<div class="evolution-name">Continuous Moment of Intent</div>
+<div class="evolution-desc">Persistent cross-surface interpretive presence</div>
+</div>
+</div>
+<div class="subsection">
+<div class="subsection-title">4.1 The Five-Effect Mechanism</div>
+<p>CMI proposes five linked effects to test.</p>
+</div>
+<div class="flywheel">
+<div class="flywheel-item">
+<div class="flywheel-num">1</div>
+<div class="flywheel-title">Contextual Proximity</div>
+<div class="flywheel-desc">Meet users where they already spend attention</div>
+</div>
+<div class="flywheel-item">
+<div class="flywheel-num">2</div>
+<div class="flywheel-title">Interpretive Speed</div>
+<div class="flywheel-desc">Stable frame in high-noise moments; reduce cognitive cost</div>
+</div>
+<div class="flywheel-item">
+<div class="flywheel-num">3</div>
+<div class="flywheel-title">Repetition Without Redundancy</div>
+<div class="flywheel-desc">Multiple surfaces reinforce lens without repeating content</div>
+</div>
+<div class="flywheel-item">
+<div class="flywheel-num">4</div>
+<div class="flywheel-title">Trust Accumulation</div>
+<div class="flywheel-desc">Familiarity plus utility converts exposure into credibility</div>
+</div>
+<div class="flywheel-item">
+<div class="flywheel-num">5</div>
+<div class="flywheel-title">Habit + Compounding</div>
+<div class="flywheel-desc">Recurring users become distribution nodes</div>
+</div>
+</div>
+<div class="subsection">
+<div class="subsection-title">4.2 The Lens Is the Moat</div>
+<p>A necessary clarification: the CMI architecture itself is replicable. Any competitor can build multi-surface presence. The moat is the editorial lens. A CMI system amplifies whatever it carries. If the lens is undifferentiated, the system amplifies noise. If the lens is sharp, consistent, and intellectually honest, the system compounds credibility across every surface it touches.</p>
+<div class="hard-filter">
+<div class="hard-filter-label">Core Dependency</div>
+<p>CMI without a defensible lens is infrastructure without signal. The architecture delivers; the lens differentiates.</p>
+</div>
+</div>
+</div>
+</article>
+
+<article class="section" id="s5">
+<div class="section-badge">
+<div class="section-icon"><Block6 /></div>
+<div class="section-meta">
+<div class="section-number">§5</div>
+<h2 class="section-title">Touchpoint-First User Access</h2>
+</div>
+</div>
+<div class="section-rule"></div>
+<div class="section-body">
+<p>Surface-first means designing presence for the context and attention state of each touchpoint, not repurposing one format across channels.</p>
+<div class="data-table-wrap">
+<div class="data-table-header"><span>Table 2 · Taxonomy of CMI Touchpoints</span></div>
+<Block7 />
+</div>
+</div>
+</article>
+
+<article class="section" id="s6">
+<div class="section-badge">
+<div class="section-icon"><Block8 /></div>
+<div class="section-meta">
+<div class="section-number">§6</div>
+<h2 class="section-title">Audience Architecture</h2>
+</div>
+</div>
+<div class="section-rule"></div>
+<div class="section-body">
+<p>A common growth error in niche media is treating the audience as a monolith. CMI requires segment-specific packaging: the same lens delivered at different depths for different clusters.</p>
+<div class="segment-grid">
+<div class="segment-item">
+<div class="segment-label">Segment A</div>
+<div class="segment-name">Native Operators</div>
+<div class="segment-job">Traders, builders, high-frequency information users</div>
+<div class="segment-details">Job: signal vs. noise filtering at speed<br />Surfaces: real-time widgets, alerts, data overlays<br />Signal: daily active use; low disable rate</div>
+</div>
+<div class="segment-item">
+<div class="segment-label">Segment B</div>
+<div class="segment-name">Macro-First Professionals</div>
+<div class="segment-job">Founders, executives, finance-adjacent professionals</div>
+<div class="segment-details">Job: translating global events to market implications<br />Surfaces: morning briefs, editorial analysis, interviews<br />Signal: email open rate above 40%</div>
+</div>
+<div class="segment-item">
+<div class="segment-label">Segment C</div>
+<div class="segment-name">Curious Mainstream</div>
+<div class="segment-job">Non-native audience, entering through world events</div>
+<div class="segment-details">Job: comprehension without jargon<br />Surfaces: explainer formats, shareable cards<br />Signal: explainer completion; share-to-new-user</div>
+</div>
+</div>
+<div class="pull-quote">
+<p>The error is treating these as one audience. The opportunity is one lens, multiple entry narratives.</p>
+</div>
+</div>
+</article>
+
+<article class="section" id="s7">
+<div class="section-badge">
+<div class="section-icon"><Block9 /></div>
+<div class="section-meta">
+<div class="section-number">§7</div>
+<h2 class="section-title">Implementation Architecture</h2>
+</div>
+</div>
+<div class="section-rule"></div>
+<div class="section-body">
+<p>This section translates CMI's touchpoints into concrete implementation principles. These are proposed specifications, not validated results. Section 9 defines the predictions they must survive.</p>
+<div class="subsection">
+<div class="subsection-title">7.1 The Ambient Anchor</div>
+<p>Principle: occupy one high-frequency, low-effort touchpoint where the user begins their digital day. The goal is not to deliver a full article but to set the interpretive frame before the user encounters competing narratives. The surface should deliver one card with three elements: current context, one headline, one editorial frame. The encounter should take under ten seconds.</p>
+</div>
+<div class="subsection">
+<div class="subsection-title">7.2 The Scheduled Stimulus</div>
+<p>Principle: deliver editorial stimuli at predictable, fixed intervals. The key word is scheduled: predictability builds habit, unpredictability builds fatigue. If every event triggers a push, no event feels important. The structure is constant (frame, context, watchpoint); the packaging adapts to the surface.</p>
+</div>
+<div class="subsection">
+<div class="subsection-title">7.3 The Contextual Overlay</div>
+<p>Principle: add an interpretive layer on top of surfaces where the user is already making decisions or evaluating information. The overlay does not replace the original context; it adds a second frame. This is a CMI surface closely tied to context because it operates at the exact moment of interpretation, but also the most sensitive: it must be rigorously opt-in, transparent, and removable. If the user did not choose to see it, it is not CMI. It is spam.</p>
+</div>
+<div class="subsection">
+<div class="subsection-title">7.4 The Conversational Unit</div>
+<p>Principle: create editorial units designed for forwarding in messaging environments. Structure: one fact, one implication, one watchpoint. The unit succeeds when the person who receives it forwards it to someone else. Designed for conversation, not broadcast.</p>
+</div>
+<div class="subsection">
+<div class="subsection-title">7.5 The Captive Surface</div>
+<p>Principle: syndicate long-form or interview content into environments where attention exists but competitors are absent (in-flight, waiting rooms, event displays, partner feeds). These surfaces trade frequency for depth and serve as entry points for Segment C audiences.</p>
+</div>
+<div class="data-table-wrap">
+<div class="data-table-header"><span>Table 3 · CMI Implementation Principles</span></div>
+<Block10 />
+</div>
+</div>
+</article>
+
+<article class="section" id="s8">
+<div class="section-badge">
+<div class="section-icon"><Block11 /></div>
+<div class="section-meta">
+<div class="section-number">§8</div>
+<h2 class="section-title">Growth Model</h2>
+</div>
+</div>
+<div class="section-rule"></div>
+<div class="section-body">
+<p>CMI predicts that useful, repeated encounters can increase return between publication events. Compare that baseline with the attention generated by individual releases. Some event-driven publications already build durable habits; the test is whether the proposed system adds value under comparable conditions.</p>
+<div class="pull-quote">
+<p>The metric that separates CMI from content marketing: does the baseline rise between events? If yes, the system is compounding. If no, you are on the treadmill.</p>
+</div>
+<div class="subsection">
+<div class="subsection-title">8.1 North Star Metric</div>
+<p><strong>WRQA: Weekly Returning Qualified Audience.</strong> Users who return 3+ times per week and engage with at least one interpretive unit (card, brief, or analytical segment) per session. "Qualified" means the user engaged with a framing unit, not merely viewed a data feed. WRQA distinguishes habitual interpretive reliance from passive checking.</p>
+</div>
+<div class="data-table-wrap">
+<div class="data-table-header"><span>Table 4 · Measurement Framework</span></div>
+<Block12 />
+</div>
+</div>
+</article>
+
+<div class="part-header">
+<div class="part-num">Part III</div>
+<div class="part-title">Validation &amp; Operations</div>
+</div>
+
+<article class="section" id="s9">
+<div class="section-badge">
+<div class="section-icon"><Block13 /></div>
+<div class="section-meta">
+<div class="section-number">§9</div>
+<h2 class="section-title">Predictions and Kill Criteria</h2>
+</div>
+</div>
+<div class="section-rule"></div>
+<div class="section-body">
+<p>A framework without falsifiable predictions is rhetoric. The following predictions apply to any CMI implementation. A failed prediction should prompt a review of both the implementation and the claim. Retesting should leave room to revise or reject the framework.</p>
+<div class="prediction-list">
+<div class="prediction-item">
+<div class="prediction-header">
+<div class="prediction-id">P1</div>
+<div class="prediction-name">Recurrence</div>
+<div class="kill-badge">Kill Criterion</div>
+</div>
+<div class="prediction-body"> Users engaged through multi-touchpoint CMI will retain at meaningfully higher rates than single-surface users. The touchpoint architecture produces the difference, not the content alone. <div class="kill-criterion"><strong>Kill:</strong> No measurable retention lift after 90 days signals the touchpoint mix needs restructuring.</div> </div>
+</div>
+<div class="prediction-item">
+<div class="prediction-header">
+<div class="prediction-id">P2</div>
+<div class="prediction-name">Cadence over Chaos</div>
+<div class="kill-badge">Kill Criterion</div>
+</div>
+<div class="prediction-body"> Scheduled stimuli at fixed intervals will retain better than ad hoc alerts. Disable rates should stay well below the 10-15%/month benchmark for news apps. <div class="kill-criterion"><strong>Kill:</strong> Disable rates at or above benchmark means the stimulus cadence or content is not delivering sufficient value. Adjust frequency, format, or depth.</div> </div>
+</div>
+<div class="prediction-item">
+<div class="prediction-header">
+<div class="prediction-id">P3</div>
+<div class="prediction-name">Interpretation Over Data</div>
+<div class="kill-badge">Kill Criterion</div>
+</div>
+<div class="prediction-body"> Framing units will bring users back at higher rates than raw data or unframed content. The value is in the lens, not the numbers. <div class="kill-criterion"><strong>Kill:</strong> No performance difference between framed and unframed touchpoints means the lens is not landing. Revisit editorial clarity or packaging.</div> </div>
+</div>
+<div class="prediction-item">
+<div class="prediction-header">
+<div class="prediction-id">P4</div>
+<div class="prediction-name">Segmented Packaging</div>
+<div class="kill-badge">Kill Criterion</div>
+</div>
+<div class="prediction-body"> Segment-specific formats will outperform one-size-fits-all on completion and sharing. <div class="kill-criterion"><strong>Kill:</strong> No segment shows meaningful improvement means the segmentation model or the packaging is wrong, not necessarily the framework.</div> </div>
+</div>
+<div class="prediction-item">
+<div class="prediction-header">
+<div class="prediction-id">P5</div>
+<div class="prediction-name">Compounding</div>
+<div class="kill-badge">Kill Criterion</div>
+</div>
+<div class="prediction-body"> Acquisition cost per retained user should decline quarterly as habitual users drive organic distribution. This is the economic validation. <div class="kill-criterion"><strong>Kill:</strong> Flat or rising cost after three cohorts (9 months) signals the CMI layers are generating consumption but not advocacy. Redesign the sharing and forwarding mechanics.</div> </div>
+</div>
+</div>
+<div class="subsection">
+<div class="subsection-title">9.1 The Proving Experiment</div>
+<p>The experiment is straightforward. Take two equivalent content events (same editorial quality, same topic urgency, same production value). Distribute the first through traditional channels: publish, promote on social, let organic take over. Distribute the second through the full CMI stack: ambient anchor pre-positioning, scheduled stimulus at peak windows, contextual overlay in the moment, social amplification, and conversational follow-up. Measure three outcomes: D7 retention of new users acquired during each event, cross-surface migration (did users from one touchpoint appear on another within 48 hours), and organic share rate.</p>
+<div class="pull-quote">
+<p>The question is not whether CMI sounds right. It is whether CMI-distributed content compounds in ways that traditionally distributed content does not. This comparison would provide an initial test of the claim.</p>
+</div>
+</div>
+</div>
+</article>
+
+<article class="section" id="s10">
+<div class="section-badge">
+<div class="section-icon"><Block14 /></div>
+<div class="section-meta">
+<div class="section-number">§10</div>
+<h2 class="section-title">Operational Principles</h2>
+</div>
+</div>
+<div class="section-rule"></div>
+<div class="section-body">
+<p>When I say "we" below, I mean any team implementing CMI, including my own.</p>
+<p><strong>Habit over virality.</strong> The unit of progress is weekly returning users, not peak views. A viral moment that does not convert to return frequency is not growth; it is noise.</p>
+<p><strong>Touchpoints with product mentality.</strong> Every point of contact deserves the same design rigor as the core editorial product. Packaging is not an afterthought; it is part of the value proposition. Each touchpoint should feel intentionally built, not repurposed.</p>
+<p><strong>One lens, many depths.</strong> Same lens, different depth by segment. Speed plus clarity is the advantage.</p>
+<p><strong>Integrity as strategy.</strong> Presence without utility is intrusion. Never ship mechanics that feel manipulative.</p>
+<div class="hard-filter">
+<div class="hard-filter-label">Hard Filter</div>
+<p>Does it increase recurrence? Does it improve distribution compounding? Does it improve economics? If none of the three, it is out.</p>
+</div>
+</div>
+</article>
+
+<article class="section" id="s11">
+<div class="section-badge">
+<div class="section-icon"><Block15 /></div>
+<div class="section-meta">
+<div class="section-number">§11</div>
+<h2 class="section-title">Risks and Boundary Conditions</h2>
+</div>
+</div>
+<div class="section-rule"></div>
+<div class="section-body">
+<div class="risk-list">
+<div class="risk-item">
+<div><span class="risk-severity critical">Critical</span></div>
+<div>
+<div class="risk-title">11.1 Trust and Intrusiveness</div>
+<div class="risk-body">Trust in news is fragile. Any mechanic that feels extractive will erode long-term value faster than it generates short-term metrics. Every surface must pass a utility test: genuine value in context, or merely attention capture? P2's disable rate is the early-warning indicator. Rebuilding trust may take sustained corrections and changes to the experience.</div>
+</div>
+</div>
+<div class="risk-item">
+<div><span class="risk-severity structural">Structural</span></div>
+<div>
+<div class="risk-title">11.2 Editorial Responsibility</div>
+<div class="risk-body">Operating at the interpretive layer carries heightened responsibility. The propaganda model is a permanent warning. The obligation: frame with rigor, distinguish analysis from opinion, disclose the lens explicitly. For any brand with a monetary lens, never cross into personalized financial advice.</div>
+</div>
+</div>
+<div class="risk-item">
+<div><span class="risk-severity high">High</span></div>
+<div>
+<div class="risk-title">11.3 Platform Risk</div>
+<div class="risk-body">Browser extensions and messaging channels operate under platform governance that can change unilaterally. Multi-surface architecture provides resilience, but a simultaneous policy shift across Chrome and messaging would threaten core distribution.</div>
+</div>
+</div>
+<div class="risk-item">
+<div><span class="risk-severity medium">Medium</span></div>
+<div>
+<div class="risk-title">11.4 Interface Disruption</div>
+<div class="risk-body">AI-native browsers and discovery layers are redefining how users interact with the web. CMI must build on user relationships, not surface mechanics alone.</div>
+</div>
+</div>
+<div class="risk-item">
+<div><span class="risk-severity structural">Structural</span></div>
+<div>
+<div class="risk-title">11.5 Cognitive Concentration Risk</div>
+<div class="risk-body">If CMI works as designed, it becomes a tool of pre-interpretive influence at scale. The ethical boundary must be stated plainly: a system built to shape how people interpret events before they form opinions carries inherent risk of cognitive concentration. The safeguards are structural: the lens must be declared (never concealed), the user must be able to disengage at any point, and no CMI implementation should seek to become the sole interpretive source for any user. If an implementation trends toward interpretive monopoly, it has crossed the line from journalism into propaganda, regardless of intent.</div>
+</div>
+</div>
+</div>
+</div>
+</article>
+
+<article class="section" id="s12">
+<div class="section-badge">
+<div class="section-icon"><Block16 /></div>
+<div class="section-meta">
+<div class="section-number">§12</div>
+<h2 class="section-title">CMI Self-Audit: Five Questions for Monday Morning</h2>
+</div>
+</div>
+<div class="section-rule"></div>
+<div class="section-body">
+<p>This framework is only useful if it changes how people build. Five questions any media operator can ask, no CMI terminology required.</p>
+<div class="audit-list">
+<div class="audit-item">
+<div class="audit-num">1</div>
+<div>
+<div class="audit-q"><strong>Can your audience describe your lens in one sentence?</strong></div>
+<div class="audit-note">If not, the interpretive frame is unclear. Declared lenses grow faster than implied ones.</div>
+</div>
+</div>
+<div class="audit-item">
+<div class="audit-num">2</div>
+<div>
+<div class="audit-q"><strong>Are you present on three or more surfaces, or only your site?</strong></div>
+<div class="audit-note">If all distribution ends at your homepage, you are asking users to relocate. Meet them where they are.</div>
+</div>
+</div>
+<div class="audit-item">
+<div class="audit-num">3</div>
+<div>
+<div class="audit-q"><strong>Do your user touchpoints generate habitual return, or only spikes?</strong></div>
+<div class="audit-note">Check D7 and D30 retention. If traffic is event-driven with no baseline, you have reach but not habit.</div>
+</div>
+</div>
+<div class="audit-item">
+<div class="audit-num">4</div>
+<div>
+<div class="audit-q"><strong>Do your metrics measure recurrence, or only reach?</strong></div>
+<div class="audit-note">Pageviews are not growth signals if users never come back. The metric that matters is return frequency on interpretive content.</div>
+</div>
+</div>
+<div class="audit-item">
+<div class="audit-num">5</div>
+<div>
+<div class="audit-q"><strong>Does your packaging change by audience segment?</strong></div>
+<div class="audit-note">If every user gets the same format regardless of expertise or context, you are leaving growth on the table.</div>
+</div>
+</div>
+</div>
+<p class="page-inline-6e3385fb7d">If three or more answers are no, the bottleneck is probably not content quality. It is user touchpoint architecture.</p>
+</div>
+</article>
+
+<article class="section" id="s13">
+<div class="section-badge">
+<div class="section-icon"><Block17 /></div>
+<div class="section-meta">
+<div class="section-number">§13</div>
+<h2 class="section-title">Conclusion</h2>
+</div>
+</div>
+<div class="section-rule"></div>
+<div class="section-body">
+<p>ZMOI names the moment an event starts to acquire meaning for a reader. CMI proposes a way to support repeated contact with a source across those moments. Its value depends on whether the work helps people understand more and gives them a reason to return.</p>
+<p>The next defensible advantage lies not in content quality or distribution scale alone, but in continuous interpretive presence: showing up, repeatedly and credibly, in the moments where people form meaning. For media organizations navigating declining engagement, fragmented attention, and eroding trust, CMI offers a testable alternative to the volume treadmill.</p>
+<div class="pull-quote">
+<p>One-line thesis: sustained presence before opinions form is the growth hypothesis CMI asks media teams to test.</p>
+</div>
+</div>
+</article>
+
+<div class="author-note">
+<div class="author-note-label">Author's Note</div>
+<p>I have spent over a decade building and scaling digital media work across Latin America. Before founding my own company, I worked in digital marketing agencies, SEO, and ad networks (the operational side of how attention is bought, measured, and converted) and taught Digital Marketing at Digital House.</p>
+<p>As co-founder of <a href="work-posta.html">Posta</a>, Argentina's first podcast production company, my partners and I grew a two-person operation into a regional company producing original programming and branded audio. Public coverage of the 2022 PodX investment reported more than 150 shows and work for more than 60 companies. PodX acquired a majority stake in Posta as its first investment in Latin America. The <a href="https://www.lanacion.com.ar/tecnologia/el-podcast-argentino-da-un-salto-internacional-con-la-asociacion-entre-posta-y-la-sueca-podx-nid07122022/" target="_blank" rel="noopener noreferrer">LA NACION report</a> and <a href="https://podnews.net/press-release/podx-group-posta" target="_blank" rel="noopener noreferrer">acquisition announcement</a> document those figures and relationships.</p>
+<p>This document is a practitioner's thesis; a formalization of patterns I have observed, built on, and sometimes (more than I would like to) gotten wrong over years of execution. </p>
+</div>
+
+<div class="references">
+<div class="references-title">References</div>
+<div class="reference-item">Borah, P. (2011). Conceptual Issues in Framing Theory. <em>J. of Communication</em>, 61(2), 246-263.</div>
+<div class="reference-item">Cho, C.-H., &amp; Cheon, H. J. (2004). Why Do People Avoid Advertising on the Internet? <em>J. of Advertising</em>, 33(4), 89-97.</div>
+<div class="reference-item">Entman, R. M. (1993). Framing: Toward Clarification of a Fractured Paradigm. <em>J. of Communication</em>, 43(4), 51-58.</div>
+<div class="reference-item">Eyal, N. (2014). <em>Hooked: How to Build Habit-Forming Products.</em> Portfolio/Penguin.</div>
+<div class="reference-item">Fogg, B. J. (2009). A Behavior Model for Persuasive Design. <em>Persuasive Technology</em>, Article 40.</div>
+<div class="reference-item">Goffman, E. (1974). <em>Frame Analysis.</em> Harvard University Press.</div>
+<div class="reference-item">Herman, E. S., &amp; Chomsky, N. (1988). <em>Manufacturing Consent.</em> Pantheon Books.</div>
+<div class="reference-item">Kahneman, D. (2011). <em>Thinking, Fast and Slow.</em> Farrar, Straus and Giroux.</div>
+<div class="reference-item">Lecinski, J. (2011). <em>Winning the Zero Moment of Truth.</em> Google Inc.</div>
+<div class="reference-item">Newman, N. et al. (2025). <em>Reuters Institute Digital News Report 2025.</em> University of Oxford.</div>
+<div class="reference-item">Pew Research Center. (2024). Social Media and News Fact Sheet.</div>
+<div class="reference-item">Rennie, A., &amp; Protheroe, J. (2020). <em>Decoding Decisions: Making Sense of the Messy Middle.</em> Think with Google.</div>
+<div class="reference-item">Simon, H. A. (1971). <em>Designing Organizations for an Information-Rich World.</em> Johns Hopkins Press.</div>
+<div class="reference-item">Wu, T. (2016). <em>The Attention Merchants.</em> Alfred A. Knopf.</div>
+</div>
+<div class="closing">
+<div class="closing-ornament-top">✦ ❧ ✦</div>
+<p>This document is an independent industry thesis. Intended for strategic discussion among media practitioners, investors, editorial leadership, and peer organizations.</p>
+<div class="closing-ornament-bottom">ZMOI / CMI Framework · v4.2 · Diego Dell'Agostino</div>
+</div>
+</main>
+<div class="page-inline-f7663ce6f4">
+<p>Start with <a href="paper-01.html">Before You Build</a> for product decisions, or <a href="the-last-human-impression.html">The Last Human Impression</a> for delegated reading.</p>
+</div>
+<div class="paper-nav"> <a href="index.html" class="paper-nav-link"> <Block18 /> Back to Home </a> <a href="paper-01.html" class="paper-nav-link"> Open Reading Path <Block19 /> </a> </div>
+<Footer />
+</div>

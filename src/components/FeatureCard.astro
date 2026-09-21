@@ -1,0 +1,9 @@
+---
+interface Props { href: string; title: string; action: string; label?: string; accent?: 'orange' | 'lime' }
+const {href,title,action,label,accent='orange'}=Astro.props;
+---
+<a href={href} class:list={['feature-card',`feature-card-${accent}`]}>
+  {label && <span class="card-label">{label}</span>}
+  <h3>{title}</h3><div class="card-copy"><slot /></div>
+  <span class="card-action">{action} <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6" /></svg></span>
+</a>

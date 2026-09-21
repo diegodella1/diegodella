@@ -1,0 +1,235 @@
+---
+title: "The Last Scarcity"
+description: "A late-night bot project led me to ask what gives work its pull when the immediate problem has been solved."
+datePublished: "2026-03-07"
+tags: ["ai-media", "product", "narrative"]
+dateModified: "2026-09-14"
+presentation: "the-last-scarcity"
+order: 14
+listing: {"group": 2, "order": 1, "topics": "ai-trust product-clarity", "label": "Scarcity"}
+---
+
+import ArticleField from "../../components/ArticleField.astro";
+import Footer from "../../components/Footer.astro";
+import Navigation from "../../components/Navigation.astro";
+import ArticleHeader from "../../components/ArticleHeader.astro";
+import Block0 from "../../components/diagrams/the-last-scarcity-0.astro";
+import Block1 from "../../components/diagrams/already-decided-1.astro";
+import Block2 from "../../components/diagrams/already-decided-2.astro";
+
+<a href="#main-content" class="skip-link">Skip to content</a>
+<div class="page-wrap">
+
+
+
+<Navigation />
+<main id="main-content">
+<ArticleHeader />
+<div class="chapter-divider">
+<div class="chapter-divider-line"></div>
+</div>
+<div class="section-map-wrap">
+<div class="section-map">
+<div class="section-map-header"><span>Document Map</span><span>7 Sections</span></div>
+<div class="section-map-grid"> <a href="#tls-s1" class="section-map-item"><div class="section-map-num">I</div><div><div class="section-map-label">Setup</div><div class="section-map-title">Five dominoes, four down</div></div></a> <a href="#tls-s2" class="section-map-item"><div class="section-map-num">II</div><div><div class="section-map-label">Argument</div><div class="section-map-title">The thing behind the thing</div></div></a> <a href="#tls-s3" class="section-map-item"><div class="section-map-num">III</div><div><div class="section-map-label">Trap</div><div class="section-map-title">The dignity trap</div></div></a> <a href="#tls-s4" class="section-map-item"><div class="section-map-num">IV</div><div><div class="section-map-label">Market</div><div class="section-map-title">The desire economy</div></div></a> <a href="#tls-s5" class="section-map-item"><div class="section-map-num">V</div><div><div class="section-map-label">Break</div><div class="section-map-title">The thing that almost killed this essay</div></div></a> <a href="#tls-s6" class="section-map-item"><div class="section-map-num">VI</div><div><div class="section-map-label">Turn</div><div class="section-map-title">I am the problem</div></div></a> <a href="#tls-s7" class="section-map-item"><div class="section-map-num">VII</div><div><div class="section-map-label">Close</div><div class="section-map-title">No map for this</div></div></a> </div>
+</div>
+</div>
+<div class="content">
+
+<div class="essay-section intro">
+<p>Last Monday I made fifty dollars in two minutes.</p>
+<div class="article-opening-diagram"><Block0 /></div>
+<p>I was with people from work, after hours, and a coworker had Polymarket open on his laptop. For those who don't know it: Polymarket is a prediction market. People bet on whether things will happen. Elections, interest rates, crypto prices. It is gambling dressed in a blazer.</p>
+<p>Watching him operate was a Pandora's box moment. He wasn't doing anything sophisticated. He was just reading the lines, seeing where they looked wrong, and placing small bets. Bitcoin up or down in the next five minutes. And it was working. And the thought arrived immediately, the way obvious thoughts do, fully formed and impossible to un-think: <em>if he can do this, why can't I?</em></p>
+<p>I placed a bet. Bitcoin, up or down, next five minutes. The line looked wrong to me. Not wrong in a sophisticated quantitative-finance way. Wrong in the way a crooked painting looks wrong. You don't measure the angle. You just see it. Two minutes later: fifty dollars. I closed the app.</p>
+<p>What stayed with me was the question I took home: could I build a system to test what I thought I had seen?</p>
+<div class="margin-note">The offer was real. So was what it revealed. Both can be true at the same time.</div>
+<p>I had been experimenting with agents for months. This gave me another problem to try. One winning bet did not establish an edge, but it was enough to send me back to the desk.</p>
+<p>I went home. Made steak sandwiches and a salad for dinner. Ate with my son and my wife. Didn't do the dishes because according to her I do them wrong, and she's probably right. Normal Monday night. But the whole time, while I was cutting bread and wiping the counter and going through the motions of a regular evening, the thought was turning in the back of my head like a rock tumbler. <em>If he can do this, why can't I? And if I can do this, why can't a bot?</em></p>
+<p>By 11 PM the house was quiet. I walked to my desk. Opened a terminal. And started building.</p>
+<p>I built a small bot to repeat the process with one-dollar bets and a position-sizing rule based on the Kelly criterion. Keeping the stakes small was part of the experiment. It did not make the bot immune to losses, bad estimates, or execution errors.</p>
+<p>By midnight I had a prototype. By 1 AM I was testing it against historical data and seeing gains in the simulation. That was enough to keep me working, though it did not establish what would happen with real trades. By 1:45 AM I was in the kitchen pouring a coffee, thinking about what I had just built.</p>
+<p>The thought was: if a 43-year-old media guy from Buenos Aires with no trading background can make fifty dollars in two minutes because he watched a coworker do it first, and if a bot can scale that 24/7 while he sleeps, and if that bot can be copied infinitely, then what is work? What is it for? And if the answer isn't money anymore, is there an answer at all?</p>
+<p>The coffee got cold. I didn't drink it. I went back to my desk.</p>
+<p>Not to work on the bot. The bot was done. I went back to sit with the question. And it's been sitting with me since.</p>
+</div>
+
+<div class="essay-section" id="tls-s1">
+<div class="section-header">
+<div class="section-header-num">I</div>
+<div class="section-header-body">
+<div class="section-header-label">Section I / Seven</div>
+<div class="section-header-title">Five dominoes, four down</div>
+</div>
+</div>
+<p>Different technologies have changed what takes time, effort, and money. I use four examples to get to the question that kept me at the desk. They involve different limits; none shows that basic needs have been solved for everyone.</p>
+<p><strong>Food.</strong> Producing food and making it available to the people who need it are different problems. My thought experiment begins with material security; it does not claim that everyone has it.</p>
+<p><em>Domino two: information.</em> Wanted to know something in 1950? Library. If your town had one. If it had the book. If the book was in your language. If you could afford the time to go. Knowledge was locked behind geography, money, and institutions. The internet blew the door off. And then the problem flipped. We went from "I can't find anything" to "I can't stop finding things." The scarcity of information was replaced by the scarcity of attention. We solved one hunger and invented another.</p>
+<p><strong>Production.</strong> AI lets me prototype some tools much faster than before. That changes what I can attempt in an evening. It does not remove the work of deciding whether the result is reliable or worth maintaining.</p>
+<div class="margin-note">My bot, the one I built between 11 PM and 1 AM on a Monday while my kid slept, will probably never make me rich. But it will make money while I do nothing.</div>
+<p><strong>Capital.</strong> The bot made me wonder how much market work could be delegated. My experiment could not answer that. A system that places trades still risks capital, and a short run tells me little about its performance over time.</p>
+<p>These changes made me think about the work I would choose if fewer hours were needed to meet immediate demands. They do not establish that material scarcity is ending.</p>
+<p>There's a fifth one still standing. It is the question I want to focus on here: what gives people a reason to act?</p>
+</div>
+
+<div class="essay-section" id="tls-s2">
+<div class="section-header">
+<div class="section-header-num">II</div>
+<div class="section-header-body">
+<div class="section-header-label">Section II / Seven</div>
+<div class="section-header-title">The thing behind the thing</div>
+</div>
+</div>
+<p>Solving the practical problem did not settle what I wanted to do next.</p>
+<p>When you're starving, food is the meaning of life. You don't need purpose. You need bread. The need for bread gives you a structure, a direction, a reason to wake up. It's awful. It's also clear. Now: get the bread. Solve the hunger. Watch what happens. You don't feel fulfilled. You feel a new emptiness, one that was always there but the hunger was covering it up, the way loud music covers a crack in the wall. Turn off the music and the crack is suddenly the only thing in the room.</p>
+<p>There was a French psychoanalyst named Jacques Lacan who figured this out sixty years ago. He had a term for it that sounds ridiculous in English, <em>objet petit a</em>, the "little object a", but the idea behind it might be the most important idea for understanding the next century.</p>
+<p>Lacan's idea: you never actually want the thing you think you want. You want the <em>wanting</em>. The thing you're chasing, the job, the raise, the apartment, the person, the fifty dollars, that thing is just a stand-in for a deeper pull that has no object. Desire isn't aimed at anything. It's aimed at the gap between where you are and where you aren't yet. Close the gap and you don't feel satisfied. You feel empty. Because the gap was the engine. And you just turned it off.</p>
+<p>Think about the last thing you really wanted. Remember the wanting? The planning, the energy, the obsession? Now remember the moment you got it. Was the getting as good as the wanting?</p>
+<p>It almost never is.</p>
+<p>Getting something I wanted has sometimes left me looking for another problem. I recognize that pattern at my desk; I cannot turn it into a rule about everyone’s desires.</p>
+<div class="pull-quote">
+<p>Suppose a person has more time they do not need to sell. What helps them choose how to use it? That is the scenario I want to examine, rather than assume technology delivers it to everyone.</p>
+</div>
+<p>The European aristocracies already ran a small version of this experiment. They had food, shelter, capital, security, and unlimited time. Same resources across the board. The results were, and this is the word I want you to hold, <em>bimodal</em>. Some of them made extraordinary things. Art that outlasted empires. Science that rewired our understanding of the universe. Philosophy we're still teaching. Others destroyed themselves. Gambling halls, opium, duels over nothing, a slow gorgeous rot.</p>
+
+
+<p>I use leisure in earlier societies as an imperfect comparison. Those arrangements depended on exclusion and other people’s labor. They cannot tell us what would happen if more people had time they did not need to sell. They do make me want to ask how someone learns to use that time.</p>
+</div>
+
+<div class="essay-section" id="tls-s3">
+<div class="section-header">
+<div class="section-header-num">III</div>
+<div class="section-header-body">
+<div class="section-header-label">Section III / Seven</div>
+<div class="section-header-title">The dignity trap</div>
+</div>
+</div>
+<p><em>El trabajo dignifica.</em> Work dignifies. My grandfather said it. The politician says it. The motivational poster in the break room says it. It sounds so obviously true that nobody ever checks.</p>
+<p>If work dignifies, then every sweatshop is a cathedral. Every data-entry clerk is glowing with purpose. Every person grinding a job they hate, in a building they resent, for a boss who doesn't know their name, to pay rent on an apartment they're never awake in long enough to enjoy. That person should feel dignified.</p>
+<p>They don't.</p>
+<p>They feel used. They feel like the hours of their one life are being converted into someone else's profit at an exchange rate they didn't set and can't negotiate. That's not dignity. That's a transaction with bad terms and no exit clause.</p>
+<p>So what <em>is</em> dignity? I'll tell you what it felt like at 1 AM on that Monday. It felt like choosing. Choosing to build something nobody asked for because my brain wouldn't let it go. Choosing to stay up because the problem was more interesting than sleep. The choice was the dignity. Not the work. The agency. The fact that I could have stopped and I didn't stop because I didn't want to stop.</p>
+<div class="margin-note">Your value as a human, proportional to your output. Produce nothing, be nothing. That's the operating system AI is about to crash.</div>
+<p>"Work dignifies" equates effort with virtue and rest with sin. And it's been the operating system of capitalism for three hundred years: your value as a human is proportional to your output. Produce more, be worth more. Produce nothing, be nothing.</p>
+<p>If a task becomes easier to automate, people whose role depends on it face practical questions about income and identity. How they adapt depends on the work, the institution, and the choices available to them.</p>
+<p>Income support addresses material conditions. My question here is what someone wants to do with the time those conditions make available.</p>
+<div class="pull-quote">
+<p>UBI solves the stomach. It does not solve the 6 AM ceiling stare.</p>
+</div>
+<p>The 6 AM ceiling stare. That's the real problem. What do you do when you wake up and nothing requires you? Your bills are paid. Your fridge is full. Your bot is making money. And you're lying there, in the dark, and the question lands on your chest like a brick: <em>now what?</em></p>
+<p>A secure income matters in the scenario I am considering. It would not choose the next project for me.</p>
+
+</div>
+
+<div class="essay-section" id="tls-s4">
+<div class="section-header">
+<div class="section-header-num">IV</div>
+<div class="section-header-body">
+<div class="section-header-label">Section IV / Seven</div>
+<div class="section-header-title">The desire economy</div>
+</div>
+</div>
+<p>If the old economy ran on production, and production is being automated, what does the next economy run on?</p>
+<p>I think the answer is desire. Not desire the way marketers use it: countdown timers, manufactured urgency designed to bypass your prefrontal cortex. Desire the way Lacan used it: the force that moves a person toward something they can't quite reach, and in the reaching, they find out who they are.</p>
+<p>I think this also changes what people may be willing to pay for.</p>
+<p>When I got home that Monday and sat down to build the bot, the old economy had nothing to do with it. Nobody was paying me. Nobody assigned it. There was no KPI, no deadline, no performance review. I didn't even want the money. I wanted to prove that it could be done. A crack in a system that my brain could not leave alone. That pull is desire in its purest economic form. I produced something valuable, a working autonomous trading agent, not because of incentive structure. Because of a point I needed to make, mostly to myself.</p>
+<p>A project can draw effort that no one commissioned. I want to understand what makes that effort worthwhile to the person doing it.</p>
+<div class="margin-note">Audiences watch. Congregations belong. In a world of infinite free content, watching is worth zero. Belonging is priceless.</div>
+<p>A paid community may offer a place to participate, receive attention, and build relationships. Those reasons to join differ from access to information. A product needs to discover which of them its members actually value.</p>
+<p>Some people choose limits when a service offers more than they want to consume: a finite camera roll, an app blocker, a quieter phone. I am interested in limits that help someone keep a commitment they chose. That is different from claiming all scarcity has become optional, or that restricted access automatically creates desire.</p>
+<p>That gives me a product question: what are people choosing to take part in, beyond the task the tool completes? The answer needs to come from their experience, not from my explanation of it.</p>
+<p>The argument also leaves me with a tension: I value transparent systems, yet the uncertainty of an unsolved problem is often what draws me to work on it.</p>
+</div>
+
+<div class="essay-section" id="tls-s5">
+<div class="section-header">
+<div class="section-header-num">V</div>
+<div class="section-header-body">
+<div class="section-header-label">Section V / Seven</div>
+<div class="section-header-title">The thing that almost killed this essay</div>
+</div>
+</div>
+
+<p>Open source. Open data. Open protocols. Blockchain's entire pitch is radical legibility: every transaction visible, every process auditable, every shadow eliminated. The tech industry has spent twenty years building toward a world of total light. No hidden corners. No asymmetry. No fog. The dream is a planet-sized clean room where nothing is unclear and everything is optimized.</p>
+
+
+<p>My fifty dollars on Polymarket existed because of a shadow. An inefficiency. A crack where the price didn't match reality. If the market were perfectly transparent and perfectly efficient, that crack wouldn't exist. The price would already be right. There'd be nothing to see, nothing to bet on, nothing to build a bot for. And I'd still be scrolling.</p>
+<div class="pull-quote">
+<p>Desire needs exactly the thing transparency destroys: a veil. A perfectly lit room has no depth. A perfectly efficient market has no game. A perfectly transparent world has no reason to explore it.</p>
+</div>
+<p>This isn't an argument against transparency in governance, in justice, in institutions. That's non-negotiable. But total transparency as a universal principle? As a dogma applied to every market, every interaction, every system? That kills the thing that makes humans go. The shadow. The not-knowing. The suspicion that something is hidden and worth finding.</p>
+<p>So the next economy doesn't just need to <em>produce</em> desire. It needs to <em>protect</em> it. To deliberately preserve zones of opacity and productive inefficiency. Spaces where the answer isn't visible. Because the not-knowing is the pull. And the pull is all that's left.</p>
+<p>I want room to explore questions whose answers I do not have. That does not require hiding information from the people affected by a system.</p>
+</div>
+
+<div class="essay-section" id="tls-s6">
+<div class="section-header">
+<div class="section-header-num">VI</div>
+<div class="section-header-body">
+<div class="section-header-label">Section VI / Seven</div>
+<div class="section-header-title">I am the problem</div>
+</div>
+</div>
+
+<p>I'm 43. I live in Buenos Aires. I have a twelve-year-old son who beats me at chess and doesn't know it yet, but he sure does know that he can beat me at Rocket League and Super Smash Brothers, and he does. Oh boy he does. I grew up copying cassettes from the radio and I've spent my whole adult life bouncing between media and technology, never quite fitting in either. I co-founded Argentina's first podcast production company. I had a blog for years where I wrote about whatever a young guy entering adulthood writes about when he doesn't know what he's doing yet. I'm not a writer, or at least I've never called myself one. I'm the guy who keeps seeing cracks in things and can't leave them alone. And a few years ago I saw what AI could do to broadcast and content and I threw myself into it headfirst. Now I run AI-powered broadcast systems for a Bitcoin media company. I'm not a programmer. I'm not an engineer. I'm someone who adopted AI so aggressively that it became the centerpiece of everything I do. I didn't build the machine. I moved in.</p>
+<p>The speed of iteration still catches me off guard. I can try something in an evening that I would previously have needed help to prototype. Some attempts stop there; others become tools I keep using. My hands can now get ahead of my judgment about which ideas deserve another night.</p>
+<p> I am, in a very literal sense, the person who saw what AI could do to media production and said <em>yes, more, faster, replace everything that can be replaced.</em> I am an active participant in the demolition of the economy this essay says we need to replace. Not as the engineer who built the engine. As the guy who saw the engine, understood what it meant, and reorganized his entire life around it. I don't know if that's better or worse.</p>
+<p>I am the problem. And I can't stop.</p>
+<p>Not because of the money. I could make money other ways. I can't stop because the <em>wiring</em> is the crack. Figuring out how to connect the tools, how to make the systems talk, how to turn a pile of AI capabilities into something that works at 3 AM without a human. That's the pull. The 2 AM compulsion to make the system work is the exact desire I've been theorizing about for six sections from a comfortable analytical distance that I no longer deserve.</p>
+
+<p>That is my contradiction: I build tools that reduce the work needed to do something, then stay up late because building them is the work I want to do. I do not know how widely that feeling will travel. I know it is present at my desk.</p>
+
+<p>He is twelve. If he grows up in a world where earning a living requires less work, what will give his days direction? That is a scenario I want to think through with him, not a future I can promise him.</p>
+<p>It's "what do I do with my life?"</p>
+<p>He will still need to learn how to make a living. I also want him to have practice choosing work when the reason for doing it is curiosity, care, or a commitment he has made to someone. Those questions deserve time alongside preparation for a job.</p>
+<div class="pull-quote">
+<p>The Greeks had a word for what he'll need. Skholē. The free activity of a citizen who doesn't have to work for survival and therefore can dedicate himself to what actually matters. Not because someone pays him. Because it pulls him.</p>
+</div>
+<p>The catch: Greek <em>skholē</em> was for citizens. Slaves did the work. The fields didn't farm themselves.</p>
+<p>Automation raises a different question from that historical arrangement: could it give more people time for work they choose? That depends on who owns the tools, who receives the gains, and which work still has to be done.</p>
+<p>Maybe. But the circle doesn't close evenly. And that's the part that keeps me up.</p>
+</div>
+
+<div class="essay-section" id="tls-s7">
+<div class="section-header">
+<div class="section-header-num">VII</div>
+<div class="section-header-body">
+<div class="section-header-label">Section VII / Seven</div>
+<div class="section-header-title">No map for this</div>
+</div>
+</div>
+<p>I want to be honest about something. I don't know how this ends.</p>
+<p>But I can see how it splits.</p>
+<p>Access to tools and time would not give everyone the same preparation or choices. That is why I want the discussion to include education and support, rather than divide people into those who can use freedom and those who cannot.</p>
+<p>AI can make it easier to produce an answer before you have worked out whether it is sound. The value still depends on how you frame the task, check the result, and revise it. That is why I keep coming back to education: people need practice with those decisions as well as access to the tool.</p>
+<div class="pull-quote">
+<p>The gap that's opening is not between those who have AI and those who don't. It's between those who can think and those who delegated the thinking before they learned how.</p>
+</div>
+
+<p>I cannot infer a world of abundance from one working bot. The experiment made a question about motivation tangible for me; it did not resolve questions about work, income, or distribution.</p>
+
+<div class="pull-quote">
+
+</div>
+<p>How do we desire well? Not want. Not consume. <em>Desire.</em> How do we maintain the pull, the midnight itch, the crack that won't let you sleep, the need to build the thing nobody asked for, in a world that is systematically removing every external reason to move? How do we protect the gap that makes us go?</p>
+<p>Policy and technology can change the conditions in which someone chooses. They do not choose a particular project for them. I keep coming back to my own desk at 2 AM: what am I still reaching for when the task that brought me here is already done?</p>
+
+</div>
+
+<div class="closing">
+<div class="closing-ornament-top">✦ ❧ ✦</div>
+<p>I finished the Polymarket bot. It works. It makes small, consistent, boring money while I sleep. It's exactly what I imagined that Monday night when I got home and couldn't stop thinking.</p>
+<p>And the moment it started working, I lost interest.</p>
+<p>Not because it failed. Because it succeeded. The crack was filled. The architecture was complete. The pull, the thing that kept me up, the thing that made me forget the coffee, the thing that made me feel more alive than I'd felt in weeks, vanished. Like a light switched off.</p>
+<p>I stood in the kitchen again. Same counter. Same cold coffee. Same wall. And the restlessness arrived on schedule, like a train I should've known was coming: what's next? What else? What's the next crack?</p>
+
+<p>The restlessness stayed after I had solved the problem that started the project. That is the part I mean by The Last Scarcity: even in the abundance I imagine here, a person still needs something they want to work toward. It is a question about motivation, not a claim that material shortages have disappeared.</p>
+<p>It's 2:47 AM. The bot is making money. The essay is done. There is no reason to still be here. And yet here I am. Rewriting the last paragraph. Again.</p>
+<div class="closing-ornament-bottom"><a href="https://diegodella.ar" class="page-inline-fbf6071364">diegodella.ar</a> · Buenos Aires, 2026</div>
+<button class="share-btn" id="shareBtn" onclick="handleShare()"> <Block1 /> Share </button>
+</div>
+<div class="paper-nav"> <a href="index.html" class="paper-nav-back"> <Block2 /> All Writing </a> </div>
+</div>
+</main>
+<Footer />
+</div>

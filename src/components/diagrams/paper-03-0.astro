@@ -1,0 +1,35 @@
+<svg is:raw class="hero-svg" viewBox="0 0 180 240" xmlns="http://www.w3.org/2000/svg">
+        <style is:inline>
+          @keyframes build-up{from{transform:scaleY(0);opacity:0}to{transform:scaleY(1);opacity:1}}
+          @keyframes glow-line{0%,100%{stroke-opacity:1}50%{stroke-opacity:0.3}}
+          @keyframes fade-in{from{opacity:0}to{opacity:1}}
+        </style>
+        <!-- Central pillar -->
+        <rect fill="var(--accent)" height="170" opacity="0.12" style="transform-origin:90px 200px;animation:build-up 1s ease-out forwards" width="16" x="82" y="30"></rect>
+        <!-- Horizontal coherence lines -->
+        <line stroke="var(--rule)" stroke-width="1" style="animation:fade-in 0.4s 0.5s forwards;opacity:0" x1="20" x2="160" y1="65" y2="65"></line>
+        <line stroke="var(--rule)" stroke-width="1" style="animation:fade-in 0.4s 0.7s forwards;opacity:0" x1="20" x2="160" y1="105" y2="105"></line>
+        <line stroke="var(--rule)" stroke-width="1" style="animation:fade-in 0.4s 0.9s forwards;opacity:0" x1="20" x2="160" y1="145" y2="145"></line>
+        <!-- Nodes on pillar -->
+        <circle cx="90" cy="65" fill="var(--accent)" r="5" style="animation:fade-in 0.3s 1s forwards;opacity:0"></circle>
+        <circle cx="90" cy="105" fill="var(--accent)" r="5" style="animation:fade-in 0.3s 1.2s forwards;opacity:0"></circle>
+        <circle cx="90" cy="145" fill="var(--accent)" r="5" style="animation:fade-in 0.3s 1.4s forwards;opacity:0"></circle>
+        <!-- Side labels -->
+        <text fill="var(--muted)" font-family="monospace" font-size="7" style="animation:fade-in 0.3s 1s forwards;opacity:0" x="30" y="62">STORY</text>
+        <text fill="var(--muted)" font-family="monospace" font-size="7" style="animation:fade-in 0.3s 1s forwards;opacity:0" x="120" y="62">STRUCT</text>
+        <text fill="var(--muted)" font-family="monospace" font-size="7" style="animation:fade-in 0.3s 1.2s forwards;opacity:0" x="30" y="102">VOICE</text>
+        <text fill="var(--muted)" font-family="monospace" font-size="7" style="animation:fade-in 0.3s 1.2s forwards;opacity:0" x="120" y="102">BUILD</text>
+        <text fill="var(--muted)" font-family="monospace" font-size="7" style="animation:fade-in 0.3s 1.4s forwards;opacity:0" x="30" y="142">BRAND</text>
+        <text fill="var(--muted)" font-family="monospace" font-size="7" style="animation:fade-in 0.3s 1.4s forwards;opacity:0" x="120" y="142">SCALE</text>
+        <!-- Connecting lines -->
+        <line stroke="var(--accent)" stroke-width="1" style="animation:glow-line 3s ease-in-out infinite" x1="85" x2="60" y1="65" y2="65"></line>
+        <line stroke="var(--accent)" stroke-width="1" style="animation:glow-line 3s 0.5s ease-in-out infinite" x1="95" x2="118" y1="65" y2="65"></line>
+        <line stroke="var(--accent)" stroke-width="1" style="animation:glow-line 3s 1s ease-in-out infinite" x1="85" x2="60" y1="105" y2="105"></line>
+        <line stroke="var(--accent)" stroke-width="1" style="animation:glow-line 3s 1.5s ease-in-out infinite" x1="95" x2="118" y1="105" y2="105"></line>
+        <line stroke="var(--accent)" stroke-width="1" style="animation:glow-line 3s 2s ease-in-out infinite" x1="85" x2="60" y1="145" y2="145"></line>
+        <line stroke="var(--accent)" stroke-width="1" style="animation:glow-line 3s 2.5s ease-in-out infinite" x1="95" x2="118" y1="145" y2="145"></line>
+        <!-- Foundation -->
+        <line opacity="0" stroke="var(--accent)" stroke-width="2" style="animation:fade-in 0.5s 1.6s forwards" x1="30" x2="150" y1="200" y2="200"></line>
+        <!-- Title -->
+        <text fill="var(--accent)" font-family="monospace" font-size="7" letter-spacing="2" opacity="0" style="animation:fade-in 0.5s 1.8s forwards" text-anchor="middle" x="90" y="225">COHERENCE</text>
+      </svg>

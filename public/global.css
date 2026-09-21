@@ -1,0 +1,14 @@
+@layer legacy, tokens, page, editorial, components, shell, utilities, design;
+
+@import url("styles/legacy.css?v=20260914edit1") layer(legacy);
+@import url("styles/legacy-components.css?v=20260914edit1") layer(legacy);
+@import url("styles/tokens.css?v=20260914edit1") layer(tokens);
+@import url("styles/page-inline.css?v=20260914edit1") layer(page);
+@import url("styles/home.css?v=20260914edit1") layer(design);
+@import url("styles/editorial.css?v=20260914edit1") layer(editorial);
+@import url("styles/components.css?v=20260914edit1") layer(components);
+@import url("styles/shell.css?v=20260914edit1") layer(shell);
+@import url("styles/theme-contract.css?v=20260914edit1") layer(utilities);
+
+@import url("styles/fonts.css?v=20260914edit1") layer(design);
+@import url("styles/design.css?v=20260914edit1") layer(design);

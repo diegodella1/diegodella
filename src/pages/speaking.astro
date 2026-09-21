@@ -1,0 +1,108 @@
+---
+import SiteLayout from "../layouts/SiteLayout.astro";
+import Footer from "../components/Footer.astro";
+import Navigation from "../components/Navigation.astro";
+
+const pastTalks = [
+  { id: 'ut-austin-2021', year: '2021', name: 'UT Austin / ICFJ', detail: 'Panelist at the Ibero-American Colloquium on Digital Journalism, University of Texas at Austin, in the framework of ICFJ.' },
+  { id: 'ut-austin-2022', year: '2022', name: 'UT Austin / ICFJ', detail: 'Panelist at the Ibero-American Colloquium on Digital Journalism, University of Texas at Austin, in the framework of ICFJ.' },
+  { id: 'uces-2023', year: '2023', name: 'UCES', detail: 'Speaking at UCES.' },
+  { id: 'interact-2024', year: '2024', name: 'Interact', detail: 'Speaking at Interact.' },
+];
+---
+<SiteLayout page="speaking">
+<a href="#main-content" class="skip-link">Skip to content</a>
+<div class="top-bar"><span>Speaking</span><span>Interviews · Podcasts · Research · Events</span></div>
+<Navigation />
+<main id="main-content">
+<header class="nm-page-hero">
+<p class="nm-page-label">Speaking and interviews</p>
+<h1>Talks on building and running media.</h1>
+<p>For journalists, podcast hosts, conference organizers, and researchers looking for direct operating experience.</p>
+</header>
+<section class="nm-page-main">
+<div class="nm-two-col" id="organizers">
+<h2>Speaker kit.</h2>
+<div class="speaker-summary">
+<p class="nm-page-copy">Diego Dell'Agostino builds media products and the systems behind them — from Posta and Roxom TV to AI-assisted editorial operations — grounded in digital marketing and years teaching teams at Digital House.</p>
+<ul class="speaker-proof nm-page-copy">
+<li><a href="work-posta.html">Posta → PodX</a> · Co-founder; product, marketing, positioning, and business development. PodX acquired a majority stake in December 2022.</li>
+<li><a href="work-roxom.html">Roxom TV</a> · Founding team; media architecture and product operations. A 24/7 network across San Francisco, London, and Hong Kong; remote from Buenos Aires.</li>
+<li><a href="about.html">Digital House</a> · Digital Marketing professor (2017–2022); Academic Content Lead for Argentina and Brazil (2018–2022), including immersion and in-company programs.</li>
+</ul>
+<dl class="speaker-details nm-page-copy">
+<dt>Topics</dt><dd><a href="#topics">Media products and distribution · AI and editorial operations · Marketing and teaching</a></dd>
+<dt>Formats</dt><dd>Interviews, panels, 20–40 minute talks plus Q&amp;A, and 90–180 minute workshops. Start with a specific question and who needs the answer.</dd>
+<dt>Audiences</dt><dd>Media and newsroom leaders, audio/video teams, founders, product and marketing teams, and education programs.</dd>
+<dt>Past talks</dt><dd>{pastTalks.map((talk, index) => <Fragment>{index > 0 && ' · '}<a href={`#${talk.id}`}>{talk.name} {talk.year}</a></Fragment>)}</dd>
+<dt>Booking</dt><dd>Fees by inquiry. Include format, audience, date, location or time zone, and the question to address. <a href="#booking">Request a talk</a> · <a href="media-kit.html">Bios and media kit</a>.</dd>
+</dl>
+</div>
+</div>
+<div class="nm-two-col" id="topics">
+<h2>Topics.</h2>
+<div class="nm-ledger">
+<div class="nm-ledger-item"><span class="nm-page-label">AI-native media</span><strong>What changes when AI becomes infrastructure</strong><p>Research, workflows, interfaces, production, programming, distribution, and the limits of generated-content framing.</p></div>
+<div class="nm-ledger-item"><span class="nm-page-label">Agents</span><strong>AI agents in real media workflows</strong><p>Bounded authority, state, observability, recovery, and why agents are more useful as infrastructure than characters.</p></div>
+<div class="nm-ledger-item"><span class="nm-page-label">Newsrooms</span><strong>Where AI helps in a newsroom, and where editors still decide</strong><p>How editorial judgment and accountability change when machines carry more operational work.</p></div>
+<div class="nm-ledger-item"><span class="nm-page-label">Media product</span><strong>Building the system around the content</strong><p>Programming, interfaces, distribution, feedback loops, and the internal tools that make a media product operable.</p></div>
+<div class="nm-ledger-item"><span class="nm-page-label">Global operations</span><strong>Running continuous live media across continents</strong><p>Time-zone handoffs, remote production, shared state, automation, recovery, and what 24/7 exposes.</p></div>
+<div class="nm-ledger-item"><span class="nm-page-label">Podcasting</span><strong>Building a format before the market was settled</strong><p>Posta, digital audio in Latin America, branded podcasts, regional expansion, and lessons that transfer to AI media products.</p></div>
+<div class="nm-ledger-item"><span class="nm-page-label">Marketing and distribution</span><strong>Why distribution is still a product problem</strong><p>Positioning, channel design, packaging, audience development, and what changes when discovery is increasingly mediated by AI.</p></div>
+<div class="nm-ledger-item"><span class="nm-page-label">Digital marketing</span><strong>Connecting marketing to the media product</strong><p>How positioning, content, channels, and audience relationships fit into decisions a team can execute.</p></div>
+<div class="nm-ledger-item"><span class="nm-page-label">Branded audio</span><strong>Designing a podcast around a real purpose</strong><p>Connecting a brand's question to format, packaging, and distribution, drawing on the work of building Posta.</p></div>
+<div class="nm-ledger-item"><span class="nm-page-label">Teaching and teams</span><strong>Turning experience into a usable curriculum</strong><p>Digital-marketing and media-product teaching, assessment, immersion, and in-company training, grounded in Digital House experience.</p></div>
+<div class="nm-ledger-item"><span class="nm-page-label">Audiences and communities</span><strong>Why community becomes more valuable as output gets automated</strong><p>The difference between reach, repeat attention, participation, belonging, and the relationships machines can amplify but not manufacture.</p></div>
+<div class="nm-ledger-item"><span class="nm-page-label">Discovery</span><strong>Writing for humans, algorithms, and agents</strong><p>How AI-mediated retrieval changes authority, metadata, provenance, positioning, and the way public ideas travel.</p></div>
+<div class="nm-ledger-item"><span class="nm-page-label">Narrative</span><strong>Why product meaning breaks before comparison</strong><p>Positioning, mediated trust, narrative mechanics, and the conditions that make strong work legible.</p></div>
+</div>
+</div>
+<div class="nm-two-col">
+<h2>Good formats.</h2>
+<div>
+<p class="nm-page-copy">Long-form interviews, reported conversations, operator panels, working sessions, and talks built around a concrete problem all fit. The best starting point is a specific question or tension, plus who needs the answer.</p>
+<p class="nm-page-copy">For background and case material, see <a href="work-posta.html">Posta</a>, <a href="work-roxom.html">Roxom TV</a>, and the <a href="ai-media.html">AI-Native Media</a> hub.</p>
+</div>
+</div>
+<div class="nm-two-col" id="past-talks">
+<h2>Past talks.</h2>
+<div>
+<div class="nm-ledger">
+{pastTalks.map(talk => <div class="nm-ledger-item" id={talk.id}><span class="nm-page-label">{talk.year}</span><strong>{talk.name}</strong><p>{talk.detail}</p></div>)}
+</div>
+<p class="nm-page-copy">See the <a href="https://knightcenter.utexas.edu/registration-open-for-14th-ibero-american-colloquium-on-digital-journalism/">Knight Center’s 2021 colloquium announcement</a> for the podcasting panel.</p>
+<p class="nm-page-copy">For a starting point on AI and editorial responsibility, read <a href="before-you-delegate.html">Before You Delegate</a>. For distribution and mediated reading, see <a href="writing-for-the-filter.html">Writing for the Filter</a>.</p>
+</div>
+</div>
+<div class="nm-two-col" id="booking">
+<h2>Booking.</h2>
+<div>
+<p class="nm-page-copy">Speaking fees are by inquiry.</p>
+<div class="nm-contact-actions">
+<a class="nm-work-button" href="contact.html" data-open-contact="" data-contact-mode="conversation">Request a talk or interview</a>
+<p>Include the format, audience, date, location or time zone, and the question you want the conversation to answer. Copy-ready bios are in the <a href="media-kit.html">media kit</a>.</p>
+</div>
+<p class="nm-page-copy">For advisory work with a team or product, see <a href="consulting.html">Consulting</a>.</p>
+</div>
+</div>
+</section>
+</main>
+<Footer />
+</SiteLayout>
+
+<style>
+@layer page {
+  .speaker-proof { padding-left: 1.25rem; }
+  .speaker-proof li + li { margin-top: 1rem; }
+  .speaker-details { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 1rem 1.5rem; margin: 1.5rem 0 0; }
+  .speaker-details dt { font-weight: 600; color: var(--ink); }
+  .speaker-details dd { margin: 0; }
+  @media (max-width: 640px) {
+    .speaker-details { grid-template-columns: minmax(0, 1fr); gap: .5rem; }
+    .speaker-details dt:not(:first-child) { margin-top: 1rem; }
+  }
+}
+@layer design {
+  :global(body) .nm-two-col > h2 { font-size: clamp(24px, 3vw, 44px); line-height: 1.2; }
+}
+</style>

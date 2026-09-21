@@ -1,0 +1,42 @@
+---
+import NuggetCount from "../components/NuggetCount.astro";
+import nuggets from "../data/nuggets.json";
+import SiteLayout from "../layouts/SiteLayout.astro";
+import Footer from "../components/Footer.astro";
+import Navigation from "../components/Navigation.astro";
+import NuggetFilters from "../components/NuggetFilters.astro";
+import Nuggets from "../components/Nuggets.astro";
+import Block0 from "../components/diagrams/nuggets-0.astro";
+---
+<SiteLayout page="nuggets">
+<a href="#main-content" class="skip-link">Skip to content</a>
+<div id="pbar"></div>
+<div id="pbar-label"></div>
+<div class="page-wrap">
+
+<div class="top-bar"> <span>Buenos Aires · Since 2008</span> <span>Essays · Frameworks · Guided reading paths · <a href="about.html">About the author</a></span> </div>
+
+<Navigation />
+
+<header class="hero">
+<div class="hero-left">
+<div class="hero-kicker">Insights</div>
+<h1 class="hero-title">Narrative<br /><em>Nuggets.</em></h1>
+<p class="hero-lead"><NuggetCount /> short ideas from the essays, with links to the full arguments. These are edited summaries; the source pages provide the examples, qualifications, and evidence.</p>
+<div class="hero-stats-row">
+<div class="hero-stat-pill"><strong><NuggetCount /></strong> Ideas</div>
+<div class="hero-stat-pill"><strong>{new Set(nuggets.map(nugget => nugget.href)).size}</strong> Sources</div>
+</div>
+<button class="surprise-btn" id="surprise" type="button">✸ Surprise me</button>
+</div>
+<div class="hero-illustration"> <Block0 /> </div>
+</header>
+
+<nav class="filter-bar fade-in" aria-label="Filter nuggets by source">
+<div class="filter-chips" role="group" aria-label="Sources"> <NuggetFilters />           </div>
+</nav>
+
+<main class="nuggets-grid" id="main-content">  <Nuggets />                                                                                                         </main>
+<Footer />
+</div>
+</SiteLayout>

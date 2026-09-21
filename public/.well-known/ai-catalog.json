@@ -1,0 +1,31 @@
+{
+  "specVersion": "1.0",
+  "host": {
+    "displayName": "Diego Dell'Agostino",
+    "identifier": "diegodella.ar",
+    "documentationUrl": "https://diegodella.ar/developers.html",
+    "logoUrl": "https://diegodella.ar/favicon.svg"
+  },
+  "entries": [
+    {
+      "identifier": "urn:air:diegodella.ar:api:public-v1",
+      "displayName": "DiegoDella Public API",
+      "type": "application/openapi+json;version=3.1",
+      "url": "https://diegodella.ar/openapi.json",
+      "description": "Public read-only status and direct contact operations for Diego Dell'Agostino's site.",
+      "tags": ["contact", "status", "media", "product", "ai"],
+      "capabilities": ["getApiStatus", "sendContactRequest"],
+      "representativeQueries": [
+        "check whether Diego Dell'Agostino's public API is available",
+        "send Diego Dell'Agostino a professional inquiry",
+        "find the machine-readable API contract for diegodella.ar"
+      ],
+      "version": "1.2.0",
+      "updatedAt": "2026-08-22T22:00:00-03:00",
+      "trustManifest": {
+        "identity": "https://diegodella.ar/",
+        "identityType": "https"
+      }
+    }
+  ]
+}

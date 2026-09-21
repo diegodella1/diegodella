@@ -1,0 +1,20 @@
+<svg is:raw class="hero-svg" viewBox="0 0 160 200" xmlns="http://www.w3.org/2000/svg">
+        <style is:inline>
+          @keyframes draw{from{stroke-dashoffset:200}to{stroke-dashoffset:0}}
+          @keyframes pulse-dot{0%,100%{r:3;opacity:1}50%{r:5;opacity:0.5}}
+          @keyframes fade-label{from{opacity:0}to{opacity:1}}
+        </style>
+        <!-- Grid -->
+        <line stroke="var(--rule)" stroke-width="0.7" x1="15" x2="15" y1="20" y2="170"></line>
+        <line stroke="var(--rule)" stroke-width="0.7" x1="15" x2="150" y1="170" y2="170"></line>
+        <!-- Narrative arc (animated draw) -->
+        <path d="M20 160 C40 100,80 55,140 35" fill="none" stroke="var(--accent)" stroke-dasharray="200" stroke-width="2" style="animation:draw 2s ease-out forwards"></path>
+        <!-- Build arc (dashed, delayed) -->
+        <path d="M20 160 C60 140,110 125,140 115" fill="none" opacity="0" stroke="var(--muted)" stroke-dasharray="4 3" stroke-width="1.5" style="animation:fade-label 0.8s 1s forwards"></path>
+        <!-- Origin dot -->
+        <circle cx="20" cy="160" fill="var(--accent)" r="3" style="animation:pulse-dot 2.5s ease-in-out infinite"></circle>
+        <!-- Labels -->
+        <text fill="var(--accent)" font-family="monospace" font-size="7" opacity="0" style="animation:fade-label 0.5s 1.5s forwards" x="143" y="33">N</text>
+        <text fill="var(--muted)" font-family="monospace" font-size="7" opacity="0" style="animation:fade-label 0.5s 1.8s forwards" x="143" y="113">B</text>
+        <text fill="var(--muted)" font-family="monospace" font-size="6" letter-spacing="2" opacity="0" style="animation:fade-label 0.5s 2s forwards" text-anchor="middle" x="80" y="190">NARRATIVE FIRST</text>
+      </svg>

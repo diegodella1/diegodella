@@ -1,0 +1,89 @@
+---
+import SiteLayout from "../layouts/SiteLayout.astro";
+import ArticleField from "../components/ArticleField.astro";
+import Footer from "../components/Footer.astro";
+import Navigation from "../components/Navigation.astro";
+
+---
+<SiteLayout page="ai-media">
+<a href="#main-content" class="skip-link">Skip to content</a>
+<div class="top-bar"><span>AI-Native Media</span><span>Media · Product · Marketing · Content · Communities · AI</span></div>
+<Navigation />
+<main id="main-content">
+<header class="nm-page-hero">
+<p class="nm-page-label">Living topic hub</p>
+<h1>AI-Native Media</h1>
+<p>My work with AI-native media starts from earlier experience in media, products, marketing, content, audiences, and communities. The question is not how to add generated content, but what changes when AI becomes part of the operating system.</p>
+</header>
+<section class="nm-page-main">
+<div class="nm-two-col">
+<h2>The foundation comes first.</h2>
+<div>
+<p class="nm-page-copy">AI is a new layer in a longer system. Media still needs a product people can use, marketing and distribution that make it discoverable, content with editorial purpose, and relationships that turn an audience into something more durable.</p>
+<div class="nm-ledger"> <a href="work.html"><span class="nm-page-label">Digital media</span><strong>Formats need companies and operating systems around them</strong><p>Posta and Roxom TV show two different transitions: on-demand audio and continuous global live media.</p></a> <a href="about.html#products"><span class="nm-page-label">Digital products</span><strong>The public surface and internal machinery are one product system</strong><p>Interfaces, workflows, tools, feedback loops, and recovery paths determine whether an idea can work repeatedly.</p></a> <a href="occlusion-bias.html"><span class="nm-page-label">Marketing and distribution</span><strong>Strong work still fails when people or systems cannot find and classify it</strong><p>Positioning, channels, packaging, metadata, and mediated discovery shape what reaches fair consideration.</p></a> <a href="work-roxom.html"><span class="nm-page-label">Content and editorial strategy</span><strong>Programming and judgment need an operable workflow</strong><p>Research, preparation, production, publishing, and accountability belong to the same editorial system.</p></a> <a href="zmox.html"><span class="nm-page-label">Audiences and communities</span><strong>Reach, return, participation, and belonging are different outcomes</strong><p>Automation can scale output and distribution; it cannot by itself create trust, shared language, or community.</p></a> </div>
+</div>
+</div>
+<div class="nm-two-col">
+<h2>What I mean by AI-native media.</h2>
+<div>
+<p class="nm-page-copy">AI-native media is not traditional media plus generated content. It begins when machine capabilities and constraints shape the product and operation from the start.</p>
+<p class="nm-page-copy">That does not mean every step becomes automated. It means deciding deliberately where machines can carry bounded work, where they can improve an interface, where they introduce new failure modes, and where human judgment remains the system's point of accountability.</p>
+<div class="nm-ledger">
+<div class="nm-ledger-item"><span class="nm-page-label">Workflow</span><strong>Research, preparation, metadata, and repetitive execution</strong><p>AI can compress setup work and carry well-defined steps, provided the inputs, outputs, owners, and escalation paths are clear.</p></div>
+<div class="nm-ledger-item"><span class="nm-page-label">Product</span><strong>Interfaces that understand context and intent</strong><p>The product can help people navigate complexity, not only generate more material for them to process.</p></div>
+<div class="nm-ledger-item"><span class="nm-page-label">Operations</span><strong>State, automation, monitoring, and recovery</strong><p>The useful system is observable under pressure and gives a person a clear path back when automation fails.</p></div>
+<div class="nm-ledger-item"><span class="nm-page-label">Discovery</span><strong>Content interpreted by machines before people</strong><p>Metadata, entity clarity, citations, provenance, and structure become part of editorial distribution.</p></div>
+</div>
+</div>
+</div>
+<div class="nm-two-col">
+<h2>Start with one workflow.</h2>
+<div>
+<p class="nm-page-copy">Pick a task that takes too much preparation or breaks at a handoff. Map its inputs, editorial decisions, owner, and failure cases before deciding what to automate. The useful result is a workflow someone can inspect and recover, with a clear reason for each automated step.</p>
+<p class="nm-page-copy">My <a href="work-roxom.html">Roxom TV case study</a> provides operating context. <a href="before-you-delegate.html">Before You Delegate</a> examines the decisions that need to stay explicit. If you are working through a similar problem, <a href="contact.html" data-open-contact="" data-contact-mode="conversation">tell me about the workflow</a>.</p>
+</div>
+</div>
+<div class="nm-two-col">
+<h2>Agents are infrastructure, not characters.</h2>
+<div>
+<p class="nm-page-copy">I evaluate agents by the work they can complete, the limits on their actions, and how they report problems. A useful agent needs a defined job, access to the relevant information, a record of its actions, and a way to ask for help.</p>
+<p class="nm-page-copy">In a media workflow, that might mean preparing research packets, checking metadata, watching operational state, assembling a draft rundown, or moving approved material through distribution. </p>
+<p class="nm-page-copy">The design question is not “What can the agent do?” It is “What can the system safely let the agent do, how will we know what happened, and who owns the result?”</p>
+</div>
+</div>
+<div class="nm-two-col">
+<h2>Humans, algorithms, and agents.</h2>
+<div>
+<p class="nm-page-copy">Media now communicates with at least three kinds of audience. They overlap, but they do not read in the same way.</p>
+<div class="nm-ledger">
+<div class="nm-ledger-item"><span class="nm-page-label">Humans</span><strong>People looking for meaning, usefulness, or experience</strong><p>They need clear ideas, evidence, voice, context, and a reason to trust the source.</p></div>
+<div class="nm-ledger-item"><span class="nm-page-label">Algorithms</span><strong>Distribution systems deciding what becomes visible</strong><p>They classify, rank, recommend, suppress, and repackage content according to incentives the publisher does not control.</p></div>
+<div class="nm-ledger-item"><span class="nm-page-label">Agents</span><strong>Systems acting on a person's behalf</strong><p>They retrieve, compare, summarize, cite, and sometimes act. They need stable entities, explicit relationships, clean structure, and defensible sources.</p></div>
+</div>
+<p class="nm-page-copy">Writing for all three does not mean keyword stuffing or flattening every idea into machine prose. It means making the source and structure clear enough that mediation does not erase the meaning.</p>
+</div>
+</div>
+<div class="nm-two-col">
+<h2>Things I've learned building these systems.</h2>
+<div class="nm-ledger">
+<a href="work-roxom.html"><span class="nm-page-label">Roxom TV</span><strong>Continuous media turns every small ambiguity into an operational cost</strong><p>Handoffs, state, observability, recovery, and interface design are editorial infrastructure.</p></a>
+<a href="work-posta.html"><span class="nm-page-label">Posta</span><strong>Format shifts change discovery and business models before incumbents notice</strong><p>Cheaper production matters, but the distribution interface often determines what can become durable.</p></a>
+<div class="nm-ledger-item"><span class="nm-page-label">Agents</span><strong>Boundaries create leverage</strong><p>An agent becomes more useful when its authority, inputs, outputs, and failure paths become less ambiguous.</p></div>
+<div class="nm-ledger-item"><span class="nm-page-label">Human role</span><strong>Accountability does not disappear when execution is delegated</strong><p>Editorial judgment, operational ownership, and recovery remain human responsibilities even when machines carry more steps.</p></div>
+</div>
+</div>
+<div class="nm-two-col" id="ai-writing">
+<h2>Writing.</h2>
+<div class="nm-ledger" data-writing-tags="ai-media ai-discovery agents"> <a href="origin-gravity.html"><span class="nm-page-label"><time datetime="2026-03-10">March 10, 2026</time></span><strong><ArticleField slug="origin-gravity" field="title" /></strong><p><ArticleField slug="origin-gravity" field="description" /></p></a> <a href="the-empty-room.html"><span class="nm-page-label"><time datetime="2026-03-10">March 10, 2026</time></span><strong><ArticleField slug="the-empty-room" field="title" /></strong><p><ArticleField slug="the-empty-room" field="description" /></p></a> <a href="the-proxy-self.html"><span class="nm-page-label"><time datetime="2026-03-10">March 10, 2026</time></span><strong><ArticleField slug="the-proxy-self" field="title" /></strong><p><ArticleField slug="the-proxy-self" field="description" /></p></a> <a href="the-trust-collapse.html"><span class="nm-page-label"><time datetime="2026-03-10">March 10, 2026</time></span><strong><ArticleField slug="the-trust-collapse" field="title" /></strong><p><ArticleField slug="the-trust-collapse" field="description" /></p></a> <a href="writing-for-the-filter.html"><span class="nm-page-label"><time datetime="2026-03-10">March 10, 2026</time></span><strong><ArticleField slug="writing-for-the-filter" field="title" /></strong><p><ArticleField slug="writing-for-the-filter" field="description" /></p></a> <a href="already-decided.html"><span class="nm-page-label"><time datetime="2026-03-07">March 7, 2026</time></span><strong><ArticleField slug="already-decided" field="title" /></strong><p><ArticleField slug="already-decided" field="description" /></p></a> <a href="essays.html"><span class="nm-page-label">Full index</span><strong>All writing</strong><p>Essays, frameworks, notes, and current lines of thought.</p></a> </div>
+</div>
+<div class="nm-two-col" id="related-work">
+<h2>Projects, nuggets, and speaking.</h2>
+<div>
+<p class="nm-page-copy">These products are where I test the ideas. You can open the tools and see what they do.</p>
+<div class="nm-ledger"> <a href="https://broadcast-planner.diegodella.ar/" target="_blank" rel="noopener noreferrer"><span class="nm-page-label">Editorial operations · Media automation</span><strong>Broadcast Control Room <span aria-hidden="true">↗</span></strong><p>Broadcast planning, media preparation, schedule validation, and protected browser playout.</p></a> <a href="https://intelligenz.diegodella.ar/" target="_blank" rel="noopener noreferrer"><span class="nm-page-label">AI agent · Editorial research</span><strong>Intelligenz <span aria-hidden="true">↗</span></strong><p>Monitored sources turned into daily briefs ranked against a leader's goals, risks, actors, and opportunities.</p></a> <a href="https://liveoverlay.diegodella.ar/" target="_blank" rel="noopener noreferrer"><span class="nm-page-label">Live media · Audience interaction</span><strong>LiveOverlay <span aria-hidden="true">↗</span></strong><p>Polls, QR codes, tickers, lower thirds, sponsors, and live graphics through one OBS Browser Source.</p></a> <a href="https://audience.diegodella.ar/" target="_blank" rel="noopener noreferrer"><span class="nm-page-label">Audience research · Product strategy</span><strong>DecisionOS <span aria-hidden="true">↗</span></strong><p>Synthetic focus groups used to surface objections and define next product experiments.</p></a> <a href="nuggets.html"><span class="nm-page-label">Nuggets</span><strong>Compressed ideas</strong><p>Short claims about product meaning, distribution, AI, trust, content, audiences, and operating systems.</p></a> <a href="speaking.html"><span class="nm-page-label">Speaking</span><strong>Conversations grounded in operating experience</strong><p>Interview and event topics across media products, marketing, content, communities, agents, and editorial operations.</p></a> <a href="about.html#products"><span class="nm-page-label">Full product shelf</span><strong>All current projects</strong><p>More public tools across live production, research, decision support, content operations, and interactive products.</p></a> </div>
+</div>
+</div>
+</section>
+</main>
+<Footer />
+</SiteLayout>

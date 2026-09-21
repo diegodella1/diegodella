@@ -1,0 +1,3 @@
+@layer page {
+body.nm-page{font-family:"Inter",system-ui,sans-serif}body.nm-page h1,body.nm-page h2,body.nm-page h3,body.nm-page strong{font-family:"Space Grotesk",system-ui,sans-serif}
+}

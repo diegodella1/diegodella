@@ -1,0 +1,88 @@
+---
+import SiteLayout from "../layouts/SiteLayout.astro";
+import ArticleField from "../components/ArticleField.astro";
+import Footer from "../components/Footer.astro";
+import Navigation from "../components/Navigation.astro";
+
+---
+<SiteLayout page="work-roxom">
+<a href="#main-content" class="skip-link">Skip to content</a>
+<div class="top-bar"><span>Work · Roxom TV</span><span>Live media · Global operations · Product · AI workflows</span></div>
+<Navigation />
+<main id="main-content">
+<header class="nm-page-hero">
+<p class="nm-page-label">Roxom TV · Case study</p>
+<h1>Building a 24/7 global media operation.</h1>
+<p>Running a live channel around the clock requires programming, production, and recovery to work together. The public output is a stream. Behind it sits a distributed system of people, programming, data, graphics, infrastructure, internal tools, automation, and recovery paths.</p>
+</header>
+<section class="nm-page-main">
+<div class="nm-two-col">
+<h2>The problem.</h2>
+<div>
+<p class="nm-page-copy">How do you operate a live global media product continuously without reproducing the cost and organizational structure of a traditional television network?</p>
+<p class="nm-page-copy">Roxom TV's public studio footprint spans San Francisco, London, and Hong Kong. Parts of the product and operational work were also carried out remotely from Buenos Aires. Time zones make 24/7 output possible, but only if handoffs, state, tooling, and editorial judgment travel with the work.</p>
+</div>
+</div>
+<div class="nm-two-col">
+<h2>My role.</h2>
+<div>
+<p class="nm-page-copy">I was part of the founding team, working across media architecture and product operations. That meant helping connect live production, programming, editorial workflows, real-time data, internal tools, automation, and remote operation into one practical system.</p>
+<p class="nm-page-copy">This is a high-level account of categories and operating principles. It intentionally leaves out confidential implementation details, security controls, vendors, and incident specifics.</p>
+</div>
+</div>
+<div class="nm-two-col">
+<h2>The system.</h2>
+<div class="nm-ledger">
+<div class="nm-ledger-item"><span class="nm-page-label">Distributed production</span><strong>One operation, several physical contexts</strong><p>Studios and remote operators needed shared state, consistent controls, and clear ownership across time zones.</p></div>
+<div class="nm-ledger-item"><span class="nm-page-label">Programming</span><strong>Live and pre-recorded output on the same clock</strong><p>A continuous schedule needs more than a playlist. It needs transitions, contingency material, validation, and a reliable path from editorial intention to playout.</p></div>
+<div class="nm-ledger-item"><span class="nm-page-label">Data and graphics</span><strong>Real-time information as production infrastructure</strong><p>Market data, editorial context, lower thirds, tickers, and visual systems have to stay synchronized enough for live use.</p></div>
+<div class="nm-ledger-item"><span class="nm-page-label">Operational tooling</span><strong>Interfaces for the people carrying the broadcast</strong><p>Dashboards, preparation tools, monitoring, controls, and documentation reduce the amount of hidden knowledge required to keep the system moving.</p></div>
+<div class="nm-ledger-item"><span class="nm-page-label">Recovery</span><strong>Automation with a manual path home</strong><p>Every automated action needs observable state, a clear owner, and a way for a human to recover when reality stops matching the happy path.</p></div>
+</div>
+</div>
+<div class="nm-two-col">
+<h2>AI inside the workflow.</h2>
+<div>
+<p class="nm-page-copy">AI was useful inside bounded parts of the workflow. It did not make the operation autonomous, and it did not remove editorial or operational accountability.</p>
+<div class="nm-ledger">
+<div class="nm-ledger-item"><span class="nm-page-label">Preparation</span><strong>Research and content assistance</strong><p>Support for gathering context, preparing inputs, structuring material, and reducing repetitive setup work before a person made the editorial call.</p></div>
+<div class="nm-ledger-item"><span class="nm-page-label">Metadata</span><strong>Better descriptions and system state</strong><p>Assistance with labeling, categorization, summaries, and the metadata that lets content move through internal and external systems.</p></div>
+<div class="nm-ledger-item"><span class="nm-page-label">Operations</span><strong>Automation around predictable tasks</strong><p>Agents and scripts could carry bounded steps, surface exceptions, and support internal interfaces.</p></div>
+<div class="nm-ledger-item"><span class="nm-page-label">Publishing</span><strong>Distribution assistance with review</strong><p>Packaging and publishing work could be accelerated while humans retained responsibility for what left the system.</p></div>
+</div>
+</div>
+</div>
+<div class="nm-two-col">
+<h2>Where systems break.</h2>
+<div>
+<p class="nm-page-copy">The difficult failures in global live media are usually small inconsistencies that compound. A field means one thing in one tool and something else in another. A handoff assumes context that never crossed the time zone. An automated step works until the input is slightly unfamiliar. Maintenance gets deferred because the channel does not stop.</p>
+<div class="nm-ledger">
+<div class="nm-ledger-item"><span class="nm-page-label">Handoffs</span><strong>Context does not follow the clock automatically</strong><p>A globally distributed team needs explicit state and ownership. Time-zone coverage without disciplined handoffs creates invisible gaps.</p></div>
+<div class="nm-ledger-item"><span class="nm-page-label">Hidden state</span><strong>A green screen can still hide a bad system</strong><p>Operators need to see what happened, what is supposed to happen next, and what the system believes is true.</p></div>
+<div class="nm-ledger-item"><span class="nm-page-label">Edge cases</span><strong>Automation is measured at recovery</strong><p>The useful question is not whether the normal path runs without a person. It is how quickly a person can understand and recover the abnormal path.</p></div>
+<div class="nm-ledger-item"><span class="nm-page-label">Maintenance</span><strong>24/7 removes the convenient moment to fix things</strong><p>Change management and rollback planning become part of editorial continuity, not a separate technical concern.</p></div>
+</div>
+</div>
+</div>
+<div class="nm-two-col">
+<h2>What I learned.</h2>
+<div>
+<p class="nm-page-copy"><strong>AI-native does not mean AI-run.</strong> It means designing the workflow with machine capabilities and limits in mind from the start.</p>
+<p class="nm-page-copy"><strong>Agents are infrastructure.</strong> Their value comes from carrying bounded work, preserving state, and escalating exceptions—not from acting like synthetic coworkers in a demo.</p>
+<p class="nm-page-copy"><strong>The interface is part of the newsroom.</strong> If operators cannot understand the system under pressure, the architecture is incomplete.</p>
+<p class="nm-page-copy"><strong>Global operations are a product.</strong> Handoffs, controls, documentation, observability, and recovery deserve the same product attention as the audience-facing surface.</p>
+</div>
+</div>
+<div class="nm-two-col">
+<h2>Evidence and next routes.</h2>
+<div>
+<div class="nm-contact-actions">
+<p><strong>Public evidence:</strong> Roxom TV describes itself as a <a href="https://roxom.tv/" target="_blank" rel="noopener noreferrer">24/7 Bitcoin-native financial streaming network</a> and lists its <a href="https://roxom.tv/about" target="_blank" rel="noopener noreferrer">San Francisco, London, and Hong Kong bureaus</a>.</p>
+</div>
+<div class="nm-ledger"> <a href="ai-media.html"><span class="nm-page-label">Current territory</span><strong>AI-Native Media</strong><p>The principles behind workflows, agents, interfaces, and discovery.</p></a> <a href="work-posta.html"><span class="nm-page-label">Earlier proof</span><strong>Building Posta</strong><p>What a format transition taught me about media products and distribution.</p></a> <a href="unfinished-arguments.html"><span class="nm-page-label">Writing</span><strong><ArticleField slug="unfinished-arguments" field="title" /></strong><p>Active questions about agents, automation, and what AI breaks next.</p></a> </div>
+</div>
+</div>
+</section>
+</main>
+<Footer />
+</SiteLayout>

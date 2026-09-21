@@ -1,0 +1,776 @@
+[
+  {
+    "source": "foundation",
+    "tag": "Foundation",
+    "title": "When Useful Becomes Hard to Leave",
+    "insight": "A service can help you while making you more dependent on it.",
+    "detail": "Look at the decisions you have built around the service: where your audience lives, where your data sits, and what would stop working if its terms changed. The benefit can be real. So can the cost of leaving.",
+    "href": "before-you-delegate.html",
+    "linkLabel": "Read essay"
+  },
+  {
+    "source": "foundation",
+    "tag": "Foundation",
+    "title": "The Cost of Fewer Choices",
+    "insight": "Sovereignty Debt is the accumulated loss of room to act on your own priorities.",
+    "detail": "It becomes visible when you need to change direction and discover how much work the dependency requires. Keep an account of those constraints before a disagreement makes them urgent.",
+    "href": "before-you-delegate.html",
+    "linkLabel": "Read essay"
+  },
+  {
+    "source": "foundation",
+    "tag": "Foundation",
+    "title": "What Would It Take to Leave?",
+    "insight": "A contract is easier to assess when you can describe how you would leave.",
+    "detail": "Check what you can export, which relationships you can retain, and what needs rebuilding. Repeated integration decisions can make an initially manageable exit much harder, even when each decision was reasonable.",
+    "href": "before-you-delegate.html",
+    "linkLabel": "Read essay"
+  },
+  {
+    "source": "foundation",
+    "tag": "Foundation",
+    "title": "Keep the Ability to Operate",
+    "insight": "Efficiency has a cost when the team forgets how to work without a service.",
+    "detail": "A useful dependency deserves maintenance: documentation, an export you have tested, and a fallback for the work that cannot stop. The point is to keep a choice available when circumstances change.",
+    "href": "before-you-delegate.html",
+    "linkLabel": "Read essay"
+  },
+  {
+    "source": "foundation",
+    "tag": "Foundation",
+    "title": "Whose Objective Wins?",
+    "insight": "Ask what drives the system when your interests diverge from its operator’s.",
+    "detail": "A recommendation can be useful to a user and profitable to a platform. The tension appears when those goals stop aligning. Knowing the service’s incentives helps you decide how much authority to give it.",
+    "href": "before-you-delegate.html",
+    "linkLabel": "Read essay"
+  },
+  {
+    "source": "cmoi",
+    "tag": "CMI",
+    "title": "Before an Opinion Forms",
+    "insight": "Zero Moment of Interpretation names the encounter that helps someone frame an issue.",
+    "detail": "The thesis asks whether repeated contact with an editorial perspective affects that encounter. It proposes something to test through recognition and return, not an instant a publisher can own or a guarantee of influence.",
+    "href": "thesis.html",
+    "linkLabel": "Read essay"
+  },
+  {
+    "source": "cmoi",
+    "tag": "CMI",
+    "title": "Make the Perspective Recognizable",
+    "insight": "Workflows can be copied; a reader’s relationship with a source takes time to build.",
+    "detail": "CMI puts the editorial lens at the center of a distribution plan. The practical question is whether people can describe that lens after encountering the work in different places.",
+    "href": "thesis.html",
+    "linkLabel": "Read essay"
+  },
+  {
+    "source": "cmoi",
+    "tag": "CMI",
+    "title": "Vary the Work, Keep the Question",
+    "insight": "Different formats should contribute to a recognizable editorial perspective.",
+    "detail": "A newsletter, a podcast, and a short post need not repeat one another. Each can bring a different example or level of detail to a question the audience has learned to associate with the source.",
+    "href": "thesis.html",
+    "linkLabel": "Read essay"
+  },
+  {
+    "source": "cmoi",
+    "tag": "CMI",
+    "title": "Check What Happens After the Spike",
+    "insight": "A viral piece can bring attention without creating a habit of return.",
+    "detail": "Compare the periods between major releases. Are more people coming back, and what are they coming back for? A spike is useful distribution evidence; it does not answer the retention question by itself.",
+    "href": "thesis.html",
+    "linkLabel": "Read essay"
+  },
+  {
+    "source": "cmoi",
+    "tag": "CMI",
+    "title": "Readers Enter from Several Routes",
+    "insight": "An audience may arrive through a search, a clip, a recommendation, or a summary.",
+    "detail": "Make each entry understandable without requiring the reader to follow a planned sequence. Offer a next step for someone who wants more context, while letting the piece work on its own.",
+    "href": "thesis.html",
+    "linkLabel": "Read essay"
+  },
+  {
+    "source": "cmoi",
+    "tag": "CMI",
+    "title": "State the Editorial Lens",
+    "insight": "Readers should be able to examine the perspective behind the selection.",
+    "detail": "Explain what you cover, how you make choices, and how you handle corrections. A declared lens gives readers something to evaluate; it does not excuse inaccurate reporting or replace verification.",
+    "href": "thesis.html",
+    "linkLabel": "Read essay"
+  },
+  {
+    "source": "cmoi",
+    "tag": "CMI",
+    "title": "Can Readers Describe Your Perspective?",
+    "insight": "Editorial consistency should be recognizable across formats and authors.",
+    "detail": "Ask readers what questions and commitments they associate with the publication. Compare their answers with the team’s intentions. Agreement is evidence to examine, not something to infer from a shared visual style.",
+    "href": "thesis.html",
+    "linkLabel": "Read essay"
+  },
+  {
+    "source": "cmoi",
+    "tag": "CMI",
+    "title": "What Brings the Community Back?",
+    "insight": "Shared interests and interpretation can support relationships beyond one popular piece.",
+    "detail": "The thesis asks whether a consistent editorial perspective gives people a reason to keep participating. Watch how the community behaves between releases and leave room for disagreement within it.",
+    "href": "thesis.html",
+    "linkLabel": "Read essay"
+  },
+  {
+    "source": "cax",
+    "tag": "CAX",
+    "title": "What Changes Through Repeated Reading?",
+    "insight": "The Constitutive Arc asks what an audience learns through sustained contact with a source.",
+    "detail": "Start with a concrete learning goal and a way to assess it. Time spent and repeated visits may accompany learning, but neither establishes that the reader understands the subject better.",
+    "href": "zmox.html",
+    "linkLabel": "Read essay"
+  },
+  {
+    "source": "cax",
+    "tag": "CAX",
+    "title": "Selection Shapes the Encounter",
+    "insight": "A recommendation system influences what someone sees next.",
+    "detail": "Compare what the system rewards with the editorial purpose of the work. The useful question is which selections support understanding, and which encourage more consumption without serving that purpose.",
+    "href": "zmox.html",
+    "linkLabel": "Read essay"
+  },
+  {
+    "source": "cax",
+    "tag": "CAX",
+    "title": "Choose What Readers Encounter Next",
+    "insight": "Publishing leaves some choices about context and order to distribution systems.",
+    "detail": "Decide which parts of that sequence you can improve: an introduction, related reading, or an explanation of a disagreement. Readers should also be able to leave, skip ahead, or choose a different source.",
+    "href": "zmox.html",
+    "linkLabel": "Read essay"
+  },
+  {
+    "source": "cax",
+    "tag": "CAX",
+    "title": "Reduce Dependence on One Format",
+    "insight": "A relationship is fragile when access to it depends on a single distribution route.",
+    "detail": "Test whether people recognize and seek out the work elsewhere. Adding formats takes effort; choose the ones that make the relationship more useful and less dependent on one platform’s decisions.",
+    "href": "zmox.html",
+    "linkLabel": "Read essay"
+  },
+  {
+    "source": "cax",
+    "tag": "CAX",
+    "title": "Explain What You Leave Out",
+    "insight": "Editorial boundaries help readers understand how a source makes choices.",
+    "detail": "Name the subjects and approaches you decline, and give reasons. Those boundaries should be open to criticism and revision. Consistency is useful when it helps a reader evaluate the work.",
+    "href": "zmox.html",
+    "linkLabel": "Read essay"
+  },
+  {
+    "source": "ob",
+    "tag": "OB",
+    "title": "Check What Your Metrics Measure",
+    "insight": "Visibility tells you what the distribution system surfaced, not everything an audience might value.",
+    "detail": "Compare platform performance with return visits, direct feedback, and use of the work. A strong engagement result can be useful without being sufficient evidence of editorial quality.",
+    "href": "occlusion-bias.html",
+    "linkLabel": "Read essay"
+  },
+  {
+    "source": "ob",
+    "tag": "OB",
+    "title": "Selection When Output Grows",
+    "insight": "More available material can make careful selection more valuable to a reader.",
+    "detail": "The proposed Curation Premium depends on people valuing that selection enough to return or pay. Test the relationship. More content does not automatically create a profitable curation business.",
+    "href": "occlusion-bias.html",
+    "linkLabel": "Read essay"
+  },
+  {
+    "source": "ob",
+    "tag": "OB",
+    "title": "When Agents Browse for Readers",
+    "insight": "Some requests reach a page on someone’s behalf without bringing that person to it.",
+    "detail": "That changes the relationship between requests and human attention. Separate observed automation from forecasts about adoption, and inspect what your own analytics count before changing the business model.",
+    "href": "occlusion-bias.html",
+    "linkLabel": "Read essay"
+  },
+  {
+    "source": "ob",
+    "tag": "OB",
+    "title": "An Automated Request Is Not an Ad View",
+    "insight": "A machine fetching a page does not establish that a person saw its advertising.",
+    "detail": "Monetizing human attention depends on evidence of that attention. The effect varies with the task and interface; an assistant’s involvement does not mean every subsequent human encounter disappears.",
+    "href": "occlusion-bias.html",
+    "linkLabel": "Read essay"
+  },
+  {
+    "source": "ob",
+    "tag": "OB",
+    "title": "Keep a Direct Way Back",
+    "insight": "Direct subscriptions and recurring relationships can reduce reliance on a referral platform.",
+    "detail": "They still depend on infrastructure, consent, and work worth returning to. Build and maintain those relationships without assuming that a platform change will automatically send other audiences your way.",
+    "href": "occlusion-bias.html",
+    "linkLabel": "Read essay"
+  },
+  {
+    "source": "essays",
+    "tag": "Essay 01",
+    "title": "What Are We Building?",
+    "insight": "Shipping quickly does not settle who the product is for.",
+    "detail": "Strategic Debt names the cost of leaving that question unresolved. Write the explanation early, test it with potential users, and use their questions to review what belongs in the build.",
+    "href": "paper-01.html",
+    "linkLabel": "Read essay"
+  },
+  {
+    "source": "essays",
+    "tag": "Essay 01",
+    "title": "Explain Before Scaling Acquisition",
+    "insight": "A clear description helps people decide whether trying the product is worth their time.",
+    "detail": "Explanation is part of the work. Test whether users understand the problem, the promise, and what they will need to do. Spending more on reach cannot repair a promise the product does not keep.",
+    "href": "paper-01.html",
+    "linkLabel": "Read essay"
+  },
+  {
+    "source": "essays",
+    "tag": "Essay 02",
+    "title": "When Useful Is Hard to Recognize",
+    "insight": "A product can help its existing users while remaining difficult to explain to new ones.",
+    "detail": "Investigate that gap before assuming the answer is more features or more advertising. Listen to how current users describe the problem and the change the product made for them.",
+    "href": "paper-02.html",
+    "linkLabel": "Read essay"
+  },
+  {
+    "source": "essays",
+    "tag": "Essay 02",
+    "title": "Does the Experience Match the Description?",
+    "insight": "Message-Market Fit connects a potential user’s expectations with what the product delivers.",
+    "detail": "Compare the pitch with what people find after signing up. When those agree, users have a clearer way to describe the product to others. Referrals still need to be observed, not assumed.",
+    "href": "paper-02.html",
+    "linkLabel": "Read essay"
+  },
+  {
+    "source": "essays",
+    "tag": "Essay 03",
+    "title": "Use the Promise in a Product Decision",
+    "insight": "An Operating Narrative should inform product choices while they are still open.",
+    "detail": "Write down who needs the product and what it promises. Then use a real feature decision to test whether that explanation gives the team a useful constraint.",
+    "href": "paper-03.html",
+    "linkLabel": "Read essay"
+  },
+  {
+    "source": "essays",
+    "tag": "Essay 03",
+    "title": "Start with What Users Understand",
+    "insight": "A Worldview Audit examines the assumptions people bring to a product.",
+    "detail": "Find out how potential users describe their situation, including where they disagree with your account. Familiar language can help; a new product may still require teaching people something unfamiliar.",
+    "href": "paper-03.html",
+    "linkLabel": "Read essay"
+  },
+  {
+    "source": "essays",
+    "tag": "Essay 03",
+    "title": "Repair the Broken Promise",
+    "insight": "A mismatch between the claim and the experience can weaken trust.",
+    "detail": "Identify the specific contradiction and change the product, the explanation, or both. Coherence can be rebuilt through consistent work; a larger campaign alone will not demonstrate that the problem is fixed.",
+    "href": "paper-03.html",
+    "linkLabel": "Read essay"
+  },
+  {
+    "source": "essays",
+    "tag": "Essay 04",
+    "title": "Drift Comes Through Small Decisions",
+    "insight": "Features, partnerships, and hires can gradually change what a product stands for.",
+    "detail": "Review those choices against the original commitments. Narrative Drift is a reason to revisit the account as the team grows, not a diagnosis of irreversible failure after a fixed number of years.",
+    "href": "paper-04.html",
+    "linkLabel": "Read essay"
+  },
+  {
+    "source": "essays",
+    "tag": "Essay 04",
+    "title": "Record Why the Decision Was Made",
+    "insight": "A consistent record helps new teams understand what users have come to expect.",
+    "detail": "Keep the decisions and their rationale available. When a commitment changes, explain why. Past credibility gives the next launch context, but the new product still has to earn its place.",
+    "href": "paper-04.html",
+    "linkLabel": "Read essay"
+  },
+  {
+    "source": "essays",
+    "tag": "Essay 05",
+    "title": "Arrival Is Not Evidence of Fit",
+    "insight": "A recommendation explains how someone arrived. Use and retention show what happened next.",
+    "detail": "Compare both referral and platform cohorts over a period suited to the product. Personal recruitment provides context but can introduce selection bias and unusually patient users.",
+    "href": "paper-05.html",
+    "linkLabel": "Read essay"
+  },
+  {
+    "source": "essays",
+    "tag": "Essay 05",
+    "title": "Build Another Route to the Audience",
+    "insight": "Newsletters, events, and partnerships can make a launch less dependent on one ranking system.",
+    "detail": "Each route has its own costs and dependencies. Choose one you can maintain, and check whether the people it brings have the problem the product is meant to solve.",
+    "href": "paper-05.html",
+    "linkLabel": "Read essay"
+  },
+  {
+    "source": "essays",
+    "tag": "Essay 05",
+    "title": "Test Before Scaling",
+    "insight": "A small launch can make early behavior easier to examine.",
+    "detail": "Trust-First Sequencing proposes recruiting an initial cohort, observing use, and comparing it with people outside the founding network. Set decision criteria before reviewing the results. A small sample is not automatically a clean one.",
+    "href": "paper-05.html",
+    "linkLabel": "Read essay"
+  },
+  {
+    "source": "essays",
+    "tag": "Essay 06",
+    "title": "Who Shapes the Journey?",
+    "insight": "Rankings, recommendations, and summaries influence which options people encounter.",
+    "detail": "Journey models already account for some mediation and nonlinear behavior. The task in this paper is to record the specific interventions that affect your product, rather than assume every earlier map ignored them.",
+    "href": "paper-06.html",
+    "linkLabel": "Read essay"
+  },
+  {
+    "source": "essays",
+    "tag": "Essay 06",
+    "title": "When Reach Does Not Lead to Return",
+    "insight": "Journey Debt names the cost of confusing distribution performance with audience preference.",
+    "detail": "Check whether more engagement accompanies stronger use, trust, or retention. When it does not, investigate what the platform selected and what the audience understood before optimizing the same metric again.",
+    "href": "paper-06.html",
+    "linkLabel": "Read essay"
+  },
+  {
+    "source": "essays",
+    "tag": "Essay 06",
+    "title": "Does the Message Survive the Route?",
+    "insight": "Mediation Fitness asks whether the claim remains recognizable after ranking, clipping, or summarization.",
+    "detail": "Compare the original with the version people actually receive. Record which qualifications disappeared and whether the resulting expectations match the product. Distribution performance alone cannot answer that.",
+    "href": "paper-06.html",
+    "linkLabel": "Read essay"
+  },
+  {
+    "source": "lhi",
+    "tag": "LHI",
+    "title": "The Impression Gap",
+    "insight": "Content can be processed on someone’s behalf without reaching their direct attention.",
+    "detail": "This essay distinguishes machine processing from a human encounter. The size of that gap depends on what a service does and what the measurement system records; it needs evidence from the setting being examined.",
+    "href": "the-last-human-impression.html",
+    "linkLabel": "Read essay"
+  },
+  {
+    "source": "lhi",
+    "tag": "LHI",
+    "title": "Three Different Kinds of Delegation",
+    "insight": "Asking for a summary, filtering a mailbox, and delegating a purchase remove different steps.",
+    "detail": "Map the task before estimating its effect on attention. A summary still has a reader. A filter may discard a message. A delegated transaction may skip a visit, while leaving other human decisions intact.",
+    "href": "the-last-human-impression.html",
+    "linkLabel": "Read essay"
+  },
+  {
+    "source": "lhi",
+    "tag": "LHI",
+    "title": "What Does This Impression Record?",
+    "insight": "A dashboard event needs an operational definition before it can support a business decision.",
+    "detail": "Check whether the event represents a request, a rendered message, or a measured human view. Then inspect how automation is handled. The label alone does not tell you whose attention was involved.",
+    "href": "the-last-human-impression.html",
+    "linkLabel": "Read essay"
+  },
+  {
+    "source": "lhi",
+    "tag": "LHI",
+    "title": "Available to an Assistant, Unread by a Person",
+    "insight": "A source can be available to a retrieval system without a reader opening it.",
+    "detail": "Record citations, referrals, and direct visits separately where possible. Availability may help a source get selected, but it does not guarantee selection, attribution, or trust.",
+    "href": "the-last-human-impression.html",
+    "linkLabel": "Read essay"
+  },
+  {
+    "source": "lhi",
+    "tag": "LHI",
+    "title": "Make the Archive Usable",
+    "insight": "Clear structure can help people and retrieval systems find relevant work.",
+    "detail": "Keep dates, authorship, sources, and stable links visible. Do not confuse making material retrievable with including it in model training; they are different processes with different access conditions.",
+    "href": "the-last-human-impression.html",
+    "linkLabel": "Read essay"
+  },
+  {
+    "source": "lhi",
+    "tag": "LHI",
+    "title": "Useful to a Summary, Invisible to Its Reader",
+    "insight": "A system may use a source without sending attention or revenue back to it.",
+    "detail": "Attribution and referrals depend on the product and response. Test what happens to your own work. A well-organized archive may be useful even while the financial return remains uncertain.",
+    "href": "the-last-human-impression.html",
+    "linkLabel": "Read essay"
+  },
+  {
+    "source": "lhi",
+    "tag": "LHI",
+    "title": "Test the Value of Direct Attention",
+    "insight": "A person who returns deliberately may value something that a feed encounter does not capture.",
+    "detail": "Ask what they seek and test an offer with that audience. A higher price is a business hypothesis, not a consequence that follows automatically from increased automation.",
+    "href": "the-last-human-impression.html",
+    "linkLabel": "Read essay"
+  },
+  {
+    "source": "lhi",
+    "tag": "LHI",
+    "title": "Show How You Handle Being Wrong",
+    "insight": "A visible correction record gives readers a basis for evaluating a source.",
+    "detail": "Responsibility sits with the people and organizations operating the publication, including when they use AI. Explain who reviews the work, who responds to challenges, and what changes after an error.",
+    "href": "the-last-human-impression.html",
+    "linkLabel": "Read essay"
+  },
+  {
+    "source": "lhi",
+    "tag": "LHI",
+    "title": "Start with a Small Audience Test",
+    "insight": "Investigate changes in attention before committing the whole business to a forecast.",
+    "detail": "Pick a domain, define the events you can measure, and compare direct use with mediated discovery. Evidence from that test should decide whether the next investment is justified.",
+    "href": "the-last-human-impression.html",
+    "linkLabel": "Read essay"
+  },
+  {
+    "source": "lhi",
+    "tag": "LHI",
+    "title": "Delegation Varies by Task",
+    "insight": "The timing of delegation differs by task, audience, and market.",
+    "detail": "Avoid importing a fixed regional lag into a launch plan. Look for evidence from your users: what they already delegate, what they prefer to do themselves, and what would make them change.",
+    "href": "the-last-human-impression.html",
+    "linkLabel": "Read essay"
+  },
+  {
+    "source": "lmm",
+    "tag": "LMM",
+    "title": "Leave Room to Work Through It",
+    "insight": "Working through a problem can teach things that receiving the answer does not.",
+    "detail": "I want Lucas to practice asking, trying, and revising, even when a tool can help him finish. The question is how to preserve that practice while using the assistance well.",
+    "href": "the-last-manual-moment.html",
+    "linkLabel": "Read essay"
+  },
+  {
+    "source": "lmm",
+    "tag": "LMM",
+    "title": "Who Carries the Consequence?",
+    "insight": "Capability and accountability are separate questions when a system gives advice.",
+    "detail": "Ask which person or organization reviews mistakes and responds to the people affected. A model does not bear personal stakes, but that does not remove responsibility from its operator.",
+    "href": "the-last-manual-moment.html",
+    "linkLabel": "Read essay"
+  },
+  {
+    "source": "lmm",
+    "tag": "LMM",
+    "title": "Choosing to Be There",
+    "insight": "A shared meal or a difficult conversation can matter because people make time for each other.",
+    "detail": "The essay asks what happens to that choice as more routine interaction is delegated. Presence is one way to sustain a relationship; it is not the only evidence that a human relationship exists.",
+    "href": "the-last-manual-moment.html",
+    "linkLabel": "Read essay"
+  },
+  {
+    "source": "gc",
+    "tag": "GC",
+    "title": "An Old Object, a New Choice",
+    "insight": "Choosing a record alongside streaming is different from using the only format available.",
+    "detail": "I use that contrast to examine the appeal of limits. It does not mean every record buyer is rejecting digital life. The reason for the choice matters as much as the object.",
+    "href": "the-great-contraction.html",
+    "linkLabel": "Read essay"
+  },
+  {
+    "source": "gc",
+    "tag": "GC",
+    "title": "When Openness Becomes a Rule",
+    "insight": "The essay questions treating greater openness as the answer to every problem.",
+    "detail": "Access can be valuable while exposure has costs. Ask which boundary is being removed, who gains from removing it, and whether people retain a say in the result.",
+    "href": "the-great-contraction.html",
+    "linkLabel": "Read essay"
+  },
+  {
+    "source": "gc",
+    "tag": "GC",
+    "title": "Leave Room for Context and Correction",
+    "insight": "An old statement can reach a new audience without the circumstances that explain it.",
+    "detail": "Accountability needs proportion as well as visibility. The concern here is a fast public verdict that travels farther than a correction, not an exemption from answering for what someone said.",
+    "href": "the-great-contraction.html",
+    "linkLabel": "Read essay"
+  },
+  {
+    "source": "gc",
+    "tag": "GC",
+    "title": "What Happens to the Middle?",
+    "insight": "I see pressure toward large shared events and smaller communities.",
+    "detail": "The essay asks whether media between those scales is becoming harder to sustain. It does not establish that only two viable sizes remain. A particular publication still needs its own audience and cost analysis.",
+    "href": "the-great-contraction.html",
+    "linkLabel": "Read essay"
+  },
+  {
+    "source": "gc",
+    "tag": "GC",
+    "title": "Who Sets the Boundary?",
+    "insight": "Structures that provide belonging can also exclude people.",
+    "detail": "A family, community, and country involve different powers and obligations. Examine who decides who belongs and what happens to those left outside, rather than treating every boundary as either shelter or harm.",
+    "href": "the-great-contraction.html",
+    "linkLabel": "Read essay"
+  },
+  {
+    "source": "gc",
+    "tag": "GC",
+    "title": "Looking for Stability in a Feed",
+    "insight": "Images of permanence can appeal to someone whose own circumstances feel uncertain.",
+    "detail": "That is an interpretation of the attraction, not a diagnosis of every young person buying secondhand clothes. The disposable camera in the essay is a concrete case: my son kept the photos and went back to the iPad.",
+    "href": "the-great-contraction.html",
+    "linkLabel": "Read essay"
+  },
+  {
+    "source": "gc",
+    "tag": "GC",
+    "title": "Keep the Ability to Change Your Mind",
+    "insight": "Closing everything can become as rigid a rule as opening everything.",
+    "detail": "I want boundaries people can explain, challenge, and revise. The test is whether they serve the people affected, including those who disagree with the decision.",
+    "href": "the-great-contraction.html",
+    "linkLabel": "Read essay"
+  },
+  {
+    "source": "ls",
+    "tag": "LS",
+    "title": "The Interest Was in Solving It",
+    "insight": "I lost interest in the bot after it began doing what I had built it to do.",
+    "detail": "The reward in that episode was the work of finding and testing the solution. I use it to ask what motivates a project once the immediate need has been met, without assuming everyone shares the experience.",
+    "href": "the-last-scarcity.html",
+    "linkLabel": "Read essay"
+  },
+  {
+    "source": "ls",
+    "tag": "LS",
+    "title": "Income and Purpose Ask Different Questions",
+    "insight": "Material security matters, and people also need reasons to act.",
+    "detail": "The essay imagines a life requiring less paid work. It asks what might give that life direction. That does not mean income support can eliminate every material need or should be judged only by its effect on motivation.",
+    "href": "the-last-scarcity.html",
+    "linkLabel": "Read essay"
+  },
+  {
+    "source": "ls",
+    "tag": "LS",
+    "title": "Keep Practicing Judgment",
+    "insight": "The output still depends on how someone directs and checks the work.",
+    "detail": "Access to AI does not settle whether a claim is sound or a task is worth doing. Teaching people to question, verify, and revise remains part of the work; there is no supported productivity multiplier in this argument.",
+    "href": "the-last-scarcity.html",
+    "linkLabel": "Read essay"
+  },
+  {
+    "source": "ls",
+    "tag": "LS",
+    "title": "Paying for Limits",
+    "insight": "Some people pay for tools that restrict how much technology they use.",
+    "detail": "A camera with a finite roll or an app that blocks a feed can make stopping easier. The value depends on whether the limit serves a choice the person wants to make, rather than merely creating artificial scarcity.",
+    "href": "the-last-scarcity.html",
+    "linkLabel": "Read essay"
+  },
+  {
+    "source": "ls",
+    "tag": "LS",
+    "title": "Room to Explore",
+    "insight": "An unanswered question can give a project its pull.",
+    "detail": "The bot started with a pricing difference I wanted to understand. Solving that problem led to another question about why I wanted to solve it. This is an account of curiosity, not a case against transparency or fair markets.",
+    "href": "the-last-scarcity.html",
+    "linkLabel": "Read essay"
+  },
+  {
+    "source": "ls",
+    "tag": "LS",
+    "title": "Time Alone Does Not Choose the Work",
+    "insight": "Having fewer immediate demands does not determine what someone will pursue.",
+    "detail": "The essay uses that possibility to ask about motivation under greater abundance. Historical leisure is a comparison with serious limits, especially when it depended on other people’s labor.",
+    "href": "the-last-scarcity.html",
+    "linkLabel": "Read essay"
+  },
+  {
+    "source": "ls",
+    "tag": "LS",
+    "title": "What Would You Work on Anyway?",
+    "insight": "I kept rewriting after the practical reason to stay at the desk had passed.",
+    "detail": "That is the question behind The Last Scarcity. What makes a particular task worth doing to the person doing it? Material shortages remain real; this essay explores a further question rather than announcing their end.",
+    "href": "the-last-scarcity.html",
+    "linkLabel": "Read essay"
+  },
+  {
+    "source": "ayp",
+    "tag": "AYP · 01",
+    "title": "Automation Is Not One Kind of Traffic",
+    "insight": "Crawlers, monitoring tools, malicious bots, and delegated assistants do different work.",
+    "detail": "A vendor’s total bot-traffic share does not measure how much reading people have delegated. Inspect the categories and the analytics implementation before drawing conclusions about the audience.",
+    "href": "the-empty-room.html",
+    "linkLabel": "Read essay"
+  },
+  {
+    "source": "ayp",
+    "tag": "AYP · 01",
+    "title": "A Request Does Not Establish a Reader",
+    "insight": "Engagement events describe actions; their meaning depends on who or what produced them.",
+    "detail": "Check how human attention is inferred and where that inference can fail. The fact that measurement has limits does not make every metric useless, but it changes which claims the metric can support.",
+    "href": "the-empty-room.html",
+    "linkLabel": "Read essay"
+  },
+  {
+    "source": "ayp",
+    "tag": "AYP · 01",
+    "title": "Check Who Responded to the Test",
+    "insight": "A headline test can reward behavior that does not represent the readers you wanted.",
+    "detail": "If automated requests enter the result, separate them where possible and compare downstream human behavior. First establish that this is happening; do not infer an absent audience from a disappointing result alone.",
+    "href": "the-empty-room.html",
+    "linkLabel": "Read essay"
+  },
+  {
+    "source": "ayp",
+    "tag": "AYP · 01",
+    "title": "What Makes Someone Come Back?",
+    "insight": "Clicks can record an encounter without explaining the relationship behind it.",
+    "detail": "Add evidence from repeat reading, replies, subscriptions, and conversations. Each has limits, but together they can help distinguish passing activity from an audience that seeks the work.",
+    "href": "the-empty-room.html",
+    "linkLabel": "Read essay"
+  },
+  {
+    "source": "ayp",
+    "tag": "AYP · 02",
+    "title": "The Profile Keeps Its Routine",
+    "insight": "A public presence can keep repeating interests a person has moved beyond.",
+    "detail": "The Proxy Self uses Severance’s split as a comparison for that divergence. It can emerge from scheduled habits as well as automation. Compare the profile with what you actually want to say now.",
+    "href": "the-proxy-self.html",
+    "linkLabel": "Read essay"
+  },
+  {
+    "source": "ayp",
+    "tag": "AYP · 02",
+    "title": "A Published Record Is Incomplete",
+    "insight": "The work a system can retrieve is only part of a person’s life and thinking.",
+    "detail": "An old argument may remain easy to find after its author changes their mind. Date the work and link meaningful revisions so readers have a better chance of recognizing that change.",
+    "href": "the-proxy-self.html",
+    "linkLabel": "Read essay"
+  },
+  {
+    "source": "ayp",
+    "tag": "AYP · 02",
+    "title": "The Personal Post Joins the Record",
+    "insight": "A spontaneous update can appear alongside scheduled or assisted work on the same profile.",
+    "detail": "Readers may not know which process produced each post. The essay asks how those mixed signals shape their sense of the person, without assuming every platform uses them in the same way.",
+    "href": "the-proxy-self.html",
+    "linkLabel": "Read essay"
+  },
+  {
+    "source": "ayp",
+    "tag": "AYP · 02",
+    "title": "Review the Voice That Persists",
+    "insight": "A recognizable posting pattern can outlast the reasons that created it.",
+    "detail": "Revisit recurring claims and automated routines. Ask whether they still express your position, and make consequential changes visible instead of letting the old account speak indefinitely.",
+    "href": "the-proxy-self.html",
+    "linkLabel": "Read essay"
+  },
+  {
+    "source": "ayp",
+    "tag": "AYP · 03",
+    "title": "Two Filters Before a Reader",
+    "insight": "A platform can select a piece, and an assistant can decide how much of it to pass along.",
+    "detail": "The two stages may use different criteria. Examine the version the person receives before assuming that better platform performance means a better reading experience.",
+    "href": "writing-for-the-filter.html",
+    "linkLabel": "Read essay"
+  },
+  {
+    "source": "ayp",
+    "tag": "AYP · 03",
+    "title": "What the Summary Leaves Out",
+    "insight": "A conclusion can survive compression while the path to it disappears.",
+    "detail": "Examples, hesitation, and a change of mind may be part of why the argument matters. Make the source available for readers who want to examine that path. A summary can still be useful on its own terms.",
+    "href": "writing-for-the-filter.html",
+    "linkLabel": "Read essay"
+  },
+  {
+    "source": "ayp",
+    "tag": "AYP · 03",
+    "title": "Find Where the Meaning Gets Lost",
+    "insight": "More work on a headline may not help if the loss happens during summarization.",
+    "detail": "Compare the original, the selected excerpt, and the assistant’s response. Find where the intended meaning or route back disappears before investing in another round of the same optimization.",
+    "href": "writing-for-the-filter.html",
+    "linkLabel": "Read essay"
+  },
+  {
+    "source": "ayp",
+    "tag": "AYP · 03",
+    "title": "Give Readers a Reason to Seek the Original",
+    "insight": "I want the work to reward someone who follows a summary back to its source.",
+    "detail": "That might mean evidence they can inspect, an example the summary omitted, or an argument worth following in full. The return needs to be observed; curiosity is not a guaranteed conversion path.",
+    "href": "writing-for-the-filter.html",
+    "linkLabel": "Read essay"
+  },
+  {
+    "source": "ayp",
+    "tag": "AYP · 04",
+    "title": "What Does a Byline Promise?",
+    "insight": "Readers may associate a name with research, authorship, and responsibility.",
+    "detail": "Those expectations can differ from the publication’s actual process. Explain who produced and reviewed the work so the reader does not have to infer it from a familiar interface.",
+    "href": "the-trust-collapse.html",
+    "linkLabel": "Read essay"
+  },
+  {
+    "source": "ayp",
+    "tag": "AYP · 04",
+    "title": "Fast Does Not Mean Automated",
+    "insight": "A quick or unusually polished reply can prompt a question without answering it.",
+    "detail": "Timing and style alone do not establish how a message was produced. The trust problem is the uncertainty about the process and responsibility, not a reliable method for detecting AI by its prose.",
+    "href": "the-trust-collapse.html",
+    "linkLabel": "Read essay"
+  },
+  {
+    "source": "ayp",
+    "tag": "AYP · 04",
+    "title": "Who Do Readers Think Is Answering?",
+    "insight": "A familiar account can suggest direct human involvement even when some work has been delegated.",
+    "detail": "The useful response is a clear account of the process. What was automated, what did the person review, and who will respond if something is wrong?",
+    "href": "the-trust-collapse.html",
+    "linkLabel": "Read essay"
+  },
+  {
+    "source": "ayp",
+    "tag": "AYP · 04",
+    "title": "Why the Source Can Matter",
+    "insight": "Two identical texts can mean different things to a reader who expects a particular person’s judgment.",
+    "detail": "Some readers primarily want a useful answer. Others also want the accountable experience behind it. A publication should understand those expectations rather than assume one settles the question for everyone.",
+    "href": "the-trust-collapse.html",
+    "linkLabel": "Read essay"
+  },
+  {
+    "source": "ayp",
+    "tag": "AYP · 05",
+    "title": "Describe How You Reached the Claim",
+    "insight": "A specific account of the work lets a reader examine the judgment behind it.",
+    "detail": "Include the situation, the choices, and what you learned. Neither a human byline nor a personal anecdote proves the account is accurate; the details need to withstand questions.",
+    "href": "origin-gravity.html",
+    "linkLabel": "Read essay"
+  },
+  {
+    "source": "ayp",
+    "tag": "AYP · 05",
+    "title": "Let One Question Lead to Another",
+    "insight": "Useful writing can change what a reader wants to investigate next.",
+    "detail": "In this essay, I connect that experience with returning to a writer whose work I value. It is not an ability exclusive to human-written text; the question is how that relationship develops.",
+    "href": "origin-gravity.html",
+    "linkLabel": "Read essay"
+  },
+  {
+    "source": "ayp",
+    "tag": "AYP · 05",
+    "title": "Make the Reasoning Worth Reading",
+    "insight": "Polished presentation alone may give readers little reason to choose one source.",
+    "detail": "Show what evidence mattered, what remained uncertain, and why you took a particular view. That gives the reader a basis for assessing the work beyond the surface of the prose.",
+    "href": "origin-gravity.html",
+    "linkLabel": "Read essay"
+  },
+  {
+    "source": "ayp",
+    "tag": "AYP · 05",
+    "title": "Returning to the Person Behind the Work",
+    "insight": "Origin Gravity proposes that readers may seek a source after encountering its work elsewhere.",
+    "detail": "Here the focus is an individual writer; in Occlusion Bias it also includes accountable editorial sources. Track return and sustained interest rather than assume that an identifiable author automatically creates either.",
+    "href": "origin-gravity.html",
+    "linkLabel": "Read essay"
+  },
+  {
+    "source": "ayp",
+    "tag": "AYP · 05",
+    "title": "Write from Work You Can Describe",
+    "insight": "Specific experience is useful when it helps explain how you reached the argument.",
+    "detail": "Give the reader the detail needed to test the claim. Disclosure alone is not the goal. A decision, a failed attempt, or a question you revised may explain more than a declaration of authenticity.",
+    "href": "origin-gravity.html",
+    "linkLabel": "Read essay"
+  }
+]

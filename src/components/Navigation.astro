@@ -1,0 +1,26 @@
+---
+interface Props { active?: string }
+const path = Astro.url.pathname;
+const article = !['/', '/index.html','/work.html','/work-posta.html','/work-roxom.html','/about.html','/contact.html','/speaking.html','/consulting.html','/privacy.html','/media-kit.html','/developers.html'].includes(path);
+const links = [
+  {href:'thesis.html',label:'Thesis',active:path==='/thesis.html'},
+  {href:'essays.html',label:'Writing',active:article && path!=='/thesis.html'},
+  {href:'work.html',label:'Work',active:path.startsWith('/work')},
+  {href:'consulting.html',label:'Consulting',active:path==='/consulting.html'},
+  {href:'about.html',label:'About',active:['/about.html','/speaking.html','/media-kit.html'].includes(path)}
+];
+---
+<nav aria-label="Primary navigation" class="nav" data-server-active>
+  <div class="nav-inner">
+    <a aria-label="Diego Dell'Agostino — Home" class="nav-brand" href="index.html"><span class="brand-dot" aria-hidden="true"></span>Diego Dell'Agostino</a>
+    <button aria-controls="navLinks" aria-expanded="false" aria-label="Menu" class="nav-btn nav-toggle" id="navToggle"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16" /></svg></button>
+    <div aria-label="Primary sections" class="nav-links" id="navLinks">
+      {links.map(link=><a class:list={['nav-link',{active:link.active}]} aria-current={link.active?'page':undefined} href={link.href}>{link.label}</a>)}
+      <a class="nav-link nav-contact" href="contact.html" data-open-contact data-contact-mode="conversation">Get in touch</a>
+    </div>
+  </div>
+</nav>
+
+<noscript><style is:inline>
+@media(max-width:1023px){body .nav{position:relative;top:auto;left:auto;transform:none;margin:12px auto}body .nav-inner{flex-wrap:wrap}body .nav-toggle{display:none}body .nav-links{position:static;display:flex;max-height:none;width:100%;border:0;box-shadow:none}body,body.site-shell,body.font-body{padding-top:0}}
+</style></noscript>

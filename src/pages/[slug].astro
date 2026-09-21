@@ -1,0 +1,13 @@
+---
+import { getCollection, render } from 'astro:content';
+import SiteLayout from '../layouts/SiteLayout.astro';
+import ArticleFrame from '../components/ArticleFrame.astro';
+export async function getStaticPaths() {
+  return (await getCollection('writing')).map(entry => ({ params: { slug: entry.id }, props: { entry } }));
+}
+const { entry } = Astro.props;
+const { Content } = await render(entry);
+---
+<SiteLayout page={entry.id} presentationKey={entry.data.presentation || 'before-you-delegate'}>
+  {entry.data.presentation ? <Content /> : <ArticleFrame><Content /></ArticleFrame>}
+</SiteLayout>

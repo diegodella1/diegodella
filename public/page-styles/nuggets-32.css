@@ -1,0 +1,256 @@
+@layer page {
+
+    :root {
+      --highlight-hover: #e8e3d6;
+      --highlight-hover-alt: #ece7db;
+    }
+    [data-theme="dark"] {
+      --highlight-hover: #2a2824;
+      --highlight-hover-alt: #252320;
+    }
+    [data-theme="dark"] .hero-stat-pill,
+    [data-theme="dark"] .filter-chip {
+      color: var(--ink-2);
+      border-color: color-mix(in srgb, var(--accent) 20%, rgba(255,255,255,0.14));
+      background: rgba(255,255,255,0.07);
+    }
+    [data-theme="dark"] .hero-stat-pill strong {
+      color: #ffffff;
+    }
+    [data-theme="dark"] .filter-chip:hover {
+      color: var(--control-fg);
+      background: color-mix(in srgb, var(--accent) 14%, rgba(255,255,255,0.06));
+      border-color: color-mix(in srgb, var(--accent) 42%, rgba(255,255,255,0.14));
+    }
+    [data-theme="dark"] .filter-chip.active {
+      color: var(--on-accent);
+      background: var(--accent);
+      border-color: var(--accent);
+    }
+    html { font-size: 20px; scroll-behavior: smooth; scroll-padding-top: 60px; }
+    body { line-height: 1.75; }
+
+    /* ── Hero ── */
+    .hero { max-width: 980px; margin: 0 auto; padding: 6rem 3rem 2.4rem; display: grid; grid-template-columns: minmax(0, 1fr) 250px; gap: 2rem; align-items: start; }
+    .hero-left { display: flex; flex-direction: column; }
+    .hero-illustration { display: flex; align-items: center; justify-content: center; padding-top: 2rem; }
+    .hero-illustration svg { width: 280px; height: 350px; }
+    .hero-lead { font-size: 1.08rem; line-height: 1.72; color: var(--ink-2); max-width: 34rem; margin-bottom: 1.7rem; }
+    .hero-stats-row { display: flex; gap: 0.8rem; flex-wrap: wrap; }
+    .hero-stat-pill { font-family: 'Space Grotesk', monospace; font-size: 0.75rem; letter-spacing: 0.13em; text-transform: uppercase; color: var(--muted); border: 1px solid var(--rule); padding: 0.45em 0.85em; background: rgba(255,255,255,0.42); }
+    .hero-stat-pill strong { color: var(--deep); font-weight: 700; }
+
+    /* ── Filter chips ── */
+    .filter-bar { max-width: 1080px; margin: 0 auto; padding: 0 3rem 1.6rem; }
+    .filter-chips { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+    .filter-chip { font-family: 'Space Grotesk', monospace; font-size: 0.75rem; letter-spacing: 0.13em; text-transform: uppercase; color: var(--muted); border: 1px solid var(--rule); padding: 0.5em 0.95em; border-radius: 0; cursor: pointer; transition: all 0.2s; background: rgba(255,255,255,0.42); }
+    .filter-chip:hover { color: var(--accent); border-color: var(--accent); }
+    .filter-chip:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+    .filter-chip.active { color: var(--on-accent); background: var(--accent); border-color: var(--accent); }
+    .filter-count { font-weight: 700; opacity: 0.7; margin-left: 0.3em; }
+
+    /* ── Nuggets grid ── */
+    .nuggets-grid {
+      max-width: 1080px; margin: 0 auto 4rem; padding: 0 3rem;
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 0;
+    }
+
+    /* ── Card: clean editorial cell ── */
+    .nugget-card {
+      background: rgba(255,255,255,0.46); padding: 1.55rem 1.35rem;
+      cursor: pointer; position: relative; outline: none;
+      border-bottom: 1px solid var(--rule); border-right: 1px solid var(--rule);
+      transition: background 0.25s, transform 0.25s, box-shadow 0.25s;
+    }
+    .nugget-card:nth-child(3n) { border-right: none; }
+    .nugget-card:hover { background: rgba(255,255,255,0.72); transform: translateY(-2px); z-index: 2; }
+    .nugget-card:focus-visible { outline: 2px solid var(--accent); outline-offset: -2px; }
+    .nugget-card.expanded {
+      background: rgba(255,255,255,0.78); grid-column: 1 / -1;
+      border-inline: 0; border-block: 2px solid var(--accent);
+      display: grid; grid-template-columns: 1fr 1fr; gap: 0 2.5rem;
+      padding: 1.8rem 2.1rem;
+    }
+    .nugget-card.expanded::before { display: none; }
+    .nugget-card.hidden { display: none; }
+    [data-theme="dark"] .nugget-card {
+      background: rgba(255,255,255,0.06);
+      border-bottom-color: rgba(255,255,255,0.1);
+      border-right-color: rgba(255,255,255,0.1);
+    }
+    [data-theme="dark"] .nugget-card:hover {
+      background: rgba(255,255,255,0.1);
+      box-shadow: 0 18px 34px color-mix(in srgb, var(--ink) 26%, transparent);
+    }
+    [data-theme="dark"] .nugget-card.expanded {
+      background: rgba(255,255,255,0.12);
+    }
+
+    /* ── Tag: dot + label ── */
+    .nugget-tag {
+      font-family: 'Space Grotesk', monospace; font-size: 0.75rem;
+      letter-spacing: 0.18em; text-transform: uppercase; color: var(--accent);
+      margin-bottom: 0.6rem; display: flex; align-items: center; gap: 0.5em;
+      border: none; padding: 0;
+    }
+    .nugget-tag::before {
+      content: ''; width: 6px; height: 6px; border-radius: 50%;
+      background: var(--accent); flex-shrink: 0;
+    }
+    .nugget-tag.essay { color: var(--muted); }
+    .nugget-tag.essay::before { background: var(--muted); }
+
+    /* ── Header & title ── */
+    .nugget-header { display: flex; justify-content: space-between; align-items: flex-start; gap: 0.75rem; }
+    .nugget-title {
+      font-family: 'Space Grotesk', system-ui, sans-serif; font-size: 1.2rem; font-weight: 700;
+      line-height: 1.25; letter-spacing: -0.01em; margin-bottom: 0.6rem; flex: 1;
+    }
+    [data-theme="dark"] .nugget-title {
+      color: var(--ink);
+    }
+    .nugget-toggle {
+      width: 18px; height: 18px; flex-shrink: 0; margin-top: 0.25rem;
+      stroke: var(--rule); fill: none; stroke-width: 2;
+      stroke-linecap: round; stroke-linejoin: round;
+      transition: transform 0.35s cubic-bezier(.22,1,.36,1), stroke 0.2s;
+    }
+    [data-theme="dark"] .nugget-toggle {
+      stroke: rgba(255,255,255,0.5);
+    }
+    .nugget-card:hover .nugget-toggle { stroke: var(--accent); }
+    .nugget-card.expanded .nugget-toggle { transform: rotate(45deg); stroke: var(--accent); }
+
+    /* ── Insight: truncated preview ── */
+    .nugget-insight {
+      font-size: 0.95rem; line-height: 1.6; color: var(--muted); font-style: italic;
+      display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+    [data-theme="dark"] .nugget-insight {
+      color: var(--ink-2);
+    }
+    .nugget-card.expanded .nugget-insight { -webkit-line-clamp: unset; overflow: visible; }
+
+    /* ── Expand panel ── */
+    .nugget-expand { display: block; }
+    .nugget-expand[hidden] { display: none; }
+    .nugget-card.expanded .nugget-expand { display: block; }
+    .nugget-divider {
+      display: flex; align-items: center; gap: 0.75rem; margin: 1.25rem 0 1rem;
+    }
+    .nugget-divider::before, .nugget-divider::after { content: ''; flex: 1; height: 1px; background: var(--rule); }
+    .nugget-divider-text {
+      font-family: 'Space Grotesk', monospace; font-size: 0.75rem;
+      letter-spacing: 0.18em; text-transform: uppercase; color: var(--muted); white-space: nowrap;
+    }
+    [data-theme="dark"] .nugget-divider::before,
+    [data-theme="dark"] .nugget-divider::after {
+      background: rgba(255,255,255,0.12);
+    }
+    [data-theme="dark"] .nugget-divider-text,
+    [data-theme="dark"] .nugget-actions-label {
+      color: var(--ink-3);
+    }
+    .nugget-detail { font-size: 1.02rem; line-height: 1.75; color: var(--deep); margin-bottom: 1rem; }
+    [data-theme="dark"] .nugget-detail {
+      color: var(--ink);
+    }
+    .nugget-link {
+      font-family: 'Space Grotesk', monospace; font-size: 0.75rem;
+      letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent);
+      text-decoration: none; display: inline-flex; align-items: center; gap: 0.4rem;
+      padding: 0.4em 0; border-bottom: 1px solid transparent; transition: border-color 0.2s;
+    }
+    .nugget-link:hover { border-color: var(--accent); }
+    [data-theme="dark"] .nugget-link {
+      color: var(--accent);
+      border-bottom-color: transparent;
+    }
+    .nugget-link svg { width: 12px; height: 12px; stroke: currentColor; fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+
+    /* ── Share actions (injected by JS) ── */
+    .nugget-actions {
+      display: flex; align-items: center; gap: 0.5rem; margin-top: 1.1rem;
+      padding-top: 0.9rem; border-top: 1px dashed var(--rule); flex-wrap: wrap;
+    }
+    .nugget-actions-label {
+      font-family: 'Space Grotesk', monospace; font-size: 0.75rem;
+      letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted);
+      margin-right: 0.25rem; font-weight: 700;
+    }
+    .nugget-share-btn {
+      background: none; border: 1.5px solid var(--accent); border-radius: 0;
+      padding: 0.45em 1em; cursor: pointer; font-family: 'Space Grotesk', monospace;
+      font-size: 0.75rem; letter-spacing: 0.08em; text-transform: uppercase;
+      color: var(--accent); display: inline-flex; align-items: center; gap: 0.3rem;
+      transition: all 0.2s; line-height: 1.4; font-weight: 600;
+    }
+    [data-theme="dark"] .nugget-share-btn {
+      color: var(--accent);
+      border-color: var(--accent);
+      background: rgba(255,255,255,0.03);
+    }
+    .nugget-share-btn:hover { background: var(--accent); color: var(--on-accent); border-color: var(--accent); }
+    .nugget-share-btn.copied { background: var(--accent); color: var(--on-accent); border-color: var(--accent); }
+
+    /* ── Surprise button ── */
+    .surprise-btn {
+      font-family: 'Space Grotesk', monospace; font-size: 0.75rem;
+      letter-spacing: 0.15em; text-transform: uppercase; color: var(--accent);
+      border: 2px solid var(--accent); padding: 0.65em 1.5em; border-radius: 0;
+      cursor: pointer; background: none; transition: all 0.25s;
+      margin-top: 1.5rem; display: inline-flex; align-items: center; gap: 0.5rem;
+    }
+    .surprise-btn:hover { background: var(--accent); color: var(--on-accent); }
+
+    /* ── Nugget highlight flash ── */
+    .nugget-card.flash { box-shadow: inset 0 0 0 2px var(--accent); transition: box-shadow 0.3s ease; }
+
+    /* ── Fade in (transition-based) ── */
+    .fade-in { opacity: 0; transform: translateY(12px); transition: opacity 0.65s ease, transform 0.65s ease; }
+    .fade-in.visible { opacity: 1; transform: translateY(0); }
+
+    /* Hero stagger reveal */
+    .hero .hero-kicker, .hero .hero-title, .hero .hero-subtitle, .hero .hero-lead, .hero .hero-meta, .hero .hero-stats-row, .hero .surprise-btn {
+      opacity: 0; transform: translateY(16px);
+      animation: heroReveal 0.8s cubic-bezier(.22,1,.36,1) forwards;
+    }
+    .hero .hero-kicker { animation-delay: 0.1s; }
+    .hero .hero-title { animation-delay: 0.3s; }
+    .hero .hero-subtitle { animation-delay: 0.5s; }
+    .hero .hero-lead { animation-delay: 0.5s; }
+    .hero .hero-meta { animation-delay: 0.7s; }
+    .hero .hero-stats-row { animation-delay: 0.7s; }
+    .hero .surprise-btn { animation-delay: 0.9s; }
+
+    /* ── Reduced motion ── */
+    @media (prefers-reduced-motion: reduce) {
+      .fade-in { opacity: 1; transform: none; transition: none; }
+      .hero .hero-kicker, .hero .hero-title, .hero .hero-subtitle, .hero .hero-lead, .hero .hero-meta, .hero .hero-stats-row, .hero .surprise-btn { opacity: 1; transform: none; animation: none; }
+      .nugget-expand { transition: none; }
+      .nugget-toggle { transition: none; }
+      .nugget-card { transition: none; }
+    }
+
+    /* ── Responsive ── */
+    @media (max-width: 900px) {
+      .nuggets-grid { grid-template-columns: repeat(2, 1fr); }
+      .nugget-card:nth-child(3n) { border-right: 1px solid var(--rule); }
+      .nugget-card:nth-child(2n) { border-right: none; }
+      .nugget-card.expanded { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 768px) {
+      .hero { grid-template-columns: 1fr; }
+      .hero-illustration { display: none; }
+    }
+    @media (max-width: 640px) {
+      .hero { padding: 3.5rem 1.5rem 2rem; }
+      .filter-bar { padding: 0 1.5rem 1.5rem; }
+      .nuggets-grid { grid-template-columns: 1fr; padding: 0 1.5rem; }
+      .nugget-card { border-right: none; }
+      .nugget-card.expanded { grid-template-columns: 1fr; padding: 1.5rem; }
+      .hero-stats-row { gap: 1rem; flex-wrap: wrap; }
+    }
+  
+}

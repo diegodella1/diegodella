@@ -1,0 +1,29 @@
+<svg is:raw class="hero-svg" viewBox="0 0 160 200" xmlns="http://www.w3.org/2000/svg">
+        <style is:inline>
+          @keyframes hand-off{from{transform:translateX(-15px);opacity:0}to{transform:translateX(0);opacity:1}}
+          @keyframes receive{from{transform:translateX(15px);opacity:0}to{transform:translateX(0);opacity:1}}
+          @keyframes pass-obj{0%{cx:55}100%{cx:105}}
+          @keyframes fade-in{from{opacity:0}to{opacity:1}}
+          @keyframes pulse-warn{0%,100%{opacity:0.8}50%{opacity:0.3}}
+        </style>
+        <!-- Source figure (left) -->
+        <circle cx="45" cy="70" fill="none" r="10" stroke="var(--accent)" stroke-width="1.5" style="animation:hand-off 0.8s ease-out forwards"></circle>
+        <line stroke="var(--accent)" stroke-width="1.5" style="animation:hand-off 0.8s ease-out forwards" x1="45" x2="45" y1="80" y2="110"></line>
+        <line stroke="var(--accent)" stroke-width="1.5" style="animation:hand-off 0.8s ease-out forwards" x1="45" x2="30" y1="90" y2="100"></line>
+        <line stroke="var(--accent)" stroke-width="1.5" style="animation:hand-off 0.8s ease-out forwards" x1="45" x2="60" y1="90" y2="100"></line>
+        <!-- Target figure (right) -->
+        <circle cx="115" cy="70" fill="none" r="10" stroke="var(--muted)" stroke-width="1.5" style="animation:receive 0.8s 0.3s ease-out forwards;opacity:0"></circle>
+        <line stroke="var(--muted)" stroke-width="1.5" style="animation:receive 0.8s 0.3s ease-out forwards;opacity:0" x1="115" x2="115" y1="80" y2="110"></line>
+        <line stroke="var(--muted)" stroke-width="1.5" style="animation:receive 0.8s 0.3s ease-out forwards;opacity:0" x1="115" x2="100" y1="90" y2="100"></line>
+        <line stroke="var(--muted)" stroke-width="1.5" style="animation:receive 0.8s 0.3s ease-out forwards;opacity:0" x1="115" x2="130" y1="90" y2="100"></line>
+        <!-- Passing object -->
+        <circle cy="95" fill="var(--accent)" opacity="0" r="5" style="animation:pass-obj 1.2s 1s ease-in-out forwards, fade-in 0.3s 1s forwards"></circle>
+        <!-- Transfer arrow -->
+        <line opacity="0" stroke="var(--accent)" stroke-dasharray="4 2" stroke-width="1" style="animation:fade-in 0.5s 0.8s forwards" x1="60" x2="100" y1="95" y2="95"></line>
+        <polyline fill="none" opacity="0" points="95,90 100,95 95,100" stroke="var(--accent)" stroke-width="1" style="animation:fade-in 0.3s 0.8s forwards"></polyline>
+        <!-- Warning: what gets lost -->
+        <text fill="var(--muted)" font-family="monospace" font-size="6" letter-spacing="1" opacity="0" style="animation:fade-in 0.5s 2s forwards" text-anchor="middle" x="80" y="140">CONTEXT</text>
+        <line opacity="0" stroke="var(--accent)" stroke-width="1.5" style="animation:pulse-warn 2s 2.5s ease-in-out infinite, fade-in 0.3s 2.5s forwards" x1="55" x2="105" y1="143" y2="143"></line>
+        <!-- Label -->
+        <text fill="var(--accent)" font-family="monospace" font-size="6" letter-spacing="2" opacity="0" style="animation:fade-in 0.5s 2.8s forwards" text-anchor="middle" x="80" y="185">DELEGATE</text>
+      </svg>

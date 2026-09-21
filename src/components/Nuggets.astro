@@ -1,0 +1,13 @@
+---
+import nuggets from '../data/nuggets.json';
+---
+{nuggets.map((nugget, index) => <article id={`n${index + 1}`} class="nugget-card fade-in expanded" data-source={nugget.source}>
+  <div class="nugget-tag" set:html={nugget.tag} />
+  <button type="button" class="nugget-header nugget-disclosure" aria-expanded="true" aria-controls={`n${index + 1}-detail`}><span class="nugget-title" set:html={nugget.title} /><svg aria-hidden="true" class="nugget-toggle" viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button>
+  <div class="nugget-insight" set:html={nugget.insight} />
+  <div class="nugget-expand" id={`n${index + 1}-detail`}>
+    <div class="nugget-divider"><span class="nugget-divider-text">Why it matters</span></div>
+    <div class="nugget-detail" set:html={nugget.detail} />
+    <a href={nugget.href} class="nugget-link"><svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>{nugget.linkLabel}</a>
+  </div>
+</article>)}

@@ -1,0 +1,28 @@
+---
+import WritingGroup from "../components/WritingGroup.astro";
+import SiteLayout from "../layouts/SiteLayout.astro";
+import Footer from "../components/Footer.astro";
+import Navigation from "../components/Navigation.astro";
+
+---
+<SiteLayout page="archive">
+<a href="#main-content" class="skip-link">Skip to content</a>
+<div class="top-bar"><span>Start here</span><span>One problem, one route</span></div>
+<Navigation />
+<main id="main-content">
+<header class="nm-page-hero">
+<p class="nm-page-label">Start here</p>
+<h1>All writing</h1>
+<p>Browse the essays below, or start with one of these three questions.</p>
+</header>
+<section class="nm-page-main">
+<div class="nm-ledger start-routes-primary" aria-label="Recommended starting routes"> <a href="paper-05.html"><span class="nm-page-label">Launch</span><strong>My product is good but the market is not getting it.</strong><p>Start with launch noise, message-market fit, and the problem of being compared too late.</p></a> <a href="occlusion-bias.html"><span class="nm-page-label">Visibility</span><strong>We are not even reaching fair comparison.</strong><p>Start with the hidden failure where strong work never arrives where merit can matter.</p></a> <a href="the-last-human-impression.html"><span class="nm-page-label">AI trust</span><strong>AI and filters are changing what gets noticed.</strong><p>Start with human impression, proxy identity, origin gravity, and writing for filters.</p></a> </div>
+<details class="library-disclosure">
+<summary>Explore the full library</summary>
+<div class="nm-ledger"> <a href="thesis.html"><span class="nm-page-label">The idea</span><strong>I want the central thesis.</strong><p>Start with the model behind the whole site: how markets decide before search begins.</p></a> <a href="nuggets.html"><span class="nm-page-label">Short path</span><strong>I want the sharpest ideas first.</strong><p>Open short claims, extracted patterns, and fast routes into the larger corpus.</p></a> <a href="unfinished-arguments.html"><span class="nm-page-label">Live work</span><strong>I want the unresolved arguments.</strong><p>Read active fragments before they harden into finished essays.</p></a> <a href="frameworks.html"><span class="nm-page-label">System</span><strong>I want the map before the essays.</strong><p>Move from intent to visibility to meaning to launch.</p></a> </div>
+</details>
+<div class="archive-entries"><h2>Essays and frameworks</h2><div class="nm-ledger">{[0,1,2,3].map(group => <WritingGroup group={group} />)}</div></div>
+</section>
+</main>
+<Footer />
+</SiteLayout>

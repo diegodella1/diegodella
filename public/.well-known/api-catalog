@@ -1,0 +1,61 @@
+{
+  "linkset": [
+    {
+      "anchor": "https://diegodella.ar/.well-known/api-catalog",
+      "item": [
+        {
+          "href": "https://diegodella.ar/api/v1/status"
+        },
+        {
+          "href": "https://diegodella.ar/api/v1/contact"
+        }
+      ]
+    },
+    {
+      "anchor": "https://diegodella.ar/api/v1/status",
+      "service-desc": [
+        {
+          "href": "https://diegodella.ar/openapi.json",
+          "type": "application/openapi+json;version=3.1"
+        }
+      ],
+      "service-doc": [
+        {
+          "href": "https://diegodella.ar/developers.html",
+          "type": "text/html"
+        }
+      ],
+      "status": [
+        {
+          "href": "https://diegodella.ar/api/v1/status",
+          "type": "application/json"
+        }
+      ]
+    },
+    {
+      "anchor": "https://diegodella.ar/api/v1/contact",
+      "service-desc": [
+        {
+          "href": "https://diegodella.ar/openapi.json",
+          "type": "application/openapi+json;version=3.1"
+        }
+      ],
+      "service-doc": [
+        {
+          "href": "https://diegodella.ar/developers.html",
+          "type": "text/html"
+        },
+        {
+          "href": "https://diegodella.ar/docs/api.md",
+          "type": "text/markdown"
+        }
+      ],
+      "status": [
+        {
+          "href": "https://diegodella.ar/api/v1/status",
+          "type": "application/json"
+        }
+      ]
+    }
+  ]
+}

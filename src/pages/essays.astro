@@ -1,0 +1,49 @@
+---
+import WritingGroup from "../components/WritingGroup.astro";
+import SiteLayout from "../layouts/SiteLayout.astro";
+import Footer from "../components/Footer.astro";
+import Navigation from "../components/Navigation.astro";
+
+---
+<SiteLayout page="essays">
+<a href="#main-content" class="skip-link">Skip to content</a>
+<div class="top-bar"><span>Writing</span><span>Media · Product · Marketing · Content · Communities · AI</span></div>
+<Navigation />
+<main id="main-content">
+<header class="nm-page-hero">
+<p class="nm-page-label">Writing</p>
+<h1>Essays &amp; frameworks</h1>
+<p>Choose a topic below, or follow a reading path through the essays on media, products, AI, and trust.</p>
+</header>
+<section class="nm-page-main">
+<div class="library-filter" aria-label="Filter essays by topic">
+<div class="library-filter-buttons"> <button type="button" data-essay-filter="all" aria-pressed="true">All</button> <button type="button" data-essay-filter="product-clarity" aria-pressed="false">Product clarity</button> <button type="button" data-essay-filter="ai-trust" aria-pressed="false">AI &amp; trust</button> <button type="button" data-essay-filter="distribution" aria-pressed="false">Distribution</button> <button type="button" data-essay-filter="operating-systems" aria-pressed="false">Operating systems</button> </div>
+</div>
+<div class="nm-two-col">
+<h2>Start from the work.</h2>
+<div class="nm-ledger">
+          <a href="ai-media.html"><span class="nm-page-label">Topic hub</span><strong>AI-Native Media</strong><p>The working thesis behind agents, interfaces, workflows, operations, and mediated discovery.</p></a>
+          <a href="work-roxom.html"><span class="nm-page-label">Operational proof</span><strong>Building a 24/7 global media operation</strong><p>What continuous live media exposes about state, handoffs, automation, and recovery.</p></a>
+          <a href="work-posta.html"><span class="nm-page-label">Historical proof</span><strong>Building Posta</strong><p>What an earlier format transition taught me about products, distribution, and company building.</p></a>
+        </div>
+</div>
+<div class="nm-two-col" data-essay-group="">
+<h2>Product clarity and narrative mechanics</h2>
+<div class="nm-ledger"><WritingGroup group={0} /></div>
+</div>
+<div class="nm-two-col" data-essay-group="">
+<h2>AI, filters, and trust</h2>
+<div class="nm-ledger"><WritingGroup group={1} /></div>
+</div>
+<div class="nm-two-col" data-essay-group="">
+<h2>Automation, scarcity, and agency</h2>
+<div class="nm-ledger"><WritingGroup group={2} /></div>
+</div>
+<div class="nm-two-col" data-essay-group="">
+<h2>Fragments, notes, and active work</h2>
+<div class="nm-ledger"><WritingGroup group={3} /></div>
+</div>
+</section>
+</main>
+<Footer />
+</SiteLayout>

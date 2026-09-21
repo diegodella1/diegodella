@@ -1,0 +1,62 @@
+---
+import SiteLayout from "../layouts/SiteLayout.astro";
+import Footer from "../components/Footer.astro";
+import Navigation from "../components/Navigation.astro";
+
+---
+<SiteLayout page="developers">
+<a href="#main-content" class="skip-link">Skip to content</a>
+<div class="top-bar"><span>Developers</span><span>API · OpenAPI · Errors · Limits</span></div>
+<Navigation />
+<main id="main-content">
+<header class="nm-page-hero">
+<p class="nm-page-label">Developer portal</p>
+<h1>A small public API with an explicit contract.</h1>
+<p>Use the API to inspect site capabilities or submit the same contact request available in the browser. The canonical v1 operations are described by OpenAPI 3.1, return typed JSON, and require no account or API key.</p>
+</header>
+<section class="nm-page-main">
+<div class="nm-two-col" id="quickstart">
+<h2>Quickstart.</h2>
+<div>
+<p class="nm-page-copy">The read-only status operation is the safest first request. It returns the current service version, canonical endpoint paths, and links back to this documentation and the OpenAPI description.</p>
+<pre><code>curl --fail-with-body \&#10;  -H "Accept: application/json" \&#10;  https://diegodella.ar/api/v1/status</code></pre>
+<p class="nm-page-copy">No installation is needed for command-line use: any HTTP client, including <code>curl</code>, can call the API. For generated clients and function calling, import <a href="openapi.json">the OpenAPI 3.1 document</a>.</p>
+</div>
+</div>
+<div class="nm-two-col" id="operations">
+<h2>Operations.</h2>
+<div class="nm-ledger"> <a href="https://diegodella.ar/api/v1/status"><span class="nm-page-label">GET · Read only</span><strong>/api/v1/status</strong><p>Return service health, API version, supported operations, documentation, and OpenAPI links. This endpoint has no side effects.</p></a> <a href="docs/api.md"><span class="nm-page-label">POST · Side effect</span><strong>/api/v1/contact</strong><p>Send a professional inquiry, correction, privacy request, or updates request to Diego. A successful call creates an email delivery request.</p></a> </div>
+</div>
+<div class="nm-two-col" id="access">
+<h2>Access.</h2>
+<div>
+<p class="nm-page-copy"><strong>Authentication:</strong> none. There are no API keys, OAuth credentials, paid tiers, or account setup. Do not send secrets in request bodies.</p>
+<p class="nm-page-copy">Read the standalone <a href="auth.md">authentication reference</a> for the no-auth contract, CORS headers, quotas, safe retries, and security contact.</p>
+<p class="nm-page-copy"><strong>Environment:</strong> the API has one production base URL, <code>https://diegodella.ar</code>. There is no separate sandbox. Use <code>GET /api/v1/status</code> for harmless integration checks; only call the contact operation when a real message should be delivered.</p>
+<p class="nm-page-copy"><strong>CORS:</strong> public operations allow cross-origin GET, POST, and OPTIONS requests. Browsers and agents receive the same JSON contract.</p>
+</div>
+</div>
+<div class="nm-two-col" id="errors">
+<h2>Errors and limits.</h2>
+<div>
+<p class="nm-page-copy">Errors use <code>application/problem+json</code> and the RFC 9457 fields <code>type</code>, <code>title</code>, <code>status</code>, <code>detail</code>, and <code>instance</code>. Stable <code>code</code> and actionable <code>resolution</code> extensions let an agent decide what to fix. Validation failures can also include a field-level <code>errors</code> array.</p>
+<p class="nm-page-copy">Every API response includes <code>RateLimit-Policy</code> and <code>RateLimit</code>, plus compatibility fields. Public reads allow 120 requests per minute per client. Contact writes allow 5 requests per hour. A 429 response includes <code>Retry-After</code>.</p>
+<p class="nm-page-copy"><strong>Safe retries:</strong> send a stable <code>Idempotency-Key</code> with a contact request when a network failure may require a retry. Repeating the same payload replays the first success without another delivery. Reusing the key with different data returns a typed 409 problem.</p>
+<p class="nm-page-copy">See the <a href="docs/problems.md">problem catalog</a> for stable codes and resolution guidance.</p>
+</div>
+</div>
+<div class="nm-two-col" id="versioning">
+<h2>Versioning.</h2>
+<div>
+<p class="nm-page-copy">Stable operations live under <code>/api/v1</code>. Additive response fields may appear within v1; consumers should ignore fields they do not recognize. Breaking request or response changes move to a new major path.</p>
+<p class="nm-page-copy">Legacy <code>/api/status</code> and <code>/api/contact</code> aliases remain available for compatibility. They emit the HTTP <code>Deprecation</code> field and a <code>Link</code> relation pointing here. No removal date is scheduled, so the API does not claim a <code>Sunset</code> date.</p>
+</div>
+</div>
+<div class="nm-two-col" id="resources">
+<h2>Machine-readable resources.</h2>
+<div class="nm-ledger"> <a href="openapi.json"><span class="nm-page-label">OpenAPI 3.1</span><strong>Typed API description</strong><p>Operations, operation IDs, examples, schemas, error responses, and response headers.</p></a> <a href=".well-known/api-catalog"><span class="nm-page-label">Linkset</span><strong>API catalog</strong><p>Discover the service description, human documentation, and live status resource.</p></a> <a href=".well-known/ai-catalog.json"><span class="nm-page-label">ARD v1</span><strong>Agentic resource catalog</strong><p>Discover the callable public API through a domain-anchored capability manifest.</p></a> <a href="auth.md"><span class="nm-page-label">Access policy</span><strong>Authentication</strong><p>No-auth behavior, CORS, quotas, typed errors, safe retries, and security contact.</p></a> <a href="docs/llms.txt"><span class="nm-page-label">Section guide</span><strong>Developer llms.txt</strong><p>Compact API discovery and integration routes for language-model clients.</p></a> <a href="llms.txt"><span class="nm-page-label">Agent guide</span><strong>llms.txt</strong><p>When to use the site, authoritative routes, machine resources, and trust pages.</p></a> <a href="sitemap.xml"><span class="nm-page-label">Discovery</span><strong>XML sitemap</strong><p>Canonical public HTML resources available for retrieval.</p></a> </div>
+</div>
+</section>
+</main>
+<Footer />
+</SiteLayout>

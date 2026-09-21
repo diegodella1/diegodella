@@ -1,0 +1,42 @@
+---
+import presentation from '../data/presentation.json';
+import nuggets from '../data/nuggets.json';
+import { nuggetDescription } from '../lib/nuggets';
+import { siteData } from '../lib/site';
+interface Props { page: string; presentationKey?: string }
+const { page, presentationKey = page } = Astro.props;
+const config = presentation[presentationKey as keyof typeof presentation];
+if (!config) throw new Error(`Unknown presentation: ${presentationKey}`);
+const site = await siteData();
+const article = site.writing.find(article => article.slug === page);
+function resolve(value: any): any {
+  if (Array.isArray(value)) return value.map(resolve);
+  if (value && typeof value === 'object') {
+    if (value.article) return article?.[value.article as keyof typeof article];
+    if (value.bio) return site.bios[value.bio as keyof typeof site.bios];
+    if (value.person) return site.person[value.person as keyof typeof site.person];
+    if (value.nuggets === 'count') return nuggets.length;
+    if (value.nuggets === 'description') return nuggetDescription;
+    if (value.nuggets === 'items') return nuggets.map((nugget, index) => ({ '@type': 'ListItem', position: index + 1, name: nugget.title, description: nugget.insight }));
+    return Object.fromEntries(Object.entries(value).map(([key, item]) => [key, resolve(item)]));
+  }
+  return typeof value === 'string' ? value.replace(/\{\{article\.(\w+)\}\}/g, (_, field) => String(article?.[field as keyof typeof article] ?? '')) : value;
+}
+const head = config.head.map(resolve);
+---
+<!DOCTYPE html>
+<html {...config.html}>
+  <head>
+    {head.map((node: any) => {
+      const Tag = node.tag;
+      return node.tag === 'script'
+        ? <script is:inline {...node.attrs} set:html={node.schema ? JSON.stringify(node.schema).replaceAll('<', '\\u003c') : node.text} />
+        : <Tag {...node.attrs}>{node.text}</Tag>;
+    })}
+    <script is:inline src="/analytics.js" defer></script>
+  </head>
+  <body {...config.body} data-surface={article ? "reading" : page}>
+    <slot />
+    {config.scripts.map(attributes => <script is:inline {...attributes} />)}
+  </body>
+</html>

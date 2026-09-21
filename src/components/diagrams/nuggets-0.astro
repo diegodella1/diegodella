@@ -1,0 +1,27 @@
+<svg is:raw class="hero-svg" viewBox="0 0 160 200" xmlns="http://www.w3.org/2000/svg">
+        <style is:inline>
+          @keyframes sparkle{0%,100%{opacity:0.2;r:2}50%{opacity:1;r:3.5}}
+          @keyframes fade-in{from{opacity:0}to{opacity:1}}
+          @keyframes float-up{from{transform:translateY(5px);opacity:0}to{transform:translateY(0);opacity:1}}
+        </style>
+        <!-- Scattered nugget dots -->
+        <circle cx="30" cy="40" fill="var(--gold)" r="2" style="animation:sparkle 2.5s 0s ease-in-out infinite"></circle>
+        <circle cx="80" cy="30" fill="var(--gold)" r="2" style="animation:sparkle 2.5s 0.4s ease-in-out infinite"></circle>
+        <circle cx="130" cy="50" fill="var(--gold)" r="2" style="animation:sparkle 2.5s 0.8s ease-in-out infinite"></circle>
+        <circle cx="50" cy="75" fill="var(--accent)" r="2" style="animation:sparkle 2.5s 1.2s ease-in-out infinite"></circle>
+        <circle cx="110" cy="85" fill="var(--accent)" r="2" style="animation:sparkle 2.5s 1.6s ease-in-out infinite"></circle>
+        <circle cx="70" cy="110" fill="var(--gold)" r="2" style="animation:sparkle 2.5s 2s ease-in-out infinite"></circle>
+        <circle cx="40" cy="140" fill="var(--accent)" r="2" style="animation:sparkle 2.5s 0.2s ease-in-out infinite"></circle>
+        <circle cx="100" cy="130" fill="var(--gold)" r="2" style="animation:sparkle 2.5s 0.6s ease-in-out infinite"></circle>
+        <circle cx="130" cy="145" fill="var(--accent)" r="2" style="animation:sparkle 2.5s 1s ease-in-out infinite"></circle>
+        <circle cx="60" cy="160" fill="var(--gold)" r="2" style="animation:sparkle 2.5s 1.4s ease-in-out infinite"></circle>
+        <!-- Central collection box -->
+        <rect fill="none" height="40" opacity="0" rx="3" stroke="var(--accent)" stroke-width="1.5" style="animation:fade-in 0.6s 0.5s forwards" width="50" x="55" y="85"></rect>
+        <!-- Lines from dots to box -->
+        <line opacity="0" stroke="var(--rule)" stroke-dasharray="2 2" stroke-width="0.5" style="animation:fade-in 0.3s 1s forwards" x1="50" x2="60" y1="75" y2="87"></line>
+        <line opacity="0" stroke="var(--rule)" stroke-dasharray="2 2" stroke-width="0.5" style="animation:fade-in 0.3s 1.2s forwards" x1="110" x2="105" y1="85" y2="95"></line>
+        <line opacity="0" stroke="var(--rule)" stroke-dasharray="2 2" stroke-width="0.5" style="animation:fade-in 0.3s 1.4s forwards" x1="80" x2="80" y1="30" y2="85"></line>
+        <!-- Label -->
+        <text fill="var(--accent)" font-family="monospace" font-size="7" opacity="0" style="animation:float-up 0.5s 1.5s forwards" text-anchor="middle" x="80" y="108">NUGGETS</text>
+        <text fill="var(--muted)" font-family="monospace" font-size="6" letter-spacing="2" opacity="0" style="animation:fade-in 0.5s 2s forwards" text-anchor="middle" x="80" y="190">DISTILLED IDEAS</text>
+      </svg>

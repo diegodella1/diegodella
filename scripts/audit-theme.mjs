@@ -3,22 +3,32 @@ import os from 'node:os';
 import path from 'node:path';
 import { spawn } from 'node:child_process';
 
-const root = path.resolve(import.meta.dirname, '..');
+// Embed shipped fonts so audits use production metrics without network timing.
+const localFonts = ["local", "loaded"].includes(process.env.AUDIT_FONTS);
+const realFontCSS = localFonts
+  ? fs.readFileSync(new URL("../public/styles/fonts.css", import.meta.url), "utf8").replace(/url\((?:\/|\.\.\/)fonts\/([^)]+)\)/g, (_, file) => `url(data:font/woff2;base64,${fs.readFileSync(new URL("../public/fonts/" + file, import.meta.url)).toString("base64")})`)
+  : null;
+
+const root = path.resolve(import.meta.dirname, '../dist');
 const requestedPages = process.env.AUDIT_PAGES?.split(',').map((name) => name.trim()).filter(Boolean);
+const auditBaseUrl = process.env.AUDIT_BASE_URL ? new URL(process.env.AUDIT_BASE_URL) : null;
 const pages = fs.readdirSync(root)
   .filter((name) => name.endsWith('.html') && (!requestedPages || requestedPages.includes(name)))
   .sort();
 const allViewports = [
+  { name: 'phone-320', width: 320, height: 740, mobile: true },
   { name: 'phone-360', width: 360, height: 800, mobile: true },
   { name: 'phone-390', width: 390, height: 844, mobile: true },
   { name: 'tablet', width: 768, height: 1024, mobile: true },
   { name: 'laptop', width: 1024, height: 768, mobile: false },
-  { name: 'desktop', width: 1440, height: 900, mobile: false }
+  { name: 'desktop', width: 1440, height: 900, mobile: false },
+  { name: 'zoom-200', width: 640, height: 450, scale: 2, mobile: false }
 ];
 const requestedViewports = process.env.AUDIT_VIEWPORTS?.split(',').map((name) => name.trim()).filter(Boolean);
 const viewports = allViewports.filter(
   (viewport) => !requestedViewports || requestedViewports.includes(viewport.name)
 );
+const commandTimeoutMs = Number(process.env.AUDIT_COMMAND_TIMEOUT_MS || 15000);
 const themes = ['dark'];
 const browserCandidates = [
   process.env.CHROME_PATH,
@@ -42,10 +52,13 @@ const browser = spawn(browserPath, [
   '--headless=new',
   '--no-sandbox',
   '--disable-gpu',
+  '--disable-dev-shm-usage',
+  '--allow-file-access-from-files',
   '--remote-debugging-port=0',
   `--user-data-dir=${profile}`,
   'about:blank'
 ], { stdio: ['ignore', 'ignore', 'pipe'] });
+const browserErrors = [];
 
 function browserPort() {
   return new Promise((resolve, reject) => {
@@ -58,9 +71,9 @@ function browserPort() {
       clearTimeout(timeout);
       resolve(Number(match[1]));
     });
-    browser.once('exit', (code) => {
+    browser.once('exit', (code, signal) => {
       clearTimeout(timeout);
-      reject(new Error(`Chromium exited before audit started (${code}).`));
+      reject(new Error(`Chromium exited before audit started (code=${code}, signal=${signal}). ${stderr.trim()}`));
     });
   });
 }
@@ -75,9 +88,19 @@ function connect(webSocketUrl) {
     socket.onopen = () => {
       socket.onmessage = (event) => {
         const message = JSON.parse(event.data);
-        if (!message.id || !pending.has(message.id)) return;
-        const { accept, reject: rejectCall } = pending.get(message.id);
+        if (!message.id) {
+          if (message.method === 'Runtime.exceptionThrown') {
+            browserErrors.push(message.params?.exceptionDetails?.exception?.description || message.params?.exceptionDetails?.text || 'Unknown browser exception');
+          }
+          if (message.method === 'Network.loadingFailed') {
+            browserErrors.push(`Network load failed: ${message.params?.errorText || 'unknown error'} (${message.params?.type || 'resource'})`);
+          }
+          return;
+        }
+        if (!pending.has(message.id)) return;
+        const { accept, reject: rejectCall, timeout } = pending.get(message.id);
         pending.delete(message.id);
+        clearTimeout(timeout);
         if (message.error) rejectCall(new Error(message.error.message));
         else accept(message.result);
       };
@@ -86,7 +109,11 @@ function connect(webSocketUrl) {
         call(method, params = {}) {
           return new Promise((accept, rejectCall) => {
             const id = ++nextId;
-            pending.set(id, { accept, reject: rejectCall });
+            const timeout = setTimeout(() => {
+              pending.delete(id);
+              rejectCall(new Error(`Chromium command timed out after ${commandTimeoutMs}ms: ${method}`));
+            }, commandTimeoutMs);
+            pending.set(id, { accept, reject: rejectCall, timeout });
             socket.send(JSON.stringify({ id, method, params }));
           });
         },
@@ -130,6 +157,12 @@ const auditExpression = String.raw`(() => {
   const visible = (element) => {
     const modal = document.querySelector('dialog[open]');
     if (modal && element !== modal && !modal.contains(element)) return false;
+    if (element.closest('[hidden]')) return false;
+    const closedDetails = element.closest('details:not([open])');
+    if (closedDetails) {
+      const summary = closedDetails.querySelector(':scope > summary');
+      if (!summary || (element !== closedDetails && !summary.contains(element))) return false;
+    }
     const style = getComputedStyle(element);
     const rect = element.getBoundingClientRect();
     return style.display !== 'none' && style.visibility !== 'hidden' &&
@@ -142,7 +175,7 @@ const auditExpression = String.raw`(() => {
     const ownsText = [...element.childNodes].some(
       (node) => node.nodeType === Node.TEXT_NODE && node.textContent.trim()
     );
-    if (!ownsText) continue;
+    if (!ownsText && !element.matches('input, textarea')) continue;
     const style = getComputedStyle(element);
     const foreground = parseColor(style.color);
     const surface = background(element);
@@ -174,6 +207,9 @@ const auditExpression = String.raw`(() => {
     for (let secondIndex = firstIndex + 1; secondIndex < interactive.length; secondIndex += 1) {
       const second = interactive[secondIndex];
       if (first.contains(second) || second.contains(first)) continue;
+      // The open mobile menu intentionally overlays page controls; check its own links against each other.
+      const openMenu = document.querySelector('.nav-links.open');
+      if (openMenu && matchMedia('(max-width: 1023px)').matches && openMenu.contains(first) !== openMenu.contains(second)) continue;
       const secondStyle = getComputedStyle(second);
       if (secondStyle.display === 'inline') continue;
       const firstRect = first.getBoundingClientRect();
@@ -190,9 +226,27 @@ const auditExpression = String.raw`(() => {
     }
   }
 
+  const overflowElements = [...document.body.querySelectorAll('*')]
+    .filter(visible)
+    .map((element) => {
+      const rect = element.getBoundingClientRect();
+      return {
+        element: label(element),
+        left: Math.round(rect.left),
+        right: Math.round(rect.right),
+        width: Math.round(rect.width),
+        scrollWidth: element.scrollWidth,
+        clientWidth: element.clientWidth,
+        text: element.textContent.trim().slice(0, 60)
+      };
+    })
+    .filter((item) => item.left < -2 || item.right > innerWidth + 2)
+    .slice(0, 12);
+
   return {
     contrastFailures,
     overlapFailures,
+    overflowElements,
     overflow: document.documentElement.scrollWidth > innerWidth + 2
       ? { viewport: innerWidth, document: document.documentElement.scrollWidth }
       : null
@@ -210,7 +264,8 @@ function record(page, viewport, theme, scenario, result) {
     failures.push(`${page} [${viewport}/${theme}/${scenario}] overlapping controls ${issue.first} / ${issue.second}`);
   }
   if (result.overflow) {
-    failures.push(`${page} [${viewport}/${theme}/${scenario}] horizontal overflow ${result.overflow.document}px > ${result.overflow.viewport}px`);
+    const culprits = result.overflowElements.map((item) => `${item.element} ${item.left}..${item.right}px`).join(', ');
+    failures.push(`${page} [${viewport}/${theme}/${scenario}] horizontal overflow ${result.overflow.document}px > ${result.overflow.viewport}px${culprits ? ` — ${culprits}` : ''}`);
   }
 }
 
@@ -234,7 +289,9 @@ try {
   client = await connect(target.webSocketDebuggerUrl);
   await client.call('Page.enable');
   await client.call('Network.enable');
-  await client.call('Network.setBlockedURLs', { urls: ['http://*', 'https://*'] });
+  await client.call('Network.setBlockedURLs', {
+    urls: auditBaseUrl ? ['https://*'] : ['http://*', 'https://*']
+  });
   await client.call('Runtime.enable');
   await client.call('Emulation.setEmulatedMedia', {
     features: [{ name: 'prefers-reduced-motion', value: 'reduce' }]
@@ -244,29 +301,35 @@ try {
     await client.call('Emulation.setDeviceMetricsOverride', {
       width: viewport.width,
       height: viewport.height,
-      deviceScaleFactor: 1,
+      deviceScaleFactor: viewport.scale || 1,
       mobile: viewport.mobile
     });
 
     for (const page of pages) {
-      const pageUrl = `file://${path.join(root, page)}`;
+      const pageUrl = auditBaseUrl ? new URL(page, auditBaseUrl).href : `file://${path.join(root, page)}`;
       await client.call('Page.navigate', { url: pageUrl });
       let pageReady = false;
       for (let attempt = 0; attempt < 400; attempt += 1) {
         pageReady = await evaluate(
-          `location.href === ${JSON.stringify(pageUrl)} && document.readyState === "complete" && document.documentElement.getAttribute("data-theme") === "dark"`
+          `location.href === ${JSON.stringify(pageUrl)} && document.readyState === "complete" && document.documentElement.getAttribute("data-theme") === "dark" && !!window.__diegodellaSiteContext && document.body.classList.contains("site-shell")`
         );
         if (pageReady) break;
         await new Promise((resolve) => setTimeout(resolve, 25));
       }
       if (!pageReady) {
-        const state = await evaluate('({ href: location.href, readyState: document.readyState, theme: document.documentElement.getAttribute("data-theme") })');
-        throw new Error(`${page} did not load its fixed theme: ${JSON.stringify(state)}`);
+        const state = await evaluate('({ href: location.href, readyState: document.readyState, theme: document.documentElement.getAttribute("data-theme"), hasContext: !!window.__diegodellaSiteContext, hasShell: document.body.classList.contains("site-shell") })');
+        throw new Error(`${page} did not load its shared shell: ${JSON.stringify(state)}${browserErrors.length ? `; browser exceptions: ${browserErrors.join(' | ')}` : ''}`);
+      }
+      if (realFontCSS) {
+        await evaluate(`(() => {const style=document.createElement('style');style.textContent=${JSON.stringify(realFontCSS)};document.head.appendChild(style);return Promise.all([document.fonts.load('600 16px "Space Grotesk"'),document.fonts.load('800 32px Syne'),document.fonts.load('400 12px "JetBrains Mono"'),document.fonts.ready]);})()`);
+        if (!await evaluate('["Space Grotesk", "Syne", "JetBrains Mono"].every(family => Array.from(document.fonts).some(face => face.family.replaceAll("\\\"", "") === family && face.status === "loaded"))')) {
+          throw new Error(`${page}: brand fonts did not load`);
+        }
       }
       await evaluate(`(() => {
         const style = document.createElement('style');
         style.dataset.themeAudit = '';
-        style.textContent = '*,*::before,*::after{animation:none!important;transition:none!important}';
+        style.textContent = '*,*::before,*::after{animation-duration:0.001ms!important;animation-delay:0ms!important;animation-iteration-count:1!important;transition:none!important}';
         document.head.append(style);
       })()`);
       // Remote font hosts may be unavailable in CI. The audit intentionally uses
@@ -295,13 +358,19 @@ try {
           fs.mkdirSync(process.env.AUDIT_SCREENSHOT_DIR, { recursive: true });
           const capture = await client.call('Page.captureScreenshot', {
             format: 'png',
-            captureBeyondViewport: true,
+            captureBeyondViewport: false,
             fromSurface: true
           });
           fs.writeFileSync(
             path.join(process.env.AUDIT_SCREENSHOT_DIR, `${page.replace(/\.html$/, '')}-${viewport.name}.png`),
             Buffer.from(capture.data, 'base64')
           );
+        }
+
+        if (process.env.AUDIT_SCREENSHOT_DIR && ['index.html','work.html'].includes(page)) {
+          const { cssContentSize } = await client.call('Page.getLayoutMetrics');
+          const shot = await client.call('Page.captureScreenshot', {format:'png', captureBeyondViewport:true, clip:{x:0,y:0,width:viewport.width,height:cssContentSize.height,scale:1}});
+          fs.writeFileSync(path.join(process.env.AUDIT_SCREENSHOT_DIR, `${page.replace(/\.html$/, '')}-${viewport.name}-full.png`), Buffer.from(shot.data,'base64'));
         }
 
         if (page === 'index.html' && viewport.name === 'desktop') {
@@ -313,6 +382,10 @@ try {
         if (page === 'index.html' && viewport.mobile) {
           await evaluate('document.querySelector("#navToggle")?.click()');
           record(page, viewport.name, theme, 'mobile-menu', await evaluate(auditExpression));
+          if (process.env.AUDIT_SCREENSHOT_DIR) {
+            const shot=await client.call('Page.captureScreenshot',{format:'png',captureBeyondViewport:false});
+            fs.writeFileSync(path.join(process.env.AUDIT_SCREENSHOT_DIR, `index-${viewport.name}-menu.png`),Buffer.from(shot.data,'base64'));
+          }
           await evaluate('document.querySelector("#navToggle")?.click()');
         }
 
@@ -320,15 +393,54 @@ try {
           await evaluate('document.querySelector(".library-filter button:not([aria-pressed=\\"true\\"])")?.click()');
           record(page, viewport.name, theme, 'filter-active', await evaluate(auditExpression));
         }
+        if (['essays.html', 'nuggets.html'].includes(page)) {
+          const selector = page === 'essays.html' ? '.library-filter button' : '.filter-chip';
+          await client.call('DOM.enable');
+          const { root: documentNode } = await client.call('DOM.getDocument');
+          const { nodeId } = await client.call('DOM.querySelector', { nodeId: documentNode.nodeId, selector: `${selector}:not([aria-pressed="true"])` });
+          await client.call('CSS.enable');
+          for (const pseudo of ['hover', 'focus-visible']) {
+            await client.call('CSS.forcePseudoState', { nodeId, forcedPseudoClasses: [pseudo] });
+            record(page, viewport.name, theme, pseudo, await evaluate(auditExpression));
+          }
+          await client.call('CSS.forcePseudoState', { nodeId, forcedPseudoClasses: [] });
+          if (page === 'nuggets.html') {
+            await evaluate('document.querySelector(".nugget-disclosure").click()');
+            record(page, viewport.name, theme, 'expanded', await evaluate(auditExpression));
+          }
+          const short = await evaluate(`Array.from(document.querySelectorAll(${JSON.stringify(selector)})).filter(button => button.getBoundingClientRect().height < 43.5).length`);
+          if (short) failures.push(`${page} [${viewport.name}] ${short} filter controls below the 44px touch target`);
+        }
+        if (page === 'contact.html') {
+          await evaluate('document.querySelector("[data-open-contact]").click();document.querySelector("#contactModalForm").requestSubmit()');
+          record(page, viewport.name, theme, 'invalid-fields', await evaluate(auditExpression));
+          await evaluate(`window.fetch=()=>new Promise(resolve=>{window.auditResolve=resolve});document.querySelector('#contactSubject').value='Audit';document.querySelector('#contactReply').value='test@example.com';document.querySelector('#contactBody').value='Simulated audit';document.querySelector('#contactModalForm').requestSubmit()`);
+          record(page, viewport.name, theme, 'sending', await evaluate(auditExpression));
+          await evaluate(`window.auditResolve(new Response('{"ok":true}',{status:200}));new Promise(resolve=>setTimeout(resolve,30))`);
+          record(page, viewport.name, theme, 'success', await evaluate(auditExpression));
+          await evaluate(`window.fetch=()=>Promise.resolve(new Response('{"error":"Simulated failure"}',{status:503}));document.querySelector('#contactSubject').value='Audit';document.querySelector('#contactReply').value='test@example.com';document.querySelector('#contactBody').value='Simulated audit';document.querySelector('#contactModalForm').requestSubmit();new Promise(resolve=>setTimeout(resolve,30))`);
+          record(page, viewport.name, theme, 'server-error', await evaluate(auditExpression));
+          await evaluate('document.querySelector("[data-close-contact]").click()');
+        }
+        if (page === 'zmox.html') {
+          await evaluate('document.querySelector(".diagram-expand").click()');
+          record(page, viewport.name, theme, 'diagram-dialog', await evaluate(auditExpression));
+          await evaluate('document.querySelector("#dlb-close").click()');
+        }
       }
     }
   }
 } finally {
   if (client) client.close();
   if (browser.exitCode === null) {
+    const browserExit = new Promise((resolve) => browser.once('exit', resolve));
     browser.kill('SIGTERM');
-    await new Promise((resolve) => browser.once('exit', resolve));
+    await Promise.race([
+      browserExit,
+      new Promise((resolve) => setTimeout(resolve, 2000))
+    ]);
   }
+  await new Promise((resolve) => setTimeout(resolve, 250));
   try {
     fs.rmSync(profile, { recursive: true, force: true, maxRetries: 10, retryDelay: 150 });
   } catch (error) {

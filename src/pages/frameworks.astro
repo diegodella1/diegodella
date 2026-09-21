@@ -1,0 +1,27 @@
+---
+import SiteLayout from "../layouts/SiteLayout.astro";
+import ArticleField from "../components/ArticleField.astro";
+import Footer from "../components/Footer.astro";
+import Navigation from "../components/Navigation.astro";
+
+---
+<SiteLayout page="frameworks">
+<a href="#main-content" class="skip-link">Skip to content</a>
+<div class="top-bar"> <span>Frameworks</span> <span>Models for what happens before demand becomes visible</span> </div>
+<Navigation />
+<main id="main-content">
+<header class="nm-page-hero">
+<p class="nm-page-label">The system</p>
+<h1>Four ways markets decide early.</h1>
+<p>These frameworks examine how people form intent, what distribution systems make visible, and how repeated encounters shape interpretation. Start with the problem closest to your work.</p>
+</header>
+<section class="nm-page-main">
+<div class="nm-ledger"> <a href="thesis.html"> <span class="nm-page-label">Intent</span> <strong><ArticleField slug="thesis" field="title" /></strong> <p>Use this when the buyer seems to decide before the visible decision. It explains pre-search influence and latent demand formation.</p> </a> <a href="occlusion-bias.html"> <span class="nm-page-label">Visibility</span> <strong><ArticleField slug="occlusion-bias" field="title" /></strong> <p>Use this when strong work never reaches fair comparison. It separates product failure from hidden access failure.</p> </a> <a href="zmox.html"> <span class="nm-page-label">Meaning</span> <strong><ArticleField slug="zmox" field="title" /></strong> <p>Use this when authority, interpretation, and audience memory matter more than one-time reach.</p> </a> <a href="paper-05.html"> <span class="nm-page-label">Launch</span> <strong><ArticleField slug="paper-05" field="title" /></strong> <p>Use this when standard go-to-market playbooks assume distribution conditions that no longer exist.</p> </a> </div>
+<div class="nm-two-col">
+<h2>Read in order if the product is strong but the market is not understanding it.</h2>
+<div class="nm-ledger"> <a href="paper-01.html"><span class="nm-page-label">Foundation</span><strong>Strategic Debt</strong><p>Clarity deferred at the start compounds into downstream execution problems.</p></a> <a href="paper-02.html"><span class="nm-page-label">Message</span><strong><ArticleField slug="paper-02" field="title" /></strong><p>Product-market fit can exist before the market has language for the value.</p></a> <a href="paper-04.html"><span class="nm-page-label">Scale</span><strong><ArticleField slug="paper-04" field="title" /></strong><p>Coherence erodes when organizations scale without maintaining the operating narrative.</p></a> </div>
+</div>
+</section>
+</main>
+<Footer />
+</SiteLayout>

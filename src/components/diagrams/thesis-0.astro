@@ -1,0 +1,29 @@
+<svg is:raw class="hero-svg" viewBox="0 0 160 200" xmlns="http://www.w3.org/2000/svg">
+      <style is:inline>
+        @keyframes cmFlow{from{stroke-dashoffset:400}to{stroke-dashoffset:0}}
+        @keyframes cmDot{0%,100%{opacity:0.4}50%{opacity:1}}
+        @keyframes cmFade{from{opacity:0}to{opacity:1}}
+        @keyframes cmArrow{from{opacity:0;transform:translateX(-3px)}to{opacity:1;transform:translateX(0)}}
+      </style>
+      <!-- Continuous loop / mobius-like form -->
+      <ellipse cx="80" cy="95" fill="none" opacity="0.3" rx="55" ry="65" stroke="var(--rule)" stroke-width="0.5"></ellipse>
+      <path d="M80 30 C120 30,135 55,135 95 C135 135,120 160,80 160 C40 160,25 135,25 95 C25 55,40 30,80 30" fill="none" stroke="var(--accent)" stroke-dasharray="400" stroke-dashoffset="400" stroke-width="1.5" style="animation:cmFlow 2.5s 0.3s ease-out forwards"></path>
+      <!-- Flow arrows around the loop -->
+      <polygon fill="var(--accent)" opacity="0" points="80,28 84,34 76,34" style="animation:cmArrow 0.4s 2s forwards"></polygon>
+      <polygon fill="var(--accent)" opacity="0" points="137,95 131,91 131,99" style="animation:cmArrow 0.4s 2.3s forwards"></polygon>
+      <polygon fill="var(--accent)" opacity="0" points="80,162 76,156 84,156" style="animation:cmArrow 0.4s 2.6s forwards"></polygon>
+      <polygon fill="var(--accent)" opacity="0" points="23,95 29,99 29,91" style="animation:cmArrow 0.4s 2.9s forwards"></polygon>
+      <!-- Touchpoints around the loop -->
+      <circle cx="80" cy="30" fill="var(--accent)" r="3" style="animation:cmDot 2s 0.8s ease-in-out infinite"></circle>
+      <circle cx="135" cy="95" fill="var(--accent)" r="3" style="animation:cmDot 2s 1.2s ease-in-out infinite"></circle>
+      <circle cx="80" cy="160" fill="var(--accent)" r="3" style="animation:cmDot 2s 1.6s ease-in-out infinite"></circle>
+      <circle cx="25" cy="95" fill="var(--accent)" r="3" style="animation:cmDot 2s 2s ease-in-out infinite"></circle>
+      <!-- Intent markers -->
+      <text fill="var(--accent)" font-family="monospace" font-size="5" opacity="0" style="animation:cmFade 0.4s 1.2s forwards" text-anchor="middle" x="80" y="22">DISCOVER</text>
+      <text fill="var(--muted)" font-family="monospace" font-size="5" opacity="0" style="animation:cmFade 0.4s 1.6s forwards" x="150" y="97">ENGAGE</text>
+      <text fill="var(--muted)" font-family="monospace" font-size="5" opacity="0" style="animation:cmFade 0.4s 2s forwards" text-anchor="middle" x="80" y="178">CONVERT</text>
+      <text fill="var(--muted)" font-family="monospace" font-size="5" opacity="0" style="animation:cmFade 0.4s 2.4s forwards" x="10" y="97">RETAIN</text>
+      <!-- Center label -->
+      <text fill="var(--accent)" font-family="monospace" font-size="6" letter-spacing="1" opacity="0" style="animation:cmFade 0.5s 2.8s forwards" text-anchor="middle" x="80" y="93">CMI</text>
+      <text fill="var(--muted)" font-family="monospace" font-size="4.5" letter-spacing="1" opacity="0" style="animation:cmFade 0.5s 3s forwards" text-anchor="middle" x="80" y="102">CONTINUOUS</text>
+    </svg>

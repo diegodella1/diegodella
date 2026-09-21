@@ -1,0 +1,40 @@
+@layer page {
+
+    .hero,.wrap{max-width:1080px;margin:0 auto;padding-left:3rem;padding-right:3rem}
+    .hero{padding-top:5rem;padding-bottom:2.35rem;display:grid;grid-template-columns:minmax(0,1fr) 260px;gap:1.8rem;border-bottom:1px solid var(--border-light)}
+    .hero-title,.section-title,.card-title,.related-title{font-family:'Space Grotesk',serif;line-height:1.02}
+    .hero-title{font-size:clamp(3rem,6vw,4.8rem);letter-spacing: -0.04em;max-width:7ch;margin-bottom:1rem}
+    .hero-title em{font-style:italic;color:var(--gold)}
+    .hero-lead,.section-copy,.card-copy,.card-meta,.related-copy,.hero-aside p,.note-panel-copy,.note-panel-meta,.note-link-copy{font-size:.95rem;line-height:1.7;color:var(--ink-2)}
+    .hero-routes{display:flex;flex-wrap:wrap;gap:.55rem}
+    .hero-route{font-family:'Space Grotesk',monospace;font-size: 0.75rem;letter-spacing:.14em;text-transform:uppercase;text-decoration:none;color:var(--gold);border:1px solid color-mix(in srgb, var(--gold) 26%, var(--border));border-radius: 0;padding:.58rem .8rem;background:color-mix(in srgb, var(--gold-soft) 84%, var(--paper));transition:border-color .18s,background-color .18s,color .18s}
+    .hero-route:hover{color:color-mix(in srgb, var(--gold) 82%, var(--ink));border-color:var(--gold);background:color-mix(in srgb, var(--gold-soft) 96%, var(--paper))}
+    .hero-aside{border-left:1px solid var(--border);padding-left:1rem;display:grid;gap:.85rem}
+    .aside-label,.section-label,.card-kicker{font-family:'Space Grotesk',monospace;font-size: 0.75rem;letter-spacing:.16em;text-transform:uppercase;color:var(--gold)}
+    .card-kicker{margin-bottom:.35rem}
+    .wrap{padding-top:1.85rem;padding-bottom:5rem}
+    .note-shell{display:grid;gap:1rem;margin-bottom:1.2rem}
+    .note-panels{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.85rem}
+    .note-panel{display:grid;gap:.55rem;padding:1rem 1.05rem;border-top:1px solid color-mix(in srgb, var(--gold) 24%, var(--border));background:linear-gradient(180deg,color-mix(in srgb, var(--gold-soft) 18%, transparent),transparent 120%);text-decoration:none;color:inherit}
+    .note-panel-label,.note-link-label{font-family:'Space Grotesk',monospace;font-size: 0.75rem;letter-spacing:.16em;text-transform:uppercase;color:var(--gold)}
+    .note-panel-title{font-family:'Space Grotesk',serif;font-size:1.28rem;line-height:1.02}
+    .note-panel-meta{font-family:'Space Grotesk',monospace;font-size: 0.75rem;letter-spacing:.1em;text-transform:uppercase}
+    .note-links{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.75rem;padding-top:.95rem;border-top:1px solid var(--border-light)}
+    .note-link{display:block;padding:.2rem 0;text-decoration:none;color:inherit}
+    .note-link-title{font-family:'Space Grotesk',serif;font-size:1.02rem;line-height:1.04;margin:.22rem 0}
+    .note-link-copy{font-size:.84rem;line-height:1.56}
+    .section,.related{border:1px solid color-mix(in srgb, var(--gold) 18%, var(--border));border-radius: 0;background:var(--surface-1);padding:1.15rem}
+    .section{margin-bottom:1.2rem}
+    .section-head{display:grid;grid-template-columns:180px minmax(0,1fr);gap:1rem;margin-bottom:.9rem}
+    .section-title{font-size:1.55rem;margin-bottom:.25rem}
+    .card-grid,.related-grid{display:grid;grid-template-columns:1fr 1fr;gap:.75rem}
+    .card,.related-card{display:block;border:1px solid color-mix(in srgb, var(--gold) 18%, var(--border));border-radius: 0;background:var(--surface-2);padding:1.15rem;text-decoration:none;color:inherit;transition:border-color .18s,background-color .18s,box-shadow .18s}
+    .card:hover,.related-card:hover{border-color:color-mix(in srgb, var(--gold) 46%, var(--border));background:color-mix(in srgb, var(--gold-soft) 82%, var(--paper));box-shadow:0 10px 22px color-mix(in srgb, var(--red) 12%, transparent)}
+    .card-title{font-size:1.18rem;margin-bottom:.35rem}
+    .card-meta{margin-top:.7rem;font-family:'Space Grotesk',monospace;font-size: 0.75rem;letter-spacing:.08em;text-transform:uppercase}
+    .related-title{font-size:1.35rem;margin-bottom:.3rem}
+    .related-card strong{display:block;font-family:'Inter',sans-serif;font-size:.95rem;margin-bottom:.18rem}
+    @media (max-width:900px){.hero,.note-panels,.note-links,.section-head,.card-grid,.related-grid{grid-template-columns:1fr}.hero-aside{border-left:none;border-top:1px solid var(--border);padding-left:0;padding-top:.9rem}}
+    @media (max-width:640px){.hero,.wrap{padding-left:1.5rem;padding-right:1.5rem}.hero{padding-top:3.8rem}}
+  
+}

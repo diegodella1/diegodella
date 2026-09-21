@@ -1,0 +1,60 @@
+---
+import SiteLayout from "../layouts/SiteLayout.astro";
+import ArticleField from "../components/ArticleField.astro";
+import Footer from "../components/Footer.astro";
+import Navigation from "../components/Navigation.astro";
+
+---
+<SiteLayout page="series">
+<a href="#main-content" class="skip-link">Skip to content</a>
+<div class="page-wrap">
+<div class="top-bar"> <span>Buenos Aires · Since 2008</span> <span>Guided reading paths for builders, launches, AI, trust, filters, and mediated presence · <a href="about.html">About the author</a></span> </div>
+<Navigation />
+<main id="main-content">
+<section class="hero">
+<div>
+<div class="hero-kicker">Start / Reading Paths</div>
+<h1 class="hero-title">Reading <em>Paths</em></h1>
+<p class="hero-lead">Two reading sequences: one on product decisions and launches, the other on AI and the relationship between writers and readers.</p>
+<div class="hero-routes"> <a href="archive.html" class="hero-route">Back to Start</a> <a href="frameworks.html" class="hero-route">Frameworks</a> </div>
+</div>
+<aside class="hero-aside">
+<div class="aside-label">Best use</div>
+<p>Use this page after Start has narrowed the problem and you want a designed reading order instead of isolated pieces.</p>
+<div class="aside-label">Best first route</div>
+<p><a href="paper-05.html"><ArticleField slug="paper-05" field="title" /></a> for product clarity, or <a href="the-last-human-impression.html"><ArticleField slug="the-last-human-impression" field="title" /></a> for AI and mediated trust.</p>
+</aside>
+</section>
+<div class="shelf-wrap">
+<a href="paper-05.html" class="lead-card"> <div> <div class="lead-kicker">Best Entry</div> <div class="lead-title">Two reading paths worth following in order</div> </div> <div class="lead-copy">Choose Narrative-First for product and launch decisions, or After You Post for AI, readers, and trust. Use them when sequence matters as much as the individual article.</div> <div class="lead-tail">Sequence over sampling</div> </a>
+<section class="path-block">
+<div class="path-aside">
+<div class="path-aside-label">Reading path</div>
+</div>
+<div>
+<div class="path-headline">Narrative-First</div>
+<div class="path-copy">Six papers on product clarity, message-market fit, launch conditions, operating narrative, drift, and mediated customer journeys. Read it when the business problem needs a sequence, not isolated advice.</div>
+<div class="path-sequence"> <a href="paper-01.html" class="path-step"><div class="path-step-num">01</div><div><div class="path-step-label">Foundation</div><div class="path-step-title">Before You Build</div><div class="path-step-copy">Strategic Debt and the cost of building before the market has a story it can repeat.</div></div><div class="path-step-meta">Start of sequence</div></a> <a href="paper-02.html" class="path-step"><div class="path-step-num">02</div><div><div class="path-step-label">Market language</div><div class="path-step-title"><ArticleField slug="paper-02" field="title" /></div><div class="path-step-copy">The language layer that must fit before launch spend, feature work, or positioning can compound.</div></div><div class="path-step-meta">Interpretation layer</div></a> <a href="paper-03.html" class="path-step"><div class="path-step-num">03</div><div><div class="path-step-label">Internal coherence</div><div class="path-step-title"><ArticleField slug="paper-03" field="title" /></div><div class="path-step-copy">Operating narrative as an internal alignment layer, not a slogan or campaign surface.</div></div><div class="path-step-meta">Operating layer</div></a> <a href="paper-04.html" class="path-step"><div class="path-step-num">04</div><div><div class="path-step-label">Drift control</div><div class="path-step-title"><ArticleField slug="paper-04" field="title" /></div><div class="path-step-copy">How teams lose the story through small decisions that each seem locally reasonable.</div></div><div class="path-step-meta">Failure mode</div></a> <a href="paper-05.html" class="path-step"><div class="path-step-num">05</div><div><div class="path-step-label">Practical entry</div><div class="path-step-title"><ArticleField slug="paper-05" field="title" /></div><div class="path-step-copy">The best first paper if the problem is strong product, weak adoption, unclear category language, or a launch the market failed to read.</div></div><div class="path-step-meta">Best entry</div></a> <a href="paper-06.html" class="path-step"><div class="path-step-num">06</div><div><div class="path-step-label">Journey layer</div><div class="path-step-title">Before You Map</div><div class="path-step-copy">The mediated customer journey and the hidden negotiation that happens before a user arrives.</div></div><div class="path-step-meta">Close sequence</div></a> </div>
+</div>
+</section>
+<section class="path-block">
+<div class="path-aside">
+<div class="path-aside-label">Reading path</div>
+</div>
+<div>
+<div class="path-headline">After You Post</div>
+<div class="path-copy">A route through mediated attention, proxy identity, synthetic presence, filters, trust collapse, and origin gravity. Use it when the question is no longer just publishing, but what happens after publishing in agent-mediated systems.</div>
+<div class="path-sequence"> <a href="the-last-human-impression.html" class="path-step"><div class="path-step-num">01</div><div><div class="path-step-label">Threshold essay</div><div class="path-step-title"><ArticleField slug="the-last-human-impression" field="title" /></div><div class="path-step-copy">Start here for the impression gap and the broader AI-mediated trust frame.</div></div><div class="path-step-meta">Best entry</div></a> <a href="the-empty-room.html" class="path-step"><div class="path-step-num">02</div><div><div class="path-step-label">Reception</div><div class="path-step-title"><ArticleField slug="the-empty-room" field="title" /></div><div class="path-step-copy">Enter through absence, audiences, and the changed conditions of reception.</div></div><div class="path-step-meta">Alternative entry</div></a> <a href="the-proxy-self.html" class="path-step"><div class="path-step-num">03</div><div><div class="path-step-label">Identity</div><div class="path-step-title"><ArticleField slug="the-proxy-self" field="title" /></div><div class="path-step-copy">Delegated identity and the systems that increasingly negotiate social and commercial presence for us.</div></div><div class="path-step-meta">Proxy identity</div></a> <a href="writing-for-the-filter.html" class="path-step"><div class="path-step-num">04</div><div><div class="path-step-label">Discovery</div><div class="path-step-title"><ArticleField slug="writing-for-the-filter" field="title" /></div><div class="path-step-copy">How writing changes when discovery is increasingly mediated by retrieval and ranking systems.</div></div><div class="path-step-meta">Filter logic</div></a> <a href="the-trust-collapse.html" class="path-step"><div class="path-step-num">05</div><div><div class="path-step-label">Trust failure</div><div class="path-step-title"><ArticleField slug="the-trust-collapse" field="title" /></div><div class="path-step-copy">Why high-volume mediation environments corrode confidence faster than institutions can restore it.</div></div><div class="path-step-meta">Trust erosion</div></a> <a href="origin-gravity.html" class="path-step"><div class="path-step-num">06</div><div><div class="path-step-label">Return to source</div><div class="path-step-title"><ArticleField slug="origin-gravity" field="title" /></div><div class="path-step-copy">Why source credibility matters more as mediated systems become saturated and synthetic.</div></div><div class="path-step-meta">Closing frame</div></a> </div>
+</div>
+</section>
+<section class="related">
+<div class="section-label">Next Moves</div>
+<div class="related-title">Read around the paths</div>
+<div class="related-copy">Use Frameworks when you want the underlying model, and Essays when you want adjacent long-form arguments outside the sequenced paths.</div>
+<div class="related-grid"> <a href="frameworks.html" class="related-card"> <strong>Frameworks</strong> <div class="related-copy">Go back to the models if you want the conceptual spine behind the reading paths.</div> </a> <a href="concepts.html" class="related-card"> <strong>Concepts</strong> <div class="related-copy">Use the glossary when a sequence term needs a stable definition before the next paper.</div> </a> <a href="essays.html" class="related-card"> <strong>Essays</strong> <div class="related-copy">Move into the broader archive of standalone long-form pieces.</div> </a> </div>
+</section>
+</div>
+</main>
+</div>
+<Footer />
+</SiteLayout>

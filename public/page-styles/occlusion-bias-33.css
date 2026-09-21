@@ -1,0 +1,113 @@
+@layer page {
+
+    html { font-size: 20px; scroll-behavior: smooth; scroll-padding-top: 60px; }
+    body { line-height: 1.8; }
+
+    /* ── Hero ── */
+    .hero { max-width: 960px; margin: 0 auto; padding: 6rem 4rem 4rem; }
+    .hero-title { font-family: 'Space Grotesk', serif; font-size: clamp(2.5rem, 6vw, 4.5rem); font-weight: 900; line-height: 0.95; letter-spacing: -0.03em; margin-bottom: 1rem; }
+    .hero-title em { font-style: italic; color: var(--ink); text-decoration: none; background: linear-gradient(180deg, transparent 54%, color-mix(in srgb, var(--accent) 18%, transparent) 54%); padding: 0 0.08em 0.02em 0; box-decoration-break: clone; -webkit-box-decoration-break: clone; }
+    .hero-subtitle { font-family: 'Inter', sans-serif; font-size: 1.15rem; font-style: italic; color: var(--muted); margin-bottom: 2rem; max-width: 560px; line-height: 1.6; }
+    .hero-meta { display: flex; gap: 2rem; flex-wrap: wrap; margin-bottom: 2rem; }
+    .hero-meta-item { font-family: 'Space Grotesk', monospace; font-size: 0.75rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); }
+    .hero-meta-item strong { color: var(--ink); font-weight: 700; }
+    .hero-tags { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+    .hero-tag { font-family: 'Space Grotesk', monospace; font-size: 0.75rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); border: 1px solid var(--rule); padding: 0.25em 0.6em; }
+
+    /* ── Constructs Strip ── */
+    .constructs-strip { max-width: 960px; margin: 0 auto; padding: 0 4rem; }
+    .constructs-header { font-family: 'Space Grotesk', monospace; font-size: 0.75rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--accent); margin-bottom: 1rem; text-align: center; }
+    .constructs-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 1px; background: var(--rule); border: 1px solid var(--rule); overflow: hidden; }
+    .construct-cell { background: var(--highlight); padding: 1.25rem 1rem; text-align: center; }
+    .construct-num { font-family: 'Space Grotesk', serif; font-size: 1.6rem; font-weight: 900; font-style: italic; color: var(--accent); line-height: 1; margin-bottom: 0.4rem; }
+    .construct-name { font-family: 'Space Grotesk', monospace; font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink); margin-bottom: 0.5rem; font-weight: 700; }
+    .construct-desc { font-size: 0.78rem; line-height: 1.45; font-style: italic; color: var(--muted); }
+
+    /* ── Abstract ── */
+    .abstract-wrap { max-width: 960px; margin: 0 auto; padding: 2rem 4rem; }
+    .abstract-box { border: 1px solid var(--rule); overflow: hidden; }
+    .abstract-header { background: var(--ink); padding: 0.75rem 1.5rem; display: flex; justify-content: space-between; align-items: center; }
+    .abstract-header-text { font-family: 'Space Grotesk', monospace; font-size: 0.75rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--paper); opacity: 0.7; }
+    .abstract-body { padding: 1.5rem 2rem; background: var(--highlight); }
+    .abstract-body p { font-size: 0.92rem; line-height: 1.8; margin-bottom: 1.25rem; text-align: justify; hyphens: auto; }
+    .abstract-body p:last-child { margin-bottom: 0; }
+    .abstract-body em { font-style: italic; color: var(--accent); font-weight: 500; }
+
+    /* ── TOC ── */
+    .toc-wrap { max-width: 960px; margin: 0 auto; padding: 0 4rem 3rem; }
+    .toc { border: 1px solid var(--rule); background: var(--highlight); overflow: hidden; }
+    .toc-header { background: var(--ink); padding: 0.75rem 1.5rem; }
+    .toc-header-text { font-family: 'Space Grotesk', monospace; font-size: 0.75rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--paper); opacity: 0.7; }
+    .toc-body { padding: 1rem 1.5rem; display: flex; flex-direction: column; gap: 0; }
+    .toc-item { display: flex; gap: 0.75rem; align-items: baseline; padding: 0.6rem 0.5rem; text-decoration: none; border-bottom: 1px solid var(--rule); transition: background 0.2s; }
+    .toc-item:last-child { border-bottom: none; }
+    .toc-item:hover { background: var(--accent-light); }
+    .toc-num { font-family: 'Space Grotesk', monospace; font-size: 0.75rem; color: var(--accent); letter-spacing: 0.1em; flex-shrink: 0; }
+    .toc-title { font-size: 0.92rem; color: var(--ink); }
+    .toc-sub { font-family: 'Space Grotesk', monospace; font-size: 0.75rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); display: block; margin-top: 0.15rem; }
+
+    /* ── Genealogy ── */
+    .genealogy { border: 1px solid var(--rule); overflow: hidden; }
+    .genealogy-header { background: var(--framework); padding: 0.75rem 1.5rem; font-family: 'Space Grotesk', monospace; font-size: 0.75rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--paper); }
+    .genealogy-row { display: grid; grid-template-columns: 120px 1fr 120px; border-bottom: 1px solid var(--rule); }
+    .genealogy-row:last-child { border-bottom: none; }
+    .genealogy-cell { padding: 0.85rem 1rem; font-size: 0.88rem; line-height: 1.6; }
+    .genealogy-cell.label { font-family: 'Space Grotesk', monospace; font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--framework); font-weight: 700; display: flex; align-items: center; background: var(--framework-light); }
+    .genealogy-cell.note { font-family: 'Space Grotesk', monospace; font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); display: flex; align-items: center; justify-content: flex-end; }
+
+    /* ── Content ── */
+    .content { max-width: 720px; margin: 0 auto; padding: 0 4rem 6rem; }
+
+    /* ── Section overrides ── */
+    .section { margin-bottom: 4.5rem; scroll-margin-top: 60px; }
+    .section-end { text-align: center; color: var(--muted); font-size: 0.85rem; letter-spacing: 0.4em; margin-top: 2.5rem; user-select: none; }
+
+    /* ── Construct Definition ── */
+    .construct-def { border: 1px solid var(--rule); margin: 2rem 0; overflow: hidden; }
+    .construct-def-label { background: var(--framework); padding: 0.65rem 1.25rem; font-family: 'Space Grotesk', monospace; font-size: 0.75rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--paper); }
+    .construct-def-name { padding: 1rem 1.25rem 0; font-family: 'Space Grotesk', serif; font-size: 1.15rem; font-weight: 700; color: var(--framework); }
+    .construct-def-body { padding: 0.75rem 1.25rem 1.25rem; }
+    .construct-def-body p { font-size: 0.92rem; line-height: 1.75; margin-bottom: 1rem; }
+    .construct-def-body p:last-child { margin-bottom: 0; }
+    .construct-def-body p::first-letter { float: none; font-size: inherit; color: inherit; margin: 0; }
+
+    /* ── Kill Criteria Box ── */
+    .kill-box { border: 1px solid var(--accent); margin: 2rem 0; overflow: hidden; }
+    .kill-box-label { background: var(--accent); padding: 0.65rem 1.25rem; font-family: 'Space Grotesk', monospace; font-size: 0.75rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--on-accent); }
+    .kill-item { padding: 1.25rem 1.5rem; border-bottom: 1px solid var(--rule); }
+    .kill-item:last-child { border-bottom: none; }
+    .kill-label { font-family: 'Space Grotesk', monospace; font-size: 0.75rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--accent); margin-bottom: 0.5rem; font-weight: 700; }
+    .kill-text { font-size: 0.9rem; line-height: 1.75; }
+
+    /* ── Animations (page-specific keyframe fade-in) ── */
+    .fade-in { opacity: 0; transform: translateY(20px); animation: fadeUp 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards; }
+    @keyframes fadeUp { to { opacity: 1; transform: translateY(0); } }
+
+    /* ── Responsive ── */
+    @media (max-width: 768px) {
+      .hero { padding: 3rem 1.5rem 2rem; }
+      .constructs-strip { padding: 0 1.5rem; }
+      .constructs-grid { grid-template-columns: 1fr 1fr; }
+      .constructs-grid .construct-cell:last-child { grid-column: 1 / -1; }
+      .abstract-wrap { padding: 1.5rem; }
+      .abstract-header { flex-direction: column; gap: 0.3rem; }
+      .abstract-body { padding: 1.25rem; }
+      .toc-wrap { padding: 0 1.5rem 2rem; }
+      .genealogy-row { grid-template-columns: 1fr; }
+      .genealogy-cell.label { padding: 0.6rem 1rem 0.2rem; font-size: 0.75rem; }
+      .genealogy-cell { padding: 0.4rem 1rem; }
+      .genealogy-cell.note { justify-content: flex-start; padding-top: 0; padding-bottom: 0.6rem; }
+      .content { padding: 0 1.5rem 4rem; }
+      .pull-quote { margin: 2rem 0; }
+      .kill-item { padding: 1rem 1.25rem; }
+    }
+
+    /* Hero SVG */
+    .hero { display: grid; grid-template-columns: 1fr 280px; gap: 2rem; align-items: center; }
+    .hero-svg { width: 100%; height: auto; }
+    @media (max-width: 768px) {
+      .hero { grid-template-columns: 1fr; }
+      .hero-svg { max-width: 200px; margin: 0 auto; order: -1; }
+    }
+  
+}

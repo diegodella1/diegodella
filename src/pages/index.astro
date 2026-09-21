@@ -1,0 +1,56 @@
+---
+import SiteLayout from '../layouts/SiteLayout.astro';
+import Footer from '../components/Footer.astro';
+import Navigation from '../components/Navigation.astro';
+import SectionHeading from '../components/SectionHeading.astro';
+import FeatureCard from '../components/FeatureCard.astro';
+import { siteData } from '../lib/site';
+const site=await siteData();
+const ideas=['occlusion-bias','origin-gravity','the-last-human-impression'].map(slug=>site.writing.find(a=>a.slug===slug)!);
+const products=[
+ ['PRICEB.TC','https://priceb.tc/','Live data · Broadcast graphics','Creates free live Bitcoin price widgets for websites and transparent OBS overlays in more than 160 fiat currencies.'],
+ ['Broadcast Control Room','https://broadcast-planner.diegodella.ar/','Editorial operations','Plans the broadcast day, prepares media, catches schedule risk, and sends protected browser playout into OBS or vMix.'],
+ ['Intelligenz','https://intelligenz.diegodella.ar/','AI agent · Editorial research',"Turns monitored sources into daily briefs ranked against each leader’s goals, risks, actors, and opportunities."],
+ ['LiveOverlay','https://liveoverlay.diegodella.ar/','Live media · Audience interaction','Controls QR codes, polls, tickers, lower thirds, sponsors, and more from a single OBS Browser Source.'],
+ ['F1 Race Monitor','https://github.com/diegodella1/f1-race-monitor','Sim racing · Live telemetry','A local-first race engineer for EA SPORTS F1 25, with live timing, strategy, race radio, and car health on a phone or tablet beside the wheel.'],
+ ['DecisionOS','https://audience.diegodella.ar/','Audience research · Product strategy','Uses synthetic focus groups to surface objections and turn a product proposal into next experiments before building or launching.']
+];
+---
+<SiteLayout page="index">
+<a href="#main-content" class="skip-link">Skip to content</a>
+<Navigation />
+<main id="main-content">
+<section class="home-shell home-hero" id="thesis" aria-labelledby="home-title">
+<p class="home-signature"><span class="signal-dot" aria-hidden="true"></span>Diego Dell'Agostino · Media, Product &amp; AI</p>
+<h1 id="home-title">The market decides <span class="gradient-text">before the search begins.</span></h1>
+<p class="home-hero-lede">I’m Diego Dell'Agostino. I co-founded <a href="work-posta.html">Posta</a>, helped build <a href="work-roxom.html">Roxom TV’s global operation</a>, taught at Digital House, and served on the El Ojo de Iberoamérica jury. Today I build tools for <a href="ai-media.html">AI-native media</a> and write about how people find and choose what to read.</p>
+<p class="section-more"><a href="about.html">About Diego Dell'Agostino</a> · <a href="work.html">Selected work</a> · <a href="consulting.html">Consulting</a> · <a href="speaking.html">Speaking</a> · <a href="media-kit.html">Media kit</a></p>
+<div class="home-actions"><a class="home-action-primary" href="thesis.html">Narrative Mechanics thesis <span aria-hidden="true">↗</span></a><a class="home-action-secondary" href="#artifacts">Explore the products <span aria-hidden="true">↓</span></a></div>
+<span id="home-fit-title" class="anchor-alias" aria-hidden="true"></span>
+</section>
+<section class="home-shell home-section" id="corpus">
+<span id="system-title" class="anchor-alias" aria-hidden="true"></span><SectionHeading title="Narrative Mechanics"><p>Essays on the choices people make before they search, click, or buy.</p></SectionHeading>
+<a href="thesis.html" class="thesis-feature">
+<div><span class="card-label">The central thesis</span><h3>The Continuous Moment of Intent</h3><p>How repeated encounters with an editorial source might build a habit of return. The thesis defines the model and sets out ways to test it.</p><span class="card-action">Read the thesis <span aria-hidden="true">↗</span></span></div>
+<div class="intent-flow" aria-label="A path through the framework"><span>Exposure</span><span>Interpretation</span><strong>Intent</strong><p>The model connects what people encounter with how they interpret it and what they do next.</p></div>
+</a>
+<div class="home-writing-list">{ideas.map(a=><a href={`${a.slug}.html`}><h3>{a.title}</h3><p>{a.description}</p><span>Read essay <span aria-hidden="true">↗</span></span></a>)}</div>
+<div class="home-actions"><a class="home-action-secondary" href="essays.html">All writing</a><a class="home-action-secondary" href="frameworks.html">Frameworks</a><a class="home-action-secondary" href="series.html">Reading paths</a></div>
+</section>
+<section class="home-shell home-section" id="artifacts">
+<span id="routes-title" class="anchor-alias" aria-hidden="true"></span><SectionHeading title="Products"><p>Agents, broadcast tooling, research interfaces, and small tools you can try.</p></SectionHeading>
+<div class="feature-grid product-grid">{products.map(([title,href,label,description],i)=><FeatureCard href={href} title={title} action={href.includes("github.com") ? "View repository" : "Open tool"} label={label} accent={i%2?'lime':'orange'}><p>{description}</p></FeatureCard>)}</div>
+<p class="section-more"><a href="about.html#products">Explore all current projects</a> · <a href="ai-media.html">AI &amp; Media</a> · <a href="developers.html">Developer portal</a></p>
+</section>
+<section class="home-shell home-section" id="track-record">
+<span id="proof-title" class="anchor-alias" aria-hidden="true"></span><SectionHeading title="Posta & Roxom TV"><p>What I worked on, the decisions involved, and what changed.</p></SectionHeading>
+<div class="track-grid"><FeatureCard href="work-posta.html" title="Posta" action="Read case study" label="Co-founder · Buenos Aires" accent="orange"><p>Co-founded an Argentine podcast company that built original programming, branded audio, audiences, brand relationships, regional operations, and later joined PodX.</p></FeatureCard><FeatureCard href="work-roxom.html" title="Roxom TV" action="Read case study" label="Founding team · Global live media" accent="lime"><p>Helped build the product and operating system behind a 24/7 global media network across three studio cities.</p></FeatureCard></div>
+<p class="section-more"><a href="work.html">Selected work</a> · <a href="about.html">About Diego</a></p>
+</section>
+<section class="home-shell home-section" id="contact">
+<p class="section-more"><a href="consulting.html">Consulting</a> · <a href="speaking.html">Speaking</a> · <a href="media-kit.html">Media kit</a></p>
+<div class="home-contact-panel"><span id="offer-title" class="anchor-alias" aria-hidden="true"></span><h2 id="contact-title">What are you working on?</h2><p>Tell me what you are building and where you are stuck. I read and reply to these messages.</p><div class="home-actions"><a href="contact.html" class="home-action-primary" data-open-contact data-contact-mode="conversation">Get in touch</a><a href="speaking.html" class="home-action-secondary">Speaking &amp; interviews</a></div><a class="updates-link" href="contact.html" data-open-contact data-contact-mode="updates">Request occasional updates</a></div>
+</section>
+</main>
+<Footer />
+</SiteLayout>

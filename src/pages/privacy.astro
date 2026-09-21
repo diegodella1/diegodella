@@ -1,0 +1,53 @@
+---
+import SiteLayout from "../layouts/SiteLayout.astro";
+import Footer from "../components/Footer.astro";
+import Navigation from "../components/Navigation.astro";
+
+---
+<SiteLayout page="privacy">
+<a href="#main-content" class="skip-link">Skip to content</a>
+<div class="top-bar"><span>Privacy</span><span>Collection · Use · Providers · Requests</span></div>
+<Navigation />
+<main id="main-content">
+<header class="nm-page-hero">
+<p class="nm-page-label">Privacy notice · Updated August 22, 2026</p>
+<h1>What information this site receives and how it is used.</h1>
+<p>This notice explains what diegodella.ar receives when a person or agent visits the site or sends a message, why that information is used, which service categories process it, and how to request access, correction, or deletion.</p>
+</header>
+<section class="nm-page-main">
+<div class="nm-two-col">
+<h2>Information received.</h2>
+<div>
+<p class="nm-page-copy"><strong>Contact requests:</strong> the form and public contact API receive the name, email address, subject, message, and selected request mode that the sender chooses to provide. The service also receives ordinary request metadata needed to deliver and protect the endpoint.</p>
+<p class="nm-page-copy"><strong>Site usage:</strong> the site uses Google Analytics to receive aggregate and device-level usage measurements such as pages viewed, approximate location, browser information, referrer, and interaction events. Browser controls or content blockers can limit that collection.</p>
+<p class="nm-page-copy"><strong>Infrastructure logs:</strong> hosting, network, and security systems may process IP address, user agent, requested URL, timestamps, response status, and security signals to serve the site, prevent abuse, and diagnose failures.</p>
+</div>
+</div>
+<div class="nm-two-col">
+<h2>How it is used.</h2>
+<div class="nm-ledger">
+<div class="nm-ledger-item"><span class="nm-page-label">Communication</span><strong>Understand and answer a request</strong><p>Contact data is used to route, evaluate, reply to, and retain the context of a professional inquiry, correction, subscription request, or privacy request.</p></div>
+<div class="nm-ledger-item"><span class="nm-page-label">Operations</span><strong>Keep the site reliable</strong><p>Request and usage information helps monitor availability, investigate errors, understand which public material is useful, and protect the API from automated abuse.</p></div>
+<div class="nm-ledger-item"><span class="nm-page-label">Boundaries</span><strong>No sale or automated eligibility decision</strong><p>Personal information submitted here is not sold. The site does not use it to make automated decisions about employment, credit, insurance, housing, or another legal entitlement.</p></div>
+</div>
+</div>
+<div class="nm-two-col">
+<h2>Providers and retention.</h2>
+<div>
+<p class="nm-page-copy">Cloudflare provides network, caching, and security infrastructure. Google provides analytics measurement. Resend provides contact-email delivery. Each provider may process technical or message data under its own terms and infrastructure locations.</p>
+<p class="nm-page-copy">Contact messages may remain in email records for as long as they are reasonably useful to the conversation, professional recordkeeping, security, or legal obligations. Operational and analytics data follows the active retention controls of the relevant service. Data is deleted or de-identified when it is no longer reasonably needed, subject to backups, security records, and legal requirements.</p>
+<p class="nm-page-copy">No internet service can promise absolute security. The site limits the data requested, uses encrypted HTTPS transport, applies request limits, and avoids asking for sensitive secrets.</p>
+</div>
+</div>
+<div class="nm-two-col">
+<h2>Your choices.</h2>
+<div>
+<p class="nm-page-copy">You may ask what contact information is held about you, request a correction, or request deletion where applicable. You may also unsubscribe from requested updates. A response may require enough information to locate and verify the relevant record; do not send identity documents unless they are specifically and safely requested.</p>
+<p class="nm-page-copy">Send a privacy request to <a href="mailto:dellagostino@gmail.com">dellagostino@gmail.com</a> with “Privacy request” in the subject, or use the <a href="contact.html">contact page</a>. State the request and identify the original interaction. Questions about this notice use the same route.</p>
+<p class="nm-page-copy">This notice may change when the site's data practices or providers change. The updated date at the top identifies the current published version.</p>
+</div>
+</div>
+</section>
+</main>
+<Footer />
+</SiteLayout>

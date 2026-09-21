@@ -1,0 +1,25 @@
+---
+import SiteLayout from "../layouts/SiteLayout.astro";
+import Footer from "../components/Footer.astro";
+import Navigation from "../components/Navigation.astro";
+import Block0 from "../components/diagrams/404-0.astro";
+---
+<SiteLayout page="404">
+<a href="#main-content" class="skip-link">Skip to content</a>
+<div class="page-wrap">
+
+<div class="top-bar"> <span>Buenos Aires · Since 2008</span> <span>Essays · Frameworks · Guided reading paths · <a href="about.html">About the author</a></span> </div>
+
+<Navigation />
+<main id="main-content">
+<div class="content-404">
+<Block0 />
+<h1 class="code">404: Page not found</h1>
+<p class="message">The page you are looking for does not exist, or has been moved.</p>
+<p class="message recovery-404">Machine recovery: <a href="https://diegodella.ar/sitemap.xml">sitemap.xml</a> · <a href="https://diegodella.ar/llms.txt">llms.txt</a> · <a href="https://diegodella.ar/developers.html">developer portal</a></p>
+<div class="cta-404"> <a href="index.html" class="back-link">Back to Home</a> <a href="archive.html" class="back-link secondary">Open Start</a> </div>
+<div class="routes-404"> <a href="archive.html" class="route-404"> <div class="route-404-label">Start</div> <div class="route-404-title">Start</div> <div class="route-404-copy">Pick one first read, one reading path, or one notes entry without sorting the full archive.</div> </a> <a href="frameworks.html" class="route-404"> <div class="route-404-label">Section</div> <div class="route-404-title">Frameworks</div> <div class="route-404-copy">Core models on intent, visibility, and narrative transfer.</div> </a> <a href="essays.html" class="route-404"> <div class="route-404-label">Section</div> <div class="route-404-title">Essays</div> <div class="route-404-copy">Long-form pieces on products, media systems, trust, and AI.</div> </a> </div>
+</div>
+</main></div>
+<Footer />
+</SiteLayout>

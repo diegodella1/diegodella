@@ -1,0 +1,42 @@
+---
+import SiteLayout from "../layouts/SiteLayout.astro";
+import ArticleField from "../components/ArticleField.astro";
+import Footer from "../components/Footer.astro";
+import Navigation from "../components/Navigation.astro";
+
+---
+<SiteLayout page="notes">
+<a href="#main-content" class="skip-link">Skip to content</a>
+<div class="page-wrap">
+<div class="top-bar"><span>Buenos Aires · Since 2008</span><span>Compressed paths and active fragments · <a href="about.html">About the author</a></span></div>
+<Navigation />
+<main id="main-content">
+<section class="hero">
+<div>
+<div class="hero-kicker">Start / Compressed path</div>
+<h1 class="hero-title">Notes</h1>
+<p class="hero-lead">Short ideas and work in progress, with links to the longer essays.</p>
+<div class="hero-routes"> <a href="archive.html" class="hero-route">Start</a> <a href="essays.html" class="hero-route">Essays</a> </div>
+</div>
+<aside class="hero-aside">
+<div class="aside-label">Best use</div>
+<p>Use this shelf if you want the shortest useful entry into the ideas, or if you want to track active lines of thought without reading the entire archive first.</p>
+<div class="aside-label">Best first read</div>
+<p><a href="nuggets.html">Nuggets</a> if you want compression, or <a href="unfinished-arguments.html"><ArticleField slug="unfinished-arguments" field="title" /></a> if you want live fragments.</p>
+</aside>
+</section>
+<div class="wrap">
+<section class="note-shell" aria-label="Compressed entry points">
+<div class="note-panels"> <a href="nuggets.html" class="note-panel"> <div class="note-panel-label">Shortest path</div> <div class="note-panel-title">Nuggets</div> <div class="note-panel-copy">Short excerpts with links to their source essays.</div> <div class="note-panel-meta">Read the excerpts</div> </a> <a href="unfinished-arguments.html" class="note-panel"> <div class="note-panel-label">Active fragments</div> <div class="note-panel-title"><ArticleField slug="unfinished-arguments" field="title" /></div> <div class="note-panel-copy">Questions about AI, work, and media that I am still working through.</div> <div class="note-panel-meta">Read the questions</div> </a> </div>
+<div class="note-links"> <a href="essays.html" class="note-link"> <div class="note-link-label">When you need more</div> <div class="note-link-title">Move into Essays</div> <div class="note-link-copy">Use the long-form shelf once a fragment opens the full question.</div> </a> <a href="concepts.html" class="note-link"> <div class="note-link-label">When you need vocabulary</div> <div class="note-link-title">Open Concepts</div> <div class="note-link-copy">Use the glossary when a compressed idea needs a stable definition.</div> </a> <a href="frameworks.html" class="note-link"> <div class="note-link-label">When you need the model</div> <div class="note-link-title">Open Frameworks</div> <div class="note-link-copy">Go to the conceptual center when the short route is no longer enough.</div> </a> </div>
+</section>
+<section class="section" aria-labelledby="person-services-title">
+<h2 class="section-title" id="person-services-title">Person &amp; services</h2>
+<p class="section-copy">These notes grow out of my work in media, product, and AI. Read <a href="about.html">About Diego Dell'Agostino</a> and explore my <a href="work.html">selected work</a>, current experiments in <a href="ai-media.html">AI-native media</a>, or the <a href="thesis.html">Narrative Mechanics thesis</a> behind the essays.</p>
+<p class="section-copy">To work together or plan an event, see <a href="consulting.html">Consulting</a> and <a href="speaking.html">Speaking</a>. For a biography, photos, and interview topics, use the <a href="media-kit.html">Media kit</a>.</p>
+</section>
+</div>
+</main>
+</div>
+<Footer />
+</SiteLayout>

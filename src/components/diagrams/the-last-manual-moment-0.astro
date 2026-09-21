@@ -1,0 +1,40 @@
+<svg is:raw fill="none" viewBox="0 0 160 220" xmlns="http://www.w3.org/2000/svg">
+          <style is:inline>
+            @keyframes gridFade{from{opacity:0}to{opacity:1}}
+            @keyframes drawCurve{from{stroke-dashoffset:300}to{stroke-dashoffset:0}}
+            @keyframes crossPulse{0%,100%{r:4;opacity:1}50%{r:6;opacity:0.6}}
+            @keyframes fadeLabel{from{opacity:0}to{opacity:1}}
+            @keyframes drawAxis{from{stroke-dashoffset:160}to{stroke-dashoffset:0}}
+          </style>
+          <!-- Grid background (fade in) -->
+          <g style="animation:gridFade 1.5s ease-out forwards;opacity:0">
+            <line stroke="var(--dot-color)" stroke-width="0.5" x1="0" x2="160" y1="25" y2="25"></line>
+            <line stroke="var(--dot-color)" stroke-width="0.5" x1="0" x2="160" y1="50" y2="50"></line>
+            <line stroke="var(--dot-color)" stroke-width="0.5" x1="0" x2="160" y1="75" y2="75"></line>
+            <line stroke="var(--dot-color)" stroke-width="0.5" x1="0" x2="160" y1="100" y2="100"></line>
+            <line stroke="var(--dot-color)" stroke-width="0.5" x1="0" x2="160" y1="125" y2="125"></line>
+            <line stroke="var(--dot-color)" stroke-width="0.5" x1="0" x2="160" y1="150" y2="150"></line>
+            <line stroke="var(--dot-color)" stroke-width="0.5" x1="25" x2="25" y1="0" y2="200"></line>
+            <line stroke="var(--dot-color)" stroke-width="0.5" x1="50" x2="50" y1="0" y2="200"></line>
+            <line stroke="var(--dot-color)" stroke-width="0.5" x1="75" x2="75" y1="0" y2="200"></line>
+            <line stroke="var(--dot-color)" stroke-width="0.5" x1="100" x2="100" y1="0" y2="200"></line>
+            <line stroke="var(--dot-color)" stroke-width="0.5" x1="125" x2="125" y1="0" y2="200"></line>
+          </g>
+          <!-- Threshold line -->
+          <line opacity="0.4" stroke="var(--accent)" stroke-dasharray="3 3" stroke-width="1" style="stroke-dasharray:160;stroke-dashoffset:160;animation:drawAxis 1.5s ease-out 0.5s forwards" x1="15" x2="145" y1="100" y2="100"></line>
+          <!-- Human curve (draw on) -->
+          <path d="M20 170 C 40 155, 60 130, 80 100 C 100 70, 120 50, 142 35" fill="none" stroke="var(--muted)" stroke-dasharray="4 3" stroke-width="1.5" style="stroke-dasharray:300;stroke-dashoffset:300;animation:drawCurve 2s ease-out 0.8s forwards"></path>
+          <!-- AI curve (draw on) -->
+          <path d="M20 170 C 50 140, 80 90, 142 20" fill="none" stroke="var(--accent)" stroke-width="2" style="stroke-dasharray:300;stroke-dashoffset:300;animation:drawCurve 2s ease-out 1s forwards"></path>
+          <!-- Crossing dot (pulse) -->
+          <circle cx="80" cy="100" fill="var(--accent)" r="4" style="animation:crossPulse 2.5s ease-in-out 2s infinite"></circle>
+          <!-- Labels (fade in) -->
+          <text fill="var(--accent)" font-family="monospace" font-size="6" style="animation:fadeLabel 0.8s ease-out 2.2s both" x="146" y="23">AI</text>
+          <text fill="var(--muted)" font-family="monospace" font-size="6" style="animation:fadeLabel 0.8s ease-out 2.3s both" x="146" y="38">H</text>
+          <text fill="var(--accent)" font-family="monospace" font-size="5" opacity="0.6" style="animation:fadeLabel 0.8s ease-out 2.4s both" x="147" y="98">→</text>
+          <!-- Axis (draw on) -->
+          <line stroke="var(--ink)" stroke-width="1" style="stroke-dasharray:160;stroke-dashoffset:160;animation:drawAxis 1.2s ease-out 0.2s forwards" x1="15" x2="15" y1="20" y2="175"></line>
+          <line stroke="var(--ink)" stroke-width="1" style="stroke-dasharray:160;stroke-dashoffset:160;animation:drawAxis 1.2s ease-out 0.3s forwards" x1="15" x2="150" y1="175" y2="175"></line>
+          <text fill="var(--muted)" font-family="monospace" font-size="5.5" letter-spacing="1" style="animation:fadeLabel 1s ease-out 1.5s both" text-anchor="middle" x="82" y="190">TIME</text>
+          <text fill="var(--accent)" font-family="monospace" font-size="5.5" letter-spacing="1" style="animation:fadeLabel 1s ease-out 1.5s both" text-anchor="middle" x="82" y="14">THE LAST MANUAL MOMENT</text>
+        </svg>

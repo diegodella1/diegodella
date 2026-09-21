@@ -1,0 +1,5 @@
+---
+import nuggets from '../data/nuggets.json';
+import filters from '../data/nugget-filters.json';
+---
+{filters.map(({ source, label }) => <button class:list={['filter-chip', { active: source === 'all' }]} data-filter={source} type="button" aria-pressed={source === 'all' ? 'true' : 'false'}>{label} <span class="filter-count">{nuggets.filter(nugget => source === 'all' || nugget.source === source).length}</span></button>)}

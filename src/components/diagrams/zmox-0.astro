@@ -1,0 +1,29 @@
+<svg is:raw class="hero-svg" viewBox="0 0 160 200" xmlns="http://www.w3.org/2000/svg">
+        <style is:inline>
+          @keyframes caxArc{from{stroke-dashoffset:250}to{stroke-dashoffset:0}}
+          @keyframes caxDot{from{opacity:0;r:0}to{opacity:1;r:4}}
+          @keyframes caxFade{from{opacity:0}to{opacity:1}}
+          @keyframes caxRadiate{from{opacity:0;stroke-dashoffset:30}to{opacity:0.5;stroke-dashoffset:0}}
+        </style>
+        <!-- Background grid lines -->
+        <line opacity="0.3" stroke="var(--rule)" stroke-width="0.5" x1="10" x2="150" y1="180" y2="180"></line>
+        <line opacity="0.3" stroke="var(--rule)" stroke-width="0.5" x1="10" x2="10" y1="180" y2="20"></line>
+        <!-- Ascending arc from bottom-left to upper-right -->
+        <path d="M15 175 C30 170,50 150,70 120 C90 90,110 55,145 30" fill="none" stroke="var(--accent)" stroke-dasharray="250" stroke-dashoffset="250" stroke-width="2" style="animation:caxArc 2.5s 0.3s ease-out forwards"></path>
+        <!-- Three evolution points -->
+        <circle cx="35" cy="165" fill="var(--muted)" r="0" style="animation:caxDot 0.4s 1s forwards"></circle>
+        <circle cx="80" cy="105" fill="var(--muted)" r="0" style="animation:caxDot 0.4s 1.6s forwards"></circle>
+        <circle cx="145" cy="30" fill="var(--accent)" r="0" style="animation:caxDot 0.4s 2.2s forwards"></circle>
+        <!-- Point labels -->
+        <text fill="var(--muted)" font-family="monospace" font-size="6" opacity="0" style="animation:caxFade 0.4s 1.2s forwards" x="32" y="158">ZMOT</text>
+        <text fill="var(--muted)" font-family="monospace" font-size="6" opacity="0" style="animation:caxFade 0.4s 1.8s forwards" x="77" y="98">ZMOI</text>
+        <text fill="var(--accent)" font-family="monospace" font-size="6.5" opacity="0" style="animation:caxFade 0.4s 2.4s forwards" x="130" y="24">CAX</text>
+        <!-- Field lines radiating from the top point -->
+        <line stroke="var(--accent)" stroke-dasharray="30" stroke-dashoffset="30" stroke-width="0.8" style="animation:caxRadiate 0.6s 2.6s forwards" x1="145" x2="155" y1="30" y2="15"></line>
+        <line stroke="var(--accent)" stroke-dasharray="30" stroke-dashoffset="30" stroke-width="0.8" style="animation:caxRadiate 0.6s 2.7s forwards" x1="145" x2="140" y1="30" y2="12"></line>
+        <line stroke="var(--accent)" stroke-dasharray="30" stroke-dashoffset="30" stroke-width="0.8" style="animation:caxRadiate 0.6s 2.8s forwards" x1="145" x2="150" y1="30" y2="10"></line>
+        <line stroke="var(--accent)" stroke-dasharray="30" stroke-dashoffset="30" stroke-width="0.6" style="animation:caxRadiate 0.6s 2.9s forwards" x1="145" x2="130" y1="30" y2="18"></line>
+        <line stroke="var(--accent)" stroke-dasharray="30" stroke-dashoffset="30" stroke-width="0.6" style="animation:caxRadiate 0.6s 3s forwards" x1="145" x2="155" y1="30" y2="25"></line>
+        <!-- Bottom label -->
+        <text fill="var(--muted)" font-family="monospace" font-size="5.5" letter-spacing="2" opacity="0" style="animation:caxFade 0.5s 3.2s forwards" text-anchor="middle" x="80" y="195">CONSTITUTIVE ARC</text>
+      </svg>

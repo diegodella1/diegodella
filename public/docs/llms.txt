@@ -1,0 +1,24 @@
+# DiegoDella developer resources
+
+> Machine-readable API discovery and integration guidance for diegodella.ar.
+
+## When to use these resources
+
+- Use the developer portal for the public API quickstart, access policy, quotas, safe retries, and versioning.
+- Use OpenAPI when generating a client or function definition.
+- Use the read-only status operation for harmless availability and discovery checks.
+- Use the contact operation only when a real message should be delivered.
+
+## Documentation
+
+- [Developer portal](https://diegodella.ar/developers.html)
+- [Markdown API reference](https://diegodella.ar/docs/api.md)
+- [Authentication policy](https://diegodella.ar/auth.md)
+- [Problem catalog](https://diegodella.ar/docs/problems.md)
+
+## Machine-readable contracts
+
+- [OpenAPI 3.1](https://diegodella.ar/openapi.json)
+- [RFC 9727 API catalog](https://diegodella.ar/.well-known/api-catalog)
+- [ARD v1 resource catalog](https://diegodella.ar/.well-known/ai-catalog.json)
+- [API status](https://diegodella.ar/api/v1/status)

@@ -1,0 +1,46 @@
+<svg is:raw fill="none" viewBox="0 0 160 200" xmlns="http://www.w3.org/2000/svg">
+          <style is:inline>
+            @keyframes gridFade{from{opacity:0}to{opacity:1}}
+            @keyframes contract{from{transform:scale(1.4);opacity:0}to{transform:scale(1);opacity:1}}
+            @keyframes centerPulse{0%,100%{r:4;opacity:1}50%{r:6;opacity:0.6}}
+            @keyframes arrowPulse{0%,100%{opacity:0.8}50%{opacity:0.3}}
+            @keyframes fadeLabel{from{opacity:0}to{opacity:1}}
+          </style>
+          <!-- Grid (subtle fade in) -->
+          <g style="animation:gridFade 1.2s ease-out both">
+            <line stroke="var(--dot-color)" stroke-width="0.5" x1="0" x2="160" y1="25" y2="25"></line>
+            <line stroke="var(--dot-color)" stroke-width="0.5" x1="0" x2="160" y1="50" y2="50"></line>
+            <line stroke="var(--dot-color)" stroke-width="0.5" x1="0" x2="160" y1="75" y2="75"></line>
+            <line stroke="var(--dot-color)" stroke-width="0.5" x1="0" x2="160" y1="100" y2="100"></line>
+            <line stroke="var(--dot-color)" stroke-width="0.5" x1="0" x2="160" y1="125" y2="125"></line>
+            <line stroke="var(--dot-color)" stroke-width="0.5" x1="0" x2="160" y1="150" y2="150"></line>
+            <line stroke="var(--dot-color)" stroke-width="0.5" x1="0" x2="160" y1="175" y2="175"></line>
+            <line stroke="var(--dot-color)" stroke-width="0.5" x1="25" x2="25" y1="0" y2="200"></line>
+            <line stroke="var(--dot-color)" stroke-width="0.5" x1="50" x2="50" y1="0" y2="200"></line>
+            <line stroke="var(--dot-color)" stroke-width="0.5" x1="75" x2="75" y1="0" y2="200"></line>
+            <line stroke="var(--dot-color)" stroke-width="0.5" x1="100" x2="100" y1="0" y2="200"></line>
+            <line stroke="var(--dot-color)" stroke-width="0.5" x1="125" x2="125" y1="0" y2="200"></line>
+          </g>
+          <!-- Concentric circles (contract inward, staggered) -->
+          <circle cx="80" cy="100" opacity="0.15" r="75" stroke="var(--accent)" stroke-width="0.7" style="transform-origin:80px 100px;animation:contract 1.2s ease-out 0.3s both"></circle>
+          <circle cx="80" cy="100" opacity="0.25" r="60" stroke="var(--accent)" stroke-width="0.8" style="transform-origin:80px 100px;animation:contract 1.2s ease-out 0.55s both"></circle>
+          <circle cx="80" cy="100" opacity="0.4" r="45" stroke="var(--accent)" stroke-width="1" style="transform-origin:80px 100px;animation:contract 1.2s ease-out 0.8s both"></circle>
+          <circle cx="80" cy="100" opacity="0.6" r="30" stroke="var(--accent)" stroke-width="1.2" style="transform-origin:80px 100px;animation:contract 1.2s ease-out 1.05s both"></circle>
+          <circle cx="80" cy="100" opacity="0.85" r="15" stroke="var(--accent)" stroke-width="1.5" style="transform-origin:80px 100px;animation:contract 1.2s ease-out 1.3s both"></circle>
+          <!-- Center dot (pulse) -->
+          <circle cx="80" cy="100" fill="var(--accent)" r="4" style="animation:centerPulse 2.5s ease-in-out 2s infinite"></circle>
+          <!-- Inward arrows (pulse) -->
+          <g style="animation:arrowPulse 2s ease-in-out 2s infinite">
+            <line stroke="var(--ink)" stroke-width="0.8" x1="5" x2="20" y1="100" y2="100"></line>
+            <polygon fill="var(--ink)" points="20,98 20,102 25,100"></polygon>
+            <line stroke="var(--ink)" stroke-width="0.8" x1="155" x2="140" y1="100" y2="100"></line>
+            <polygon fill="var(--ink)" points="140,98 140,102 135,100"></polygon>
+            <line stroke="var(--ink)" stroke-width="0.8" x1="80" x2="80" y1="5" y2="20"></line>
+            <polygon fill="var(--ink)" points="78,20 82,20 80,25"></polygon>
+            <line stroke="var(--ink)" stroke-width="0.8" x1="80" x2="80" y1="195" y2="180"></line>
+            <polygon fill="var(--ink)" points="78,180 82,180 80,175"></polygon>
+          </g>
+          <!-- Labels (fade in) -->
+          <text fill="var(--accent)" font-family="monospace" font-size="5.5" letter-spacing="1" style="animation:fadeLabel 1s ease-out 1.5s both" text-anchor="middle" x="80" y="14">CONTRACTION</text>
+          <text fill="var(--muted)" font-family="monospace" font-size="5.5" letter-spacing="1" style="animation:fadeLabel 1s ease-out 1.8s both" text-anchor="middle" x="80" y="196">LAYERS</text>
+        </svg>

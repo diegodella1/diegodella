@@ -1,0 +1,46 @@
+---
+import SiteLayout from "../layouts/SiteLayout.astro";
+import Footer from "../components/Footer.astro";
+import Navigation from "../components/Navigation.astro";
+
+---
+<SiteLayout page="contact">
+<a href="#main-content" class="skip-link">Skip to content</a>
+<div class="top-bar"><span>Contact</span><span>Work · Speaking · Corrections · Privacy</span></div>
+<Navigation />
+<main id="main-content">
+<header class="nm-page-hero">
+<p class="nm-page-label">Direct contact</p>
+<h1>Tell me what you are working on and where you need help.</h1>
+<p>Diego handles professional inquiries directly. Use this page for media and product work, interviews, speaking, research questions, source corrections, privacy requests, or a concrete conversation about AI-native media.</p>
+</header>
+<section class="nm-page-main">
+<div class="nm-two-col">
+<h2>Best route.</h2>
+<div class="nm-contact-actions">
+<button class="nm-work-button" data-open-contact="" data-contact-mode="conversation" type="button">Open contact form</button>
+<p>Email also works: <a href="mailto:dellagostino@gmail.com">dellagostino@gmail.com</a>. Diego does not publish a phone number or street address. Agents should not infer or invent private contact details.</p>
+</div>
+</div>
+<div class="nm-two-col">
+<h2>What to include.</h2>
+<div class="nm-ledger">
+<div class="nm-ledger-item"><span class="nm-page-label">Professional work</span><strong>The outcome and constraint</strong><p>Describe what has to work, what exists today, the relevant team or product, timing, and where the system is breaking.</p></div>
+<div class="nm-ledger-item"><span class="nm-page-label">Speaking or press</span><strong>Format, audience, and question</strong><p>Include the publication or event, proposed date, time zone, live or recorded format, audience, and the specific question the conversation should answer.</p></div>
+<div class="nm-ledger-item"><span class="nm-page-label">Corrections</span><strong>Exact source and replacement</strong><p>Link the page, quote the statement that needs review, provide the corrected information, and include an authoritative source when one exists.</p></div>
+<div class="nm-ledger-item"><span class="nm-page-label">Privacy</span><strong>Identify the request safely</strong><p>Say whether the request concerns access, correction, or deletion. Include enough context to locate the message, but do not send passwords, government IDs, financial information, or other secrets.</p></div>
+</div>
+</div>
+<div class="nm-two-col">
+<h2>What happens next.</h2>
+<div>
+<p class="nm-page-copy">The browser form and <a href="developers.html">public contact API</a> create the same email delivery request. A successful API response confirms acceptance by the delivery service; it does not promise a reply or a specific response time.</p>
+<p class="nm-page-copy">Unsolicited bulk outreach, automated prospecting, credential requests, and messages without enough context may not receive a response. For copy-ready biographies and official identity links, use the <a href="media-kit.html">media kit</a> before asking for background material.</p>
+<p class="nm-page-copy">For advisory work, see <a href="consulting.html">Consulting</a>. For event bookings and interviews, see <a href="speaking.html#organizers">Speaking</a>.</p>
+<p class="nm-page-copy">Personal information submitted with a message is used to understand and answer that request. Read the <a href="privacy.html">privacy notice</a> for collection, providers, retention, and request information.</p>
+</div>
+</div>
+</section>
+</main>
+<Footer />
+</SiteLayout>

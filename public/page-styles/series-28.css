@@ -1,0 +1,304 @@
+@layer page {
+
+    .hero,
+    .shelf-wrap {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding-left: 3rem;
+      padding-right: 3rem;
+    }
+    .hero {
+      padding-top: 5rem;
+      padding-bottom: 2.35rem;
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 260px;
+      gap: 1.8rem;
+      border-bottom: 1px solid var(--border-light);
+    }
+    .hero-title {
+      font-family: 'Space Grotesk', serif;
+      font-size: clamp(3rem, 6vw, 4.8rem);
+      line-height: 0.92;
+      letter-spacing: -0.04em;
+      max-width: 8ch;
+      margin-bottom: 1rem;
+    }
+    .hero-title em { font-style: italic; color: var(--accent); }
+    .hero-lead {
+      max-width: 42rem;
+      font-size: 0.98rem;
+      line-height: 1.72;
+      color: var(--ink-2);
+      margin-bottom: 1.2rem;
+    }
+    .hero-routes,
+    .shelf-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.55rem;
+    }
+    .hero-route,
+    .shelf-link {
+      font-family: 'Space Grotesk', monospace;
+      font-size: 0.75rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      text-decoration: none;
+      color: var(--accent);
+      border: 1px solid color-mix(in srgb, var(--accent) 24%, var(--border));
+      border-radius: 0;
+      padding: 0.58rem 0.8rem;
+      background: color-mix(in srgb, var(--accent-light) 84%, var(--paper));
+      transition: border-color 0.18s, background-color 0.18s, color 0.18s;
+    }
+    .hero-route:hover,
+    .shelf-link:hover {
+      color: var(--accent-hover);
+      border-color: var(--accent);
+      background: color-mix(in srgb, var(--accent-light) 96%, var(--paper));
+    }
+    .hero-aside {
+      border-left: 1px solid var(--border);
+      padding-left: 1rem;
+      display: grid;
+      gap: 0.85rem;
+    }
+    .aside-label,
+    .section-label,
+    .card-kicker,
+    .lead-kicker {
+      font-family: 'Space Grotesk', monospace;
+      font-size: 0.75rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--accent);
+    }
+    .hero-aside p,
+    .section-copy,
+    .card-copy,
+    .card-meta,
+    .lead-copy,
+    .related-copy {
+      font-size: 0.9rem;
+      line-height: 1.6;
+      color: var(--ink-2);
+    }
+    .shelf-wrap {
+      padding-top: 1.85rem;
+      padding-bottom: 5rem;
+    }
+    .path-block {
+      display: grid;
+      grid-template-columns: 180px minmax(0, 1fr);
+      gap: 1rem;
+      margin-bottom: 1.2rem;
+      padding: 1rem 1.05rem 1.15rem;
+      border: 1px solid color-mix(in srgb, var(--accent) 14%, var(--border));
+      background: var(--surface-1);
+    }
+    .path-headline {
+      font-family: 'Space Grotesk', serif;
+      font-size: 1.58rem;
+      line-height: 1.02;
+      margin-bottom: 0.28rem;
+    }
+    .path-copy {
+      max-width: 42rem;
+      font-size: 0.9rem;
+      line-height: 1.6;
+      color: var(--ink-2);
+    }
+    .path-sequence {
+      display: grid;
+      gap: 0.65rem;
+      margin-top: 0.95rem;
+    }
+    .path-step {
+      display: grid;
+      grid-template-columns: 54px minmax(0, 1fr) 170px;
+      gap: 0.8rem;
+      align-items: start;
+      padding: 0.8rem 0;
+      border-top: 1px solid var(--border-light);
+      text-decoration: none;
+      color: inherit;
+    }
+    .path-step:first-child {
+      border-top: 0;
+      padding-top: 0;
+    }
+    .path-step-num {
+      font-family: 'Space Grotesk', serif;
+      font-size: 1.4rem;
+      line-height: 1;
+      color: color-mix(in srgb, var(--accent) 48%, var(--border));
+    }
+    .path-step-title {
+      font-family: 'Space Grotesk', serif;
+      font-size: 1.08rem;
+      line-height: 1.04;
+      margin-bottom: 0.22rem;
+    }
+    .path-step-copy,
+    .path-step-meta,
+    .path-aside-copy {
+      font-size: 0.86rem;
+      line-height: 1.56;
+      color: var(--ink-2);
+    }
+    .path-step-meta {
+      font-family: 'Space Grotesk', monospace;
+      font-size: 0.75rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      text-align: right;
+    }
+    .path-aside-label,
+    .path-step-label {
+      font-family: 'Space Grotesk', monospace;
+      font-size: 0.75rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--accent);
+    }
+    .path-aside {
+      padding-top: 0.2rem;
+      border-top: 1px solid var(--rule);
+    }
+    .lead-card,
+    .section,
+    .related {
+      border: 1px solid color-mix(in srgb, var(--accent) 14%, var(--border));
+      border-radius: 0;
+      background: var(--surface-1);
+    }
+    .lead-card,
+    .section,
+    .related,
+    .card,
+    .related-card {
+      padding: 1.15rem;
+    }
+    .lead-card {
+      display: grid;
+      grid-template-columns: 180px minmax(0, 1fr) 180px;
+      gap: 1rem;
+      padding: 1rem 1.05rem;
+      margin-bottom: 1.2rem;
+      text-decoration: none;
+      color: inherit;
+    }
+    .lead-title,
+    .card-title,
+    .section-title,
+    .related-title {
+      font-family: 'Space Grotesk', serif;
+      line-height: 1.02;
+    }
+    .lead-title {
+      font-size: 1.55rem;
+      margin-bottom: 0.35rem;
+    }
+    .lead-tail {
+      align-self: end;
+      font-family: 'Space Grotesk', monospace;
+      font-size: 0.75rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--muted);
+      text-align: right;
+    }
+    .section {
+      padding: 1rem 1.05rem 1.05rem;
+      margin-bottom: 1.2rem;
+    }
+    .section-head {
+      display: grid;
+      grid-template-columns: 180px minmax(0, 1fr);
+      gap: 1rem;
+      margin-bottom: 0.9rem;
+    }
+    .section-title {
+      font-size: 1.55rem;
+      margin-bottom: 0.25rem;
+    }
+    .card-grid,
+    .related-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.75rem;
+    }
+    .card,
+    .related-card {
+      display: block;
+      border: 1px solid color-mix(in srgb, var(--accent) 16%, var(--border));
+      border-radius: 0;
+      background: var(--surface-2);
+      padding: 1rem;
+      text-decoration: none;
+      color: inherit;
+      transition: border-color 0.18s, background-color 0.18s, box-shadow 0.18s;
+    }
+    .lead-card:hover,
+    .card:hover,
+    .related-card:hover {
+      border-color: color-mix(in srgb, var(--accent) 42%, var(--border));
+      background: color-mix(in srgb, var(--accent-light) 74%, var(--paper));
+      box-shadow: 0 10px 22px color-mix(in srgb, var(--accent) 10%, transparent);
+    }
+    .card-title {
+      font-size: 1.18rem;
+      margin-bottom: 0.35rem;
+    }
+    .card-meta {
+      margin-top: 0.7rem;
+      font-family: 'Space Grotesk', monospace;
+      font-size: 0.75rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+    .related {
+      padding: 1rem 1.05rem;
+    }
+    .related-title {
+      font-size: 1.35rem;
+      margin-bottom: 0.3rem;
+    }
+    .related-card strong {
+      display: block;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.95rem;
+      margin-bottom: 0.18rem;
+    }
+    @media (max-width: 900px) {
+      .hero,
+      .lead-card,
+      .path-block,
+      .path-step,
+      .section-head,
+      .card-grid,
+      .related-grid {
+        grid-template-columns: 1fr;
+      }
+      .hero-aside {
+        border-left: none;
+        border-top: 1px solid var(--border);
+        padding-left: 0;
+        padding-top: 0.9rem;
+      }
+      .lead-tail {
+        text-align: left;
+      }
+    }
+    @media (max-width: 640px) {
+      .hero,
+      .shelf-wrap {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+      }
+      .hero {
+        padding-top: 3.8rem;
+      }
+    }
+  
+}

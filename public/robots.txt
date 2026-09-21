@@ -1,0 +1,67 @@
+# Diego Dell'Agostino — diegodella.ar
+# https://diegodella.ar
+
+# Default policy: public pages are crawlable. Private service paths are not.
+User-agent: *
+Allow: /
+Disallow: /admin
+Disallow: /api/
+
+# Primary search crawlers are explicit so CDN and origin policies can be
+# compared without relying on wildcard interpretation.
+User-agent: Googlebot
+User-agent: Bingbot
+Allow: /
+Disallow: /admin
+Disallow: /api/
+
+# AI search and discovery crawlers.
+User-agent: OAI-SearchBot
+User-agent: Claude-SearchBot
+User-agent: PerplexityBot
+Allow: /
+Disallow: /admin
+Disallow: /api/
+
+# User-initiated retrieval agents. These may not always use robots.txt, but the
+# site's discovery policy is explicit.
+User-agent: ChatGPT-User
+User-agent: Claude-User
+User-agent: Perplexity-User
+Allow: /
+Disallow: /admin
+Disallow: /api/
+
+# Owner policy: search/retrieval allowed; model training blocked.
+# Google-Extended combines training and some Gemini grounding uses; both are
+# blocked by this token. Ordinary Google Search uses Googlebot and stays allowed.
+User-agent: Applebot-Extended
+User-agent: Amazonbot
+User-agent: GPTBot
+User-agent: ClaudeBot
+User-agent: Claude-Web
+User-agent: Anthropic-AI
+User-agent: Google-Extended
+User-agent: DeepSeekBot
+User-agent: CCBot
+User-agent: Cohere-AI
+User-agent: Meta-ExternalAgent
+Disallow: /
+
+# Social and platform preview crawlers.
+User-agent: FacebookBot
+User-agent: Applebot
+User-agent: Twitterbot
+Allow: /
+Disallow: /admin
+Disallow: /api/
+
+# Existing exception retained: ByteDance's Bytespider is blocked.
+User-agent: Bytespider
+Disallow: /
+
+Sitemap: https://diegodella.ar/sitemap.xml
+Agentmap: https://diegodella.ar/.well-known/ai-catalog.json
+
+# Experimental LLM-oriented navigation file (not a ranking mechanism).
+# https://diegodella.ar/llms.txt

@@ -1,0 +1,94 @@
+@layer page {
+
+    ::selection { background: var(--accent); color: var(--on-accent); }
+
+    /* Hero */
+    .hero { max-width: 900px; margin: 0 auto; padding: 5rem 4rem 4rem; }
+    .hero-kicker { font-family: 'Space Grotesk', monospace; font-size: 0.75rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--accent); margin-bottom: 1.25rem; display: flex; align-items: center; gap: 0.75rem; }
+    .hero-kicker::before { content: ''; display: inline-block; width: 24px; height: 1px; background: var(--accent); }
+    .hero-title { font-family: 'Space Grotesk', serif; font-size: clamp(2.8rem, 6vw, 5rem); font-weight: 900; line-height: 1.0; letter-spacing: -0.025em; margin-bottom: 1rem; }
+    .hero-title em { font-style: italic; color: var(--ink); display: block; text-decoration: none; background: linear-gradient(180deg, transparent 54%, color-mix(in srgb, var(--accent) 18%, transparent) 54%); padding: 0 0.08em 0.02em 0; box-decoration-break: clone; -webkit-box-decoration-break: clone; }
+    .hero-subtitle { font-family: 'Inter', sans-serif; font-size: 1.1rem; font-style: italic; color: var(--muted); margin-bottom: 2rem; line-height: 1.5; max-width: 480px; }
+    .hero-byline { display: flex; align-items: center; gap: 0.75rem; }
+    .hero-byline-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--accent); }
+    .hero-byline-text { font-family: 'Space Grotesk', monospace; font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; }
+
+    /* Divider */
+    .chapter-divider { max-width: 900px; margin: 0 auto 3rem; padding: 0 4rem; display: flex; align-items: center; gap: 1.5rem; }
+    .chapter-divider-line { flex: 1; height: 1px; background: linear-gradient(to right, transparent, var(--rule), transparent); }
+    .chapter-divider-ornament { font-family: 'Space Grotesk', serif; font-size: 1.1rem; color: var(--muted); display: flex; gap: 0.4rem; }
+
+    /* Content */
+    .content { max-width: 720px; margin: 0 auto; padding: 0 2.5rem 8rem; }
+
+    .essay-section { margin-bottom: 4.5rem; opacity: 0; transform: translateY(24px); animation: fadeUp 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards; }
+    .essay-section:nth-child(1) { animation-delay: 0.05s; }
+    .essay-section:nth-child(2) { animation-delay: 0.12s; }
+    .essay-section:nth-child(3) { animation-delay: 0.19s; }
+    .essay-section:nth-child(4) { animation-delay: 0.26s; }
+    .essay-section:nth-child(5) { animation-delay: 0.33s; }
+    .essay-section:nth-child(6) { animation-delay: 0.40s; }
+    .essay-section:nth-child(7) { animation-delay: 0.47s; }
+    .essay-section:nth-child(8) { animation-delay: 0.54s; }
+    .essay-section:nth-child(9) { animation-delay: 0.61s; }
+    @keyframes fadeUp { to { opacity: 1; transform: translateY(0); } }
+
+    .section-header { display: flex; align-items: baseline; gap: 1rem; margin-bottom: 1.75rem; padding-bottom: 1rem; border-bottom: 1px solid var(--rule); }
+    .section-header-num { font-family: 'Space Grotesk', serif; font-size: 2.5rem; font-weight: 900; font-style: italic; color: var(--rule); line-height: 1; flex-shrink: 0; transition: color 0.2s; }
+    .essay-section:hover .section-header-num { color: var(--accent); }
+    .section-header-body { display: flex; flex-direction: column; gap: 0.2rem; }
+    .section-header-label { font-family: 'Space Grotesk', monospace; font-size: 0.75rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--accent); }
+    .section-header-title { font-family: 'Space Grotesk', serif; font-size: 1.35rem; font-weight: 700; line-height: 1.15; letter-spacing: -0.01em; }
+
+    .essay-section p { margin-bottom: 1.5rem; font-size: 1.05rem; line-height: 1.92; text-align: justify; hyphens: auto; }
+    .essay-section p:last-child { margin-bottom: 0; }
+
+    .essay-section.intro p:first-of-type::first-letter {
+      font-family: 'Space Grotesk', serif; font-size: 4.2rem; font-weight: 900;
+      float: left; line-height: 0.72; margin-right: 0.07em; margin-top: 0.12em; color: var(--accent);
+    }
+
+    .pull-quote { margin: 2.5rem -2rem; padding: 1.5rem 2rem; border-block: 3px solid var(--accent); background: var(--accent-light); position: relative; }
+    .pull-quote::before { content: '\201C'; font-family: 'Space Grotesk', serif; font-size: 5rem; color: var(--accent); opacity: 0.2; position: absolute; top: -0.5rem; left: 0.5rem; line-height: 1; }
+    .pull-quote p { font-family: 'Space Grotesk', serif; font-size: 1.2rem; font-style: italic; line-height: 1.5; color: var(--deep); margin: 0; text-align: left; position: relative; z-index: 1; }
+    .pull-quote p::first-letter { float: none; font-size: inherit; color: inherit; margin: 0; }
+
+    .margin-note { float: right; width: 140px; margin: 0 -160px 1rem 1.5rem; font-family: 'Space Grotesk', monospace; font-size: 0.75rem; line-height: 1.6; color: var(--muted); border-block-start: 2px solid var(--rule); padding-block-start: 0.75rem; }
+    @media (max-width: 900px) { .margin-note { display: none; } }
+
+    /* Closing */
+    .closing { margin-top: 4rem; padding: 3rem 2rem; border: 1px solid var(--rule); background: var(--highlight); text-align: center; position: relative; overflow: hidden; }
+    .closing::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse at 50% 100%, var(--accent-light) 0%, transparent 70%); pointer-events: none; }
+    .closing-ornament-top { font-family: 'Space Grotesk', serif; font-size: 1.5rem; color: var(--muted); margin-bottom: 1.5rem; opacity: 0.5; }
+    .closing p { font-family: 'Inter', sans-serif; font-size: 1.05rem; line-height: 1.85; max-width: 540px; margin: 0 auto 1rem; text-align: left; position: relative; z-index: 1; }
+    .closing p:last-of-type { margin-bottom: 0; }
+    .closing p::first-letter { float: none; font-size: inherit; color: inherit; margin: 0; }
+    .closing-final { font-family: 'Space Grotesk', serif; font-size: 1.15rem; font-style: italic; text-align: center; margin-top: 1.5rem; color: var(--deep); }
+    .closing-ornament-bottom { margin-top: 1.75rem; font-family: 'Space Grotesk', monospace; font-size: 0.75rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--muted); }
+
+    .share-btn { display: inline-flex; align-items: center; gap: 0.5rem; font-family: 'Space Grotesk', monospace; font-size: 0.75rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--muted); background: none; border: 1px solid var(--rule); padding: 0.5em 1em; cursor: pointer; transition: all 0.15s; margin-top: 1rem; position: relative; z-index: 1; }
+    .share-btn:hover { color: var(--accent); border-color: var(--accent); }
+    .share-btn.copied { color: var(--accent); border-color: var(--accent); }
+
+    .paper-nav { max-width: 680px; margin: 0 auto; padding: 0 2.5rem 5rem; display: flex; justify-content: flex-start; }
+    .paper-nav-back { display: flex; align-items: center; gap: 0.75rem; text-decoration: none; color: var(--ink); font-family: 'Space Grotesk', monospace; font-size: 0.75rem; letter-spacing: 0.15em; text-transform: uppercase; transition: color 0.2s; }
+    .paper-nav-back:hover { color: var(--accent); }
+    .paper-nav-back svg { width: 16px; height: 16px; stroke: currentColor; fill: none; stroke-width: 1.5; }
+
+    @media (max-width: 768px) {
+      .hero { padding: 3rem 1.5rem 2rem; }
+      .content { padding: 0 1.5rem 5rem; }
+      .chapter-divider { padding: 0 1.5rem; }
+      .pull-quote { margin: 2rem 0; }
+      .paper-nav { padding: 0 1.5rem 3rem; }
+    }
+
+    /* Hero SVG */
+    .hero { display: grid; grid-template-columns: 1fr 280px; gap: 2rem; align-items: center; }
+    .hero-svg { width: 100%; height: auto; }
+    @media (max-width: 768px) {
+      .hero { grid-template-columns: 1fr; }
+      .hero-svg { max-width: 200px; margin: 0 auto; order: -1; }
+    }
+  
+}

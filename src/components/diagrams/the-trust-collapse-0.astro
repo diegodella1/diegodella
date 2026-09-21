@@ -1,0 +1,30 @@
+<svg is:raw class="hero-svg" viewBox="0 0 160 200" xmlns="http://www.w3.org/2000/svg">
+        <style is:inline>
+          @keyframes tcCrack{from{stroke-dashoffset:40}to{stroke-dashoffset:0}}
+          @keyframes tcFall{from{transform:translateY(0);opacity:1}to{transform:translateY(8px);opacity:0.3}}
+          @keyframes tcAppear{from{opacity:0}to{opacity:1}}
+        </style>
+        <!-- Floor -->
+        <line opacity="0" stroke="var(--ink)" stroke-width="1.2" style="animation:tcAppear 0.4s 0.2s forwards" x1="15" x2="70" y1="150" y2="150"></line>
+        <line opacity="0" stroke="var(--ink)" stroke-width="1.2" style="animation:tcAppear 0.4s 0.4s forwards" x1="75" x2="85" y1="152" y2="148"></line>
+        <line opacity="0" stroke="var(--ink)" stroke-width="1.2" style="animation:tcAppear 0.4s 0.2s forwards" x1="90" x2="145" y1="150" y2="150"></line>
+        <!-- Pillar 1: Journalist contract -->
+        <rect fill="none" height="90" opacity="0" rx="1" stroke="var(--ink)" stroke-width="1" style="animation:tcAppear 0.5s 0.5s forwards" width="22" x="25" y="60"></rect>
+        <path d="M30 85 L38 75 L42 90" fill="none" stroke="var(--accent)" stroke-dasharray="40" stroke-dashoffset="40" stroke-width="1" style="animation:tcCrack 0.8s 1.2s forwards"></path>
+        <!-- Pillar 2: Creator contract -->
+        <rect fill="none" height="100" opacity="0" rx="1" stroke="var(--ink)" stroke-width="1" style="animation:tcAppear 0.5s 0.7s forwards" width="22" x="69" y="50"></rect>
+        <path d="M74 80 L82 68 L86 88" fill="none" stroke="var(--accent)" stroke-dasharray="40" stroke-dashoffset="40" stroke-width="1" style="animation:tcCrack 0.8s 1.5s forwards"></path>
+        <!-- Pillar 3: Human-at-the-other-end -->
+        <rect fill="none" height="80" opacity="0" rx="1" stroke="var(--ink)" stroke-width="1" style="animation:tcAppear 0.5s 0.9s forwards" width="22" x="113" y="70"></rect>
+        <path d="M118 100 L126 88 L130 105" fill="none" stroke="var(--accent)" stroke-dasharray="40" stroke-dashoffset="40" stroke-width="1" style="animation:tcCrack 0.8s 1.8s forwards"></path>
+        <!-- Pillar labels -->
+        <text fill="var(--muted)" font-family="monospace" font-size="4.5" opacity="0" style="animation:tcAppear 0.4s 0.6s forwards" text-anchor="middle" x="36" y="55">BYLINE</text>
+        <text fill="var(--muted)" font-family="monospace" font-size="4.5" opacity="0" style="animation:tcAppear 0.4s 0.8s forwards" text-anchor="middle" x="80" y="45">CREATOR</text>
+        <text fill="var(--muted)" font-family="monospace" font-size="4.5" opacity="0" style="animation:tcAppear 0.4s 1s forwards" text-anchor="middle" x="124" y="65">HUMAN</text>
+        <!-- Falling debris -->
+        <rect fill="var(--rule)" height="4" opacity="0" style="animation:tcFall 1.5s 2.2s forwards" width="4" x="78" y="155"></rect>
+        <rect fill="var(--rule)" height="3" opacity="0" style="animation:tcFall 1.2s 2.4s forwards" width="3" x="82" y="153"></rect>
+        <!-- Labels -->
+        <text fill="var(--muted)" font-family="monospace" font-size="6" letter-spacing="2" opacity="0" style="animation:tcAppear 0.5s 2.5s forwards" text-anchor="middle" x="80" y="180">THREE CONTRACTS</text>
+        <text fill="var(--rule)" font-family="monospace" font-size="5" letter-spacing="1.5" opacity="0" style="animation:tcAppear 0.5s 2.8s forwards" text-anchor="middle" x="80" y="190">no ceremony</text>
+      </svg>

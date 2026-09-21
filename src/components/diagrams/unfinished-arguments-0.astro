@@ -1,0 +1,21 @@
+<svg is:raw class="hero-svg" style="width:100%;height:auto;margin-bottom:0.75rem;" viewBox="0 0 160 200" xmlns="http://www.w3.org/2000/svg">
+          <style is:inline>
+            @keyframes uaDraw{from{stroke-dashoffset:100}to{stroke-dashoffset:0}}
+            @keyframes uaSpin{from{transform-origin:center;transform:rotate(0deg)}to{transform-origin:center;transform:rotate(360deg)}}
+            @keyframes uaFade{from{opacity:0}to{opacity:1}}
+          </style>
+          <!-- 7 incomplete arcs arranged vertically -->
+          <path d="M60 22 A14 14 0 1 1 60 22.01" fill="none" stroke="var(--accent)" stroke-dasharray="65" stroke-dashoffset="100" stroke-width="1.2" style="animation:uaDraw 2s 0.2s ease-out forwards" transform="translate(20,0)"></path>
+          <path d="M60 47 A14 14 0 1 1 35 40" fill="none" stroke="var(--muted)" stroke-dasharray="60" stroke-dashoffset="100" stroke-width="1" style="animation:uaDraw 2s 0.4s ease-out forwards" transform="translate(20,0)"></path>
+          <path d="M60 72 A14 14 0 1 1 48 60" fill="none" opacity="0.6" stroke="var(--ink)" stroke-dasharray="55" stroke-dashoffset="100" stroke-width="1" style="animation:uaDraw 2s 0.6s ease-out forwards" transform="translate(20,0)"></path>
+          <path d="M60 97 A14 14 0 1 1 60 97.01" fill="none" stroke="var(--accent)" stroke-dasharray="70" stroke-dashoffset="100" stroke-width="1.2" style="animation:uaDraw 2.5s 0.8s ease-out forwards" transform="translate(20,0)"></path>
+          <path d="M60 122 A14 14 0 1 1 42 115" fill="none" stroke="var(--muted)" stroke-dasharray="58" stroke-dashoffset="100" stroke-width="1" style="animation:uaDraw 2s 1s ease-out forwards" transform="translate(20,0)"></path>
+          <path d="M60 147 A14 14 0 1 1 50 135" fill="none" stroke="var(--rule)" stroke-dasharray="52" stroke-dashoffset="100" stroke-width="0.8" style="animation:uaDraw 2s 1.2s ease-out forwards" transform="translate(20,0)"></path>
+          <path d="M60 172 A14 14 0 1 1 38 165" fill="none" stroke="var(--accent)" stroke-dasharray="56" stroke-dashoffset="100" stroke-width="1" style="animation:uaDraw 2s 1.4s ease-out forwards" transform="translate(20,0)"></path>
+          <!-- Question marks at gaps -->
+          <text fill="var(--accent)" font-family="monospace" font-size="7" opacity="0" style="animation:uaFade 0.3s 1.8s forwards" x="100" y="30">?</text>
+          <text fill="var(--accent)" font-family="monospace" font-size="7" opacity="0" style="animation:uaFade 0.3s 2.2s forwards" x="100" y="105">?</text>
+          <text fill="var(--accent)" font-family="monospace" font-size="7" opacity="0" style="animation:uaFade 0.3s 2.6s forwards" x="100" y="180">?</text>
+          <!-- Count label -->
+          <text fill="var(--muted)" font-family="monospace" font-size="5.5" letter-spacing="1.5" opacity="0" style="animation:uaFade 0.5s 2.8s forwards" text-anchor="middle" x="80" y="198">7 OPEN</text>
+        </svg>

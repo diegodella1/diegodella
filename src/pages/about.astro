@@ -1,0 +1,77 @@
+---
+import SiteLayout from "../layouts/SiteLayout.astro";
+import Biography from "../components/Biography.astro";
+import Footer from "../components/Footer.astro";
+import Navigation from "../components/Navigation.astro";
+import Block0 from "../components/diagrams/about-0.astro";
+---
+<SiteLayout page="about">
+<a href="#main-content" class="skip-link">Skip to content</a>
+<div class="top-bar"><span>About Diego</span><span>Media · Product · Marketing · Content · Communities · AI</span></div>
+<Navigation />
+<main id="main-content">
+<header class="nm-page-hero about-hero">
+<div class="about-hero-copy">
+<p class="nm-page-label">Diego Dell'Agostino</p>
+<h1>I build media products and the systems behind them.</h1>
+<p><Biography kind="micro" /></p>
+</div>
+<div class="about-signal" aria-hidden="true"> <Block0 /> </div>
+</header>
+<section class="nm-page-main">
+<div class="nm-two-col">
+<h2>About.</h2>
+<div>
+<p class="nm-page-copy"><Biography kind="full" /></p>
+</div>
+</div>
+<div class="nm-two-col">
+<h2>What I've built.</h2>
+<div class="nm-ledger">
+<a href="work-posta.html"><span class="nm-page-label">Posta · Co-founder</span><strong>A podcast company before podcasting became obvious</strong><p>Posta began in Buenos Aires in 2014 and built original programming, branded audio, audience relationships, distribution, and regional operations. I worked across product, marketing, growth, positioning, and business development. PodX acquired a majority stake in 2022.</p></a>
+<a href="work-roxom.html"><span class="nm-page-label">Roxom TV · Founding team</span><strong>A 24/7 global media operation</strong><p>I worked across media architecture and product operations as Roxom TV built live, editorial, data, automation, and internal-tooling systems spanning San Francisco, London, Hong Kong, and remote work from Buenos Aires.</p></a>
+<div class="nm-ledger-item"><span class="nm-page-label">Teaching and programs</span><strong>Digital House · ICFJ / SembraMedia Velocidad</strong><p>I taught Digital Marketing at Digital House (2017–2022) and was Academic Content Lead for the initial and advanced courses in Argentina and Brazil (2018–2022), including immersion and in-company programs. Posta took part in the Velocidad accelerator, run by ICFJ and SembraMedia.</p></div>
+<div class="nm-contact-actions"><p>Read more about my role in the <a href="work-posta.html">Posta</a> and <a href="work-roxom.html">Roxom TV</a> case studies, which include links to public coverage.</p></div>
+</div>
+</div>
+<div class="nm-two-col">
+<h2>Today.</h2>
+<div>
+<p class="nm-page-copy">My current territory is <a href="ai-media.html">AI-native media</a>: products and operations designed with AI inside the workflow rather than bolted onto the output. It grows out of earlier work in media, product, marketing, content, audiences, and communities. I build and test agents, research systems, live-production tools, editorial infrastructure, product experiments, and small interfaces that make difficult operational work more legible.</p>
+<p class="nm-page-copy">I also write <a href="essays.html">Narrative Mechanics</a>, a body of essays and frameworks about positioning, attention, trust, product meaning, and what changes when machines increasingly mediate discovery.</p>
+</div>
+</div>
+<div class="nm-two-col">
+<h2>The foundation.</h2>
+<div class="nm-ledger"> <a href="work.html"><span class="nm-page-label">Digital media</span><strong>Companies, formats, and operating systems</strong><p>Podcasting, digital publishing, live production, distributed teams, and the machinery behind continuous media.</p></a> <a href="about.html#products"><span class="nm-page-label">Digital products</span><strong>Audience-facing experiences and internal tools</strong><p>Product strategy, interfaces, workflows, feedback loops, and practical tools built around real constraints.</p></a> <a href="work-posta.html"><span class="nm-page-label">Marketing and distribution</span><strong>Helping a format become legible and find demand</strong><p>Positioning, growth, brand relationships, channel design, and distribution when the market category is still forming.</p></a> <a href="essays.html"><span class="nm-page-label">Content strategy</span><strong>Programming, branded content, editorial systems, and narrative</strong><p>Content as part of a product and operating model, not an isolated stream of output.</p></a> <a href="zmox.html"><span class="nm-page-label">Audiences and communities</span><strong>From reach and return to participation and shared language</strong><p>Audience development, feedback, trust, community dynamics, and the difference between attention and belonging.</p></a> </div>
+</div>
+<div class="nm-two-col">
+<h2>The current frontier.</h2>
+<div class="nm-ledger"> <a href="ai-media.html"><span class="nm-page-label">AI-native media</span><strong>AI inside the product and operation</strong><p>How research, content, interfaces, metadata, publishing, and decisions fit into one media system.</p></a> <a href="work-roxom.html"><span class="nm-page-label">Editorial operations</span><strong>Distributed workflows, observability, and recovery</strong><p>Live production, global handoffs, shared state, remote control, and accountable automation.</p></a> <a href="ai-media.html"><span class="nm-page-label">Agents and automation</span><strong>Agentic workflows with bounded authority</strong><p>Research, preparation, metadata, operational steps, human approvals, and escalation paths.</p></a> <a href="writing-for-the-filter.html"><span class="nm-page-label">AI-mediated discovery</span><strong>Writing for humans, algorithms, and agents</strong><p>How systems classify, retrieve, cite, trust, or misread a product, source, or idea.</p></a> </div>
+</div>
+<div class="nm-two-col" id="products">
+<h2>Products I'm working on.</h2>
+<div>
+<p class="nm-page-copy">You can try the products or open their public repositories.</p>
+<div class="nm-ledger nm-project-grid"> <a href="https://priceb.tc/" target="_blank" rel="noopener noreferrer"><span class="nm-page-label">Live data · Broadcast graphics</span><strong>PRICEB.TC <span aria-hidden="true">↗</span></strong><p>Creates free live Bitcoin price widgets for websites and transparent OBS overlays in more than 160 fiat currencies.</p></a> <a href="https://github.com/diegodella1/f1-race-monitor" target="_blank" rel="noopener noreferrer"><span class="nm-page-label">Sim racing · Live telemetry</span><strong>F1 Race Monitor <span aria-hidden="true">↗</span></strong><p>A local-first race engineer for EA SPORTS F1 25, with live timing, strategy, race radio, and car health on a phone or tablet beside the wheel.</p></a> <a href="https://f1.diegodella.ar/" target="_blank" rel="noopener noreferrer"><span class="nm-page-label">Formula 1 · Race strategy</span><strong>F1 Companion <span aria-hidden="true">↗</span></strong><p>Turns Formula 1 race-weekend timing into context on battles, pace, tyres, and strategy.</p></a> <a href="https://signal.diegodella.ar/" target="_blank" rel="noopener noreferrer"><span class="nm-page-label">Independent radio · Visual culture</span><strong>SIGNAL <span aria-hidden="true">↗</span></strong><p>Combines independent music, visual culture, and brief updates in a browser-based radio experience.</p></a> <a class="nm-project-featured" href="https://xposter.diegodella.ar/" target="_blank" rel="noopener noreferrer"><span class="nm-page-label">AI-native media · Editorial operations</span><strong>XPoster <span aria-hidden="true">↗</span></strong><p>Monitors authorized sources, detects relevant events, and prepares evidence-linked drafts while editors retain final control.</p></a> <a href="https://referi.diegodella.ar/" target="_blank" rel="noopener noreferrer"><span class="nm-page-label">Interactive media product</span><strong>Referí <span aria-hidden="true">↗</span></strong><p>A pocket referee booth for live matches: review the play, make the call, and compare it with the official ruling.</p></a> <a href="https://liveoverlay.diegodella.ar/" target="_blank" rel="noopener noreferrer"><span class="nm-page-label">Live media · Audience interaction</span><strong>LiveOverlay <span aria-hidden="true">↗</span></strong><p>Controls QR codes, polls, tickers, lower thirds, sponsors, and more from a single OBS Browser Source.</p></a> <a href="https://renamer.diegodella.ar/" target="_blank" rel="noopener noreferrer"><span class="nm-page-label">Content workflow · Local automation</span><strong>Renamer <span aria-hidden="true">↗</span></strong><p>Turns vague filenames into descriptive, safe, and reversible names for photos, screenshots, and PDFs, processed locally.</p></a> <a href="https://lifearg.diegodella.ar/" target="_blank" rel="noopener noreferrer"><span class="nm-page-label">Relocation intelligence</span><strong>Life Match Argentina <span aria-hidden="true">↗</span></strong><p>Matches the life you want with Argentine cities using comparable evidence, transparent trade-offs, and confidence levels.</p></a> <a href="https://digsign.diegodella.ar/" target="_blank" rel="noopener noreferrer"><span class="nm-page-label">Content operations</span><strong>DigSign <span aria-hidden="true">↗</span></strong><p>Centralizes campaigns, approvals, playlists, screens, and playback monitoring for brands, franchises, and agencies.</p></a> <a href="https://intelligenz.diegodella.ar/" target="_blank" rel="noopener noreferrer"><span class="nm-page-label">AI agent · Editorial research</span><strong>Intelligenz <span aria-hidden="true">↗</span></strong><p>Turns monitored sources into daily briefs ranked against each leader's goals, risks, actors, and opportunities.</p></a> <a href="https://audience.diegodella.ar/" target="_blank" rel="noopener noreferrer"><span class="nm-page-label">Audience research · Product strategy</span><strong>DecisionOS <span aria-hidden="true">↗</span></strong><p>Uses synthetic focus groups to surface objections and turn a product proposal into next experiments before building or launching.</p></a> <a href="https://broadcast-planner.diegodella.ar/" target="_blank" rel="noopener noreferrer"><span class="nm-page-label">Editorial operations · Media automation</span><strong>Broadcast Control Room <span aria-hidden="true">↗</span></strong><p>Plans the broadcast day, prepares media, catches schedule risk, and sends protected browser playout into OBS or vMix.</p></a> <a href="https://teleprompter.diegodella.ar/" target="_blank" rel="noopener noreferrer"><span class="nm-page-label">Live production · Content workflow</span><strong>telePRO <span aria-hidden="true">↗</span></strong><p>A browser-based teleprompter for live production, remote control, rehearsal, and reliable on-camera delivery.</p></a> <a href="https://tradingbot.diegodella.ar/" target="_blank" rel="noopener noreferrer"><span class="nm-page-label">Trading systems</span><strong>PolyBot BTC <span aria-hidden="true">↗</span></strong><p>A safety-first research and paper-trading framework for recurring BTC Up/Down prediction markets.</p></a> <a href="https://presidente.diegodella.ar/" target="_blank" rel="noopener noreferrer"><span class="nm-page-label">Political simulation</span><strong>El Presidente <span aria-hidden="true">↗</span></strong><p>A daily game of decisions, consequences, and minigames: govern for four years and discover what kind of president you were.</p></a> </div>
+</div>
+</div>
+<div class="nm-two-col">
+<h2>Elsewhere.</h2>
+<div class="nm-ledger"> <a href="https://www.linkedin.com/in/diegodella/" target="_blank" rel="noopener noreferrer"><span class="nm-page-label">Professional profile</span><strong>LinkedIn <span aria-hidden="true">↗</span></strong><p>My professional background and current work.</p></a> <a href="https://github.com/diegodella1" target="_blank" rel="noopener noreferrer"><span class="nm-page-label">Public work</span><strong>GitHub <span aria-hidden="true">↗</span></strong><p>Agent, live-production, and other technical experiments.</p></a> <a href="speaking.html"><span class="nm-page-label">Interviews and events</span><strong>Speaking</strong><p>Topics I can discuss from direct building and operating experience.</p></a> <a href="media-kit.html"><span class="nm-page-label">Copy-ready</span><strong>Media Kit</strong><p>Official name, bios, location, topics, and identity links.</p></a> </div>
+</div>
+<div class="nm-two-col" id="work">
+<h2>Work with Diego.</h2>
+<div class="nm-ledger">
+<div class="nm-ledger-item"><span class="nm-page-label">Build</span><strong>Media products and operating systems</strong><p>Workflows, editorial systems, AI-assisted processes, publishing loops, live-production tooling, and internal interfaces.</p></div>
+<a href="consulting.html"><span class="nm-page-label">Advise</span><strong>Product, positioning, and operational clarity</strong><p>For media ventures and product teams whose work is strong but whose system or market meaning is not coherent enough yet.</p></a>
+<div class="nm-contact-actions">
+<a class="nm-work-button" href="about.html#work" data-open-contact="" data-contact-mode="conversation">Start a conversation</a>
+<p>Send the context, what you are building, and where the product, workflow, team, or market interpretation is breaking.</p>
+</div>
+</div>
+</div>
+</section>
+</main>
+<Footer />
+</SiteLayout>

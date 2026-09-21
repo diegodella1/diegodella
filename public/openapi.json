@@ -1,0 +1,272 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "DiegoDella Public API",
+    "version": "1.2.0",
+    "description": "Public JSON endpoints for Diego Dell'Agostino's site status and direct contact flow. Stable operations use the /api/v1 path. Errors follow RFC 9457 Problem Details. Contact retries support Idempotency-Key.",
+    "contact": {
+      "name": "Diego Dell'Agostino",
+      "url": "https://diegodella.ar/contact.html",
+      "email": "dellagostino@gmail.com"
+    }
+  },
+  "externalDocs": {
+    "description": "DiegoDella developer portal, quickstart, limits, and deprecation policy",
+    "url": "https://diegodella.ar/developers.html"
+  },
+  "servers": [
+    {
+      "url": "https://diegodella.ar",
+      "description": "Production"
+    }
+  ],
+  "security": [],
+  "tags": [
+    {
+      "name": "Status",
+      "description": "Read-only service discovery and health information."
+    },
+    {
+      "name": "Contact",
+      "description": "Send a direct message to Diego. No API key is required."
+    }
+  ],
+  "components": {
+    "headers": {
+      "RateLimitPolicy": {
+        "description": "Quota policy using the IETF RateLimit-Policy structured field.",
+        "schema": { "type": "string" },
+        "example": "\"public\";q=120;w=60"
+      },
+      "RateLimit": {
+        "description": "Current remaining quota and reset window using the IETF RateLimit structured field.",
+        "schema": { "type": "string" },
+        "example": "\"public\";r=119;t=60"
+      },
+      "RetryAfter": {
+        "description": "Seconds the client must wait before retrying a rate-limited request.",
+        "schema": { "type": "integer", "minimum": 1 }
+      },
+      "IdempotencyReplayed": {
+        "description": "Present with value true when a successful contact response was replayed without creating another delivery request.",
+        "schema": { "type": "string", "const": "true" }
+      }
+    },
+    "parameters": {
+      "AcceptJson": {
+        "name": "Accept",
+        "in": "header",
+        "required": false,
+        "description": "Request the JSON representation returned by this operation.",
+        "schema": {
+          "type": "string",
+          "enum": ["application/json"]
+        }
+      },
+      "IdempotencyKey": {
+        "name": "Idempotency-Key",
+        "in": "header",
+        "required": false,
+        "description": "A stable opaque key for safely retrying the same contact request. Reuse with a different payload returns 409.",
+        "schema": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 200,
+          "pattern": "^[!-~]+$"
+        },
+        "example": "contact-ada-001"
+      }
+    },
+    "schemas": {
+      "StatusResponse": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "ok": { "type": "boolean", "const": true },
+          "service": { "type": "string" },
+          "version": { "type": "string" },
+          "endpoints": {
+            "type": "array",
+            "items": { "type": "string" }
+          },
+          "documentation": { "type": "string", "format": "uri" },
+          "openapi": { "type": "string", "format": "uri" }
+        },
+        "required": ["ok", "service", "version", "endpoints", "documentation", "openapi"]
+      },
+      "ContactRequest": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "mode": {
+            "type": "string",
+            "enum": ["conversation", "updates"],
+            "default": "conversation"
+          },
+          "name": { "type": "string", "maxLength": 120 },
+          "email": {
+            "type": "string",
+            "format": "email",
+            "maxLength": 254
+          },
+          "subject": { "type": "string", "minLength": 1, "maxLength": 160 },
+          "message": { "type": "string", "minLength": 1, "maxLength": 5000 }
+        },
+        "required": ["email", "subject", "message"]
+      },
+      "ContactResponse": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "ok": { "type": "boolean", "const": true },
+          "id": { "type": ["string", "null"] }
+        },
+        "required": ["ok", "id"]
+      },
+      "FieldError": {
+        "type": "object",
+        "additionalProperties": true,
+        "properties": {
+          "field": { "type": "string" },
+          "code": { "type": "string" },
+          "limit": { "type": "integer" }
+        },
+        "required": ["field", "code"]
+      },
+      "Problem": {
+        "type": "object",
+        "description": "RFC 9457 Problem Details with stable machine code and recovery guidance.",
+        "additionalProperties": true,
+        "properties": {
+          "type": { "type": "string", "format": "uri-reference" },
+          "title": { "type": "string" },
+          "status": { "type": "integer", "minimum": 400, "maximum": 599 },
+          "detail": { "type": "string" },
+          "instance": { "type": "string", "format": "uri-reference" },
+          "code": { "type": "string" },
+          "resolution": { "type": "string" },
+          "error": {
+            "type": "string",
+            "description": "Backward-compatible alias of detail for the existing browser contact form."
+          },
+          "errors": {
+            "type": "array",
+            "items": { "$ref": "#/components/schemas/FieldError" }
+          }
+        },
+        "required": ["type", "title", "status", "detail", "instance", "code", "resolution", "error"]
+      }
+    }
+  },
+  "paths": {
+    "/api/v1/status": {
+      "get": {
+        "operationId": "getApiStatus",
+        "summary": "Read API status and discovery links",
+        "description": "Returns the current API version, supported canonical endpoints, developer documentation, and OpenAPI URL. This operation is public and read-only.",
+        "tags": ["Status"],
+        "parameters": [
+          { "$ref": "#/components/parameters/AcceptJson" }
+        ],
+        "responses": {
+          "200": {
+            "description": "API status and machine-readable discovery links.",
+            "headers": {
+              "RateLimit-Policy": { "$ref": "#/components/headers/RateLimitPolicy" },
+              "RateLimit": { "$ref": "#/components/headers/RateLimit" }
+            },
+            "content": {
+              "application/json": {
+                "schema": { "$ref": "#/components/schemas/StatusResponse" }
+              }
+            }
+          },
+          "429": {
+            "description": "Client quota exhausted.",
+            "headers": {
+              "Retry-After": { "$ref": "#/components/headers/RetryAfter" },
+              "RateLimit-Policy": { "$ref": "#/components/headers/RateLimitPolicy" },
+              "RateLimit": { "$ref": "#/components/headers/RateLimit" }
+            },
+            "content": {
+              "application/problem+json": {
+                "schema": { "$ref": "#/components/schemas/Problem" }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/contact": {
+      "post": {
+        "operationId": "sendContactRequest",
+        "summary": "Send a direct contact request",
+        "description": "Validates and sends a conversation or update request to Diego. Supply Idempotency-Key when a network failure may require a safe retry, and honor the returned rate-limit fields.",
+        "tags": ["Contact"],
+        "parameters": [
+          { "$ref": "#/components/parameters/IdempotencyKey" }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": { "$ref": "#/components/schemas/ContactRequest" }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Contact request accepted and delivered.",
+            "headers": {
+              "RateLimit-Policy": { "$ref": "#/components/headers/RateLimitPolicy" },
+              "RateLimit": { "$ref": "#/components/headers/RateLimit" },
+              "Idempotency-Replayed": { "$ref": "#/components/headers/IdempotencyReplayed" }
+            },
+            "content": {
+              "application/json": {
+                "schema": { "$ref": "#/components/schemas/ContactResponse" }
+              }
+            }
+          },
+          "400": {
+            "description": "Malformed JSON or invalid contact fields.",
+            "content": {
+              "application/problem+json": {
+                "schema": { "$ref": "#/components/schemas/Problem" }
+              }
+            }
+          },
+          "409": {
+            "description": "The idempotency key is already processing or was reused with a different payload.",
+            "content": {
+              "application/problem+json": {
+                "schema": { "$ref": "#/components/schemas/Problem" }
+              }
+            }
+          },
+          "429": {
+            "description": "Contact quota exhausted.",
+            "headers": {
+              "Retry-After": { "$ref": "#/components/headers/RetryAfter" },
+              "RateLimit-Policy": { "$ref": "#/components/headers/RateLimitPolicy" },
+              "RateLimit": { "$ref": "#/components/headers/RateLimit" }
+            },
+            "content": {
+              "application/problem+json": {
+                "schema": { "$ref": "#/components/schemas/Problem" }
+              }
+            }
+          },
+          "503": {
+            "description": "Email delivery is temporarily unavailable.",
+            "content": {
+              "application/problem+json": {
+                "schema": { "$ref": "#/components/schemas/Problem" }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

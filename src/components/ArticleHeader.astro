@@ -1,0 +1,11 @@
+---
+import PublishedDate from './PublishedDate.astro';
+import { siteData, slugFromUrl } from '../lib/site';
+const article = (await siteData()).writing.find(entry => entry.slug === slugFromUrl(Astro.url));
+if (!article) throw new Error(`Missing article: ${Astro.url.pathname}`);
+---
+<header class="article-header">
+  <h1>{article.title}</h1>
+  <p class="article-deck">{article.description}</p>
+  <PublishedDate />
+</header>

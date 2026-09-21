@@ -26,3 +26,12 @@ services/notify/__pycache__/
 
 # Immutable static releases built from Git commits.
 .releases/
+
+# Astro and local migration evidence
+node_modules/
+dist/
+.astro/
+.migration/
+
+# Verified local archives, never published
+.archive/

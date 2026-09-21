@@ -1,0 +1,257 @@
+---
+title: "Launching Into Noise"
+description: "Separate acquisition source from evidence of fit, observe early use, and compare cohorts before scaling a launch."
+datePublished: "2026-02-20"
+tags: ["product", "distribution", "narrative"]
+dateModified: "2026-09-14"
+presentation: "paper-05"
+order: 8
+listing: {"group": 0, "order": 5, "topics": "product-clarity distribution", "label": "Launch"}
+---
+
+import ArticleField from "../../components/ArticleField.astro";
+import Footer from "../../components/Footer.astro";
+import Navigation from "../../components/Navigation.astro";
+import ArticleHeader from "../../components/ArticleHeader.astro";
+import Block0 from "../../components/diagrams/paper-05-0.astro";
+import Block1 from "../../components/diagrams/paper-05-1.astro";
+import Block2 from "../../components/diagrams/paper-05-2.astro";
+import Block3 from "../../components/diagrams/already-decided-3.astro";
+import Block4 from "../../components/diagrams/paper-05-4.astro";
+import Block5 from "../../components/diagrams/paper-02-5.astro";
+import Block6 from "../../components/diagrams/paper-02-4.astro";
+import Block7 from "../../components/diagrams/paper-05-7.astro";
+import Block8 from "../../components/diagrams/already-decided-2.astro";
+import Block9 from "../../components/diagrams/already-decided-3.astro";
+
+<a href="#main-content" class="skip-link">Skip to content</a>
+<div id="pbar"></div>
+<div id="pbar-label"></div>
+<div class="page-wrap">
+
+
+
+<Navigation />
+<ArticleHeader />
+<div class="chapter-divider">
+<div class="chapter-divider-line"></div>
+</div>
+<main class="content" id="main-content">
+<article class="section">
+<div class="section-badge">
+<div class="section-icon"><Block1 /></div>
+<div class="section-meta">
+<div class="section-number">Section I / Six</div>
+<h2 class="section-title">The Playbook Was Built for a Different World</h2>
+</div>
+</div>
+<div class="section-rule"></div>
+<div class="section-body">
+<p>This paper applies <a href="occlusion-bias.html"><ArticleField slug="occlusion-bias" field="title" /></a> to go-to-market decisions. I propose three practices: Signal Isolation, which separates acquisition source from subsequent use; Direct Path Construction, which recruits people through identifiable relationships; and Trust-First Sequencing, which tests the product with those people before scaling. These practices offer a way to examine early traction. They do not make relationship-based cohorts representative by default.</p>
+<div class="article-opening-diagram"><Block0 /></div>
+<p>A launch can combine press, search, communities, paid acquisition, and referrals. The risk is treating the resulting traffic as one kind of evidence. Each route selects people differently, and a successful campaign can still bring people who have little reason to keep using the product.</p>
+<div class="margin-note">The launch depends on work that starts before the announcement: recruiting users, tracking what they do, and deciding what would justify scaling. The plan should state which assumptions about distribution it needs to test.</div>
+<p>Distribution problems can come from targeting, timing, creative work, or changes to the system carrying the message. Teams need to distinguish those causes before changing the product in response to a launch dashboard.</p>
+<p><a href="occlusion-bias.html">Distribution Occlusion</a> names the visibility problem examined in the preceding paper: the work a platform surfaces is only part of what was available. The same limitation applies to a launch. The people who arrive are a selected sample, not a direct reading of the whole market.</p>
+<p>The implication for go-to-market is direct and underappreciated: a product that generates traffic and early adoption signals in an occluded environment has not necessarily found its market. It may have found the algorithm. And the PMM who declares early traction as evidence of product-market fit, and builds a scaling strategy on that declaration, is committing the same survivorship bias that Occlusion Bias describes in the editorial context. The machine is counting returning planes. It is not counting the ones that didn't come back.</p>
+<div class="pull-quote">
+<p>A product that generates traffic in week one has not necessarily found its market. It may have found the algorithm. Those are not the same thing, and the organizations that treat them as equivalent are scaling distribution on top of a misreading.</p>
+</div>
+<p>The deeper problem is not that distribution is broken. It is that the breakage corrupts the instruments PMMs use to read the market. PMF is not a PMM competency. It is a product condition. The PMM reads the signals that indicate whether that condition has been achieved. Those signals sit downstream of the distribution layer. When that layer stops discriminating reliably, the signals arrive compromised. A product with strong early metrics may be genuinely resonant, or it may have found the algorithm at the right moment, or been amplified by a high-volume low-intent channel that converts once and doesn't return. The data looks identical in all three cases. The interpretation is entirely different. By the time the retention curve reveals which, the investment has already been made.</p>
+<p>One precision matters here. Distribution Occlusion corrupts acquisition signals most severely: traffic, early signups, top-of-funnel conversion. Post-acquisition behavioral signals are substantially less corrupted. Someone who arrived through Product Hunt noise and stays ninety days is giving real signal regardless of the channel. The corruption is concentrated at the acquisition layer and propagates downstream only when the channel introduces systematic selection bias toward users who aren't representative of the target market. Retention and engagement data from algorithmically-acquired cohorts deserves scrutiny, not blanket dismissal. What deserves dismissal is using acquisition volume as a proxy for fit before the behavioral data has had time to develop.</p>
+
+</div>
+</article>
+<article class="section">
+<div class="section-badge">
+<div class="section-icon"><Block2 /></div>
+<div class="section-meta">
+<div class="section-number">Section II / Six · Move I</div>
+<h2 class="section-title">Signal Isolation</h2>
+</div>
+</div>
+<div class="section-rule"></div>
+<div class="section-body">
+<p>The first move is to separate how someone arrived from what they did afterward. A personal recommendation and an ad describe different acquisition paths. Neither proves that the product fits the user’s needs. Continued use, retention, and referrals can help test that, whatever the source.</p>
+<div class="construct-def">
+<div class="construct-def-label">Move I</div>
+<div class="construct-def-name">Signal Isolation</div>
+<div class="construct-def-body">
+<p>The deliberate process of applying a two-stage filter to early adoption data. The first stage is at acquisition: did this user arrive through a path the algorithm controlled? If yes, their arrival is evidence of algorithmic exposure, not of fit. The second stage is behavioral: what did this user do after arriving? Post-acquisition retention, engagement depth, and unprompted referral are substantially less corrupted by channel origin and constitute genuine signal regardless of how the user was acquired. Signal Isolation does not dismiss algorithmically-acquired users. It refuses to use their arrival as evidence of fit while remaining fully attentive to what their behavior reveals once they are in.</p>
+<p>Isolated acquisition signal: word-of-mouth referrals with traceable relationship origin; direct outreach responses; users who arrived because a specific named person sent them. Reliable behavioral signal: ninety-day retention, expansion behavior, and unprompted referral from any cohort, regardless of acquisition channel, once sufficient time has elapsed. The discipline is to keep the two stages separate and never let strong acquisition numbers substitute for the behavioral evidence that has not yet had time to develop.</p>
+</div>
+</div>
+<p>A fair objection: in 2026, almost no discovery path is entirely free of algorithmic intermediation. Word-of-mouth travels through WhatsApp, LinkedIn, Slack, and Twitter, all of which surface and suppress content algorithmically. The paper does not pretend that clean separation is possible at scale. What it claims is more limited: the strength of the direct relationship between recommender and recipient is the variable that matters, and that property is measurable even when the delivery channel isn't clean. A user who arrived because a specific person said "you should look at this" is structurally different from one who arrived because an ad appeared in their feed, even if both traveled through the same platform. The measurement challenge is to capture the relationship origin, not the delivery channel.</p>
+<p>In practice, Signal Isolation means building the measurement architecture before the launch, not after. It means tagging acquisition sources at a level of granularity that distinguishes between a user who arrived because a specific trusted person recommended the product and a user who arrived because an ad appeared in their feed. These two users may convert at the same rate in week one. Track whether they behave differently in month three. The organization that cannot distinguish them will misread the early data and draw the wrong inference.</p>
+<p>A launch with ten thousand Product Hunt signups and forty personal referrals has two acquisition cohorts to examine. Record both. The smaller group may be easier to interview, but that alone does not make its behavior more representative of the market. Observe use over time before treating either arrival count as evidence of fit.</p>
+<div class="pull-quote">
+<p>Keep both cohorts visible. Do not mistake a large launch for evidence of sustained use, or a personal introduction for proof that the product works.</p>
+</div>
+</div>
+</article>
+<article class="section">
+<div class="section-badge">
+<div class="section-icon"><Block3 /></div>
+<div class="section-meta">
+<div class="section-number">Section III / Six · Move II</div>
+<h2 class="section-title">Direct Path Construction</h2>
+</div>
+</div>
+<div class="section-rule"></div>
+<div class="section-body">
+<p>The second move is to recruit an initial cohort deliberately. Personal introductions can help a team understand why someone tried the product and arrange a follow-up conversation. Use that context alongside behavioral data, and compare it with other acquisition paths rather than assuming they cannot provide useful evidence.</p>
+<div class="construct-def">
+<div class="construct-def-label">Move II</div>
+<div class="construct-def-name">Direct Path Construction</div>
+<div class="construct-def-body">
+<p>The deliberate design of a route from product to right audience that does not depend on any intermediated surface at any critical stage. Direct Path Construction does not mean avoiding all distribution channels. It means identifying the specific people whose trust already extends to the problem space the product operates in, and building a path to those people that does not require an algorithm to make an introduction.</p>
+<p>A direct path is any route where the introduction is mediated by a named human relationship rather than a platform recommendation: a former colleague who knows the problem from the inside and sends a personal note to three people they know face the same constraint; a practitioner community member who has seen the product in context and makes a specific targeted introduction; a trusted operator in the category whose endorsement travels person-to-person because it comes with their specific credibility attached, not because an algorithm decided to surface it.</p>
+</div>
+</div>
+<p>Direct Path Construction shares lineage with concierge onboarding, design partner programs, and "do things that don't scale." It does not claim to have invented those practices. What it adds is a structural argument for why they are now necessary rather than merely advisable, and a specific criterion for what a "direct path" means in an occluded environment.</p>
+<p>A named human relationship, as used here, is an introduction from someone who knows both the product and the recipient’s situation well enough to explain the relevance. Record who made the introduction and why. A broadcast recommendation, a community post, and a personal introduction provide different kinds of context. None establishes fit on its own; each cohort still needs behavioral evidence and a check for selection bias.</p>
+<p>The standard go-to-market asks: how do we get discovered? Direct Path Construction asks a different question: who already trusts someone who knows us, and how do we reach them before any algorithm decides whether we deserve to be seen? The second question is narrower, slower, and significantly more expensive per contact in the short term. It can produce detailed feedback from people whose problem and reason for trying the product you can trace.</p>
+<p>The practical work of Direct Path Construction starts before the product exists. It is the work that Narrative-First describes at the production layer: building a public record of thinking about the problem, developing a point of view that attracts the right people before the solution is ready, and establishing a presence in the communities where the right audience already congregates. By the time the product launches, the direct path already exists. The launch is not the beginning of the relationship. It is a milestone in one that has already been established.</p>
+<p>Organizations that have not done this work before the launch have a harder version of the same problem. They can still construct direct paths, but they are building the relationship and asking for the adoption simultaneously, which creates a trust deficit that paid distribution cannot compensate for. The answer is not to delay the launch indefinitely. It is to scope the initial launch to the size of the direct path that actually exists, and treat everything beyond that scope as experimental distribution rather than evidence-generating signal.</p>
+</div>
+</article>
+<article class="section">
+<div class="section-badge">
+<div class="section-icon"><Block4 /></div>
+<div class="section-meta">
+<div class="section-number">Section IV / Six · Move III</div>
+<h2 class="section-title">Trust-First Sequencing</h2>
+</div>
+</div>
+<div class="section-rule"></div>
+<div class="section-body">
+<p>The third move is a reordering of the launch timeline that follows directly from the first two. If Signal Isolation requires a small, traceable, trust-mediated population as the evidence base, and if Direct Path Construction requires that the relationship precede the ask, then the standard launch sequence: build, announce publicly, acquire at scale, read the metrics, iterate; is wrong in its ordering for an occluded environment.</p>
+<div class="construct-def">
+<div class="construct-def-label">Move III</div>
+<div class="construct-def-name">Trust-First Sequencing</div>
+<div class="construct-def-body">
+<p>A launch timeline reordered so that the audience relationship precedes the public release, and the public release is scoped to match the size of the genuine trust-based audience rather than the maximum possible reach. Trust-First Sequencing treats the pre-launch period not as a marketing function but as a product function: the work of identifying and deepening relationships with the specific audience whose behavior will constitute genuine evidence of fit.</p>
+<p>The sequence: establish presence in the problem space → build direct access to a defined audience → soft-launch to that audience exclusively → collect isolated signal from their behavior → iterate based on that signal → expand to an expansion cohort (outside the founding network, still relationship-recruited) → confirm that the inner and outer cohort signals are consistent → authorize public launch only when both confirm fit. The expansion cohort checks whether the early findings extend beyond the founding network. It is still a selected sample; consistency between the two groups does not establish representativeness.</p>
+</div>
+</div>
+<p>One structural constraint before the case. In most organizations, delaying a public launch is not the PMM's decision. It belongs to the CEO, shaped by board pressure, fundraising timelines, and press cycles that operate on their own logic. A PMM who believes in Trust-First Sequencing but lacks the authority to set launch timing cannot implement this paper alone. These moves require leadership alignment, not just functional conviction. The PMM's job is to make the tradeoff legible: slower launch, smaller initial numbers, better information, lower risk of scaling the wrong hypothesis. That conversation is harder than a launch plan. It is also the more important one.</p>
+<p>The costs are real and worth naming. Trust-First Sequencing is slower. It produces smaller early numbers. It requires the discipline to resist announcing publicly before the evidence base is real. In most organizations that pressure is structural: investors want to see traction, teams want to celebrate momentum, and conventional launch metrics feel like progress even when they are noise.</p>
+<p>The case for Trust-First Sequencing is that a small, observable cohort may help a team understand use before spending heavily on acquisition. It can also mislead: personal relationships may encourage patience or polite feedback. Compare behavior with people outside the founding network, define success before seeing the results, and test whether those findings survive a broader launch.</p>
+<div class="moves-diagram">
+<div class="moves-diagram-header"><div class="moves-diagram-label">The Three Moves · GTM Architecture for Occluded Environments</div></div>
+<div class="moves-diagram-body">
+<div class="move-cell">
+<div class="move-num">I</div>
+<div class="move-name">Signal Isolation</div>
+<div class="move-desc">Separate acquisition source from evidence of sustained use. Sustained use can provide evidence of fit in either group.</div>
+</div>
+<div class="move-cell">
+<div class="move-num">II</div>
+<div class="move-name">Direct Path Construction</div>
+<div class="move-desc">Design a route to the right audience that does not require algorithmic intermediation at any critical stage.</div>
+</div>
+<div class="move-cell">
+<div class="move-num">III</div>
+<div class="move-name">Trust-First Sequencing</div>
+<div class="move-desc">Reorder the timeline. Relationship before release. Inner cohort before expansion cohort. Use the comparison to decide whether a broader launch is justified.</div>
+</div>
+</div>
+</div>
+<p>An honest qualification. Trust-First Sequencing is operationally tractable for B2B products, SaaS tools, and platforms serving defined professional categories. It is structurally harder for mass-market B2C: consumer social apps, mobile games, marketplaces requiring liquidity, where a two-hundred-person cohort is insufficient evidence regardless of its quality. For mass B2C the three moves adapt: Signal Isolation still matters (separate organic word-of-mouth from paid acquisition even at scale), Direct Path Construction still matters (seed the initial community with relationship-recruited users before opening acquisition), but the Fit Threshold needs to be larger and the timeline compressed. The structural argument holds across domains. The operational parameters don't transfer directly, and a PMM building for consumer should not use B2B benchmarks as calibration.</p>
+<p>This asks the PMM to work with product research as well as distribution: recruit users, compare cohorts, interview them, and explain what the result supports. Paid acquisition can contribute if its costs and selection effects are recorded.</p>
+</div>
+</article>
+<article class="section">
+<div class="section-badge">
+<div class="section-icon"><Block5 /></div>
+<div class="section-meta">
+<div class="section-number">Section V / Six</div>
+<h2 class="section-title">The New Job Description</h2>
+</div>
+</div>
+<div class="section-rule"></div>
+<div class="section-body">
+
+<p>Before scaling, give the team three records it can use. The <strong>Signal Map</strong> separates acquisition source from subsequent behavior. The <strong>Relationship Register</strong> records the people and introductions used to recruit an initial cohort. The <strong>Fit Threshold</strong> states which behavior, over what period, would justify the next step. Set those criteria before reviewing the results so launch pressure does not quietly redefine success.</p>
+<div class="margin-note">Signal Map. Relationship Register. Fit Threshold. These are the deliverables that precede the launch, not the launch materials themselves.</div>
+<p>The Relationship Register carries its own bias that the paper cannot ignore. A cohort built through the founding team's personal network is, almost by definition, over-indexed on people who share context, worldview, and social incentives with the founders. They may engage with the product not only because it solves their problem but because they have a relationship with the person who built it and social reasons to want it to succeed. That engagement can look like product-market fit and not be. The counter-measure is not to abandon the Relationship Register but to calibrate its interpretation: treat the Trust-First cohort as a directional instrument, not a representative sample. It tells you whether the product solves a real problem for people who understand the problem space deeply. It does not tell you whether it will resonate with the broader market of people who do not share that context. The transition from Trust-First signal to public launch should therefore include a deliberate expansion cohort: users recruited from outside the founding network but still through direct paths, whose behavior either confirms or complicates what the inner cohort showed. If the expansion cohort behaves differently, that divergence is the most valuable data the launch has produced. </p>
+<p>What does a Fit Threshold look like in practice? It varies by domain, but the structure is consistent. In B2B SaaS, a defensible threshold might read: twenty direct-path accounts active at ninety days, with at least twelve showing expansion behavior (additional seats, additional use cases, or documented integration with adjacent workflows), and at least eight able to articulate the product's value in their own words without prompting. In B2C with a defined practitioner audience: a tool for designers, a platform for independent researchers, the threshold might be: one hundred fifty direct-path users at sixty days, with weekly active usage above forty percent and at least thirty unprompted referrals to other named people. These are not universal benchmarks. They are illustrative of the form the threshold should take: specific, behavioral, time-bounded, and set before the data exists. The exact numbers are less important than the discipline of writing them down and honoring them. An organization that sets a threshold and then moves it when the data disappoints has not built a Fit Threshold. It has built a comfort metric.</p>
+<p>Work back from the cohort you want to observe. If you assume forty percent of personal introductions become active accounts, twenty active accounts would require fifty introductions. That conversion rate is an illustrative planning assumption, not a benchmark. If the founding network is too small, compare the cost of expanding it with other recruitment methods rather than treating the shortfall as proof that a public launch cannot work.</p>
+<p>These three deliverables put evidence alongside the launch schedule. The PMM needs to combine interviews, cohort analysis, and channel knowledge, then explain which findings support scaling and which remain uncertain. Paid distribution can be part of the experiment if the team records who arrives and what happens afterward.</p>
+<p>A useful launch process should improve the next decision: what to change, whom to recruit, and whether to spend more. The test of this proposal is whether the information gained justifies the extra time and effort. A careful public launch may sometimes answer the same questions more cheaply.</p>
+</div>
+</article>
+<article class="section">
+<div class="section-badge">
+<div class="section-icon"><Block6 /></div>
+<div class="section-meta">
+<div class="section-number">Implementation / Start</div>
+<h2 class="section-title">What to Build Before the Launch Exists</h2>
+</div>
+</div>
+<div class="section-rule"></div>
+<div class="section-body">
+<p>The three deliverables in this section are not templates. They are minimum structures: the smallest version of each tool that is still useful. Build them before any launch conversation begins.</p>
+<div class="construct-def">
+<div class="construct-def-label">Deliverable 1</div>
+<div class="construct-def-name">The Signal Map</div>
+<div class="construct-def-body">
+<p>A single document, maintained before and throughout the launch, that classifies every active acquisition source into one of three categories: Isolated (trust-mediated, named-relationship origin), Behavioral (algorithmically acquired but with sufficient post-acquisition time to read retention, minimum 90 days), and Noise (algorithmically acquired, under 90 days, not yet interpretable as evidence of fit).</p>
+<p>For each Isolated source, record: the name of the person who made the introduction, the relationship between introducer and recipient, and the date of first contact. For each Behavioral source, record: the acquisition channel, the date of acquisition, and the date at which the cohort crosses the 90-day threshold and becomes readable. For immature cohorts, retain acquisition date, source, and subsequent behavior so they can be assessed as they mature. Do not use that volume in any fit declaration until the cohort has matured.</p>
+<p>Use the Signal Map to keep acquisition volume separate from evidence of sustained use. Keep source, arrival date, use, retention, and interview context available for every cohort. Small numbers should prompt caution about uncertainty, not confidence that the signal is unusually pure.</p>
+</div>
+</div>
+<div class="construct-def">
+<div class="construct-def-label">Deliverable 2</div>
+<div class="construct-def-name">The Relationship Register</div>
+<div class="construct-def-body">
+<p>A named list, built before the soft launch, of every person the founding team can reach through a direct path that meets the three conditions: the recommender can stake their credibility on the introduction, the recipient would name the recommender as the reason they tried the product, and the recommender can say something specific about why the product is relevant to that person's situation.</p>
+<p>Structure: one row per person. Columns: Name, Relationship Origin (how the founding team knows them and for how long), Domain Relevance (why they are the right person to have in this cohort), Introducer (who on the founding team owns the relationship), and Status (not contacted / contacted / active in cohort / declined).</p>
+<p>Build the list before any outreach. Compare the register with the cohort size and conversion assumptions set for this product. If it is too small to test those assumptions, revise the recruitment plan before treating the cohort as validation. Use the gap as a workplan: which relationships need to be built before the soft launch is viable? That work takes time. Starting it before the product is complete is the only way to have it ready when the product is.</p>
+<p>One practical note: if the founding team cannot build the Relationship Register to minimum size within the target domain, that is diagnostic information about the team's fit with the domain, not a reason to abandon the launch, but a reason to either deepen domain presence before launching or to bring in an advisor whose existing register fills the gap.</p>
+</div>
+</div>
+<div class="construct-def">
+<div class="construct-def-label">Deliverable 3</div>
+<div class="construct-def-name">The Fit Threshold Document</div>
+<div class="construct-def-body">
+<p>A one-page document, signed off by the founding team before the soft launch begins, that answers four questions. What is the minimum number of accounts or users in the inner cohort that must be active at day 90? What specific behaviors constitute "active": not login, but meaningful use that indicates the product is solving the problem it claimed to solve? What percentage of those accounts must show expansion behavior (or, in B2C, unprompted referral)? And what is the date at which the inner cohort's 90-day window closes and the expansion cohort begins?</p>
+<p>The document also defines the expansion cohort threshold: the same four questions applied to the outer cohort, with the additional requirement that the expansion cohort's behavioral pattern must be consistent with the inner cohort's within a defined tolerance. If the expansion cohort's behavioral pattern diverges materially from the inner cohort's, not marginally, but enough that the two cohorts appear to be responding to different value propositions. Treat that divergence as a signal requiring investigation before the public launch. "Material divergence" is intentionally left to the founding team's judgment rather than assigned a fixed percentage, because what constitutes a meaningful difference depends on the product's domain, use pattern, and cohort size. What the document should specify in advance is the team's definition of material for this product: the threshold below which divergence is acceptable noise, and above which it requires a pause and a diagnosis. Setting that definition before the expansion cohort data arrives is what prevents rationalization from looking like judgment.</p>
+<p>The Fit Threshold Document is binding. Its value is entirely contingent on not moving it when the data disappoints. Write into the document itself the conditions under which it can be revised. There are two legitimate reasons to revise a Fit Threshold and one illegitimate one. The first legitimate reason: the product changed substantially between the threshold being set and the cohort data arriving: a meaningful feature addition, a pricing change, a repositioning, such that the original threshold is measuring a different product than the one the cohort actually used. In that case, the threshold may be reset, but the clock also resets: the cohort period restarts from the point of the meaningful change. The second legitimate reason: new information about the domain revealed that the original threshold was miscalibrated against industry norms, for example, discovering that ninety-day retention in this category typically runs lower than assumed, because the use pattern is seasonal or project-based. In that case the threshold may be adjusted, with documented reasoning and full founding team agreement. The illegitimate reason: the data came in below threshold and the team wants to proceed anyway. That is not a revision. It is a decision to pretend fit was found. The consequences of that decision arrive later and cost more. The Fit Threshold Document should name all three cases explicitly, so the distinction is unambiguous when the pressure to lower arrives. And it will arrive.</p>
+</div>
+</div>
+<p>For the B2B example here, plan an initial ninety-day observation period and at least sixty days with an expansion cohort. These are proposed windows, not universal minimums. The period should reflect how often the product is used and how long its value takes to become visible. Teams should compare the cost of waiting with what a shorter, carefully measured launch could teach them.</p>
+</div>
+</article>
+<article class="section">
+<div class="section-badge">
+<div class="section-icon"><Block7 /></div>
+<div class="section-meta">
+<div class="section-number">Kill Criteria / What Would Falsify This</div>
+<h2 class="section-title">When This Argument No Longer Holds</h2>
+</div>
+</div>
+<div class="section-rule"></div>
+<div class="section-body">
+<p>This paper belongs to the same body of work as Occlusion Bias and inherits its epistemic obligation. One distinction, however, must be stated plainly before the criteria. Occlusion Bias describes a structural condition for which empirical evidence already exists: measurable traffic declines, documented zero-click search growth, quantified bot traffic proportions. This paper proposes a response framework for which that kind of comparative evidence does not yet exist. The controlled studies that would confirm or deny whether Trust-First cohorts systematically outperform standard-launch cohorts have not been run. This paper is a structured hypothesis, not a validated playbook. The criteria below are not falsification conditions for proven claims. They are the conditions that would, if observed, confirm or deny the framework, and practitioners who implement it should treat their own results as data that either strengthens or weakens the case for others.</p>
+<p><strong>K1 - Signal Isolation:</strong> The construct is confirmed if organizations that distinguish trust-mediated cohorts from algorithmically-acquired cohorts systematically make more accurate PMF calls, specifically, if they declare fit less often before ninety-day retention confirms it, and scale prematurely less often as a result. It is weakened if no systematic behavioral difference emerges between cohort types over a twelve-month tracking horizon, or if algorithmic platforms develop reliable relationship-origin attribution that makes the trust/exposure distinction measurable at scale without the manual overhead the Relationship Register requires.</p>
+<p><strong>K2 - Direct Path Construction:</strong> The construct is confirmed if founding teams that build direct-path networks before launch consistently seed higher-quality Trust-First cohorts, measured by expansion behavior, unprompted referral rate, and qualitative specificity of user feedback, than teams that recruit early users through open community channels or paid acquisition. It is falsified if the cohort quality difference between relationship-recruited and community-recruited early users proves negligible across multiple domains and company stages.</p>
+<p><strong>K3 - Trust-First Sequencing:</strong> The sequencing argument is confirmed if organizations that sequence relationship before release make more accurate fit calls and waste less capital on premature scaling than those following the standard playbook, measured over twelve months post-launch. It is falsified if the cost of the approach: longer timeline, smaller initial cohort, higher relationship-investment per user, and the organizational alignment cost described in this section, consistently produces information that could have been obtained faster and more cheaply through a standard launch with careful post-launch cohort analysis. Trust-First Sequencing is a claim about information quality and decision cost. Its confirmation or denial should be evaluated on exactly those terms, not on launch day metrics.</p>
+<p>The paper invites practitioners to report what they find. The framework will require revision if the evidence demands it.</p>
+</div>
+</article>
+<div class="closing">
+<div class="closing-ornament-top">✦ ❧ ✦</div>
+<p>Use the launch to learn whether the product helps the people who tried it, and whether those findings extend to the audience you want to reach next.</p>
+<p>A personal introduction tells you why someone arrived. Continued use tells you more about whether the product helped. Keep those records separate.</p>
+
+<div class="closing-ornament-bottom">End of Paper No. 5 · Narrative-First Reading Path</div>
+</div>
+<div class="page-inline-ab0bf34fff">February 2026</div>
+</main>
+<div class="page-inline-f7663ce6f4">
+<p class="page-inline-e1aee5fa1f">You've validated fit and built direct paths. Now the question is what happens to the consumer journey once algorithms start negotiating it for you.</p>
+</div>
+<div class="paper-nav"> <a href="paper-04.html" class="paper-nav-prev"> <Block8 /> Before You Scale </a> <a href="paper-06.html" class="paper-nav-next"> Before You Map <Block9 /> </a> </div>
+<Footer />
+</div>

@@ -1,0 +1,276 @@
+{
+  "site": {
+    "name": "Diego Dell'Agostino",
+    "alternateName": "Narrative Mechanics",
+    "url": "https://diegodella.ar/",
+    "websiteId": "https://diegodella.ar/#website",
+    "language": "en",
+    "description": "Diego Dell'Agostino builds media products and the systems behind them. Posta, Roxom TV, and AI-assisted editorial operations."
+  },
+  "person": {
+    "id": "https://diegodella.ar/#person",
+    "name": "Diego Dell'Agostino",
+    "url": "https://diegodella.ar/about.html",
+    "jobTitle": "Media and digital product entrepreneur",
+    "homeLocation": "Argentina",
+    "description": "Media and digital product entrepreneur. Co-founder of Posta, member of Roxom TV's founding team, and builder of AI-assisted editorial tools.",
+    "sameAs": [
+      "https://www.linkedin.com/in/diegodella/",
+      "https://github.com/diegodella1"
+    ],
+    "knowsAbout": [
+      "Digital Media",
+      "Digital Products",
+      "Marketing",
+      "Content Strategy",
+      "Audience Development and Communities",
+      "Media Products",
+      "Editorial Operations",
+      "AI-Native Media",
+      "AI Agents",
+      "Agentic Workflows",
+      "Media Automation",
+      "AI-Mediated Discovery"
+    ]
+  },
+  "positioning": {
+    "core": [
+      "Digital media",
+      "Digital products",
+      "Marketing",
+      "Content strategy",
+      "Audience development and communities"
+    ],
+    "current": [
+      "AI-native media",
+      "AI agents",
+      "Agentic workflows",
+      "Editorial operations",
+      "Media automation",
+      "AI-mediated discovery"
+    ]
+  },
+  "bios": {
+    "micro": "Diego Dell'Agostino builds media products and the systems behind them. Posta, Roxom TV, and AI-assisted editorial operations.",
+    "short": "Diego Dell'Agostino has worked in digital media for more than 15 years. He co-founded Posta (ICFJ and SembraMedia’s Velocidad accelerator; PodX 2022) and joined Roxom TV’s founding team. He taught Digital Marketing at Digital House and served as a jury member for El Ojo de Iberoamérica (Audio & Sound). He now applies that experience to AI-native media.",
+    "full": "Diego Dell'Agostino has worked in digital media, product, and content strategy for more than 15 years. He co-founded Posta in Buenos Aires, where he worked across product, marketing, positioning, and business development. Posta took part in the Velocidad accelerator, run by ICFJ and SembraMedia; PodX acquired a majority stake in December 2022. He later joined Roxom TV’s founding team, working on media architecture and product operations for a 24/7 network spanning San Francisco, London, and Hong Kong, remotely from Buenos Aires. He was a Digital Marketing professor at Digital House (2017–2022) and Academic Content Lead for the initial and advanced courses in Argentina and Brazil (2018–2022), including immersion and in-company programs. He served on the jury of El Ojo de Iberoamérica in Audio & Sound Production (2021, 2023, and 2024). He also spoke as a panelist at the Ibero-American Colloquium on Digital Journalism at the University of Texas at Austin, in the framework of ICFJ. Today he builds and tests agents and infrastructure for media research, production, and distribution. He also writes Narrative Mechanics."
+  },
+  "socialProfiles": [
+    {
+      "name": "LinkedIn",
+      "url": "https://www.linkedin.com/in/diegodella/"
+    },
+    {
+      "name": "GitHub",
+      "url": "https://github.com/diegodella1"
+    }
+  ],
+  "expertise": [
+    "Digital media",
+    "Digital products",
+    "Marketing and distribution",
+    "Content strategy",
+    "Audience development and communities",
+    "AI-native media",
+    "AI agents and agentic workflows",
+    "Editorial operations and media automation",
+    "AI-mediated discovery"
+  ],
+  "pages": {
+    "index.html": {
+      "dateModified": "2026-09-18"
+    },
+    "about.html": {
+      "dateModified": "2026-09-18"
+    },
+    "work.html": {
+      "dateModified": "2026-09-18"
+    },
+    "work-posta.html": {
+      "dateModified": "2026-09-14"
+    },
+    "ai-media.html": {
+      "dateModified": "2026-09-14"
+    },
+    "essays.html": {
+      "dateModified": "2026-09-14"
+    },
+    "speaking.html": {
+      "dateModified": "2026-09-18"
+    },
+    "media-kit.html": {
+      "dateModified": "2026-09-18"
+    },
+    "404.html": {
+      "dateModified": "2026-09-14"
+    },
+    "archive.html": {
+      "dateModified": "2026-09-14"
+    },
+    "concepts.html": {
+      "dateModified": "2026-09-14"
+    },
+    "contact.html": {
+      "dateModified": "2026-09-18"
+    },
+    "developers.html": {
+      "dateModified": "2026-09-14"
+    },
+    "frameworks.html": {
+      "dateModified": "2026-09-14"
+    },
+    "notes.html": {
+      "dateModified": "2026-09-14"
+    },
+    "nuggets.html": {
+      "dateModified": "2026-09-14"
+    },
+    "privacy.html": {
+      "dateModified": "2026-09-14"
+    },
+    "series.html": {
+      "dateModified": "2026-09-14"
+    },
+    "work-roxom.html": {
+      "dateModified": "2026-09-14"
+    },
+    "consulting.html": {
+      "dateModified": "2026-09-18"
+    }
+  },
+  "work": [
+    {
+      "slug": "posta",
+      "name": "Posta",
+      "url": "https://diegodella.ar/work-posta.html",
+      "relationship": "Co-founder",
+      "summary": "An Argentine podcast and digital audio company built before podcasting became an obvious media category in Latin America.",
+      "externalProof": [
+        "https://podx.com/studios/",
+        "https://www.lanacion.com.ar/tecnologia/el-podcast-argentino-da-un-salto-internacional-con-la-asociacion-entre-posta-y-la-sueca-podx-nid07122022/",
+        "https://podnews.net/press-release/podx-group-posta"
+      ]
+    },
+    {
+      "slug": "roxom",
+      "name": "Roxom TV",
+      "url": "https://diegodella.ar/work-roxom.html",
+      "relationship": "Founding team; media architecture and product operations",
+      "summary": "A 24/7 global live media operation built across San Francisco, London, Hong Kong, and remote work from Buenos Aires.",
+      "externalProof": [
+        "https://roxom.tv/",
+        "https://roxom.tv/about"
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "name": "XPoster",
+      "url": "https://xposter.diegodella.ar/",
+      "description": "An editorial operations product that monitors authorized sources, detects relevant events and prepares evidence-linked drafts under human control.",
+      "demonstrates": [
+        "AI-native media",
+        "Editorial operations"
+      ]
+    },
+    {
+      "name": "Referí",
+      "url": "https://referi.diegodella.ar/",
+      "description": "An interactive media product for reviewing live football decisions and comparing them with official rulings.",
+      "demonstrates": [
+        "Interactive media products",
+        "Audience participation"
+      ]
+    },
+    {
+      "name": "LiveOverlay",
+      "url": "https://liveoverlay.diegodella.ar/",
+      "description": "A single-source live graphics controller for QR codes, polls, tickers, lower thirds and sponsors.",
+      "demonstrates": [
+        "Live media tooling",
+        "Audience interaction"
+      ]
+    },
+    {
+      "name": "Renamer",
+      "url": "https://renamer.diegodella.ar/",
+      "description": "A local-first utility for turning vague filenames into descriptive, safe and reversible names.",
+      "demonstrates": [
+        "Content workflows",
+        "Local-first automation"
+      ]
+    },
+    {
+      "name": "Life Match Argentina",
+      "url": "https://lifearg.diegodella.ar/",
+      "description": "A decision-support product that compares Argentine cities through evidence, trade-offs and confidence levels.",
+      "demonstrates": [
+        "Digital product design",
+        "Decision support"
+      ]
+    },
+    {
+      "name": "DigSign",
+      "url": "https://digsign.diegodella.ar/",
+      "description": "A digital signage system for campaigns, approvals, playlists, screens and playback monitoring.",
+      "demonstrates": [
+        "Content operations",
+        "Workflow design"
+      ]
+    },
+    {
+      "name": "Intelligenz",
+      "url": "https://intelligenz.diegodella.ar/",
+      "description": "A strategic intelligence agent that turns monitored sources into relevance-ranked daily briefs.",
+      "demonstrates": [
+        "AI agents",
+        "Editorial research workflows"
+      ]
+    },
+    {
+      "name": "DecisionOS",
+      "url": "https://audience.diegodella.ar/",
+      "description": "A product-research system that uses synthetic focus groups to surface objections and define next experiments.",
+      "demonstrates": [
+        "Audience research",
+        "Product strategy"
+      ]
+    },
+    {
+      "name": "Broadcast Control Room",
+      "url": "https://broadcast-planner.diegodella.ar/",
+      "description": "A broadcast operations product for planning, media preparation, schedule validation and protected browser playout.",
+      "demonstrates": [
+        "Editorial operations",
+        "Media automation"
+      ]
+    },
+    {
+      "name": "telePRO",
+      "url": "https://teleprompter.diegodella.ar/",
+      "description": "A browser-based teleprompter for live production, remote control, rehearsal and on-camera delivery.",
+      "demonstrates": [
+        "Live production",
+        "Content workflows"
+      ]
+    },
+    {
+      "name": "PolyBot BTC",
+      "url": "https://tradingbot.diegodella.ar/",
+      "description": "A safety-first research and paper-trading framework for recurring prediction markets.",
+      "demonstrates": [
+        "Bounded automation",
+        "Risk-aware agentic systems"
+      ]
+    },
+    {
+      "name": "El Presidente",
+      "url": "https://presidente.diegodella.ar/",
+      "description": "A daily political simulation built around decisions, consequences and repeated play.",
+      "demonstrates": [
+        "Digital product design",
+        "Interactive narrative"
+      ]
+    }
+  ]
+}

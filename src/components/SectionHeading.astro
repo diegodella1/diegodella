@@ -1,0 +1,5 @@
+---
+interface Props { title: string; accent?: string; id?: string }
+const {title,accent,id}=Astro.props;
+---
+<div class="section-heading"><h2 id={id}>{title}{accent && <span class="gradient-text"> {accent}</span>}</h2><div class="section-heading-copy"><slot /></div></div>

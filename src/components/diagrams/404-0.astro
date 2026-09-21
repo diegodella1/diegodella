@@ -1,0 +1,31 @@
+<svg is:raw aria-hidden="true" style="width: 200px; height: auto; margin-bottom: 1.5rem;" viewBox="0 0 200 160" xmlns="http://www.w3.org/2000/svg">
+        <style is:inline>
+          @keyframes pathDraw { from { stroke-dashoffset: 140; } to { stroke-dashoffset: 0; } }
+          @keyframes fragmentScatter1 { 0% { opacity: 1; transform: translate(0,0); } 100% { opacity: 0; transform: translate(12px, -8px); } }
+          @keyframes fragmentScatter2 { 0% { opacity: 1; transform: translate(0,0); } 100% { opacity: 0; transform: translate(8px, 10px); } }
+          @keyframes fragmentScatter3 { 0% { opacity: 1; transform: translate(0,0); } 100% { opacity: 0; transform: translate(15px, -3px); } }
+          @keyframes fragmentScatter4 { 0% { opacity: 1; transform: translate(0,0); } 100% { opacity: 0; transform: translate(6px, 12px); } }
+          @keyframes fragmentScatter5 { 0% { opacity: 1; transform: translate(0,0); } 100% { opacity: 0; transform: translate(18px, 5px); } }
+          @keyframes xMark { from { stroke-dashoffset: 20; } to { stroke-dashoffset: 0; } }
+          @keyframes xPulse { 0%, 100% { opacity: 0.7; } 50% { opacity: 1; } }
+        </style>
+        <!-- Main path (dashed line drawing in) -->
+        <line stroke="var(--ink)" stroke-dasharray="8 6" stroke-linecap="round" stroke-width="2" style="animation: pathDraw 2s ease-out forwards;" x1="10" x2="120" y1="80" y2="80"></line>
+        <!-- Break point - short solid segment ending -->
+        <line stroke="var(--rule)" stroke-dasharray="15" stroke-dashoffset="15" stroke-linecap="round" stroke-width="2" style="animation: pathDraw 0.5s ease-out 1.6s forwards;" x1="120" x2="135" y1="80" y2="80"></line>
+        <!-- Scattered fragments (dots flying off) -->
+        <circle cx="142" cy="78" fill="var(--muted)" r="2" style="animation: fragmentScatter1 1.5s ease-out 2s both;"></circle>
+        <circle cx="148" cy="83" fill="var(--muted)" r="1.5" style="animation: fragmentScatter2 1.5s ease-out 2.1s both;"></circle>
+        <circle cx="145" cy="75" fill="var(--rule)" r="1.8" style="animation: fragmentScatter3 1.5s ease-out 2.15s both;"></circle>
+        <circle cx="150" cy="86" fill="var(--rule)" r="1.2" style="animation: fragmentScatter4 1.5s ease-out 2.25s both;"></circle>
+        <circle cx="152" cy="80" fill="var(--muted)" r="2.2" style="animation: fragmentScatter5 1.5s ease-out 2.3s both;"></circle>
+        <!-- X mark at the dead end -->
+        <g style="animation: xPulse 3s ease-in-out 2.8s infinite;">
+          <line stroke="var(--accent)" stroke-dasharray="20" stroke-linecap="round" stroke-width="2" style="animation: xMark 0.4s ease-out 2.5s both;" x1="155" x2="167" y1="72" y2="88"></line>
+          <line stroke="var(--accent)" stroke-dasharray="20" stroke-linecap="round" stroke-width="2" style="animation: xMark 0.4s ease-out 2.6s both;" x1="167" x2="155" y1="72" y2="88"></line>
+        </g>
+        <!-- Subtle ground line -->
+        <line opacity="0.3" stroke="var(--rule)" stroke-width="0.5" x1="10" x2="180" y1="110" y2="110"></line>
+        <!-- Label -->
+        <text fill="var(--muted)" font-family="'Space Grotesk', monospace" font-size="7" letter-spacing="0.15em" opacity="0.6" text-anchor="middle" x="100" y="135">WRONG TURN</text>
+      </svg>

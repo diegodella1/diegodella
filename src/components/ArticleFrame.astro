@@ -1,0 +1,13 @@
+---
+import Navigation from './Navigation.astro';
+import Footer from './Footer.astro';
+import ArticleHeader from './ArticleHeader.astro';
+---
+<a class="skip-link" href="#main-content">Skip to content</a>
+<div id="pbar"></div><div id="pbar-label"></div>
+<div class="page-wrap">
+  <Navigation />
+  <ArticleHeader />
+  <main class="content" id="main-content"><article class="section"><div class="section-body"><slot /></div></article></main>
+  <Footer />
+</div>

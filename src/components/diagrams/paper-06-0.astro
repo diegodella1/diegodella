@@ -1,0 +1,22 @@
+<svg is:raw class="hero-svg" viewBox="0 0 160 200" xmlns="http://www.w3.org/2000/svg">
+        <style is:inline>
+          @keyframes draw-map{from{stroke-dashoffset:300}to{stroke-dashoffset:0}}
+          @keyframes pin-drop{from{transform:translateY(-8px);opacity:0}to{transform:translateY(0);opacity:1}}
+          @keyframes fade-in{from{opacity:0}to{opacity:1}}
+        </style>
+        <!-- Territory outline -->
+        <path d="M30 50 Q50 30,80 35 Q110 30,130 55 Q145 80,135 110 Q130 140,100 155 Q70 165,45 150 Q20 135,25 105 Q20 75,30 50Z" fill="none" stroke="var(--rule)" stroke-dasharray="300" stroke-width="1" style="animation:draw-map 2s ease-out forwards"></path>
+        <!-- Internal paths -->
+        <path d="M50 70 Q65 85,80 80 Q95 75,110 90" fill="none" opacity="0" stroke="var(--muted)" stroke-dasharray="3 2" stroke-width="0.8" style="animation:fade-in 0.5s 1.5s forwards"></path>
+        <path d="M60 120 Q80 105,100 115" fill="none" opacity="0" stroke="var(--muted)" stroke-dasharray="3 2" stroke-width="0.8" style="animation:fade-in 0.5s 1.8s forwards"></path>
+        <!-- Map pins -->
+        <circle cx="80" cy="80" fill="var(--accent)" opacity="0" r="4" style="animation:pin-drop 0.4s 2s ease-out forwards"></circle>
+        <circle cx="50" cy="70" fill="var(--accent)" opacity="0.6" r="3" style="animation:pin-drop 0.4s 2.2s ease-out forwards"></circle>
+        <circle cx="110" cy="90" fill="var(--accent)" opacity="0.6" r="3" style="animation:pin-drop 0.4s 2.4s ease-out forwards"></circle>
+        <circle cx="70" cy="120" fill="var(--muted)" opacity="0" r="3" style="animation:pin-drop 0.4s 2.6s ease-out forwards"></circle>
+        <circle cx="100" cy="115" fill="var(--muted)" opacity="0" r="3" style="animation:pin-drop 0.4s 2.8s ease-out forwards"></circle>
+        <!-- You are here -->
+        <circle cx="80" cy="80" fill="none" opacity="0" r="8" stroke="var(--accent)" stroke-width="1" style="animation:pin-drop 0.3s 2s forwards"></circle>
+        <!-- Label -->
+        <text fill="var(--accent)" font-family="monospace" font-size="6" letter-spacing="2" opacity="0" style="animation:fade-in 0.5s 3s forwards" text-anchor="middle" x="80" y="190">MAP</text>
+      </svg>

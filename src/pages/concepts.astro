@@ -1,0 +1,62 @@
+---
+import SiteLayout from "../layouts/SiteLayout.astro";
+import ArticleField from "../components/ArticleField.astro";
+import Footer from "../components/Footer.astro";
+import Navigation from "../components/Navigation.astro";
+
+---
+<SiteLayout page="concepts">
+<a href="#main-content" class="skip-link">Skip to content</a>
+<div class="page-wrap">
+<div class="top-bar"> <span>Buenos Aires · Since 2008</span> <span>Canonical definitions, reading routes, and frameworks · <a href="about.html">About the author</a></span> </div>
+<Navigation />
+<main id="main-content">
+<section class="hero">
+<div>
+<div class="hero-kicker">Frameworks / Concepts</div>
+<h1 class="hero-title">Concepts</h1>
+<p class="hero-lead">This page defines the main Narrative Mechanics concepts in plain language. Use it as the vocabulary companion to Frameworks, Essays, and the reading paths in Start.</p>
+<div class="hero-routes"> <a href="frameworks.html" class="hero-route">Back to Frameworks</a> <a href="/concepts.md" class="hero-route">Markdown Version</a> </div>
+</div>
+<aside class="hero-aside">
+<div class="aside-label">Best use</div>
+<p>Start here if you want definitions before long-form reading. Each concept links to one main essay or framework page.</p>
+<div class="aside-label">Best first route</div>
+<p>If your problem is strong product but weak adoption, start with <a href="thesis.html">CMI</a>, then move to <a href="paper-01.html">Strategic Debt</a> and <a href="paper-02.html"><ArticleField slug="paper-02" field="title" /></a>.</p>
+</aside>
+</section>
+<div class="concepts-wrap">
+<section class="intro">
+<div class="intro-head">
+<div class="section-label">What This Is</div>
+<div>
+<div class="intro-title">The ideas used throughout these essays</div>
+<div class="intro-copy">Definitions of the concepts used in these essays, with links to the arguments that introduce them. The frameworks are proposals; their definitions do not establish that they have been validated.</div>
+</div>
+</div>
+</section>
+<section class="entries">
+<div class="entries-head">
+<div class="section-label">Best Entries</div>
+<div>
+<div class="entries-title">Best entry paths by problem</div>
+<div class="entry-copy">Choose the route that matches your question, then follow the concept that names the real failure mode.</div>
+</div>
+</div>
+<div class="entry-grid"> <a href="thesis.html" class="entry-card"> <div class="concept-tag">Product clarity</div> <div class="entry-title">Why do good products go unnoticed?</div> <div class="entry-copy">Read CMI first, then move into Strategic Debt and Message-Market Fit.</div> <div class="entry-meta">Intent before search</div> </a> <a href="occlusion-bias.html" class="entry-card"> <div class="concept-tag">Distribution failure</div> <div class="entry-title">Why doesn’t the market ever compare us fairly?</div> <div class="entry-copy">Start with Occlusion Bias if the problem is visibility, not quality.</div> <div class="entry-meta">Reach is not neutral</div> </a> <a href="zmox.html" class="entry-card"> <div class="concept-tag">Media systems</div> <div class="entry-title">How do repetition and exposure shape authority?</div> <div class="entry-copy">Read CAX if you need a model for narrative formation, mediated meaning, and field design.</div> <div class="entry-meta">Authority formation</div> </a> <a href="paper-05.html" class="entry-card"> <div class="concept-tag">Launch conditions</div> <div class="entry-title">Why did a solid launch disappear into noise?</div> <div class="entry-copy">Start with Launching Into Noise once the visibility problem is already clear.</div> <div class="entry-meta">GTM under broken distribution</div> </a> </div>
+</section>
+<section class="concept-grid">
+<div class="intro-head">
+<div class="section-label">Definitions</div>
+<div>
+<div class="intro-title">Core concepts and canonical pages</div>
+<div class="intro-copy">Each card gives one stable definition, one practical use case, and a single canonical destination for deeper reading.</div>
+</div>
+</div>
+<div class="grid"> <a href="thesis.html" class="concept-card"> <div class="concept-term">CMI</div> <div class="concept-name">Continuous Moment of Intent</div> <div class="concept-definition">CMI proposes that useful, repeated encounters with an editorial perspective can shape interpretation and encourage a habit of return before an explicit search or decision.</div> <div class="concept-bestfor">Best for product clarity, pre-search influence, category framing, and understanding why adoption can fail before a fair evaluation occurs.</div> <div class="concept-meta">Canonical page: thesis</div> </a> <a href="occlusion-bias.html" class="concept-card"> <div class="concept-term">Visibility failure</div> <div class="concept-name"><ArticleField slug="occlusion-bias" field="title" /></div> <div class="concept-definition">Occlusion Bias describes the error of judging available work from the selected sample a distribution system made visible.</div> <div class="concept-bestfor">Best for launches, distribution problems, broken reach, and cases where the team misdiagnoses a visibility failure as a product failure.</div> <div class="concept-meta">Canonical page: occlusion-bias</div> </a> <a href="zmox.html" class="concept-card"> <div class="concept-term">CAX</div> <div class="concept-name">Constitutive Arc</div> <div class="concept-definition">The Constitutive Arc proposes a way to design and assess what readers learn through sustained contact with an editorial source.</div> <div class="concept-bestfor">Best for media strategy, authority building, audience transformation, and understanding why narrative outcomes compound through systems rather than single messages.</div> <div class="concept-meta">Canonical page: zmox</div> </a> <a href="paper-01.html" class="concept-card"> <div class="concept-term">Launch foundations</div> <div class="concept-name">Strategic Debt</div> <div class="concept-definition">Clarity deferred at the start of a product or company compounds into downstream messaging, positioning, and go-to-market problems.</div> <div class="concept-bestfor">Best for founders with strong product but persistent confusion, incoherent GTM, or repeated re-explanation costs.</div> <div class="concept-meta">Canonical page: paper-01</div> </a> <a href="paper-02.html" class="concept-card"> <div class="concept-term">Market interpretation</div> <div class="concept-name">Message-Market Fit</div> <div class="concept-definition">The alignment between how a product is interpreted and the conditions under which the market can recognize its value. Product-market fit can exist without message-market fit.</div> <div class="concept-bestfor">Best for launches that feel unfairly ignored, products that get misunderstood, and teams whose product solves a problem that potential users do not yet recognize.</div> <div class="concept-meta">Canonical page: paper-02</div> </a> <a href="paper-04.html" class="concept-card"> <div class="concept-term">Organizational coherence</div> <div class="concept-name">Narrative Drift</div> <div class="concept-definition">The erosion of strategic coherence as organizations scale, fragment, and translate themselves through multiple teams, channels, and intermediaries.</div> <div class="concept-bestfor">Best for companies that once sounded sharp and now sound generic, inconsistent, or internally misaligned.</div> <div class="concept-meta">Canonical page: paper-04</div> </a> <a href="paper-05.html" class="concept-card"> <div class="concept-term">GTM conditions</div> <div class="concept-name"><ArticleField slug="paper-05" field="title" /></div> <div class="concept-definition">A proposal to separate acquisition source from evidence of fit, observe early use, and compare cohorts before scaling a launch. Good work now enters a noisier, more mediated field than the old templates assume.</div> <div class="concept-bestfor">Best for launches that followed the playbook and still disappeared, especially when the product is fine but the context is hostile.</div> <div class="concept-meta">Canonical page: paper-05</div> </a> <a href="origin-gravity.html" class="concept-card"> <div class="concept-term">Trust and source</div> <div class="concept-name"><ArticleField slug="origin-gravity" field="title" /></div> <div class="concept-definition">Origin Gravity proposes that an encounter with useful work can give someone a reason to seek and return to its source. The source may be an individual writer or an accountable editorial organization.</div> <div class="concept-bestfor">Best for AI-mediated trust, source reputation, authorship, and why origin matters more as synthetic output scales.</div> <div class="concept-meta">Canonical page: origin-gravity</div> </a> </div>
+</section>
+</div>
+</main>
+<Footer />
+</div>
+</SiteLayout>

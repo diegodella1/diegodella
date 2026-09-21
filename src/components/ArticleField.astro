@@ -1,0 +1,8 @@
+---
+import { siteData } from '../lib/site';
+interface Props { slug: string; field: 'title' | 'description' }
+const { slug, field } = Astro.props;
+const article = (await siteData()).writing.find(article => article.slug === slug);
+if (!article) throw new Error(`Unknown article: ${slug}`);
+---
+{article[field]}

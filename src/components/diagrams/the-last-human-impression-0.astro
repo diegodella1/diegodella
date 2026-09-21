@@ -1,0 +1,37 @@
+<svg is:raw fill="none" viewBox="0 0 160 220" xmlns="http://www.w3.org/2000/svg">
+          <style is:inline>
+            @keyframes nodePulse{0%,100%{opacity:0.5}50%{opacity:1}}
+            @keyframes drawLine{from{stroke-dashoffset:80}to{stroke-dashoffset:0}}
+            @keyframes irisPulse{0%,100%{r:7}50%{r:9}}
+            @keyframes youGlow{0%,100%{stroke-width:1.5;opacity:1}50%{stroke-width:2.5;opacity:0.7}}
+            @keyframes fadeLabel{from{opacity:0}to{opacity:1}}
+          </style>
+          <!-- Eye shape -->
+          <ellipse cx="80" cy="80" rx="52" ry="28" stroke="var(--rule)" stroke-width="1.5"></ellipse>
+          <!-- Iris ring -->
+          <circle cx="80" cy="80" r="16" stroke="var(--accent)" stroke-width="1.5"></circle>
+          <!-- Iris fill with pulse -->
+          <circle cx="80" cy="80" fill="var(--accent)" opacity="0.12" r="7"></circle>
+          <circle cx="80" cy="80" r="7" stroke="var(--accent)" stroke-width="1.5" style="animation:irisPulse 3s ease-in-out infinite"></circle>
+          <!-- Highlight -->
+          <circle cx="75" cy="76" fill="var(--paper)" r="2"></circle>
+          <!-- Dashed connection lines (draw on) -->
+          <line stroke="var(--rule)" stroke-dasharray="3 2" stroke-width="1" style="stroke-dasharray:80;stroke-dashoffset:80;animation:drawLine 1.8s ease-out 0.3s forwards" x1="20" x2="55" y1="40" y2="68"></line>
+          <line stroke="var(--rule)" stroke-dasharray="3 2" stroke-width="1" style="stroke-dasharray:80;stroke-dashoffset:80;animation:drawLine 1.8s ease-out 0.5s forwards" x1="140" x2="105" y1="40" y2="68"></line>
+          <line stroke="var(--rule)" stroke-dasharray="3 2" stroke-width="1" style="stroke-dasharray:80;stroke-dashoffset:80;animation:drawLine 1.8s ease-out 0.4s forwards" x1="80" x2="80" y1="20" y2="52"></line>
+          <!-- AI nodes with pulse -->
+          <circle cx="20" cy="38" fill="var(--paper)" r="7" stroke="var(--rule)" stroke-width="1.5" style="animation:nodePulse 2.5s ease-in-out infinite"></circle>
+          <text fill="var(--muted)" font-family="monospace" font-size="5" style="animation:fadeLabel 1s ease-out 0.8s both" text-anchor="middle" x="20" y="41">AI</text>
+          <circle cx="140" cy="38" fill="var(--paper)" r="7" stroke="var(--rule)" stroke-width="1.5" style="animation:nodePulse 2.5s ease-in-out 0.4s infinite"></circle>
+          <text fill="var(--muted)" font-family="monospace" font-size="5" style="animation:fadeLabel 1s ease-out 1s both" text-anchor="middle" x="140" y="41">AI</text>
+          <circle cx="80" cy="18" fill="var(--paper)" r="7" stroke="var(--rule)" stroke-width="1.5" style="animation:nodePulse 2.5s ease-in-out 0.8s infinite"></circle>
+          <text fill="var(--muted)" font-family="monospace" font-size="5" style="animation:fadeLabel 1s ease-out 0.9s both" text-anchor="middle" x="80" y="21">AI</text>
+          <!-- Connection to YOU -->
+          <line stroke="var(--accent)" stroke-width="1.5" x1="80" x2="80" y1="108" y2="140"></line>
+          <!-- YOU circle with glow -->
+          <circle cx="80" cy="152" fill="var(--paper)" r="12" stroke="var(--accent)" stroke-width="1.5" style="animation:youGlow 3s ease-in-out infinite"></circle>
+          <text fill="var(--accent)" font-family="monospace" font-size="6" text-anchor="middle" x="80" y="155">YOU</text>
+          <!-- Labels with fade-in -->
+          <text fill="var(--muted)" font-family="monospace" font-size="5.5" style="animation:fadeLabel 1.2s ease-out 1.2s both" text-anchor="middle" x="80" y="178">HUMAN IMPRESSION</text>
+          <text fill="var(--accent)" font-family="monospace" font-size="5" style="animation:fadeLabel 1.2s ease-out 1.5s both" text-anchor="middle" x="80" y="188">· scarce ·</text>
+        </svg>

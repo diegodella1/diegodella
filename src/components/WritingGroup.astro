@@ -1,0 +1,19 @@
+---
+import { getCollection } from 'astro:content';
+import staticLinks from '../data/writing-links.json';
+interface Props { group: number }
+const { group } = Astro.props;
+const entries = await getCollection('writing');
+const articles = entries.filter(entry => entry.data.listing?.group === group || (!entry.data.presentation && !entry.data.listing && group === 2)).map(({ id, data }) => ({
+  href: `${id}.html`,
+  title: data.listing?.title ?? data.title,
+  description: data.listing?.description ?? data.description,
+  label: data.listing?.label ?? 'Essay',
+  topics: data.listing?.topics ?? 'ai-trust operating-systems',
+  date: data.datePublished,
+  order: data.listing?.order ?? -1,
+}));
+const cards = [...articles, ...staticLinks.filter(link => link.group === group).map(link => ({ ...link, date: '' }))].sort((a, b) => a.order - b.order || a.href.localeCompare(b.href));
+const format = (date: string) => new Date(`${date}T00:00:00Z`).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric', timeZone: 'UTC' });
+---
+{cards.map(card => <a href={card.href} data-topics={card.topics}><span class="nm-page-label">{card.label}{card.date && <> · <time datetime={card.date}>{format(card.date)}</time></>}</span><strong>{card.title}</strong><p>{card.description}</p></a>)}

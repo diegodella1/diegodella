@@ -1,0 +1,376 @@
+@layer page {
+
+    .hero,
+    .concepts-wrap {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding-left: 3rem;
+      padding-right: 3rem;
+    }
+    .hero {
+      padding-top: 5rem;
+      padding-bottom: 2.8rem;
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 292px;
+      gap: 2.3rem;
+      border-bottom: 1px solid var(--border-light);
+      position: relative;
+      align-items: start;
+    }
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: auto 3rem -1px 3rem;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, color-mix(in srgb, var(--accent) 42%, var(--border)), transparent);
+      pointer-events: none;
+    }
+    .hero-title {
+      font-family: 'Space Grotesk', serif;
+      font-size: clamp(3rem, 6vw, 4.9rem);
+      line-height: 0.93;
+      letter-spacing: -0.04em;
+      margin-bottom: 0.9rem;
+      max-width: 8ch;
+      text-wrap: balance;
+    }
+    .hero-title em { font-style: italic; color: var(--accent); }
+    .hero-lead {
+      max-width: 39rem;
+      font-size: 0.96rem;
+      line-height: 1.76;
+      color: var(--ink-2);
+      margin-bottom: 1.2rem;
+      text-wrap: pretty;
+    }
+    .hero-routes { display: flex; flex-wrap: wrap; gap: 0.55rem; }
+    .hero-route {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Space Grotesk', monospace;
+      font-size: 0.75rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      text-decoration: none;
+      color: var(--accent);
+      border: 1px solid color-mix(in srgb, var(--accent) 24%, var(--border));
+      border-radius: 0;
+      padding: 0.58rem 0.8rem;
+      background: color-mix(in srgb, var(--accent-light) 84%, var(--paper));
+      box-shadow: var(--shadow-soft);
+      transition: color 0.18s, border-color 0.18s, background-color 0.18s, transform 0.18s, box-shadow 0.18s;
+    }
+    .hero-route:hover {
+      color: var(--accent-hover);
+      border-color: var(--accent);
+      background: color-mix(in srgb, var(--accent-light) 96%, var(--paper));
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-button);
+    }
+    .hero-aside {
+      border-left: 1px solid var(--border);
+      padding-left: 1rem;
+      display: grid;
+      gap: 0.85rem;
+      align-content: start;
+    }
+    .aside-label,
+    .section-label,
+    .concept-tag {
+      font-family: 'Space Grotesk', monospace;
+      font-size: 0.75rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--accent);
+    }
+    .hero-aside p,
+    .intro-copy,
+    .concept-copy,
+    .concept-bestfor,
+    .entry-copy {
+      font-size: 0.9rem;
+      line-height: 1.68;
+      color: var(--ink-2);
+    }
+    .concepts-wrap {
+      padding-top: 2rem;
+      padding-bottom: 5.4rem;
+      display: grid;
+      gap: 1.2rem;
+    }
+    .intro,
+    .entries,
+    .concept-grid {
+      border: 1px solid color-mix(in srgb, var(--accent) 14%, var(--border));
+      border-radius: 0;
+      background: var(--surface-1);
+      position: relative;
+      overflow: hidden;
+      box-shadow: var(--shadow-soft);
+    }
+    .intro,
+    .entries,
+    .concept-grid {
+      padding: 1.2rem;
+      margin-bottom: 0;
+    }
+    .intro::before,
+    .entries::before,
+    .concept-grid::before {
+      content: "";
+      position: absolute;
+      inset: 0 0 auto 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, color-mix(in srgb, var(--accent) 34%, var(--border)), transparent);
+      pointer-events: none;
+    }
+    .intro-head,
+    .entries-head {
+      display: grid;
+      grid-template-columns: 170px minmax(0, 1fr);
+      gap: 1rem;
+      margin-bottom: 1rem;
+    }
+    .intro-title,
+    .entries-title {
+      font-family: 'Space Grotesk', serif;
+      font-size: 1.58rem;
+      line-height: 1.03;
+      letter-spacing: -0.04em;
+      margin-bottom: 0.34rem;
+    }
+    .entry-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.9rem;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 0.3rem;
+    }
+    .entry-card,
+    .concept-card {
+      display: flex;
+      flex-direction: column;
+      border: 1px solid color-mix(in srgb, var(--accent) 16%, var(--border));
+      border-radius: 0;
+      background: var(--surface-2);
+      padding: 1rem;
+      text-decoration: none;
+      color: inherit;
+      min-height: 100%;
+      transition: border-color 0.18s, background-color 0.18s, box-shadow 0.18s, transform 0.18s;
+    }
+    .concept-card {
+      display: grid;
+      grid-template-columns: 160px minmax(0, 1fr) 200px;
+      gap: 1rem;
+      align-items: start;
+      border-width: 0 0 1px 0;
+      border-radius: 0;
+      background: transparent;
+      padding: 0.9rem 0;
+      box-shadow: none;
+    }
+    .entry-card:first-child {
+      grid-column: 1 / -1;
+      padding: 1.1rem 1.15rem;
+    }
+    .entry-card:hover,
+    .concept-card:hover {
+      border-color: color-mix(in srgb, var(--accent) 42%, var(--border));
+      background: transparent;
+      box-shadow: none;
+      transform: none;
+    }
+    .entry-title,
+    .concept-name {
+      font-family: 'Space Grotesk', serif;
+      font-size: 1.18rem;
+      line-height: 1.04;
+      margin-bottom: 0.35rem;
+    }
+    .entry-title { font-size: 1.05rem; }
+    .concept-term { font-family: 'Space Grotesk', monospace; font-size: 0.75rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent); margin-bottom: 0; grid-column: 1; }
+    .concept-name,
+    .concept-definition,
+    .concept-bestfor { grid-column: 2; }
+    .concept-definition {
+      font-size: 0.95rem;
+      line-height: 1.66;
+      color: var(--deep);
+      margin-bottom: 0.65rem;
+      text-wrap: pretty;
+    }
+    .concept-bestfor { margin-bottom: 0.7rem; }
+    .concept-meta,
+    .entry-meta {
+      font-family: 'Space Grotesk', monospace;
+      font-size: 0.75rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-top: auto;
+      padding-top: 0.82rem;
+      border-top: 1px solid color-mix(in srgb, var(--accent) 14%, var(--border));
+    }
+    .concept-meta {
+      margin-top: 0;
+      padding-top: 0;
+      border-top: 0;
+      text-align: right;
+      grid-column: 3;
+      grid-row: 1 / span 3;
+      align-self: end;
+    }
+    .footer {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 0 3rem 3rem;
+      display: block;
+      grid-template-columns: none;
+      align-items: initial;
+      border-top: none;
+    }
+    .footer-inner {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 1.4rem 2rem;
+      align-items: center;
+      border-top: 1px solid var(--border);
+      padding-top: 1.2rem;
+    }
+    .footer-brand {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      min-width: 0;
+    }
+    .footer-mark {
+      width: 2.7rem;
+      height: 2.7rem;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid color-mix(in srgb, var(--accent) 20%, var(--border));
+      border-radius: 0;
+      background: color-mix(in srgb, var(--accent-light) 78%, var(--paper));
+      box-shadow: var(--shadow-soft);
+      font-family: 'Space Grotesk', serif;
+      font-size: 1rem;
+      font-weight: 900;
+      letter-spacing: -0.04em;
+      color: var(--accent);
+    }
+    .footer-copy {
+      display: flex;
+      align-items: baseline;
+      gap: 0.75rem;
+      min-width: 0;
+      flex-wrap: wrap;
+    }
+    .footer-title {
+      font-family: 'Space Grotesk', monospace;
+      font-size: 0.75rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--accent);
+      white-space: nowrap;
+      flex: 0 0 auto;
+    }
+    .footer-brand p {
+      max-width: none;
+      font-size: 0.82rem;
+      line-height: 1.55;
+      color: var(--ink-2);
+      flex: 1 1 24rem;
+    }
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      gap: 0.55rem;
+    }
+    .footer-links a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 2.2rem;
+      padding: 0.56rem 0.82rem;
+      border: 1px solid color-mix(in srgb, var(--accent) 18%, var(--border));
+      border-radius: 0;
+      background: var(--surface-1);
+      font-family: 'Space Grotesk', monospace;
+      font-size: 0.75rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      text-decoration: none;
+      color: var(--ink);
+      transition: color 0.18s, border-color 0.18s, background-color 0.18s, transform 0.18s, box-shadow 0.18s;
+    }
+    .footer-links a:hover {
+      color: var(--accent);
+      border-color: color-mix(in srgb, var(--accent) 44%, var(--border));
+      background: color-mix(in srgb, var(--accent-light) 86%, var(--paper));
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-soft);
+    }
+    @media (max-width: 900px) {
+      .hero,
+      .intro-head,
+      .entries-head,
+      .entry-grid,
+      .concept-card {
+        grid-template-columns: 1fr;
+      }
+      .concept-term,
+      .concept-name,
+      .concept-definition,
+      .concept-bestfor,
+      .concept-meta {
+        grid-column: auto;
+        grid-row: auto;
+        text-align: left;
+      }
+      .hero-aside {
+        border-left: none;
+        border-top: 1px solid var(--border);
+        padding-left: 0;
+        padding-top: 0.9rem;
+      }
+      .entry-card:first-child {
+        grid-column: auto;
+      }
+      .footer-inner {
+        grid-template-columns: 1fr;
+      }
+      .footer-brand {
+        display: grid;
+        grid-template-columns: 1fr;
+      }
+      .footer-copy {
+        display: grid;
+        gap: 0.3rem;
+      }
+      .footer-links {
+        justify-content: flex-start;
+      }
+    }
+    @media (max-width: 640px) {
+      .hero,
+      .concepts-wrap,
+      .footer {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+      }
+      .hero { padding-top: 3.8rem; }
+      .intro,
+      .entries,
+      .concept-grid {
+        padding: 1rem;
+      }
+    }
+  
+}
