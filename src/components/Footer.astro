@@ -1,3 +1,6 @@
+---
+import PricebtcEmbed from './PricebtcEmbed.astro';
+---
 <footer class="site-footer">
     <div class="site-footer-inner">
       <div class="site-footer-brand">
@@ -26,5 +29,16 @@
         </div>
       </div>
     </div>
+    <div class="site-footer-widget">
+      <PricebtcEmbed />
+    </div>
   <div class="footer-bottom"><span>© {new Date().getFullYear()} Diego Dell'Agostino</span><span>Buenos Aires · UTC−3</span><a href="contact.html">Get in touch</a></div>
 </footer>
+
+<style>
+.site-footer-widget {
+  width: min(100%, var(--content-wide, 1280px));
+  margin: 2rem auto 1rem;
+  padding: 0 clamp(1rem, 4vw, 3rem);
+}
+</style>
