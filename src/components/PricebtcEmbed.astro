@@ -1,0 +1,32 @@
+---
+// Live Bitcoin price widget from PRICEB.TC
+// Configured for ARS (Argentina), compact layout, dark theme
+---
+<div class="pricebtc-embed-wrapper">
+  <iframe
+    src="https://priceb.tc/embed?currency=ARS&layout=compact&theme=dark&showChange=1"
+    title="Live Bitcoin price — PRICEB.TC"
+    loading="lazy"
+    sandbox="allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox"
+    data-pricebtc-layout="compact"
+  ></iframe>
+</div>
+
+<style>
+.pricebtc-embed-wrapper {
+  width: 100%;
+  max-width: 100%;
+  margin: 1.5rem 0;
+}
+
+.pricebtc-embed-wrapper iframe {
+  border: 0;
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  min-height: 120px;
+  aspect-ratio: 16/9;
+  border-radius: 8px;
+  overflow: hidden;
+}
+</style>
