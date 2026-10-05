@@ -342,6 +342,29 @@ a {
   color: #111111;
 }
 
+.site-footer-widget {
+  width: min(100%, var(--content-wide));
+  margin: 2rem auto 1rem;
+  padding: 0 clamp(1rem, 4vw, 3rem);
+}
+
+.pricebtc-embed-wrapper {
+  width: 100%;
+  max-width: 100%;
+  margin: 1.5rem 0;
+}
+
+.pricebtc-embed-wrapper iframe {
+  border: 0;
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  min-height: 120px;
+  aspect-ratio: 16 / 9;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
 @media (max-width: 68.75rem) {
   .nav-link {
     font-size: var(--text-xs);
