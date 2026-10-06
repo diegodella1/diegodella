@@ -558,20 +558,30 @@ body.nm-page .nm-project-grid > .nm-project-featured strong {
   grid-area: title;
   align-self: end;
   justify-self: start;
-  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  column-gap: 0.1em;
+  row-gap: 0.05em;
+  width: auto;
   max-width: 100%;
   min-width: 0;
   color: var(--theme-on-accent);
-  font-size: clamp(2rem, 7.75cqi, 4.8rem);
+  font-size: clamp(1.75rem, 5.5cqi, 3.35rem);
   line-height: 0.86;
+  overflow-wrap: normal;
+  word-break: keep-all;
+  hyphens: none;
   white-space: nowrap;
 }
 
 body.nm-page .nm-project-grid > .nm-project-featured strong span {
+  flex: 0 0 auto;
   display: inline-block;
-  margin-left: 0.12em;
+  margin-left: 0;
   font-size: 0.55em;
   vertical-align: 0.2em;
+  white-space: nowrap;
 }
 
 body.nm-page .nm-project-grid > .nm-project-featured p {
@@ -584,7 +594,7 @@ body.nm-page .nm-project-grid > .nm-project-featured p {
   font-weight: 700;
 }
 
-@container project-featured (max-width: 36rem) {
+@container project-featured (max-width: 48rem) {
   body.nm-page .nm-project-grid > .nm-project-featured {
     grid-template-columns: 1fr;
     grid-template-rows: auto;
@@ -597,8 +607,8 @@ body.nm-page .nm-project-grid > .nm-project-featured p {
 
   body.nm-page .nm-project-grid > .nm-project-featured strong {
     align-self: start;
-    white-space: normal;
-    font-size: clamp(2rem, 12vw, 3.2rem);
+    width: 100%;
+    font-size: clamp(2rem, 8.25cqi, 4.25rem);
   }
 
   body.nm-page .nm-project-grid > .nm-project-featured p {
