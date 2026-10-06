@@ -49,8 +49,9 @@ My current territory is AI-native media: products and operations designed with A
 You can try these products or open their public repositories.
 
 - [PRICEB.TC](https://priceb.tc/): creates free live Bitcoin price widgets for websites and transparent OBS overlays in more than 160 fiat currencies.
+- [La Viste](https://laviste.diegodella.ar/): analyzes market data, news, and prices to turn an investment thesis into a simulated portfolio of Argentine stocks, bonds, and CEDEARs, then tracks it and flags changes and scenarios.
 - [F1 Race Monitor](https://github.com/diegodella1/f1-race-monitor): a local-first race engineer for EA SPORTS F1 25, with live timing, strategy, race radio, and car health on a phone or tablet beside the wheel.
-- [F1 Companion](https://f1.diegodella.ar/): turns Formula 1 race-weekend timing into context on battles, pace, tyres, and strategy.
+- [Pitwall](https://pitwall.diegodella.ar/): a second screen for live Formula 1 sessions, with timing, battles, strategy, and team radio in one glanceable view.
 - [SIGNAL](https://signal.diegodella.ar/): combines independent music, visual culture, and brief updates in a browser-based radio experience.
 - [XPoster](https://xposter.diegodella.ar/): monitors authorized sources, detects relevant events, and prepares evidence-linked drafts while editors retain final control.
 - [Referí](https://referi.diegodella.ar/): a pocket referee booth for live football matches where you review the play, make the call, and compare it with the official ruling.
