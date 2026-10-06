@@ -287,6 +287,24 @@
       ]
     },
     {
+      "name": "La Viste",
+      "url": "https://laviste.diegodella.ar/",
+      "description": "An investment research product that turns a thesis into a simulated portfolio of Argentine stocks, bonds, and CEDEARs, then tracks changes and scenarios.",
+      "demonstrates": [
+        "Investment research",
+        "Paper portfolios"
+      ]
+    },
+    {
+      "name": "Pitwall",
+      "url": "https://pitwall.diegodella.ar/",
+      "description": "A second screen for live Formula 1 sessions, with timing, battles, strategy, and team radio in one glanceable view.",
+      "demonstrates": [
+        "Live sports data",
+        "Second-screen UX"
+      ]
+    },
+    {
       "name": "PolyBot BTC",
       "url": "https://tradingbot.diegodella.ar/",
       "description": "A safety-first research and paper-trading framework for recurring prediction markets.",
