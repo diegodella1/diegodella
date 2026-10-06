@@ -8,7 +8,7 @@
 @import url("styles/editorial.css?v=20260914edit1") layer(editorial);
 @import url("styles/components.css?v=20260914edit1") layer(components);
 @import url("styles/shell.css?v=20260914edit1") layer(shell);
-@import url("styles/theme-contract.css?v=20261006xpost4") layer(utilities);
+@import url("styles/theme-contract.css?v=20261006xpost5") layer(utilities);
 
 @import url("styles/fonts.css?v=20260914edit1") layer(design);
 @import url("styles/design.css?v=20260914edit1") layer(design);

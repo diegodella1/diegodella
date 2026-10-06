@@ -532,13 +532,14 @@ body.nm-page .nm-project-grid > a p {
 body.nm-page .nm-project-grid > .nm-project-featured {
   grid-column: 1 / -1;
   grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-  grid-template-rows: auto auto;
+  grid-template-rows: max-content max-content;
   grid-template-areas:
     "tag copy"
     "title copy";
   gap: 0.8rem;
   column-gap: clamp(1rem, 2vw, 1.5rem);
   align-content: start;
+  align-items: start;
   min-height: 0;
   padding: 1.25rem;
   border-color: var(--theme-on-accent);
@@ -550,6 +551,7 @@ body.nm-page .nm-project-grid > .nm-project-featured {
 body.nm-page .nm-project-grid > .nm-project-featured .nm-page-label {
   grid-area: tag;
   align-self: start;
+  margin-right: 2.5rem;
   background: var(--theme-control-bg);
   color: var(--theme-ink);
 }
@@ -565,10 +567,8 @@ body.nm-page .nm-project-grid > .nm-project-featured p {
   grid-area: copy;
   align-self: start;
   min-width: 0;
-  max-width: 42ch;
-  color: var(--theme-on-accent);
-  font-size: clamp(1rem, 1.5vw, 1.2rem);
-  font-weight: 700;
+  max-width: 52ch;
+  text-wrap: pretty;
 }
 
 body.nm-page .nm-project-grid > .nm-project-featured::after {
